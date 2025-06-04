@@ -15,3 +15,5 @@ Beteiligte Personen:
 
 Start: 10:20
 End: 10:40
+
+**Connection to Miele:** This content relates to ongoing work at Miele.
