@@ -1,5 +1,5 @@
-# CLOUDSQUID
-Thema: CLOUDSQUID
+# Cloudsquid
+Thema: Cloudsquid
 Agenda: n/a
 Beteiligte Personen: n/a
 

@@ -2,7 +2,7 @@
 Thema: 
 Agenda: 12:00 - 15:00
 Beteiligte Personen:
-- GEMEINSAM INNOVATIV: ERFOLGREICHE PARTNERSCHAFTEN IN UNSICHEREN ZEITEN
+- Gemeinsam Innovativ: Erfolgreiche Partnerschaften IN Unsicheren Zeiten
 
 Start: 12:00
 End: 15:00

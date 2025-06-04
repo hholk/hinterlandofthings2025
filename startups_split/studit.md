@@ -1,5 +1,5 @@
-# STUDIT
-Thema: STUDIT
+# Studit
+Thema: Studit
 Agenda: n/a
 Beteiligte Personen: n/a
 

@@ -1,11 +1,11 @@
-# DER HERZSCHLAG DES HINTERLANDES
-Thema: DER HERZSCHLAG DES HINTERLANDES
+# DER Herzschlag DES Hinterlandes
+Thema: DER Herzschlag DES Hinterlandes
 Agenda: 9:05 - 9:15
 Beteiligte Personen:
-- DOMINIK GROSS
-- FOUNDERS FOUNDATION
-- Profil: DOMINIK GROSS von FOUNDERS FOUNDATION bringt Erfahrung in start-up cooperations.
-- Grund: Sprechen Sie mit DOMINIK GROSS, um mehr über start-up cooperations zu erfahren.
+- Dominik Gross
+- Founders Foundation
+- Profil: Dominik Gross von Founders Foundation bringt Erfahrung in start-up cooperations.
+- Grund: Sprechen Sie mit Dominik Gross, um mehr über start-up cooperations zu erfahren.
 
 Start: 9:05
 End: 9:15

@@ -1,8 +1,8 @@
-# PITCH 3 - ARQUE SYSTEMS
-Thema: PITCH 3 - ARQUE SYSTEMS
+# Pitch 3 - Arque Systems
+Thema: Pitch 3 - Arque Systems
 Agenda: 10:37 - 10:43
 Beteiligte Personen:
-- PITCH
+- Pitch
 
 Start: 10:37
 End: 10:43

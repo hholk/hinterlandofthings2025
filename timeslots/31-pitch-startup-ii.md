@@ -1,5 +1,5 @@
-# PITCH STARTUP II
-Thema: PITCH STARTUP II
+# Pitch Startup II
+Thema: Pitch Startup II
 Agenda: 18:22 - 18:24
 Beteiligte Personen: n/a
 

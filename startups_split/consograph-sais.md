@@ -1,5 +1,5 @@
-# CONSOGRAPH SAIS
-Thema: CONSOGRAPH SAIS
+# Consograph Sais
+Thema: Consograph Sais
 Agenda: n/a
 Beteiligte Personen: n/a
 

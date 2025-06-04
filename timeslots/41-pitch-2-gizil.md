@@ -1,8 +1,8 @@
-# PITCH 2 - GIZIL
-Thema: PITCH 2 - GIZIL
+# Pitch 2 - Gizil
+Thema: Pitch 2 - Gizil
 Agenda: 10:31 - 10:37
 Beteiligte Personen:
-- PITCH
+- Pitch
 
 Start: 10:31
 End: 10:37

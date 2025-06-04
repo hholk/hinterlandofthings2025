@@ -1,29 +1,29 @@
-# FINANZIERUNG DER WIDERSTANDSFÄHIGKEIT EUROPAS: WIE MAN INVESTITIONEN FÜR WACHSTUM STEIGERN KANN
-Thema: FINANZIERUNG DER WIDERSTANDSFÄHIGKEIT EUROPAS: WIE MAN INVESTITIONEN FÜR WACHSTUM STEIGERN KANN
+# Finanzierung DER Widerstandsfähigkeit Europas: WIE MAN Investitionen FÜR Wachstum Steigern Kann
+Thema: Finanzierung DER Widerstandsfähigkeit Europas: WIE MAN Investitionen FÜR Wachstum Steigern Kann
 Agenda: 16:15 - 16:45
 Beteiligte Personen:
-- PANEL
-- CAROLINE VON LINSINGEN
-- DEUTSCHE BÖRSE
-- Profil: CAROLINE VON LINSINGEN von DEUTSCHE BÖRSE bringt Erfahrung in corporate foresight at Miele.
-- Grund: Sprechen Sie mit CAROLINE VON LINSINGEN, um mehr über corporate foresight at Miele zu erfahren.
-- ELINA BERREBI
-- REVAIA
-- Profil: ELINA BERREBI von REVAIA bringt Erfahrung in VC.
-- Grund: Sprechen Sie mit ELINA BERREBI, um mehr über VC zu erfahren.
-- SEBASTIAN PECK
-- KOMPAS VC
-- Profil: SEBASTIAN PECK von KOMPAS VC bringt Erfahrung in corporate foresight at Miele.
-- Grund: Sprechen Sie mit SEBASTIAN PECK, um mehr über corporate foresight at Miele zu erfahren.
-- HAJO KRÖSCHE
-- ALTOR
-- Profil: HAJO KRÖSCHE von ALTOR bringt Erfahrung in smart money.
-- Grund: Sprechen Sie mit HAJO KRÖSCHE, um mehr über smart money zu erfahren.
-- JAN SESSENHAUSEN
-- CUSP CAPITAL
-- Profil: JAN SESSENHAUSEN von CUSP CAPITAL bringt Erfahrung in smart money.
-- Grund: Sprechen Sie mit JAN SESSENHAUSEN, um mehr über smart money zu erfahren.
-- GASTGEBER
+- Panel
+- Caroline VON Linsingen
+- Deutsche Börse
+- Profil: Caroline VON Linsingen von Deutsche Börse bringt Erfahrung in corporate foresight at Miele.
+- Grund: Sprechen Sie mit Caroline VON Linsingen, um mehr über corporate foresight at Miele zu erfahren.
+- Elina Berrebi
+- Revaia
+- Profil: Elina Berrebi von Revaia bringt Erfahrung in VC.
+- Grund: Sprechen Sie mit Elina Berrebi, um mehr über VC zu erfahren.
+- Sebastian Peck
+- Kompas VC
+- Profil: Sebastian Peck von Kompas VC bringt Erfahrung in corporate foresight at Miele.
+- Grund: Sprechen Sie mit Sebastian Peck, um mehr über corporate foresight at Miele zu erfahren.
+- Hajo Krösche
+- Altor
+- Profil: Hajo Krösche von Altor bringt Erfahrung in smart money.
+- Grund: Sprechen Sie mit Hajo Krösche, um mehr über smart money zu erfahren.
+- JAN Sessenhausen
+- Cusp Capital
+- Profil: JAN Sessenhausen von Cusp Capital bringt Erfahrung in smart money.
+- Grund: Sprechen Sie mit JAN Sessenhausen, um mehr über smart money zu erfahren.
+- Gastgeber
 
 Start: 16:15
 End: 16:45

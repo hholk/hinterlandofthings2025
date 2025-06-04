@@ -1,11 +1,11 @@
-# JENSEITS DES KI-HYPES - WAS IN EINEM JAHR GESCHAH
-UND WOHIN WIR UNS ENTWICKELN
-Thema: JENSEITS DES KI-HYPES - WAS IN EINEM JAHR GESCHAH
-UND WOHIN WIR UNS ENTWICKELN
+# Jenseits DES Ki-hypes - WAS IN Einem Jahr Geschah
+UND Wohin WIR UNS Entwickeln
+Thema: Jenseits DES Ki-hypes - WAS IN Einem Jahr Geschah
+UND Wohin WIR UNS Entwickeln
 Agenda: 13:45 - 14:15
 Beteiligte Personen:
-- KEYNOTE
-- PIP KLÖCKNER
+- Keynote
+- PIP Klöckner
 
 Start: 13:45
 End: 14:15

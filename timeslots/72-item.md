@@ -2,8 +2,8 @@
 Thema: 
 Agenda: 10:45 - 11:45
 Beteiligte Personen:
-- HERZRASEN – MIT ACHTSAMKEIT UND SELBSTBEWUSSTSEIN: SO ERREICHST DU DEINE ZIELE WIRKLICH
-- SPEAKER: DANIEL ENGELBRECHT SPRACHE: DEUTSCH
+- Herzrasen – MIT Achtsamkeit UND Selbstbewusstsein: SO Erreichst DU Deine Ziele Wirklich
+- Speaker: Daniel Engelbrecht Sprache: Deutsch
 
 Start: 10:45
 End: 11:45

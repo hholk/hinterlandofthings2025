@@ -1,5 +1,5 @@
-# CITO.AI
-Thema: CITO.AI
+# Cito.ai
+Thema: Cito.ai
 Agenda: n/a
 Beteiligte Personen: n/a
 

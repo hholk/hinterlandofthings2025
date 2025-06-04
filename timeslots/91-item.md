@@ -2,7 +2,7 @@
 Thema: 
 Agenda: 11:00 - 13:15
 Beteiligte Personen:
-- INTELLIGENTE SKALIERUNG: ERSCHLIESSUNG VON WACHSTUMSCHANCEN FÜR SEED SERIES A
+- Intelligente Skalierung: Erschliessung VON Wachstumschancen FÜR Seed Series A
 
 Start: 11:00
 End: 13:15

@@ -1,20 +1,20 @@
-# ERÖFFNUNG
-Thema: ERÖFFNUNG
+# Eröffnung
+Thema: Eröffnung
 Agenda: 9:00 - 9:05
 Beteiligte Personen:
-- CÉLINE FLORES WILLERS
-- THE PEOPLE BRANDING COMPANY
-- Profil: CÉLINE FLORES WILLERS von THE PEOPLE BRANDING COMPANY bringt Erfahrung in smart money.
-- Grund: Sprechen Sie mit CÉLINE FLORES WILLERS, um mehr über smart money zu erfahren.
-- GASTGEBER
-- SIMON BRAKHAGE
-- FOUNDERS FOUNDATION
-- Profil: SIMON BRAKHAGE von FOUNDERS FOUNDATION bringt Erfahrung in smart money.
-- Grund: Sprechen Sie mit SIMON BRAKHAGE, um mehr über smart money zu erfahren.
-- ANNA-LUISA KORTE
-- FOUNDERS FOUNDATION
-- Profil: ANNA-LUISA KORTE von FOUNDERS FOUNDATION bringt Erfahrung in start-up cooperations.
-- Grund: Sprechen Sie mit ANNA-LUISA KORTE, um mehr über start-up cooperations zu erfahren.
+- Céline Flores Willers
+- THE People Branding Company
+- Profil: Céline Flores Willers von THE People Branding Company bringt Erfahrung in smart money.
+- Grund: Sprechen Sie mit Céline Flores Willers, um mehr über smart money zu erfahren.
+- Gastgeber
+- Simon Brakhage
+- Founders Foundation
+- Profil: Simon Brakhage von Founders Foundation bringt Erfahrung in smart money.
+- Grund: Sprechen Sie mit Simon Brakhage, um mehr über smart money zu erfahren.
+- Anna-luisa Korte
+- Founders Foundation
+- Profil: Anna-luisa Korte von Founders Foundation bringt Erfahrung in start-up cooperations.
+- Grund: Sprechen Sie mit Anna-luisa Korte, um mehr über start-up cooperations zu erfahren.
 
 Start: 9:00
 End: 9:05

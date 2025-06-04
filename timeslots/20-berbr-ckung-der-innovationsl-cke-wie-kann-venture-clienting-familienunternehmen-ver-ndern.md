@@ -1,25 +1,25 @@
-# ÜBERBRÜCKUNG DER INNOVATIONSLÜCKE: WIE KANN VENTURE CLIENTING FAMILIENUNTERNEHMEN VERÄNDERN?
-Thema: ÜBERBRÜCKUNG DER INNOVATIONSLÜCKE: WIE KANN VENTURE CLIENTING FAMILIENUNTERNEHMEN VERÄNDERN?
+# Überbrückung DER Innovationslücke: WIE Kann Venture Clienting Familienunternehmen Verändern?
+Thema: Überbrückung DER Innovationslücke: WIE Kann Venture Clienting Familienunternehmen Verändern?
 Agenda: 15:05 - 15:30
 Beteiligte Personen:
-- PANEL
-- FLORIAN NÖLL
-- PWC GERMANY
-- Profil: FLORIAN NÖLL von PWC GERMANY bringt Erfahrung in start-up cooperations.
-- Grund: Sprechen Sie mit FLORIAN NÖLL, um mehr über start-up cooperations zu erfahren.
-- EDDA BECKER
-- FIELMANN
-- Profil: EDDA BECKER von FIELMANN bringt Erfahrung in start-up cooperations.
-- Grund: Sprechen Sie mit EDDA BECKER, um mehr über start-up cooperations zu erfahren.
-- TINA DREIMANN
-- BETTER VENTURES
-- Profil: TINA DREIMANN von BETTER VENTURES bringt Erfahrung in early adopter.
-- Grund: Sprechen Sie mit TINA DREIMANN, um mehr über early adopter zu erfahren.
-- FLORIAN WEYAND
-- WIRTSCHAFTSWOCHE
-- Profil: FLORIAN WEYAND von WIRTSCHAFTSWOCHE bringt Erfahrung in smart money.
-- Grund: Sprechen Sie mit FLORIAN WEYAND, um mehr über smart money zu erfahren.
-- GASTGEBER
+- Panel
+- Florian Nöll
+- PWC Germany
+- Profil: Florian Nöll von PWC Germany bringt Erfahrung in start-up cooperations.
+- Grund: Sprechen Sie mit Florian Nöll, um mehr über start-up cooperations zu erfahren.
+- Edda Becker
+- Fielmann
+- Profil: Edda Becker von Fielmann bringt Erfahrung in start-up cooperations.
+- Grund: Sprechen Sie mit Edda Becker, um mehr über start-up cooperations zu erfahren.
+- Tina Dreimann
+- Better Ventures
+- Profil: Tina Dreimann von Better Ventures bringt Erfahrung in early adopter.
+- Grund: Sprechen Sie mit Tina Dreimann, um mehr über early adopter zu erfahren.
+- Florian Weyand
+- Wirtschaftswoche
+- Profil: Florian Weyand von Wirtschaftswoche bringt Erfahrung in smart money.
+- Grund: Sprechen Sie mit Florian Weyand, um mehr über smart money zu erfahren.
+- Gastgeber
 
 Start: 15:05
 End: 15:30

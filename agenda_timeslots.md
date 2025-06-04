@@ -1,727 +1,727 @@
 ## 8:00 UHR //
-- TÜREN ÖFFNEN
+- Türen Öffnen
 
 ## 9:00 UHR //
-- ERÖFFNUNG
-- CÉLINE FLORES WILLERS
-- THE PEOPLE BRANDING COMPANY
-- GASTGEBER
-- SIMON BRAKHAGE
-- FOUNDERS FOUNDATION
-- ANNA-LUISA KORTE
-- FOUNDERS FOUNDATION
+- Eröffnung
+- Céline Flores Willers
+- THE People Branding Company
+- Gastgeber
+- Simon Brakhage
+- Founders Foundation
+- Anna-luisa Korte
+- Founders Foundation
 
 ## 9:05 UHR //
-- DER HERZSCHLAG DES HINTERLANDES
-- DOMINIK GROSS
-- FOUNDERS FOUNDATION
+- DER Herzschlag DES Hinterlandes
+- Dominik Gross
+- Founders Foundation
 
 ## 9:15 UHR //
-- KRISENBEDINGTE CHANCEN: DEUTSCHLANDS CHANCE, WIEDER FÜHREND ZU WERDEN
-- PANEL
-- BRIGITTE MOHN
-- MEMBER OF THE EXECUTIVE BOARD BERTELSMANN STIFTUNG
-- NAZANIN DANESHVAR
-- ANGEL INVESTOR & VC
-- DR. JOACHIM BRENK
-- POSSEHL
-- FRIDTJOF DETZNER
-- PLANET A VENTURES
-- GORDON REPINSKI
-- POLITICO DEUTSCHLAND
-- GASTGEBER
+- Krisenbedingte Chancen: Deutschlands Chance, Wieder Führend ZU Werden
+- Panel
+- Brigitte Mohn
+- Member OF THE Executive Board Bertelsmann Stiftung
+- Nazanin Daneshvar
+- Angel Investor & VC
+- DR. Joachim Brenk
+- Possehl
+- Fridtjof Detzner
+- Planet A Ventures
+- Gordon Repinski
+- Politico Deutschland
+- Gastgeber
 
 ## 9:40 UHR //
-- RÜCKGEWINNUNG DER WETTBEWERBSFÄHIGKEIT: DIE ENTSCHEIDENDE ROLLE DER ÖKOSYSTEME
-- PANEL
-- DEEPA GAUTAM-NIGGE
+- Rückgewinnung DER Wettbewerbsfähigkeit: DIE Entscheidende Rolle DER Ökosysteme
+- Panel
+- Deepa Gautam-nigge
 - SAP
-- JENS FIEGE
-- FIEGE
-- DR. ANNIKA VON MUTIUS
-- EMPION
-- FLORIAN HUBER
-- EWOR
-- ANJA MÜLLER
-- HANDELSBLATT
-- GASTGEBER
+- Jens Fiege
+- Fiege
+- DR. Annika VON Mutius
+- Empion
+- Florian Huber
+- Ewor
+- Anja Müller
+- Handelsblatt
+- Gastgeber
 
 ## 10:05 UHR //
-- VOM AUSSTIEG ZUM ÖKOSYSTEM: AUFBAU EINES VERMÄCHTNISSES DURCH PORTFOLIOBASIERTE WIRKUNG
-- KEYNOTE
-- HENRIK HERR
-- ROTHSCHILD
+- VOM Ausstieg ZUM Ökosystem: Aufbau Eines Vermächtnisses Durch Portfoliobasierte Wirkung
+- Keynote
+- Henrik Herr
+- Rothschild
 
 ## 10:20 UHR //
-- SIND WIR SCHON DA? WIE FLIXBUS DAS REISEN NEU ERFINDET
-- FIRESIDE CHAT
-- DANIEL KRAUS
-- FLIX
-- NADINE SCHIMROSZIK
-- HANDELSBLATT
-- GASTGEBER
+- Sind WIR Schon DA? WIE Flixbus DAS Reisen NEU Erfindet
+- Fireside Chat
+- Daniel Kraus
+- Flix
+- Nadine Schimroszik
+- Handelsblatt
+- Gastgeber
 
 ## 10:40 UHR //
-- ECOSYSTEM BUILDER GRÜNDER:IN INVESTOR:IN:
-WELCHE ZUTATEN BRAUCHEN WIR FÜR ERFOLGREICHE TECH CHAMPIONS IN EUROPA?
-- FIRESIDE CHAT
-- FELIX HAAS
-- IDNOW
-- ANTONIA GÖTSCH
-- HARVARD BUSINESS MANAGER
-- GASTGEBER
+- Ecosystem Builder Gründer:in Investor:in:
+Welche Zutaten Brauchen WIR FÜR Erfolgreiche Tech Champions IN Europa?
+- Fireside Chat
+- Felix Haas
+- Idnow
+- Antonia Götsch
+- Harvard Business Manager
+- Gastgeber
 
 ## 11:00 UHR //
-- STAND DER EUROPÄISCHEN VC-LANDSCHAFT
-- PANEL
-- MARIE-HELENE AMETSREITER
-- SPEEDINVEST
-- SEBASTIAN POLLOK
-- VISIONAIRES TOMOWRROW
-- ANDREAS GOELDI
-- B2VENTURE
-- FRAUKE HOLZMEIER
+- Stand DER Europäischen Vc-landschaft
+- Panel
+- Marie-helene Ametsreiter
+- Speedinvest
+- Sebastian Pollok
+- Visionaires Tomowrrow
+- Andreas Goeldi
+- B2venture
+- Frauke Holzmeier
 - NTV
-- GASTGEBER
+- Gastgeber
 
 ## 11:20 UHR //
-- REDUZIERUNG VON ABHÄNGIGKEITEN UND RISIKEN: AI COMPUTING MADE IN EUROPE
-- PANEL
-- SEBASTIAN SCHALL
-- BLACK SEMICONDUCTOR
-- ARON KIRSCHEN
-- SEMRON
-- STAN BOLAND
-- ANGEL INVESTOR
-- LENA WALTLE
+- Reduzierung VON Abhängigkeiten UND Risiken: AI Computing Made IN Europe
+- Panel
+- Sebastian Schall
+- Black Semiconductor
+- Aron Kirschen
+- Semron
+- Stan Boland
+- Angel Investor
+- Lena Waltle
 - NZZ
-- GASTGEBER
+- Gastgeber
 
 ## 11:40 UHR //
-- MADE IN GERMANY: ANTRIEB DER AUTONOMEN LKW-REVOLUTION
-- KEYNOTE
-- HENDRIK KRAMER
-- FERNRIDE
+- Made IN Germany: Antrieb DER Autonomen Lkw-revolution
+- Keynote
+- Hendrik Kramer
+- Fernride
 
 ## 11:55 UHR //
-- SVEN MULDER
-- BAUE DAS UNTERNEHMEN HINTER DEM PRODUKT AUF – WIE FINN & ARX ROBOTICS MIT SAP SKALIEREN
-- KEYNOTE
+- Sven Mulder
+- Baue DAS Unternehmen Hinter DEM Produkt AUF – WIE Finn & ARX Robotics MIT SAP Skalieren
+- Keynote
 - SAP
-- STEFAN RÖBEL
-- ARX ROBOTICS
-- JAN HANSEN
-- FINN
+- Stefan Röbel
+- ARX Robotics
+- JAN Hansen
+- Finn
 
 ## 12:15 UHR //
-- MITTELSTAND MAVERICKS: SKALIERUNG NACHHALTIGER INNOVATION IN INDUSTRIELLEN WERTSCHÖPFUNGSKETTEN
-- PANEL
-- ALEXANDRA KOHLMANN
-- ROWE
-- EVA VALENTINA KEMPF
-- HENKELHAUSEN
-- KARIM SALEH
-- CERRION
-- THORSTEN GIERSCH
-- MARKT UND MITTELSTAND
-- GASTGEBER
+- Mittelstand Mavericks: Skalierung Nachhaltiger Innovation IN Industriellen Wertschöpfungsketten
+- Panel
+- Alexandra Kohlmann
+- Rowe
+- EVA Valentina Kempf
+- Henkelhausen
+- Karim Saleh
+- Cerrion
+- Thorsten Giersch
+- Markt UND Mittelstand
+- Gastgeber
 
 ## 12:40 UHR //
-- JOCHEN ZIERVOGEL
-- MANAGE YOUR MIND: WIE WIR BEI ENPAL STÄRKER AUS HERAUSFORDERNDEN ZEITEN HERVORGEHEN
-- IMPULS
-- ENPAL
+- Jochen Ziervogel
+- Manage Your Mind: WIE WIR BEI Enpal Stärker AUS Herausfordernden Zeiten Hervorgehen
+- Impuls
+- Enpal
 
 ## 12:50 UHR //
-- POWER PLAY: WIE DIE ENERGIEINFRASTRUKTUR DEUTSCHLANDS GLOBALE TECHNOLOGIE-AMBITIONEN GESTALTET
-- PANEL
-- JOCHEN ZIERVOGEL
-- ENPAL
-- CHRISTIAN VOLLMANN
+- Power Play: WIE DIE Energieinfrastruktur Deutschlands Globale Technologie-ambitionen Gestaltet
+- Panel
+- Jochen Ziervogel
+- Enpal
+- Christian Vollmann
 - C1
-- CHRISTIAN SCHMIERER
-- HYIMPULSE
-- NATALIE KREINDLINA
+- Christian Schmierer
+- Hyimpulse
+- Natalie Kreindlina
 - Kekst CNC
-- SOLVEIG RATHENOW
-- BUSINESS INSIDER DEUTSCHLAND
-- GASTGEBER
+- Solveig Rathenow
+- Business Insider Deutschland
+- Gastgeber
 
 ## 13:15 UHR //
-- PAUSE
+- Pause
 
 ## 13:45 UHR //
-- JENSEITS DES KI-HYPES - WAS IN EINEM JAHR GESCHAH
-UND WOHIN WIR UNS ENTWICKELN
-- KEYNOTE
-- PIP KLÖCKNER
+- Jenseits DES Ki-hypes - WAS IN Einem Jahr Geschah
+UND Wohin WIR UNS Entwickeln
+- Keynote
+- PIP Klöckner
 
 ## 14:15 UHR //
-- VON DER ENERGIEWENDE ZUM WETTBEWERBSVORTEIL:
-SKALIERUNG SAUBERER TECHNOLOGIEN ZUR SICHERUNG DER INDUSTRIELLEN ZUKUNFT DEUTSCHLANDS
-- PANEL
-- FLORIAN HILDEBRAND
-- GREENLYTE
-- HENDRIK BRANDIS
-- EARLYBIRD
-- STEPHAN SEGBERS
-- RHEINENERGIE
-- UWE JEAN HEUSER
-- DIE ZEIT
-- GASTGEBER
+- VON DER Energiewende ZUM Wettbewerbsvorteil:
+Skalierung Sauberer Technologien ZUR Sicherung DER Industriellen Zukunft Deutschlands
+- Panel
+- Florian Hildebrand
+- Greenlyte
+- Hendrik Brandis
+- Earlybird
+- Stephan Segbers
+- Rheinenergie
+- UWE Jean Heuser
+- DIE Zeit
+- Gastgeber
 
 ## 14:40 UHR //
-- ÜBERBRÜCKUNG DER KLUFT: DIE NÄCHSTE WELLE DER INDUSTRIELLEN INNOVATION
-- PANEL
-- THOMAS PAULUS
+- Überbrückung DER Kluft: DIE Nächste Welle DER Industriellen Innovation
+- Panel
+- Thomas Paulus
 - KSB
-- LENA WEIRAUCH
-- AIOMATIC
-- LUCA CARACCIOLO
+- Lena Weirauch
+- Aiomatic
+- Luca Caracciolo
 - T3N
-- GASTGEBER
+- Gastgeber
 
 ## 15:05 UHR //
-- ÜBERBRÜCKUNG DER INNOVATIONSLÜCKE: WIE KANN VENTURE CLIENTING FAMILIENUNTERNEHMEN VERÄNDERN?
-- PANEL
-- FLORIAN NÖLL
-- PWC GERMANY
-- EDDA BECKER
-- FIELMANN
-- TINA DREIMANN
-- BETTER VENTURES
-- FLORIAN WEYAND
-- WIRTSCHAFTSWOCHE
-- GASTGEBER
+- Überbrückung DER Innovationslücke: WIE Kann Venture Clienting Familienunternehmen Verändern?
+- Panel
+- Florian Nöll
+- PWC Germany
+- Edda Becker
+- Fielmann
+- Tina Dreimann
+- Better Ventures
+- Florian Weyand
+- Wirtschaftswoche
+- Gastgeber
 
 ## 15:30 UHR //
-- BAUSTEINE DER ZUKUNFT: JETZT MIT CASH FLOWS!
-- KEYNOTE
-- FRANK THELEN
-- FREIGEIST
+- Bausteine DER Zukunft: Jetzt MIT Cash Flows!
+- Keynote
+- Frank Thelen
+- Freigeist
 
 ## 15:50 UHR //
-- FRONTLINE INNOVATION: SICHERUNG DER SCHLACHTFELDER VON MORGEN
-- PANEL
-- SVEN WEIZENEGGER
-- BUNDESWEHR
-- STEFAN RÖBEL
-- ARX ROBOTICS
-- MAXIMILIAN SACHSE
+- Frontline Innovation: Sicherung DER Schlachtfelder VON Morgen
+- Panel
+- Sven Weizenegger
+- Bundeswehr
+- Stefan Röbel
+- ARX Robotics
+- Maximilian Sachse
 - FAZ
-- GASTGEBER
+- Gastgeber
 
 ## 16:15 UHR //
-- FINANZIERUNG DER WIDERSTANDSFÄHIGKEIT EUROPAS: WIE MAN INVESTITIONEN FÜR WACHSTUM STEIGERN KANN
-- PANEL
-- CAROLINE VON LINSINGEN
-- DEUTSCHE BÖRSE
-- ELINA BERREBI
-- REVAIA
-- SEBASTIAN PECK
-- KOMPAS VC
-- HAJO KRÖSCHE
-- ALTOR
-- JAN SESSENHAUSEN
-- CUSP CAPITAL
-- GASTGEBER
+- Finanzierung DER Widerstandsfähigkeit Europas: WIE MAN Investitionen FÜR Wachstum Steigern Kann
+- Panel
+- Caroline VON Linsingen
+- Deutsche Börse
+- Elina Berrebi
+- Revaia
+- Sebastian Peck
+- Kompas VC
+- Hajo Krösche
+- Altor
+- JAN Sessenhausen
+- Cusp Capital
+- Gastgeber
 
 ## 16:45 UHR //
-- SKALIERUNG DER WISSENSCHAFT IN DIE WIRTSCHAFT: STARTUP-FABRIKEN ALS NEUER INNOVATIONSMOTOR DEUTSCHLANDS
-- PANEL
-- PHILLIP HERRMANN
-- BRYCK
-- JENNIFER KAISER-STEINER
-- UNTERNEHMERTUM
-- ULRICH SCHMITT
-- HTGF
-- GITTA CONNEMANN
+- Skalierung DER Wissenschaft IN DIE Wirtschaft: Startup-fabriken ALS Neuer Innovationsmotor Deutschlands
+- Panel
+- Phillip Herrmann
+- Bryck
+- Jennifer Kaiser-steiner
+- Unternehmertum
+- Ulrich Schmitt
+- Htgf
+- Gitta Connemann
 - CDU
-- FRAUKE HOLZMEIER
+- Frauke Holzmeier
 - NTV
-- GASTGEBER
+- Gastgeber
 
 ## 17:10 UHR //
-- PAUSE
+- Pause
 
 ## 17:20 UHR //
-- UNTER DEM RADAR, AN DER SPITZE: WIE CVCS UND FAMILY OFFICES DIE INNOVATION VON INNEN HERAUS UMGESTALTEN
-- PANEL
-- OTTO BIRNBAUM
-- REVENT
-- CARL-LUIS RIEGER
-- WEPA
-- VERA KNAUER
-- ORTHOMOL HOLDING
-- ANNA-LUISA KORTE
-- FOUNDERS FOUNDATION
-- GASTGEBER
+- Unter DEM Radar, AN DER Spitze: WIE Cvcs UND Family Offices DIE Innovation VON Innen Heraus Umgestalten
+- Panel
+- Otto Birnbaum
+- Revent
+- Carl-luis Rieger
+- Wepa
+- Vera Knauer
+- Orthomol Holding
+- Anna-luisa Korte
+- Founders Foundation
+- Gastgeber
 
 ## 17:45 UHR //
-- ENTRIEGELN, ENTFESSELN, VEREINEN: DAS DURCHGÄNGIGE KONZEPT FÜR DEN ERFOLG VON RISIKOKUNDEN
-- FIRESIDE CHAT
-- JULIA KUNSTMANN
-- OTTO DOCK 6
-- SIMON BRAKHAGE
-- FOUNDERS FOUNDATION
-- GASTGEBER
+- Entriegeln, Entfesseln, Vereinen: DAS Durchgängige Konzept FÜR DEN Erfolg VON Risikokunden
+- Fireside Chat
+- Julia Kunstmann
+- Otto Dock 6
+- Simon Brakhage
+- Founders Foundation
+- Gastgeber
 
 ## 18:05 UHR //
-- STAFFELSTAB ÜBERGABE
-- JAN THOMAS
-- STARTUP INSIDER
-- SIMON BRAKHAGE
-- FOUNDERS FOUNDATION
-- ANNA-LUISA KORTE
-- FOUNDERS FOUNDATION
-- ULRICH SCHMITT
-- HTGF
+- Staffelstab Übergabe
+- JAN Thomas
+- Startup Insider
+- Simon Brakhage
+- Founders Foundation
+- Anna-luisa Korte
+- Founders Foundation
+- Ulrich Schmitt
+- Htgf
 
 ## 18:15 UHR //
-- OOTB.NRW AWARD FINALE
-- SILKE KREBS
-- MWIKE
+- Ootb.nrw Award Finale
+- Silke Krebs
+- Mwike
 
 ## 18:20 UHR //
-- PITCH STARTUP I
+- Pitch Startup I
 
 ## 18:22 UHR //
-- PITCH STARTUP II
+- Pitch Startup II
 
 ## 18:24 UHR //
-- PITCH STARTUP III
+- Pitch Startup III
 
 ## 18:26 UHR //
-- SCHIRMHERRSCHAFT ANNOUNCEMENT
-- SIMON BRAKHAGE
-- FOUNDERS FOUNDATION
-- ULRICH SCHMITT
-- HTGF
-- ANDRÉ CHRIST
-- SAP LEANIX
+- Schirmherrschaft Announcement
+- Simon Brakhage
+- Founders Foundation
+- Ulrich Schmitt
+- Htgf
+- André Christ
+- SAP Leanix
 
 ## 18:31 UHR //
-- GEWINNER BEKANNTGABE OOTB.NRW AWARDS
-- CHRISTOPH BÜTH
-- NRW.BANK
+- Gewinner Bekanntgabe Ootb.nrw Awards
+- Christoph Büth
+- Nrw.bank
 
 ## 18:39 UHR //
-- PREISVERLEIHUNG DURCH NRW.GLOBAL BUSINESS
-- FLORIAN SCHNITZLER
-- NRW.GLOBAL BUSINESS
+- Preisverleihung Durch Nrw.global Business
+- Florian Schnitzler
+- Nrw.global Business
 
 ## 18:41 UHR //
-- CLOSING
-- SIMON BRAKHAGE
-- FOUNDERS FOUNDATION
-- ANNA-LUISA KORTE
-- FOUNDERS FOUNDATION
-- FOUNDERS STAGE
+- Closing
+- Simon Brakhage
+- Founders Foundation
+- Anna-luisa Korte
+- Founders Foundation
+- Founders Stage
 
 ## 8:00 UHR //
-- TÜREN ÖFFNEN
+- Türen Öffnen
 
 ## 10:00 UHR //
-- DIE PLATTFORMEN HABEN GEWONNEN! WAS JETZT? 
-SHEIN, TEMU, AMAZON VS. DEUTSCHER MITTELSTAND
-- KEYNOTE
-- ALEXANDER GRAF
-- SPRYKER
+- DIE Plattformen Haben Gewonnen! WAS Jetzt? 
+Shein, Temu, Amazon VS. Deutscher Mittelstand
+- Keynote
+- Alexander Graf
+- Spryker
 
 ## 10:15 UHR //
-- OOTB.NRW AWARD
-- ERÖFFNUNG
-- JOHANNES VELLING
-- MWIKE
-- JAN THOMAS
-- STARTUP INSIDER
-- GASTGEBER
-- MEIKE NEITZ
-- EMBASSIDY
-- GASTGEBER
+- Ootb.nrw Award
+- Eröffnung
+- Johannes Velling
+- Mwike
+- JAN Thomas
+- Startup Insider
+- Gastgeber
+- Meike Neitz
+- Embassidy
+- Gastgeber
 
 ## 10:25 UHR //
-- PITCH 1 - STORYBOARDER.AI
-- PITCH
+- Pitch 1 - Storyboarder.ai
+- Pitch
 
 ## 10:31 UHR //
-- PITCH 2 - GIZIL
-- PITCH
+- Pitch 2 - Gizil
+- Pitch
 
 ## 10:37 UHR //
-- PITCH 3 - ARQUE SYSTEMS
-- PITCH
+- Pitch 3 - Arque Systems
+- Pitch
 
 ## 10:43 UHR //
-- PITCH 4 - COMUNEO
-- PITCH
+- Pitch 4 - Comuneo
+- Pitch
 
 ## 10:49 UHR //
-- PITCH 5 - SPOT MY ENERGY
-- PITCH
+- Pitch 5 - Spot MY Energy
+- Pitch
 
 ## 10:55 UHR //
-- PAUSE
+- Pause
 
 ## 11:05 UHR //
-- PITCH 6 - CHEMINNOVATION
-- PITCH
+- Pitch 6 - Cheminnovation
+- Pitch
 
 ## 11:11 UHR //
-- PITCH 7 - LASTBIM
-- PITCH
+- Pitch 7 - Lastbim
+- Pitch
 
 ## 11:17 UHR //
-- PITCH 8 - MINIMUM ENERGY
-- PITCH
+- Pitch 8 - Minimum Energy
+- Pitch
 
 ## 11:23 UHR //
-- PITCH 9 - DNTOX
-- PITCH
+- Pitch 9 - Dntox
+- Pitch
 
 ## 11:29 UHR //
-- PITCH 10 - VALOON
-- PITCH
+- Pitch 10 - Valoon
+- Pitch
 
 ## 11:35 UHR //
-- VOTING
-- IMPULS
+- Voting
+- Impuls
 
 ## 11:50 UHR //
-- FINAL 3 ANNOUNCEMENT OOTB
+- Final 3 Announcement Ootb
 
 ## 11:55 UHR //
-- FOUNDER STORY: WIEDERGEWINNUNG DES SERIENUNTERNEHMERTUMS
-- FIRESIDE CHAT
-- MAX WITTROCK
-- ZEROLABS
-- OLIVER STOCK
-- BUSINESS PUNK
-- GASTGEBER
+- Founder Story: Wiedergewinnung DES Serienunternehmertums
+- Fireside Chat
+- MAX Wittrock
+- Zerolabs
+- Oliver Stock
+- Business Punk
+- Gastgeber
 
 ## 12:15 UHR //
-- DIE MACHT DER KI: WIE MAN DIE NÄCHSTE WELLE DATENGESTEUERTER INNOVATIONEN ANFÜHRT
-- PANEL
-- MATTHIAS AUF DER MAUER
-- JUNA.AI
-- DAVID HAHN
-- REMBERG
-- NATHAN GRUBER
-- MANEX AI
-- MARIE FABIUNKE
-- COSMYC PARTNERS
-- GASTGEBER
+- DIE Macht DER KI: WIE MAN DIE Nächste Welle Datengesteuerter Innovationen Anführt
+- Panel
+- Matthias AUF DER Mauer
+- Juna.ai
+- David Hahn
+- Remberg
+- Nathan Gruber
+- Manex AI
+- Marie Fabiunke
+- Cosmyc Partners
+- Gastgeber
 
 ## 12:35 UHR //
-- WIE DER MITTELSTAND DEN KI-HYPE IN ECHTE ERGEBNISSE UMWANDELN KANN, INDEM ER IHN MIT DER REALEN ARBEIT VERBINDET
-- PANEL
-- VEIT BRUCKER
-- ASANA
-- RAINER BÜHNE
-- ABUS
+- WIE DER Mittelstand DEN Ki-hype IN Echte Ergebnisse Umwandeln Kann, Indem ER IHN MIT DER Realen Arbeit Verbindet
+- Panel
+- Veit Brucker
+- Asana
+- Rainer Bühne
+- Abus
 
 ## 13:00 UHR //
-- REGULIERUNG ALS KATALYSATOR: WIE DER EUROPÄISCHE RECHTSRAHMEN INNOVATION UND FÜHRUNG IM BEREICH LEGAL TECH BESCHLEUNIGEN KANN
-- PANEL
-- JANINA MÖLLMANN
-- GAIA LAW
-- LISA GRADOW
-- FIDES TECHNOLOGY
-- ALEXANDER PRAMS
-- KERTOS
-- SOPHIA TRAN
-- SPOTLIGHT VENTURES
-- GASTGEBER
+- Regulierung ALS Katalysator: WIE DER Europäische Rechtsrahmen Innovation UND Führung IM Bereich Legal Tech Beschleunigen Kann
+- Panel
+- Janina Möllmann
+- Gaia LAW
+- Lisa Gradow
+- Fides Technology
+- Alexander Prams
+- Kertos
+- Sophia Tran
+- Spotlight Ventures
+- Gastgeber
 
 ## 13:20 UHR //
-- PAUSE
+- Pause
 
 ## 13:50 UHR //
-- WARUM HERKÖMMLICHE B2B-SCHULUNGEN BEI KLEINEN UND MITTLEREN UNTERNEHMEN VERSAGEN - UND WIE TECHNOLOGIE DIES ÄNDERN KANN
-- PANEL
-- MONA FEDER
-- DOINSTRUCT
-- JAKOB STEIN
-- CREANDUM
-- MIRIAM MERTENS
-- DEEPSKILL
-- FARINA SCHURZFELD
-- ANDROBIN
-- GASTGEBER
+- Warum Herkömmliche B2b-schulungen BEI Kleinen UND Mittleren Unternehmen Versagen - UND WIE Technologie Dies Ändern Kann
+- Panel
+- Mona Feder
+- Doinstruct
+- Jakob Stein
+- Creandum
+- Miriam Mertens
+- Deepskill
+- Farina Schurzfeld
+- Androbin
+- Gastgeber
 
 ## 14:10 UHR //
-- TECH-TALENTE GESUCHT: WIE DER MITTELSTAND DEN WETTLAUF UM WICHTIGE FÄHIGKEITEN GEWINNEN KANN
-- PANEL
-- JAN HENRI KALINOWSKI
-- CHEFTREFF
-- BETTINA VOLKENS
-- GREAT2KNOW
-- PAULA CIPIERRE
-- ADA LEARNING
-- FLORIAN GONTEK
-- DER SPIEGEL
-- GASTGEBER
+- Tech-talente Gesucht: WIE DER Mittelstand DEN Wettlauf UM Wichtige Fähigkeiten Gewinnen Kann
+- Panel
+- JAN Henri Kalinowski
+- Cheftreff
+- Bettina Volkens
+- Great2know
+- Paula Cipierre
+- ADA Learning
+- Florian Gontek
+- DER Spiegel
+- Gastgeber
 
 ## 14:30 UHR //
-- INNOVATION BRIDGES: DER BLUEPRINT DER POSSEHL GROUP FÜR DAUERHAFTE PARTNERSCHAFTEN MIT DER INDUSTRIE
-- PANEL
-- CHRISTOPH HAß
-- POSSEHL DIGITAL
-- DR. JOACHIM BRENK
-- POSSEHL
-- FLORIAN RÜHL
-- SIMPLIFIER
-- FRANCESCA SEIDENSTICKER
-- THE TRAILBLAZERS
-- GASTGEBER
+- Innovation Bridges: DER Blueprint DER Possehl Group FÜR Dauerhafte Partnerschaften MIT DER Industrie
+- Panel
+- Christoph HAß
+- Possehl Digital
+- DR. Joachim Brenk
+- Possehl
+- Florian Rühl
+- Simplifier
+- Francesca Seidensticker
+- THE Trailblazers
+- Gastgeber
 
 ## 14:55 UHR //
-- WIRD DIE LIEFERKETTE DER ZUKUNFT ÜBERHAUPT NOCH MENSCHEN BRAUCHEN?
-- PANEL
-- LEONIE ALTHAUS
-- TRAIDE AI
-- ULAS TÜRKMEN
-- SENVO
-- TORSTEN BENDLIN
-- VALUEDESK
-- GASTGEBER
+- Wird DIE Lieferkette DER Zukunft Überhaupt Noch Menschen Brauchen?
+- Panel
+- Leonie Althaus
+- Traide AI
+- Ulas Türkmen
+- Senvo
+- Torsten Bendlin
+- Valuedesk
+- Gastgeber
 
 ## 15:15 UHR //
-- KULTURKONFLIKT ODER SYMBIOSE? LOGISTIK-STARTUP UND UNTERNEHMEN AUF EINER GEMEINSAMEN INNOVATIONSREISE
-- PANEL
-- PHILIPP HÜNING
-- LOGISTIKBUDE
-- BJÖRN HOBUSCH
-- NAGEL-GROUP
-- PETRA GESSNER
-- WIR-MAGAZIN & FAZ
-- GASTGEBER
+- Kulturkonflikt Oder Symbiose? Logistik-startup UND Unternehmen AUF Einer Gemeinsamen Innovationsreise
+- Panel
+- Philipp Hüning
+- Logistikbude
+- Björn Hobusch
+- Nagel-group
+- Petra Gessner
+- Wir-magazin & FAZ
+- Gastgeber
 
 ## 15:35 UHR //
-- DAS STARTUP-TAGEBUCH: DER AUFBAU EINES UNICORNS IN DER ÖFFENTLICHKEIT
-- LIVE PODCAST
-- JAN MARQUARDT
-- ZIVE
-- JAN HENRI KALINOWSKI
-- CHEFTREFF
-- GASTGEBER
+- DAS Startup-tagebuch: DER Aufbau Eines Unicorns IN DER Öffentlichkeit
+- Live Podcast
+- JAN Marquardt
+- Zive
+- JAN Henri Kalinowski
+- Cheftreff
+- Gastgeber
 
 ## 15:55 UHR //
-- PAUSE
+- Pause
 
 ## 15:55 UHR //
-- DIE ZUKUNFT DES EINZELHANDELS: KI-GESTEUERTE KUNDENEINBLICKE
-- FIRESIDE CHAT
-- LEA FRANK
-- ANYBILL
-- SVEN GRABBE
-- FOUNDERS FOUNDATION
-- GASTGEBER
+- DIE Zukunft DES Einzelhandels: Ki-gesteuerte Kundeneinblicke
+- Fireside Chat
+- LEA Frank
+- Anybill
+- Sven Grabbe
+- Founders Foundation
+- Gastgeber
 
 ## 16:15 UHR //
-- WARUM DIE MEISTEN MITTELSTÄNDISCHEN KOOPERATIONEN SCHEITERN -
-UND WIE MAN SIE ZUM LAUFEN BRINGT
-- PANEL
-- JASPER ROLL
-- HAUFE GROUP VENTURES
-- JOSEF SCHINDLER
-- SMART2I INDUSTRY INTELLIGENCE
-- ALEXANDRA HARTUNG
-- WORKDAY
-- CHÉRINE DE BRUIJN
-- CORPORATE KITCHEN
-- GASTGEBER
+- Warum DIE Meisten Mittelständischen Kooperationen Scheitern -
+UND WIE MAN SIE ZUM Laufen Bringt
+- Panel
+- Jasper Roll
+- Haufe Group Ventures
+- Josef Schindler
+- Smart2i Industry Intelligence
+- Alexandra Hartung
+- Workday
+- Chérine DE Bruijn
+- Corporate Kitchen
+- Gastgeber
 
 ## 16:35 UHR //
-- FINANZIERUNGSLANDSCHAFT UND WACHSTUM: EINBLICKE UND STRATEGIEN ZUR STEUERUNG VON INVESTITIONEN
-- PANEL
-- NILOUFAR GHARAVI
-- ENFA
-- PATRICK HUKE
-- PORSCHE VENTURES
-- GESA MICZAIKA
-- AUXXO
-- ALENA KUHLMEIER
-- TEUTO SEED CLUB
-- GASTGEBER
+- Finanzierungslandschaft UND Wachstum: Einblicke UND Strategien ZUR Steuerung VON Investitionen
+- Panel
+- Niloufar Gharavi
+- Enfa
+- Patrick Huke
+- Porsche Ventures
+- Gesa Miczaika
+- Auxxo
+- Alena Kuhlmeier
+- Teuto Seed Club
+- Gastgeber
 
 ## 16:55 UHR //
-- LÖSUNGEN BAUEN: BITS, ZIEGEL UND KÜHNE IDEEN
-- PANEL
-- ANTS VILL
-- BISLY
-- FRANZISKA WÖRTHMÜLLER
-- CHAGOS
-- RENÉ KLEIN
-- FÜR-GRÜNDER.DE
-- GASTGEBER
+- Lösungen Bauen: Bits, Ziegel UND Kühne Ideen
+- Panel
+- Ants Vill
+- Bisly
+- Franziska Wörthmüller
+- Chagos
+- René Klein
+- Für-gründer.de
+- Gastgeber
 
 ## 17:15 UHR //
-- STATE OF AI
-- LIVE PODCAST
-- ELISABETH L'ORANGE
-- TECH & TALES
-- LENA WALTLE
+- State OF AI
+- Live Podcast
+- Elisabeth L'orange
+- Tech & Tales
+- Lena Waltle
 - NZZ
 
 ## 17:40 UHR //
-- CLOSING
-- MASTERCLASSES
-- MASTERCLASS RAUM 1
+- Closing
+- Masterclasses
+- Masterclass Raum 1
 
 ## 9:45 UHR //
 - 
-- KÜNSTLICHE INTELLIGENZ IM ARBEITSALLTAG: WERKZEUGE, PROZESSE UND LEHREN AUS OMR
-- SPEAKER: ROBERT TUSCH, SARAH BRUNSWIG SPRACHE: DEUTSCH
+- Künstliche Intelligenz IM Arbeitsalltag: Werkzeuge, Prozesse UND Lehren AUS OMR
+- Speaker: Robert Tusch, Sarah Brunswig Sprache: Deutsch
 
 ## 10:45 UHR //
 - 
-- HERZRASEN – MIT ACHTSAMKEIT UND SELBSTBEWUSSTSEIN: SO ERREICHST DU DEINE ZIELE WIRKLICH
-- SPEAKER: DANIEL ENGELBRECHT SPRACHE: DEUTSCH
+- Herzrasen – MIT Achtsamkeit UND Selbstbewusstsein: SO Erreichst DU Deine Ziele Wirklich
+- Speaker: Daniel Engelbrecht Sprache: Deutsch
 
 ## 11:45 UHR //
 - 
-- VON TRADITION ZU TRANSFORMATION: DIE E-BUSINESS-STRATEGIE DER STIEBEL ELTRON GRUPPE MIT DENKWERK
-- SPEAKER: JULIAN HÖNER & JOSÉ SALAM SPRACHE: DEUTSCH
+- VON Tradition ZU Transformation: DIE E-business-strategie DER Stiebel Eltron Gruppe MIT Denkwerk
+- Speaker: Julian Höner & José Salam Sprache: Deutsch
 
 ## 12:45 UHR //
 - 
-- BUSINESS IMPACT STATT PROTOTYPEN: SNOWFLAKE ALS BESCHLEUNIGER FÜR KI-PROJEKTE
-- SPEAKER: DAVID KLEIN SPRACHE: DEUTSCH
+- Business Impact Statt Prototypen: Snowflake ALS Beschleuniger FÜR Ki-projekte
+- Speaker: David Klein Sprache: Deutsch
 
 ## 13:45 UHR //
 - 
-- VOM TICKETS ZU TOUCHPOINTS: WIE ESM DIE KULTUR DER ZUSAMMENARBEIT VERÄNDERT
-- SPEAKER: ROLAND JOERISKES SPRACHE: DEUTSCH
+- VOM Tickets ZU Touchpoints: WIE ESM DIE Kultur DER Zusammenarbeit Verändert
+- Speaker: Roland Joeriskes Sprache: Deutsch
 
 ## 14:45 UHR //
 - 
-- VON FRAGMENTIERTEN WERKZEUGEN ZU EFFIZIENTEN ARBEITSABLÄUFEN: WIE ABUS DIE ARBEITSKOORDINATION MIT ASANA VERÄNDERT HAT
-- SPEAKER: SONJA GUSENBAUER & RAINER BÜHNE SPRACHE: DEUTSCH
+- VON Fragmentierten Werkzeugen ZU Effizienten Arbeitsabläufen: WIE Abus DIE Arbeitskoordination MIT Asana Verändert HAT
+- Speaker: Sonja Gusenbauer & Rainer Bühne Sprache: Deutsch
 
 ## 15:45 UHR //
-- MASTERCLASS RAUM 2
-- WIE SERVICEPLAN NEUE GESCHÄFTSMODELLE JENSEITS VON BIG TECH MIT EINEM SOUVERÄNEN AGENTENBASIERTEN AI-ÖKOSYSTEM „MADE IN EUROPE“ ERMÖGLICHT
-- SPEAKER: NICO LUMMA SPRACHE: DEUTSCH
+- Masterclass Raum 2
+- WIE Serviceplan Neue Geschäftsmodelle Jenseits VON BIG Tech MIT Einem Souveränen Agentenbasierten Ai-ökosystem „made IN Europe“ Ermöglicht
+- Speaker: Nico Lumma Sprache: Deutsch
 
 ## 10:45 UHR //
 - 
-- GESCHÄFTSMODELLE NEU ERFINDEN: WARUM PRODUKTINNOVATION NICHT GENUG IST
-- SPEAKER: ALEXANDER RÖSCH & PROF. DR. JULIAN KAWOHL SPRACHE: DEUTSCH
+- Geschäftsmodelle NEU Erfinden: Warum Produktinnovation Nicht Genug IST
+- Speaker: Alexander Rösch & Prof. DR. Julian Kawohl Sprache: Deutsch
 
 ## 11:45 UHR //
 - 
-- EINE PLATTFORM FÜR ALLE: TREIBEN SIE IHR WACHSTUM MIT WORKDAY AN
-- SPEAKER: RAMI EL HAJ, DANICA RUZIC, JEFFREY HENRY & MALTE SOMMERFELD SPRACHE: ENGLISCH
+- Eine Plattform FÜR Alle: Treiben SIE IHR Wachstum MIT Workday AN
+- Speaker: Rami EL Haj, Danica Ruzic, Jeffrey Henry & Malte Sommerfeld Sprache: Englisch
 
 ## 12:45 UHR //
 - 
-- KOSTENLOSES GELD VON DER REGIERUNG – ÖFFENTLICHE ZUSCHÜSSE FÜR KLEINE UND MITTLERE UNTERNEHMEN ODER: WIE SIE IHREN CASHFLOW MIT ÖFFENTLICHEN MITTELN OPTIMIEREN KÖNNEN
-- SPEAKER: PROF. DR. KAI THIERHOFF SPRACHE: DEUTSCH
+- Kostenloses Geld VON DER Regierung – Öffentliche Zuschüsse FÜR Kleine UND Mittlere Unternehmen Oder: WIE SIE Ihren Cashflow MIT Öffentlichen Mitteln Optimieren Können
+- Speaker: Prof. DR. KAI Thierhoff Sprache: Deutsch
 
 ## 14:45 UHR //
 - 
-- RUND UM DIE ANPASSUNG DES PRODUKTS AN DEN MARKT: DIE BEDEUTUNG EINER SKALIERBAREN GESCHÄFTSGRUNDLAGE FÜR DAS WACHSTUM
-- SPEAKER: TINO ALBRECHT & JAN GUTKNECHT SPRACHE: ENGLISCH
+- Rund UM DIE Anpassung DES Produkts AN DEN Markt: DIE Bedeutung Einer Skalierbaren Geschäftsgrundlage FÜR DAS Wachstum
+- Speaker: Tino Albrecht & JAN Gutknecht Sprache: Englisch
 
 ## 15:45 UHR //
-- ROUNDTABLES
-- MIT AI TO GROWTH ENGINE – MARKETINGSTRATEGIEN FÜR STARTUPS!
-- SPEAKER: JENNIFER LAPP & YORK KARSTEN SPRACHE: DEUTSCH
-- ROUNDTABLE RAUM 9
+- Roundtables
+- MIT AI TO Growth Engine – Marketingstrategien FÜR Startups!
+- Speaker: Jennifer Lapp & York Karsten Sprache: Deutsch
+- Roundtable Raum 9
 
 ## 10:00 UHR //
 - 
-- KI ALLEIN BRINGT NICHTS: WARUM PROCESS INTELLIGENCE IN KOMBINATION MIT KI DER GAMECHANGER IST
-- SPEAKER: NIKOLAI SCHMAUDER
+- KI Allein Bringt Nichts: Warum Process Intelligence IN Kombination MIT KI DER Gamechanger IST
+- Speaker: Nikolai Schmauder
 
 ## 12:00 UHR //
 - 
-- VON DER STAGNATION ZUR SKALIERUNG: WIE KI DIE GESCHÄFTSMODELLE UND DEN VERTRIEB FÜR HIDDEN CHAMPIONS NEU ERFINDET
-- SPEAKER: THIES HOFMANN & FLORIAN PETER
+- VON DER Stagnation ZUR Skalierung: WIE KI DIE Geschäftsmodelle UND DEN Vertrieb FÜR Hidden Champions NEU Erfindet
+- Speaker: Thies Hofmann & Florian Peter
 
 ## 14:00 UHR //
 - 
-- VERLUST? NICHT MIT UNS – WIE DIE NÄCHSTE GENERATION DEN WANDEL GESTALTET
-- ALBERT GEIGER, DR. LEOPOLD VON SCHLENK-BARNSDORF, DR. ALEXANDRA KOHLMANN, CARL-LUIS RIEGER, HELEN FREUND & DR. MATHIAS HÜTTENRAUCH
+- Verlust? Nicht MIT UNS – WIE DIE Nächste Generation DEN Wandel Gestaltet
+- Albert Geiger, DR. Leopold VON Schlenk-barnsdorf, DR. Alexandra Kohlmann, Carl-luis Rieger, Helen Freund & DR. Mathias Hüttenrauch
 
 ## 15:30 UHR //
-- ROUNDTABLE RAUM 10 & 11
-- AUSWIRKUNGEN INVESTIERBAR MACHEN – IMM ALS BRÜCKE ZWISCHEN START-UPS UND GRÜNDERN
-- SPEAKER: BRIGITTE MOHN, TINA DREIMANN, OLIVER KUSCHEL, PETER BROCK, CORNELIA NYSSING & DIRK SANDER
+- Roundtable Raum 10 & 11
+- Auswirkungen Investierbar Machen – IMM ALS Brücke Zwischen Start-ups UND Gründern
+- Speaker: Brigitte Mohn, Tina Dreimann, Oliver Kuschel, Peter Brock, Cornelia Nyssing & Dirk Sander
 
 ## 10:30 UHR //
 - 
-- HR ROUNDTABLE: PEOPLE & CULTUR NEU DENKEN – MUT, IMPACT UND ZUKUNFT GESTALTEN
+- HR Roundtable: People & Cultur NEU Denken – Mut, Impact UND Zukunft Gestalten
 
 ## 12:00 UHR //
 - 
-- GEMEINSAM INNOVATIV: ERFOLGREICHE PARTNERSCHAFTEN IN UNSICHEREN ZEITEN
+- Gemeinsam Innovativ: Erfolgreiche Partnerschaften IN Unsicheren Zeiten
 
 ## 15:00 UHR //
 - 
-- COFFE & CURIOUS
+- Coffe & Curious
 
 ## 16:00 UHR //
-- ROUNDTABLE PWC LOUNGE
-- IST NATUR DAS NEUE GOLD? ÜBER NATUR, RENDITE UND EFFIZIENTE ESG-BERICHTERSTATTUNG.
-- TRUTZ V. DER TRENCK & LOUIS SCHULZE
+- Roundtable PWC Lounge
+- IST Natur DAS Neue Gold? Über Natur, Rendite UND Effiziente Esg-berichterstattung.
+- Trutz V. DER Trenck & Louis Schulze
 
 ## 11:00 UHR //
 - 
-- INTELLIGENTE SKALIERUNG: ERSCHLIESSUNG VON WACHSTUMSCHANCEN FÜR SEED SERIES A
+- Intelligente Skalierung: Erschliessung VON Wachstumschancen FÜR Seed Series A
 
 ## 13:15 UHR //
 - 
-- SIE MÖCHTEN MIT START-UPS ZUSAMMENARBEITEN? HIER IST DER ANFANG!
+- SIE Möchten MIT Start-ups Zusammenarbeiten? Hier IST DER Anfang!
 
 ## 15:15 UHR //
 - 
-- KI – CHANCEN UND HERAUSFORDERUNGEN FÜR DIE WIRTSCHAFT
+- KI – Chancen UND Herausforderungen FÜR DIE Wirtschaft
 
 ## 16:00 UHR //
-- ALLIANCE ARENA
-- MEISTERN SIE IHR ACCOUNT GAME: MINIMIEREN SIE DEN PAPIERKRAM, MAXIMIEREN SIE IHR GESCHÄFTSPOTENZIAL
+- Alliance Arena
+- Meistern SIE IHR Account Game: Minimieren SIE DEN Papierkram, Maximieren SIE IHR Geschäftspotenzial
 
 ## 10:30 UHR //
 - 
-- STARTUP-KOOPERATION RICHTIG GEMACHT: KI-SCOUTING DER FOUNDERS FOUNDATION FÜR DEN DEUTSCHEN MITTELSTAND
+- Startup-kooperation Richtig Gemacht: Ki-scouting DER Founders Foundation FÜR DEN Deutschen Mittelstand
 
 ## 11:30 UHR //
 - 
-- ZUKUNFT IM BLICK: WIE SCHÜCO PROPTECH-INNOVATIONEN VORAUSSCHAUEND ENTWICKELT
+- Zukunft IM Blick: WIE Schüco Proptech-innovationen Vorausschauend Entwickelt
 
 ## 11:35 UHR //
 - 
-- INNOVATION VON INNEN: WIE MIELE NEUE VENTURES AUFBAUT – REPARIEREN ANSTELLE VON E-ABFALL.
+- Innovation VON Innen: WIE Miele Neue Ventures Aufbaut – Reparieren Anstelle VON E-abfall.
 
 ## 12:05 UHR //
 - 
-- EFFIZIENTE PRODUKTION: MIT DEM BÖLLHOFF FACTORY DATA HUB ZU DIGITALEN SHOPFLOOR-PROZESSEN
+- Effiziente Produktion: MIT DEM Böllhoff Factory Data HUB ZU Digitalen Shopfloor-prozessen
 
 ## 12:35 UHR //
 - 
-- PRAXIS TRIFFT INNOVATION: STARTUP-LÖSUNGEN VON TANSO, STACKGINI UND PERSONIO IM EINSATZ BEIM MITTELSTAND
+- Praxis Trifft Innovation: Startup-lösungen VON Tanso, Stackgini UND Personio IM Einsatz Beim Mittelstand
 
 ## 13:25 UHR //
 - 
-- PLATFORM STRATEGIES FOR B2B AND B2C COMPANIES
+- Platform Strategies FOR B2B AND B2C Companies
 
 ## 14:15 UHR //
 - 
-- MEHR ALS EFFIZIENZ: MIT KI BEI DR. WOLFF NEUE POTENZIALE ERSCHLIESSEN
+- Mehr ALS Effizienz: MIT KI BEI DR. Wolff Neue Potenziale Erschliessen
 
 ## 14:25 UHR //
 - 
-- HINTERLAND KAFFEE: TRIFFEN SIE MARCUS BÖKER, GESCHÄFTSFÜHRER VON PHOENIX CONTACT INNOVATION VENTURES
+- Hinterland Kaffee: Triffen SIE Marcus Böker, Geschäftsführer VON Phoenix Contact Innovation Ventures
 
 ## 15:00 UHR //
 - 
-- UNLOCKING FULL POTENTIAL: WIE MITTELSTAND UND HIDDEN CHAMPIONS MIT KI IHR VOLLES GESCHÄFTSMODELLPOTENZIAL ERSCHLIESSEN
+- Unlocking Full Potential: WIE Mittelstand UND Hidden Champions MIT KI IHR Volles Geschäftsmodellpotenzial Erschliessen
 
 ## 15:40 UHR //
 - 
-- KI? EINFACH (SELBER) MACHEN! – NOBILIAS PRAGMATISCHE REISE VON DER VISION ZUR ERFOLGREICHEN UMSETZUNG
+- KI? Einfach (selber) Machen! – Nobilias Pragmatische Reise VON DER Vision ZUR Erfolgreichen Umsetzung
 
 
 **Connection to Miele:** This content relates to ongoing work at Miele.

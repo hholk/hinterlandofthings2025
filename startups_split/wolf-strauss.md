@@ -1,5 +1,5 @@
-# WOLF & STRAUSS
-Thema: WOLF & STRAUSS
+# Wolf & Strauss
+Thema: Wolf & Strauss
 Agenda: n/a
 Beteiligte Personen: n/a
 

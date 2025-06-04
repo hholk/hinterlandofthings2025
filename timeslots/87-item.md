@@ -2,7 +2,7 @@
 Thema: 
 Agenda: 10:30 - 12:00
 Beteiligte Personen:
-- HR ROUNDTABLE: PEOPLE & CULTUR NEU DENKEN – MUT, IMPACT UND ZUKUNFT GESTALTEN
+- HR Roundtable: People & Cultur NEU Denken – Mut, Impact UND Zukunft Gestalten
 
 Start: 10:30
 End: 12:00

@@ -1,11 +1,11 @@
-# OOTB.NRW AWARD FINALE
-Thema: OOTB.NRW AWARD FINALE
+# Ootb.nrw Award Finale
+Thema: Ootb.nrw Award Finale
 Agenda: 18:15 - 18:20
 Beteiligte Personen:
-- SILKE KREBS
-- MWIKE
-- Profil: SILKE KREBS von MWIKE bringt Erfahrung in corporate foresight at Miele.
-- Grund: Sprechen Sie mit SILKE KREBS, um mehr über corporate foresight at Miele zu erfahren.
+- Silke Krebs
+- Mwike
+- Profil: Silke Krebs von Mwike bringt Erfahrung in corporate foresight at Miele.
+- Grund: Sprechen Sie mit Silke Krebs, um mehr über corporate foresight at Miele zu erfahren.
 
 Start: 18:15
 End: 18:20

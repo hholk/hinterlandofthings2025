@@ -1,5 +1,5 @@
-# EMPION
-Thema: EMPION
+# Empion
+Thema: Empion
 Agenda: n/a
 Beteiligte Personen: n/a
 

@@ -2,8 +2,8 @@
 Thema: 
 Agenda: 11:45 - 12:45
 Beteiligte Personen:
-- VON TRADITION ZU TRANSFORMATION: DIE E-BUSINESS-STRATEGIE DER STIEBEL ELTRON GRUPPE MIT DENKWERK
-- SPEAKER: JULIAN HÖNER & JOSÉ SALAM SPRACHE: DEUTSCH
+- VON Tradition ZU Transformation: DIE E-business-strategie DER Stiebel Eltron Gruppe MIT Denkwerk
+- Speaker: Julian Höner & José Salam Sprache: Deutsch
 
 Start: 11:45
 End: 12:45

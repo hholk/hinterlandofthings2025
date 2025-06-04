@@ -1,27 +1,27 @@
-# WARUM DIE MEISTEN MITTELSTÄNDISCHEN KOOPERATIONEN SCHEITERN -
-UND WIE MAN SIE ZUM LAUFEN BRINGT
-Thema: WARUM DIE MEISTEN MITTELSTÄNDISCHEN KOOPERATIONEN SCHEITERN -
-UND WIE MAN SIE ZUM LAUFEN BRINGT
+# Warum DIE Meisten Mittelständischen Kooperationen Scheitern -
+UND WIE MAN SIE ZUM Laufen Bringt
+Thema: Warum DIE Meisten Mittelständischen Kooperationen Scheitern -
+UND WIE MAN SIE ZUM Laufen Bringt
 Agenda: 16:15 - 16:35
 Beteiligte Personen:
-- PANEL
-- JASPER ROLL
-- HAUFE GROUP VENTURES
-- Profil: JASPER ROLL von HAUFE GROUP VENTURES bringt Erfahrung in early adopter.
-- Grund: Sprechen Sie mit JASPER ROLL, um mehr über early adopter zu erfahren.
-- JOSEF SCHINDLER
-- SMART2I INDUSTRY INTELLIGENCE
-- Profil: JOSEF SCHINDLER von SMART2I INDUSTRY INTELLIGENCE bringt Erfahrung in start-up cooperations.
-- Grund: Sprechen Sie mit JOSEF SCHINDLER, um mehr über start-up cooperations zu erfahren.
-- ALEXANDRA HARTUNG
-- WORKDAY
-- Profil: ALEXANDRA HARTUNG von WORKDAY bringt Erfahrung in start-up cooperations.
-- Grund: Sprechen Sie mit ALEXANDRA HARTUNG, um mehr über start-up cooperations zu erfahren.
-- CHÉRINE DE BRUIJN
-- CORPORATE KITCHEN
-- Profil: CHÉRINE DE BRUIJN von CORPORATE KITCHEN bringt Erfahrung in VC.
-- Grund: Sprechen Sie mit CHÉRINE DE BRUIJN, um mehr über VC zu erfahren.
-- GASTGEBER
+- Panel
+- Jasper Roll
+- Haufe Group Ventures
+- Profil: Jasper Roll von Haufe Group Ventures bringt Erfahrung in early adopter.
+- Grund: Sprechen Sie mit Jasper Roll, um mehr über early adopter zu erfahren.
+- Josef Schindler
+- Smart2i Industry Intelligence
+- Profil: Josef Schindler von Smart2i Industry Intelligence bringt Erfahrung in start-up cooperations.
+- Grund: Sprechen Sie mit Josef Schindler, um mehr über start-up cooperations zu erfahren.
+- Alexandra Hartung
+- Workday
+- Profil: Alexandra Hartung von Workday bringt Erfahrung in start-up cooperations.
+- Grund: Sprechen Sie mit Alexandra Hartung, um mehr über start-up cooperations zu erfahren.
+- Chérine DE Bruijn
+- Corporate Kitchen
+- Profil: Chérine DE Bruijn von Corporate Kitchen bringt Erfahrung in VC.
+- Grund: Sprechen Sie mit Chérine DE Bruijn, um mehr über VC zu erfahren.
+- Gastgeber
 
 Start: 16:15
 End: 16:35

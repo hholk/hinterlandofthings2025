@@ -2,8 +2,8 @@
 Thema: 
 Agenda: 9:45 - 10:45
 Beteiligte Personen:
-- KÜNSTLICHE INTELLIGENZ IM ARBEITSALLTAG: WERKZEUGE, PROZESSE UND LEHREN AUS OMR
-- SPEAKER: ROBERT TUSCH, SARAH BRUNSWIG SPRACHE: DEUTSCH
+- Künstliche Intelligenz IM Arbeitsalltag: Werkzeuge, Prozesse UND Lehren AUS OMR
+- Speaker: Robert Tusch, Sarah Brunswig Sprache: Deutsch
 
 Start: 9:45
 End: 10:45

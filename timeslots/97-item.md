@@ -2,7 +2,7 @@
 Thema: 
 Agenda: 11:35 - 12:05
 Beteiligte Personen:
-- INNOVATION VON INNEN: WIE MIELE NEUE VENTURES AUFBAUT – REPARIEREN ANSTELLE VON E-ABFALL.
+- Innovation VON Innen: WIE Miele Neue Ventures Aufbaut – Reparieren Anstelle VON E-abfall.
 
 Start: 11:35
 End: 12:05

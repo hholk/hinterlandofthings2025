@@ -1,5 +1,5 @@
-# CASABLANCA
-Thema: CASABLANCA
+# Casablanca
+Thema: Casablanca
 Agenda: n/a
 Beteiligte Personen: n/a
 

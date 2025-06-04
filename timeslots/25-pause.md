@@ -1,5 +1,5 @@
-# PAUSE
-Thema: PAUSE
+# Pause
+Thema: Pause
 Agenda: 17:10 - 17:20
 Beteiligte Personen: n/a
 

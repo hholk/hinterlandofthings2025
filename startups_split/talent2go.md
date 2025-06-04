@@ -1,5 +1,5 @@
-# TALENT2GO
-Thema: TALENT2GO
+# Talent2go
+Thema: Talent2go
 Agenda: n/a
 Beteiligte Personen: n/a
 

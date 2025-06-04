@@ -1,5 +1,5 @@
-# CLOUD REBELS
-Thema: CLOUD REBELS
+# Cloud Rebels
+Thema: Cloud Rebels
 Agenda: n/a
 Beteiligte Personen: n/a
 

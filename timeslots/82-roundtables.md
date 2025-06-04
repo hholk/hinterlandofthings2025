@@ -1,10 +1,10 @@
-# ROUNDTABLES
-Thema: ROUNDTABLES
+# Roundtables
+Thema: Roundtables
 Agenda: 15:45 - 10:00
 Beteiligte Personen:
-- MIT AI TO GROWTH ENGINE – MARKETINGSTRATEGIEN FÜR STARTUPS!
-- SPEAKER: JENNIFER LAPP & YORK KARSTEN SPRACHE: DEUTSCH
-- ROUNDTABLE RAUM 9
+- MIT AI TO Growth Engine – Marketingstrategien FÜR Startups!
+- Speaker: Jennifer Lapp & York Karsten Sprache: Deutsch
+- Roundtable Raum 9
 
 Start: 15:45
 End: 10:00

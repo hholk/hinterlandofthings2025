@@ -1,29 +1,29 @@
-# RÜCKGEWINNUNG DER WETTBEWERBSFÄHIGKEIT: DIE ENTSCHEIDENDE ROLLE DER ÖKOSYSTEME
-Thema: RÜCKGEWINNUNG DER WETTBEWERBSFÄHIGKEIT: DIE ENTSCHEIDENDE ROLLE DER ÖKOSYSTEME
+# Rückgewinnung DER Wettbewerbsfähigkeit: DIE Entscheidende Rolle DER Ökosysteme
+Thema: Rückgewinnung DER Wettbewerbsfähigkeit: DIE Entscheidende Rolle DER Ökosysteme
 Agenda: 9:40 - 10:05
 Beteiligte Personen:
-- PANEL
-- DEEPA GAUTAM-NIGGE
+- Panel
+- Deepa Gautam-nigge
 - SAP
-- Profil: DEEPA GAUTAM-NIGGE von SAP bringt Erfahrung in early adopter.
-- Grund: Sprechen Sie mit DEEPA GAUTAM-NIGGE, um mehr über early adopter zu erfahren.
-- JENS FIEGE
-- FIEGE
-- Profil: JENS FIEGE von FIEGE bringt Erfahrung in corporate foresight at Miele.
-- Grund: Sprechen Sie mit JENS FIEGE, um mehr über corporate foresight at Miele zu erfahren.
-- DR. ANNIKA VON MUTIUS
-- EMPION
-- Profil: DR. ANNIKA VON MUTIUS von EMPION bringt Erfahrung in start-up cooperations.
-- Grund: Sprechen Sie mit DR. ANNIKA VON MUTIUS, um mehr über start-up cooperations zu erfahren.
-- FLORIAN HUBER
-- EWOR
-- Profil: FLORIAN HUBER von EWOR bringt Erfahrung in early adopter.
-- Grund: Sprechen Sie mit FLORIAN HUBER, um mehr über early adopter zu erfahren.
-- ANJA MÜLLER
-- HANDELSBLATT
-- Profil: ANJA MÜLLER von HANDELSBLATT bringt Erfahrung in early adopter.
-- Grund: Sprechen Sie mit ANJA MÜLLER, um mehr über early adopter zu erfahren.
-- GASTGEBER
+- Profil: Deepa Gautam-nigge von SAP bringt Erfahrung in early adopter.
+- Grund: Sprechen Sie mit Deepa Gautam-nigge, um mehr über early adopter zu erfahren.
+- Jens Fiege
+- Fiege
+- Profil: Jens Fiege von Fiege bringt Erfahrung in corporate foresight at Miele.
+- Grund: Sprechen Sie mit Jens Fiege, um mehr über corporate foresight at Miele zu erfahren.
+- DR. Annika VON Mutius
+- Empion
+- Profil: DR. Annika VON Mutius von Empion bringt Erfahrung in start-up cooperations.
+- Grund: Sprechen Sie mit DR. Annika VON Mutius, um mehr über start-up cooperations zu erfahren.
+- Florian Huber
+- Ewor
+- Profil: Florian Huber von Ewor bringt Erfahrung in early adopter.
+- Grund: Sprechen Sie mit Florian Huber, um mehr über early adopter zu erfahren.
+- Anja Müller
+- Handelsblatt
+- Profil: Anja Müller von Handelsblatt bringt Erfahrung in early adopter.
+- Grund: Sprechen Sie mit Anja Müller, um mehr über early adopter zu erfahren.
+- Gastgeber
 
 Start: 9:40
 End: 10:05

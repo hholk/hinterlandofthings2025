@@ -2,8 +2,8 @@
 Thema: 
 Agenda: 12:45 - 14:45
 Beteiligte Personen:
-- KOSTENLOSES GELD VON DER REGIERUNG – ÖFFENTLICHE ZUSCHÜSSE FÜR KLEINE UND MITTLERE UNTERNEHMEN ODER: WIE SIE IHREN CASHFLOW MIT ÖFFENTLICHEN MITTELN OPTIMIEREN KÖNNEN
-- SPEAKER: PROF. DR. KAI THIERHOFF SPRACHE: DEUTSCH
+- Kostenloses Geld VON DER Regierung – Öffentliche Zuschüsse FÜR Kleine UND Mittlere Unternehmen Oder: WIE SIE Ihren Cashflow MIT Öffentlichen Mitteln Optimieren Können
+- Speaker: Prof. DR. KAI Thierhoff Sprache: Deutsch
 
 Start: 12:45
 End: 14:45

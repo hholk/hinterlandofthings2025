@@ -1,21 +1,21 @@
-# ÜBERBRÜCKUNG DER KLUFT: DIE NÄCHSTE WELLE DER INDUSTRIELLEN INNOVATION
-Thema: ÜBERBRÜCKUNG DER KLUFT: DIE NÄCHSTE WELLE DER INDUSTRIELLEN INNOVATION
+# Überbrückung DER Kluft: DIE Nächste Welle DER Industriellen Innovation
+Thema: Überbrückung DER Kluft: DIE Nächste Welle DER Industriellen Innovation
 Agenda: 14:40 - 15:05
 Beteiligte Personen:
-- PANEL
-- THOMAS PAULUS
+- Panel
+- Thomas Paulus
 - KSB
-- Profil: THOMAS PAULUS von KSB bringt Erfahrung in smart money.
-- Grund: Sprechen Sie mit THOMAS PAULUS, um mehr über smart money zu erfahren.
-- LENA WEIRAUCH
-- AIOMATIC
-- Profil: LENA WEIRAUCH von AIOMATIC bringt Erfahrung in smart money.
-- Grund: Sprechen Sie mit LENA WEIRAUCH, um mehr über smart money zu erfahren.
-- LUCA CARACCIOLO
+- Profil: Thomas Paulus von KSB bringt Erfahrung in smart money.
+- Grund: Sprechen Sie mit Thomas Paulus, um mehr über smart money zu erfahren.
+- Lena Weirauch
+- Aiomatic
+- Profil: Lena Weirauch von Aiomatic bringt Erfahrung in smart money.
+- Grund: Sprechen Sie mit Lena Weirauch, um mehr über smart money zu erfahren.
+- Luca Caracciolo
 - T3N
-- Profil: LUCA CARACCIOLO von T3N bringt Erfahrung in smart money.
-- Grund: Sprechen Sie mit LUCA CARACCIOLO, um mehr über smart money zu erfahren.
-- GASTGEBER
+- Profil: Luca Caracciolo von T3N bringt Erfahrung in smart money.
+- Grund: Sprechen Sie mit Luca Caracciolo, um mehr über smart money zu erfahren.
+- Gastgeber
 
 Start: 14:40
 End: 15:05

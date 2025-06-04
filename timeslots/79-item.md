@@ -2,8 +2,8 @@
 Thema: 
 Agenda: 11:45 - 12:45
 Beteiligte Personen:
-- EINE PLATTFORM FÜR ALLE: TREIBEN SIE IHR WACHSTUM MIT WORKDAY AN
-- SPEAKER: RAMI EL HAJ, DANICA RUZIC, JEFFREY HENRY & MALTE SOMMERFELD SPRACHE: ENGLISCH
+- Eine Plattform FÜR Alle: Treiben SIE IHR Wachstum MIT Workday AN
+- Speaker: Rami EL Haj, Danica Ruzic, Jeffrey Henry & Malte Sommerfeld Sprache: Englisch
 
 Start: 11:45
 End: 12:45

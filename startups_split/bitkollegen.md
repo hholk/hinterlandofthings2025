@@ -1,5 +1,5 @@
-# BITKOLLEGEN
-Thema: BITKOLLEGEN
+# Bitkollegen
+Thema: Bitkollegen
 Agenda: n/a
 Beteiligte Personen: n/a
 

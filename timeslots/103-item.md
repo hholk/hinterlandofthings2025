@@ -2,7 +2,7 @@
 Thema: 
 Agenda: 15:00 - 15:40
 Beteiligte Personen:
-- UNLOCKING FULL POTENTIAL: WIE MITTELSTAND UND HIDDEN CHAMPIONS MIT KI IHR VOLLES GESCHÄFTSMODELLPOTENZIAL ERSCHLIESSEN
+- Unlocking Full Potential: WIE Mittelstand UND Hidden Champions MIT KI IHR Volles Geschäftsmodellpotenzial Erschliessen
 
 Start: 15:00
 End: 15:40

@@ -1,8 +1,8 @@
-# PITCH 10 - VALOON
-Thema: PITCH 10 - VALOON
+# Pitch 10 - Valoon
+Thema: Pitch 10 - Valoon
 Agenda: 11:29 - 11:35
 Beteiligte Personen:
-- PITCH
+- Pitch
 
 Start: 11:29
 End: 11:35

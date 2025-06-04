@@ -1,5 +1,5 @@
-# DELFA SYSTEMS
-Thema: DELFA SYSTEMS
+# Delfa Systems
+Thema: Delfa Systems
 Agenda: n/a
 Beteiligte Personen: n/a
 

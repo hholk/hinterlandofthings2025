@@ -2,7 +2,7 @@
 Thema: 
 Agenda: 15:40
 Beteiligte Personen:
-- KI? EINFACH (SELBER) MACHEN! – NOBILIAS PRAGMATISCHE REISE VON DER VISION ZUR ERFOLGREICHEN UMSETZUNG
+- KI? Einfach (selber) Machen! – Nobilias Pragmatische Reise VON DER Vision ZUR Erfolgreichen Umsetzung
 
 Start: 15:40
 End: 

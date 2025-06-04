@@ -2,7 +2,7 @@
 Thema: 
 Agenda: 15:15 - 16:00
 Beteiligte Personen:
-- KI – CHANCEN UND HERAUSFORDERUNGEN FÜR DIE WIRTSCHAFT
+- KI – Chancen UND Herausforderungen FÜR DIE Wirtschaft
 
 Start: 15:15
 End: 16:00
