@@ -2,8 +2,8 @@
 Thema: 
 Agenda: 14:45 - 15:45
 Beteiligte Personen:
-- VON FRAGMENTIERTEN WERKZEUGEN ZU EFFIZIENTEN ARBEITSABLÄUFEN: WIE ABUS DIE ARBEITSKOORDINATION MIT ASANA VERÄNDERT HAT
-- SPEAKER: SONJA GUSENBAUER & RAINER BÜHNE SPRACHE: DEUTSCH
+- VON Fragmentierten Werkzeugen ZU Effizienten Arbeitsabläufen: WIE Abus DIE Arbeitskoordination MIT Asana Verändert HAT
+- Speaker: Sonja Gusenbauer & Rainer Bühne Sprache: Deutsch
 
 Start: 14:45
 End: 15:45

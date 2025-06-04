@@ -1,9 +1,9 @@
-# ROUNDTABLE PWC LOUNGE
-Thema: ROUNDTABLE PWC LOUNGE
+# Roundtable PWC Lounge
+Thema: Roundtable PWC Lounge
 Agenda: 16:00 - 11:00
 Beteiligte Personen:
-- IST NATUR DAS NEUE GOLD? ÜBER NATUR, RENDITE UND EFFIZIENTE ESG-BERICHTERSTATTUNG.
-- TRUTZ V. DER TRENCK & LOUIS SCHULZE
+- IST Natur DAS Neue Gold? Über Natur, Rendite UND Effiziente Esg-berichterstattung.
+- Trutz V. DER Trenck & Louis Schulze
 
 Start: 16:00
 End: 11:00

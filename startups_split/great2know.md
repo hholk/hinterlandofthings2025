@@ -1,5 +1,5 @@
-# GREAT2KNOW
-Thema: GREAT2KNOW
+# Great2know
+Thema: Great2know
 Agenda: n/a
 Beteiligte Personen: n/a
 

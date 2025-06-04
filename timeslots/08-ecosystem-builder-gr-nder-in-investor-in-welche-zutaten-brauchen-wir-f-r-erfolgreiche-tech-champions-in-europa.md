@@ -1,19 +1,19 @@
-# ECOSYSTEM BUILDER GRÜNDER:IN INVESTOR:IN:
-WELCHE ZUTATEN BRAUCHEN WIR FÜR ERFOLGREICHE TECH CHAMPIONS IN EUROPA?
-Thema: ECOSYSTEM BUILDER GRÜNDER:IN INVESTOR:IN:
-WELCHE ZUTATEN BRAUCHEN WIR FÜR ERFOLGREICHE TECH CHAMPIONS IN EUROPA?
+# Ecosystem Builder Gründer:in Investor:in:
+Welche Zutaten Brauchen WIR FÜR Erfolgreiche Tech Champions IN Europa?
+Thema: Ecosystem Builder Gründer:in Investor:in:
+Welche Zutaten Brauchen WIR FÜR Erfolgreiche Tech Champions IN Europa?
 Agenda: 10:40 - 11:00
 Beteiligte Personen:
-- FIRESIDE CHAT
-- FELIX HAAS
-- IDNOW
-- Profil: FELIX HAAS von IDNOW bringt Erfahrung in VC.
-- Grund: Sprechen Sie mit FELIX HAAS, um mehr über VC zu erfahren.
-- ANTONIA GÖTSCH
-- HARVARD BUSINESS MANAGER
-- Profil: ANTONIA GÖTSCH von HARVARD BUSINESS MANAGER bringt Erfahrung in start-up cooperations.
-- Grund: Sprechen Sie mit ANTONIA GÖTSCH, um mehr über start-up cooperations zu erfahren.
-- GASTGEBER
+- Fireside Chat
+- Felix Haas
+- Idnow
+- Profil: Felix Haas von Idnow bringt Erfahrung in VC.
+- Grund: Sprechen Sie mit Felix Haas, um mehr über VC zu erfahren.
+- Antonia Götsch
+- Harvard Business Manager
+- Profil: Antonia Götsch von Harvard Business Manager bringt Erfahrung in start-up cooperations.
+- Grund: Sprechen Sie mit Antonia Götsch, um mehr über start-up cooperations zu erfahren.
+- Gastgeber
 
 Start: 10:40
 End: 11:00

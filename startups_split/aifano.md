@@ -1,5 +1,5 @@
-# AIFANO
-Thema: AIFANO
+# Aifano
+Thema: Aifano
 Agenda: n/a
 Beteiligte Personen: n/a
 

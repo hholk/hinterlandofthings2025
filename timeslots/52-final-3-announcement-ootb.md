@@ -1,5 +1,5 @@
-# FINAL 3 ANNOUNCEMENT OOTB
-Thema: FINAL 3 ANNOUNCEMENT OOTB
+# Final 3 Announcement Ootb
+Thema: Final 3 Announcement Ootb
 Agenda: 11:50 - 11:55
 Beteiligte Personen: n/a
 

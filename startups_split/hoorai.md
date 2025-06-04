@@ -1,5 +1,5 @@
-# HOORAI
-Thema: HOORAI
+# Hoorai
+Thema: Hoorai
 Agenda: n/a
 Beteiligte Personen: n/a
 

@@ -1,8 +1,8 @@
-# PITCH 9 - DNTOX
-Thema: PITCH 9 - DNTOX
+# Pitch 9 - Dntox
+Thema: Pitch 9 - Dntox
 Agenda: 11:23 - 11:29
 Beteiligte Personen:
-- PITCH
+- Pitch
 
 Start: 11:23
 End: 11:29

@@ -1,5 +1,5 @@
-# INDICIUM
-Thema: INDICIUM
+# Indicium
+Thema: Indicium
 Agenda: n/a
 Beteiligte Personen: n/a
 

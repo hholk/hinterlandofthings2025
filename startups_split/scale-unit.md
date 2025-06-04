@@ -1,5 +1,5 @@
-# SCALE UNIT
-Thema: SCALE UNIT
+# Scale Unit
+Thema: Scale Unit
 Agenda: n/a
 Beteiligte Personen: n/a
 

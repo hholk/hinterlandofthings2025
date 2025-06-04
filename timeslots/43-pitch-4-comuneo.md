@@ -1,8 +1,8 @@
-# PITCH 4 - COMUNEO
-Thema: PITCH 4 - COMUNEO
+# Pitch 4 - Comuneo
+Thema: Pitch 4 - Comuneo
 Agenda: 10:43 - 10:49
 Beteiligte Personen:
-- PITCH
+- Pitch
 
 Start: 10:43
 End: 10:49

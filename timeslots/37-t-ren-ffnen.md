@@ -1,5 +1,5 @@
-# TÜREN ÖFFNEN
-Thema: TÜREN ÖFFNEN
+# Türen Öffnen
+Thema: Türen Öffnen
 Agenda: 8:00 - 10:00
 Beteiligte Personen: n/a
 

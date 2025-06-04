@@ -1,8 +1,8 @@
-# PITCH 1 - STORYBOARDER.AI
-Thema: PITCH 1 - STORYBOARDER.AI
+# Pitch 1 - Storyboarder.ai
+Thema: Pitch 1 - Storyboarder.ai
 Agenda: 10:25 - 10:31
 Beteiligte Personen:
-- PITCH
+- Pitch
 
 Start: 10:25
 End: 10:31

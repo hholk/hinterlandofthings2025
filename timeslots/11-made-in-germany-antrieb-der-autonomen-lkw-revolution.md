@@ -1,12 +1,12 @@
-# MADE IN GERMANY: ANTRIEB DER AUTONOMEN LKW-REVOLUTION
-Thema: MADE IN GERMANY: ANTRIEB DER AUTONOMEN LKW-REVOLUTION
+# Made IN Germany: Antrieb DER Autonomen Lkw-revolution
+Thema: Made IN Germany: Antrieb DER Autonomen Lkw-revolution
 Agenda: 11:40 - 11:55
 Beteiligte Personen:
-- KEYNOTE
-- HENDRIK KRAMER
-- FERNRIDE
-- Profil: HENDRIK KRAMER von FERNRIDE bringt Erfahrung in VC.
-- Grund: Sprechen Sie mit HENDRIK KRAMER, um mehr über VC zu erfahren.
+- Keynote
+- Hendrik Kramer
+- Fernride
+- Profil: Hendrik Kramer von Fernride bringt Erfahrung in VC.
+- Grund: Sprechen Sie mit Hendrik Kramer, um mehr über VC zu erfahren.
 
 Start: 11:40
 End: 11:55

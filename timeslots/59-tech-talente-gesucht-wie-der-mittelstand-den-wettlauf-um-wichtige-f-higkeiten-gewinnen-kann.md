@@ -1,25 +1,25 @@
-# TECH-TALENTE GESUCHT: WIE DER MITTELSTAND DEN WETTLAUF UM WICHTIGE FÄHIGKEITEN GEWINNEN KANN
-Thema: TECH-TALENTE GESUCHT: WIE DER MITTELSTAND DEN WETTLAUF UM WICHTIGE FÄHIGKEITEN GEWINNEN KANN
+# Tech-talente Gesucht: WIE DER Mittelstand DEN Wettlauf UM Wichtige Fähigkeiten Gewinnen Kann
+Thema: Tech-talente Gesucht: WIE DER Mittelstand DEN Wettlauf UM Wichtige Fähigkeiten Gewinnen Kann
 Agenda: 14:10 - 14:30
 Beteiligte Personen:
-- PANEL
-- JAN HENRI KALINOWSKI
-- CHEFTREFF
-- Profil: JAN HENRI KALINOWSKI von CHEFTREFF bringt Erfahrung in smart money.
-- Grund: Sprechen Sie mit JAN HENRI KALINOWSKI, um mehr über smart money zu erfahren.
-- BETTINA VOLKENS
-- GREAT2KNOW
-- Profil: BETTINA VOLKENS von GREAT2KNOW bringt Erfahrung in smart money.
-- Grund: Sprechen Sie mit BETTINA VOLKENS, um mehr über smart money zu erfahren.
-- PAULA CIPIERRE
-- ADA LEARNING
-- Profil: PAULA CIPIERRE von ADA LEARNING bringt Erfahrung in VC.
-- Grund: Sprechen Sie mit PAULA CIPIERRE, um mehr über VC zu erfahren.
-- FLORIAN GONTEK
-- DER SPIEGEL
-- Profil: FLORIAN GONTEK von DER SPIEGEL bringt Erfahrung in start-up cooperations.
-- Grund: Sprechen Sie mit FLORIAN GONTEK, um mehr über start-up cooperations zu erfahren.
-- GASTGEBER
+- Panel
+- JAN Henri Kalinowski
+- Cheftreff
+- Profil: JAN Henri Kalinowski von Cheftreff bringt Erfahrung in smart money.
+- Grund: Sprechen Sie mit JAN Henri Kalinowski, um mehr über smart money zu erfahren.
+- Bettina Volkens
+- Great2know
+- Profil: Bettina Volkens von Great2know bringt Erfahrung in smart money.
+- Grund: Sprechen Sie mit Bettina Volkens, um mehr über smart money zu erfahren.
+- Paula Cipierre
+- ADA Learning
+- Profil: Paula Cipierre von ADA Learning bringt Erfahrung in VC.
+- Grund: Sprechen Sie mit Paula Cipierre, um mehr über VC zu erfahren.
+- Florian Gontek
+- DER Spiegel
+- Profil: Florian Gontek von DER Spiegel bringt Erfahrung in start-up cooperations.
+- Grund: Sprechen Sie mit Florian Gontek, um mehr über start-up cooperations zu erfahren.
+- Gastgeber
 
 Start: 14:10
 End: 14:30

@@ -1,8 +1,8 @@
-# PITCH 6 - CHEMINNOVATION
-Thema: PITCH 6 - CHEMINNOVATION
+# Pitch 6 - Cheminnovation
+Thema: Pitch 6 - Cheminnovation
 Agenda: 11:05 - 11:11
 Beteiligte Personen:
-- PITCH
+- Pitch
 
 Start: 11:05
 End: 11:11

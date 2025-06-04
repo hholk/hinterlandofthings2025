@@ -2,8 +2,8 @@
 Thema: 
 Agenda: 14:45 - 15:45
 Beteiligte Personen:
-- RUND UM DIE ANPASSUNG DES PRODUKTS AN DEN MARKT: DIE BEDEUTUNG EINER SKALIERBAREN GESCHÄFTSGRUNDLAGE FÜR DAS WACHSTUM
-- SPEAKER: TINO ALBRECHT & JAN GUTKNECHT SPRACHE: ENGLISCH
+- Rund UM DIE Anpassung DES Produkts AN DEN Markt: DIE Bedeutung Einer Skalierbaren Geschäftsgrundlage FÜR DAS Wachstum
+- Speaker: Tino Albrecht & JAN Gutknecht Sprache: Englisch
 
 Start: 14:45
 End: 15:45

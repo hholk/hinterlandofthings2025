@@ -1,5 +1,5 @@
-# PERSONIO
-Thema: PERSONIO
+# Personio
+Thema: Personio
 Agenda: n/a
 Beteiligte Personen: n/a
 

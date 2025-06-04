@@ -2,7 +2,7 @@
 Thema: 
 Agenda: 15:00 - 16:00
 Beteiligte Personen:
-- COFFE & CURIOUS
+- Coffe & Curious
 
 Start: 15:00
 End: 16:00

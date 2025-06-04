@@ -1,5 +1,5 @@
-# AKENO
-Thema: AKENO
+# Akeno
+Thema: Akeno
 Agenda: n/a
 Beteiligte Personen: n/a
 

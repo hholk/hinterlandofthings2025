@@ -2,7 +2,7 @@
 Thema: 
 Agenda: 12:05 - 12:35
 Beteiligte Personen:
-- EFFIZIENTE PRODUKTION: MIT DEM BÖLLHOFF FACTORY DATA HUB ZU DIGITALEN SHOPFLOOR-PROZESSEN
+- Effiziente Produktion: MIT DEM Böllhoff Factory Data HUB ZU Digitalen Shopfloor-prozessen
 
 Start: 12:05
 End: 12:35

@@ -1,8 +1,8 @@
-# PITCH 5 - SPOT MY ENERGY
-Thema: PITCH 5 - SPOT MY ENERGY
+# Pitch 5 - Spot MY Energy
+Thema: Pitch 5 - Spot MY Energy
 Agenda: 10:49 - 10:55
 Beteiligte Personen:
-- PITCH
+- Pitch
 
 Start: 10:49
 End: 10:55

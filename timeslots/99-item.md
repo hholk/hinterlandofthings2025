@@ -2,7 +2,7 @@
 Thema: 
 Agenda: 12:35 - 13:25
 Beteiligte Personen:
-- PRAXIS TRIFFT INNOVATION: STARTUP-LÖSUNGEN VON TANSO, STACKGINI UND PERSONIO IM EINSATZ BEIM MITTELSTAND
+- Praxis Trifft Innovation: Startup-lösungen VON Tanso, Stackgini UND Personio IM Einsatz Beim Mittelstand
 
 Start: 12:35
 End: 13:25

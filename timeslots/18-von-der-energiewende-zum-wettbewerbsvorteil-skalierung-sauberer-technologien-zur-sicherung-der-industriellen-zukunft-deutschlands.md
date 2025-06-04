@@ -1,27 +1,27 @@
-# VON DER ENERGIEWENDE ZUM WETTBEWERBSVORTEIL:
-SKALIERUNG SAUBERER TECHNOLOGIEN ZUR SICHERUNG DER INDUSTRIELLEN ZUKUNFT DEUTSCHLANDS
-Thema: VON DER ENERGIEWENDE ZUM WETTBEWERBSVORTEIL:
-SKALIERUNG SAUBERER TECHNOLOGIEN ZUR SICHERUNG DER INDUSTRIELLEN ZUKUNFT DEUTSCHLANDS
+# VON DER Energiewende ZUM Wettbewerbsvorteil:
+Skalierung Sauberer Technologien ZUR Sicherung DER Industriellen Zukunft Deutschlands
+Thema: VON DER Energiewende ZUM Wettbewerbsvorteil:
+Skalierung Sauberer Technologien ZUR Sicherung DER Industriellen Zukunft Deutschlands
 Agenda: 14:15 - 14:40
 Beteiligte Personen:
-- PANEL
-- FLORIAN HILDEBRAND
-- GREENLYTE
-- Profil: FLORIAN HILDEBRAND von GREENLYTE bringt Erfahrung in start-up cooperations.
-- Grund: Sprechen Sie mit FLORIAN HILDEBRAND, um mehr über start-up cooperations zu erfahren.
-- HENDRIK BRANDIS
-- EARLYBIRD
-- Profil: HENDRIK BRANDIS von EARLYBIRD bringt Erfahrung in VC.
-- Grund: Sprechen Sie mit HENDRIK BRANDIS, um mehr über VC zu erfahren.
-- STEPHAN SEGBERS
-- RHEINENERGIE
-- Profil: STEPHAN SEGBERS von RHEINENERGIE bringt Erfahrung in start-up cooperations.
-- Grund: Sprechen Sie mit STEPHAN SEGBERS, um mehr über start-up cooperations zu erfahren.
-- UWE JEAN HEUSER
-- DIE ZEIT
-- Profil: UWE JEAN HEUSER von DIE ZEIT bringt Erfahrung in VC.
-- Grund: Sprechen Sie mit UWE JEAN HEUSER, um mehr über VC zu erfahren.
-- GASTGEBER
+- Panel
+- Florian Hildebrand
+- Greenlyte
+- Profil: Florian Hildebrand von Greenlyte bringt Erfahrung in start-up cooperations.
+- Grund: Sprechen Sie mit Florian Hildebrand, um mehr über start-up cooperations zu erfahren.
+- Hendrik Brandis
+- Earlybird
+- Profil: Hendrik Brandis von Earlybird bringt Erfahrung in VC.
+- Grund: Sprechen Sie mit Hendrik Brandis, um mehr über VC zu erfahren.
+- Stephan Segbers
+- Rheinenergie
+- Profil: Stephan Segbers von Rheinenergie bringt Erfahrung in start-up cooperations.
+- Grund: Sprechen Sie mit Stephan Segbers, um mehr über start-up cooperations zu erfahren.
+- UWE Jean Heuser
+- DIE Zeit
+- Profil: UWE Jean Heuser von DIE Zeit bringt Erfahrung in VC.
+- Grund: Sprechen Sie mit UWE Jean Heuser, um mehr über VC zu erfahren.
+- Gastgeber
 
 Start: 14:15
 End: 14:40

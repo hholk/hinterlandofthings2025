@@ -1,5 +1,5 @@
-# SMARTLOC
-Thema: SMARTLOC
+# Smartloc
+Thema: Smartloc
 Agenda: n/a
 Beteiligte Personen: n/a
 

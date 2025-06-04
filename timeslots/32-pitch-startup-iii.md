@@ -1,5 +1,5 @@
-# PITCH STARTUP III
-Thema: PITCH STARTUP III
+# Pitch Startup III
+Thema: Pitch Startup III
 Agenda: 18:24 - 18:26
 Beteiligte Personen: n/a
 

@@ -2,8 +2,8 @@
 Thema: 
 Agenda: 13:45 - 14:45
 Beteiligte Personen:
-- VOM TICKETS ZU TOUCHPOINTS: WIE ESM DIE KULTUR DER ZUSAMMENARBEIT VERÄNDERT
-- SPEAKER: ROLAND JOERISKES SPRACHE: DEUTSCH
+- VOM Tickets ZU Touchpoints: WIE ESM DIE Kultur DER Zusammenarbeit Verändert
+- Speaker: Roland Joeriskes Sprache: Deutsch
 
 Start: 13:45
 End: 14:45

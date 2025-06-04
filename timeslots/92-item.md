@@ -2,7 +2,7 @@
 Thema: 
 Agenda: 13:15 - 15:15
 Beteiligte Personen:
-- SIE MÖCHTEN MIT START-UPS ZUSAMMENARBEITEN? HIER IST DER ANFANG!
+- SIE Möchten MIT Start-ups Zusammenarbeiten? Hier IST DER Anfang!
 
 Start: 13:15
 End: 15:15

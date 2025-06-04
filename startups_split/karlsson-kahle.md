@@ -1,5 +1,5 @@
-# KARLSSON + KAHLE
-Thema: KARLSSON + KAHLE
+# Karlsson + Kahle
+Thema: Karlsson + Kahle
 Agenda: n/a
 Beteiligte Personen: n/a
 

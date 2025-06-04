@@ -1,5 +1,5 @@
-# TENDERFLOW
-Thema: TENDERFLOW
+# Tenderflow
+Thema: Tenderflow
 Agenda: n/a
 Beteiligte Personen: n/a
 

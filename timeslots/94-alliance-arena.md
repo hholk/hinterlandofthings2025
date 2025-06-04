@@ -1,8 +1,8 @@
-# ALLIANCE ARENA
-Thema: ALLIANCE ARENA
+# Alliance Arena
+Thema: Alliance Arena
 Agenda: 16:00 - 10:30
 Beteiligte Personen:
-- MEISTERN SIE IHR ACCOUNT GAME: MINIMIEREN SIE DEN PAPIERKRAM, MAXIMIEREN SIE IHR GESCHÄFTSPOTENZIAL
+- Meistern SIE IHR Account Game: Minimieren SIE DEN Papierkram, Maximieren SIE IHR Geschäftspotenzial
 
 Start: 16:00
 End: 10:30

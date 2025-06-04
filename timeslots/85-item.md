@@ -2,8 +2,8 @@
 Thema: 
 Agenda: 14:00 - 15:30
 Beteiligte Personen:
-- VERLUST? NICHT MIT UNS – WIE DIE NÄCHSTE GENERATION DEN WANDEL GESTALTET
-- ALBERT GEIGER, DR. LEOPOLD VON SCHLENK-BARNSDORF, DR. ALEXANDRA KOHLMANN, CARL-LUIS RIEGER, HELEN FREUND & DR. MATHIAS HÜTTENRAUCH
+- Verlust? Nicht MIT UNS – WIE DIE Nächste Generation DEN Wandel Gestaltet
+- Albert Geiger, DR. Leopold VON Schlenk-barnsdorf, DR. Alexandra Kohlmann, Carl-luis Rieger, Helen Freund & DR. Mathias Hüttenrauch
 
 Start: 14:00
 End: 15:30

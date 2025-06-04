@@ -2,7 +2,7 @@
 Thema: 
 Agenda: 11:30 - 11:35
 Beteiligte Personen:
-- ZUKUNFT IM BLICK: WIE SCHÜCO PROPTECH-INNOVATIONEN VORAUSSCHAUEND ENTWICKELT
+- Zukunft IM Blick: WIE Schüco Proptech-innovationen Vorausschauend Entwickelt
 
 Start: 11:30
 End: 11:35

@@ -1,5 +1,5 @@
-# TENTRIS
-Thema: TENTRIS
+# Tentris
+Thema: Tentris
 Agenda: n/a
 Beteiligte Personen: n/a
 

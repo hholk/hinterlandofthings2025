@@ -1,25 +1,25 @@
-# UNTER DEM RADAR, AN DER SPITZE: WIE CVCS UND FAMILY OFFICES DIE INNOVATION VON INNEN HERAUS UMGESTALTEN
-Thema: UNTER DEM RADAR, AN DER SPITZE: WIE CVCS UND FAMILY OFFICES DIE INNOVATION VON INNEN HERAUS UMGESTALTEN
+# Unter DEM Radar, AN DER Spitze: WIE Cvcs UND Family Offices DIE Innovation VON Innen Heraus Umgestalten
+Thema: Unter DEM Radar, AN DER Spitze: WIE Cvcs UND Family Offices DIE Innovation VON Innen Heraus Umgestalten
 Agenda: 17:20 - 17:45
 Beteiligte Personen:
-- PANEL
-- OTTO BIRNBAUM
-- REVENT
-- Profil: OTTO BIRNBAUM von REVENT bringt Erfahrung in start-up cooperations.
-- Grund: Sprechen Sie mit OTTO BIRNBAUM, um mehr über start-up cooperations zu erfahren.
-- CARL-LUIS RIEGER
-- WEPA
-- Profil: CARL-LUIS RIEGER von WEPA bringt Erfahrung in VC.
-- Grund: Sprechen Sie mit CARL-LUIS RIEGER, um mehr über VC zu erfahren.
-- VERA KNAUER
-- ORTHOMOL HOLDING
-- Profil: VERA KNAUER von ORTHOMOL HOLDING bringt Erfahrung in early adopter.
-- Grund: Sprechen Sie mit VERA KNAUER, um mehr über early adopter zu erfahren.
-- ANNA-LUISA KORTE
-- FOUNDERS FOUNDATION
-- Profil: ANNA-LUISA KORTE von FOUNDERS FOUNDATION bringt Erfahrung in start-up cooperations.
-- Grund: Sprechen Sie mit ANNA-LUISA KORTE, um mehr über start-up cooperations zu erfahren.
-- GASTGEBER
+- Panel
+- Otto Birnbaum
+- Revent
+- Profil: Otto Birnbaum von Revent bringt Erfahrung in start-up cooperations.
+- Grund: Sprechen Sie mit Otto Birnbaum, um mehr über start-up cooperations zu erfahren.
+- Carl-luis Rieger
+- Wepa
+- Profil: Carl-luis Rieger von Wepa bringt Erfahrung in VC.
+- Grund: Sprechen Sie mit Carl-luis Rieger, um mehr über VC zu erfahren.
+- Vera Knauer
+- Orthomol Holding
+- Profil: Vera Knauer von Orthomol Holding bringt Erfahrung in early adopter.
+- Grund: Sprechen Sie mit Vera Knauer, um mehr über early adopter zu erfahren.
+- Anna-luisa Korte
+- Founders Foundation
+- Profil: Anna-luisa Korte von Founders Foundation bringt Erfahrung in start-up cooperations.
+- Grund: Sprechen Sie mit Anna-luisa Korte, um mehr über start-up cooperations zu erfahren.
+- Gastgeber
 
 Start: 17:20
 End: 17:45

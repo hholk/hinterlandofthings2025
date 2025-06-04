@@ -1,5 +1,5 @@
-# CATEGO
-Thema: CATEGO
+# Catego
+Thema: Catego
 Agenda: n/a
 Beteiligte Personen: n/a
 

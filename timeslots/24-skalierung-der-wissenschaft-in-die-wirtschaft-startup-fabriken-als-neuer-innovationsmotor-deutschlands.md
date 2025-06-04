@@ -1,29 +1,29 @@
-# SKALIERUNG DER WISSENSCHAFT IN DIE WIRTSCHAFT: STARTUP-FABRIKEN ALS NEUER INNOVATIONSMOTOR DEUTSCHLANDS
-Thema: SKALIERUNG DER WISSENSCHAFT IN DIE WIRTSCHAFT: STARTUP-FABRIKEN ALS NEUER INNOVATIONSMOTOR DEUTSCHLANDS
+# Skalierung DER Wissenschaft IN DIE Wirtschaft: Startup-fabriken ALS Neuer Innovationsmotor Deutschlands
+Thema: Skalierung DER Wissenschaft IN DIE Wirtschaft: Startup-fabriken ALS Neuer Innovationsmotor Deutschlands
 Agenda: 16:45 - 17:10
 Beteiligte Personen:
-- PANEL
-- PHILLIP HERRMANN
-- BRYCK
-- Profil: PHILLIP HERRMANN von BRYCK bringt Erfahrung in VC.
-- Grund: Sprechen Sie mit PHILLIP HERRMANN, um mehr über VC zu erfahren.
-- JENNIFER KAISER-STEINER
-- UNTERNEHMERTUM
-- Profil: JENNIFER KAISER-STEINER von UNTERNEHMERTUM bringt Erfahrung in VC.
-- Grund: Sprechen Sie mit JENNIFER KAISER-STEINER, um mehr über VC zu erfahren.
-- ULRICH SCHMITT
-- HTGF
-- Profil: ULRICH SCHMITT von HTGF bringt Erfahrung in corporate foresight at Miele.
-- Grund: Sprechen Sie mit ULRICH SCHMITT, um mehr über corporate foresight at Miele zu erfahren.
-- GITTA CONNEMANN
+- Panel
+- Phillip Herrmann
+- Bryck
+- Profil: Phillip Herrmann von Bryck bringt Erfahrung in VC.
+- Grund: Sprechen Sie mit Phillip Herrmann, um mehr über VC zu erfahren.
+- Jennifer Kaiser-steiner
+- Unternehmertum
+- Profil: Jennifer Kaiser-steiner von Unternehmertum bringt Erfahrung in VC.
+- Grund: Sprechen Sie mit Jennifer Kaiser-steiner, um mehr über VC zu erfahren.
+- Ulrich Schmitt
+- Htgf
+- Profil: Ulrich Schmitt von Htgf bringt Erfahrung in corporate foresight at Miele.
+- Grund: Sprechen Sie mit Ulrich Schmitt, um mehr über corporate foresight at Miele zu erfahren.
+- Gitta Connemann
 - CDU
-- Profil: GITTA CONNEMANN von CDU bringt Erfahrung in early adopter.
-- Grund: Sprechen Sie mit GITTA CONNEMANN, um mehr über early adopter zu erfahren.
-- FRAUKE HOLZMEIER
+- Profil: Gitta Connemann von CDU bringt Erfahrung in early adopter.
+- Grund: Sprechen Sie mit Gitta Connemann, um mehr über early adopter zu erfahren.
+- Frauke Holzmeier
 - NTV
-- Profil: FRAUKE HOLZMEIER von NTV bringt Erfahrung in VC.
-- Grund: Sprechen Sie mit FRAUKE HOLZMEIER, um mehr über VC zu erfahren.
-- GASTGEBER
+- Profil: Frauke Holzmeier von NTV bringt Erfahrung in VC.
+- Grund: Sprechen Sie mit Frauke Holzmeier, um mehr über VC zu erfahren.
+- Gastgeber
 
 Start: 16:45
 End: 17:10
