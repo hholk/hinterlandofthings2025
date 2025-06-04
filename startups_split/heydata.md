@@ -7,3 +7,5 @@ Start: n/a
 End: n/a
 
 heyData vereinfacht die Einhaltung gesetzlicher Vorschriften für Unternehmen und deckt GDPR, NIS2, ISO 27001, den Whistleblower Protection Act und mehr ab. Durch die Kombination von Spitzentechnologie und juristischem Fachwissen vereinfacht heyData die Einhaltung von Vorschriften durch intuitive Software, branchenspezifische Lösungen, digitale Audits und Expertenunterstützung. heyData ist mehr als nur ein Compliance-Tool und hilft Unternehmen, Risiken zu minimieren, das Vertrauen zu stärken und Compliance in einen Wettbewerbsvorteil zu verwandeln.
+
+**Connection to Miele:** This content relates to ongoing work at Miele.

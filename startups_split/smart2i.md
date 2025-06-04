@@ -7,3 +7,5 @@ Start: n/a
 End: n/a
 
 smart2i optimiert die Produktionseffizienz durch Transparenz in Echtzeit und intelligente Analysen. Unsere Lösung liefert maßgeschneiderte Einblicke für jede Rolle – vom Maschinenbediener bis zur Führungskraft – und sorgt für datengestützte Entscheidungen. Durch die nahtlose Integration von MES-, ERP- und SCADA-Systemen verbessert smart2i die OEE, reduziert Verschwendung und maximiert die Produktivität.
+
+**Connection to Miele:** This content relates to ongoing work at Miele.
