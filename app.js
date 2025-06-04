@@ -1,3 +1,20 @@
+const ROLES = new Set([
+  'PANEL',
+  'KEYNOTE',
+  'FIRESIDE CHAT',
+  'LIVE PODCAST',
+  'PITCH',
+  'IMPULS',
+  'GASTGEBER',
+  'PAUSE',
+  'MASTERCLASS',
+  'MASTERCLASS RAUM 1',
+  'MASTERCLASS RAUM 2',
+  'ROUNDTABLE',
+  'ROUNDTABLE RAUM 9',
+  'ROUNDTABLE RAUM 10 & 11',
+]);
+
 async function loadSlots() {
   const resp = await fetch('timeslots.json');
   const slots = await resp.json();
@@ -22,12 +39,28 @@ async function loadSlots() {
     });
     fetch('timeslots/'+slot.file).then(r=>r.text()).then(md => {
       const metaSec = clone.querySelector('.meta');
+      const tagWrap = clone.querySelector('.tags');
       const lines = md.split(/\r?\n/);
       let meta = [];
+      let tags = [];
       lines.forEach(line => {
-        if(line.startsWith('- ')) meta.push(line.substring(2));
+        if(!line.startsWith('- ')) return;
+        const item = line.substring(2).trim();
+        if(ROLES.has(item.toUpperCase())) {
+          tags.push(item);
+          return;
+        }
+        if(!line.startsWith('- Profil:') && !line.startsWith('- Grund:')) {
+          meta.push(item);
+        }
       });
       metaSec.textContent = meta.join(', ');
+      tags.forEach(t => {
+        const span = document.createElement('span');
+        span.className = 'tag';
+        span.textContent = t;
+        tagWrap.appendChild(span);
+      });
     });
     agenda.appendChild(clone);
   });
