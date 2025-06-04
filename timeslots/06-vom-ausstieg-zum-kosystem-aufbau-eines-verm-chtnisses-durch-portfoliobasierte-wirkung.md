@@ -5,6 +5,8 @@ Beteiligte Personen:
 - KEYNOTE
 - HENRIK HERR
 - ROTHSCHILD
+- Profil: HENRIK HERR von ROTHSCHILD bringt Erfahrung in early adopter.
+- Grund: Sprechen Sie mit HENRIK HERR, um mehr über early adopter zu erfahren.
 
 Start: 10:05
 End: 10:20

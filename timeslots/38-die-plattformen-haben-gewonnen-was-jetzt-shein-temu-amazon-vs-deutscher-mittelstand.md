@@ -7,6 +7,8 @@ Beteiligte Personen:
 - KEYNOTE
 - ALEXANDER GRAF
 - SPRYKER
+- Profil: ALEXANDER GRAF von SPRYKER bringt Erfahrung in early adopter.
+- Grund: Sprechen Sie mit ALEXANDER GRAF, um mehr über early adopter zu erfahren.
 
 Start: 10:00
 End: 10:15

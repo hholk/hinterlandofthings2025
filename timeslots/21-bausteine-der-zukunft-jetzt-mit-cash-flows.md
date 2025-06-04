@@ -5,6 +5,8 @@ Beteiligte Personen:
 - KEYNOTE
 - FRANK THELEN
 - FREIGEIST
+- Profil: FRANK THELEN von FREIGEIST bringt Erfahrung in start-up cooperations.
+- Grund: Sprechen Sie mit FRANK THELEN, um mehr über start-up cooperations zu erfahren.
 
 Start: 15:30
 End: 15:50
