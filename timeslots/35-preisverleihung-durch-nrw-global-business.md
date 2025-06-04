@@ -4,6 +4,8 @@ Agenda: 18:39 - 18:41
 Beteiligte Personen:
 - FLORIAN SCHNITZLER
 - NRW.GLOBAL BUSINESS
+- Profil: FLORIAN SCHNITZLER von NRW.GLOBAL BUSINESS bringt Erfahrung in VC.
+- Grund: Sprechen Sie mit FLORIAN SCHNITZLER, um mehr über VC zu erfahren.
 
 Start: 18:39
 End: 18:41

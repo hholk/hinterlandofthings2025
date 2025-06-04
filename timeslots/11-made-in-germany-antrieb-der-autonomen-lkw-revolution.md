@@ -5,6 +5,8 @@ Beteiligte Personen:
 - KEYNOTE
 - HENDRIK KRAMER
 - FERNRIDE
+- Profil: HENDRIK KRAMER von FERNRIDE bringt Erfahrung in VC.
+- Grund: Sprechen Sie mit HENDRIK KRAMER, um mehr über VC zu erfahren.
 
 Start: 11:40
 End: 11:55
