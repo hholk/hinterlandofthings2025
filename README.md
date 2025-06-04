@@ -19,7 +19,7 @@ Einfach die Seite per GitHub Pages bereitstellen. Beim Laden versucht die App di
    Wähle den Branch (meist `main`) und als Ordner `/` aus und speichere.
 3. Nach wenigen Minuten stellt GitHub eine URL wie `https://<user>.github.io/<repo>/` bereit.
    Beim Aufruf dieser Adresse wird `index.html` geladen.
-4. Die PWA funktioniert auch offline, da `service-worker.js` `index.html`, CSS, JavaScript und die Beispiel-Markdowns zwischenspeichert.
+4. Die PWA funktioniert auch offline, da `service-worker.js` `index.html`, CSS, JavaScript und die Beispiel-Markdowns zwischenspeichert. Dabei werden relative Pfade verwendet, sodass das Caching auch bei Bereitstellung in einem Unterordner (z.\ B. via GitHub Pages) greift.
 
 ## Nutzung
 
