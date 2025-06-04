@@ -1,21 +1,21 @@
 body {
-  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #121212;
-  color: #eee;
+  background: #0f0f0f;
+  color: #f1f1f1;
   line-height: 1.5;
 }
 
 header {
-  background: #0057b8;
+  background: #212121;
   color: #fff;
   padding: 1rem;
   text-align: center;
 }
 
 .slot {
-  background: #1e1e1e;
+  background: #1f1f1f;
   margin: 0.5rem;
   padding: 1rem;
   border-radius: 8px;
@@ -37,12 +37,12 @@ header {
   background: none;
   border: none;
   font-size: 1.5rem;
-  color: #888;
+  color: #aaa;
   cursor: pointer;
 }
 
 .slot .fav.active {
-  color: #e91e63;
+  color: #ff0000;
 }
 
 .tags {
@@ -51,7 +51,7 @@ header {
 
 .tag {
   display: inline-block;
-  background: #0057b8;
+  background: #ff0000;
   color: #fff;
   padding: 0 0.4rem;
   margin-right: 0.25rem;
