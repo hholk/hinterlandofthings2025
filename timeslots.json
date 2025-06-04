@@ -1,0 +1,730 @@
+[
+  {
+    "file": "01-t-ren-ffnen.md",
+    "title": "TÜREN ÖFFNEN",
+    "start": "8:00",
+    "end": "9:00",
+    "sort": 480
+  },
+  {
+    "file": "37-t-ren-ffnen.md",
+    "title": "TÜREN ÖFFNEN",
+    "start": "8:00",
+    "end": "10:00",
+    "sort": 480
+  },
+  {
+    "file": "02-er-ffnung.md",
+    "title": "ERÖFFNUNG",
+    "start": "9:00",
+    "end": "9:05",
+    "sort": 540
+  },
+  {
+    "file": "03-der-herzschlag-des-hinterlandes.md",
+    "title": "DER HERZSCHLAG DES HINTERLANDES",
+    "start": "9:05",
+    "end": "9:15",
+    "sort": 545
+  },
+  {
+    "file": "04-krisenbedingte-chancen-deutschlands-chance-wieder-f-hrend-zu-werden.md",
+    "title": "KRISENBEDINGTE CHANCEN: DEUTSCHLANDS CHANCE, WIEDER FÜHREND ZU WERDEN",
+    "start": "9:15",
+    "end": "9:40",
+    "sort": 555
+  },
+  {
+    "file": "05-r-ckgewinnung-der-wettbewerbsf-higkeit-die-entscheidende-rolle-der-kosysteme.md",
+    "title": "RÜCKGEWINNUNG DER WETTBEWERBSFÄHIGKEIT: DIE ENTSCHEIDENDE ROLLE DER ÖKOSYSTEME",
+    "start": "9:40",
+    "end": "10:05",
+    "sort": 580
+  },
+  {
+    "file": "71-item.md",
+    "title": "",
+    "start": "9:45",
+    "end": "10:45",
+    "sort": 585
+  },
+  {
+    "file": "38-die-plattformen-haben-gewonnen-was-jetzt-shein-temu-amazon-vs-deutscher-mittelstand.md",
+    "title": "DIE PLATTFORMEN HABEN GEWONNEN! WAS JETZT?",
+    "start": "10:00",
+    "end": "10:15",
+    "sort": 600
+  },
+  {
+    "file": "83-item.md",
+    "title": "",
+    "start": "10:00",
+    "end": "12:00",
+    "sort": 600
+  },
+  {
+    "file": "06-vom-ausstieg-zum-kosystem-aufbau-eines-verm-chtnisses-durch-portfoliobasierte-wirkung.md",
+    "title": "VOM AUSSTIEG ZUM ÖKOSYSTEM: AUFBAU EINES VERMÄCHTNISSES DURCH PORTFOLIOBASIERTE WIRKUNG",
+    "start": "10:05",
+    "end": "10:20",
+    "sort": 605
+  },
+  {
+    "file": "39-ootb-nrw-award.md",
+    "title": "OOTB.NRW AWARD",
+    "start": "10:15",
+    "end": "10:25",
+    "sort": 615
+  },
+  {
+    "file": "07-sind-wir-schon-da-wie-flixbus-das-reisen-neu-erfindet.md",
+    "title": "SIND WIR SCHON DA? WIE FLIXBUS DAS REISEN NEU ERFINDET",
+    "start": "10:20",
+    "end": "10:40",
+    "sort": 620
+  },
+  {
+    "file": "40-pitch-1-storyboarder-ai.md",
+    "title": "PITCH 1 - STORYBOARDER.AI",
+    "start": "10:25",
+    "end": "10:31",
+    "sort": 625
+  },
+  {
+    "file": "87-item.md",
+    "title": "",
+    "start": "10:30",
+    "end": "12:00",
+    "sort": 630
+  },
+  {
+    "file": "95-item.md",
+    "title": "",
+    "start": "10:30",
+    "end": "11:30",
+    "sort": 630
+  },
+  {
+    "file": "41-pitch-2-gizil.md",
+    "title": "PITCH 2 - GIZIL",
+    "start": "10:31",
+    "end": "10:37",
+    "sort": 631
+  },
+  {
+    "file": "42-pitch-3-arque-systems.md",
+    "title": "PITCH 3 - ARQUE SYSTEMS",
+    "start": "10:37",
+    "end": "10:43",
+    "sort": 637
+  },
+  {
+    "file": "08-ecosystem-builder-gr-nder-in-investor-in-welche-zutaten-brauchen-wir-f-r-erfolgreiche-tech-champions-in-europa.md",
+    "title": "ECOSYSTEM BUILDER GRÜNDER:IN INVESTOR:IN:",
+    "start": "10:40",
+    "end": "11:00",
+    "sort": 640
+  },
+  {
+    "file": "43-pitch-4-comuneo.md",
+    "title": "PITCH 4 - COMUNEO",
+    "start": "10:43",
+    "end": "10:49",
+    "sort": 643
+  },
+  {
+    "file": "72-item.md",
+    "title": "",
+    "start": "10:45",
+    "end": "11:45",
+    "sort": 645
+  },
+  {
+    "file": "78-item.md",
+    "title": "",
+    "start": "10:45",
+    "end": "11:45",
+    "sort": 645
+  },
+  {
+    "file": "44-pitch-5-spot-my-energy.md",
+    "title": "PITCH 5 - SPOT MY ENERGY",
+    "start": "10:49",
+    "end": "10:55",
+    "sort": 649
+  },
+  {
+    "file": "45-pause.md",
+    "title": "PAUSE",
+    "start": "10:55",
+    "end": "11:05",
+    "sort": 655
+  },
+  {
+    "file": "09-stand-der-europ-ischen-vc-landschaft.md",
+    "title": "STAND DER EUROPÄISCHEN VC-LANDSCHAFT",
+    "start": "11:00",
+    "end": "11:20",
+    "sort": 660
+  },
+  {
+    "file": "91-item.md",
+    "title": "",
+    "start": "11:00",
+    "end": "13:15",
+    "sort": 660
+  },
+  {
+    "file": "46-pitch-6-cheminnovation.md",
+    "title": "PITCH 6 - CHEMINNOVATION",
+    "start": "11:05",
+    "end": "11:11",
+    "sort": 665
+  },
+  {
+    "file": "47-pitch-7-lastbim.md",
+    "title": "PITCH 7 - LASTBIM",
+    "start": "11:11",
+    "end": "11:17",
+    "sort": 671
+  },
+  {
+    "file": "48-pitch-8-minimum-energy.md",
+    "title": "PITCH 8 - MINIMUM ENERGY",
+    "start": "11:17",
+    "end": "11:23",
+    "sort": 677
+  },
+  {
+    "file": "10-reduzierung-von-abh-ngigkeiten-und-risiken-ai-computing-made-in-europe.md",
+    "title": "REDUZIERUNG VON ABHÄNGIGKEITEN UND RISIKEN: AI COMPUTING MADE IN EUROPE",
+    "start": "11:20",
+    "end": "11:40",
+    "sort": 680
+  },
+  {
+    "file": "49-pitch-9-dntox.md",
+    "title": "PITCH 9 - DNTOX",
+    "start": "11:23",
+    "end": "11:29",
+    "sort": 683
+  },
+  {
+    "file": "50-pitch-10-valoon.md",
+    "title": "PITCH 10 - VALOON",
+    "start": "11:29",
+    "end": "11:35",
+    "sort": 689
+  },
+  {
+    "file": "96-item.md",
+    "title": "",
+    "start": "11:30",
+    "end": "11:35",
+    "sort": 690
+  },
+  {
+    "file": "51-voting.md",
+    "title": "VOTING",
+    "start": "11:35",
+    "end": "11:50",
+    "sort": 695
+  },
+  {
+    "file": "97-item.md",
+    "title": "",
+    "start": "11:35",
+    "end": "12:05",
+    "sort": 695
+  },
+  {
+    "file": "11-made-in-germany-antrieb-der-autonomen-lkw-revolution.md",
+    "title": "MADE IN GERMANY: ANTRIEB DER AUTONOMEN LKW-REVOLUTION",
+    "start": "11:40",
+    "end": "11:55",
+    "sort": 700
+  },
+  {
+    "file": "73-item.md",
+    "title": "",
+    "start": "11:45",
+    "end": "12:45",
+    "sort": 705
+  },
+  {
+    "file": "79-item.md",
+    "title": "",
+    "start": "11:45",
+    "end": "12:45",
+    "sort": 705
+  },
+  {
+    "file": "52-final-3-announcement-ootb.md",
+    "title": "FINAL 3 ANNOUNCEMENT OOTB",
+    "start": "11:50",
+    "end": "11:55",
+    "sort": 710
+  },
+  {
+    "file": "12-sven-mulder.md",
+    "title": "SVEN MULDER",
+    "start": "11:55",
+    "end": "12:15",
+    "sort": 715
+  },
+  {
+    "file": "53-founder-story-wiedergewinnung-des-serienunternehmertums.md",
+    "title": "FOUNDER STORY: WIEDERGEWINNUNG DES SERIENUNTERNEHMERTUMS",
+    "start": "11:55",
+    "end": "12:15",
+    "sort": 715
+  },
+  {
+    "file": "84-item.md",
+    "title": "",
+    "start": "12:00",
+    "end": "14:00",
+    "sort": 720
+  },
+  {
+    "file": "88-item.md",
+    "title": "",
+    "start": "12:00",
+    "end": "15:00",
+    "sort": 720
+  },
+  {
+    "file": "98-item.md",
+    "title": "",
+    "start": "12:05",
+    "end": "12:35",
+    "sort": 725
+  },
+  {
+    "file": "13-mittelstand-mavericks-skalierung-nachhaltiger-innovation-in-industriellen-wertsch-pfungsketten.md",
+    "title": "MITTELSTAND MAVERICKS: SKALIERUNG NACHHALTIGER INNOVATION IN INDUSTRIELLEN WERTSCHÖPFUNGSKETTEN",
+    "start": "12:15",
+    "end": "12:40",
+    "sort": 735
+  },
+  {
+    "file": "54-die-macht-der-ki-wie-man-die-n-chste-welle-datengesteuerter-innovationen-anf-hrt.md",
+    "title": "DIE MACHT DER KI: WIE MAN DIE NÄCHSTE WELLE DATENGESTEUERTER INNOVATIONEN ANFÜHRT",
+    "start": "12:15",
+    "end": "12:35",
+    "sort": 735
+  },
+  {
+    "file": "55-wie-der-mittelstand-den-ki-hype-in-echte-ergebnisse-umwandeln-kann-indem-er-ihn-mit-der-realen-arbeit-verbindet.md",
+    "title": "WIE DER MITTELSTAND DEN KI-HYPE IN ECHTE ERGEBNISSE UMWANDELN KANN, INDEM ER IHN MIT DER REALEN ARBEIT VERBINDET",
+    "start": "12:35",
+    "end": "13:00",
+    "sort": 755
+  },
+  {
+    "file": "99-item.md",
+    "title": "",
+    "start": "12:35",
+    "end": "13:25",
+    "sort": 755
+  },
+  {
+    "file": "14-jochen-ziervogel.md",
+    "title": "JOCHEN ZIERVOGEL",
+    "start": "12:40",
+    "end": "12:50",
+    "sort": 760
+  },
+  {
+    "file": "74-item.md",
+    "title": "",
+    "start": "12:45",
+    "end": "13:45",
+    "sort": 765
+  },
+  {
+    "file": "80-item.md",
+    "title": "",
+    "start": "12:45",
+    "end": "14:45",
+    "sort": 765
+  },
+  {
+    "file": "15-power-play-wie-die-energieinfrastruktur-deutschlands-globale-technologie-ambitionen-gestaltet.md",
+    "title": "POWER PLAY: WIE DIE ENERGIEINFRASTRUKTUR DEUTSCHLANDS GLOBALE TECHNOLOGIE-AMBITIONEN GESTALTET",
+    "start": "12:50",
+    "end": "13:15",
+    "sort": 770
+  },
+  {
+    "file": "56-regulierung-als-katalysator-wie-der-europ-ische-rechtsrahmen-innovation-und-f-hrung-im-bereich-legal-tech-beschleunigen-kann.md",
+    "title": "REGULIERUNG ALS KATALYSATOR: WIE DER EUROPÄISCHE RECHTSRAHMEN INNOVATION UND FÜHRUNG IM BEREICH LEGAL TECH BESCHLEUNIGEN KANN",
+    "start": "13:00",
+    "end": "13:20",
+    "sort": 780
+  },
+  {
+    "file": "16-pause.md",
+    "title": "PAUSE",
+    "start": "13:15",
+    "end": "13:45",
+    "sort": 795
+  },
+  {
+    "file": "92-item.md",
+    "title": "",
+    "start": "13:15",
+    "end": "15:15",
+    "sort": 795
+  },
+  {
+    "file": "57-pause.md",
+    "title": "PAUSE",
+    "start": "13:20",
+    "end": "13:50",
+    "sort": 800
+  },
+  {
+    "file": "100-item.md",
+    "title": "",
+    "start": "13:25",
+    "end": "14:15",
+    "sort": 805
+  },
+  {
+    "file": "17-jenseits-des-ki-hypes-was-in-einem-jahr-geschah-und-wohin-wir-uns-entwickeln.md",
+    "title": "JENSEITS DES KI-HYPES - WAS IN EINEM JAHR GESCHAH",
+    "start": "13:45",
+    "end": "14:15",
+    "sort": 825
+  },
+  {
+    "file": "75-item.md",
+    "title": "",
+    "start": "13:45",
+    "end": "14:45",
+    "sort": 825
+  },
+  {
+    "file": "58-warum-herk-mmliche-b2b-schulungen-bei-kleinen-und-mittleren-unternehmen-versagen-und-wie-technologie-dies-ndern-kann.md",
+    "title": "WARUM HERKÖMMLICHE B2B-SCHULUNGEN BEI KLEINEN UND MITTLEREN UNTERNEHMEN VERSAGEN - UND WIE TECHNOLOGIE DIES ÄNDERN KANN",
+    "start": "13:50",
+    "end": "14:10",
+    "sort": 830
+  },
+  {
+    "file": "85-item.md",
+    "title": "",
+    "start": "14:00",
+    "end": "15:30",
+    "sort": 840
+  },
+  {
+    "file": "59-tech-talente-gesucht-wie-der-mittelstand-den-wettlauf-um-wichtige-f-higkeiten-gewinnen-kann.md",
+    "title": "TECH-TALENTE GESUCHT: WIE DER MITTELSTAND DEN WETTLAUF UM WICHTIGE FÄHIGKEITEN GEWINNEN KANN",
+    "start": "14:10",
+    "end": "14:30",
+    "sort": 850
+  },
+  {
+    "file": "101-item.md",
+    "title": "",
+    "start": "14:15",
+    "end": "14:25",
+    "sort": 855
+  },
+  {
+    "file": "18-von-der-energiewende-zum-wettbewerbsvorteil-skalierung-sauberer-technologien-zur-sicherung-der-industriellen-zukunft-deutschlands.md",
+    "title": "VON DER ENERGIEWENDE ZUM WETTBEWERBSVORTEIL:",
+    "start": "14:15",
+    "end": "14:40",
+    "sort": 855
+  },
+  {
+    "file": "102-item.md",
+    "title": "",
+    "start": "14:25",
+    "end": "15:00",
+    "sort": 865
+  },
+  {
+    "file": "60-innovation-bridges-der-blueprint-der-possehl-group-f-r-dauerhafte-partnerschaften-mit-der-industrie.md",
+    "title": "INNOVATION BRIDGES: DER BLUEPRINT DER POSSEHL GROUP FÜR DAUERHAFTE PARTNERSCHAFTEN MIT DER INDUSTRIE",
+    "start": "14:30",
+    "end": "14:55",
+    "sort": 870
+  },
+  {
+    "file": "19-berbr-ckung-der-kluft-die-n-chste-welle-der-industriellen-innovation.md",
+    "title": "ÜBERBRÜCKUNG DER KLUFT: DIE NÄCHSTE WELLE DER INDUSTRIELLEN INNOVATION",
+    "start": "14:40",
+    "end": "15:05",
+    "sort": 880
+  },
+  {
+    "file": "76-item.md",
+    "title": "",
+    "start": "14:45",
+    "end": "15:45",
+    "sort": 885
+  },
+  {
+    "file": "81-item.md",
+    "title": "",
+    "start": "14:45",
+    "end": "15:45",
+    "sort": 885
+  },
+  {
+    "file": "61-wird-die-lieferkette-der-zukunft-berhaupt-noch-menschen-brauchen.md",
+    "title": "WIRD DIE LIEFERKETTE DER ZUKUNFT ÜBERHAUPT NOCH MENSCHEN BRAUCHEN?",
+    "start": "14:55",
+    "end": "15:15",
+    "sort": 895
+  },
+  {
+    "file": "103-item.md",
+    "title": "",
+    "start": "15:00",
+    "end": "15:40",
+    "sort": 900
+  },
+  {
+    "file": "89-item.md",
+    "title": "",
+    "start": "15:00",
+    "end": "16:00",
+    "sort": 900
+  },
+  {
+    "file": "20-berbr-ckung-der-innovationsl-cke-wie-kann-venture-clienting-familienunternehmen-ver-ndern.md",
+    "title": "ÜBERBRÜCKUNG DER INNOVATIONSLÜCKE: WIE KANN VENTURE CLIENTING FAMILIENUNTERNEHMEN VERÄNDERN?",
+    "start": "15:05",
+    "end": "15:30",
+    "sort": 905
+  },
+  {
+    "file": "62-kulturkonflikt-oder-symbiose-logistik-startup-und-unternehmen-auf-einer-gemeinsamen-innovationsreise.md",
+    "title": "KULTURKONFLIKT ODER SYMBIOSE? LOGISTIK-STARTUP UND UNTERNEHMEN AUF EINER GEMEINSAMEN INNOVATIONSREISE",
+    "start": "15:15",
+    "end": "15:35",
+    "sort": 915
+  },
+  {
+    "file": "93-item.md",
+    "title": "",
+    "start": "15:15",
+    "end": "16:00",
+    "sort": 915
+  },
+  {
+    "file": "21-bausteine-der-zukunft-jetzt-mit-cash-flows.md",
+    "title": "BAUSTEINE DER ZUKUNFT: JETZT MIT CASH FLOWS!",
+    "start": "15:30",
+    "end": "15:50",
+    "sort": 930
+  },
+  {
+    "file": "86-roundtable-raum-10-11.md",
+    "title": "ROUNDTABLE RAUM 10 & 11",
+    "start": "15:30",
+    "end": "10:30",
+    "sort": 930
+  },
+  {
+    "file": "63-das-startup-tagebuch-der-aufbau-eines-unicorns-in-der-ffentlichkeit.md",
+    "title": "DAS STARTUP-TAGEBUCH: DER AUFBAU EINES UNICORNS IN DER ÖFFENTLICHKEIT",
+    "start": "15:35",
+    "end": "15:55",
+    "sort": 935
+  },
+  {
+    "file": "104-item.md",
+    "title": "",
+    "start": "15:40",
+    "end": "",
+    "sort": 940
+  },
+  {
+    "file": "77-masterclass-raum-2.md",
+    "title": "MASTERCLASS RAUM 2",
+    "start": "15:45",
+    "end": "10:45",
+    "sort": 945
+  },
+  {
+    "file": "82-roundtables.md",
+    "title": "ROUNDTABLES",
+    "start": "15:45",
+    "end": "10:00",
+    "sort": 945
+  },
+  {
+    "file": "22-frontline-innovation-sicherung-der-schlachtfelder-von-morgen.md",
+    "title": "FRONTLINE INNOVATION: SICHERUNG DER SCHLACHTFELDER VON MORGEN",
+    "start": "15:50",
+    "end": "16:15",
+    "sort": 950
+  },
+  {
+    "file": "64-pause.md",
+    "title": "PAUSE",
+    "start": "15:55",
+    "end": "15:55",
+    "sort": 955
+  },
+  {
+    "file": "65-die-zukunft-des-einzelhandels-ki-gesteuerte-kundeneinblicke.md",
+    "title": "DIE ZUKUNFT DES EINZELHANDELS: KI-GESTEUERTE KUNDENEINBLICKE",
+    "start": "15:55",
+    "end": "16:15",
+    "sort": 955
+  },
+  {
+    "file": "90-roundtable-pwc-lounge.md",
+    "title": "ROUNDTABLE PWC LOUNGE",
+    "start": "16:00",
+    "end": "11:00",
+    "sort": 960
+  },
+  {
+    "file": "94-alliance-arena.md",
+    "title": "ALLIANCE ARENA",
+    "start": "16:00",
+    "end": "10:30",
+    "sort": 960
+  },
+  {
+    "file": "23-finanzierung-der-widerstandsf-higkeit-europas-wie-man-investitionen-f-r-wachstum-steigern-kann.md",
+    "title": "FINANZIERUNG DER WIDERSTANDSFÄHIGKEIT EUROPAS: WIE MAN INVESTITIONEN FÜR WACHSTUM STEIGERN KANN",
+    "start": "16:15",
+    "end": "16:45",
+    "sort": 975
+  },
+  {
+    "file": "66-warum-die-meisten-mittelst-ndischen-kooperationen-scheitern-und-wie-man-sie-zum-laufen-bringt.md",
+    "title": "WARUM DIE MEISTEN MITTELSTÄNDISCHEN KOOPERATIONEN SCHEITERN -",
+    "start": "16:15",
+    "end": "16:35",
+    "sort": 975
+  },
+  {
+    "file": "67-finanzierungslandschaft-und-wachstum-einblicke-und-strategien-zur-steuerung-von-investitionen.md",
+    "title": "FINANZIERUNGSLANDSCHAFT UND WACHSTUM: EINBLICKE UND STRATEGIEN ZUR STEUERUNG VON INVESTITIONEN",
+    "start": "16:35",
+    "end": "16:55",
+    "sort": 995
+  },
+  {
+    "file": "24-skalierung-der-wissenschaft-in-die-wirtschaft-startup-fabriken-als-neuer-innovationsmotor-deutschlands.md",
+    "title": "SKALIERUNG DER WISSENSCHAFT IN DIE WIRTSCHAFT: STARTUP-FABRIKEN ALS NEUER INNOVATIONSMOTOR DEUTSCHLANDS",
+    "start": "16:45",
+    "end": "17:10",
+    "sort": 1005
+  },
+  {
+    "file": "68-l-sungen-bauen-bits-ziegel-und-k-hne-ideen.md",
+    "title": "LÖSUNGEN BAUEN: BITS, ZIEGEL UND KÜHNE IDEEN",
+    "start": "16:55",
+    "end": "17:15",
+    "sort": 1015
+  },
+  {
+    "file": "25-pause.md",
+    "title": "PAUSE",
+    "start": "17:10",
+    "end": "17:20",
+    "sort": 1030
+  },
+  {
+    "file": "69-state-of-ai.md",
+    "title": "STATE OF AI",
+    "start": "17:15",
+    "end": "17:40",
+    "sort": 1035
+  },
+  {
+    "file": "26-unter-dem-radar-an-der-spitze-wie-cvcs-und-family-offices-die-innovation-von-innen-heraus-umgestalten.md",
+    "title": "UNTER DEM RADAR, AN DER SPITZE: WIE CVCS UND FAMILY OFFICES DIE INNOVATION VON INNEN HERAUS UMGESTALTEN",
+    "start": "17:20",
+    "end": "17:45",
+    "sort": 1040
+  },
+  {
+    "file": "70-closing.md",
+    "title": "CLOSING",
+    "start": "17:40",
+    "end": "9:45",
+    "sort": 1060
+  },
+  {
+    "file": "27-entriegeln-entfesseln-vereinen-das-durchg-ngige-konzept-f-r-den-erfolg-von-risikokunden.md",
+    "title": "ENTRIEGELN, ENTFESSELN, VEREINEN: DAS DURCHGÄNGIGE KONZEPT FÜR DEN ERFOLG VON RISIKOKUNDEN",
+    "start": "17:45",
+    "end": "18:05",
+    "sort": 1065
+  },
+  {
+    "file": "28-staffelstab-bergabe.md",
+    "title": "STAFFELSTAB ÜBERGABE",
+    "start": "18:05",
+    "end": "18:15",
+    "sort": 1085
+  },
+  {
+    "file": "29-ootb-nrw-award-finale.md",
+    "title": "OOTB.NRW AWARD FINALE",
+    "start": "18:15",
+    "end": "18:20",
+    "sort": 1095
+  },
+  {
+    "file": "30-pitch-startup-i.md",
+    "title": "PITCH STARTUP I",
+    "start": "18:20",
+    "end": "18:22",
+    "sort": 1100
+  },
+  {
+    "file": "31-pitch-startup-ii.md",
+    "title": "PITCH STARTUP II",
+    "start": "18:22",
+    "end": "18:24",
+    "sort": 1102
+  },
+  {
+    "file": "32-pitch-startup-iii.md",
+    "title": "PITCH STARTUP III",
+    "start": "18:24",
+    "end": "18:26",
+    "sort": 1104
+  },
+  {
+    "file": "33-schirmherrschaft-announcement.md",
+    "title": "SCHIRMHERRSCHAFT ANNOUNCEMENT",
+    "start": "18:26",
+    "end": "18:31",
+    "sort": 1106
+  },
+  {
+    "file": "34-gewinner-bekanntgabe-ootb-nrw-awards.md",
+    "title": "GEWINNER BEKANNTGABE OOTB.NRW AWARDS",
+    "start": "18:31",
+    "end": "18:39",
+    "sort": 1111
+  },
+  {
+    "file": "35-preisverleihung-durch-nrw-global-business.md",
+    "title": "PREISVERLEIHUNG DURCH NRW.GLOBAL BUSINESS",
+    "start": "18:39",
+    "end": "18:41",
+    "sort": 1119
+  },
+  {
+    "file": "36-closing.md",
+    "title": "CLOSING",
+    "start": "18:41",
+    "end": "8:00",
+    "sort": 1121
+  }
+]
