@@ -1,0 +1,9 @@
+# OOTB.NRW AWARD FINALE
+Thema: OOTB.NRW AWARD FINALE
+Agenda: 18:15 - 18:20
+Beteiligte Personen:
+- SILKE KREBS
+- MWIKE
+
+Start: 18:15
+End: 18:20

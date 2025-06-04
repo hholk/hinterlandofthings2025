@@ -1,0 +1,12 @@
+# STATE OF AI
+Thema: STATE OF AI
+Agenda: 17:15 - 17:40
+Beteiligte Personen:
+- LIVE PODCAST
+- ELISABETH L'ORANGE
+- TECH & TALES
+- LENA WALTLE
+- NZZ
+
+Start: 17:15
+End: 17:40
