@@ -1,0 +1,7 @@
+{
+  "name": "Hinterland of Things 2025",
+  "short_name": "HoT 2025",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "icons": []
+}
