@@ -1,40 +1,68 @@
 body {
-  font-family: system-ui, sans-serif;
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f5f5f5;
-  color: #222;
+  background: #121212;
+  color: #eee;
+  line-height: 1.5;
 }
+
 header {
   background: #0057b8;
-  color: white;
+  color: #fff;
   padding: 1rem;
   text-align: center;
 }
+
 .slot {
-  background: white;
+  background: #1e1e1e;
   margin: 0.5rem;
   padding: 1rem;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
+
 .slot header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
+.slot .time {
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
 .slot .fav {
   background: none;
   border: none;
   font-size: 1.5rem;
-  color: #ccc;
+  color: #888;
+  cursor: pointer;
 }
+
 .slot .fav.active {
   color: #e91e63;
 }
+
+.tags {
+  margin-top: 0.5rem;
+}
+
+.tag {
+  display: inline-block;
+  background: #0057b8;
+  color: #fff;
+  padding: 0 0.4rem;
+  margin-right: 0.25rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+
 .meta {
   margin-top: 0.5rem;
 }
+
 @media (min-width: 600px) {
   .slot { max-width: 600px; margin: 1rem auto; }
 }
