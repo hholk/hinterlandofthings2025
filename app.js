@@ -21,8 +21,10 @@ async function loadSlots() {
   const agenda = document.getElementById('agenda');
   const tmpl = document.getElementById('slot-template');
   const favs = JSON.parse(localStorage.getItem('favorites')||'[]');
-  slots.forEach(slot => {
+  slots.forEach((slot, idx) => {
     const clone = tmpl.content.firstElementChild.cloneNode(true);
+    clone.classList.add('appear');
+    clone.style.animationDelay = (idx * 0.05) + 's';
     clone.querySelector('.title').textContent = slot.title;
     clone.querySelector('.time').textContent = slot.start + (slot.end ? ' - '+slot.end : '');
     const btn = clone.querySelector('.fav');
@@ -35,6 +37,8 @@ async function loadSlots() {
         favs.push(slot.file);
         btn.classList.add('active');
       }
+      btn.classList.add('clicked');
+      btn.addEventListener('animationend', () => btn.classList.remove('clicked'), {once:true});
       localStorage.setItem('favorites', JSON.stringify(favs));
     });
     fetch('timeslots/'+slot.file).then(r=>r.text()).then(md => {
