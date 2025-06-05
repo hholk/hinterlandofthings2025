@@ -5,9 +5,11 @@
 - Eröffnung
 - Céline Flores Willers
 - THE People Branding Company
+- Kurzprofil: Unternehmerin, Speakerin und LinkedIn-Influencerin. Sie führt die People Branding Company.
 - Gastgeber
 - Simon Brakhage
 - Founders Foundation
+- Kurzprofil: Director "Hinterland of Things" bei der Founders Foundation.
 - Anna-luisa Korte
 - Founders Foundation
 

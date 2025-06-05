@@ -1,7 +1,10 @@
 # Akeno
 Thema: Akeno
 Agenda: n/a
-Beteiligte Personen: n/a
+Beteiligte Personen:
+- Alexander Ebbrecht – Gründer und Geschäftsführer von akeno. Verantwortet die strategische Ausrichtung.
+- Dmitrij Direktor – Mitgründer von akeno mit Schwerpunkt auf Daten- und KI-Entwicklung.
+- Steffen Ramm – Mitgründer von akeno und Experte für Produktionsprozesse.
 
 Start: n/a
 End: n/a
