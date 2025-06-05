@@ -5,11 +5,13 @@ Beteiligte Personen:
 - Céline Flores Willers
 - THE People Branding Company
 - Profil: Céline Flores Willers von THE People Branding Company bringt Erfahrung in smart money.
+- Kurzprofil: Unternehmerin, Speakerin und LinkedIn-Influencerin. Gründerin der People Branding Company mit Fokus auf Personal Branding.
 - Grund: Sprechen Sie mit Céline Flores Willers, um mehr über smart money zu erfahren.
 - Gastgeber
 - Simon Brakhage
 - Founders Foundation
 - Profil: Simon Brakhage von Founders Foundation bringt Erfahrung in smart money.
+- Kurzprofil: Director "Hinterland of Things" bei der Founders Foundation. Verantwortlich für das Konferenzprogramm.
 - Grund: Sprechen Sie mit Simon Brakhage, um mehr über smart money zu erfahren.
 - Anna-luisa Korte
 - Founders Foundation
