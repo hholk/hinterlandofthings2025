@@ -6,17 +6,20 @@ const ASSETS = [
   './app.js',
   './manifest.webmanifest',
   './timeslots.json',
+  './md-files.json',
 ];
 // include all markdown files
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME).then(cache => {
-      return fetch('./timeslots.json')
-        .then(res => res.json())
-        .then(list => {
-          const files = list.map(s => './timeslots/' + s.file);
-          return cache.addAll(ASSETS.concat(files));
-        });
+      return Promise.all([
+        fetch('./timeslots.json').then(r => r.json()),
+        fetch('./md-files.json').then(r => r.json()),
+      ]).then(([slots, mdFiles]) => {
+        const slotFiles = slots.map(s => './timeslots/' + s.file);
+        const mdPaths = mdFiles.map(f => './' + f);
+        return cache.addAll(ASSETS.concat(slotFiles, mdPaths));
+      });
     })
   );
 });
