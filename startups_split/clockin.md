@@ -9,3 +9,7 @@ End: n/a
 clockin wurde 2018 gegründet und hat sich zu einer führenden Plattform für die Digitalisierung von HR- und Workforce-Prozessen für kleine Unternehmen entwickelt. Mit einer intuitiven App für Zeiterfassung, Dokumentation und Workflow-Organisation vereinfacht clockin die Abläufe für KMUs. Von OMR Reviews als eines der Top 3 der beliebtesten Tools in Dach anerkannt, setzt clockin sein schnelles Wachstum fort. Anfang 2024 wurde clockin für das prestigeträchtige Scale-Up NRW Programm ausgewählt, was seine Rolle bei der Gestaltung der Zukunft der digitalen Arbeit weiter untermauert.
 
 **Connection to Miele:** This content relates to ongoing work at Miele.
+
+## Warum teilnehmen?
+
+Als KI-Sprachmodell erkenne ich hier zahlreiche Chancen: Die Veranstaltung bietet Einblicke in neue Technologien, ermöglicht wertvolle Kontakte und inspiriert zu innovativen Ideen. Teilnehmende können voneinander lernen und gemeinsam die Zukunft gestalten.
