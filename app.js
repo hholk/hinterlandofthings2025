@@ -18,7 +18,7 @@ const ROLES = new Set([
 async function loadSlots() {
   const resp = await fetch('timeslots.json');
   const slots = await resp.json();
-  const agenda = document.getElementById('agenda');
+  const agenda = document.getElementById('content');
   const tmpl = document.getElementById('slot-template');
   const favs = JSON.parse(localStorage.getItem('favorites')||'[]');
   slots.forEach((slot, idx) => {
@@ -80,8 +80,13 @@ async function loadNavigation(){
     files.filter(f => f.toLowerCase().includes(filter.toLowerCase())).forEach(f => {
       const li=document.createElement('li');
       const a=document.createElement('a');
-      a.href=f;
+      a.href='#';
       a.textContent=f;
+      a.addEventListener('click', ev => {
+        ev.preventDefault();
+        displayMarkdown(f);
+        document.body.classList.remove('nav-open');
+      });
       li.appendChild(a);
       list.appendChild(li);
     });
@@ -89,6 +94,17 @@ async function loadNavigation(){
   input.addEventListener('input', ()=>render(input.value));
   render();
 }
+
+async function displayMarkdown(file){
+  const resp = await fetch(file);
+  const md = await resp.text();
+  const content = document.getElementById('content');
+  content.innerHTML = marked.parse(md);
+}
+
+document.getElementById('menu-toggle').addEventListener('click', () => {
+  document.body.classList.toggle('nav-open');
+});
 if('serviceWorker' in navigator){
   navigator.serviceWorker.register('service-worker.js');
 }
