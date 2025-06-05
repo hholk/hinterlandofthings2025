@@ -108,18 +108,7 @@ body.nav-open #md-nav {
   transform: translateX(0);
 }
 @media (min-width: 600px) {
-  #md-nav {
-    position: static;
-    transform: none;
-    width: auto;
-  }
-  #menu-toggle {
-    display: none;
-  }
-  body {
-    padding-left: 0;
-  }
-  main {
+  body.nav-open main {
     margin-left: 260px;
   }
 }
