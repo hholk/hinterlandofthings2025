@@ -65,7 +65,28 @@ async function loadSlots() {
     agenda.appendChild(clone);
   });
 }
+
+async function loadNavigation(){
+  const resp = await fetch('md-files.json');
+  const files = await resp.json();
+  const list = document.getElementById('nav-list');
+  const input = document.getElementById('nav-filter');
+  function render(filter=''){
+    list.innerHTML='';
+    files.filter(f => f.toLowerCase().includes(filter.toLowerCase())).forEach(f => {
+      const li=document.createElement('li');
+      const a=document.createElement('a');
+      a.href=f;
+      a.textContent=f;
+      li.appendChild(a);
+      list.appendChild(li);
+    });
+  }
+  input.addEventListener('input', ()=>render(input.value));
+  render();
+}
 if('serviceWorker' in navigator){
   navigator.serviceWorker.register('service-worker.js');
 }
 loadSlots();
+loadNavigation();
