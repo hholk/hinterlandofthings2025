@@ -12,13 +12,14 @@
 </head>
 <body>
 <header>
+  <button id="menu-toggle" aria-label="Menü">&#9776;</button>
   <h1>Hinterland of Things 2025</h1>
 </header>
 <nav id="md-nav">
   <input type="text" id="nav-filter" placeholder="Filter" aria-label="Filter markdown files">
   <ul id="nav-list"></ul>
 </nav>
-<main id="agenda"></main>
+<main id="content"></main>
 <template id="slot-template">
   <article class="slot">
     <header>
@@ -31,6 +32,7 @@
     <section class="why"><em>Warum teilnehmen? Die Hinterland of Things 2025 bietet eine einzigartige Gelegenheit, die neuesten Entwicklungen in Technologie und Mittelstand kennenzulernen und wertvolle Kontakte zu innovativen Start-ups und etablierten Unternehmen zu knüpfen.</em></section>
   </article>
 </template>
+<script src="marked.min.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

@@ -6,12 +6,26 @@ body {
   color: #f1f1f1;
   line-height: 1.3;
 }
+main {
+  padding: 0.5rem;
+}
 
 header {
   background: #212121;
   color: #fff;
   padding: 0.5rem;
   text-align: center;
+  position: relative;
+}
+#menu-toggle {
+  position: absolute;
+  left: 0.5rem;
+  top: 0.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .slot {
@@ -80,6 +94,34 @@ h1 {
 #md-nav {
   background: #212121;
   padding: 0.5rem;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 250px;
+  transform: translateX(-260px);
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+  z-index: 10;
+}
+body.nav-open #md-nav {
+  transform: translateX(0);
+}
+@media (min-width: 600px) {
+  #md-nav {
+    position: static;
+    transform: none;
+    width: auto;
+  }
+  #menu-toggle {
+    display: none;
+  }
+  body {
+    padding-left: 0;
+  }
+  main {
+    margin-left: 260px;
+  }
 }
 #md-nav input {
   width: 100%;

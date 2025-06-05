@@ -1,9 +1,10 @@
-const CACHE_NAME = 'hlt2025-cache-v1';
+const CACHE_NAME = 'hlt2025-cache-v2';
 const ASSETS = [
   './',
   './index.html',
   './style.css',
   './app.js',
+  './marked.min.js',
   './manifest.webmanifest',
   './timeslots.json',
   './md-files.json',
