@@ -112,6 +112,10 @@ body.nav-open #md-nav {
     margin-left: 260px;
   }
 }
+@media (max-width: 600px) {
+  #md-nav { width: 200px; transform: translateX(-210px); }
+  body.nav-open #md-nav { transform: translateX(0); }
+}
 #md-nav input {
   width: 100%;
   padding: 0.25rem;
