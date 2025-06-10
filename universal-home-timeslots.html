@@ -18,8 +18,54 @@
     color: #f8f9fa;
   }
   #ec {
-    height: 80vh;
+    height: 160vh;
   }
+
+  #overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    z-index: 1000;
+  }
+  #overlay-content {
+    max-width: 600px;
+    max-height: 90vh;
+    overflow: auto;
+  }
+
+  .event-card {
+    background: #343a40;
+    color: #f8f9fa;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    border-left: 4px solid;
+  }
+  .event-card:hover {
+    transform: translateY(-5px);
+  }
+  .event-time { color: #adb5bd; font-size: 0.9em; margin-bottom: 0.5rem; }
+  .event-title { font-size: 1.2em; margin: 0.5rem 0; color: #fff; }
+  .event-speaker { color: #ced4da; font-style: italic; margin: 0.5rem 0; }
+  .event-description { color: #dee2e6; line-height: 1.6; margin: 1rem 0; }
+  .ics-link {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background: var(--primary-blue);
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background 0.3s ease;
+  }
+  .category-all { border-color: var(--primary-gray); }
+  .category-presentation { border-color: var(--primary-blue); }
+  .category-qa { border-color: var(--primary-green); }
+  .category-networking { border-color: var(--primary-orange); }
 </style>
 </head>
 <body>
@@ -30,6 +76,7 @@
 <main>
   <div id="ec"></div>
 </main>
+<div id="overlay"><div id="overlay-content"></div></div>
 <script src="https://cdn.jsdelivr.net/npm/@event-calendar/build@4.4.0/dist/event-calendar.min.js"></script>
 <script src="universal-app.js"></script>
 </body>
