@@ -19,22 +19,36 @@ def slugify(text):
     text = re.sub(r'[^a-z0-9]+', '-', text)
     return text.strip('-')[:60]
 
-# Parse time string like '11.06.2025 | 18:00' or with 'ca.' or 'ab '
-def parse_datetime(time_text):
+# Parse time string like '11.06.2025 | 18:00-19:00' or with 'ca.' or 'ab '
+def parse_datetimes(time_text):
     date_part, time_part = time_text.split('|')
     date_part = date_part.strip()
     time_part = time_part.strip()
-    time_part = time_part.replace('ca.','').replace('ab','').strip()
-    dt_str = f"{date_part} {time_part}"
-    return datetime.strptime(dt_str, '%d.%m.%Y %H:%M')
+    time_part = time_part.replace('ca.', '').replace('ab', '').strip()
+
+    if '–' in time_part:
+        start_str, end_str = [t.strip() for t in time_part.split('–', 1)]
+    elif '-' in time_part:
+        start_str, end_str = [t.strip() for t in time_part.split('-', 1)]
+    else:
+        start_str, end_str = time_part, None
+
+    start_dt = datetime.strptime(f"{date_part} {start_str}", '%d.%m.%Y %H:%M')
+    if end_str:
+        end_dt = datetime.strptime(f"{date_part} {end_str}", '%d.%m.%Y %H:%M')
+        if end_dt < start_dt:
+            end_dt += timedelta(days=1)
+    else:
+        end_dt = start_dt + timedelta(hours=1)
+
+    return start_dt, end_dt
 
 for card in soup.find_all('div', class_='event-card'):
     time_text = card.find('div', class_='event-time').get_text(strip=True)
     title = card.find('h2', class_='event-title').get_text(strip=True)
     speaker = card.find('div', class_='event-speaker').get_text(strip=True)
     description = card.find('p', class_='event-description').get_text(strip=True)
-    start_dt = parse_datetime(time_text)
-    end_dt = start_dt + timedelta(hours=1)
+    start_dt, end_dt = parse_datetimes(time_text)
     uid = str(uuid.uuid4()) + '@universal-home.de'
     ics_content = f"""BEGIN:VCALENDAR
 VERSION:2.0

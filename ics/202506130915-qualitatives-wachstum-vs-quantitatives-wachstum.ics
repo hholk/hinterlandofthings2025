@@ -4,11 +4,11 @@ PRODID:-//Universal Home//49. Meeting//DE
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-DTSTART:20250613T100000
-DTEND:20250613T110000
-DTSTAMP:20250610T133222
-UID:7f58b5fd-cc76-4e85-acf0-6d72625621d3@universal-home.de
-CREATED:20250610T133222
+DTSTART:20250613T091500
+DTEND:20250613T100000
+DTSTAMP:20250610T141540
+UID:9bd03c14-2b5b-4ce7-9306-8573a29837bd@universal-home.de
+CREATED:20250610T141540
 DESCRIPTION:Vortrag über qualitatives vs. quantitatives Wachstum und zukünftige Kundenanforderungen
 SUMMARY:"Qualitatives Wachstum" vs. "Quantitatives Wachstum" - Kundenanforderungen der Zukunft an Marke und Design am Beispiel Miele
 STATUS:CONFIRMED
