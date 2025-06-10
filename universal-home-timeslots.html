@@ -29,6 +29,27 @@
     z-index: 1;
   }
   #content.grid-schedule .slot { margin: 0; }
+
+  @media (max-width: 600px) {
+    #content.grid-schedule { flex-direction: column; }
+    #content.grid-schedule .day-column { min-width: 100%; }
+  }
+
+  .slot-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    z-index: 1000;
+  }
+  .slot-popup.active { display: flex; }
+  .slot-popup article { width: 100%; max-width: 400px; }
 </style>
 </head>
 <body>
@@ -52,6 +73,17 @@
     <a class="ics-link" href="#">Zu Outlook hinzufügen</a>
   </article>
 </template>
+<div id="slot-popup" class="slot-popup" aria-hidden="true">
+  <article class="slot">
+    <header>
+      <h2 class="title"></h2>
+      <div class="time"></div>
+    </header>
+    <div class="speaker"></div>
+    <div class="desc"></div>
+    <a class="ics-link" href="#">Zu Outlook hinzufügen</a>
+  </article>
+</div>
 <script src="universal-app.js"></script>
 </body>
 </html>
