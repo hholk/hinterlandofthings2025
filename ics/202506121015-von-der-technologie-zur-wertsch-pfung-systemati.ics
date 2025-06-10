@@ -5,10 +5,10 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 DTSTART:20250612T101500
-DTEND:20250612T111500
-DTSTAMP:20250610T133221
-UID:c6dade99-afa6-46e4-afa7-fad095964975@universal-home.de
-CREATED:20250610T133221
+DTEND:20250612T104500
+DTSTAMP:20250610T141540
+UID:52821d0b-0c7b-43d5-acbb-1d2dd7b3199f@universal-home.de
+CREATED:20250610T141540
 DESCRIPTION:Vortrag über Technologieexploration und -validierung für nachhaltige Innovation
 SUMMARY:Von der Technologie zur Wertschöpfung: Systematische Exploration und Validierung neuer Technologien für nachhaltige Innovation
 STATUS:CONFIRMED
