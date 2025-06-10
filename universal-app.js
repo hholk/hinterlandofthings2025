@@ -10,6 +10,7 @@ async function loadCalendar() {
   const doc = parser.parseFromString(html, 'text/html');
 
   const titleToCategory = {};
+  const titleToCard = {};
   doc.querySelectorAll('.event-card').forEach(card => {
     const titleEl = card.querySelector('.event-title');
     if (!titleEl) return;
@@ -18,6 +19,7 @@ async function loadCalendar() {
     if (catClass) {
       titleToCategory[title] = catClass.replace('category-', '');
     }
+    titleToCard[title] = card.outerHTML;
   });
 
   const days = {
@@ -40,14 +42,27 @@ async function loadCalendar() {
     color: colors[titleToCategory[slot.title] || 'all']
   }));
 
-  EventCalendar.create(document.getElementById('ec'), {
+  const calendar = EventCalendar.create(document.getElementById('ec'), {
     view: 'timeGridDay',
-    height: '80vh',
+    height: '160vh',
     duration: {days: 3},
     initialDate: '2025-06-11',
     hiddenDays: [0,1,2,6],
     slotDuration: '00:15',
+    eventContent: ({ event }) => ({ html: event.title }),
+    eventClick: ({ event }) => {
+      const overlay = document.getElementById('overlay');
+      const content = document.getElementById('overlay-content');
+      content.innerHTML = titleToCard[event.title] || `<div class="event-card"><h2 class="event-title">${event.title}</h2></div>`;
+      overlay.style.display = 'flex';
+    },
     events
+  });
+
+  document.getElementById('overlay').addEventListener('click', (e) => {
+    if (e.target.id === 'overlay') {
+      e.currentTarget.style.display = 'none';
+    }
   });
 }
 
