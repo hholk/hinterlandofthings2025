@@ -161,3 +161,19 @@ body.nav-open #md-nav {
 .slot .fav.clicked {
   animation: star-bounce 0.3s ease;
 }
+
+#content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.day-column {
+  flex: 1;
+  min-width: 300px;
+}
+
+.day-column h2 {
+  text-align: center;
+  margin-top: 0;
+}
