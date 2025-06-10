@@ -1,5 +1,5 @@
 # hinterlandofthings2025
-kleine PWA um sich auf der Hinterland of Things 2025 zu orientieren. offline und client-seitig
+Kleine PWA, um sich auf der Hinterland of Things 2025 zu orientieren. Offline und client-seitig. Die eigentliche PWA befindet sich nun unter `hinterland.html`. Eine neue Startseite `index.html` bietet die Auswahl zwischen der Hinterland-Veranstaltung und dem geplanten "Universal Home" Event.
 
 **Connection to Miele:** This content relates to ongoing work at Miele.
 
