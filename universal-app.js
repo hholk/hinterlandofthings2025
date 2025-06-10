@@ -6,6 +6,10 @@ function toMinutes(t){
 async function loadSlots(){
   const resp = await fetch('universal-timeslots.json');
   const slots = await resp.json();
+  slots.sort((a,b) => {
+    if(a.day !== b.day) return a.day - b.day;
+    return toMinutes(a.start) - toMinutes(b.start);
+  });
   const days = {
     1: document.getElementById('day1'),
     2: document.getElementById('day2'),
