@@ -28,7 +28,15 @@
     background: #212121;
     z-index: 1;
   }
-  #content.grid-schedule .slot { margin: 0; }
+  #content.grid-schedule .slot {
+    margin: 0;
+    background: none;
+    padding: 0.25rem 0.5rem;
+    box-shadow: none;
+    border-left: 4px solid var(--primary-blue);
+    color: #fff;
+    border-radius: 0;
+  }
 
   /* Show only the title in the schedule view */
   #content.grid-schedule .slot .time,
@@ -38,7 +46,7 @@
     display: none;
   }
   #content.grid-schedule .slot .title {
-    font-size: 0.5rem;
+    font-size: 0.75rem;
   }
 
   @media (max-width: 600px) {
@@ -60,7 +68,29 @@
     z-index: 1000;
   }
   .slot-popup.active { display: flex; }
-  .slot-popup article { width: 100%; max-width: 400px; }
+  .slot-popup .event-card { width: 100%; max-width: 400px; }
+
+  /* Styles from the main page for event cards */
+  .event-card {
+    background: #343a40;
+    color: #f8f9fa;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    border-left: 4px solid;
+  }
+  .event-card:hover {
+    transform: translateY(-5px);
+  }
+  .event-time { color: #adb5bd; font-size: 0.9em; margin-bottom: 0.5rem; }
+  .event-title { font-size: 1.2em; margin: 0.5rem 0; color: #fff; }
+  .event-speaker { color: #ced4da; font-style: italic; margin: 0.5rem 0; }
+  .event-description { color: #dee2e6; line-height: 1.6; margin: 1rem 0; }
+  .category-all { border-color: var(--primary-gray); }
+  .category-presentation { border-color: var(--primary-blue); }
+  .category-qa { border-color: var(--primary-green); }
+  .category-networking { border-color: var(--primary-orange); }
 </style>
 </head>
 <body>
@@ -85,15 +115,13 @@
   </article>
 </template>
 <div id="slot-popup" class="slot-popup" aria-hidden="true">
-  <article class="slot">
-    <header>
-      <h2 class="title"></h2>
-      <div class="time"></div>
-    </header>
-    <div class="speaker"></div>
-    <div class="desc"></div>
+  <div class="event-card">
+    <div class="event-time time"></div>
+    <h2 class="event-title title"></h2>
+    <div class="event-speaker speaker"></div>
+    <p class="event-description desc"></p>
     <a class="ics-link" href="#">Zu Outlook hinzufügen</a>
-  </article>
+  </div>
 </div>
 <script src="universal-app.js"></script>
 </body>
