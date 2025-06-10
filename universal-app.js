@@ -27,19 +27,47 @@ async function loadSlots(){
     days[day].style.gridTemplateRows = `repeat(${rows}, 15px)`;
   });
 
-  slots.forEach(slot => {
+  const popup = document.getElementById('slot-popup');
+  const popTitle = popup.querySelector('.title');
+  const popTime = popup.querySelector('.time');
+  const popSpeaker = popup.querySelector('.speaker');
+  const popDesc = popup.querySelector('.desc');
+  const popIcs = popup.querySelector('.ics-link');
+
+  slots.forEach((slot, idx) => {
     const clone = tmpl.content.firstElementChild.cloneNode(true);
+    clone.dataset.id = idx;
     clone.querySelector('.title').textContent = slot.title;
     clone.querySelector('.time').textContent = slot.start + (slot.end ? ' - ' + slot.end : '');
     clone.querySelector('.speaker').textContent = slot.speaker;
     clone.querySelector('.desc').textContent = slot.description;
     clone.querySelector('.ics-link').href = slot.ics;
 
+    clone.addEventListener('click', () => {
+      if(popup.classList.contains('active') && popup.dataset.activeId === String(idx)) {
+        popup.classList.remove('active');
+        popup.dataset.activeId = '';
+        return;
+      }
+      popTitle.textContent = slot.title;
+      popTime.textContent = clone.querySelector('.time').textContent;
+      popSpeaker.textContent = slot.speaker;
+      popDesc.textContent = slot.description;
+      popIcs.href = slot.ics;
+      popup.dataset.activeId = String(idx);
+      popup.classList.add('active');
+    });
+
     const startRow = Math.floor((toMinutes(slot.start) - dayStarts[slot.day]) / 15) + 1;
     const span = Math.ceil((toMinutes(slot.end) - toMinutes(slot.start)) / 15);
     clone.style.gridRow = `${startRow} / span ${span}`;
 
     days[slot.day].appendChild(clone);
+  });
+
+  popup.addEventListener('click', () => {
+    popup.classList.remove('active');
+    popup.dataset.activeId = '';
   });
 }
 loadSlots();
