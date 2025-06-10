@@ -24,7 +24,7 @@ async function loadSlots(){
 
   Object.keys(days).forEach(day => {
     const rows = Math.ceil((dayEnds[day] - dayStarts[day]) / 15);
-    days[day].style.gridTemplateRows = `repeat(${rows}, 15px)`;
+    days[day].style.gridTemplateRows = `repeat(${rows}, 30px)`;
   });
 
   const popup = document.getElementById('slot-popup');

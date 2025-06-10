@@ -15,7 +15,7 @@
     flex: 1;
     min-width: 300px;
     display: grid;
-    grid-auto-rows: 15px;
+    grid-auto-rows: 30px;
     gap: 0.25rem;
     position: relative;
   }
@@ -29,6 +29,17 @@
     z-index: 1;
   }
   #content.grid-schedule .slot { margin: 0; }
+
+  /* Show only the title in the schedule view */
+  #content.grid-schedule .slot .time,
+  #content.grid-schedule .slot .speaker,
+  #content.grid-schedule .slot .desc,
+  #content.grid-schedule .slot .ics-link {
+    display: none;
+  }
+  #content.grid-schedule .slot .title {
+    font-size: 0.5rem;
+  }
 
   @media (max-width: 600px) {
     #content.grid-schedule { flex-direction: column; }
