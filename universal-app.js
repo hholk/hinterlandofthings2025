@@ -42,6 +42,7 @@ async function loadCalendar() {
 
   EventCalendar.create(document.getElementById('ec'), {
     view: 'timeGridDay',
+    height: '80vh',
     duration: {days: 3},
     initialDate: '2025-06-11',
     hiddenDays: [0,1,2,6],
