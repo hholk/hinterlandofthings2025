@@ -5,13 +5,38 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Universal Home - Zeitplan</title>
 <link rel="stylesheet" href="style.css" />
+<style>
+  #content.grid-schedule {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  #content.grid-schedule .day-column {
+    flex: 1;
+    min-width: 300px;
+    display: grid;
+    grid-auto-rows: 15px;
+    gap: 0.25rem;
+    position: relative;
+  }
+  #content.grid-schedule .day-column h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 0;
+    position: sticky;
+    top: 0;
+    background: #212121;
+    z-index: 1;
+  }
+  #content.grid-schedule .slot { margin: 0; }
+</style>
 </head>
 <body>
 <header>
   <h1>Universal Home Meeting</h1>
   <a href="universal-home.html" style="color:#ff0000">Kartenansicht</a>
 </header>
-<main id="content">
+<main id="content" class="grid-schedule">
   <section id="day1" class="day-column"><h2>Tag 1</h2></section>
   <section id="day2" class="day-column"><h2>Tag 2</h2></section>
   <section id="day3" class="day-column"><h2>Tag 3</h2></section>
