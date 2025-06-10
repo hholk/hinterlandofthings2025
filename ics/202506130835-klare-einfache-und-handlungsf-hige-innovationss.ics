@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Universal Home//49. Meeting//DE
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+DTSTART:20250613T083500
+DTEND:20250613T093500
+DTSTAMP:20250610T133222
+UID:b2c62cd2-4198-4dc0-a3e7-4d9f5653e8e9@universal-home.de
+CREATED:20250610T133222
+DESCRIPTION:Vortrag über Innovationsstrategien für Mittelstand und Industrie
+SUMMARY:Klare, einfache und handlungsfähige Innovationsstrategien für Mittelstand und Industrie - Geht das überhaupt?
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
