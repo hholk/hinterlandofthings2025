@@ -18,7 +18,8 @@ const ROLES = new Set([
 async function loadSlots() {
   const resp = await fetch('timeslots.json');
   const slots = await resp.json();
-  const agenda = document.getElementById('content');
+  const day1 = document.getElementById('day1');
+  const day2 = document.getElementById('day2');
   const tmpl = document.getElementById('slot-template');
   const favs = JSON.parse(localStorage.getItem('favorites')||'[]');
   slots.forEach((slot, idx) => {
@@ -66,7 +67,12 @@ async function loadSlots() {
         tagWrap.appendChild(span);
       });
     });
-    agenda.appendChild(clone);
+    const num = parseInt(slot.file, 10);
+    if(num <= 36) {
+      day1.appendChild(clone);
+    } else if(num <= 70) {
+      day2.appendChild(clone);
+    }
   });
 }
 
