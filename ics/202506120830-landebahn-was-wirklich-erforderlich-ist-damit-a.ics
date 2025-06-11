@@ -6,11 +6,11 @@ METHOD:PUBLISH
 BEGIN:VEVENT
 DTSTART:20250612T083000
 DTEND:20250612T090000
-DTSTAMP:20250610T141540
-UID:e758ccfb-1bbb-4222-86be-dcb2ed1daaf0@universal-home.de
-CREATED:20250610T141540
-DESCRIPTION:Vortrag über die Umsetzung von Ideen in erfolgreiche Geschäfte
-SUMMARY:Landebahn - was wirklich erforderlich ist, damit aus Ideen erfolgreiche Geschäfte werden
+DTSTAMP:20250611T161509
+UID:579ab555-e598-4bfd-b3c4-5f811cf3afab@universal-home.de
+CREATED:20250611T161509
+DESCRIPTION:Best-practice-Einblicke in Mieles Innovationsprozess
+SUMMARY:Landebahn – was wirklich erforderlich ist, damit aus Ideen erfolgreiche Geschäfte werden
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 END:VEVENT

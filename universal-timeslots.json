@@ -1,57 +1,66 @@
 [
   {
-    "title": "Check-in im Hotel",
+    "title": "Einchecken im Hotel",
     "start": "18:00",
+    "end": "18:50",
+    "day": 1,
+    "speaker": "-",
+    "description": "Check-in Holiday Inn Express Gütersloh",
+    "ics": "ics/202506111800-einchecken-im-hotel.ics"
+  },
+  {
+    "title": "Fußweg zum Parkhotel",
+    "start": "18:50",
     "end": "19:00",
     "day": 1,
     "speaker": "-",
-    "description": "Check-in im Holiday Inn Express Gütersloh",
-    "ics": "ics/202506111800-check-in-im-hotel.ics"
+    "description": "Gemeinsamer Weg vom Hotel zum Abend-Event",
+    "ics": "ics/202506111850-fu-weg-zum-parkhotel.ics"
   },
   {
-    "title": "Get together und Spargel essen",
+    "title": "Get-together & Spargelessen",
     "start": "19:00",
     "end": "22:00",
     "day": 1,
     "speaker": "-",
-    "description": "Gemeinsames Get-together und Spargel essen im Parkhotel Gütersloh",
-    "ics": "ics/202506111900-get-together-und-spargel-essen.ics"
+    "description": "Begrüßungsdinner im Parkhotel Gütersloh",
+    "ics": "ics/202506111900-get-together-spargelessen.ics"
   },
   {
-    "title": "Busabfahrt zum Meierhof Rassfeld",
+    "title": "Busfahrt vom Hotel",
     "start": "08:00",
     "end": "08:10",
     "day": 2,
     "speaker": "-",
-    "description": "Abfahrt des Busses vom Hotel zum Meierhof Rassfeld",
-    "ics": "ics/202506120800-busabfahrt-zum-meierhof-rassfeld.ics"
+    "description": "Transfer zum Meierhof Rassfeld",
+    "ics": "ics/202506120800-busfahrt-vom-hotel.ics"
   },
   {
-    "title": "Ankunft und erste Kommunikation",
+    "title": "Ankommen & Networking",
     "start": "08:10",
     "end": "08:20",
     "day": 2,
     "speaker": "-",
-    "description": "Ankunft und erste Kommunikation am Meierhof Rassfeld",
-    "ics": "ics/202506120810-ankunft-und-erste-kommunikation.ics"
+    "description": "Erste Gespräche vor Beginn",
+    "ics": "ics/202506120810-ankommen-networking.ics"
   },
   {
-    "title": "Begrüßung durch Miele",
+    "title": "Begrüßung by Miele",
     "start": "08:20",
     "end": "08:30",
     "day": 2,
     "speaker": "Andreas Enslin",
-    "description": "Begrüßungsrede von Andreas Enslin, Vice President Design Center bei Miele & Cie. KG",
-    "ics": "ics/202506120820-begr-ung-durch-miele.ics"
+    "description": "Vice President Design Center",
+    "ics": "ics/202506120820-begr-ung-by-miele.ics"
   },
   {
-    "title": "Landebahn - was wirklich erforderlich ist, damit aus Ideen erfolgreiche Geschäfte werden",
+    "title": "Landebahn – was wirklich erforderlich ist, damit aus Ideen erfolgreiche Geschäfte werden",
     "start": "08:30",
     "end": "09:00",
     "day": 2,
     "speaker": "Andreas Enslin",
-    "description": "Vortrag über die Umsetzung von Ideen in erfolgreiche Geschäfte",
-    "ics": "ics/202506120830-landebahn-was-wirklich-erforderlich-ist-damit-a.ics"
+    "description": "Best-practice-Einblicke in Mieles Innovationsprozess",
+    "ics": "ics/202506120830-landebahn-was-wirklich-erforderlich-ist-damit-aus-ideen-erfo.ics"
   },
   {
     "title": "Q & A",
@@ -59,7 +68,7 @@
     "end": "09:10",
     "day": 2,
     "speaker": "Markus Wessel",
-    "description": "Q&A-Session mit Markus Wessel, Universal Home",
+    "description": "Universal Home",
     "ics": "ics/202506120900-q-a.ics"
   },
   {
@@ -67,18 +76,18 @@
     "start": "09:10",
     "end": "09:30",
     "day": 2,
-    "speaker": "Dr. Stefan Biel, Christoph Fischer",
-    "description": "Vortrag von Dr. Stefan Biel und Christoph Fischer von tesa SE",
+    "speaker": "Dr. Stefan Biel & Christoph Fischer",
+    "description": "tesa SE – Lessons learned aus Future Business-Innovation",
     "ics": "ics/202506120910-what-could-possibly-go-wrong.ics"
   },
   {
-    "title": "DER WEG ZU DEN BESTEN - Die Psychologie des Menschen, ist die am meisten unterschätzte Innovationsbarriere",
+    "title": "DER WEG ZU DEN BESTEN – Die Psychologie des Menschen ist die meistunterschätzte Innovationsbarriere",
     "start": "09:30",
     "end": "09:50",
     "day": 2,
     "speaker": "Birgit Drixelius",
-    "description": "Vortrag über psychologische Innovationsbarrieren",
-    "ics": "ics/202506120930-der-weg-zu-den-besten-die-psychologie-des-mensc.ics"
+    "description": "Die Coachinggesellschaft – Mindset & Führungskompetenz",
+    "ics": "ics/202506120930-der-weg-zu-den-besten-die-psychologie-des-menschen-ist-die-m.ics"
   },
   {
     "title": "Q & A",
@@ -86,7 +95,7 @@
     "end": "10:00",
     "day": 2,
     "speaker": "Tom Rudolph",
-    "description": "Q&A-Session mit Tom Rudolph, Miele",
+    "description": "Miele",
     "ics": "ics/202506120950-q-a.ics"
   },
   {
@@ -95,17 +104,17 @@
     "end": "10:15",
     "day": 2,
     "speaker": "-",
-    "description": "Pause für Kommunikation",
+    "description": "Kaffee & Networking",
     "ics": "ics/202506121000-kommunikationspause.ics"
   },
   {
-    "title": "Von der Technologie zur Wertschöpfung: Systematische Exploration und Validierung neuer Technologien für nachhaltige Innovation",
+    "title": "Von der Technologie zur Wertschöpfung",
     "start": "10:15",
     "end": "10:45",
     "day": 2,
     "speaker": "Georgina Neitzel",
-    "description": "Vortrag über Technologieexploration und -validierung für nachhaltige Innovation",
-    "ics": "ics/202506121015-von-der-technologie-zur-wertsch-pfung-systemati.ics"
+    "description": "ERGO Group AG – Systematische Tech-Exploration",
+    "ics": "ics/202506121015-von-der-technologie-zur-wertsch-pfung.ics"
   },
   {
     "title": "Q & A",
@@ -113,17 +122,17 @@
     "end": "10:55",
     "day": 2,
     "speaker": "Matthias Nawrocki",
-    "description": "Q&A-Session mit Matthias Nawrocki, ERGO Group AG",
+    "description": "ERGO",
     "ics": "ics/202506121045-q-a.ics"
   },
   {
-    "title": "Daten und nachhaltigkeitsetriebene Innovation bei Vodafone - Was ist nötig, um neue Geschäftsmodelle umzusetzen?!",
+    "title": "Daten- und nachhaltigkeitsgetriebene Innovation bei Vodafone",
     "start": "10:55",
     "end": "11:25",
     "day": 2,
     "speaker": "Michael Jakob Reinartz",
-    "description": "Vortrag über daten- und nachhaltigkeitsgetriebene Innovation bei Vodafone",
-    "ics": "ics/202506121055-daten-und-nachhaltigkeitsetriebene-innovation-b.ics"
+    "description": "Vodafone GmbH",
+    "ics": "ics/202506121055-daten-und-nachhaltigkeitsgetriebene-innovation-bei-vodafone.ics"
   },
   {
     "title": "Q & A",
@@ -131,17 +140,17 @@
     "end": "11:35",
     "day": 2,
     "speaker": "Matthias Nawrocki",
-    "description": "Q&A-Session mit Matthias Nawrocki, ERGO Group AG",
+    "description": "ERGO",
     "ics": "ics/202506121125-q-a.ics"
   },
   {
-    "title": "Wir bleiben aus Tradition innovativ: ein Weg zwischen Genialität und Zufall",
+    "title": "Wir bleiben aus Tradition innovativ",
     "start": "11:35",
     "end": "12:05",
     "day": 2,
     "speaker": "Andreas Schobert",
-    "description": "Vortrag über Innovation durch Tradition",
-    "ics": "ics/202506121135-wir-bleiben-aus-tradition-innovativ-ein-weg-zwi.ics"
+    "description": "CTO Hornbach",
+    "ics": "ics/202506121135-wir-bleiben-aus-tradition-innovativ.ics"
   },
   {
     "title": "Q & A",
@@ -149,25 +158,25 @@
     "end": "12:15",
     "day": 2,
     "speaker": "Joachim De Backer",
-    "description": "Q&A-Session mit Joachim De Backer, Hettich Marketing- und Vertriebs GmbH",
+    "description": "Hettich",
     "ics": "ics/202506121205-q-a.ics"
   },
   {
-    "title": "Gemeinsames Mittagessen und Kommunikationszeit",
+    "title": "Mittagessen",
     "start": "12:15",
     "end": "13:00",
     "day": 2,
     "speaker": "-",
-    "description": "Mittagessen und Zeit für Kommunikation",
-    "ics": "ics/202506121215-gemeinsames-mittagessen-und-kommunikationszeit.ics"
+    "description": "Gemeinsames Lunch",
+    "ics": "ics/202506121215-mittagessen.ics"
   },
   {
-    "title": "VIVA la REWElution - Innovation braucht Macher!",
+    "title": "VIVA la REWElution – Innovation braucht Macher!",
     "start": "13:00",
     "end": "13:40",
     "day": 2,
     "speaker": "Jörg Hirt",
-    "description": "Vortrag über Innovation bei REWE digital",
+    "description": "REWE digital",
     "ics": "ics/202506121300-viva-la-rewelution-innovation-braucht-macher.ics"
   },
   {
@@ -176,35 +185,35 @@
     "end": "13:50",
     "day": 2,
     "speaker": "Tom Rudolph",
-    "description": "Q&A-Session mit Tom Rudolph, Miele & Cie. KG",
+    "description": "Miele",
     "ics": "ics/202506121340-q-a.ics"
   },
   {
-    "title": "Innovation ist kein Zufall - Wie WILO die Zukunft gestaltet und Wirkung schafft",
+    "title": "Innovation ist kein Zufall – Wie WILO die Zukunft gestaltet",
     "start": "13:50",
     "end": "14:20",
     "day": 2,
     "speaker": "Dr. Stefan Neuhaus",
-    "description": "Vortrag über Innovation bei WILO SE",
-    "ics": "ics/202506121350-innovation-ist-kein-zufall-wie-wilo-die-zukunft.ics"
+    "description": "WILO SE",
+    "ics": "ics/202506121350-innovation-ist-kein-zufall-wie-wilo-die-zukunft-gestaltet.ics"
   },
   {
     "title": "Q & A",
     "start": "14:20",
     "end": "14:30",
     "day": 2,
-    "speaker": "Swen Schneider",
-    "description": "Q&A-Session mit Swen Schneider, Miele & Cie. KG",
+    "speaker": "Dirk Büsing",
+    "description": "VIVAWEST",
     "ics": "ics/202506121420-q-a.ics"
   },
   {
-    "title": "Was erwarten Kunden von einer Marke? Kontinuität vs. Veränderung - Entscheidungshilfen durch den Customer Centricity Score",
+    "title": "Was erwarten Kunden von einer Marke?",
     "start": "14:30",
     "end": "15:00",
     "day": 2,
     "speaker": "Prof. Dr. Jan-Erik Baars",
-    "description": "Vortrag über Kundenerwartungen an Marken",
-    "ics": "ics/202506121430-was-erwarten-kunden-von-einer-marke-kontinuit-t.ics"
+    "description": "Lucerne UASA / Customer Metrics AG",
+    "ics": "ics/202506121430-was-erwarten-kunden-von-einer-marke.ics"
   },
   {
     "title": "Q & A",
@@ -212,53 +221,53 @@
     "end": "15:10",
     "day": 2,
     "speaker": "Andreas Enslin",
-    "description": "Q&A-Session mit Andreas Enslin, Miele & Cie. KG",
+    "description": "Miele",
     "ics": "ics/202506121500-q-a.ics"
   },
   {
-    "title": "Busfahrt zur New Growth Factory",
+    "title": "Busfahrt New Growth Factory",
     "start": "15:10",
     "end": "15:30",
     "day": 2,
     "speaker": "-",
-    "description": "Busfahrt zur New Growth Factory",
-    "ics": "ics/202506121510-busfahrt-zur-new-growth-factory.ics"
+    "description": "Transfer",
+    "ics": "ics/202506121510-busfahrt-new-growth-factory.ics"
   },
   {
-    "title": "Besichtigung der New Growth Factory von Miele + Vortrag",
+    "title": "Besichtigung New Growth Factory & Vortrag",
     "start": "15:30",
     "end": "17:00",
     "day": 2,
-    "speaker": "Gernot Trettenbrein, Dr. Ina Nordsiek",
-    "description": "Besichtigung und Vortrag in der New Growth Factory von Miele",
-    "ics": "ics/202506121530-besichtigung-der-new-growth-factory-von-miele-v.ics"
+    "speaker": "Gernot Trettenbrein & Dr. Ina Nordsiek",
+    "description": "Miele / Pioneering GmbH",
+    "ics": "ics/202506121530-besichtigung-new-growth-factory-vortrag.ics"
   },
   {
-    "title": "Busfahrt zurück zum Meierhof Rassfeld",
+    "title": "Rückfahrt zum Meierhof",
     "start": "17:00",
     "end": "17:30",
     "day": 2,
     "speaker": "-",
-    "description": "Busfahrt zurück zum Meierhof Rassfeld",
-    "ics": "ics/202506121700-busfahrt-zur-ck-zum-meierhof-rassfeld.ics"
+    "description": "Transfer",
+    "ics": "ics/202506121700-r-ckfahrt-zum-meierhof.ics"
   },
   {
-    "title": "Das Miele-Flammenfest mit Otto Wilde im Meierhof Rassfeld",
+    "title": "Miele-Flammenfest",
     "start": "17:30",
     "end": "18:30",
     "day": 2,
-    "speaker": "-",
-    "description": "Miele-Flammenfest mit Otto Wilde",
-    "ics": "ics/202506121730-das-miele-flammenfest-mit-otto-wilde-im-meierho.ics"
+    "speaker": "Team Otto Wilde",
+    "description": "BBQ & Networking",
+    "ics": "ics/202506121730-miele-flammenfest.ics"
   },
   {
-    "title": "Vortrag über Bildung und Innovation",
+    "title": "Dinner Speech: Bildung in Deutschland – Tradition & Disruption",
     "start": "18:30",
     "end": "19:15",
     "day": 2,
-    "speaker": "Dr. Peter Rösner, Tara Siempelkamp, Philipp Grieffenhagen",
-    "description": "Vortrag von Dr. Peter Rösner und Schülern des Internats Louisenlund",
-    "ics": "ics/202506121830-vortrag-ber-bildung-und-innovation.ics"
+    "speaker": "Dr. Peter Rösner sowie Tara Siempelkamp & Philipp Grieffenhagen",
+    "description": "Stiftung Louisenlund; Schüler:innen Louisenlund",
+    "ics": "ics/202506121830-dinner-speech-bildung-in-deutschland-tradition-disruption.ics"
   },
   {
     "title": "Q & A",
@@ -266,16 +275,16 @@
     "end": "19:30",
     "day": 2,
     "speaker": "Markus Wessel",
-    "description": "Q&A-Session mit Markus Wessel, Universal Home GmbH",
+    "description": "Universal Home",
     "ics": "ics/202506121915-q-a.ics"
   },
   {
-    "title": "Get together",
+    "title": "Get-together",
     "start": "19:30",
     "end": "22:00",
     "day": 2,
     "speaker": "-",
-    "description": "Geselliges Beisammensein",
+    "description": "Offenes Networking",
     "ics": "ics/202506121930-get-together.ics"
   },
   {
@@ -284,35 +293,35 @@
     "end": "22:30",
     "day": 2,
     "speaker": "-",
-    "description": "Busfahrt zurück zum Hotel",
+    "description": "-",
     "ics": "ics/202506122200-r-ckfahrt-zum-hotel.ics"
   },
   {
-    "title": "Ankunft und erste Kommunikation",
+    "title": "Ankommen & Networking",
     "start": "08:15",
     "end": "08:30",
     "day": 3,
     "speaker": "-",
-    "description": "Ankunft und erste Kommunikation an der Studiobühne Gütersloh",
-    "ics": "ics/202506130815-ankunft-und-erste-kommunikation.ics"
+    "description": "Studiobühne Gütersloh",
+    "ics": "ics/202506130815-ankommen-networking.ics"
   },
   {
-    "title": "Begrüßung durch Miele",
+    "title": "Begrüßung by Miele",
     "start": "08:30",
     "end": "08:35",
     "day": 3,
     "speaker": "Dr. Markus Miele",
-    "description": "Begrüßungsrede von Dr. Markus Miele, Geschäftsführender Gesellschafter bei Miele & Cie. KG",
-    "ics": "ics/202506130830-begr-ung-durch-miele.ics"
+    "description": "Geschäftsführender Gesellschafter",
+    "ics": "ics/202506130830-begr-ung-by-miele.ics"
   },
   {
-    "title": "Klare, einfache und handlungsfähige Innovationsstrategien für Mittelstand und Industrie - Geht das überhaupt?",
+    "title": "Klare, einfache und handlungsfähige Innovationsstrategien",
     "start": "08:35",
     "end": "09:05",
     "day": 3,
     "speaker": "Manfred Tropper",
-    "description": "Vortrag über Innovationsstrategien für Mittelstand und Industrie",
-    "ics": "ics/202506130835-klare-einfache-und-handlungsf-hige-innovationss.ics"
+    "description": "mantro GmbH",
+    "ics": "ics/202506130835-klare-einfache-und-handlungsf-hige-innovationsstrategien.ics"
   },
   {
     "title": "Q & A",
@@ -320,44 +329,62 @@
     "end": "09:15",
     "day": 3,
     "speaker": "Andreas Enslin",
-    "description": "Q&A-Session mit Andreas Enslin, Miele & Cie. KG",
+    "description": "Miele",
     "ics": "ics/202506130905-q-a.ics"
   },
   {
-    "title": "\"Qualitatives Wachstum\" vs. \"Quantitatives Wachstum\" - Kundenanforderungen der Zukunft an Marke und Design am Beispiel Miele",
+    "title": "Brückenbau Marke – evidenzbasierte Empfehlungen",
     "start": "09:15",
-    "end": "10:00",
+    "end": "09:45",
     "day": 3,
-    "speaker": "Dr. Reinhard Zinkann",
-    "description": "Vortrag über qualitatives vs. quantitatives Wachstum und zukünftige Kundenanforderungen",
-    "ics": "ics/202506130915-qualitatives-wachstum-vs-quantitatives-wachstum.ics"
+    "speaker": "Prof. Dr. Carsten Baumgarth",
+    "description": "HWR Berlin",
+    "ics": "ics/202506130915-br-ckenbau-marke-evidenzbasierte-empfehlungen.ics"
   },
   {
     "title": "Q & A",
+    "start": "09:45",
+    "end": "10:00",
+    "day": 3,
+    "speaker": "Andreas Enslin",
+    "description": "Miele",
+    "ics": "ics/202506130945-q-a.ics"
+  },
+  {
+    "title": "„Qualitatives“ vs. „Quantitatives“ Wachstum",
     "start": "10:00",
     "end": "10:30",
     "day": 3,
-    "speaker": "Dr. Thomas Becker",
-    "description": "Q&A-Session mit Dr. Thomas Becker, Geschäftsführer und CTO der ABUS August Bremicker Söhne KG",
-    "ics": "ics/202506131000-q-a.ics"
+    "speaker": "Dr. Reinhard Zinkann",
+    "description": "Miele",
+    "ics": "ics/202506131000-qualitatives-vs-quantitatives-wachstum.ics"
   },
   {
-    "title": "Kommunikationspause",
+    "title": "Q & A",
     "start": "10:30",
     "end": "10:40",
     "day": 3,
-    "speaker": "-",
-    "description": "Pause für Kommunikation",
-    "ics": "ics/202506131030-kommunikationspause.ics"
+    "speaker": "Dr. Thomas Becker",
+    "description": "ABUS",
+    "ics": "ics/202506131030-q-a.ics"
   },
   {
-    "title": "Wo sich die Führungskräfte der Zukunft bilden - über Verantwortung, Unternehmertum und TOP-Talentförderung",
+    "title": "Kommunikationspause",
     "start": "10:40",
+    "end": "11:00",
+    "day": 3,
+    "speaker": "-",
+    "description": "-",
+    "ics": "ics/202506131040-kommunikationspause.ics"
+  },
+  {
+    "title": "Wo sich die Führungskräfte der Zukunft bilden",
+    "start": "11:00",
     "end": "11:30",
     "day": 3,
-    "speaker": "Dr. Peter Rösner, Tara Siempelkamp, Philipp Grieffenhagen",
-    "description": "Vortrag über die Bildung zukünftiger Führungskräfte",
-    "ics": "ics/202506131040-wo-sich-die-f-hrungskr-fte-der-zukunft-bilden-b.ics"
+    "speaker": "Dr. Peter Rösner; Tara Siempelkamp; Philipp Grieffenhagen",
+    "description": "Stiftung Louisenlund",
+    "ics": "ics/202506131100-wo-sich-die-f-hrungskr-fte-der-zukunft-bilden.ics"
   },
   {
     "title": "Q & A",
@@ -365,16 +392,16 @@
     "end": "11:40",
     "day": 3,
     "speaker": "Markus Wessel",
-    "description": "Q&A-Session mit Markus Wessel, Universal Home",
+    "description": "Universal Home",
     "ics": "ics/202506131130-q-a.ics"
   },
   {
-    "title": "Hettich SpinLines - Drehen nicht immer rund",
+    "title": "Hettich SpinLines – Drehen nicht immer rund",
     "start": "11:40",
     "end": "12:10",
     "day": 3,
-    "speaker": "Daniel Rehage, Joachim De Backer",
-    "description": "Vortrag über Hettich SpinLines",
+    "speaker": "Daniel Rehage & Joachim De Backer",
+    "description": "Hettich",
     "ics": "ics/202506131140-hettich-spinlines-drehen-nicht-immer-rund.ics"
   },
   {
@@ -382,26 +409,62 @@
     "start": "12:10",
     "end": "12:20",
     "day": 3,
-    "speaker": "Thomas Müller",
-    "description": "Q&A-Session mit Thomas Müller, Geschäftsführer der STEINEL GmbH",
+    "speaker": "Thomas Möller",
+    "description": "STEINEL GmbH",
     "ics": "ics/202506131210-q-a.ics"
   },
   {
-    "title": "Fingerfood und Kommunikation",
+    "title": "Fingerfood & Kommunikation",
     "start": "12:20",
     "end": "12:45",
     "day": 3,
     "speaker": "-",
-    "description": "Fingerfood und Zeit für Kommunikation",
-    "ics": "ics/202506131220-fingerfood-und-kommunikation.ics"
+    "description": "Lunch-Snack",
+    "ics": "ics/202506131220-fingerfood-kommunikation.ics"
   },
   {
-    "title": "Innere und äußere Ressourcen, die Innovationen ermöglichen",
+    "title": "Innere & äußere Ressourcen, die Innovationen ermöglichen",
     "start": "12:45",
-    "end": "13:15",
+    "end": "13:10",
     "day": 3,
-    "speaker": "-",
-    "description": "Vortrag über Ressourcen, die Innovationen ermöglichen",
-    "ics": "ics/202506131245-innere-und-u-ere-ressourcen-die-innovationen-er.ics"
+    "speaker": "Sven Schneider",
+    "description": "Miele",
+    "ics": "ics/202506131245-innere-u-ere-ressourcen-die-innovationen-erm-glichen.ics"
+  },
+  {
+    "title": "Q & A",
+    "start": "13:10",
+    "end": "13:20",
+    "day": 3,
+    "speaker": "Tom Rudolph",
+    "description": "Miele",
+    "ics": "ics/202506131310-q-a.ics"
+  },
+  {
+    "title": "Innovation Acceleration – Rückkehr der Innovationskraft",
+    "start": "13:20",
+    "end": "13:45",
+    "day": 3,
+    "speaker": "Lea-Sophie Karle",
+    "description": "diffferent GmbH",
+    "ics": "ics/202506131320-innovation-acceleration-r-ckkehr-der-innovationskraft.ics"
+  },
+  {
+    "title": "Q & A",
+    "start": "13:45",
+    "end": "13:55",
+    "day": 3,
+    "speaker": "Melanie Beck",
+    "description": "diffferent GmbH",
+    "ics": "ics/202506131345-q-a.ics"
+  },
+  {
+    "title": "Einladung 50. Jubiläumsmeeting & Verabschiedung",
+    "start": "13:55",
+    "end": "14:05",
+    "day": 3,
+    "speaker": "Matthias Nawrocki & Jana Westhoff",
+    "description": "ERGO / Universal Home",
+    "ics": "ics/202506131355-einladung-50-jubil-umsmeeting-verabschiedung.ics"
   }
 ]
