@@ -6,11 +6,11 @@ METHOD:PUBLISH
 BEGIN:VEVENT
 DTSTART:20250612T093000
 DTEND:20250612T095000
-DTSTAMP:20250610T141540
-UID:6dec065f-b05c-4c17-baff-391c4406ffb4@universal-home.de
-CREATED:20250610T141540
-DESCRIPTION:Vortrag über psychologische Innovationsbarrieren
-SUMMARY:DER WEG ZU DEN BESTEN - Die Psychologie des Menschen, ist die am meisten unterschätzte Innovationsbarriere
+DTSTAMP:20250611T161509
+UID:fc5b9b9f-d235-411d-a07d-457bee23c41e@universal-home.de
+CREATED:20250611T161509
+DESCRIPTION:Die Coachinggesellschaft – Mindset & Führungskompetenz
+SUMMARY:DER WEG ZU DEN BESTEN – Die Psychologie des Menschen ist die meistunterschätzte Innovationsbarriere
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 END:VEVENT

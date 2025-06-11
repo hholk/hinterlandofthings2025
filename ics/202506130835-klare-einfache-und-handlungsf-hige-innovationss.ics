@@ -6,11 +6,11 @@ METHOD:PUBLISH
 BEGIN:VEVENT
 DTSTART:20250613T083500
 DTEND:20250613T090500
-DTSTAMP:20250610T141540
-UID:241bb827-dc1b-4966-9484-2915d3b06afb@universal-home.de
-CREATED:20250610T141540
-DESCRIPTION:Vortrag über Innovationsstrategien für Mittelstand und Industrie
-SUMMARY:Klare, einfache und handlungsfähige Innovationsstrategien für Mittelstand und Industrie - Geht das überhaupt?
+DTSTAMP:20250611T161509
+UID:55f4b459-8aff-4ea0-b5c5-cefe85e74403@universal-home.de
+CREATED:20250611T161509
+DESCRIPTION:mantro GmbH
+SUMMARY:Klare, einfache und handlungsfähige Innovationsstrategien
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 END:VEVENT
