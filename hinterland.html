@@ -13,19 +13,21 @@
   <script src="protect.js"></script>
 </head>
 <body>
-<header>
-  <a href="index.html" class="home-link">Start</a>
-  <button id="menu-toggle" aria-label="Menü">&#9776;</button>
-  <h1>Hinterland of Things 2025</h1>
-</header>
 <nav id="md-nav">
   <input type="text" id="nav-filter" placeholder="Filter" aria-label="Filter markdown files">
   <ul id="nav-list"></ul>
 </nav>
-<main id="content">
-  <section id="day1" class="day-column"><h2>Tag 1</h2></section>
-  <section id="day2" class="day-column"><h2>Tag 2</h2></section>
-</main>
+<div class="container py-5">
+  <header>
+    <a href="index.html" class="home-link">Start</a>
+    <button id="menu-toggle" aria-label="Menü">&#9776;</button>
+    <h1>Hinterland of Things 2025</h1>
+  </header>
+  <main id="content">
+    <section id="day1" class="day-column"><h2>Tag 1</h2></section>
+    <section id="day2" class="day-column"><h2>Tag 2</h2></section>
+  </main>
+</div>
 <template id="slot-template">
   <article class="slot">
     <header>
