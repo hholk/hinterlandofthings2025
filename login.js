@@ -1,4 +1,4 @@
-const form = document.querySelector('form');
+const form = document.querySelector('.login-form');
 let env = { EMAIL: '', PASSWORD: '' };
 
 function handleSubmit(e) {
