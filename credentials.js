@@ -1,1 +1,1 @@
-window.CREDENTIALS = { password: '689i9052A.hint' };
+window.CREDENTIALS = { passwordHash: '911bb9317e2ce5b62399efddb2d3abc16e5c047862019054d956416920bc979b' };
