@@ -37,6 +37,8 @@ header {
   cursor: pointer;
 }
 
+.home-link { position: absolute; right: 0.5rem; top: 0.5rem; color: #fff; text-decoration: none; }
+
 .slot {
   background: #343a40;
   color: #f8f9fa;
