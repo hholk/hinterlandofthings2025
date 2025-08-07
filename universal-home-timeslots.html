@@ -56,15 +56,10 @@
   .event-title { font-size: 1.2em; margin: 0.5rem 0; color: #fff; }
   .event-speaker { color: #ced4da; font-style: italic; margin: 0.5rem 0; }
   .event-description { color: #dee2e6; line-height: 1.6; margin: 1rem 0; }
-  .ics-link {
-    display: inline-block;
-    padding: 0.6rem 1.2rem;
-    background: var(--primary-blue);
-    color: white;
-    text-decoration: none;
-    border-radius: 20px;
-    transition: background 0.3s ease;
-  }
+    .ics-link {
+      border-radius: 20px;
+      transition: background 0.3s ease;
+    }
   .category-all { border-color: var(--primary-gray); }
   .category-presentation { border-color: var(--primary-blue); }
   .category-qa { border-color: var(--primary-green); }
@@ -73,14 +68,16 @@
   <script src="protect.js"></script>
 </head>
 <body>
-<header>
-  <a href="index.html" class="home-link">Start</a>
-  <h1>Universal Home Meeting</h1>
-  <a href="universal-home.html" style="color:#ff6f00">Kartenansicht</a>
-</header>
-<main>
-  <div id="ec"></div>
-</main>
+<div class="container py-5">
+  <header>
+    <a href="index.html" class="home-link">Start</a>
+    <h1>Universal Home Meeting</h1>
+    <a href="universal-home.html" style="color:#ff6f00">Kartenansicht</a>
+  </header>
+  <main>
+    <div id="ec"></div>
+  </main>
+</div>
 <div id="overlay"><div id="overlay-content"></div></div>
 <script src="https://cdn.jsdelivr.net/npm/@event-calendar/build@4.4.0/dist/event-calendar.min.js"></script>
 <script src="universal-app.js"></script>

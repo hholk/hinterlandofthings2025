@@ -14,10 +14,17 @@
   background: var(--primary-blue);
   color: #fff;
   text-decoration: none;
+  text-align: center;
 }
 .btn:hover {
   background: var(--primary-green);
   color: #fff;
+}
+
+/* Ensure button groups have consistent sizing */
+.button-group .btn {
+  flex: 1;
+  min-width: 150px;
 }
 body {
   font-family: 'Segoe UI', system-ui;
@@ -110,11 +117,6 @@ header {
 }
 
 .ics-link {
-  display: inline-block;
-  padding: 0.6rem 1.2rem;
-  background: var(--primary-blue);
-  color: #fff;
-  text-decoration: none;
   border-radius: 20px;
   transition: background 0.3s ease;
 }
