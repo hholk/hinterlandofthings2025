@@ -4,6 +4,21 @@
   --primary-orange: #FF6F00;
   --primary-gray: #607D8B;
 }
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.3rem;
+  background: var(--primary-blue);
+  color: #fff;
+  text-decoration: none;
+}
+.btn:hover {
+  background: var(--primary-green);
+  color: #fff;
+}
 body {
   font-family: 'Segoe UI', system-ui;
   margin: 0;
