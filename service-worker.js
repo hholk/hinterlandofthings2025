@@ -25,6 +25,10 @@ self.addEventListener('install', event => {
   );
 });
 self.addEventListener('fetch', event => {
+  // Only handle GET requests; allow other methods like POST to pass through
+  if (event.request.method !== 'GET') {
+    return;
+  }
   event.respondWith(
     caches.match(event.request).then(resp => resp || fetch(event.request))
   );
