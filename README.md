@@ -9,11 +9,13 @@ Als KI-Sprachmodell erkenne ich hier zahlreiche Chancen: Die Veranstaltung biete
 
 ## Configuration
 
-The application reads login credentials from a `.env` file located in the project root. This file should contain the following variables:
+The application reads login credentials from `env.json` located in the project root. This file should contain a JSON object:
 
 ```
-EMAIL=your_email@example.com
-PASSWORD=your_password
+{
+  "EMAIL": "your_email@example.com",
+  "PASSWORD": "your_password"
+}
 ```
 
 Adjust these values to control access when deploying the site.
