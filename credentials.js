@@ -1,1 +1,1 @@
-window.CREDENTIALS = { email: '4f956df2122ee5e50e9bd62567afc311048fb6b02d8d3550dd94212154ca1b3a', password: '911bb9317e2ce5b62399efddb2d3abc16e5c047862019054d956416920bc979b' };
+window.CREDENTIALS = { email: 'henrikholkenbrink@gmail.com', password: '689i9052A.hint' };
