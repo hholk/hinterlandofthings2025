@@ -1,7 +1,7 @@
 import os
 import re
 import uuid
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from bs4 import BeautifulSoup
 
 INPUT_HTML = 'universal-home.html'
@@ -50,6 +50,7 @@ for card in soup.find_all('div', class_='event-card'):
     description = card.find('p', class_='event-description').get_text(strip=True)
     start_dt, end_dt = parse_datetimes(time_text)
     uid = str(uuid.uuid4()) + '@universal-home.de'
+    stamp = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')
     ics_content = f"""BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//Universal Home//49. Meeting//DE
@@ -58,9 +59,9 @@ METHOD:PUBLISH
 BEGIN:VEVENT
 DTSTART:{start_dt.strftime('%Y%m%dT%H%M%S')}
 DTEND:{end_dt.strftime('%Y%m%dT%H%M%S')}
-DTSTAMP:{datetime.utcnow().strftime('%Y%m%dT%H%M%S')}
+DTSTAMP:{stamp}
 UID:{uid}
-CREATED:{datetime.utcnow().strftime('%Y%m%dT%H%M%S')}
+CREATED:{stamp}
 DESCRIPTION:{description}
 SUMMARY:{title}
 STATUS:CONFIRMED
