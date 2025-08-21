@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LLM Dashboard</title>
+  <link href="kool-form-pack/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="kool-form-pack/css/tooplate-kool-form-pack.css">
+  <link rel="stylesheet" href="style.css">
+  <style>.legend-bubble{display:inline-block;border-radius:50%;background:rgba(255,255,255,0.5);margin-right:4px;}</style>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="container py-5">
+  <h1 class="text-center mb-4">LLM Model Dashboard</h1>
+  <canvas id="llmChart" height="400"></canvas>
+  <div class="mt-3" id="size-legend">
+    <span class="me-2">Kontextgrößen:</span>
+    <span class="legend-bubble" style="width:10px;height:10px;"></span> 32k
+    <span class="legend-bubble" style="width:20px;height:20px;"></span> 128k
+    <span class="legend-bubble" style="width:28px;height:28px;"></span> 200k
+    <span class="legend-bubble" style="width:40px;height:40px;"></span> 1M
+  </div>
+  <p class="text-center mt-3">Bubble size entspricht der Kontextlänge.</p>
+  <div class="table-responsive mt-4">
+    <table class="table table-dark table-striped" id="dataTable">
+      <thead>
+        <tr>
+          <th>Modell</th>
+          <th>Elo</th>
+          <th>Preis/Token ($)</th>
+          <th>Gewichte</th>
+          <th>Reasoning</th>
+          <th>Features</th>
+          <th>Kontext</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+</div>
+<script>
+const models = [
+  {name: 'GPT-4o', elo: 1310, price: 0.000005, weights: 'closed', reasoning: 'yes', features: ['image','speech'], context: 128000},
+  {name: 'Claude 3 Opus', elo: 1290, price: 0.000015, weights: 'closed', reasoning: 'yes', features: ['image'], context: 200000},
+  {name: 'Gemini 1.5 Pro', elo: 1280, price: 0.000007, weights: 'closed', reasoning: 'yes', features: ['image'], context: 1000000},
+  {name: 'Llama 3 70B', elo: 1210, price: 0.0005, weights: 'open', reasoning: 'yes', features: [], context: 32000},
+  {name: 'Mixtral 8x22B', elo: 1180, price: 0.00045, weights: 'open', reasoning: 'yes', features: [], context: 32000},
+  {name: 'Qwen1.5 72B', elo: 1220, price: 0.0004, weights: 'open', reasoning: 'yes', features: ['image'], context: 128000},
+  {name: 'Mistral Large', elo: 1250, price: 0.0004, weights: 'hybrid', reasoning: 'yes', features: [], context: 32000},
+  {name: 'Phi-3 mini', elo: 1100, price: 0.0002, weights: 'open', reasoning: 'no', features: [], context: 128000}
+];
+const ctx = document.getElementById('llmChart').getContext('2d');
+const bubbleData = models.map(m => ({ price: m.price,
+  x: m.elo,
+  y: 1 / m.price,
+  r: Math.sqrt(m.context) / 50,
+    label: m.name + " (" + m.weights + (m.reasoning=="yes" ? "" : " - non-reasoning") + (m.features.length ? " " + m.features.join("+") : "") + ")",
+  backgroundColor: m.weights === 'open' ? 'rgba(0, 123, 255, 0.6)' : (m.weights === 'closed' ? 'rgba(220, 53, 69, 0.6)' : 'rgba(255,193,7,0.6)')
+}));
+const chart = new Chart(ctx, {
+  type: 'bubble',
+    data: {datasets: bubbleData.map(d => ({label: d.label, data: [d], backgroundColor: d.backgroundColor}))},
+  options: {
+    scales: {
+      x: {title: {display: true, text: 'Elo Score'}},
+      y: {title: {display: true, text: '1 / Preis pro Token'}},
+    },
+    plugins: {
+      legend: {display: true},
+      tooltip: {
+        callbacks: {
+          label: ctx => `${ctx.dataset.label}: Elo ${ctx.raw.x}, Preis $${ctx.raw.price}`
+        }
+      }
+    }
+  }
+});
+const tbody = document.querySelector('#dataTable tbody');
+models.forEach(m => {
+  const tr = document.createElement('tr');
+  tr.innerHTML = `<td>${m.name}</td><td>${m.elo}</td><td>${m.price}</td>`+
+    `<td>${m.weights}</td><td>${m.reasoning}</td>`+
+    `<td>${m.features.join(', ')}</td><td>${m.context}</td>`;
+  tbody.appendChild(tr);
+});
+</script>
+</body>
+</html>
