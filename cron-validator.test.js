@@ -7,6 +7,10 @@ test('hourly cron alias is invalid for Hobby plan', () => {
   assert.strictEqual(isHobbyCronValid('@hourly'), false);
 });
 
+test('hourly cron expression is invalid for Hobby plan', () => {
+  assert.strictEqual(isHobbyCronValid('0 * * * *'), false);
+});
+
 test('daily cron expression is valid for Hobby plan', () => {
   assert.strictEqual(isHobbyCronValid('0 0 * * *'), true);
 });
