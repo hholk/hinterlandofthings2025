@@ -1,0 +1,8 @@
+{
+  "crons": [
+    {
+      "path": "/api/daily-task",
+      "schedule": "0 0 * * *"
+    }
+  ]
+}
