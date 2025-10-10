@@ -26,7 +26,15 @@
     <p class="lead">Blättere durch alle Tage und öffne bei Bedarf die Kartenansicht – alles im gleichen Glas-Look.</p>
   </header>
   <main role="main">
-    <div id="ec"></div>
+    <section class="calendar-shell" aria-label="Interaktiver Zeitplan">
+      <h2 class="visually-hidden">Kalenderansicht der Universal Home Sessions</h2>
+      <!--
+        Die Notiz richtet sich an Screenreader und erklärt kurz, wie die externe Kalender-Komponente zu bedienen ist.
+        So bleibt auch dieser Bereich für Einsteiger:innen nachvollziehbar.
+      -->
+      <p class="sr-note">Nutze die Pfeiltasten oder Tabs der Event-Calendar-UI, um Tage zu wechseln.</p>
+      <div id="ec"></div>
+    </section>
   </main>
 </div>
 <div id="overlay"><div id="overlay-content"></div></div>
