@@ -4,28 +4,27 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Miele Premium-Siebträger Analyse</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@400;600&display=swap" rel="stylesheet" />
   <link href="kool-form-pack/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="templatemo-glossy-touch.css" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="kool-form-pack/css/tooplate-kool-form-pack.css" />
   <script src="protect.js"></script>
 </head>
-<body>
-<div class="container py-5">
-  <header class="page-card card bg-secondary text-light shadow-sm text-center text-md-start">
-    <div class="card-body">
-      <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
-        <a href="index.html" class="btn btn-outline-light btn-sm">Zur Landingpage</a>
-        <span class="badge bg-light text-dark">Research Update</span>
-      </div>
-      <h1 class="h3 mb-3">Miele Premium-Siebträger Analyse</h1>
-      <p class="mb-0">Ein tiefes Briefing für Produkt- und Strategieteams – zusammengefasst im vertrauten Kartenstil der Startseite.</p>
+<body class="app-shell">
+<div class="page-pattern" aria-hidden="true"></div>
+<div class="site-wrapper site-layout">
+  <header class="page-card site-header" role="banner">
+    <div class="site-actions">
+      <a href="index.html" class="btn btn-outline-light btn-sm">Zur Landingpage</a>
+      <span class="site-badge">Research Update</span>
     </div>
+    <h1>Miele Premium-Siebträger Analyse</h1>
+    <p class="lead">Lesefreundliches Briefing mit interaktiver Tabelle – optisch abgestimmt auf die Passwortseite.</p>
   </header>
-  <article class="mb-4">
-    <div class="container px-4 px-lg-5">
-      <div class="row gx-4 gx-lg-5 justify-content-center">
-        <div class="col-md-10 col-lg-8 col-xl-7">
+  <article class="reading-column">
 <p>Perfekt, ich starte jetzt eine umfassende Markt- und Zukunftsanalyse
 zur Frage, ob Miele sein Kaffeesortiment um einen smarten
 Premium-Siebträger für den B2C-Markt erweitern sollte. Ich
@@ -567,7 +566,8 @@ und Szenarien (DACH, 5–10 Jahre)</h2>
 Szenarien für den <strong>jährlichen Umsatz</strong> eines Miele
 Premium-Siebträgermodells im DACH-Markt nach einer Anlaufphase (ca. im
 5. Jahr nach Markteinführung):</p>
-<table>
+<table data-enhance="interactive">
+<caption>Absatz- und Umsatz-Szenarien für einen smarten Miele Siebträger</caption>
 <colgroup>
 <col style="width: 16%" />
 <col style="width: 29%" />
@@ -1056,11 +1056,9 @@ Zukunftsperspektive, sind aber naturgemäß mit Unsicherheit behaftet. Die
 Mischung aus quantitativen Fakten und qualitativen Trends aus
 verschiedenen Quellen erhöht die Robustheit der Aussagen. Jede Quelle
 wurde kritisch betrachtet und im Kontext eingeordnet.</p>
-        </div>
-      </div>
-    </div>
   </article>
-</div>
+  </div>
+<script src="interactive-tables.js"></script>
 <script src="kool-form-pack/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
