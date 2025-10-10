@@ -12,9 +12,15 @@
   <link rel="stylesheet" href="templatemo-glossy-touch.css">
   <link rel="stylesheet" href="kool-form-pack/css/tooplate-kool-form-pack.css">
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js" defer></script>
+  <script src="experience-pages.js" defer></script>
+  <script src="experience-ui.js" defer></script>
 </head>
 <body class="login-page">
   <div class="login-pattern" aria-hidden="true"></div>
+  <div class="floating-orb floating-orb--one" aria-hidden="true"></div>
+  <div class="floating-orb floating-orb--two" aria-hidden="true"></div>
+  <div class="floating-orb floating-orb--three" aria-hidden="true"></div>
   <main class="login-layout" role="main">
     <section class="login-hero" aria-labelledby="login-heading">
       <div class="brand-badge">Hinterland of Things 2025</div>
@@ -46,6 +52,19 @@
       <div class="login-card__footer">
         <p>Du hast das Passwort nicht parat? Lade die digitale Einladung erneut herunter oder kontaktiere unser Team.</p>
       </div>
+    </section>
+    <section class="login-success" id="post-login-panel" aria-label="Erfolgreich angemeldet" aria-live="polite" aria-hidden="true" hidden tabindex="-1">
+      <div class="login-success__header">
+        <span class="brand-badge">Experience Hub freigeschaltet</span>
+        <h2>Alle Unterseiten auf einen Blick</h2>
+        <p>Du bist jetzt eingeloggt. Wähle direkt eine Oberfläche oder öffne den gesamten Hub.</p>
+      </div>
+      <section class="card-grid" id="experience-grid-login" aria-label="Direktzugriff auf alle Unterseiten"></section>
+      <div class="login-success__actions">
+        <a class="btn btn-outline-light" href="index.html">Experience Hub öffnen</a>
+        <a class="btn" href="hinterland.html">Direkt zur Agenda</a>
+      </div>
+      <p class="login-footnote">Tipp: Wir speichern dein Login lokal, damit du beim nächsten Besuch sofort starten kannst.</p>
     </section>
   </main>
   <script src="credentials.js"></script>
