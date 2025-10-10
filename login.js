@@ -5,6 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const togglePasswordButton = document.getElementById('toggle-password');
   const messageArea = document.getElementById('login-message');
   const submitButton = form.querySelector('button[type="submit"]');
+  const loginCard = document.querySelector('.login-card');
+  const loginLayout = document.querySelector('.login-layout');
+  const successPanel = document.getElementById('post-login-panel');
+  const successGrid = document.getElementById('experience-grid-login');
+  let hasRenderedSuccessView = false;
 
   // Helper to show inline feedback instead of disruptive alert pop-ups.
   const showMessage = (text, type = 'info') => {
@@ -25,6 +30,60 @@ document.addEventListener('DOMContentLoaded', () => {
     togglePasswordButton.textContent = isHidden ? 'Verbergen' : 'Anzeigen';
   });
 
+  /**
+   * Sobald das Passwort stimmt (oder bereits gespeichert war), blenden wir die
+   * vollständige Übersicht aller Unterseiten ein. Für Einsteiger:innen: Wir
+   * trennen die reine Login-Logik von der UI-Aktualisierung, damit der Code
+   * übersichtlich bleibt und später leichter erweitert werden kann.
+   */
+  const revealSuccessView = () => {
+    if (hasRenderedSuccessView) {
+      return;
+    }
+
+    hasRenderedSuccessView = true;
+
+    if (loginLayout) {
+      loginLayout.classList.add('login-layout--authenticated');
+    }
+
+    if (loginCard) {
+      loginCard.classList.add('login-card--hidden');
+      loginCard.setAttribute('aria-hidden', 'true');
+      form.reset();
+      // Mini-Verzögerung, damit die Ausblend-Animation fertig läuft, bevor wir
+      // das Element komplett aus dem Layout nehmen.
+      window.setTimeout(() => {
+        loginCard.style.display = 'none';
+      }, 500);
+    }
+
+    if (successPanel) {
+      successPanel.hidden = false;
+      successPanel.setAttribute('aria-hidden', 'false');
+      if (typeof successPanel.focus === 'function') {
+        successPanel.focus();
+      }
+    }
+
+    if (window.ExperienceUI && window.EXPERIENCE_PAGES && successGrid) {
+      window.ExperienceUI.renderExperienceCards(successGrid, window.EXPERIENCE_PAGES, {
+        tilt: {
+          max: 12,
+          speed: 600,
+          glare: true,
+          'max-glare': 0.5,
+          scale: 1.05
+        }
+      });
+    }
+  };
+
+  if (localStorage.getItem('auth') === 'true') {
+    revealSuccessView();
+    showMessage('Du bist bereits angemeldet – wähle jetzt eine Unterseite.', 'success');
+  }
+
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
     showMessage('');
@@ -41,11 +100,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const isValid = await window.AuthUtils.verifyPassword(password, window.CREDENTIALS.passwordHash);
 
       if (isValid) {
-        showMessage('Erfolgreich angemeldet. Du wirst weitergeleitet …', 'success');
+        showMessage('Erfolgreich angemeldet. Wähle jetzt deine Unterseite!', 'success');
         localStorage.setItem('auth', 'true');
-        setTimeout(() => {
-          window.location.href = 'index.html';
-        }, 600);
+        revealSuccessView();
       } else {
         showMessage('Das Passwort stimmt nicht. Bitte versuche es erneut.', 'error');
         form.classList.add('shake');

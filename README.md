@@ -15,6 +15,7 @@ Als KI-Sprachmodell erkenne ich hier zahlreiche Chancen: Die Veranstaltung biete
   1. `PASSWORD="DeinNeuesPasswort" node generate_credentials.js`
   2. Die generierte `credentials.js` einchecken.
 - **Tipp:** Nach dem Login wird ein `auth`-Flag im `localStorage` gesetzt. Zum Abmelden einfach den lokalen Speicher für die Domain leeren.
+- **Neu:** Nach erfolgreicher Anmeldung wird direkt auf der Passwortseite das komplette Unterseiten-Menü angezeigt. Die Daten liegen in `experience-pages.js`, die Darstellung übernimmt `experience-ui.js` (inkl. VanillaTilt für die Glas-Parallax-Effekte).
 
 ## UI-Richtlinien
 
