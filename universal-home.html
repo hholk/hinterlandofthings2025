@@ -5,9 +5,6 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>49. Universal Home Meeting by Miele</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@400;600&display=swap" rel="stylesheet"/>
 <link href="kool-form-pack/css/bootstrap.min.css" rel="stylesheet"/>
 <link rel="stylesheet" href="templatemo-glossy-touch.css"/>
 <link rel="stylesheet" href="style.css"/>
@@ -15,7 +12,16 @@
   <script src="protect.js"></script>
 </head>
 <body class="app-shell">
-<div class="page-pattern" aria-hidden="true"></div>
+<!-- Die Toolbar bleibt identisch auf allen Seiten und setzt das iOS 26 Navigationsmuster um. -->
+<header class="app-toolbar" role="navigation" aria-label="Globale Navigation">
+  <span class="brand">Experience Hub</span>
+  <nav aria-label="Schnellzugriff">
+    <a href="index.html">Start</a>
+    <a href="login.html">Login</a>
+    <a href="hinterland.html">Agenda</a>
+    <a class="pill" href="universal-home.html" aria-current="page">Universal Home</a>
+  </nav>
+</header>
 <div class="site-wrapper site-layout">
   <header class="page-card site-header" role="banner">
     <div class="site-actions">
@@ -23,7 +29,7 @@
       <a href="universal-home-timeslots.html" class="btn btn-outline-light btn-sm link-accent">Zeitplan-Ansicht</a>
     </div>
     <h1>49. Universal Home Meeting by Miele</h1>
-    <p class="lead">11.–13. Juni 2025 · Gütersloh · Alle Sessions präsentieren sich jetzt im selben Stil wie der Login.</p>
+    <p class="lead">11.–13. Juni 2025 · Gütersloh · Die Sessions präsentieren sich jetzt mit iOS 26 typischer Kartenoptik, klaren Farben und großzügigem Weißraum.</p>
   </header>
   <section class="page-card events-section" aria-labelledby="filter-heading">
     <header>

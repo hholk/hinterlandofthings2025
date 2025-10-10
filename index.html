@@ -4,10 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Event Overview</title>
-  <!-- IBM Plex spiegelt das Look-&-Feel der Login-Seite. -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@400;600&display=swap" rel="stylesheet">
+  <!-- SF Pro Stack wird über CSS gesteuert; wir verzichten bewusst auf externe Webfonts. -->
   <link href="kool-form-pack/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="templatemo-glossy-touch.css">
   <link rel="stylesheet" href="kool-form-pack/css/tooplate-kool-form-pack.css">
@@ -15,12 +12,21 @@
   <script src="protect.js"></script>
 </head>
 <body class="app-shell">
-  <div class="page-pattern" aria-hidden="true"></div>
+  <!-- Die Toolbar übernimmt das iOS 26 Pillen-Pattern und sorgt für vertraute Navigation auf jeder Seite. -->
+  <header class="app-toolbar" role="navigation" aria-label="Globale Navigation">
+    <span class="brand">Experience Hub</span>
+    <nav aria-label="Schnellzugriff">
+      <a class="pill" href="index.html" aria-current="page">Start</a>
+      <a href="login.html">Login</a>
+      <a href="hinterland.html">Agenda</a>
+      <a href="universal-home.html">Universal Home</a>
+    </nav>
+  </header>
   <div class="site-wrapper site-layout">
     <header class="page-card site-header" role="banner">
       <span class="site-badge">Experience Hub</span>
       <h1>Hinterland of Things 2025</h1>
-      <p class="lead">Wähle deinen Bereich innerhalb des Experience Hubs – alle Oberflächen greifen das Design der Passwortseite auf und bleiben so vertraut.</p>
+      <p class="lead">Wähle deinen Bereich innerhalb des Experience Hubs – alle Oberflächen spiegeln jetzt das iOS 26 Design mit ruhigen Gradienten, klarer Typografie und weichen Karten wider.</p>
       <div class="site-actions">
         <a class="btn btn-outline-light" href="login.html">Zur Passwortseite</a>
       </div>

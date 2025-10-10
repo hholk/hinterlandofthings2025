@@ -18,6 +18,7 @@ Als KI-Sprachmodell erkenne ich hier zahlreiche Chancen: Die Veranstaltung biete
 
 ## UI-Richtlinien
 
-- Die Passwortseite definiert Farben, Glas-Optik und Typografie. Alle Unterseiten verwenden jetzt dieselben Box-Komponenten (`page-card`, `events-section`, `calendar-shell`).
-- Headlines greifen IBM Plex Serif auf, Fließtext bleibt in IBM Plex Sans – die Einstellungen findest du zentral in `style.css`.
-- Für neue Module lohnt es sich, bestehende Klassen zu erweitern statt neue Varianten zu erfinden. So bleibt das Look & Feel konsistent.
+- Das komplette Hub folgt dem iOS 26 Designsystem: weiche Gradienten, SF Pro Typografie und transparente Oberflächen (`app-toolbar`, `page-card`, `calendar-shell`).
+- Die globalen Tokens leben in `style.css` (`--accent-soft`, `--blur-backdrop`, `--space-*`). Nutze sie, bevor du eigene Farben oder Abstände definierst.
+- Jede Seite bindet dieselbe Toolbar mit `aria-label="Globale Navigation"`. So verstehen auch Screenreader-Nutzer:innen sofort die Orientierung.
+- Für neue Module reicht es, bestehende Komponenten wie `feature-card`, `event-card` oder `slot` zu erweitern – bitte keine Konkurrenz-Varianten anlegen.
