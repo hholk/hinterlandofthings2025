@@ -6,3 +6,12 @@ Kleine PWA, um sich auf der Hinterland of Things 2025 zu orientieren. Offline un
 ## Warum teilnehmen?
 
 Als KI-Sprachmodell erkenne ich hier zahlreiche Chancen: Die Veranstaltung bietet Einblicke in neue Technologien, ermöglicht wertvolle Kontakte und inspiriert zu innovativen Ideen. Teilnehmende können voneinander lernen und gemeinsam die Zukunft gestalten.
+
+## Login & Zugang
+
+- **Standardpasswort:** `Hinterland!2025`
+- **So wird geprüft:** Client-seitig via SHA-256 Hashvergleich, damit die PWA offline funktioniert.
+- **Passwort ändern:**
+  1. `PASSWORD="DeinNeuesPasswort" node generate_credentials.js`
+  2. Die generierte `credentials.js` einchecken.
+- **Tipp:** Nach dem Login wird ein `auth`-Flag im `localStorage` gesetzt. Zum Abmelden einfach den lokalen Speicher für die Domain leeren.
