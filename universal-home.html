@@ -9,100 +9,31 @@
 <link rel="stylesheet" href="templatemo-glossy-touch.css"/>
 <link rel="stylesheet" href="style.css"/>
 <link rel="stylesheet" href="kool-form-pack/css/tooplate-kool-form-pack.css"/>
-<style>
-  :root {
-    --primary-blue: #00549F;
-    --primary-green: #4CAF50;
-    --primary-orange: #FF6F00;
-    --primary-gray: #607D8B;
-  }
-  body {
-    font-family: 'Segoe UI', system-ui;
-    margin: 0;
-    padding: 2rem;
-    background: #212529;
-  }
-  .header {
-    text-align: center;
-    margin-bottom: 3rem;
-    padding: 2rem;
-    background: #343a40;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    border-radius: 12px;
-  }
-  .filters {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    margin-bottom: 2rem;
-  }
-  .filter-btn {
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-  .filter-btn.active {
-    transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  }
-  .events-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 2rem;
-    padding: 1rem;
-  }
-  .event-card {
-    background: #343a40;
-    color: #f8f9fa;
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-    border-left: 4px solid;
-  }
-  .event-card:hover {
-    transform: translateY(-5px);
-  }
-  .event-time { color: #adb5bd; font-size: 0.9em; margin-bottom: 0.5rem; }
-  .event-title { font-size: 1.2em; margin: 0.5rem 0; color: #fff; }
-  .event-speaker { color: #ced4da; font-style: italic; margin: 0.5rem 0; }
-  .event-description { color: #dee2e6; line-height: 1.6; margin: 1rem 0; }
-  .ics-link {
-    border-radius: 20px;
-    transition: background 0.3s ease;
-  }
-  .category-all { border-color: var(--primary-gray); }
-  .category-presentation { border-color: var(--primary-blue); }
-  .category-qa { border-color: var(--primary-green); }
-  .category-networking { border-color: var(--primary-orange); }
-  .filter-btn[data-category="all"] { background: var(--primary-gray); color: white; }
-  .filter-btn[data-category="presentation"] { background: var(--primary-blue); color: white; }
-  .filter-btn[data-category="qa"] { background: var(--primary-green); color: white; }
-  .filter-btn[data-category="networking"] { background: var(--primary-orange); color: white; }
-  @media (max-width: 600px) {
-    body { padding: 1rem; }
-    .filters { flex-direction: column; align-items: stretch; }
-    .filter-btn { width: 100%; }
-    .events-grid { grid-template-columns: 1fr; }
-  }
-  </style>
   <script src="protect.js"></script>
 </head>
 <body>
 <div class="container py-5">
-  <div class="header">
-    <a href="index.html" class="home-link">Start</a>
-    <h1>49. Universal Home Meeting by Miele</h1>
-    <p>11.-13. Juni 2025 | Gütersloh | <a href="universal-home-timeslots.html" style="color:#ff6f00">Zeitplan-Ansicht</a></p>
-  </div>
-  <div class="filters button-group">
-    <button class="btn filter-btn active" data-category="all">Alle Events</button>
-    <button class="btn filter-btn" data-category="presentation">Vorträge</button>
-    <button class="btn filter-btn" data-category="qa">Q&amp;A Sessions</button>
-    <button class="btn filter-btn" data-category="networking">Networking</button>
-  </div>
+  <header class="page-card card bg-secondary text-light shadow-sm text-center text-md-start">
+    <div class="card-body">
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+        <a href="index.html" class="btn btn-outline-light btn-sm">Zur Landingpage</a>
+        <a href="universal-home-timeslots.html" class="btn btn-outline-light btn-sm link-accent">Zeitplan-Ansicht</a>
+      </div>
+      <h1 class="h3 mb-3">49. Universal Home Meeting by Miele</h1>
+      <p class="mb-0">11.–13. Juni 2025 · Gütersloh · Dein Programm-Hub mit Sessions, Networking-Slots und allen Kalendereinträgen.</p>
+    </div>
+  </header>
+  <section class="page-card card bg-secondary text-light shadow-sm mb-4">
+    <div class="card-body">
+      <h2 class="h5 text-center text-md-start mb-3">Agenda nach Fokus filtern</h2>
+      <div class="filters button-group">
+        <button type="button" class="btn filter-btn active" data-category="all" aria-pressed="true">Alle Events</button>
+        <button type="button" class="btn filter-btn" data-category="presentation" aria-pressed="false">Vorträge</button>
+        <button type="button" class="btn filter-btn" data-category="qa" aria-pressed="false">Q&amp;A Sessions</button>
+        <button type="button" class="btn filter-btn" data-category="networking" aria-pressed="false">Networking</button>
+      </div>
+    </div>
+  </section>
   <div class="events-grid">
 <div class="event-card category-networking">
 <div class="event-time">11.06.2025 | 18:00–18:50</div>
@@ -476,8 +407,13 @@
 <script>
     document.querySelectorAll('.filter-btn').forEach(button => {
       button.addEventListener('click', () => {
-        document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+        // Keeping the toggle logic in vanilla JS makes it easy for newcomers to follow along.
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+          btn.classList.remove('active');
+          btn.setAttribute('aria-pressed', 'false');
+        });
         button.classList.add('active');
+        button.setAttribute('aria-pressed', 'true');
         const category = button.dataset.category;
         document.querySelectorAll('.event-card').forEach(card => {
           card.style.display = category === 'all' || card.classList.contains(`category-${category}`) ? 'block' : 'none';

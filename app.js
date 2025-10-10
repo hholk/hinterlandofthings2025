@@ -29,14 +29,18 @@ async function loadSlots() {
     clone.querySelector('.title').textContent = slot.title;
     clone.querySelector('.time').textContent = slot.start + (slot.end ? ' - '+slot.end : '');
     const btn = clone.querySelector('.fav');
-    if(favs.includes(slot.file)) btn.classList.add('active');
+    const setFavoriteState = (active) => {
+      btn.classList.toggle('active', active);
+      btn.setAttribute('aria-pressed', String(active));
+    };
+    setFavoriteState(favs.includes(slot.file));
     btn.addEventListener('click', () => {
       if(favs.includes(slot.file)) {
         favs.splice(favs.indexOf(slot.file),1);
-        btn.classList.remove('active');
+        setFavoriteState(false);
       } else {
         favs.push(slot.file);
-        btn.classList.add('active');
+        setFavoriteState(true);
       }
       btn.classList.add('clicked');
       btn.addEventListener('animationend', () => btn.classList.remove('clicked'), {once:true});
@@ -59,7 +63,8 @@ async function loadSlots() {
           meta.push(item);
         }
       });
-      metaSec.textContent = meta.join(', ');
+      // Showing a friendly placeholder keeps the layout calm for beginners still collecting details.
+      metaSec.textContent = meta.join(', ') || 'Details folgen in Kürze.';
       tags.forEach(t => {
         const span = document.createElement('span');
         span.className = 'tag';

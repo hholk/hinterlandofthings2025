@@ -34,6 +34,7 @@ async function loadCalendar() {
     networking: 'var(--primary-orange)',
     all: 'var(--primary-gray)'
   };
+  // Using the same palette as the landing page keeps the calendar visually in sync for beginners exploring both views.
 
   const events = slots.map(slot => ({
     title: slot.title,
