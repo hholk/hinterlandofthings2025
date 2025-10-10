@@ -14,11 +14,18 @@ test('universal home filter buttons expose accessibility state', () => {
   const html = read('./universal-home.html');
   assert.ok(html.includes('aria-pressed="true"'), 'The default filter button should advertise its pressed state');
   assert.ok(html.includes('aria-pressed="false"'), 'Other filter buttons should start as unpressed');
+  assert.ok(html.includes('events-section'), 'Event filter lives inside the shared events-section card');
 });
 
 test('miele analysis table enables interactive enhancement', () => {
   const html = read('./miele-analysis.html');
   assert.ok(html.includes('data-enhance="interactive"'), 'Scenario table should request the interactive enhancement');
   assert.ok(html.includes('interactive-tables.js'), 'Interactive helper script should be loaded');
+});
+
+test('universal home timeslots wraps calendar in shared shell', () => {
+  const html = read('./universal-home-timeslots.html');
+  assert.ok(html.includes('calendar-shell'), 'Calendar should reuse the shared card styling class');
+  assert.ok(html.includes('sr-note'), 'Accessible helper copy keeps the external widget understandable');
 });
 

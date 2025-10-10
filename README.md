@@ -15,3 +15,9 @@ Als KI-Sprachmodell erkenne ich hier zahlreiche Chancen: Die Veranstaltung biete
   1. `PASSWORD="DeinNeuesPasswort" node generate_credentials.js`
   2. Die generierte `credentials.js` einchecken.
 - **Tipp:** Nach dem Login wird ein `auth`-Flag im `localStorage` gesetzt. Zum Abmelden einfach den lokalen Speicher für die Domain leeren.
+
+## UI-Richtlinien
+
+- Die Passwortseite definiert Farben, Glas-Optik und Typografie. Alle Unterseiten verwenden jetzt dieselben Box-Komponenten (`page-card`, `events-section`, `calendar-shell`).
+- Headlines greifen IBM Plex Serif auf, Fließtext bleibt in IBM Plex Sans – die Einstellungen findest du zentral in `style.css`.
+- Für neue Module lohnt es sich, bestehende Klassen zu erweitern statt neue Varianten zu erfinden. So bleibt das Look & Feel konsistent.

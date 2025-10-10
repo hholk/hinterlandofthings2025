@@ -25,17 +25,22 @@
     <h1>49. Universal Home Meeting by Miele</h1>
     <p class="lead">11.–13. Juni 2025 · Gütersloh · Alle Sessions präsentieren sich jetzt im selben Stil wie der Login.</p>
   </header>
-  <section class="page-card" aria-labelledby="filter-heading">
-    <h2 id="filter-heading">Agenda nach Fokus filtern</h2>
-    <p>Mit den Buttons blendest du schnell die passende Kategorie ein – perfekt für mobile Nutzer:innen.</p>
+  <section class="page-card events-section" aria-labelledby="filter-heading">
+    <header>
+      <h2 id="filter-heading">Agenda nach Fokus filtern</h2>
+      <p>Buttons, Farben und Karten greifen bewusst die Passwortseite auf – so bleibt die UX vertraut.</p>
+    </header>
     <div class="filters button-group" role="group" aria-label="Agenda filtern">
       <button type="button" class="btn filter-btn active" data-category="all" aria-pressed="true">Alle Events</button>
       <button type="button" class="btn filter-btn" data-category="presentation" aria-pressed="false">Vorträge</button>
       <button type="button" class="btn filter-btn" data-category="qa" aria-pressed="false">Q&amp;A Sessions</button>
       <button type="button" class="btn filter-btn" data-category="networking" aria-pressed="false">Networking</button>
     </div>
-  </section>
-  <div class="events-grid">
+    <!--
+      Die Agenda-Karten liegen innerhalb derselben Glas-Kachel wie auf der Login-Seite.
+      So sehen Besucher sofort: Gleiches System, gleicher Vertrauensrahmen.
+    -->
+    <div class="events-grid">
 <div class="event-card category-networking">
 <div class="event-time">11.06.2025 | 18:00–18:50</div>
 <h2 class="event-title">Einchecken im Hotel</h2>
@@ -403,7 +408,8 @@
 <a class="btn ics-link" href="ics/202506131355-einladung-50-jubil-umsmeeting-verabschiedung.ics">Zu Outlook hinzufügen</a>
 </div>
 <!-- Ende der Veranstaltung -->
-</div>
+    </div>
+  </section>
 </div>
 <script>
     document.querySelectorAll('.filter-btn').forEach(button => {
