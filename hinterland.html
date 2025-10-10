@@ -18,26 +18,39 @@
   <ul id="nav-list"></ul>
 </nav>
 <div class="container py-5">
-  <header>
-    <a href="index.html" class="home-link">Start</a>
-    <button id="menu-toggle" aria-label="Menü">&#9776;</button>
-    <h1>Hinterland of Things 2025</h1>
+  <header class="page-card card bg-secondary text-light shadow-sm mb-4">
+    <div class="card-body">
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+        <button id="menu-toggle" class="btn btn-outline-light btn-sm" aria-label="Menü öffnen">&#9776; Menü</button>
+        <a href="index.html" class="btn btn-outline-light btn-sm home-link">Zur Landingpage</a>
+      </div>
+      <h1 class="h3 mb-2 text-center text-md-start">Hinterland of Things 2025</h1>
+      <p class="mb-0 text-center text-md-start">Stöbere durch alle Sessions, markiere Favoriten und entdecke zusätzliche Materialien – alles im vertrauten Kartenlook der Startseite.</p>
+    </div>
   </header>
-  <main id="content">
-    <section id="day1" class="day-column"><h2>Tag 1</h2></section>
-    <section id="day2" class="day-column"><h2>Tag 2</h2></section>
+  <main id="content" class="row g-4">
+    <section id="day1" class="col-12 col-lg-6 day-column">
+      <h2 class="section-title h4 text-center text-lg-start">Tag 1</h2>
+    </section>
+    <section id="day2" class="col-12 col-lg-6 day-column">
+      <h2 class="section-title h4 text-center text-lg-start">Tag 2</h2>
+    </section>
   </main>
 </div>
 <template id="slot-template">
-  <article class="slot">
-    <header>
-      <h2 class="title"></h2>
-      <div class="time"></div>
-      <button class="fav" aria-label="Favorit">&#9734;</button>
-    </header>
-    <div class="tags"></div>
-    <section class="meta"></section>
-    <section class="why"><em>Warum teilnehmen? Die Hinterland of Things 2025 bietet eine einzigartige Gelegenheit, die neuesten Entwicklungen in Technologie und Mittelstand kennenzulernen und wertvolle Kontakte zu innovativen Start-ups und etablierten Unternehmen zu knüpfen.</em></section>
+  <article class="slot card bg-secondary text-light border-0 shadow-sm">
+    <div class="card-body">
+      <header class="slot-header d-flex justify-content-between align-items-start gap-3">
+        <div class="slot-heading">
+          <h2 class="title h5 mb-1"></h2>
+          <div class="time slot-time text-uppercase small"></div>
+        </div>
+        <button class="fav btn btn-outline-light btn-sm" aria-label="Zu Favoriten hinzufügen" aria-pressed="false">&#9734;</button>
+      </header>
+      <div class="tags mt-3"></div>
+      <section class="meta slot-meta small mt-3"></section>
+      <section class="why mt-3"><em>Warum teilnehmen? Die Hinterland of Things 2025 bietet eine einzigartige Gelegenheit, die neuesten Entwicklungen in Technologie und Mittelstand kennenzulernen und wertvolle Kontakte zu innovativen Start-ups und etablierten Unternehmen zu knüpfen.</em></section>
+    </div>
   </article>
 </template>
 <script src="marked.min.js"></script>
