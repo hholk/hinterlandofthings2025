@@ -29,3 +29,32 @@ test('universal home timeslots wraps calendar in shared shell', () => {
   assert.ok(html.includes('sr-note'), 'Accessible helper copy keeps the external widget understandable');
 });
 
+test('global toolbar anchors every page in the new iOS 26 shell', () => {
+  const files = [
+    './index.html',
+    './login.html',
+    './hinterland.html',
+    './universal-home.html',
+    './universal-home-timeslots.html',
+    './miele-analysis.html'
+  ];
+  files.forEach((path) => {
+    const html = read(path);
+    assert.ok(
+      html.includes('class="app-toolbar"'),
+      `${path} should render the shared toolbar to stay visually consistent`
+    );
+    assert.ok(
+      html.includes('aria-label="Globale Navigation"'),
+      `${path} should expose a labelled navigation landmark for beginners using assistive tech`
+    );
+  });
+});
+
+test('style sheet exposes new iOS 26 design tokens', () => {
+  const css = read('./style.css');
+  assert.ok(css.includes('--accent-soft'), 'Soft accent token keeps hover states familiar');
+  assert.ok(css.includes('--blur-backdrop'), 'Backdrop blur token mirrors iOS depth');
+  assert.ok(css.includes('--space-md'), 'Consistent spacing scale is defined once');
+});
+

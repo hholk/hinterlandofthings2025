@@ -5,9 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="theme-color" content="#212529" />
 <title>Hinterland of Things 2025</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@400;600&display=swap" rel="stylesheet">
 <link href="kool-form-pack/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="templatemo-glossy-touch.css">
 <link rel="manifest" href="manifest.webmanifest" />
@@ -16,7 +13,16 @@
   <script src="protect.js"></script>
 </head>
 <body class="app-shell">
-<div class="page-pattern" aria-hidden="true"></div>
+  <!-- Gemeinsame Toolbar hilft Besucher:innen zu verstehen, dass jede Unterseite Teil derselben App ist. -->
+  <header class="app-toolbar" role="navigation" aria-label="Globale Navigation">
+    <span class="brand">Experience Hub</span>
+    <nav aria-label="Schnellzugriff">
+      <a href="index.html">Start</a>
+      <a href="login.html">Login</a>
+      <a class="pill" href="hinterland.html" aria-current="page">Agenda</a>
+      <a href="universal-home.html">Universal Home</a>
+    </nav>
+  </header>
 <nav id="md-nav">
   <input type="text" id="nav-filter" placeholder="Filter" aria-label="Filter markdown files">
   <ul id="nav-list"></ul>
@@ -24,11 +30,11 @@
 <div class="site-wrapper site-layout">
   <header class="page-card site-header" role="banner">
     <div class="site-actions" aria-label="Seitennavigation">
-      <button id="menu-toggle" class="btn btn-outline-light btn-sm" aria-label="Menü öffnen">&#9776; Menü</button>
+      <button id="menu-toggle" class="btn btn-outline-light btn-sm" aria-label="Markdown-Navigation umschalten">&#9776; Menü</button>
       <a href="index.html" class="btn btn-outline-light btn-sm home-link">Zur Landingpage</a>
     </div>
     <h1>Hinterland of Things 2025</h1>
-    <p class="lead">Session-Board, Favoriten und Markdown-Dokumente erscheinen jetzt in derselben Glas-Ästhetik wie der Passwort-Login.</p>
+    <p class="lead">Session-Board, Favoriten und Markdown-Dokumente folgen jetzt dem iOS 26 Design mit luftigen Karten, sicherem Kontrast und vertrauten Interaktionen.</p>
   </header>
   <main id="content" class="agenda-grid" role="main">
     <section id="day1" class="day-column">

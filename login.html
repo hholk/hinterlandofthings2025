@@ -4,17 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Login – Hinterland of Things 2025</title>
-  <!-- IBM Plex liefert klare Schnitte für Überschriften und Fließtext. -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@400;600&display=swap" rel="stylesheet">
+  <!-- SF Pro Typografie wird über das Token-System in style.css verteilt. -->
   <link rel="stylesheet" href="kool-form-pack/css/bootstrap.min.css">
   <link rel="stylesheet" href="templatemo-glossy-touch.css">
   <link rel="stylesheet" href="kool-form-pack/css/tooplate-kool-form-pack.css">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="login-page">
-  <div class="login-pattern" aria-hidden="true"></div>
+<body class="app-shell login-page">
+  <!-- Einheitliche Toolbar stellt sicher, dass Login und geschützte Bereiche wie eine App wirken. -->
+  <header class="app-toolbar" role="navigation" aria-label="Globale Navigation">
+    <span class="brand">Experience Hub</span>
+    <nav aria-label="Schnellzugriff">
+      <a href="index.html">Start</a>
+      <a class="pill" href="login.html" aria-current="page">Login</a>
+      <a href="hinterland.html">Agenda</a>
+      <a href="universal-home.html">Universal Home</a>
+    </nav>
+  </header>
   <main class="login-layout" role="main">
     <section class="login-hero" aria-labelledby="login-heading">
       <div class="brand-badge">Hinterland of Things 2025</div>
