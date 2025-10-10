@@ -5,33 +5,34 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>49. Universal Home Meeting by Miele</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@400;600&display=swap" rel="stylesheet"/>
 <link href="kool-form-pack/css/bootstrap.min.css" rel="stylesheet"/>
 <link rel="stylesheet" href="templatemo-glossy-touch.css"/>
 <link rel="stylesheet" href="style.css"/>
 <link rel="stylesheet" href="kool-form-pack/css/tooplate-kool-form-pack.css"/>
   <script src="protect.js"></script>
 </head>
-<body>
-<div class="container py-5">
-  <header class="page-card card bg-secondary text-light shadow-sm text-center text-md-start">
-    <div class="card-body">
-      <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
-        <a href="index.html" class="btn btn-outline-light btn-sm">Zur Landingpage</a>
-        <a href="universal-home-timeslots.html" class="btn btn-outline-light btn-sm link-accent">Zeitplan-Ansicht</a>
-      </div>
-      <h1 class="h3 mb-3">49. Universal Home Meeting by Miele</h1>
-      <p class="mb-0">11.–13. Juni 2025 · Gütersloh · Dein Programm-Hub mit Sessions, Networking-Slots und allen Kalendereinträgen.</p>
+<body class="app-shell">
+<div class="page-pattern" aria-hidden="true"></div>
+<div class="site-wrapper site-layout">
+  <header class="page-card site-header" role="banner">
+    <div class="site-actions">
+      <a href="index.html" class="btn btn-outline-light btn-sm">Zur Landingpage</a>
+      <a href="universal-home-timeslots.html" class="btn btn-outline-light btn-sm link-accent">Zeitplan-Ansicht</a>
     </div>
+    <h1>49. Universal Home Meeting by Miele</h1>
+    <p class="lead">11.–13. Juni 2025 · Gütersloh · Alle Sessions präsentieren sich jetzt im selben Stil wie der Login.</p>
   </header>
-  <section class="page-card card bg-secondary text-light shadow-sm mb-4">
-    <div class="card-body">
-      <h2 class="h5 text-center text-md-start mb-3">Agenda nach Fokus filtern</h2>
-      <div class="filters button-group">
-        <button type="button" class="btn filter-btn active" data-category="all" aria-pressed="true">Alle Events</button>
-        <button type="button" class="btn filter-btn" data-category="presentation" aria-pressed="false">Vorträge</button>
-        <button type="button" class="btn filter-btn" data-category="qa" aria-pressed="false">Q&amp;A Sessions</button>
-        <button type="button" class="btn filter-btn" data-category="networking" aria-pressed="false">Networking</button>
-      </div>
+  <section class="page-card" aria-labelledby="filter-heading">
+    <h2 id="filter-heading">Agenda nach Fokus filtern</h2>
+    <p>Mit den Buttons blendest du schnell die passende Kategorie ein – perfekt für mobile Nutzer:innen.</p>
+    <div class="filters button-group" role="group" aria-label="Agenda filtern">
+      <button type="button" class="btn filter-btn active" data-category="all" aria-pressed="true">Alle Events</button>
+      <button type="button" class="btn filter-btn" data-category="presentation" aria-pressed="false">Vorträge</button>
+      <button type="button" class="btn filter-btn" data-category="qa" aria-pressed="false">Q&amp;A Sessions</button>
+      <button type="button" class="btn filter-btn" data-category="networking" aria-pressed="false">Networking</button>
     </div>
   </section>
   <div class="events-grid">
