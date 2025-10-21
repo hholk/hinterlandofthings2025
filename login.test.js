@@ -3,7 +3,8 @@ const assert = require('node:assert');
 const { hashPasswordSync, verifyPassword, verifyPasswordSync } = require('./auth-utils');
 const { passwordHash } = require('./credentials.js');
 
-const VALID_PASSWORD = 'Hinterland!2025';
+// Hinweis für Einsteiger:innen: Passe das Test-Passwort an, sobald sich das Event-Passwort ändert.
+const VALID_PASSWORD = 'hinterland2025';
 const INVALID_PASSWORD = 'WrongPassword123';
 
 test('hashPasswordSync produces expected hash for the valid password', () => {
