@@ -1,5 +1,6 @@
 (function (global) {
-  const credentials = { passwordHash: 'cf66d4160e9444c8149eedf284e8930ada8b350987e7635bc0c9d90c803f887b' };
+  // Für Einsteiger:innen: Wir speichern nur den Hash und niemals das Klartext-Passwort im Repository.
+  const credentials = { passwordHash: 'fd83af4d7dad74cc994fcb0551f6c3070967c53731175d2bf6e62d9b7e626447' };
 
   if (typeof module !== 'undefined' && module.exports) {
     module.exports = credentials;
