@@ -22,3 +22,10 @@ Als KI-Sprachmodell erkenne ich hier zahlreiche Chancen: Die Veranstaltung biete
 - Die Passwortseite definiert Farben, Glas-Optik und Typografie. Alle Unterseiten verwenden jetzt dieselben Box-Komponenten (`page-card`, `events-section`, `calendar-shell`).
 - Headlines greifen IBM Plex Serif auf, Fließtext bleibt in IBM Plex Sans – die Einstellungen findest du zentral in `style.css`.
 - Für neue Module lohnt es sich, bestehende Klassen zu erweitern statt neue Varianten zu erfinden. So bleibt das Look & Feel konsistent.
+
+## Neu: Travel Experience (Chile)
+
+- Unter `travel-routes/index.html` findest du eine komplett modulare Reiserouten-Seite. Die Daten liegen in `travel-routes/travel-routes-data.json` und lassen sich über das Hilfsskript `travel-routes/build_data.py` bequem pflegen.
+- Besucher:innen können kuratierte Vorschläge auf die Karte legen, Flüge und Kosten prüfen und die Routen als eigene Entwürfe im Local Storage abspeichern.
+- Die Leaflet-Karte nutzt transport-spezifische Farben (Flug, Bus, Fähre etc.), Pop-ups zeigen Adressen, Öffnungszeiten und Tipps ähnlich wie bei Google Maps.
+- Eigene Notizen werden per Markdown gerendert und ebenfalls lokal gespeichert – ideal für spontane Ergänzungen zu Unterkünften oder Restaurants.

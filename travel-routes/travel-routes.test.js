@@ -1,0 +1,119 @@
+import { readFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+import { dirname, join } from 'node:path';
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const jsonPath = join(__dirname, 'travel-routes-data.json');
+const data = JSON.parse(readFileSync(jsonPath, 'utf8'));
+
+const allowedModes = new Set(Object.keys(data.transportModes));
+
+test('meta information is present', () => {
+  assert.ok(data.meta?.title, 'meta title missing');
+  assert.ok(Array.isArray(data.routes) && data.routes.length === 7, 'expected 7 routes');
+});
+
+test('transport modes contain rich metadata', () => {
+  Object.values(data.transportModes).forEach((mode) => {
+    assert.ok(mode.description, 'mode description missing');
+    assert.equal(typeof mode.averageSpeedKmh, 'number');
+    assert.equal(typeof mode.carbonPerKm, 'number');
+  });
+});
+
+test('every route has valid stops and segments', () => {
+  data.routes.forEach((route) => {
+    assert.ok(route.id, 'route id missing');
+    const stopIds = new Set();
+    route.stops.forEach((stop) => {
+      assert.ok(stop.id, 'stop needs id');
+      stopIds.add(stop.id);
+      assert.ok(stop.coordinates, `stop ${stop.id} missing coordinates`);
+      assert.equal(typeof stop.coordinates.lat, 'number');
+      assert.equal(typeof stop.coordinates.lng, 'number');
+      assert.ok(stop.description, 'stop description missing');
+      assert.ok(stop.timezone, 'stop timezone missing');
+      assert.ok(Array.isArray(stop.photos) && stop.photos.length > 0, 'stop photos missing');
+      assert.equal(typeof stop.rating, 'number');
+    });
+    (route.segments ?? []).forEach((segment) => {
+      assert.ok(stopIds.has(segment.from), `segment from invalid (${segment.from})`);
+      assert.ok(stopIds.has(segment.to), `segment to invalid (${segment.to})`);
+      assert.ok(allowedModes.has(segment.mode), `segment mode ${segment.mode} not allowed`);
+      assert.ok(segment.id, 'segment id missing');
+      assert.ok(segment.operator, 'segment operator missing');
+      if (segment.distanceKm && data.transportModes[segment.mode]?.carbonPerKm) {
+        assert.equal(typeof segment.carbonKg, 'number');
+      }
+    });
+  });
+});
+
+test('routes expose metrics for planning', () => {
+  data.routes.forEach((route) => {
+    assert.ok(route.metrics, 'metrics missing');
+    assert.equal(typeof route.metrics.totalDistanceKm, 'number');
+    assert.equal(typeof route.metrics.estimatedCarbonKg, 'number');
+    assert.equal(typeof route.metrics.segmentCount, 'number');
+    assert.equal(typeof route.metrics.foodCount, 'number');
+    assert.equal(typeof route.metrics.activityCount, 'number');
+    assert.equal(typeof route.metrics.lodgingCount, 'number');
+    if ('groundTransportCarbonKg' in route.metrics) {
+      assert.equal(typeof route.metrics.groundTransportCarbonKg, 'number');
+    }
+  });
+});
+
+test('flights reference existing stops and contain pricing', () => {
+  data.routes.forEach((route) => {
+    const stopIds = new Set(route.stops.map((stop) => stop.id));
+    (route.flights ?? []).forEach((flight) => {
+      assert.ok(stopIds.has(flight.fromStopId), 'flight from must reference stop');
+      assert.ok(stopIds.has(flight.toStopId), 'flight to must reference stop');
+      assert.ok(typeof flight.price === 'number', 'flight needs numeric price');
+      assert.ok(flight.aircraft, 'flight aircraft missing');
+      assert.ok(flight.cabinClass, 'flight cabin class missing');
+      assert.ok(flight.baggage, 'flight baggage missing');
+      assert.equal(typeof flight.carbonKg, 'number');
+    });
+  });
+});
+
+test('lodging and food entries contain enrichments', () => {
+  data.routes.forEach((route) => {
+    (route.lodging ?? []).forEach((stay) => {
+      assert.equal(typeof stay.nights, 'number');
+      assert.ok(Array.isArray(stay.amenities), 'lodging amenities missing');
+    });
+    (route.food ?? []).forEach((item) => {
+      assert.ok(item.mustTry?.length, 'food mustTry missing');
+      assert.ok(item.images?.length, 'food images missing');
+    });
+    (route.activities ?? []).forEach((activity) => {
+      assert.ok(activity.website, 'activity website missing');
+      assert.ok(activity.difficulty, 'activity difficulty missing');
+    });
+  });
+});
+
+test('custom template can be instantiated', () => {
+  const template = data.templates?.blankRoute;
+  assert.ok(template, 'blank route template missing');
+  assert.equal(template.stops.length, 0);
+  assert.equal(template.segments.length, 0);
+});
+
+// simple smoke test für die Browser-Utility-Funktionen
+test('markdown helper renders headings', async () => {
+  const module = await import('./travel-routes.js');
+  const html = module.markdownToHtml('# Titel');
+  assert.ok(html.includes('<h1>Titel</h1>'));
+});
+
+test('custom route loader returns array even without localStorage', async () => {
+  const module = await import('./travel-routes.js');
+  const routes = module.loadCustomRoutes();
+  assert.ok(Array.isArray(routes));
+});
