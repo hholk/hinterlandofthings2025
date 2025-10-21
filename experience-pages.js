@@ -59,6 +59,19 @@
         <path d="M24 20v-4a8 8 0 0 1 16 0v4" stroke="currentColor" stroke-width="4" fill="none" />
         <line x1="12" y1="32" x2="52" y2="32" stroke="currentColor" stroke-width="4" />
       </svg>`
+    },
+    {
+      id: 'travel-routes',
+      href: 'travel-routes/index.html',
+      title: 'Chile Travel Experience',
+      description: 'Modulare Kartenoberfläche mit editierbaren Routen, Kosten, Flügen und externen Medien.',
+      icon: `<svg width="32" height="32" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+        <path d="M8 12h48v40H8z" stroke="currentColor" stroke-width="4" fill="none" />
+        <polyline points="12,44 24,32 34,40 44,24 52,32" stroke="currentColor" stroke-width="4" fill="none" />
+        <circle cx="24" cy="32" r="3" fill="currentColor" />
+        <circle cx="34" cy="40" r="3" fill="currentColor" />
+        <circle cx="44" cy="24" r="3" fill="currentColor" />
+      </svg>`
     }
   ];
 
