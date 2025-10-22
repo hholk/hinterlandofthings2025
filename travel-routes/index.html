@@ -19,7 +19,7 @@
   </head>
   <body class="travel-body">
     <div class="travel-app" data-state-ready="false">
-      <aside class="travel-panel" aria-label="Routen und Werkzeuge">
+      <aside id="travel-panel" class="travel-panel" aria-label="Routen und Werkzeuge" data-hidden="true">
         <header class="travel-panel__header">
           <div>
             <p class="travel-panel__eyebrow">🇨🇱 Chile • 03.–21. Januar 2025</p>
@@ -88,14 +88,22 @@
         </section>
       </aside>
 
-      <main class="travel-main" aria-live="polite">
+      <!--
+        Die neue Karten-Sektion sitzt im oberen rechten Rasterfeld.
+        Auf Mobilgeräten erscheint sie zuerst, damit Nutzer:innen direkt mit den Pins starten können.
+      -->
+      <section class="travel-map-shell" aria-live="polite">
         <div id="travel-map" class="travel-map" role="region" aria-label="Karte"></div>
-        <section class="travel-detail" id="travel-detail" aria-label="Routendetails"></section>
-        <button class="travel-panel-toggle" type="button" aria-controls="travel-panel" aria-expanded="true">
+        <button class="travel-panel-toggle" type="button" aria-controls="travel-panel" aria-expanded="false">
           ☰
           <span class="sr-only">Panel ein- oder ausblenden</span>
         </button>
-      </main>
+      </section>
+      <!--
+        Die Detail-Ansicht spannt sich unter Panel und Karte über die gesamte Breite.
+        Ein Toggle wechselt zwischen Planungstabellen und der chronologischen Ansicht.
+      -->
+      <section class="travel-detail" id="travel-detail" aria-label="Routendetails"></section>
     </div>
 
     <template id="tpl-route-card">

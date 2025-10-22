@@ -30,6 +30,8 @@ const mapState = {
   activeRouteId: null,
 };
 
+const HIGHLIGHT_TIMEOUT_MS = 1600;
+
 const dom = hasDocument
   ? {
       app: document.querySelector('.travel-app'),
@@ -114,6 +116,7 @@ async function init() {
   setupMarkdown();
   setupPanelToggle();
   setupViewToggle();
+  setupResponsivePanel();
 
   if (data.poiOverview?.file) {
     await loadPoiOverview(data.poiOverview.file);
@@ -642,6 +645,7 @@ function renderStopList(route, stops) {
   stops.forEach((stop) => {
     const li = document.createElement('li');
     li.className = 'travel-stop-item';
+    li.dataset.stopId = stop.id;
     const coords = formatCoordinates(stop.coordinates);
     const isSelected = stop.selected ?? true;
     const rating = stop.rating
@@ -1091,6 +1095,31 @@ function setupPanelToggle() {
   });
 }
 
+function setupResponsivePanel() {
+  if (!hasDocument || !dom.panel) return;
+  const query = window.matchMedia('(max-width: 1080px)');
+
+  // Breakpoint-Listener: Auf kleinen Screens bleibt das Panel eingeklappt,
+  // auf größeren Ansichten zeigen wir es dauerhaft an.
+  const syncVisibility = (event) => {
+    const shouldCollapse = event.matches;
+    if (!shouldCollapse) {
+      dom.panel?.setAttribute('data-hidden', 'false');
+      dom.panelToggle?.setAttribute('aria-expanded', 'true');
+      return;
+    }
+    const isHidden = dom.panel?.getAttribute('data-hidden') === 'true';
+    dom.panelToggle?.setAttribute('aria-expanded', isHidden ? 'false' : 'true');
+  };
+
+  syncVisibility(query);
+  if (typeof query.addEventListener === 'function') {
+    query.addEventListener('change', syncVisibility);
+  } else if (typeof query.addListener === 'function') {
+    query.addListener(syncVisibility);
+  }
+}
+
 function setupViewToggle() {
   if (!hasDocument) return;
   document.addEventListener('click', (event) => {
@@ -1132,6 +1161,26 @@ function updateViewPanels() {
   }
 }
 
+// Die Karte markiert Stopps: Beim Klick scrollen wir sanft zur passenden Karte.
+function scrollDetailToStop(stopId) {
+  if (!dom.detail) return false;
+  const selector = stopId ? `[data-stop-id="${stopId}"]` : null;
+  const target = selector ? dom.detail.querySelector(selector) : null;
+  const scrollTarget = target ?? dom.detail;
+  if (typeof scrollTarget.scrollIntoView === 'function') {
+    scrollTarget.scrollIntoView({ behavior: 'smooth', block: target ? 'center' : 'start' });
+  }
+  if (target) {
+    target.classList.add('travel-stop-item--focus');
+    if (typeof globalThis.setTimeout === 'function') {
+      globalThis.setTimeout(() => {
+        target.classList.remove('travel-stop-item--focus');
+      }, HIGHLIGHT_TIMEOUT_MS);
+    }
+  }
+  return Boolean(target);
+}
+
 function activateMapLayer(route) {
   if (!mapState.map) return;
   clearMapLayers();
@@ -1160,6 +1209,9 @@ function buildRouteLayer(route) {
     .forEach((stop) => {
       const marker = L.marker([stop.coordinates.lat, stop.coordinates.lng], { icon: buildStopIcon(stop) });
       marker.bindPopup(buildStopPopup(route, stop));
+      marker.on('click', () => {
+        scrollDetailToStop(stop.id);
+      });
       group.addLayer(marker);
     });
 
@@ -1492,4 +1544,6 @@ export {
   loadCustomRoutes,
   markdownToHtml,
   copyActivityToRoute,
+  dom,
+  scrollDetailToStop,
 };

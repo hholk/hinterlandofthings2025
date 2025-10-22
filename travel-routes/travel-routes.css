@@ -28,20 +28,35 @@ body.travel-body {
 }
 
 .travel-app {
+  /*
+   * Das Gesamtlayout nutzt ein CSS-Grid: links die Übersicht, rechts die Karte,
+   * darunter die Details. So entsteht auf Desktops das gewünschte 1/3–2/3-Layout.
+   */
   display: grid;
-  grid-template-columns: minmax(320px, 420px) 1fr;
+  grid-template-columns: minmax(300px, 1fr) minmax(420px, 2fr);
+  grid-template-rows: minmax(360px, 60vh) minmax(320px, 1fr);
+  grid-template-areas:
+    'panel map'
+    'detail detail';
+  gap: 20px;
   min-height: 100vh;
-  position: relative;
+  height: 100vh;
+  padding: 16px;
+  box-sizing: border-box;
 }
 
 .travel-panel {
+  grid-area: panel;
   background: var(--travel-panel);
-  border-right: 1px solid var(--travel-border);
   padding: 24px 20px 32px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
   gap: 24px;
+  max-height: 100%;
+  height: 100%;
+  border-radius: 20px;
+  border: 1px solid var(--travel-border);
 }
 
 .travel-panel__header {
@@ -269,15 +284,16 @@ body.travel-body {
 
 .travel-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 14px;
 }
 
 .travel-gallery a {
   display: block;
-  border-radius: 14px;
+  border-radius: 18px;
   overflow: hidden;
   border: 1px solid rgba(91, 209, 255, 0.28);
+  min-height: 160px;
 }
 
 .travel-gallery img {
@@ -330,49 +346,45 @@ body.travel-body {
   overflow: auto;
 }
 
-.travel-main {
+.travel-map-shell {
+  /*
+   * Die Karte füllt das rechte Rasterfeld komplett aus und hält den Toggle-Button bereit.
+   * Flex stellt sicher, dass die Leaflet-Fläche jeden verfügbaren Platz nutzt.
+   */
+  grid-area: map;
   position: relative;
   background: var(--travel-map-bg);
-  display: grid;
-  gap: 0;
+  display: flex;
+  border-radius: 20px;
+  border: 1px solid var(--travel-border);
+  overflow: hidden;
 }
 
 .travel-map {
   width: 100%;
   height: 100%;
   min-height: 320px;
-}
-
-@media (max-width: 959px) {
-  .travel-main {
-    grid-template-rows: minmax(360px, 60vh) minmax(40vh, auto);
-  }
+  flex: 1 1 auto;
 }
 
 @media (min-width: 960px) {
-  .travel-main {
-    grid-template-columns: minmax(360px, 48vw) minmax(380px, 1fr);
-    align-items: start;
-  }
   .travel-map {
-    position: sticky;
-    top: 0;
-    height: 100vh;
     min-height: 60vh;
-  }
-  .travel-detail {
-    max-height: 100vh;
-    overflow-y: auto;
   }
 }
 
 .travel-detail {
-  border-top: 1px solid var(--travel-border);
+  grid-area: detail;
   padding: 24px;
   overflow-y: auto;
   background: rgba(7, 12, 19, 0.9);
   display: grid;
   gap: 20px;
+  border-radius: 20px;
+  border: 1px solid var(--travel-border);
+  max-height: 100%;
+  height: 100%;
+  scroll-behavior: smooth;
 }
 
 .travel-view-toggle {
@@ -506,6 +518,12 @@ body.travel-body {
   line-height: 1.4;
 }
 
+.travel-stop-item--focus {
+  border-color: var(--travel-accent);
+  box-shadow: 0 0 0 2px rgba(91, 209, 255, 0.4);
+  animation: travel-stop-pulse 1.2s ease;
+}
+
 .travel-stop-item strong {
   display: block;
 }
@@ -516,10 +534,10 @@ body.travel-body {
 }
 
 .travel-stop__photo {
-  flex: 0 0 96px;
-  border-radius: 12px;
+  flex: 0 0 140px;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.28);
 }
 
 .travel-stop__photo img {
@@ -713,7 +731,7 @@ body.travel-body {
 .travel-panel-toggle {
   position: absolute;
   top: 16px;
-  right: 16px;
+  left: 16px;
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -817,6 +835,11 @@ body.travel-body {
 @media (max-width: 1080px) {
   .travel-app {
     grid-template-columns: 1fr;
+    grid-template-rows: minmax(340px, 55vh) minmax(45vh, auto);
+    grid-template-areas:
+      'map'
+      'detail';
+    padding: 12px;
   }
 
   .travel-panel {
@@ -825,21 +848,33 @@ body.travel-body {
     left: 0;
     width: min(420px, 92vw);
     height: 100vh;
-    transform: translateX(0);
+    transform: translateX(-110%);
     transition: transform 200ms ease;
     z-index: 10;
   }
 
-  .travel-panel[data-hidden='true'] {
-    transform: translateX(-110%);
+  .travel-panel[data-hidden='false'] {
+    transform: translateX(0);
   }
 
   .travel-panel-toggle {
     display: inline-flex;
   }
 
-  .travel-main {
-    grid-template-rows: minmax(320px, 55vh) minmax(45vh, auto);
+  .travel-map-shell {
+    min-height: 320px;
+  }
+}
+
+@keyframes travel-stop-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(91, 209, 255, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(91, 209, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(91, 209, 255, 0);
   }
 }
 
@@ -854,6 +889,10 @@ body.travel-body {
 
   .travel-detail {
     padding: 18px;
+  }
+
+  .travel-stop__photo {
+    flex: 0 0 110px;
   }
 }
 

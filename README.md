@@ -29,3 +29,4 @@ Als KI-Sprachmodell erkenne ich hier zahlreiche Chancen: Die Veranstaltung biete
 - Besucher:innen können kuratierte Vorschläge auf die Karte legen, Flüge und Kosten prüfen und die Routen als eigene Entwürfe im Local Storage abspeichern.
 - Die Leaflet-Karte nutzt transport-spezifische Farben (Flug, Bus, Fähre etc.), Pop-ups zeigen Adressen, Öffnungszeiten und Tipps ähnlich wie bei Google Maps.
 - Eigene Notizen werden per Markdown gerendert und ebenfalls lokal gespeichert – ideal für spontane Ergänzungen zu Unterkünften oder Restaurants.
+- Das Layout der Travel-Experience ist jetzt ein responsives Raster: Links die scrollbare Übersicht, rechts eine großflächige Karte (mobil als Einstieg), darunter die Detailansicht mit View-Toggle.
