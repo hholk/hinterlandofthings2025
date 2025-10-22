@@ -187,3 +187,76 @@ test('copyActivityToRoute clones activities without duplicates', async () => {
     state.routeDetails = originalRouteDetails;
   }
 });
+
+test('scrollDetailToStop focuses list entries and falls back gracefully', async () => {
+  const module = await import('./travel-routes.js');
+  const { dom, scrollDetailToStop } = module;
+
+  const classValues = new Set();
+  let added = false;
+  let removed = false;
+  let scrollArgs = null;
+  let containerScrolls = 0;
+  let returnTarget = true;
+
+  const classList = {
+    add(name) {
+      classValues.add(name);
+      if (name === 'travel-stop-item--focus') {
+        added = true;
+      }
+    },
+    remove(name) {
+      classValues.delete(name);
+      if (name === 'travel-stop-item--focus') {
+        removed = true;
+      }
+    },
+    contains(name) {
+      return classValues.has(name);
+    },
+  };
+
+  const target = {
+    classList,
+    scrollIntoView: (options) => {
+      scrollArgs = options;
+    },
+  };
+
+  const originalDetail = dom.detail;
+
+  dom.detail = {
+    querySelector: () => (returnTarget ? target : null),
+    scrollIntoView: (options) => {
+      scrollArgs = options;
+      containerScrolls += 1;
+    },
+  };
+
+  const originalTimeout = globalThis.setTimeout;
+  try {
+    globalThis.setTimeout = (fn) => {
+      fn();
+      return 0;
+    };
+
+    const found = scrollDetailToStop('stop-42');
+    assert.equal(found, true);
+    assert.deepEqual(scrollArgs, { behavior: 'smooth', block: 'center' });
+    assert.equal(containerScrolls, 0);
+    assert.equal(added, true);
+    assert.equal(removed, true);
+
+    scrollArgs = null;
+    returnTarget = false;
+    containerScrolls = 0;
+    const fallback = scrollDetailToStop('missing');
+    assert.equal(fallback, false);
+    assert.deepEqual(scrollArgs, { behavior: 'smooth', block: 'start' });
+    assert.equal(containerScrolls, 1);
+  } finally {
+    globalThis.setTimeout = originalTimeout;
+    dom.detail = originalDetail;
+  }
+});
