@@ -3017,6 +3017,61 @@ for route in routes:
 
 
 def main() -> None:
+    base_dir = Path(__file__).parent
+    data_dir = base_dir / "data"
+    route_dir = data_dir / "routes"
+    data_dir.mkdir(exist_ok=True)
+    route_dir.mkdir(exist_ok=True)
+
+    route_index: list[dict] = []
+
+    for route in routes:
+        route_copy = deepcopy(route)
+        route_copy["source"] = "curated"
+        route_file = route_dir / f"{route_copy['id']}.json"
+        route_file.write_text(
+            json.dumps(route_copy, indent=2, ensure_ascii=False),
+            encoding="utf-8",
+        )
+        tokens = {
+            route_copy.get("name", ""),
+            route_copy.get("summary", ""),
+        }
+        tokens.update(route_copy.get("tags", []))
+        tokens.update(stop.get("name", "") for stop in route_copy.get("stops", []))
+        tokens.update(food.get("name", "") for food in route_copy.get("food", []))
+        tokens.update(activity.get("title", "") for activity in route_copy.get("activities", []))
+        tokens.update(flight.get("flightNumber", "") for flight in route_copy.get("flights", []))
+        clean_tokens = sorted({token for token in tokens if token})
+        route_index.append(
+            {
+                "id": route_copy["id"],
+                "file": f"data/routes/{route_copy['id']}.json",
+                "name": route_copy.get("name"),
+                "summary": route_copy.get("summary"),
+                "color": route_copy.get("color"),
+                "tags": route_copy.get("tags", []),
+                "meta": route_copy.get("meta", {}),
+                "metrics": route_copy.get("metrics", {}),
+                "searchTokens": clean_tokens,
+            }
+        )
+
+    poi_candidates = []
+    skip_types = {"airport", "bus"}
+    for stop in STOPS.values():
+        if stop.get("type") in skip_types:
+            continue
+        if not stop.get("description"):
+            continue
+        poi_candidates.append(deepcopy(stop))
+
+    poi_path = data_dir / "poi-overview.json"
+    poi_path.write_text(
+        json.dumps({"items": poi_candidates}, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+
     data = {
         "meta": META,
         "transportModes": TRANSPORT_MODES,
@@ -3024,9 +3079,13 @@ def main() -> None:
         "gallery": GALLERY,
         "events": EVENTS,
         "templates": TEMPLATES,
-        "routes": routes,
+        "routeIndex": route_index,
+        "poiOverview": {
+            "file": "data/poi-overview.json",
+            "count": len(poi_candidates),
+        },
     }
-    output_path = Path(__file__).with_name("travel-routes-data.json")
+    output_path = base_dir / "travel-routes-data.json"
     output_path.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"JSON geschrieben: {output_path}")
 

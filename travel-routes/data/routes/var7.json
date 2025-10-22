@@ -1,0 +1,764 @@
+{
+  "id": "var7",
+  "name": "Variante 7 – Honeymoon Light",
+  "color": "#ff79c6",
+  "tags": [
+    "honeymoon",
+    "relax",
+    "nature"
+  ],
+  "summary": "Entspannter Mix aus Wellness, Boutiquehotels und Highlights.",
+  "meta": {
+    "theme": "Honeymoon Light",
+    "pace": "gemütlich",
+    "durationDays": 19,
+    "costEstimate": 3700,
+    "highlights": [
+      "Thermen Maipo",
+      "Boutique Atacama",
+      "EcoCamp"
+    ],
+    "scores": {
+      "budget": 2,
+      "adventure": 3,
+      "relax": 5,
+      "culture": 3
+    }
+  },
+  "costBreakdown": {
+    "currency": "EUR",
+    "items": [
+      {
+        "category": "Flüge",
+        "estimate": 1700,
+        "notes": "SCL→CJC→PMC→PUQ"
+      },
+      {
+        "category": "Unterkünfte",
+        "estimate": 1500,
+        "notes": "Boutique & Glamping"
+      },
+      {
+        "category": "Wellness",
+        "estimate": 280,
+        "notes": "Spa & Private Experiences"
+      },
+      {
+        "category": "Food",
+        "estimate": 220,
+        "notes": "Fine Dining"
+      }
+    ]
+  },
+  "stops": [
+    {
+      "id": "santiago-center",
+      "name": "Santiago – Barrio Lastarria",
+      "type": "poi",
+      "coordinates": {
+        "lat": -33.439,
+        "lng": -70.644
+      },
+      "popularFor": [
+        "Museen",
+        "Food Market"
+      ],
+      "description": "Kulturviertel Lastarria mit Museen, Bars und dem GAM Kulturzentrum.",
+      "timezone": "America/Santiago",
+      "category": [
+        "Neighborhood",
+        "Culture"
+      ],
+      "rating": 4.7,
+      "reviewCount": 30100,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1544984243-ec57ea16fe25?w=600&auto=format&fit=crop",
+          "caption": "Abendstimmung im Barrio Lastarria",
+          "credit": "Sebastian Sarria",
+          "license": "Unsplash License"
+        }
+      ],
+      "contact": {
+        "instagram": "https://www.instagram.com/lastarria_santiago/"
+      },
+      "services": {
+        "amenities": [
+          "Museo de Bellas Artes",
+          "Mercado Lastarria",
+          "E-Bike Sharing"
+        ]
+      }
+    },
+    {
+      "id": "colchagua-lodge",
+      "name": "Colchagua Weinlodge",
+      "type": "hotel",
+      "coordinates": {
+        "lat": -34.6394,
+        "lng": -71.3657
+      },
+      "description": "Boutique-Lodge zwischen Weinbergen mit Spa und Degustationsmenüs.",
+      "timezone": "America/Santiago",
+      "category": [
+        "Hotel",
+        "Wine"
+      ],
+      "rating": 4.9,
+      "reviewCount": 620,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1496412705862-e0088f16f791?w=600&auto=format&fit=crop",
+          "caption": "Infinity-Pool mit Blick auf Weinberge",
+          "credit": "Glen Carrie",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "cajon-maipo",
+      "name": "Cajón del Maipo – Thermen",
+      "type": "trail",
+      "coordinates": {
+        "lat": -33.65,
+        "lng": -70.17
+      },
+      "description": "Anden-Canyon mit Thermalquellen, Hängebrücken und Sternenhimmel.",
+      "timezone": "America/Santiago",
+      "category": [
+        "Nature",
+        "Wellness"
+      ],
+      "rating": 4.7,
+      "reviewCount": 13220,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1516366434321-728a48e6b7f1?w=600&auto=format&fit=crop",
+          "caption": "Thermalquellen im Cajón del Maipo",
+          "credit": "Francisca Alvarez",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "san-pedro-boutique",
+      "name": "San Pedro Boutiquehotel",
+      "type": "hotel",
+      "coordinates": {
+        "lat": -22.914,
+        "lng": -68.203
+      },
+      "description": "Boutique-Hotel mit Adobe-Suiten, Rooftop und Sternengucker-Deck.",
+      "timezone": "America/Santiago",
+      "category": [
+        "Hotel",
+        "Boutique"
+      ],
+      "rating": 4.9,
+      "reviewCount": 780,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=600&auto=format&fit=crop",
+          "caption": "Suite im Boutiquehotel",
+          "credit": "Ralph (Ravi) Kayden",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "puerto-varas",
+      "name": "Puerto Varas",
+      "type": "town",
+      "coordinates": {
+        "lat": -41.318,
+        "lng": -72.983
+      },
+      "description": "See-Städtchen mit deutschem Erbe, Blick auf Osorno und zahlreiche Cafés.",
+      "timezone": "America/Santiago",
+      "category": [
+        "Lake Town",
+        "Culture"
+      ],
+      "rating": 4.8,
+      "reviewCount": 19300,
+      "address": {
+        "street": "Del Salvador 219",
+        "city": "Puerto Varas",
+        "country": "Chile"
+      },
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1516741535768-20da1914e42e?w=600&auto=format&fit=crop",
+          "caption": "Puerto Varas Uferpromenade",
+          "credit": "Camila Gutiérrez",
+          "license": "Unsplash License"
+        }
+      ],
+      "services": {
+        "amenities": [
+          "Seepromenade",
+          "Craft-Bier",
+          "Bäckereien"
+        ]
+      }
+    },
+    {
+      "id": "castro",
+      "name": "Castro – Palafitos",
+      "type": "poi",
+      "coordinates": {
+        "lat": -42.481,
+        "lng": -73.762
+      },
+      "description": "Hauptstadt Chiloés mit berühmten Pfahlbauten, Märkten und Holzkirchen.",
+      "timezone": "America/Santiago",
+      "category": [
+        "Heritage",
+        "Harbor"
+      ],
+      "rating": 4.6,
+      "reviewCount": 12100,
+      "address": {
+        "street": "Pedro Montt 51",
+        "city": "Castro",
+        "country": "Chile"
+      },
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1614636268922-9c65b11472ed?w=600&auto=format&fit=crop",
+          "caption": "Palafitos in Castro",
+          "credit": "Johan Mouchet",
+          "license": "Unsplash License"
+        }
+      ],
+      "services": {
+        "amenities": [
+          "Fischmärkte",
+          "Bootstouren",
+          "Kunsthandwerk"
+        ]
+      }
+    },
+    {
+      "id": "torres-ecocamp",
+      "name": "EcoCamp Patagonia",
+      "type": "hotel",
+      "coordinates": {
+        "lat": -51.1086,
+        "lng": -72.9996
+      },
+      "description": "Ikonische Geodomes mitten im Torres-del-Paine-Nationalpark.",
+      "timezone": "America/Punta_Arenas",
+      "category": [
+        "Hotel",
+        "Glamping"
+      ],
+      "rating": 4.8,
+      "reviewCount": 1340,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600&auto=format&fit=crop",
+          "caption": "EcoCamp Dome bei Nacht",
+          "credit": "James Wheeler",
+          "license": "Unsplash License"
+        }
+      ],
+      "services": {
+        "amenities": [
+          "Yoga Dome",
+          "Restaurant",
+          "Private Guides"
+        ]
+      }
+    },
+    {
+      "id": "scl-airport",
+      "name": "Santiago International Airport (SCL)",
+      "type": "airport",
+      "coordinates": {
+        "lat": -33.3929,
+        "lng": -70.7858
+      },
+      "city": "Santiago",
+      "address": {
+        "street": "Armando Cortínez Norte 1701",
+        "city": "Pudahuel",
+        "country": "Chile"
+      },
+      "website": "https://www.nuevopudahuel.cl",
+      "contact": {
+        "phone": "+56 2 2690 1707",
+        "email": "info@nuevopudahuel.cl",
+        "instagram": "https://www.instagram.com/aeropuertodesantiago/"
+      },
+      "openingHours": "24/7",
+      "popularFor": [
+        "Internationaler Hub",
+        "Duty-free Einkauf"
+      ],
+      "tips": [
+        "Online-Check-in spart Wartezeit.",
+        "TurBus und Centropuerto fahren alle 20 Minuten ins Zentrum."
+      ],
+      "description": "Hauptdrehscheibe Chiles mit direkter Metro-Busanbindung und modernem Terminal 2.",
+      "timezone": "America/Santiago",
+      "category": [
+        "Airport",
+        "Transport"
+      ],
+      "rating": 4.3,
+      "reviewCount": 18942,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1505843513577-22bb7d21e455?w=600&auto=format&fit=crop",
+          "caption": "Check-in Halle des SCL Flughafens",
+          "credit": "Daniel Vargas",
+          "license": "Unsplash License"
+        }
+      ],
+      "services": {
+        "transport": [
+          "Centropuerto Shuttle",
+          "TurBus",
+          "Cabify Pick-up"
+        ],
+        "amenities": [
+          "Kostenloses WLAN",
+          "VIP-Lounges",
+          "Duschen"
+        ]
+      },
+      "knowledge": {
+        "bestTime": "Check-in spätestens 2 Stunden vor Abflug, internationale Flüge 3 Stunden.",
+        "security": "Sicherheitskontrollen liegen im zweiten Stock, Flüssigkeiten max. 100 ml."
+      }
+    }
+  ],
+  "segments": [
+    {
+      "from": "santiago-center",
+      "to": "colchagua-lodge",
+      "mode": "drive",
+      "distanceKm": 180,
+      "durationMinutes": 150,
+      "price": 28,
+      "id": "var7-seg-01",
+      "operator": "Selbstfahrer",
+      "frequency": "flexibel",
+      "bookingUrl": "https://www.kayak.com/cars",
+      "recommendedVehicle": "SUV oder Mittelklasse",
+      "tollInfo": "Maut via TAG-Pass oder Barzahlung, Tankstellen alle 80 km",
+      "notes": "Route via Ruta 5 und Ruta I-50, Weinverkostung unterwegs möglich.",
+      "carbonKg": 34.56
+    },
+    {
+      "from": "santiago-center",
+      "to": "cajon-maipo",
+      "mode": "drive",
+      "distanceKm": 95,
+      "durationMinutes": 120,
+      "price": 20,
+      "id": "var7-seg-02",
+      "operator": "Selbstfahrer",
+      "frequency": "flexibel",
+      "bookingUrl": "https://www.kayak.com/cars",
+      "recommendedVehicle": "SUV oder Mittelklasse",
+      "tollInfo": "Maut via TAG-Pass oder Barzahlung, Tankstellen alle 80 km",
+      "notes": "Schmale Serpentinen – früh starten, um Staus zu vermeiden.",
+      "carbonKg": 18.24
+    },
+    {
+      "from": "santiago-center",
+      "to": "san-pedro-boutique",
+      "mode": "flight",
+      "distanceKm": 1220,
+      "durationMinutes": 120,
+      "price": 180,
+      "id": "var7-seg-03",
+      "operator": "Inlandsflug",
+      "frequency": "täglich",
+      "bookingUrl": "https://www.latamairlines.com/",
+      "seatInfo": "Fensterplätze für Landschaftsblick empfohlen",
+      "carbonKg": 347.7
+    },
+    {
+      "from": "san-pedro-boutique",
+      "to": "puerto-varas",
+      "mode": "flight",
+      "distanceKm": 1880,
+      "durationMinutes": 200,
+      "price": 260,
+      "id": "var7-seg-04",
+      "operator": "Sky Airline",
+      "frequency": "täglich",
+      "bookingUrl": "https://www.latamairlines.com/",
+      "seatInfo": "Fensterplätze für Landschaftsblick empfohlen",
+      "notes": "Direkter Charter via SCL – Gepäck wird durchgecheckt.",
+      "carbonKg": 535.8
+    },
+    {
+      "from": "puerto-varas",
+      "to": "castro",
+      "mode": "ferry",
+      "distanceKm": 85,
+      "durationMinutes": 180,
+      "price": 25,
+      "id": "var7-seg-05",
+      "operator": "Transbordadora Austral",
+      "frequency": "2-3 x täglich",
+      "bookingUrl": "https://www.navieraustral.cl",
+      "seatInfo": "Innen- und Außendecks, Café an Bord",
+      "notes": "Fähre Pargua–Chacao, Boarding 40 Minuten vorher.",
+      "carbonKg": 15.3
+    },
+    {
+      "from": "castro",
+      "to": "torres-ecocamp",
+      "mode": "flight",
+      "distanceKm": 1500,
+      "durationMinutes": 210,
+      "price": 340,
+      "id": "var7-seg-06",
+      "operator": "Charter",
+      "frequency": "täglich",
+      "bookingUrl": "https://www.latamairlines.com/",
+      "seatInfo": "Fensterplätze für Landschaftsblick empfohlen",
+      "notes": "Privatflugzeug mit 12 Sitzen, maximal 15 kg pro Person.",
+      "carbonKg": 427.5
+    },
+    {
+      "from": "torres-ecocamp",
+      "to": "scl-airport",
+      "mode": "flight",
+      "distanceKm": 2180,
+      "durationMinutes": 195,
+      "price": 320,
+      "id": "var7-seg-07",
+      "operator": "Inlandsflug",
+      "frequency": "täglich",
+      "bookingUrl": "https://www.latamairlines.com/",
+      "seatInfo": "Fensterplätze für Landschaftsblick empfohlen",
+      "carbonKg": 621.3
+    }
+  ],
+  "flights": [
+    {
+      "id": "flight-scl-cjc-honeymoon",
+      "fromStopId": "santiago-center",
+      "toStopId": "san-pedro-boutique",
+      "airline": "LATAM",
+      "flightNumber": "LA330",
+      "departure": "2025-01-06T09:10:00-03:00",
+      "arrival": "2025-01-06T11:15:00-03:00",
+      "durationMinutes": 125,
+      "price": 180,
+      "currency": "EUR",
+      "aircraft": "Airbus A321",
+      "cabinClass": "Premium Economy",
+      "baggage": {
+        "carryOn": "10 kg",
+        "checked": "2 x 23 kg"
+      },
+      "checkIn": "Priority-Check-in am Premium-Schalter, Loungezugang inklusive.",
+      "fromTerminal": "SCL T1",
+      "toTerminal": "CJC",
+      "notes": "Champagner-Servierung zum Start, Sitzplätze 3A/B reserviert.",
+      "fareClasses": [
+        "Premium",
+        "Full Flex"
+      ],
+      "onTimePerformance": "89%",
+      "seatInfo": "Fensterplätze für Landschaftsblick empfohlen",
+      "distanceKm": 1220.0,
+      "carbonKg": 347.7
+    },
+    {
+      "id": "flight-cjc-pmc-honeymoon",
+      "fromStopId": "san-pedro-boutique",
+      "toStopId": "puerto-varas",
+      "airline": "Sky Airline",
+      "flightNumber": "H420",
+      "departure": "2025-01-10T12:30:00-03:00",
+      "arrival": "2025-01-10T16:10:00-03:00",
+      "durationMinutes": 220,
+      "price": 260,
+      "currency": "EUR",
+      "aircraft": "Airbus A320",
+      "cabinClass": "Premium Economy",
+      "baggage": {
+        "carryOn": "10 kg",
+        "checked": "2 x 23 kg"
+      },
+      "checkIn": "Priority Boarding, Lounge in CJC inkludiert.",
+      "fromTerminal": "CJC",
+      "toTerminal": "PMC",
+      "notes": "Fensterplätze links – Blick auf die Küste von Los Lagos.",
+      "fareClasses": [
+        "Premium"
+      ],
+      "onTimePerformance": "80%",
+      "seatInfo": "Fensterplätze für Landschaftsblick empfohlen",
+      "distanceKm": 1880.0,
+      "carbonKg": 535.8
+    },
+    {
+      "id": "flight-puq-scl-honeymoon",
+      "fromStopId": "torres-ecocamp",
+      "toStopId": "scl-airport",
+      "airline": "LATAM",
+      "flightNumber": "LA286",
+      "departure": "2025-01-18T14:00:00-03:00",
+      "arrival": "2025-01-18T17:10:00-03:00",
+      "durationMinutes": 190,
+      "price": 320,
+      "currency": "EUR",
+      "aircraft": "Boeing 737-800",
+      "cabinClass": "Premium Economy",
+      "baggage": {
+        "carryOn": "10 kg",
+        "checked": "2 x 23 kg"
+      },
+      "checkIn": "Priority-Schalter in PUQ, Boarding per Jetbridge.",
+      "fromTerminal": "PUQ",
+      "toTerminal": "SCL T1",
+      "notes": "Beim Abflug Blick auf die Magellanstraße.",
+      "fareClasses": [
+        "Premium"
+      ],
+      "onTimePerformance": "86%",
+      "seatInfo": "Fensterplätze für Landschaftsblick empfohlen",
+      "distanceKm": 2180.0,
+      "carbonKg": 621.3
+    }
+  ],
+  "lodging": [
+    {
+      "name": "Viña Vik",
+      "stopId": "colchagua-lodge",
+      "checkIn": "2025-01-03",
+      "checkOut": "2025-01-05",
+      "website": "https://www.vinavik.com",
+      "pricePerNight": 390,
+      "currency": "EUR",
+      "address": "Hacienda Vik, Millahue",
+      "contact": {
+        "phone": "+56 2 2383 3600",
+        "email": "reservations@vik.cl"
+      },
+      "amenities": [
+        "Weintherapie Spa",
+        "Helipad",
+        "Kunstsammlung"
+      ],
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&auto=format&fit=crop",
+          "caption": "Designhotel in den Hügeln",
+          "credit": "Tanya Pro",
+          "license": "Unsplash License"
+        }
+      ],
+      "rating": 4.9,
+      "reviewCount": 410,
+      "checkInWindow": "15:00–20:00",
+      "checkOutWindow": "bis 12:00",
+      "roomHighlights": [
+        "Kunstwerke",
+        "Panoramafenster"
+      ],
+      "nights": 2
+    },
+    {
+      "name": "Nayara Alto Atacama",
+      "stopId": "san-pedro-boutique",
+      "checkIn": "2025-01-06",
+      "checkOut": "2025-01-10",
+      "website": "https://www.nayaratentedcamp.com",
+      "pricePerNight": 320,
+      "currency": "EUR",
+      "address": "Camino Pukará 6, San Pedro",
+      "contact": {
+        "phone": "+56 55 284 1919",
+        "email": "reservas@nayaratentedcamp.com"
+      },
+      "amenities": [
+        "Privates Observatorium",
+        "Sechs Pools",
+        "All-Inclusive Ausflüge"
+      ],
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1470246973918-29a93221c455?w=600&auto=format&fit=crop",
+          "caption": "Terrakotta-Bauten im Alto Atacama",
+          "credit": "Alexandre Pellaes",
+          "license": "Unsplash License"
+        }
+      ],
+      "rating": 4.9,
+      "reviewCount": 520,
+      "checkInWindow": "15:00–22:00",
+      "checkOutWindow": "bis 11:00",
+      "roomHighlights": [
+        "Privatterrasse",
+        "Außendusche"
+      ],
+      "nights": 4
+    },
+    {
+      "name": "EcoCamp Patagonia Suite Dome",
+      "stopId": "torres-ecocamp",
+      "checkIn": "2025-01-15",
+      "checkOut": "2025-01-18",
+      "website": "https://www.ecocamp.travel",
+      "pricePerNight": 450,
+      "currency": "EUR",
+      "address": "Sector Las Torres, Torres del Paine",
+      "contact": {
+        "phone": "+56 2 2923 5950",
+        "email": "reservas@ecocamp.travel"
+      },
+      "amenities": [
+        "Community Dome",
+        "Yoga",
+        "Guide-Team"
+      ],
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600&auto=format&fit=crop",
+          "caption": "Geodomes bei Nacht",
+          "credit": "James Wheeler",
+          "license": "Unsplash License"
+        }
+      ],
+      "rating": 4.8,
+      "reviewCount": 880,
+      "checkInWindow": "15:00–20:00",
+      "checkOutWindow": "bis 10:00",
+      "roomHighlights": [
+        "Holzofen",
+        "Privates Bad"
+      ],
+      "nights": 3
+    }
+  ],
+  "food": [
+    {
+      "name": "Boragó",
+      "stopId": "santiago-center",
+      "type": "Fine Dining",
+      "address": "Av. San José María Escrivá de Balaguer 5970, Vitacura",
+      "openingHours": "19:00–23:30",
+      "specialties": [
+        "Tasting Menü Endemico"
+      ],
+      "priceRange": "€€€€",
+      "contact": {
+        "phone": "+56 2 2953 8893",
+        "website": "https://borago.cl"
+      },
+      "mustTry": [
+        "Endemico Menu",
+        "Murtilla Dessert"
+      ],
+      "reservation": "Mehrere Wochen im Voraus",
+      "googlePlaceId": "ChIJN0K8P2JYYpYRtoDnNMSKyk4",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&auto=format&fit=crop",
+          "caption": "Signature Dish Boragó",
+          "credit": "Jay Wennington",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "name": "Cocina y Amor",
+      "stopId": "puerto-varas",
+      "type": "Restaurant",
+      "address": "San Pedro 543, Puerto Varas",
+      "openingHours": "13:00–22:00",
+      "specialties": [
+        "Sopaipillas Gourmet",
+        "Lachs"
+      ],
+      "priceRange": "€€€",
+      "mustTry": [
+        "Reineta mit Chilote-Kräutern",
+        "Chilotanisches Risotto"
+      ],
+      "reservation": "Empfohlen",
+      "googlePlaceId": "ChIJ7e1bGCDcYpYR2_n0KBPXn1E",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&auto=format&fit=crop",
+          "caption": "Abendessen in Puerto Varas",
+          "credit": "Thomas Schaefer",
+          "license": "Unsplash License"
+        }
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "title": "Private Thermal Retreat",
+      "stopId": "cajon-maipo",
+      "durationHours": 4,
+      "operator": "Thermas Valle de Colina",
+      "price": 95,
+      "currency": "EUR",
+      "website": "https://www.termasvalledecolina.cl",
+      "meetingPoint": "Santiago Hotel 08:00 Uhr",
+      "gear": [
+        "Badesachen",
+        "Flip-Flops"
+      ],
+      "difficulty": "leicht",
+      "groupSize": "max. 2 Personen",
+      "included": [
+        "Private Cabana",
+        "Sekt",
+        "Snacks"
+      ],
+      "notes": "Thermalbecken zwischen 30–50°C, Höhenlage 2.500 m."
+    },
+    {
+      "title": "Sunset Cruise Llanquihue",
+      "stopId": "puerto-varas",
+      "durationHours": 2,
+      "operator": "Southern Lakes",
+      "price": 70,
+      "currency": "EUR",
+      "website": "https://www.southernlakes.cl",
+      "meetingPoint": "Muelle Puerto Varas 18:00 Uhr",
+      "gear": [
+        "Windjacke",
+        "Kamera"
+      ],
+      "difficulty": "leicht",
+      "groupSize": "max. 10 Personen",
+      "included": [
+        "Glas Sekt",
+        "Fingerfood",
+        "Guide"
+      ],
+      "notes": "Beste Sicht auf Vulkan Osorno bei klarer Sicht."
+    }
+  ],
+  "notes": "Private Ausflüge frühzeitig buchen – Nachfrage in der Hochsaison hoch.",
+  "metrics": {
+    "totalDistanceKm": 7140.0,
+    "estimatedCarbonKg": 2000.4,
+    "segmentCount": 7,
+    "flightCount": 4,
+    "stopCount": 8,
+    "flightCarbonKg": 1504.8,
+    "groundTransportCarbonKg": 495.6,
+    "totalNights": 9,
+    "avgNightlyRate": 378.89,
+    "lodgingCount": 3,
+    "foodCount": 2,
+    "activityCount": 2,
+    "averageDailyBudget": 194.74
+  },
+  "source": "curated"
+}
