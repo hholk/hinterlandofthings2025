@@ -17,12 +17,17 @@ const state = {
   activeTags: new Set(),
   searchTerm: '',
   selectedRouteId: null,
+  routeDetails: new Map(),
+  poiOverview: [],
+  poiCollection: new Set(),
+  detailView: 'planning',
 };
 
 const mapState = {
   map: null,
   layers: new Map(),
   modeLegend: null,
+  activeRouteId: null,
 };
 
 const dom = hasDocument
@@ -41,6 +46,7 @@ const dom = hasDocument
       panel: document.querySelector('.travel-panel'),
       panelToggle: document.querySelector('.travel-panel-toggle'),
       chipButtons: document.querySelectorAll('.travel-chip'),
+      poiList: document.getElementById('travel-poi-list'),
     }
   : {
       app: null,
@@ -57,6 +63,7 @@ const dom = hasDocument
       panel: null,
       panelToggle: null,
       chipButtons: [],
+      poiList: null,
     };
 
 const templates = hasDocument
@@ -75,6 +82,7 @@ const templates = hasDocument
 
 const LOCAL_STORAGE_KEY = 'travel-routes.custom';
 const NOTES_KEY = 'travel-routes.notes';
+const POI_COLLECTION_KEY = 'travel-routes.poi-collection';
 
 if (hasDocument) {
   init().catch((error) => {
@@ -92,8 +100,9 @@ async function init() {
   }
   const data = await response.json();
   state.data = data;
-  state.curatedRoutes = data.routes.map((route) => ({ ...route, source: 'curated' }));
+  state.curatedRoutes = (data.routeIndex ?? []).map((route) => ({ ...route, source: 'curated' }));
   state.customRoutes = loadCustomRoutes();
+  state.poiCollection = loadPoiCollection();
 
   initMap(data);
   renderTags();
@@ -104,12 +113,18 @@ async function init() {
   setupSearch();
   setupMarkdown();
   setupPanelToggle();
+  setupViewToggle();
+
+  if (data.poiOverview?.file) {
+    await loadPoiOverview(data.poiOverview.file);
+    renderPoiOverview();
+  }
 
   dom.app?.setAttribute('data-state-ready', 'true');
 
   const initialRoute = state.curatedRoutes[0] ?? state.customRoutes[0];
   if (initialRoute) {
-    selectRoute(initialRoute.id, initialRoute.source);
+    await selectRoute(initialRoute.id, initialRoute.source);
   } else {
     dom.detail.innerHTML = '<div class="travel-empty-state">Noch keine Routen vorhanden.</div>';
   }
@@ -169,6 +184,8 @@ function renderRoutes() {
 
   routes.forEach((route) => {
     const card = templates.routeCard.content.firstElementChild.cloneNode(true);
+    card.dataset.routeId = route.id;
+    card.setAttribute('data-active', route.id === state.selectedRouteId ? 'true' : 'false');
     card.querySelector('.travel-card__title').textContent = route.name;
     card.querySelector('.travel-card__subtitle').textContent = route.meta?.theme ?? 'Thema unbekannt';
     card.querySelector('.travel-card__badge').innerHTML = `<span class="travel-icon-dot" style="background:${route.color}"></span> ${route.meta?.pace ?? ''}`;
@@ -188,7 +205,9 @@ function renderRoutes() {
     const viewBtn = document.createElement('button');
     viewBtn.className = 'travel-button';
     viewBtn.textContent = 'Details anzeigen';
-    viewBtn.addEventListener('click', () => selectRoute(route.id, route.source));
+    viewBtn.addEventListener('click', () => {
+      void selectRoute(route.id, route.source);
+    });
     actions.appendChild(viewBtn);
 
     if (route.source === 'curated') {
@@ -196,7 +215,7 @@ function renderRoutes() {
       copyBtn.className = 'travel-button travel-button--secondary';
       copyBtn.textContent = 'Als Vorlage übernehmen';
       copyBtn.addEventListener('click', () => {
-        addCustomRouteFromCurated(route.id);
+        void addCustomRouteFromCurated(route.id);
       });
       actions.appendChild(copyBtn);
     } else {
@@ -215,6 +234,8 @@ function renderRoutes() {
   if (state.filter === 'custom') {
     dom.routeList.appendChild(buildCreateCustomButton());
   }
+
+  highlightActiveRouteCard();
 }
 
 function getVisibleRoutes() {
@@ -227,19 +248,17 @@ function getVisibleRoutes() {
     const matchesTag = state.activeTags.size === 0 || route.tags?.some((tag) => state.activeTags.has(tag));
     if (!matchesTag) return false;
     if (!term) return true;
-    const haystack = [
-      route.name,
-      route.summary,
-      route.meta?.theme,
-      ...(route.tags ?? []),
-      ...(route.stops ?? []).map((stop) => stop.name),
-      ...(route.food ?? []).map((item) => item.name),
-      ...(route.activities ?? []).map((item) => item.title),
-      ...(route.flights ?? []).map((flight) => flight.flightNumber),
-      String(route.metrics?.totalDistanceKm ?? ''),
-      String(route.metrics?.estimatedCarbonKg ?? ''),
-      String(route.metrics?.averageDailyBudget ?? ''),
-    ]
+    const tokens = new Set(route.searchTokens ?? []);
+    [route.name, route.summary, route.meta?.theme]
+      .filter(Boolean)
+      .forEach((value) => tokens.add(String(value)));
+    if (route.source === 'custom') {
+      (route.stops ?? []).forEach((stop) => tokens.add(stop.name));
+      (route.food ?? []).forEach((item) => tokens.add(item.name));
+      (route.activities ?? []).forEach((item) => tokens.add(item.title));
+      (route.flights ?? []).forEach((flight) => tokens.add(flight.flightNumber));
+    }
+    const haystack = Array.from(tokens)
       .filter(Boolean)
       .join(' ')
       .toLowerCase();
@@ -247,24 +266,23 @@ function getVisibleRoutes() {
   });
 }
 
-function selectRoute(routeId, source = state.filter) {
+async function selectRoute(routeId, source = state.filter) {
   state.selectedRouteId = routeId;
-  state.filter = source === 'custom' ? 'custom' : state.filter;
-  const route = findRoute(routeId);
+  if (source === 'custom') {
+    state.filter = 'custom';
+  }
+  const route = await resolveRoute(routeId, source);
   if (!route) return;
+  highlightActiveRouteCard();
   activateMapLayer(route);
   renderRouteDetail(route);
 }
 
 function renderRouteDetail(route) {
   if (!dom.detail) return;
+  state.routeDetails.set(route.id, route);
   const meta = route.meta ?? {};
   const tags = route.tags?.map((tag) => `<span class="travel-pill">${tagLabel(tag)}</span>`).join(' ');
-  const costItems = route.costBreakdown?.items ?? [];
-  const costTotal = costItems.reduce((sum, item) => sum + (Number(item.estimate) || 0), 0);
-
-  const flights = route.flights ?? [];
-  const stops = route.stops ?? [];
   const metrics = route.metrics ?? {};
 
   dom.detail.innerHTML = `
@@ -284,6 +302,30 @@ function renderRouteDetail(route) {
         ? '<span class="travel-status">Kuratierte Vorlage</span>'
         : '<span class="travel-status">Eigene Route</span>'}
     </header>
+    <nav id="travel-view-toggle" class="travel-view-toggle" role="tablist" aria-label="Darstellung wählen">
+      <button class="travel-chip" type="button" data-view="planning" aria-pressed="false">Planung</button>
+      <button class="travel-chip" type="button" data-view="chronology" aria-pressed="false">Chronologische Reihenfolge</button>
+    </nav>
+    <div class="travel-views">
+      <section id="travel-view-planning" class="travel-view-panel" data-view="planning"></section>
+      <section id="travel-view-chronology" class="travel-view-panel" data-view="chronology"></section>
+    </div>
+  `;
+
+  updateViewToggleButtons();
+  const costItems = route.costBreakdown?.items ?? [];
+  renderPlanningPane(route, route.stops ?? [], route.flights ?? [], costItems);
+  renderChronologyPane(route);
+  updateViewPanels();
+}
+
+// Die Planungsansicht zeigt weiterhin alle Tabellen und Listen – vertraut für Einsteiger:innen.
+function renderPlanningPane(route, stops, flights, costItems) {
+  if (!hasDocument) return;
+  const container = document.getElementById('travel-view-planning');
+  if (!container) return;
+  const costTotal = costItems.reduce((sum, item) => sum + (Number(item.estimate) || 0), 0);
+  container.innerHTML = `
     <p class="travel-detail__summary">${route.summary ?? ''}</p>
 
     <section>
@@ -324,7 +366,7 @@ function renderRouteDetail(route) {
 
     <section>
       <h3>Aktivitäten</h3>
-      ${renderActivities(route.activities)}
+      ${renderActivities(route, route.activities)}
     </section>
 
     ${route.source === 'custom' ? renderCustomEditor(route) : ''}
@@ -333,6 +375,190 @@ function renderRouteDetail(route) {
   renderStopList(route, stops);
   renderFlightList(route, flights);
   renderCostRows(costItems);
+}
+
+// Die Chronologie fasst die Route als zeitliche Abfolge zusammen – ideal, um Ortswechsel schnell zu erfassen.
+function renderChronologyPane(route) {
+  if (!hasDocument) return;
+  const container = document.getElementById('travel-view-chronology');
+  if (!container) return;
+  const timeline = buildChronology(route);
+  if (!timeline.length) {
+    container.innerHTML = '<div class="travel-empty-state">Noch keine Chronologie verfügbar.</div>';
+    return;
+  }
+  container.innerHTML = `<div class="travel-timeline">${timeline
+    .map((group) => renderChronologyGroup(route, group))
+    .join('')}</div>`;
+}
+
+function buildChronology(route) {
+  const stops = (route.stops ?? []).filter((stop) => stop.selected ?? true);
+  if (!stops.length) return [];
+  const stopMap = new Map(stops.map((stop) => [stop.id, stop]));
+  const groupedStopIds = new Set();
+
+  const makeGroup = (stop) => ({
+    primaryStop: stop,
+    stops: [stop],
+    stopIds: new Set([stop.id]),
+    inbound: null,
+    localMoves: [],
+    activities: [],
+    food: [],
+    lodging: [],
+  });
+
+  const groups = [];
+  let current = null;
+
+  const addStopToGroup = (group, stop) => {
+    if (!group.stopIds.has(stop.id)) {
+      group.stopIds.add(stop.id);
+      group.stops.push(stop);
+    }
+    groupedStopIds.add(stop.id);
+  };
+
+  if (stops[0]) {
+    current = makeGroup(stops[0]);
+    groups.push(current);
+    addStopToGroup(current, stops[0]);
+  }
+
+  (route.segments ?? []).forEach((segment) => {
+    const destination = stopMap.get(segment.to);
+    if (!destination) return;
+    if (isMajorSegment(segment) || !current) {
+      current = makeGroup(destination);
+      current.inbound = segment;
+      groups.push(current);
+    } else {
+      current.localMoves.push(segment);
+    }
+    addStopToGroup(current, destination);
+  });
+
+  stops.forEach((stop) => {
+    if (!groupedStopIds.has(stop.id)) {
+      const extra = makeGroup(stop);
+      groups.push(extra);
+      addStopToGroup(extra, stop);
+    }
+  });
+
+  const activities = route.activities ?? [];
+  const food = route.food ?? [];
+  const lodging = route.lodging ?? [];
+
+  groups.forEach((group) => {
+    group.activities = activities.filter((activity) => group.stopIds.has(activity.stopId));
+    group.food = food.filter((item) => group.stopIds.has(item.stopId));
+    group.lodging = lodging.filter((stay) => group.stopIds.has(stay.stopId));
+  });
+
+  return groups;
+}
+
+function isMajorSegment(segment) {
+  if (segment.mode === 'flight') return true;
+  if (segment.durationMinutes && segment.durationMinutes > 120) return true;
+  if (segment.distanceKm && segment.distanceKm > 150) return true;
+  return false;
+}
+
+function renderChronologyGroup(route, group) {
+  const primary = group.primaryStop;
+  const inbound = group.inbound ? renderChronologyTransfer(route, group.inbound) : '';
+  const nearby = group.stops.length > 1
+    ? `<div class="travel-timeline__nearby"><h4>Vor Ort erkunden</h4><ul>${group.stops
+        .slice(1)
+        .map((stop) => `<li>${stop.name}</li>`)
+        .join('')}</ul></div>`
+    : '';
+  const localMoves = group.localMoves.length
+    ? `<div class="travel-timeline__locals"><h4>Kurze Wege (&lt; 2 h)</h4><ul>${group.localMoves
+        .map((segment) => `<li>${summarizeSegment(route, segment)}</li>`)
+        .join('')}</ul></div>`
+    : '';
+  const activities = group.activities.length
+    ? `<div class="travel-timeline__activities"><h4>Aktivitäten</h4><ul>${group.activities
+        .map((activity) => renderActivitySummary(activity))
+        .join('')}</ul></div>`
+    : '';
+  const lodging = group.lodging.length
+    ? `<div class="travel-timeline__lodging"><h4>Übernachten</h4><ul>${group.lodging
+        .map((stay) => `<li><strong>${stay.name}</strong>${stay.checkIn ? ` · ${stay.checkIn}` : ''}${stay.checkOut ? ` → ${stay.checkOut}` : ''}</li>`)
+        .join('')}</ul></div>`
+    : '';
+  const food = group.food.length
+    ? `<div class="travel-timeline__food"><h4>Food & Drinks</h4><ul>${group.food
+        .map((item) => `<li>${item.name}${item.openingHours ? ` · ${item.openingHours}` : ''}</li>`)
+        .join('')}</ul></div>`
+    : '';
+
+  return `<article class="travel-timeline__group">
+    ${inbound}
+    <div class="travel-timeline__location">
+      <h3>${primary.name}</h3>
+      ${primary.description ? `<p>${primary.description}</p>` : ''}
+      ${nearby}
+      ${localMoves}
+      ${activities}
+      ${lodging}
+      ${food}
+    </div>
+  </article>`;
+}
+
+function renderChronologyTransfer(route, segment) {
+  const mode = state.data.transportModes[segment.mode] ?? {};
+  const duration = segment.durationMinutes ? formatDuration(segment.durationMinutes) : 'n/a';
+  const distance = segment.distanceKm ? `${segment.distanceKm.toLocaleString('de-DE')} km` : '';
+  const operator = segment.operator ? ` · ${segment.operator}` : '';
+  const carbon = segment.carbonKg ? ` · ${segment.carbonKg.toLocaleString('de-DE')} kg CO₂` : '';
+  return `<div class="travel-timeline__transfer">
+    <span class="travel-timeline__mode">${mode.icon ?? '🧭'}</span>
+    <div>
+      <div><strong>${stopLabel(route, segment.from)}</strong> → ${stopLabel(route, segment.to)}</div>
+      <div class="travel-text-muted">${duration}${distance ? ` · ${distance}` : ''}${operator}${carbon}</div>
+    </div>
+  </div>`;
+}
+
+function summarizeSegment(route, segment) {
+  const duration = segment.durationMinutes ? formatDuration(segment.durationMinutes) : 'flexibel';
+  const distance = segment.distanceKm ? `${segment.distanceKm.toLocaleString('de-DE')} km` : '';
+  return `${stopLabel(route, segment.from)} → ${stopLabel(route, segment.to)} (${duration}${distance ? ` · ${distance}` : ''})`;
+}
+
+function renderActivitySummary(activity) {
+  const duration = activity.durationHours ? `${activity.durationHours} h` : 'Dauer offen';
+  const price = activity.price ? ` · €${formatCurrency(activity.price)}` : '';
+  return `<li><strong>${activity.title}</strong><span class="travel-text-muted"> ${duration}${price}</span></li>`;
+}
+
+// Kopiert eine einzelne Aktivität aus einer Vorlage in eine eigene Route und speichert die Änderung sofort.
+async function copyActivityToRoute(sourceRouteId, activityIndex, targetRouteId) {
+  const targetRoute = state.customRoutes.find((route) => route.id === targetRouteId);
+  if (!targetRoute) return false;
+  let sourceRoute = state.routeDetails.get(sourceRouteId);
+  if (!sourceRoute) {
+    sourceRoute = await loadCuratedRoute(sourceRouteId);
+  }
+  const activity = sourceRoute?.activities?.[activityIndex];
+  if (!activity) return false;
+  targetRoute.activities = targetRoute.activities ?? [];
+  const exists = targetRoute.activities.some(
+    (item) => item.title === activity.title && item.stopId === activity.stopId
+  );
+  if (exists) {
+    return false;
+  }
+  targetRoute.activities.push({ ...activity });
+  persistCustomRoutes();
+  state.routeDetails.set(targetRouteId, targetRoute);
+  return true;
 }
 
 function renderMetrics(metrics) {
@@ -589,22 +815,42 @@ function renderFood(food) {
     .join('')}</ul>`;
 }
 
-function renderActivities(activities) {
+function renderActivities(route, activities) {
   if (!activities?.length) {
     return '<div class="travel-empty-state">Keine Aktivitäten hinterlegt.</div>';
   }
+  const hasCustomRoutes = state.customRoutes.length > 0;
+  const customRouteOptions = state.customRoutes
+    .map((custom) => `<option value="${custom.id}">${custom.name}</option>`)
+    .join('');
   return `<ul class="travel-flight-list">${activities
-    .map((activity) => `
-      <li class="travel-flight-item">
-        <strong>${activity.title}</strong>
-        <div class="travel-text-muted">Dauer: ${activity.durationHours ?? '?'} h · €${formatCurrency(activity.price ?? 0)}</div>
-        <div class="travel-text-muted">Schwierigkeit: ${activity.difficulty ?? 'n/a'} · Gruppe: ${activity.groupSize ?? 'n/a'}</div>
-        ${activity.meetingPoint ? `<div class="travel-text-muted">Treffpunkt: ${activity.meetingPoint}</div>` : ''}
-        ${activity.gear?.length ? `<div class="travel-text-muted">Ausrüstung: ${activity.gear.join(', ')}</div>` : ''}
-        ${activity.included?.length ? `<div class="travel-text-muted">Inklusive: ${activity.included.join(', ')}</div>` : ''}
-        ${activity.notes ? `<div class="travel-text-muted">Hinweis: ${activity.notes}</div>` : ''}
-        ${activity.website ? `<a class="travel-button travel-button--secondary" target="_blank" rel="noopener" href="${activity.website}">Provider</a>` : ''}
-      </li>`)
+    .map((activity, index) => {
+      const transferControl = route.source === 'curated'
+        ? hasCustomRoutes
+          ? `<div class="travel-activity-transfer">
+              <label>In Route übernehmen
+                <select data-activity-target="${route.id}-${index}">
+                  <option value="">Route wählen …</option>
+                  ${customRouteOptions}
+                </select>
+              </label>
+              <button class="travel-button travel-button--secondary" data-action="copy-activity" data-route-id="${route.id}" data-activity-index="${index}">Übernehmen</button>
+            </div>`
+          : '<div class="travel-text-muted">Eigene Route anlegen, um Aktivitäten zu übernehmen.</div>'
+        : '';
+      return `
+        <li class="travel-flight-item">
+          <strong>${activity.title}</strong>
+          <div class="travel-text-muted">Dauer: ${activity.durationHours ?? '?'} h · €${formatCurrency(activity.price ?? 0)}</div>
+          <div class="travel-text-muted">Schwierigkeit: ${activity.difficulty ?? 'n/a'} · Gruppe: ${activity.groupSize ?? 'n/a'}</div>
+          ${activity.meetingPoint ? `<div class="travel-text-muted">Treffpunkt: ${activity.meetingPoint}</div>` : ''}
+          ${activity.gear?.length ? `<div class="travel-text-muted">Ausrüstung: ${activity.gear.join(', ')}</div>` : ''}
+          ${activity.included?.length ? `<div class="travel-text-muted">Inklusive: ${activity.included.join(', ')}</div>` : ''}
+          ${activity.notes ? `<div class="travel-text-muted">Hinweis: ${activity.notes}</div>` : ''}
+          ${activity.website ? `<a class="travel-button travel-button--secondary" target="_blank" rel="noopener" href="${activity.website}">Provider</a>` : ''}
+          ${transferControl}
+        </li>`;
+    })
     .join('')}</ul>`;
 }
 
@@ -652,35 +898,66 @@ function renderCustomEditor(route) {
     </section>`;
 }
 
-function findRoute(routeId) {
-  return (
-    state.customRoutes.find((r) => r.id === routeId) ||
-    state.curatedRoutes.find((r) => r.id === routeId)
-  );
+// Einfache Helper-Funktion: Entscheidet, ob wir eine Custom-Route (direkt aus dem Speicher)
+// oder eine kuratierte Route (per Fetch aus einer JSON-Datei) laden müssen.
+async function resolveRoute(routeId, source = 'curated') {
+  if (source === 'custom') {
+    const route = state.customRoutes.find((r) => r.id === routeId);
+    if (route) {
+      state.routeDetails.set(routeId, route);
+    }
+    return route ?? null;
+  }
+  return loadCuratedRoute(routeId);
 }
 
-function addCustomRouteFromCurated(routeId) {
-  const original = state.curatedRoutes.find((r) => r.id === routeId);
+// Für kuratierte Vorlagen holen wir die Detaildaten erst, wenn sie wirklich benötigt werden.
+// So bleibt der Initial-Load klein und gut nachvollziehbar.
+async function loadCuratedRoute(routeId) {
+  if (state.routeDetails.has(routeId)) {
+    return state.routeDetails.get(routeId);
+  }
+  const entry = state.curatedRoutes.find((r) => r.id === routeId);
+  if (!entry) return null;
+  try {
+    const response = await fetch(entry.file);
+    if (!response.ok) {
+      throw new Error(`Route konnte nicht geladen werden (${response.status})`);
+    }
+    const data = await response.json();
+    data.source = 'curated';
+    state.routeDetails.set(routeId, data);
+    return data;
+  } catch (error) {
+    console.error('Konnte Route nicht laden', error);
+    return null;
+  }
+}
+
+async function addCustomRouteFromCurated(routeId) {
+  const original = await loadCuratedRoute(routeId);
   if (!original) return;
   const copy = JSON.parse(JSON.stringify(original));
   copy.id = `custom-${Date.now()}`;
   copy.name = `${original.name} (Kopie)`;
   copy.source = 'custom';
-  copy.stops = copy.stops.map((stop) => ({ ...stop, selected: true }));
+  copy.stops = (copy.stops ?? []).map((stop) => ({ ...stop, selected: true }));
   state.customRoutes.push(copy);
   persistCustomRoutes();
+  state.routeDetails.set(copy.id, copy);
   selectFilter('custom');
-  renderRoutes();
-  selectRoute(copy.id, 'custom');
+  highlightActiveRouteCard();
+  void selectRoute(copy.id, 'custom');
 }
 
 function deleteCustomRoute(routeId) {
   state.customRoutes = state.customRoutes.filter((r) => r.id !== routeId);
   persistCustomRoutes();
+  state.routeDetails.delete(routeId);
   renderRoutes();
   const fallback = state.customRoutes[0] || state.curatedRoutes[0];
   if (fallback) {
-    selectRoute(fallback.id, fallback.source ?? 'curated');
+    void selectRoute(fallback.id, fallback.source ?? 'curated');
   } else {
     dom.detail.innerHTML = '<div class="travel-empty-state">Keine Route ausgewählt.</div>';
     clearMapLayers();
@@ -694,7 +971,8 @@ function toggleStopSelection(routeId, stopId, selected) {
     stop.id === stopId ? { ...stop, selected } : stop
   );
   persistCustomRoutes();
-  selectRoute(routeId, 'custom');
+  state.routeDetails.set(routeId, route);
+  void selectRoute(routeId, 'custom');
 }
 
 function renderGallery() {
@@ -813,6 +1091,47 @@ function setupPanelToggle() {
   });
 }
 
+function setupViewToggle() {
+  if (!hasDocument) return;
+  document.addEventListener('click', (event) => {
+    const target = event.target instanceof HTMLElement ? event.target.closest('#travel-view-toggle [data-view]') : null;
+    if (!target) return;
+    const view = target.getAttribute('data-view');
+    if (!view || view === state.detailView) return;
+    state.detailView = view;
+    updateViewToggleButtons();
+    updateViewPanels();
+  });
+}
+
+function updateViewToggleButtons() {
+  if (!hasDocument) return;
+  const toggle = document.getElementById('travel-view-toggle');
+  if (!toggle) return;
+  toggle.querySelectorAll('[data-view]').forEach((button) => {
+    const view = button.getAttribute('data-view');
+    const isActive = view === state.detailView;
+    button.setAttribute('aria-pressed', String(isActive));
+    button.classList.toggle('travel-chip--active', isActive);
+  });
+}
+
+function updateViewPanels() {
+  if (!hasDocument) return;
+  const planning = document.getElementById('travel-view-planning');
+  const chronology = document.getElementById('travel-view-chronology');
+  if (planning) {
+    const isActive = state.detailView === 'planning';
+    planning.setAttribute('data-active', isActive ? 'true' : 'false');
+    planning.toggleAttribute('hidden', !isActive);
+  }
+  if (chronology) {
+    const isActive = state.detailView === 'chronology';
+    chronology.setAttribute('data-active', isActive ? 'true' : 'false');
+    chronology.toggleAttribute('hidden', !isActive);
+  }
+}
+
 function activateMapLayer(route) {
   if (!mapState.map) return;
   clearMapLayers();
@@ -820,9 +1139,10 @@ function activateMapLayer(route) {
   mapState.layers.set(route.id, layer);
   layer.addTo(mapState.map);
   const bounds = collectBounds(layer);
-  if (bounds) {
+  if (bounds && mapState.activeRouteId !== route.id) {
     mapState.map.fitBounds(bounds, { padding: [40, 40] });
   }
+  mapState.activeRouteId = route.id;
 }
 
 function clearMapLayers() {
@@ -996,8 +1316,9 @@ function createBlankRoute() {
   copy.name = 'Meine neue Route';
   state.customRoutes.push(copy);
   persistCustomRoutes();
+  state.routeDetails.set(copy.id, copy);
   renderRoutes();
-  selectRoute(copy.id, 'custom');
+  void selectRoute(copy.id, 'custom');
 }
 
 function loadCustomRoutes() {
@@ -1018,10 +1339,114 @@ function persistCustomRoutes() {
   localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(state.customRoutes));
 }
 
+function loadPoiCollection() {
+  if (typeof localStorage === 'undefined') return new Set();
+  try {
+    const raw = localStorage.getItem(POI_COLLECTION_KEY);
+    if (!raw) return new Set();
+    const parsed = JSON.parse(raw);
+    if (!Array.isArray(parsed)) return new Set();
+    return new Set(parsed);
+  } catch (error) {
+    console.warn('Konnte POI-Sammlung nicht laden', error);
+    return new Set();
+  }
+}
+
+function persistPoiCollection() {
+  if (typeof localStorage === 'undefined') return;
+  localStorage.setItem(POI_COLLECTION_KEY, JSON.stringify(Array.from(state.poiCollection)));
+}
+
+async function loadPoiOverview(path) {
+  try {
+    const response = await fetch(path);
+    if (!response.ok) throw new Error(`POI-Datei fehlgeschlagen (${response.status})`);
+    const data = await response.json();
+    state.poiOverview = Array.isArray(data.items) ? data.items : [];
+  } catch (error) {
+    console.warn('Konnte POIs nicht laden', error);
+    state.poiOverview = [];
+  }
+}
+
+function renderPoiOverview() {
+  if (!dom.poiList) return;
+  if (!state.poiOverview.length) {
+    dom.poiList.innerHTML = '<div class="travel-empty-state">Noch keine Points of Interest gesammelt.</div>';
+    return;
+  }
+  dom.poiList.innerHTML = state.poiOverview
+    .map((poi) => {
+      const active = state.poiCollection.has(poi.id);
+      const location = [poi.city, poi.address?.country].filter(Boolean).join(', ');
+      return `<article class="travel-poi" data-poi-id="${poi.id}">
+        <header class="travel-poi__header">
+          <div>
+            <strong>${poi.name}</strong>
+            ${location ? `<div class="travel-text-muted">${location}</div>` : ''}
+          </div>
+          <button type="button" class="travel-button travel-button--secondary" data-action="toggle-poi" data-poi-id="${poi.id}">
+            ${active ? 'Gemerkt' : 'Merken'}
+          </button>
+        </header>
+        ${poi.popularFor?.length ? `<div class="travel-text-muted">💡 ${poi.popularFor.join(' • ')}</div>` : ''}
+      </article>`;
+    })
+    .join('');
+
+  dom.poiList.querySelectorAll('[data-action="toggle-poi"]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const poiId = button.getAttribute('data-poi-id');
+      if (!poiId) return;
+      togglePoiCollection(poiId);
+      renderPoiOverview();
+    });
+  });
+}
+
+function togglePoiCollection(poiId) {
+  if (state.poiCollection.has(poiId)) {
+    state.poiCollection.delete(poiId);
+  } else {
+    state.poiCollection.add(poiId);
+  }
+  persistPoiCollection();
+}
+
+function highlightActiveRouteCard() {
+  if (!dom.routeList) return;
+  dom.routeList.querySelectorAll('[data-route-id]').forEach((card) => {
+    const isActive = card.getAttribute('data-route-id') === state.selectedRouteId;
+    card.setAttribute('data-active', isActive ? 'true' : 'false');
+  });
+}
+
 if (hasDocument) {
-  document.addEventListener('click', (event) => {
+  document.addEventListener('click', async (event) => {
     const target = event.target;
     if (!(target instanceof HTMLElement)) return;
+    if (target.matches('[data-action="copy-activity"]')) {
+      const sourceRouteId = target.getAttribute('data-route-id');
+      const activityIndex = Number(target.getAttribute('data-activity-index'));
+      const select = target.closest('.travel-activity-transfer')?.querySelector('select');
+      const destination = select?.value;
+      if (!sourceRouteId || Number.isNaN(activityIndex)) return;
+      if (!destination) {
+        window.alert('Bitte wähle zuerst eine Zielroute aus.');
+        return;
+      }
+      const success = await copyActivityToRoute(sourceRouteId, activityIndex, destination);
+      if (success) {
+        renderRoutes();
+        if (state.selectedRouteId === destination) {
+          await selectRoute(destination, 'custom');
+        }
+        target.textContent = 'Übernommen';
+        target.disabled = true;
+      }
+      return;
+    }
     if (target.matches('[data-editor="save"]')) {
       const editor = target.closest('.travel-detail__editor');
       if (!editor) return;
@@ -1048,7 +1473,7 @@ if (hasDocument) {
       });
       persistCustomRoutes();
       renderRoutes();
-      selectRoute(route.id, 'custom');
+      await selectRoute(route.id, 'custom');
     }
   });
 
@@ -1059,4 +1484,12 @@ if (hasDocument) {
 }
 
 // Export für Tests (optional)
-export { init, state, mapState, buildRouteLayer, loadCustomRoutes, markdownToHtml };
+export {
+  init,
+  state,
+  mapState,
+  buildRouteLayer,
+  loadCustomRoutes,
+  markdownToHtml,
+  copyActivityToRoute,
+};

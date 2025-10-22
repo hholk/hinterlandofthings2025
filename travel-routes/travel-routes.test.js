@@ -7,12 +7,23 @@ import assert from 'node:assert/strict';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const jsonPath = join(__dirname, 'travel-routes-data.json');
 const data = JSON.parse(readFileSync(jsonPath, 'utf8'));
+const routes = (data.routeIndex ?? []).map((entry) => {
+  const routePath = join(__dirname, entry.file);
+  return JSON.parse(readFileSync(routePath, 'utf8'));
+});
 
 const allowedModes = new Set(Object.keys(data.transportModes));
 
 test('meta information is present', () => {
   assert.ok(data.meta?.title, 'meta title missing');
-  assert.ok(Array.isArray(data.routes) && data.routes.length === 7, 'expected 7 routes');
+  assert.ok(Array.isArray(data.routeIndex) && data.routeIndex.length === 7, 'expected 7 routes');
+});
+
+test('route index entries expose search tokens', () => {
+  data.routeIndex.forEach((entry) => {
+    assert.ok(Array.isArray(entry.searchTokens), 'search tokens missing');
+    assert.ok(entry.searchTokens.length > 0, 'search tokens should not be empty');
+  });
 });
 
 test('transport modes contain rich metadata', () => {
@@ -24,7 +35,7 @@ test('transport modes contain rich metadata', () => {
 });
 
 test('every route has valid stops and segments', () => {
-  data.routes.forEach((route) => {
+  routes.forEach((route) => {
     assert.ok(route.id, 'route id missing');
     const stopIds = new Set();
     route.stops.forEach((stop) => {
@@ -52,7 +63,7 @@ test('every route has valid stops and segments', () => {
 });
 
 test('routes expose metrics for planning', () => {
-  data.routes.forEach((route) => {
+  routes.forEach((route) => {
     assert.ok(route.metrics, 'metrics missing');
     assert.equal(typeof route.metrics.totalDistanceKm, 'number');
     assert.equal(typeof route.metrics.estimatedCarbonKg, 'number');
@@ -67,7 +78,7 @@ test('routes expose metrics for planning', () => {
 });
 
 test('flights reference existing stops and contain pricing', () => {
-  data.routes.forEach((route) => {
+  routes.forEach((route) => {
     const stopIds = new Set(route.stops.map((stop) => stop.id));
     (route.flights ?? []).forEach((flight) => {
       assert.ok(stopIds.has(flight.fromStopId), 'flight from must reference stop');
@@ -82,7 +93,7 @@ test('flights reference existing stops and contain pricing', () => {
 });
 
 test('lodging and food entries contain enrichments', () => {
-  data.routes.forEach((route) => {
+  routes.forEach((route) => {
     (route.lodging ?? []).forEach((stay) => {
       assert.equal(typeof stay.nights, 'number');
       assert.ok(Array.isArray(stay.amenities), 'lodging amenities missing');
@@ -105,6 +116,18 @@ test('custom template can be instantiated', () => {
   assert.equal(template.segments.length, 0);
 });
 
+test('poi overview is available as separate file', () => {
+  assert.ok(data.poiOverview?.file, 'poi overview file missing');
+  const poiPath = join(__dirname, data.poiOverview.file);
+  const poiData = JSON.parse(readFileSync(poiPath, 'utf8'));
+  assert.ok(Array.isArray(poiData.items), 'poi items missing');
+  assert.ok(poiData.items.length > 0, 'poi list empty');
+  poiData.items.forEach((item) => {
+    assert.ok(item.id, 'poi id missing');
+    assert.ok(item.description, 'poi description missing');
+  });
+});
+
 // simple smoke test für die Browser-Utility-Funktionen
 test('markdown helper renders headings', async () => {
   const module = await import('./travel-routes.js');
@@ -116,4 +139,51 @@ test('custom route loader returns array even without localStorage', async () => 
   const module = await import('./travel-routes.js');
   const routes = module.loadCustomRoutes();
   assert.ok(Array.isArray(routes));
+});
+
+test('copyActivityToRoute clones activities without duplicates', async () => {
+  const module = await import('./travel-routes.js');
+  const { state, copyActivityToRoute } = module;
+
+  const originalCustomRoutes = state.customRoutes;
+  const originalRouteDetails = state.routeDetails;
+
+  state.customRoutes = [
+    {
+      id: 'custom-test',
+      name: 'Eigene Test-Route',
+      source: 'custom',
+      activities: [],
+    },
+  ];
+  state.routeDetails = new Map([
+    [
+      'curated-test',
+      {
+        activities: [
+          {
+            title: 'Kajak auf dem Fjord',
+            stopId: 'stop-1',
+            durationHours: 3,
+            price: 89,
+          },
+        ],
+      },
+    ],
+  ]);
+
+  try {
+    const successFirst = await copyActivityToRoute('curated-test', 0, 'custom-test');
+    assert.equal(successFirst, true);
+    assert.equal(state.customRoutes[0].activities.length, 1);
+    assert.equal(state.customRoutes[0].activities[0].title, 'Kajak auf dem Fjord');
+    assert.equal(state.customRoutes[0].activities[0].stopId, 'stop-1');
+
+    const successSecond = await copyActivityToRoute('curated-test', 0, 'custom-test');
+    assert.equal(successSecond, false);
+    assert.equal(state.customRoutes[0].activities.length, 1);
+  } finally {
+    state.customRoutes = originalCustomRoutes;
+    state.routeDetails = originalRouteDetails;
+  }
 });
