@@ -6,7 +6,9 @@ import assert from 'node:assert/strict';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const jsonPath = join(__dirname, 'travel-routes-data.json');
+const cssPath = join(__dirname, 'travel-routes.css');
 const data = JSON.parse(readFileSync(jsonPath, 'utf8'));
+const cssSource = readFileSync(cssPath, 'utf8');
 const routes = (data.routeIndex ?? []).map((entry) => {
   const routePath = join(__dirname, entry.file);
   return JSON.parse(readFileSync(routePath, 'utf8'));
@@ -17,6 +19,17 @@ const allowedModes = new Set(Object.keys(data.transportModes));
 test('meta information is present', () => {
   assert.ok(data.meta?.title, 'meta title missing');
   assert.ok(Array.isArray(data.routeIndex) && data.routeIndex.length === 7, 'expected 7 routes');
+});
+
+// Wir prüfen das Stylesheet direkt, damit der Grid-Anteil für Einsteiger:innen
+// nachvollziehbar dokumentiert bleibt und künftige Änderungen nicht versehentlich
+// die 2/3–1/3-Verteilung zerstören.
+test('desktop layout keeps detail view within the first screen', () => {
+  const match = cssSource.match(/\.travel-app\s*\{[\s\S]*?grid-template-rows:\s*minmax\(360px,\s*2fr\)\s*minmax\(320px,\s*1fr\);/);
+  assert.ok(
+    match,
+    'grid-template-rows should reserve roughly one third of the height for the detail section'
+  );
 });
 
 test('route index entries expose search tokens', () => {

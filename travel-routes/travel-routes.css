@@ -30,11 +30,12 @@ body.travel-body {
 .travel-app {
   /*
    * Das Gesamtlayout nutzt ein CSS-Grid: links die Übersicht, rechts die Karte,
-   * darunter die Details. So entsteht auf Desktops das gewünschte 1/3–2/3-Layout.
+   * darunter die Details. Damit das untere Detailfeld sofort im Blick ist,
+   * reservieren wir rund ein Drittel der Höhe – 2 Teile oben, 1 Teil unten.
    */
   display: grid;
   grid-template-columns: minmax(300px, 1fr) minmax(420px, 2fr);
-  grid-template-rows: minmax(360px, 60vh) minmax(320px, 1fr);
+  grid-template-rows: minmax(360px, 2fr) minmax(320px, 1fr);
   grid-template-areas:
     'panel map'
     'detail detail';
