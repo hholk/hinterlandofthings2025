@@ -72,6 +72,20 @@
         <circle cx="34" cy="40" r="3" fill="currentColor" />
         <circle cx="44" cy="24" r="3" fill="currentColor" />
       </svg>`
+    },
+    // Für Einsteiger:innen: Neue Unterseiten ergänzen wir als eigenes Objekt. So taucht die Karte
+    // automatisch auf Login- und Übersichtsseite auf.
+    {
+      id: 'voucher-henri',
+      href: 'voucher-henri.html',
+      title: 'Abenteuer Piesberg Gutschein',
+      description: 'Apple-inspirierte Gutscheinseite für ein gemeinsames Fossilien-Erlebnis mit Henri.',
+      icon: `<svg width="32" height="32" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+        <rect x="8" y="12" width="48" height="40" rx="12" ry="12" stroke="currentColor" stroke-width="4" fill="none" />
+        <path d="M16 28h32" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+        <circle cx="24" cy="40" r="4" />
+        <circle cx="40" cy="40" r="4" />
+      </svg>`
     }
   ];
 

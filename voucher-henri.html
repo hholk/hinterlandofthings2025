@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <title>Abenteuer Piesberg Gutschein – Henri &amp; Co.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Apple-inspirierter Gutschein für ein gemeinsames Fossilien-Abenteuer am Piesberg mit Henri – ohne Ablaufdatum.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+      /* Für Anfänger:innen: Wir legen alle Stile zentral in diesem Dokument ab, damit die Datei
+         alleine auf GitHub Pages funktioniert und keine weiteren Abhängigkeiten braucht. */
+      :root {
+        --page-bg: #f5f5f7;
+        --ink: #1d1d1f;
+        --muted: #515154;
+        --accent: #0071e3;
+        --accent-soft: rgba(0, 113, 227, 0.08);
+        --card-bg: rgba(255, 255, 255, 0.72);
+        --card-border: rgba(0, 0, 0, 0.05);
+        --shadow-soft: 0 40px 90px rgba(28, 28, 30, 0.12);
+      }
+
+      *, *::before, *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        background: var(--page-bg);
+        color: var(--ink);
+        -webkit-font-smoothing: antialiased;
+      }
+
+      header.hero {
+        position: relative;
+        padding: 96px 24px 72px;
+        background: radial-gradient(120% 160% at 90% 10%, rgba(0, 113, 227, 0.36), transparent 55%),
+                    radial-gradient(140% 160% at 0% 90%, rgba(255, 159, 10, 0.28), transparent 58%),
+                    linear-gradient(180deg, #fff, #f5f5f7 70%);
+        overflow: hidden;
+      }
+
+      .hero::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(55% 70% at 50% 20%, rgba(255, 255, 255, 0.48), transparent 65%);
+        pointer-events: none;
+      }
+
+      .hero-content {
+        max-width: 960px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+        text-align: center;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 18px;
+        border-radius: 999px;
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        font-size: 14px;
+        color: var(--muted);
+        backdrop-filter: blur(20px);
+      }
+
+      h1 {
+        margin: 32px 0 16px;
+        font-size: clamp(36px, 7vw, 64px);
+        font-weight: 700;
+        letter-spacing: -0.01em;
+      }
+
+      .subtitle {
+        margin: 0 auto;
+        max-width: 640px;
+        font-size: clamp(18px, 2.6vw, 24px);
+        line-height: 1.4;
+        color: var(--muted);
+      }
+
+      .cta {
+        margin-top: 32px;
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        padding: 18px 32px;
+        border-radius: 999px;
+        border: none;
+        background: var(--accent);
+        color: white;
+        font-size: 17px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform 160ms ease, box-shadow 160ms ease;
+        box-shadow: 0 16px 40px rgba(0, 113, 227, 0.28);
+      }
+
+      .cta:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 24px 60px rgba(0, 113, 227, 0.32);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 32px;
+        max-width: 1040px;
+        margin: -48px auto 0;
+        padding: 0 24px 96px;
+      }
+
+      .card {
+        position: relative;
+        padding: 32px;
+        border-radius: 32px;
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        backdrop-filter: blur(28px);
+        box-shadow: var(--shadow-soft);
+      }
+
+      .card h2 {
+        margin-top: 0;
+        margin-bottom: 12px;
+        font-size: 24px;
+      }
+
+      .card p,
+      .card li {
+        margin: 0 0 12px;
+        font-size: 17px;
+        line-height: 1.6;
+        color: var(--muted);
+      }
+
+      .card ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .card .tip {
+        list-style: none;
+        margin-left: -20px;
+        padding: 14px 16px;
+        border-radius: 20px;
+        background: rgba(0, 113, 227, 0.08);
+      }
+
+      .card strong {
+        color: var(--ink);
+      }
+
+      .photo {
+        margin-top: 24px;
+        border-radius: 24px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+      }
+
+      .photo img {
+        width: 100%;
+        display: block;
+      }
+
+      .photo figcaption {
+        padding: 16px 18px;
+        font-size: 14px;
+        color: var(--muted);
+        background: rgba(255, 255, 255, 0.85);
+      }
+
+      section.highlight {
+        max-width: 840px;
+        margin: 0 auto 96px;
+        padding: 64px 32px;
+        text-align: center;
+        background: var(--accent-soft);
+        border-radius: 40px;
+        border: 1px solid rgba(0, 113, 227, 0.16);
+      }
+
+      .highlight h2 {
+        margin: 0 0 12px;
+        font-size: clamp(28px, 4vw, 42px);
+      }
+
+      .highlight p {
+        margin: 0 auto;
+        max-width: 580px;
+        font-size: 19px;
+        line-height: 1.6;
+        color: var(--muted);
+      }
+
+      footer {
+        padding: 64px 24px 96px;
+        background: #f5f5f7;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      footer .footer-content {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      footer a {
+        color: inherit;
+        text-decoration: underline;
+        text-decoration-color: rgba(29, 29, 31, 0.24);
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+      }
+
+      @media (max-width: 640px) {
+        header.hero {
+          padding: 80px 18px 56px;
+        }
+
+        .card {
+          padding: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-content">
+        <span class="badge" role="note">UNESCO Global Geopark · Kultur- &amp; Landschaftspark Piesberg</span>
+        <h1>Abenteuer Piesberg Gutschein</h1>
+        <p class="subtitle">
+          Ein persönlicher Gutschein für <strong>Henri</strong>: Wir erkunden Fossilien, sammeln Steine und genießen
+          die Ruhe des Piesbergs – wann immer es uns beiden passt. Kein Ablaufdatum, nur Vorfreude.
+        </p>
+        <a class="cta" href="#details">Alle Details entdecken</a>
+      </div>
+    </header>
+
+    <section class="grid" id="details">
+      <article class="card">
+        <h2>So läuft unser Tag</h2>
+        <ul>
+          <li><strong>Start:</strong> Piesberg, Osnabrück – mitten im UNESCO Global Geopark TERRA.vita.</li>
+          <li><strong>Rucksackausleihe:</strong> Hammer, Handschuhe, Schutzbrille und Entdeckerkarte warten sonntags und feiertags von 14–16&nbsp;Uhr im Sonntagscafé des <a href="https://www.piesberger-gesellschaftshaus.de/fossilienexpedition-abenteuer-piesberg/" target="_blank" rel="noopener">Piesberger Gesellschaftshauses</a>. Rückgabe bis 18&nbsp;Uhr.</li>
+          <li><strong>Kosten:</strong> 1&nbsp;€ Leihgebühr pro Rucksack – alles andere ist gemeinsame Zeit.</li>
+          <li class="tip">Festes Schuhwerk und wetterfeste Kleidung machen das Abenteuer entspannter.</li>
+        </ul>
+        <figure class="photo">
+          <a href="https://mik-osnabrueck.de/angebot/fossiliensuche-oder-wie-kommt-das-blatt-in-den-stein/" target="_blank" rel="noopener">
+            <img src="https://mik-osnabrueck.de/wp-content/themes/yootheme/cache/ff/Schoene-Fundstuecke-bei-der-Fossiliensuche_-Fotoquelle-Gerd-Maescher-scaled-ff05a669.jpeg" alt="Fossilienfund mit Hammer in der Hand am Piesberg">
+          </a>
+          <figcaption>Foto: MIK – Museum Industriekultur Osnabrück · <a href="https://mik-osnabrueck.de/angebot/fossiliensuche-oder-wie-kommt-das-blatt-in-den-stein/" target="_blank" rel="noopener">Zur Tour</a></figcaption>
+        </figure>
+      </article>
+
+      <article class="card">
+        <h2>Optional: Geführte Tour</h2>
+        <p>
+          <strong>„Wie kommt das Blatt in den Stein?“</strong> – eine geführte Fossiliensuche des
+          <a href="https://mik-osnabrueck.de/angebot/fossiliensuche-oder-wie-kommt-das-blatt-in-den-stein/" target="_blank" rel="noopener">MIK Museum Industriekultur Osnabrück</a>.
+        </p>
+        <ul>
+          <li>Dauer ca. 120 Minuten, max. 15 Personen.</li>
+          <li>Saison: 1. April – 31. Oktober.</li>
+          <li>Treffpunkt: Haseschacht, Fürstenauer Weg&nbsp;171. Anmeldung erforderlich.</li>
+        </ul>
+        <p>
+          Wir entscheiden spontan, ob wir auf eigene Faust losziehen oder den Guide dazu holen.
+        </p>
+        <figure class="photo">
+          <a href="https://www.piesberger-gesellschaftshaus.de/fossilienexpedition-abenteuer-piesberg/" target="_blank" rel="noopener">
+            <img src="https://www.piesberger-gesellschaftshaus.de/wp-content/uploads/2018/05/dsc_0110.jpg" alt="Blattfossil im Schiefergestein – Fund am Piesberg">
+          </a>
+          <figcaption>Foto: Piesberger Gesellschaftshaus · <a href="https://www.piesberger-gesellschaftshaus.de/fossilienexpedition-abenteuer-piesberg/" target="_blank" rel="noopener">Zur Expedition</a></figcaption>
+        </figure>
+      </article>
+
+      <article class="card">
+        <h2>Der Gutschein</h2>
+        <p>
+          Dieser Gutschein steht für gemeinsame Zeit, Neugier und ein bisschen Abenteuerlust. Wir lösen ihn ein,
+          sobald wir beide können – ohne Ablaufdatum, ohne Druck.
+        </p>
+        <p>
+          <strong>Gültig für:</strong> Ein gemeinsames Stein- &amp; Fossilien-Abenteuer am Piesberg mit Henri.
+        </p>
+        <p>
+          <strong>Symbolik:</strong> 🎒 🥽 🧤 🔨 🍃 🗺️ – alles, was wir zum Erkunden brauchen.
+        </p>
+        <section class="card" style="margin-top:24px; background: white; box-shadow: none;">
+          <h2 style="margin-top:0; font-size:20px;">Druckfreundliche Version</h2>
+          <p style="margin-bottom:0;">
+            Für den Ausdruck im Browser bitte „Hintergrundgrafiken“ aktivieren – so bleiben Farben und Verläufe erhalten.
+          </p>
+        </section>
+      </article>
+    </section>
+
+    <section class="highlight" aria-label="Kontext zum Piesberg">
+      <h2>300 Millionen Jahre Erdgeschichte, direkt vor unserer Haustür</h2>
+      <p>
+        Der Piesberg erzählt Geschichten aus dem Karbon. Kohleschichten, versteinerte Blätter und beeindruckende Panoramen
+        machen das Areal zum UNESCO Global Geopark. Wir sammeln verantwortungsvoll, achten auf Sicherheit und lassen die
+        Natur so schön zurück, wie wir sie vorfinden.
+      </p>
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <p>
+          Zeiten, Saison und Konditionen basieren auf den Angaben der Veranstalter:innen. Änderungen sind möglich.
+          Weitere Informationen findest du auf den Seiten des
+          <a href="https://www.piesberger-gesellschaftshaus.de/fossilienexpedition-abenteuer-piesberg/" target="_blank" rel="noopener">Piesberger Gesellschaftshauses</a>
+          sowie des <a href="https://mik-osnabrueck.de/angebot/fossiliensuche-oder-wie-kommt-das-blatt-in-den-stein/" target="_blank" rel="noopener">MIK Museums Industriekultur Osnabrück</a>.
+        </p>
+        <p>Erstellt mit viel Vorfreude für Henri. 💙</p>
+      </div>
+    </footer>
+  </body>
+</html>
