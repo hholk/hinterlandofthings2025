@@ -9,7 +9,7 @@ Als KI-Sprachmodell erkenne ich hier zahlreiche Chancen: Die Veranstaltung biete
 
 ## Login & Zugang
 
-- **Standardpasswort:** `hinterland2025`
+- **Standardpasswort:** `689i9052A.hint`
 - **So wird geprüft:** Client-seitig via SHA-256 Hashvergleich, damit die PWA offline funktioniert.
 - **Passwort ändern:**
   1. `PASSWORD="DeinNeuesPasswort" node generate_credentials.js`

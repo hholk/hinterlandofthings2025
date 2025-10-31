@@ -29,3 +29,10 @@ test('universal home timeslots wraps calendar in shared shell', () => {
   assert.ok(html.includes('sr-note'), 'Accessible helper copy keeps the external widget understandable');
 });
 
+test('global styles guard iOS safe areas on mobile', () => {
+  const css = read('./style.css');
+  // Für Anfänger:innen: Mit Safe-Area-Variablen verhindern wir abgeschnittene Inhalte auf iPhones mit Dynamic Island.
+  assert.ok(css.includes('--safe-area-top'), 'Safe-area custom properties should be present for iOS 26 layouts');
+  assert.ok(/@media \(max-width: 600px\) \{\s+\.site-wrapper/.test(css), 'Mobile breakpoint keeps cards in a single column');
+});
+
