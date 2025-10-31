@@ -16,6 +16,16 @@
   --text: #E2E8F0;
   --text-muted: rgba(226, 232, 240, 0.72);
   --shadow: 0 24px 64px rgba(15, 23, 42, 0.55);
+  /*
+   * Die Safe-Area-Variablen sorgen dafür, dass Inhalte nicht unter die Dynamic
+   * Island oder Home-Indikatoren laufen. iOS 17+ (und damit auch iOS 26) nutzt
+   * dieselben Insets – so bleibt die Seite auf aktuellen Geräten komfortabel.
+   */
+  --safe-area-top: env(safe-area-inset-top, 0px);
+  --safe-area-right: env(safe-area-inset-right, 0px);
+  --safe-area-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-area-left: env(safe-area-inset-left, 0px);
+  color-scheme: dark;
 }
 
 body {
@@ -33,6 +43,9 @@ body {
   line-height: 1.65;
   position: relative;
   overflow-x: hidden;
+  /* Für Geräte mit Notch achten wir auf zusätzliche Innenabstände. */
+  padding-left: calc(0px + var(--safe-area-left));
+  padding-right: calc(0px + var(--safe-area-right));
 }
 
 body::before {
@@ -118,6 +131,46 @@ main {
   animation-delay: 8s;
 }
 
+@media (max-width: 600px) {
+  .floating-orb {
+    opacity: 0.3;
+    filter: blur(80px);
+    transform: translateZ(0);
+  }
+
+  .floating-orb--one,
+  .floating-orb--two,
+  .floating-orb--three {
+    width: 240px;
+    height: 240px;
+  }
+
+  .floating-orb--one {
+    top: -140px;
+    left: -120px;
+  }
+
+  .floating-orb--two {
+    bottom: 8%;
+    right: -100px;
+  }
+
+  .floating-orb--three {
+    bottom: 18%;
+    left: 10%;
+  }
+}
+
+@media (max-width: 480px) {
+  .floating-orb {
+    display: none;
+  }
+
+  .page-pattern {
+    opacity: 0.45;
+  }
+}
+
 @keyframes orb-float {
   0%,
   100% {
@@ -131,12 +184,21 @@ main {
 .site-wrapper {
   position: relative;
   z-index: 1;
-  padding: clamp(2rem, 5vw, 4rem);
+  /*
+   * Für Mobilgeräte holen wir das neue iOS 26 Fluent-Layout ins Web: großzügige
+   * Abstände, die automatisch um die Safe-Area ergänzt werden.
+   */
+  --page-padding: clamp(2.1rem, 6vw, 4.5rem);
+  padding: var(--page-padding);
+  padding-top: calc(var(--page-padding) + var(--safe-area-top));
+  padding-bottom: calc(var(--page-padding) + var(--safe-area-bottom));
+  padding-left: calc(var(--page-padding) + var(--safe-area-left));
+  padding-right: calc(var(--page-padding) + var(--safe-area-right));
   max-width: 1160px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: clamp(1.5rem, 4vw, 2.5rem);
+  gap: clamp(1.6rem, 5vw, 2.75rem);
 }
 
 .page-card,
@@ -419,6 +481,7 @@ p {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: clamp(1.25rem, 3vw, 2rem);
+  align-items: stretch;
 }
 
 .feature-card {
@@ -729,6 +792,43 @@ body.nav-open #md-nav {
   }
 }
 
+@media (max-width: 600px) {
+  .site-wrapper {
+    --page-padding: clamp(1.4rem, 7vw, 2rem);
+    gap: 1.4rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .site-header {
+    align-items: stretch;
+    gap: 0.6rem;
+  }
+
+  .site-header h1 {
+    font-size: clamp(2rem, 8vw, 2.4rem);
+  }
+
+  .site-header .lead {
+    font-size: 1.05rem;
+  }
+
+  .site-actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 0.6rem;
+  }
+
+  .site-actions .btn {
+    width: 100%;
+    padding-block: 0.85rem;
+  }
+}
+
 @media (max-width: 640px) {
   .feature-card {
     grid-template-columns: 1fr;
@@ -936,7 +1036,16 @@ body.login-page a {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: clamp(2rem, 4vw, 4rem);
-  padding: clamp(2rem, 5vw, 5rem);
+  /*
+   * Der zusätzliche Innenabstand verhindert, dass die Login-Card an der Dynamic
+   * Island klebt. Gleichzeitig bleibt das Layout auf großen Screens luftig.
+   */
+  --panel-padding: clamp(2.2rem, 5vw, 5rem);
+  padding: var(--panel-padding);
+  padding-top: calc(var(--panel-padding) + var(--safe-area-top));
+  padding-bottom: calc(var(--panel-padding) + var(--safe-area-bottom));
+  padding-left: calc(var(--panel-padding) + var(--safe-area-left));
+  padding-right: calc(var(--panel-padding) + var(--safe-area-right));
   z-index: 1;
 }
 
@@ -1213,6 +1322,58 @@ body.login-page a {
 
   .login-benefits li {
     text-align: left;
+  }
+}
+
+@media (max-width: 600px) {
+  .login-layout {
+    --panel-padding: clamp(1.5rem, 6vw, 2.2rem);
+    gap: 1.5rem;
+  }
+
+  .login-hero {
+    gap: 1.2rem;
+  }
+
+  .login-benefits {
+    gap: 0.65rem;
+  }
+
+  .login-benefits li {
+    padding: 0.9rem 1rem;
+  }
+
+  .login-subtitle,
+  .login-footnote {
+    font-size: 1rem;
+  }
+
+  .login-card {
+    padding: clamp(1.4rem, 6vw, 1.8rem);
+  }
+
+  .login-card .btn {
+    padding-block: 1rem;
+    font-size: 1.05rem;
+  }
+
+  .password-input input {
+    font-size: 1.05rem;
+    padding: 1rem;
+  }
+
+  .ghost-button {
+    padding-inline: 1.1rem;
+  }
+
+  .login-success__actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .login-success__actions .btn {
+    width: 100%;
   }
 }
 
