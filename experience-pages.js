@@ -86,7 +86,19 @@
         <circle cx="24" cy="40" r="4" />
         <circle cx="40" cy="40" r="4" />
       </svg>`
+    },
+    {
+      id: 'voucher-henri-planetarium',
+      href: 'voucher-henri-planetarium.html',
+      title: 'Planetariums-Gutschein',
+      description: 'Gutscheinseite für einen gemeinsamen Besuch im Planetarium Osnabrück mit Henri.',
+      icon: `<svg width="32" height="32" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+        <circle cx="32" cy="32" r="20" stroke="currentColor" stroke-width="4" fill="none" />
+        <path d="M8 28c8 8 24 16 48 0" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+        <circle cx="46" cy="24" r="4" />
+      </svg>`
     }
+
   ];
 
   if (typeof module !== 'undefined' && module.exports) {
