@@ -1,4 +1,8 @@
-const CACHE_NAME = 'hlt2025-cache-v2';
+// Für Anfänger:innen: Sobald wir neue Seiten hinzufügen, sollten wir die Cache-
+// Version erhöhen. So laden Browser garantiert die frischeste Konfiguration
+// (z.B. mit neuen Gutscheinen) und wir umgehen hartnäckige GitHub-Pages-Caches.
+const CACHE_VERSION = 'v3';
+const CACHE_NAME = `hlt2025-cache-${CACHE_VERSION}`;
 const ASSETS = [
   './',
   './hinterland.html',
@@ -8,6 +12,10 @@ const ASSETS = [
   './manifest.webmanifest',
   './timeslots.json',
   './md-files.json',
+  './experience-pages.js',
+  './experience-ui.js',
+  './voucher-henri.html',
+  './voucher-henri-planetarium.html',
 ];
 // include all markdown files
 self.addEventListener('install', event => {
