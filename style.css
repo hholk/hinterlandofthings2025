@@ -995,7 +995,9 @@ body.nav-open #md-nav {
 /* --- Login Experience --------------------------------------------------- */
 body.login-page {
   margin: 0;
+  /* Erst klassisch 100vh setzen und anschließend 100dvh für moderne Browser. */
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: stretch;
   justify-content: center;
@@ -1003,7 +1005,13 @@ body.login-page {
   background: radial-gradient(circle at top left, rgba(14, 125, 194, 0.6), rgba(0, 0, 0, 0.85)),
               linear-gradient(160deg, #0f172a, #030712 55%, #111827 100%);
   color: #f8fafc;
-  overflow: hidden;
+  /*
+   * Auf iOS/Android benötigen wir vertikales Scrollen, wenn der Bildschirm sehr
+   * klein ist. Zuvor war overflow:hidden gesetzt und mobile Nutzer:innen sahen
+   * daher den unteren Teil des Formulars nicht.
+   */
+  overflow-x: hidden;
+  overflow-y: auto;
   position: relative;
 }
 

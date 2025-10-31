@@ -11,6 +11,7 @@ Als KI-Sprachmodell erkenne ich hier zahlreiche Chancen: Die Veranstaltung biete
 
 - **Standardpasswort:** `689i9052A.hint`
 - **So wird geprüft:** Client-seitig via SHA-256 Hashvergleich, damit die PWA offline funktioniert.
+- **Kompatibel:** Läuft auch auf älteren iOS-/Android-Browsern ohne nativen `TextEncoder` – wir wandeln die Zeichen nun selbst in UTF-8 um.
 - **Passwort ändern:**
   1. `PASSWORD="DeinNeuesPasswort" node generate_credentials.js`
   2. Die generierte `credentials.js` einchecken.
