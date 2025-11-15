@@ -4,14 +4,11 @@
     <meta charset="utf-8" />
     <title>Weiterleitung zur Travel Experience</title>
     <meta http-equiv="refresh" content="0; url=./travel-routes/" />
-    <!-- Sicherstellen, dass die Weiterleitung nur mit gültiger Session greift. -->
-    <script src="../auth-utils.js"></script>
-    <script src="../protect.js"></script>
     <script>
-      // Für Einsteiger:innen: Wir leiten alte .html-Links auf die neue SvelteKit-Route um.
+      // Für Einsteiger:innen: Die Chile Experience ist jetzt frei zugänglich,
+      // daher verlinken wir ohne Passwort-Check direkt auf die neue Route.
       (function redirectLegacyRoute() {
         var targetPath = location.pathname.replace(/travel-routes\.html$/, 'travel-routes/');
-        // Falls der Pfad eine andere .html-Datei enthält, sichern wir ab und hängen einen Slash an.
         if (!/\/travel-routes\/$/.test(targetPath)) {
           targetPath = location.pathname.replace(/\.html$/, '/');
         }
