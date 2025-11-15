@@ -7,6 +7,12 @@
     DayDefinition,
     DayArrivalSegment,
     ActivityRestaurant,
+    RouteStop,
+    RouteSegment,
+    FlightInfo,
+    LodgingInfo,
+    FoodInfo,
+    ActivityInfo,
     LoadedTravelRoutesDataset,
     MobilityOption
   } from '../../../lib/data/chile-travel';
@@ -46,6 +52,114 @@
     dayId?: string;
   }
 
+  interface StopSegmentEntry {
+    segment: RouteSegment;
+    direction: 'arrival' | 'departure';
+    fromStop?: RouteStop;
+    toStop?: RouteStop;
+  }
+
+  interface StopFlightEntry {
+    flight: FlightInfo;
+    direction: 'arrival' | 'departure';
+    fromStop?: RouteStop;
+    toStop?: RouteStop;
+  }
+
+  interface StopDataIndex {
+    segments: Record<string, StopSegmentEntry[]>;
+    flights: Record<string, StopFlightEntry[]>;
+    lodging: Record<string, LodgingInfo[]>;
+    food: Record<string, FoodInfo[]>;
+    activities: Record<string, ActivityInfo[]>;
+    notes: Record<string, string[]>;
+  }
+
+  function createEmptyStopDataIndex(): StopDataIndex {
+    return {
+      segments: {},
+      flights: {},
+      lodging: {},
+      food: {},
+      activities: {},
+      notes: {}
+    };
+  }
+
+  function pushValue<T>(collection: Record<string, T[]>, key: string | undefined, value: T | undefined) {
+    if (!key || value === undefined) return;
+    if (!collection[key]) {
+      collection[key] = [];
+    }
+    collection[key].push(value);
+  }
+
+  function buildStopDataIndex(route: RouteDetail | null): StopDataIndex {
+    if (!route) return createEmptyStopDataIndex();
+    const index = createEmptyStopDataIndex();
+    const stopMap = new Map<string, RouteStop>();
+    (route.stops ?? []).forEach((stop) => {
+      if (stop.id) {
+        stopMap.set(stop.id, stop);
+        if (Array.isArray(stop.notes)) {
+          stop.notes.forEach((note) => pushValue(index.notes, stop.id, note));
+        }
+      }
+    });
+
+    (route.segments ?? []).forEach((segment) => {
+      const fromStop = segment.from ? stopMap.get(segment.from) : undefined;
+      const toStop = segment.to ? stopMap.get(segment.to) : undefined;
+      pushValue(index.segments, segment.from, {
+        segment,
+        direction: 'departure',
+        fromStop,
+        toStop
+      });
+      pushValue(index.segments, segment.to, {
+        segment,
+        direction: 'arrival',
+        fromStop,
+        toStop
+      });
+    });
+
+    (route.flights ?? []).forEach((flight) => {
+      const fromStop = stopMap.get(flight.fromStopId);
+      const toStop = stopMap.get(flight.toStopId);
+      pushValue(index.flights, flight.fromStopId, {
+        flight,
+        direction: 'departure',
+        fromStop,
+        toStop
+      });
+      pushValue(index.flights, flight.toStopId, {
+        flight,
+        direction: 'arrival',
+        fromStop,
+        toStop
+      });
+    });
+
+    (route.lodging ?? []).forEach((stay) => {
+      pushValue(index.lodging, stay.stopId, stay);
+    });
+
+    (route.food ?? []).forEach((spot) => {
+      pushValue(index.food, spot.stopId, spot);
+    });
+
+    (route.activities ?? []).forEach((activity) => {
+      pushValue(index.activities, activity.stopId, activity);
+    });
+
+    if (route.notes && route.stops?.[0]?.id) {
+      pushValue(index.notes, route.stops[0].id, route.notes);
+    }
+
+    return index;
+  }
+
   const ROUTE_SEGMENT_SOURCE = 'travel-route-segments';
   const ROUTE_SEGMENT_LAYER = 'travel-route-segments-layer';
   const ROUTE_SEGMENT_LAYER_DASHED = 'travel-route-segments-layer-dashed';
@@ -67,6 +181,7 @@
   let sliderValue = 0;
   let sliderMax = 0;
   let sliderLabel = '';
+  let stopDataIndex: StopDataIndex = createEmptyStopDataIndex();
 
   let mapContainer: HTMLDivElement | null = null;
   let mapInstance: MapLibreMap | null = null;
@@ -621,8 +736,39 @@
     return day?.arrival?.segments ?? [];
   }
 
+  function getStopSegments(stopId: string | undefined): StopSegmentEntry[] {
+    if (!stopId) return [];
+    return stopDataIndex.segments[stopId] ?? [];
+  }
+
+  function getStopFlights(stopId: string | undefined): StopFlightEntry[] {
+    if (!stopId) return [];
+    return stopDataIndex.flights[stopId] ?? [];
+  }
+
+  function getStopLodging(stopId: string | undefined): LodgingInfo[] {
+    if (!stopId) return [];
+    return stopDataIndex.lodging[stopId] ?? [];
+  }
+
+  function getStopFood(stopId: string | undefined): FoodInfo[] {
+    if (!stopId) return [];
+    return stopDataIndex.food[stopId] ?? [];
+  }
+
+  function getStopActivities(stopId: string | undefined): ActivityInfo[] {
+    if (!stopId) return [];
+    return stopDataIndex.activities[stopId] ?? [];
+  }
+
+  function getStopNotes(stopId: string | undefined): string[] {
+    if (!stopId) return [];
+    return stopDataIndex.notes[stopId] ?? [];
+  }
+
   $: selectedIndexEntry = data.travel.routeIndex.find((entry) => entry.id === selectedRouteId) ?? null;
   $: selectedRoute = data.travel.routes[selectedRouteId] ?? null;
+  $: stopDataIndex = buildStopDataIndex(selectedRoute);
   $: segmentCollection = buildSegmentCollection(selectedRoute, data.travel.transportModes);
   $: stopCollection = buildStopCollection(selectedRoute);
   $: allCoordinates = collectAllCoordinates(segmentCollection, stopCollection);
@@ -982,6 +1128,208 @@
                         {/each}
                       </div>
                     {/if}
+                    <div class="travel__stop-extras">
+                      {#if getStopSegments(stop.id).length}
+                        <details class="travel__mini-details">
+                          <summary>Transporte &amp; Segmente</summary>
+                          <ul class="travel__data-list">
+                            {#each getStopSegments(stop.id) as item}
+                              <li>
+                                <strong>
+                                  {item.direction === 'arrival' ? 'Ankunft' : 'Weiterreise'} ·
+                                  {getModeAppearance(item.segment.mode).label}
+                                </strong>
+                                <div>
+                                  {item.fromStop?.name ?? item.segment.from ?? 'Start'} →
+                                  {item.toStop?.name ?? item.segment.to ?? 'Ziel'}
+                                  {#if item.segment.distanceKm}
+                                    · {numberFormatter.format(item.segment.distanceKm)} km
+                                  {/if}
+                                  {#if item.segment.durationHours}
+                                    · {decimalFormatter.format(item.segment.durationHours)} h
+                                  {/if}
+                                  {#if item.segment.carbonKg}
+                                    · {numberFormatter.format(item.segment.carbonKg)} kg CO₂
+                                  {/if}
+                                </div>
+                                {#if item.segment.operator}
+                                  <div>Betreiber: {item.segment.operator}</div>
+                                {/if}
+                                {#if item.segment.description}
+                                  <p>{item.segment.description}</p>
+                                {/if}
+                              </li>
+                            {/each}
+                          </ul>
+                        </details>
+                      {/if}
+
+                      {#if getStopFlights(stop.id).length}
+                        <details class="travel__mini-details">
+                          <summary>Flüge</summary>
+                          <ul class="travel__data-list">
+                            {#each getStopFlights(stop.id) as entry}
+                              <li>
+                                <strong>
+                                  {entry.fromStop?.name ?? entry.flight.fromStopId} →
+                                  {entry.toStop?.name ?? entry.flight.toStopId}
+                                </strong>
+                                <div>
+                                  {entry.direction === 'arrival' ? 'Ankunft' : 'Abflug'} an diesem Stopp ·
+                                  {entry.flight.airline
+                                    ? `${entry.flight.airline}${entry.flight.flightNumber ? ` • ${entry.flight.flightNumber}` : ''}`
+                                    : entry.flight.flightNumber ?? 'Flug'}
+                                </div>
+                                <div>
+                                  {#if entry.flight.durationHours}
+                                    {decimalFormatter.format(entry.flight.durationHours)} h
+                                  {/if}
+                                  {#if entry.flight.carbonKg}
+                                    · {numberFormatter.format(entry.flight.carbonKg)} kg CO₂
+                                  {/if}
+                                  {#if entry.flight.price !== undefined}
+                                    · {formatCurrency(entry.flight.price) ?? ''}
+                                  {/if}
+                                </div>
+                                {#if entry.flight.baggage}
+                                  <p>Gepäck: {entry.flight.baggage}</p>
+                                {/if}
+                              </li>
+                            {/each}
+                          </ul>
+                        </details>
+                      {/if}
+
+                      {#if getStopLodging(stop.id).length}
+                        <details class="travel__mini-details">
+                          <summary>Unterkünfte</summary>
+                          <ul class="travel__lodging-list">
+                            {#each getStopLodging(stop.id) as stay}
+                              <li>
+                                <h4>{stay.name}</h4>
+                                <p class="travel__lodging-meta">
+                                  {stay.city ?? stop.city ?? 'Chile'} · {stay.nights ?? 0} Nächte ·
+                                  {stay.pricePerNight ? `${formatCurrency(stay.pricePerNight)} pro Nacht` : 'Preis auf Anfrage'}
+                                </p>
+                                {#if stay.description}
+                                  <p>{stay.description}</p>
+                                {/if}
+                                {#if stay.amenities?.length}
+                                  <ul class="travel__pill-list">
+                                    {#each stay.amenities as amenity}
+                                      <li>{amenity}</li>
+                                    {/each}
+                                  </ul>
+                                {/if}
+                                {#if stay.url}
+                                  <p><a href={stay.url} target="_blank" rel="noopener">Zur Unterkunft</a></p>
+                                {/if}
+                                {#if stay.images?.length}
+                                  <div class="travel__image-grid">
+                                    {#each stay.images as image}
+                                      <figure>
+                                        <img src={image.url} alt={image.caption ?? stay.name} loading="lazy" />
+                                        {#if image.caption}
+                                          <figcaption>{image.caption}</figcaption>
+                                        {/if}
+                                      </figure>
+                                    {/each}
+                                  </div>
+                                {/if}
+                              </li>
+                            {/each}
+                          </ul>
+                        </details>
+                      {/if}
+
+                      {#if getStopFood(stop.id).length}
+                        <details class="travel__mini-details">
+                          <summary>Kulinarik</summary>
+                          <ul class="travel__food-list">
+                            {#each getStopFood(stop.id) as spot}
+                              <li>
+                                <h4>{spot.name}</h4>
+                                <p class="travel__food-meta">
+                                  {spot.city ?? stop.city ?? 'Chile'} · {spot.priceRange ?? 'Preis variiert'}
+                                </p>
+                                {#if spot.description}
+                                  <p>{spot.description}</p>
+                                {/if}
+                                {#if spot.mustTry?.length}
+                                  <ul class="travel__pill-list">
+                                    {#each spot.mustTry as item}
+                                      <li>{item}</li>
+                                    {/each}
+                                  </ul>
+                                {/if}
+                                {#if spot.images?.length}
+                                  <div class="travel__image-grid">
+                                    {#each spot.images as image}
+                                      <figure>
+                                        <img src={image.url} alt={image.caption ?? spot.name} loading="lazy" />
+                                        {#if image.caption}
+                                          <figcaption>{image.caption}</figcaption>
+                                        {/if}
+                                      </figure>
+                                    {/each}
+                                  </div>
+                                {/if}
+                              </li>
+                            {/each}
+                          </ul>
+                        </details>
+                      {/if}
+
+                      {#if getStopActivities(stop.id).length}
+                        <details class="travel__mini-details">
+                          <summary>Aktivitäten</summary>
+                          <ul class="travel__activity-list">
+                            {#each getStopActivities(stop.id) as activity}
+                              <li>
+                                <h4>{activity.title ?? activity.name}</h4>
+                                <p class="travel__activity-meta">
+                                  {activity.location ?? activity.stopId ?? stop.city ?? 'Unterwegs'} ·
+                                  {activity.durationHours ? `${decimalFormatter.format(activity.durationHours)} h` : 'flexibel'} ·
+                                  {activity.difficulty ?? 'alle Levels'}
+                                </p>
+                                {#if activity.description}
+                                  <p>{activity.description}</p>
+                                {/if}
+                                {#if activity.price}
+                                  <p>Kosten: {formatCurrency(activity.price)}</p>
+                                {/if}
+                                {#if activity.website}
+                                  <p><a href={activity.website} target="_blank" rel="noopener">Zur Aktivität</a></p>
+                                {/if}
+                                {#if activity.images?.length}
+                                  <div class="travel__image-grid">
+                                    {#each activity.images as image}
+                                      <figure>
+                                        <img src={image.url} alt={image.caption ?? activity.title ?? activity.name} loading="lazy" />
+                                        {#if image.caption}
+                                          <figcaption>{image.caption}</figcaption>
+                                        {/if}
+                                      </figure>
+                                    {/each}
+                                  </div>
+                                {/if}
+                              </li>
+                            {/each}
+                          </ul>
+                        </details>
+                      {/if}
+
+                      {#if getStopNotes(stop.id).length}
+                        <details class="travel__mini-details">
+                          <summary>Hinweise</summary>
+                          <ul class="travel__data-list">
+                            {#each getStopNotes(stop.id) as note}
+                              <li>{note}</li>
+                            {/each}
+                          </ul>
+                        </details>
+                      {/if}
+                    </div>
                   </li>
                 {/each}
               </ol>
@@ -989,237 +1337,6 @@
           </details>
         {/if}
 
-        {#if selectedRoute.segments?.length}
-          <details class="travel__spoiler">
-            <summary>Transporte & Segmente</summary>
-            <div class="travel__spoiler-content">
-              <table class="travel__segments-table">
-                <thead>
-                  <tr>
-                    <th>Modus</th>
-                    <th>Von → Nach</th>
-                    <th>Distanz</th>
-                    <th>Dauer</th>
-                    <th>CO₂</th>
-                    <th>Betreiber</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {#each selectedRoute.segments as segment}
-                    <tr>
-                      <td>
-                        <span
-                          class="travel__mode-chip"
-                          style={`--mode-color: ${getModeAppearance(segment.mode).color}`}
-                        >
-                          {data.travel.transportModes[segment.mode]?.icon ?? ''}
-                          {getModeAppearance(segment.mode).label}
-                        </span>
-                      </td>
-                      <td>
-                        {segment.from} → {segment.to}
-                      </td>
-                      <td>{segment.distanceKm ? `${numberFormatter.format(segment.distanceKm)} km` : '–'}</td>
-                      <td>{segment.durationHours ? `${decimalFormatter.format(segment.durationHours)} h` : '–'}</td>
-                      <td>{segment.carbonKg ? `${numberFormatter.format(segment.carbonKg)} kg` : '–'}</td>
-                      <td>{segment.operator ?? '–'}</td>
-                    </tr>
-                  {/each}
-                </tbody>
-              </table>
-            </div>
-          </details>
-        {/if}
-
-        {#if selectedRoute.flights?.length}
-          <details class="travel__spoiler">
-            <summary>Flüge</summary>
-            <div class="travel__spoiler-content">
-              <table class="travel__segments-table">
-                <thead>
-                  <tr>
-                    <th>Verbindung</th>
-                    <th>Airline</th>
-                    <th>Dauer</th>
-                    <th>Preis</th>
-                    <th>CO₂</th>
-                    <th>Details</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {#each selectedRoute.flights as flight}
-                    <tr>
-                      <td>{flight.fromStopId} → {flight.toStopId}</td>
-                      <td>{flight.airline ?? '–'}</td>
-                      <td>{flight.durationHours ? `${decimalFormatter.format(flight.durationHours)} h` : '–'}</td>
-                      <td>{formatCurrency(flight.price)}</td>
-                      <td>{flight.carbonKg ? `${numberFormatter.format(flight.carbonKg)} kg` : '–'}</td>
-                      <td>
-                        <ul class="travel__data-list">
-                          {#if flight.aircraft}
-                            <li>Flugzeug: {flight.aircraft}</li>
-                          {/if}
-                          {#if flight.cabinClass}
-                            <li>Reiseklasse: {flight.cabinClass}</li>
-                          {/if}
-                          {#if flight.baggage}
-                            <li>Gepäck: {flight.baggage}</li>
-                          {/if}
-                        </ul>
-                      </td>
-                    </tr>
-                  {/each}
-                </tbody>
-              </table>
-            </div>
-          </details>
-        {/if}
-
-        {#if selectedRoute.lodging?.length}
-          <details class="travel__spoiler">
-            <summary>Unterkünfte</summary>
-            <div class="travel__spoiler-content">
-              <ul class="travel__lodging-list">
-                {#each selectedRoute.lodging as stay}
-                  <li>
-                    <h4>{stay.name}</h4>
-                    <p class="travel__lodging-meta">
-                      {stay.city ?? 'Chile'} · {stay.nights ?? 0} Nächte · {stay.pricePerNight ? `${formatCurrency(stay.pricePerNight)} pro Nacht` : 'Preis auf Anfrage'}
-                    </p>
-                    {#if stay.description}
-                      <p>{stay.description}</p>
-                    {/if}
-                    {#if stay.amenities?.length}
-                      <ul class="travel__pill-list">
-                        {#each stay.amenities as amenity}
-                          <li>{amenity}</li>
-                        {/each}
-                      </ul>
-                    {/if}
-                    {#if stay.url}
-                      <p><a href={stay.url} target="_blank" rel="noopener">Zur Unterkunft</a></p>
-                    {/if}
-                    {#if stay.images?.length}
-                      <div class="travel__image-grid">
-                        {#each stay.images as image}
-                          <figure>
-                            <img src={image.url} alt={image.caption ?? stay.name} loading="lazy" />
-                            {#if image.caption}
-                              <figcaption>{image.caption}</figcaption>
-                            {/if}
-                          </figure>
-                        {/each}
-                      </div>
-                    {/if}
-                  </li>
-                {/each}
-              </ul>
-            </div>
-          </details>
-        {/if}
-
-        {#if selectedRoute.food?.length}
-          <details class="travel__spoiler">
-            <summary>Kulinarik</summary>
-            <div class="travel__spoiler-content">
-              <ul class="travel__food-list">
-                {#each selectedRoute.food as spot}
-                  <li>
-                    <h4>{spot.name}</h4>
-                    <p class="travel__food-meta">{spot.city ?? 'Chile'} · {spot.priceRange ?? 'Preis variiert'}</p>
-                    {#if spot.description}
-                      <p>{spot.description}</p>
-                    {/if}
-                    {#if spot.mustTry?.length}
-                      <ul class="travel__pill-list">
-                        {#each spot.mustTry as item}
-                          <li>{item}</li>
-                        {/each}
-                      </ul>
-                    {/if}
-                    {#if spot.images?.length}
-                      <div class="travel__image-grid">
-                        {#each spot.images as image}
-                          <figure>
-                            <img src={image.url} alt={image.caption ?? spot.name} loading="lazy" />
-                            {#if image.caption}
-                              <figcaption>{image.caption}</figcaption>
-                            {/if}
-                          </figure>
-                        {/each}
-                      </div>
-                    {/if}
-                  </li>
-                {/each}
-              </ul>
-            </div>
-          </details>
-        {/if}
-
-        {#if selectedRoute.activities?.length}
-          <details class="travel__spoiler">
-            <summary>Aktivitäten</summary>
-            <div class="travel__spoiler-content">
-              <ul class="travel__activity-list">
-                {#each selectedRoute.activities as activity}
-                  <li>
-                    <h4>{activity.title ?? activity.name}</h4>
-                    <p class="travel__activity-meta">
-                      {activity.location ?? activity.stopId ?? 'Unterwegs'} ·
-                      {activity.durationHours ? `${decimalFormatter.format(activity.durationHours)} h` : 'flexibel'} ·
-                      {activity.difficulty ?? 'alle Levels'}
-                    </p>
-                    {#if activity.description}
-                      <p>{activity.description}</p>
-                    {/if}
-                    {#if activity.price}
-                      <p>Kosten: {formatCurrency(activity.price)}</p>
-                    {/if}
-                    {#if activity.website}
-                      <p><a href={activity.website} target="_blank" rel="noopener">Zur Aktivität</a></p>
-                    {/if}
-                    {#if activity.images?.length}
-                      <div class="travel__image-grid">
-                        {#each activity.images as image}
-                          <figure>
-                            <img src={image.url} alt={image.caption ?? activity.title ?? activity.name} loading="lazy" />
-                            {#if image.caption}
-                              <figcaption>{image.caption}</figcaption>
-                            {/if}
-                          </figure>
-                        {/each}
-                      </div>
-                    {/if}
-                    {#if activity.restaurants?.length}
-                      <details class="travel__mini-details">
-                        <summary>Restaurantempfehlungen</summary>
-                        <ul class="travel__restaurant-list">
-                          {#each activity.restaurants as restaurant}
-                            <li>
-                              <strong>{restaurant.name}</strong>
-                              {#if restaurant.images?.length}
-                                <div class="travel__image-grid">
-                                  {#each restaurant.images as image}
-                                    <figure>
-                                      <img src={image.url} alt={image.caption ?? restaurant.name} loading="lazy" />
-                                      {#if image.caption}
-                                        <figcaption>{image.caption}</figcaption>
-                                      {/if}
-                                    </figure>
-                                  {/each}
-                                </div>
-                              {/if}
-                            </li>
-                          {/each}
-                        </ul>
-                      </details>
-                    {/if}
-                  </li>
-                {/each}
-              </ul>
-            </div>
-          </details>
-        {/if}
 
         {#if selectedRoute.days?.length}
           <details class="travel__spoiler">
@@ -1388,14 +1505,6 @@
           </details>
         {/if}
 
-        {#if selectedRoute.notes}
-          <details class="travel__spoiler">
-            <summary>Hinweise</summary>
-            <div class="travel__spoiler-content">
-              <p>{selectedRoute.notes}</p>
-            </div>
-          </details>
-        {/if}
       </div>
     </article>
   {:else}
@@ -2007,37 +2116,11 @@
     margin-top: 0.2rem;
   }
 
-  .travel__segments-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.9rem;
-  }
-
-  .travel__segments-table th {
-    text-align: left;
-    color: #475569;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    padding-bottom: 0.5rem;
-  }
-
-  .travel__segments-table td {
-    padding: 0.6rem 0;
-    border-top: 1px solid rgba(15, 23, 42, 0.08);
-    vertical-align: top;
-  }
-
-  .travel__mode-chip {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35rem;
-    background: rgba(99, 102, 241, 0.12);
-    color: #1d4ed8;
-    padding: 0.25rem 0.65rem;
-    border-radius: 999px;
-    font-size: 0.8rem;
-    font-weight: 600;
+  .travel__stop-extras {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
   }
 
   .travel__data-list li {

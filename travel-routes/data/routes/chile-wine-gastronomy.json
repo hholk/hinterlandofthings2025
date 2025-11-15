@@ -62,7 +62,7 @@
       "type": "city",
       "coordinates": {
         "lat": -33.4406,
-        "lng": -70.6420
+        "lng": -70.642
       },
       "city": "Santiago",
       "address": {
@@ -82,6 +82,10 @@
           "credit": "María Fernanda Rojas",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Nutze den frühen Vormittag, um Santiago – Barrio Lastarria zu Fuß zu erkunden, bevor die Sonne die Straßenschluchten aufheizt.",
+        "Beliebte Restaurants in Santiago sollte man spätestens am Vortag reservieren – Januar zählt zur Hochsaison."
       ]
     },
     {
@@ -89,8 +93,8 @@
       "name": "Valle de Casablanca",
       "type": "nature",
       "coordinates": {
-        "lat": -33.3070,
-        "lng": -71.4020
+        "lat": -33.307,
+        "lng": -71.402
       },
       "city": "Casablanca",
       "address": {
@@ -110,6 +114,10 @@
           "credit": "Sebastián Pardo",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Das Wetter im Gebiet Valle de Casablanca schlägt schnell um – Regenjacke und Sonnenschutz griffbereit halten.",
+        "Für Ranger-Briefings und Permit-Kontrollen immer 15 Minuten Zeitpuffer einplanen."
       ]
     },
     {
@@ -117,7 +125,7 @@
       "name": "Valparaíso – Puerto",
       "type": "city",
       "coordinates": {
-        "lat": -33.0400,
+        "lat": -33.04,
         "lng": -71.6296
       },
       "city": "Valparaíso",
@@ -138,6 +146,10 @@
           "credit": "Fabiola Peñailillo",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Nutze den frühen Vormittag, um Valparaíso – Puerto zu Fuß zu erkunden, bevor die Sonne die Straßenschluchten aufheizt.",
+        "Beliebte Restaurants in Valparaíso sollte man spätestens am Vortag reservieren – Januar zählt zur Hochsaison."
       ]
     },
     {
@@ -166,6 +178,10 @@
           "credit": "Camila Herrera",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Santa Cruz – Colchagua Valley zeigt sich zur Golden Hour besonders fotogen – Kamera oder Drohne rechtzeitig laden.",
+        "Rund um Santa Cruz sind Parkplätze begrenzt; Anreise vor 10 Uhr erleichtert die Suche."
       ]
     },
     {
@@ -194,6 +210,10 @@
           "credit": "Camila Gutiérrez",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Nutze den frühen Vormittag, um Talca – Mercado Central zu Fuß zu erkunden, bevor die Sonne die Straßenschluchten aufheizt.",
+        "Beliebte Restaurants in Talca sollte man spätestens am Vortag reservieren – Januar zählt zur Hochsaison."
       ]
     },
     {
@@ -222,6 +242,10 @@
           "credit": "Nicolás Pérez",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Nutze den frühen Vormittag, um Concepción – Mercado Central zu Fuß zu erkunden, bevor die Sonne die Straßenschluchten aufheizt.",
+        "Beliebte Restaurants in Concepción sollte man spätestens am Vortag reservieren – Januar zählt zur Hochsaison."
       ]
     }
   ],

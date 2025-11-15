@@ -82,6 +82,10 @@
           "credit": "Carolina Lagos",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Nutze den frühen Vormittag, um Santiago – Sky Costanera Aussicht zu Fuß zu erkunden, bevor die Sonne die Straßenschluchten aufheizt.",
+        "Beliebte Restaurants in Santiago sollte man spätestens am Vortag reservieren – Januar zählt zur Hochsaison."
       ]
     },
     {
@@ -110,6 +114,10 @@
           "credit": "Agustín Lautaro",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Check-in in Santiago International Airport (SCL) öffnet rund zwei Stunden vor Abflug – morgens bilden sich hier längere Sicherheits-Schlangen.",
+        "Vorab gebuchte Transfers verkürzen die Fahrt in Richtung Santiago; spontane Taxis sind im Januar oft ausgelastet."
       ]
     },
     {
@@ -117,8 +125,8 @@
       "name": "Aeropuerto El Loa (CJC)",
       "type": "airport",
       "coordinates": {
-        "lat": -22.4950,
-        "lng": -68.9030
+        "lat": -22.495,
+        "lng": -68.903
       },
       "city": "Calama",
       "address": {
@@ -138,6 +146,10 @@
           "credit": "Ignacio Pardo",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Check-in in Aeropuerto El Loa (CJC) öffnet rund zwei Stunden vor Abflug – morgens bilden sich hier längere Sicherheits-Schlangen.",
+        "Vorab gebuchte Transfers verkürzen die Fahrt in Richtung Calama; spontane Taxis sind im Januar oft ausgelastet."
       ]
     },
     {
@@ -166,6 +178,10 @@
           "credit": "Marcelo Díaz",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "San Pedro de Atacama zeigt sich zur Golden Hour besonders fotogen – Kamera oder Drohne rechtzeitig laden.",
+        "Rund um San Pedro de Atacama sind Parkplätze begrenzt; Anreise vor 10 Uhr erleichtert die Suche."
       ]
     },
     {
@@ -173,8 +189,8 @@
       "name": "Geysers del Tatio",
       "type": "nature",
       "coordinates": {
-        "lat": -22.3350,
-        "lng": -68.0140
+        "lat": -22.335,
+        "lng": -68.014
       },
       "city": "San Pedro de Atacama",
       "address": {
@@ -194,6 +210,10 @@
           "credit": "Sofía Arancibia",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Das Wetter im Gebiet Geysers del Tatio schlägt schnell um – Regenjacke und Sonnenschutz griffbereit halten.",
+        "Für Ranger-Briefings und Permit-Kontrollen immer 15 Minuten Zeitpuffer einplanen."
       ]
     },
     {
@@ -222,6 +242,10 @@
           "credit": "Ignacia Rojas",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Das Wetter im Gebiet Valle del Arcoíris schlägt schnell um – Regenjacke und Sonnenschutz griffbereit halten.",
+        "Für Ranger-Briefings und Permit-Kontrollen immer 15 Minuten Zeitpuffer einplanen."
       ]
     },
     {
@@ -250,6 +274,10 @@
           "credit": "Ignacia Rojas",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Check-in in Aeropuerto Presidente Ibáñez (PUQ) öffnet rund zwei Stunden vor Abflug – morgens bilden sich hier längere Sicherheits-Schlangen.",
+        "Vorab gebuchte Transfers verkürzen die Fahrt in Richtung Punta Arenas; spontane Taxis sind im Januar oft ausgelastet."
       ]
     },
     {
@@ -278,6 +306,10 @@
           "credit": "María Fernanda Rojas",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Puerto Natales Waterfront zeigt sich zur Golden Hour besonders fotogen – Kamera oder Drohne rechtzeitig laden.",
+        "Rund um Puerto Natales sind Parkplätze begrenzt; Anreise vor 10 Uhr erleichtert die Suche."
       ]
     },
     {
@@ -306,6 +338,10 @@
           "credit": "Hernán Calderón",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Das Wetter im Gebiet Torres del Paine – Base Las Torres schlägt schnell um – Regenjacke und Sonnenschutz griffbereit halten.",
+        "Für Ranger-Briefings und Permit-Kontrollen immer 15 Minuten Zeitpuffer einplanen."
       ]
     },
     {
@@ -334,6 +370,10 @@
           "credit": "Felipe Santander",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Das Wetter im Gebiet Laguna Amarga Aussichtspunkt schlägt schnell um – Regenjacke und Sonnenschutz griffbereit halten.",
+        "Für Ranger-Briefings und Permit-Kontrollen immer 15 Minuten Zeitpuffer einplanen."
       ]
     }
   ],

@@ -32,6 +32,7 @@ export interface RouteStop {
   rating?: number;
   reviewCount?: number;
   photos?: ResourceImage[];
+  notes?: string[];
   coordinates: Coordinates;
   [key: string]: unknown;
 }
@@ -100,6 +101,7 @@ export interface FlightInfo {
 export interface LodgingInfo {
   id?: string;
   name: string;
+  stopId?: string;
   city?: string;
   nights?: number;
   pricePerNight?: number;
@@ -114,6 +116,7 @@ export interface LodgingInfo {
 export interface FoodInfo {
   id?: string;
   name: string;
+  stopId?: string;
   city?: string;
   mustTry?: string[];
   priceRange?: string;

@@ -83,6 +83,10 @@
           "credit": "Agustín Lautaro",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Check-in in Santiago International Airport (SCL) öffnet rund zwei Stunden vor Abflug – morgens bilden sich hier längere Sicherheits-Schlangen.",
+        "Vorab gebuchte Transfers verkürzen die Fahrt in Richtung Santiago; spontane Taxis sind im Januar oft ausgelastet."
       ]
     },
     {
@@ -112,6 +116,10 @@
           "credit": "Constanza Vidal",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Check-in in Aeropuerto La Araucanía (ZCO) öffnet rund zwei Stunden vor Abflug – morgens bilden sich hier längere Sicherheits-Schlangen.",
+        "Vorab gebuchte Transfers verkürzen die Fahrt in Richtung Temuco; spontane Taxis sind im Januar oft ausgelastet."
       ]
     },
     {
@@ -140,6 +148,10 @@
           "credit": "Matías Silva",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Pucón Uferpromenade zeigt sich zur Golden Hour besonders fotogen – Kamera oder Drohne rechtzeitig laden.",
+        "Rund um Pucón sind Parkplätze begrenzt; Anreise vor 10 Uhr erleichtert die Suche."
       ]
     },
     {
@@ -168,6 +180,10 @@
           "credit": "Felipe Muñoz",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Das Wetter im Gebiet Huilo Huilo Biosphärenreservat schlägt schnell um – Regenjacke und Sonnenschutz griffbereit halten.",
+        "Für Ranger-Briefings und Permit-Kontrollen immer 15 Minuten Zeitpuffer einplanen."
       ]
     },
     {
@@ -196,6 +212,10 @@
           "credit": "Carolina Bravo",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Puerto Varas – Costanera zeigt sich zur Golden Hour besonders fotogen – Kamera oder Drohne rechtzeitig laden.",
+        "Rund um Puerto Varas sind Parkplätze begrenzt; Anreise vor 10 Uhr erleichtert die Suche."
       ]
     },
     {
@@ -204,7 +224,7 @@
       "type": "town",
       "coordinates": {
         "lat": -42.4805,
-        "lng": -73.7620
+        "lng": -73.762
       },
       "city": "Castro",
       "address": {
@@ -224,6 +244,10 @@
           "credit": "Marcelo Díaz",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Castro Palafitos zeigt sich zur Golden Hour besonders fotogen – Kamera oder Drohne rechtzeitig laden.",
+        "Rund um Castro sind Parkplätze begrenzt; Anreise vor 10 Uhr erleichtert die Suche."
       ]
     },
     {
@@ -232,7 +256,7 @@
       "type": "airport",
       "coordinates": {
         "lat": -41.4389,
-        "lng": -73.0950
+        "lng": -73.095
       },
       "city": "Puerto Montt",
       "address": {
@@ -252,6 +276,10 @@
           "credit": "Isidora Salazar",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Check-in in Aeropuerto El Tepual (PMC) öffnet rund zwei Stunden vor Abflug – morgens bilden sich hier längere Sicherheits-Schlangen.",
+        "Vorab gebuchte Transfers verkürzen die Fahrt in Richtung Puerto Montt; spontane Taxis sind im Januar oft ausgelastet."
       ]
     },
     {
@@ -260,7 +288,7 @@
       "type": "city",
       "coordinates": {
         "lat": -33.4406,
-        "lng": -70.6420
+        "lng": -70.642
       },
       "city": "Santiago",
       "address": {
@@ -280,6 +308,10 @@
           "credit": "Rodrigo Ruiz",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Nutze den frühen Vormittag, um Santiago – Barrio Lastarria zu Fuß zu erkunden, bevor die Sonne die Straßenschluchten aufheizt.",
+        "Beliebte Restaurants in Santiago sollte man spätestens am Vortag reservieren – Januar zählt zur Hochsaison."
       ]
     }
   ],
