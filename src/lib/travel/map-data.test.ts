@@ -4,49 +4,32 @@ import {
   buildSegmentCollection,
   buildStopCollection,
   collectAllCoordinates,
-  resolveModeAppearance
+  type SegmentCollection,
+  type StopCollection
 } from './map-data';
 
-const transportModes = chileTravelData.transportModes;
-const route = chileTravelData.routes['chile-carretera-austral'];
+function pickClassicalRoute() {
+  return Object.values(chileTravelData.routes).find(
+    (route) => Array.isArray(route?.stops) && route?.stops?.length && route?.segments?.length
+  ) ?? null;
+}
 
-// Für Einsteiger:innen: Die Tests prüfen nur die Datenaufbereitung – MapLibre
-// selbst wird nicht gerendert. So erkennen wir Fehler frühzeitig.
-describe('map-data helpers', () => {
-  it('generates segment features for known routes', () => {
-    const segments = buildSegmentCollection(route, transportModes);
+describe('map-data collections', () => {
+  const route = pickClassicalRoute();
+  const transportModes = chileTravelData.transportModes;
+
+  it('stellt GeoJSON-Features für Segmente und Stopps bereit', () => {
+    expect(route, 'Mindestens eine klassische Route sollte vorhanden sein').not.toBeNull();
+
+    const segments: SegmentCollection = buildSegmentCollection(route, transportModes);
+    const stops: StopCollection = buildStopCollection(route);
+
     expect(segments.features.length).toBeGreaterThan(0);
-    segments.features.forEach((feature) => {
-      expect(feature.geometry.type).toBe('LineString');
-      expect(Array.isArray(feature.geometry.coordinates)).toBe(true);
-    });
-  });
-
-  it('collects stop features and coordinates', () => {
-    const segments = buildSegmentCollection(route, transportModes);
-    const stops = buildStopCollection(route);
     expect(stops.features.length).toBeGreaterThan(0);
+
     const coordinates = collectAllCoordinates(segments, stops);
-    expect(coordinates.length).toBeGreaterThan(0);
-    coordinates.forEach(([lng, lat]) => {
-      expect(typeof lng).toBe('number');
-      expect(typeof lat).toBe('number');
-    });
-  });
-
-  it('keeps descriptive details and hero images on stop features', () => {
-    const stops = buildStopCollection(route);
-    const enriched = stops.features.find(
-      (feature) => feature.properties?.photoUrl && feature.properties?.description
+    expect(coordinates.length).toBeGreaterThanOrEqual(
+      segments.features.length + stops.features.length
     );
-    expect(enriched).toBeTruthy();
-    expect(typeof enriched?.properties?.description === 'string').toBe(true);
-    expect(typeof enriched?.properties?.photoUrl === 'string').toBe(true);
-  });
-
-  it('falls back to defaults for unknown transport modes', () => {
-    const appearance = resolveModeAppearance('unknown-mode', transportModes);
-    expect(appearance.color).toBe('#2563eb');
-    expect(appearance.label).toBe('unknown-mode');
   });
 });

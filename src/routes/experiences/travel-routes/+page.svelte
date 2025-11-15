@@ -407,7 +407,10 @@
     }
   }
 
-  function setupSources(segments: SegmentCollection, stops: StopCollection) {
+  function setupSources(
+    segments: SegmentCollection = EMPTY_SEGMENTS,
+    stops: StopCollection = EMPTY_STOPS
+  ) {
     if (!mapInstance) return;
     if (!mapInstance.getSource(ROUTE_SEGMENT_SOURCE)) {
       mapInstance.addSource(ROUTE_SEGMENT_SOURCE, {
@@ -676,7 +679,9 @@
 
         map.on('load', () => {
           if (cancelled) return;
-          setupSources();
+          // Für Einsteiger:innen: Die Map braucht sofort gültige GeoJSON-Daten,
+          // sonst schlägt `addSource` fehl und die Karte bleibt leer.
+          setupSources(segmentCollection, stopCollection);
           mapLoaded = true;
           updateMapData(segmentCollection, stopCollection, allCoordinates);
         });
