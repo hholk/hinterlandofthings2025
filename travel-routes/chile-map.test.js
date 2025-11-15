@@ -1,46 +1,39 @@
-import { readFileSync } from 'node:fs';
-import { fileURLToPath } from 'node:url';
-import { dirname, join } from 'node:path';
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 
-import { buildFeatureCollectionFromRoute, calculateBounds, fallbackData } from './chile-map.js';
+import { calculateBounds, demoData } from './chile-map.js';
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const exampleRoute = JSON.parse(
-  readFileSync(join(__dirname, 'data/routes/example-andes-pacific.json'), 'utf8')
-);
-const australRoute = JSON.parse(
-  readFileSync(join(__dirname, 'data/routes/chile-carretera-austral.json'), 'utf8')
-);
-const dataset = JSON.parse(readFileSync(join(__dirname, 'travel-routes-data.json'), 'utf8'));
+function countByGeometry(type) {
+  return demoData.features.filter((feature) => feature.geometry?.type === type).length;
+}
 
-const transportModes = dataset.transportModes;
-
-test('buildFeatureCollectionFromRoute yields both lines and points for slider route', () => {
-  const collection = buildFeatureCollectionFromRoute(exampleRoute, transportModes);
-  const lines = collection.features.filter((feature) => feature.geometry?.type === 'LineString');
-  const points = collection.features.filter((feature) => feature.geometry?.type === 'Point');
-  assert.ok(lines.length >= 3, 'expected at least three line segments');
-  assert.ok(points.length >= 3, 'expected at least three POIs');
-  lines.forEach((feature) => {
-    assert.ok(feature.properties?.name, 'line feature needs a name');
-    assert.equal(feature.properties?.category, 'route');
+test('demoData contains at least one route and multiple POIs', () => {
+  const routeCount = countByGeometry('LineString');
+  const poiCount = countByGeometry('Point');
+  assert.ok(routeCount >= 1, 'mindestens eine Route notwendig');
+  assert.ok(poiCount >= 3, 'es werden mehrere POIs erwartet');
+  demoData.features.forEach((feature) => {
+    assert.ok(feature.properties?.name, 'jedes Feature braucht einen Namen');
   });
 });
 
-test('buildFeatureCollectionFromRoute falls back to classic stops/segments', () => {
-  const collection = buildFeatureCollectionFromRoute(australRoute, transportModes);
-  const lineNames = collection.features
-    .filter((feature) => feature.geometry?.type === 'LineString')
-    .map((feature) => feature.properties?.name);
-  assert.ok(lineNames.length >= (australRoute.segments?.length ?? 0), 'segments should be rendered as lines');
+test('calculateBounds returns an envelope covering all demo features', () => {
+  const bounds = calculateBounds(demoData);
+  assert.ok(bounds, 'bounds sollten berechnet werden');
+  const [min, max] = bounds;
+  assert.ok(min[0] < max[0], 'lng sollte wachsen');
+  assert.ok(min[1] < max[1], 'lat sollte wachsen');
+  const allLngs = demoData.features.flatMap((feature) =>
+    feature.geometry?.type === 'LineString'
+      ? feature.geometry.coordinates.map(([lng]) => lng)
+      : feature.geometry?.type === 'Point'
+        ? [feature.geometry.coordinates[0]]
+        : []
+  );
+  assert.ok(allLngs.every((lng) => lng >= min[0] && lng <= max[0]), 'alle Längengrade im Bounds');
 });
 
-test('calculateBounds spans every fallback feature', () => {
-  const bounds = calculateBounds(fallbackData);
-  assert.ok(bounds, 'bounds should be calculated');
-  const [min, max] = bounds;
-  assert.ok(min[0] < max[0], 'lng span should be positive');
-  assert.ok(min[1] < max[1], 'lat span should be positive');
+test('calculateBounds returns null for empty collections', () => {
+  const empty = { type: 'FeatureCollection', features: [] };
+  assert.equal(calculateBounds(empty), null);
 });
