@@ -3,141 +3,45 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Chile • Modulare Travel Experience</title>
+    <title>Chile Travel Experience • Weiterleitung</title>
     <meta
       name="description"
-      content="Interaktive, modular aufgebaute Travel-Experience für Chile mit editierbaren Routen, Kosten, Kartenlayern und externen Medien."
+      content="Weiterleitung zur neuen, mobilfreundlichen Chile-Reise mit MapLibre und Flowbite Svelte."
     />
-    <link rel="stylesheet" href="../style.css" />
-    <link rel="stylesheet" href="travel-routes.css" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-      crossorigin=""
-    />
+    <!-- Für Einsteiger:innen: GitHub Pages liefert weiterhin diese statische Datei aus.
+         Damit alle Besucher:innen automatisch die neue SvelteKit-Version sehen,
+         leiten wir per Meta Refresh und JavaScript zur build-Ausgabe um. -->
+    <meta http-equiv="refresh" content="0; url=../experiences/travel-routes.html" />
+    <style>
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        background: #0f172a;
+        color: #e2e8f0;
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 2rem;
+        text-align: center;
+      }
+      a {
+        color: #38bdf8;
+        font-weight: 600;
+      }
+    </style>
+    <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        window.location.replace('../experiences/travel-routes.html');
+      });
+    </script>
   </head>
-  <body class="travel-body">
-    <div class="travel-app" data-state-ready="false">
-      <aside id="travel-panel" class="travel-panel" aria-label="Routen und Werkzeuge" data-hidden="true">
-        <header class="travel-panel__header">
-          <div>
-            <p class="travel-panel__eyebrow">🇨🇱 Chile • 03.–21. Januar 2025</p>
-            <h1 class="travel-panel__headline">Interaktive Reiserouten</h1>
-          </div>
-          <span class="travel-panel__badge" aria-label="Beta-Version">Beta</span>
-        </header>
-
-        <section class="travel-panel__section" aria-label="Schnellsuche">
-          <label class="travel-label" for="travel-search">Suchen (Ort, Route, Flug …)</label>
-          <input
-            id="travel-search"
-            class="travel-input"
-            type="search"
-            placeholder="Valparaíso, LATAM 841, EcoCamp …"
-            autocomplete="off"
-          />
-        </section>
-
-        <section class="travel-panel__section" aria-label="Routenfilter">
-          <div class="travel-filter" role="tablist" aria-label="Routenquellen">
-            <button class="travel-chip" role="tab" aria-selected="true" data-filter="curated">
-              Vorschläge
-            </button>
-            <button class="travel-chip" role="tab" aria-selected="false" data-filter="custom">
-              Eigene Routen
-            </button>
-          </div>
-          <div class="travel-tag-list" id="travel-tag-list" aria-live="polite"></div>
-        </section>
-
-        <section class="travel-panel__section" aria-label="Routenübersicht">
-          <div id="travel-route-list" class="travel-route-list" aria-live="polite"></div>
-        </section>
-
-        <section class="travel-panel__section travel-panel__section--secondary" aria-label="Galerie">
-          <h2 class="travel-section-title">📸 Galerie (Creative Commons)</h2>
-          <p class="travel-text-muted">
-            Bilder werden von externen Quellen (Unsplash, Wikimedia) eingebunden und öffnen in einem neuen Tab.
-          </p>
-          <div id="travel-gallery" class="travel-gallery"></div>
-        </section>
-
-        <section class="travel-panel__section travel-panel__section--secondary" aria-label="Events">
-          <h2 class="travel-section-title">🎭 Events & Festivals</h2>
-          <ul id="travel-events" class="travel-event-list"></ul>
-        </section>
-
-        <section class="travel-panel__section travel-panel__section--secondary" aria-label="Points of Interest">
-          <h2 class="travel-section-title">✨ Points of Interest</h2>
-          <p class="travel-text-muted">
-            Sammle spannende Orte unabhängig von einer Route und markiere sie für später.
-          </p>
-          <div id="travel-poi-list" class="travel-poi-list"></div>
-        </section>
-
-        <section class="travel-panel__section travel-panel__section--secondary" aria-label="Markdown-Notizen">
-          <h2 class="travel-section-title">📝 Eigene Notizen</h2>
-          <p class="travel-text-muted">Markdown wird clientseitig gerendert und lokal gespeichert.</p>
-          <textarea id="travel-md" class="travel-textarea" rows="6" placeholder="# Meine Ergänzungen"></textarea>
-          <div class="travel-button-row">
-            <button id="travel-md-render" class="travel-button">Markdown rendern</button>
-            <button id="travel-md-clear" class="travel-button travel-button--secondary">Leeren</button>
-          </div>
-          <div id="travel-md-preview" class="travel-markdown"></div>
-        </section>
-      </aside>
-
-      <!--
-        Die neue Karten-Sektion sitzt im oberen rechten Rasterfeld.
-        Auf Mobilgeräten erscheint sie zuerst, damit Nutzer:innen direkt mit den Pins starten können.
-      -->
-      <section class="travel-map-shell" aria-live="polite">
-        <div id="travel-map" class="travel-map" role="region" aria-label="Karte"></div>
-        <button class="travel-panel-toggle" type="button" aria-controls="travel-panel" aria-expanded="false">
-          ☰
-          <span class="sr-only">Panel ein- oder ausblenden</span>
-        </button>
-      </section>
-      <!--
-        Die Detail-Ansicht spannt sich unter Panel und Karte über die gesamte Breite.
-        Ein Toggle wechselt zwischen Planungstabellen und der chronologischen Ansicht.
-      -->
-      <section class="travel-detail" id="travel-detail" aria-label="Routendetails"></section>
-    </div>
-
-    <template id="tpl-route-card">
-      <article class="travel-card" data-role="route-card">
-        <header class="travel-card__header">
-          <div>
-            <h3 class="travel-card__title"></h3>
-            <p class="travel-card__subtitle"></p>
-          </div>
-          <span class="travel-card__badge"></span>
-        </header>
-        <p class="travel-card__description"></p>
-        <dl class="travel-card__meta"></dl>
-        <div class="travel-card__actions"></div>
-      </article>
-    </template>
-
-    <template id="tpl-flight-row">
-      <li class="travel-flight-item"></li>
-    </template>
-
-    <template id="tpl-stop-item">
-      <li class="travel-stop-item"></li>
-    </template>
-
-    <template id="tpl-cost-row">
-      <tr class="travel-cost-row"></tr>
-    </template>
-
-    <script
-      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-      crossorigin=""
-    ></script>
-    <script type="module" src="travel-routes.js"></script>
+  <body>
+    <main>
+      <h1>Neue Chile Experience wird geladen …</h1>
+      <p>
+        Falls die automatische Weiterleitung nicht startet, öffne die Seite bitte manuell:
+        <a href="../experiences/travel-routes.html">Modulare Chile-Reise</a>.
+      </p>
+    </main>
   </body>
 </html>
