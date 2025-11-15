@@ -374,7 +374,7 @@
     justify-items: end;
   }
 
-  .legend-toggle {
+  :global(.legend-toggle) {
     background: rgba(15, 23, 42, 0.78);
     border: 1px solid rgba(59, 130, 246, 0.45);
     color: #e2e8f0;
@@ -384,11 +384,11 @@
     box-shadow: 0 10px 24px rgba(15, 23, 42, 0.4);
   }
 
-  .legend-toggle:hover {
+  :global(.legend-toggle:hover) {
     background: rgba(30, 64, 175, 0.55);
   }
 
-  .legend-toggle:focus-visible {
+  :global(.legend-toggle:focus-visible) {
     outline: 2px solid #38bdf8;
     outline-offset: 2px;
   }
@@ -437,7 +437,7 @@
     flex-direction: column;
   }
 
-  .variant-selector :global([role='tablist']) {
+  :global(.variant-tabs [role='tablist']) {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 0.5rem;
@@ -446,11 +446,11 @@
     margin: 0;
   }
 
-  .variant-selector :global([role='tablist'] li) {
+  :global(.variant-tabs [role='tablist'] li) {
     margin: 0;
   }
 
-  .variant-selector :global([role='tablist'] button) {
+  :global(.variant-tabs [role='tablist'] button) {
     border: none;
     background: rgba(15, 23, 42, 0.58);
     color: rgba(226, 232, 240, 0.8);
@@ -461,26 +461,26 @@
     min-height: 48px;
   }
 
-  .variant-selector :global([role='tablist'] button:hover) {
+  :global(.variant-tabs [role='tablist'] button:hover) {
     color: #e2e8f0;
   }
 
-  .variant-selector :global([role='tablist'] button[aria-selected='true']) {
+  :global(.variant-tabs [role='tablist'] button[aria-selected='true']) {
     color: #38bdf8;
     background: rgba(30, 58, 138, 0.65);
     box-shadow: inset 0 0 0 1px rgba(56, 189, 248, 0.6);
   }
 
-  .variant-selector :global([role='tablist'] button:focus-visible) {
+  :global(.variant-tabs [role='tablist'] button:focus-visible) {
     outline: 2px solid #38bdf8;
     outline-offset: 2px;
   }
 
-  .variant-selector :global([role='tablist'] + div) {
+  :global(.variant-tabs [role='tablist'] + div) {
     display: none;
   }
 
-  .variant-selector :global([role='tabpanel']) {
+  :global(.variant-tabs [role='tabpanel']) {
     background: rgba(15, 23, 42, 0.65);
     border: 1px solid rgba(94, 234, 212, 0.12);
     border-radius: 1rem;
@@ -514,10 +514,10 @@
     gap: 1rem;
   }
 
-  .metrics-card,
-  .budget-card,
-  .insights-card,
-  .roadtrip-card {
+  :global(.metrics-card),
+  :global(.budget-card),
+  :global(.insights-card),
+  :global(.roadtrip-card) {
     background: rgba(15, 23, 42, 0.78);
     border: 1px solid rgba(94, 234, 212, 0.12);
     border-radius: 1rem;
@@ -532,9 +532,9 @@
     margin-bottom: 0.75rem;
   }
 
-  .metrics-card ul,
-  .budget-card ul,
-  .insights-card ul {
+  :global(.metrics-card ul),
+  :global(.budget-card ul),
+  :global(.insights-card ul) {
     margin: 0;
     padding-left: 1.1rem;
     display: grid;
@@ -551,23 +551,23 @@
     list-style: disc;
   }
 
-  .itinerary {
+  :global(.itinerary) {
     display: grid;
     gap: 0.75rem;
   }
 
-  .itinerary :global(.group) {
+  :global(.itinerary .group) {
     border: 1px solid rgba(148, 163, 184, 0.25);
     border-radius: 0.9rem;
     background: rgba(15, 23, 42, 0.7);
     overflow: hidden;
   }
 
-  .itinerary :global(h2) {
+  :global(.itinerary h2) {
     margin: 0;
   }
 
-  .itinerary :global(h2 button) {
+  :global(.itinerary h2 button) {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -581,50 +581,50 @@
     cursor: pointer;
   }
 
-  .itinerary :global(h2 button:hover) {
+  :global(.itinerary h2 button:hover) {
     background: rgba(59, 130, 246, 0.14);
   }
 
-  .itinerary :global(h2 button:focus-visible) {
+  :global(.itinerary h2 button:focus-visible) {
     outline: 2px solid #38bdf8;
     outline-offset: 2px;
   }
 
-  .itinerary :global(h2 svg) {
+  :global(.itinerary h2 svg) {
     width: 0.75rem;
     height: 0.75rem;
     color: #38bdf8;
   }
 
-  .itinerary :global(.border-b) {
+  :global(.itinerary .border-b) {
     border: none;
   }
 
-  .itinerary :global(.p-5),
-  .itinerary :global(.py-5) {
+  :global(.itinerary .p-5),
+  :global(.itinerary .py-5) {
     padding: 0.75rem 1.1rem;
   }
 
-  .itinerary :global(.p-5),
-  .itinerary :global(.py-5),
-  .itinerary :global(.border-s),
-  .itinerary :global(.border-e) {
+  :global(.itinerary .p-5),
+  :global(.itinerary .py-5),
+  :global(.itinerary .border-s),
+  :global(.itinerary .border-e) {
     border: none;
   }
 
-  .itinerary :global(.border-gray-200),
-  .itinerary :global(.dark\:border-gray-700) {
+  :global(.itinerary .border-gray-200),
+  :global(.itinerary .dark\:border-gray-700) {
     border: none;
   }
 
-  .itinerary :global(.border-s),
-  .itinerary :global(.border-e) {
+  :global(.itinerary .border-s),
+  :global(.itinerary .border-e) {
     border: none;
   }
 
-  .itinerary :global(.p-5) > div,
-  .itinerary :global(.py-5) > div,
-  .itinerary :global(.content) {
+  :global(.itinerary .p-5 > div),
+  :global(.itinerary .py-5 > div),
+  :global(.itinerary .content) {
     color: rgba(226, 232, 240, 0.88);
   }
 
@@ -642,7 +642,7 @@
     gap: 1rem;
   }
 
-  .roadtrip-card header {
+  :global(.roadtrip-card header) {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -650,7 +650,7 @@
     margin-bottom: 0.75rem;
   }
 
-  .roadtrip-card ol {
+  :global(.roadtrip-card ol) {
     margin: 0;
     padding-left: 1.1rem;
     display: grid;
