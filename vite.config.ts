@@ -15,6 +15,12 @@ export default defineConfig({
       { find: '$stores', replacement: fileURLToPath(new URL('src/lib/stores', projectRootDir)) }
     ]
   },
+  json: {
+    // Für Einsteiger:innen: Wenn stringify aktiv ist, wandelt Vite JSON-Imports
+    // direkt in JavaScript-Module um. So sparen wir zusätzliche Netzwerk-Requests
+    // und umgehen MIME-Type-Probleme im Browser.
+    stringify: true
+  },
   test: {
     include: ['src/**/*.{test,spec}.{js,ts}', 'config/**/*.{test,spec}.{js,ts}'],
     environment: 'jsdom',

@@ -1,14 +1,13 @@
-import datasetRaw from '../../../../travel-routes/travel-routes-data.json?raw';
+import datasetModule from '../../../../travel-routes/travel-routes-data.json';
 import type { LoadedTravelRoutesDataset, RouteDetail, RouteIndexEntry, TravelRoutesDataset } from './types';
 
 const routeModules = import.meta.glob('../../../../travel-routes/data/routes/*.json', {
-  eager: true,
-  as: 'raw'
-});
+  eager: true
+}) as Record<string, RouteDetail>;
 
-function parseRoute(raw: string): RouteDetail | null {
+function parseRoute(raw: RouteDetail): RouteDetail | null {
   try {
-    const parsed = JSON.parse(raw) as RouteDetail;
+    const parsed = raw;
     if (parsed && typeof parsed.id === 'string') {
       if (!parsed.name && typeof (parsed as { title?: string }).title === 'string') {
         parsed.name = (parsed as { title?: string }).title as string;
@@ -29,16 +28,16 @@ for (const raw of Object.values(routeModules)) {
   }
 }
 
-function parseDataset(raw: string): TravelRoutesDataset {
+function parseDataset(raw: TravelRoutesDataset): TravelRoutesDataset {
   try {
-    return JSON.parse(raw) as TravelRoutesDataset;
+    return raw;
   } catch (error) {
     console.warn('Konnte travel-routes-data.json nicht parsen', error);
     throw error;
   }
 }
 
-const baseDataset = parseDataset(datasetRaw);
+const baseDataset = parseDataset(datasetModule);
 
 const filteredIndex: RouteIndexEntry[] = baseDataset.routeIndex.filter((entry) => {
   if (routes[entry.id]) return true;

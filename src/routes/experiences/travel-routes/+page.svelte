@@ -4,16 +4,24 @@
   import type {
     RouteDetail,
     RouteIndexEntry,
-    RouteStop,
     DayDefinition,
     DayArrivalSegment,
+    ActivityRestaurant,
     LoadedTravelRoutesDataset,
-    MobilityOption,
-    DailySegmentDefinition
+    MobilityOption
   } from '../../../lib/data/chile-travel';
-  import type { FeatureCollection, Geometry } from 'geojson';
   import 'maplibre-gl/dist/maplibre-gl.css';
   import { calculateBoundingBox, type LngLatTuple } from '../../../lib/travel/map-bounds';
+  import {
+    buildSegmentCollection,
+    buildStopCollection,
+    collectAllCoordinates,
+    EMPTY_SEGMENTS,
+    EMPTY_STOPS,
+    resolveModeAppearance as resolveModeAppearanceBase,
+    type SegmentCollection,
+    type StopCollection
+  } from '../../../lib/travel/map-data';
 
   type MapLibreModule = typeof import('maplibre-gl');
   type MapLibreMap = import('maplibre-gl').Map;
@@ -24,23 +32,11 @@
 
   export let data: PageData & { travel: LoadedTravelRoutesDataset };
 
-  interface SegmentProperties {
-    id: string;
-    mode: string;
-    order: number;
-    color: string;
-    label: string;
-    dashArray: number[] | null;
-  }
-
-  interface StopProperties {
-    id: string;
-    name: string;
-    order: number;
-    label: string;
-    title: string;
-    subtitle?: string;
-    type?: string;
+  function getModeAppearance(mode: string | undefined) {
+    // Für Einsteiger:innen: Wir kapseln den Aufruf, damit überall derselbe
+    // Lookup auf die Transport-Modi stattfindet und neue Modi automatisch
+    // auftauchen.
+    return resolveModeAppearanceBase(mode, data.travel.transportModes);
   }
 
   interface TimelineStep {
@@ -50,14 +46,9 @@
     dayId?: string;
   }
 
-  type SegmentCollection = FeatureCollection<Geometry, SegmentProperties>;
-  type StopCollection = FeatureCollection<Geometry, StopProperties>;
-
-  const EMPTY_SEGMENTS: SegmentCollection = { type: 'FeatureCollection', features: [] };
-  const EMPTY_STOPS: StopCollection = { type: 'FeatureCollection', features: [] };
-
   const ROUTE_SEGMENT_SOURCE = 'travel-route-segments';
   const ROUTE_SEGMENT_LAYER = 'travel-route-segments-layer';
+  const ROUTE_SEGMENT_LAYER_DASHED = 'travel-route-segments-layer-dashed';
   const ROUTE_STOP_SOURCE = 'travel-route-stops';
   const ROUTE_STOP_LAYER = 'travel-route-stops-layer';
   const ROUTE_STOP_LABEL_LAYER = 'travel-route-stop-label-layer';
@@ -174,229 +165,6 @@
     isLegendVisible = !isLegendVisible;
   }
 
-  function normalizeCoordinate(value: unknown): [number, number] | null {
-    if (!value) return null;
-    if (Array.isArray(value) && value.length === 2) {
-      const [lng, lat] = value;
-      if (Number.isFinite(lng) && Number.isFinite(lat)) {
-        return [lng, lat];
-      }
-    }
-    if (typeof value === 'object') {
-      const candidate = value as { lat?: number; lng?: number };
-      if (Number.isFinite(candidate.lng) && Number.isFinite(candidate.lat)) {
-        return [candidate.lng as number, candidate.lat as number];
-      }
-    }
-    return null;
-  }
-
-  function buildLineCoordinates(from: unknown, to: unknown): [number, number][] | null {
-    const start = normalizeCoordinate(from);
-    const end = normalizeCoordinate(to);
-    if (!start || !end) return null;
-    return [start, end];
-  }
-
-  function parseDashArray(value: string | null | undefined): number[] | null {
-    if (!value) return null;
-    const parts = value
-      .split(/\s+/)
-      .map((part) => Number.parseFloat(part))
-      .filter((part) => Number.isFinite(part) && part > 0);
-    return parts.length >= 2 ? parts : null;
-  }
-
-  function resolveModeAppearance(mode: string | undefined): Pick<SegmentProperties, 'color' | 'dashArray' | 'label'> {
-    if (!mode) {
-      return { color: '#2563eb', dashArray: null, label: 'Segment' };
-    }
-    const transport = data.travel.transportModes[mode];
-    if (!transport) {
-      return { color: '#2563eb', dashArray: null, label: mode };
-    }
-    return {
-      color: transport.color,
-      dashArray: parseDashArray(transport.dashArray),
-      label: transport.label ?? mode
-    };
-  }
-
-  function buildSegmentCollection(route: RouteDetail | null): SegmentCollection {
-    if (!route) return EMPTY_SEGMENTS;
-    const features: SegmentCollection['features'] = [];
-    let order = 0;
-
-    if (Array.isArray(route.mapLayers?.dailySegments) && route.mapLayers.dailySegments.length > 0) {
-      route.mapLayers.dailySegments.forEach((segment: DailySegmentDefinition, index) => {
-        const geometry = segment.geometry;
-        if (!geometry || geometry.type !== 'LineString') return;
-        const appearance = resolveModeAppearance(segment.mode);
-        features.push({
-          type: 'Feature',
-          geometry,
-          properties: {
-            id: segment.dayId ?? `day-${index + 1}`,
-            mode: segment.mode ?? 'segment',
-            order,
-            color: appearance.color,
-            label: appearance.label,
-            dashArray: appearance.dashArray
-          }
-        });
-        order += 1;
-      });
-    }
-
-    if (features.length === 0 && Array.isArray(route.segments) && Array.isArray(route.stops)) {
-      const stopIndex = new Map(route.stops.map((stop) => [stop.id, stop] as const));
-      route.segments.forEach((segment, index) => {
-        const fromStop = stopIndex.get(segment.from);
-        const toStop = stopIndex.get(segment.to);
-        const coordinates = buildLineCoordinates(fromStop?.coordinates, toStop?.coordinates);
-        if (!coordinates) return;
-        const appearance = resolveModeAppearance(segment.mode);
-        features.push({
-          type: 'Feature',
-          geometry: {
-            type: 'LineString',
-            coordinates
-          },
-          properties: {
-            id: segment.id ?? `segment-${index + 1}`,
-            mode: segment.mode ?? 'segment',
-            order,
-            color: appearance.color,
-            label: appearance.label,
-            dashArray: appearance.dashArray
-          }
-        });
-        order += 1;
-      });
-    }
-
-    if (features.length === 0 && Array.isArray(route.days)) {
-      route.days.forEach((day: DayDefinition, dayIndex) => {
-        day.arrival?.segments?.forEach((segment: DayArrivalSegment, segmentIndex) => {
-          const coordinates = buildLineCoordinates(segment.from?.coordinates, segment.to?.coordinates);
-          if (!coordinates) return;
-          const appearance = resolveModeAppearance(segment.mode ?? 'segment');
-          features.push({
-            type: 'Feature',
-            geometry: {
-              type: 'LineString',
-              coordinates
-            },
-            properties: {
-              id: `${day.id}-segment-${segmentIndex + 1}`,
-              mode: segment.mode ?? 'segment',
-              order,
-              color: appearance.color,
-              label: `${appearance.label} (${day.station?.name ?? `Tag ${dayIndex + 1}`})`,
-              dashArray: appearance.dashArray
-            }
-          });
-          order += 1;
-        });
-      });
-    }
-
-    return { type: 'FeatureCollection', features };
-  }
-
-  function buildStopCollection(route: RouteDetail | null): StopCollection {
-    if (!route) return EMPTY_STOPS;
-    const features: StopCollection['features'] = [];
-
-    if (Array.isArray(route.stops) && route.stops.length > 0) {
-      route.stops.forEach((stop: RouteStop, index) => {
-        const coordinate = normalizeCoordinate(stop.coordinates);
-        if (!coordinate) return;
-        features.push({
-          type: 'Feature',
-          geometry: {
-            type: 'Point',
-            coordinates: coordinate
-          },
-          properties: {
-            id: stop.id,
-            name: stop.name ?? stop.city ?? `Stop ${index + 1}`,
-            order: index,
-            label: String(index + 1),
-            title: stop.name ?? stop.city ?? stop.id,
-            subtitle: stop.city ?? stop.type,
-            type: stop.type
-          }
-        });
-      });
-    } else if (Array.isArray(route.days)) {
-      route.days.forEach((day: DayDefinition, index) => {
-        const coordinate = normalizeCoordinate(day.station?.coordinates);
-        if (coordinate) {
-          features.push({
-            type: 'Feature',
-            geometry: {
-              type: 'Point',
-              coordinates: coordinate
-            },
-            properties: {
-              id: `${day.id}-station`,
-              name: day.station?.name ?? `Station ${index + 1}`,
-              order: index,
-              label: String(index + 1),
-              title: day.station?.name ?? `Station ${index + 1}`,
-              subtitle: day.date,
-              type: 'station'
-            }
-          });
-        }
-        day.arrival?.mapPoints?.forEach((point, pointIndex) => {
-          const pointCoordinate = normalizeCoordinate(point.coordinates);
-          if (!pointCoordinate) return;
-          const orderValue = index + pointIndex / 10 + 0.01;
-          features.push({
-            type: 'Feature',
-            geometry: { type: 'Point', coordinates: pointCoordinate },
-            properties: {
-              id: point.id,
-              name: point.name ?? point.id,
-              order: orderValue,
-              label: String(index + 1),
-              title: point.name ?? point.id,
-              subtitle: point.type,
-              type: point.type
-            }
-          });
-        });
-      });
-    }
-
-    return { type: 'FeatureCollection', features };
-  }
-
-  function collectAllCoordinates(segments: SegmentCollection, stops: StopCollection): LngLatTuple[] {
-    const coordinates: LngLatTuple[] = [];
-    for (const feature of segments.features) {
-      if (feature.geometry.type === 'LineString') {
-        feature.geometry.coordinates.forEach((coordinate) => {
-          const normalized = normalizeCoordinate(coordinate);
-          if (normalized) {
-            coordinates.push(normalized);
-          }
-        });
-      }
-    }
-    for (const feature of stops.features) {
-      if (feature.geometry.type === 'Point') {
-        const normalized = normalizeCoordinate(feature.geometry.coordinates);
-        if (normalized) {
-          coordinates.push(normalized);
-        }
-      }
-    }
-    return coordinates;
-  }
-
   function buildTimeline(route: RouteDetail | null, entry: RouteIndexEntry | null): TimelineStep[] {
     if (!route) return [];
     const steps: TimelineStep[] = [];
@@ -408,7 +176,7 @@
         if (day.date) descriptionParts.push(formatDate(day.date));
         if (day.arrival?.segments?.length) {
           const firstSegment = day.arrival.segments[0];
-          const appearance = resolveModeAppearance(firstSegment.mode ?? 'segment');
+          const appearance = getModeAppearance(firstSegment.mode ?? 'segment');
           descriptionParts.push(appearance.label);
         }
         steps.push({
@@ -426,7 +194,7 @@
       route.segments.forEach((segment, index) => {
         const from = stopMap.get(segment.from);
         const to = stopMap.get(segment.to);
-        const appearance = resolveModeAppearance(segment.mode);
+        const appearance = getModeAppearance(segment.mode);
         const labelParts = [appearance.label];
         if (from?.name && to?.name) {
           labelParts.push(`${from.name} → ${to.name}`);
@@ -523,10 +291,14 @@
         type: 'geojson',
         data: segmentCollection
       });
+    }
+
+    if (!mapInstance.getLayer(ROUTE_SEGMENT_LAYER)) {
       mapInstance.addLayer({
         id: ROUTE_SEGMENT_LAYER,
         type: 'line',
         source: ROUTE_SEGMENT_SOURCE,
+        filter: ['!', ['has', 'dashArray']],
         layout: {
           'line-cap': 'round',
           'line-join': 'round'
@@ -539,8 +311,34 @@
             3.2,
             4.2
           ],
-          'line-opacity': 0.9,
-          'line-dasharray': ['coalesce', ['get', 'dashArray'], ['literal', [0.0001, 0.0001]]]
+          'line-opacity': 0.9
+        }
+      });
+    }
+
+    if (!mapInstance.getLayer(ROUTE_SEGMENT_LAYER_DASHED)) {
+      mapInstance.addLayer({
+        id: ROUTE_SEGMENT_LAYER_DASHED,
+        type: 'line',
+        source: ROUTE_SEGMENT_SOURCE,
+        filter: ['has', 'dashArray'],
+        layout: {
+          'line-cap': 'round',
+          'line-join': 'round'
+        },
+        paint: {
+          'line-color': ['coalesce', ['get', 'color'], '#2563eb'],
+          'line-width': [
+            'case',
+            ['==', ['get', 'mode'], 'flight'],
+            3.2,
+            4.2
+          ],
+          // Für Einsteiger:innen: MapLibre erlaubt für `line-dasharray` nur
+          // numerische Listen. Wir geben die Werte direkt weiter, damit
+          // unterschiedliche Verkehrsmittel ihr Muster zeigen können.
+          'line-dasharray': ['get', 'dashArray'],
+          'line-opacity': 0.9
         }
       });
     }
@@ -611,6 +409,13 @@
 
     const threshold = sliderValue;
     mapInstance.setPaintProperty(ROUTE_SEGMENT_LAYER, 'line-opacity', createOpacityExpression(threshold));
+    if (mapInstance.getLayer(ROUTE_SEGMENT_LAYER_DASHED)) {
+      mapInstance.setPaintProperty(
+        ROUTE_SEGMENT_LAYER_DASHED,
+        'line-opacity',
+        createOpacityExpression(threshold)
+      );
+    }
     mapInstance.setPaintProperty(ROUTE_STOP_LAYER, 'circle-opacity', createStopOpacityExpression(threshold));
     mapInstance.setPaintProperty(ROUTE_STOP_LAYER, 'circle-stroke-opacity', createStopOpacityExpression(threshold));
     mapInstance.setPaintProperty(
@@ -763,6 +568,16 @@
     }).format(date);
   }
 
+  function formatTime(value: string | undefined) {
+    if (!value) return null;
+    const date = new Date(value);
+    if (Number.isNaN(date.getTime())) return value;
+    return new Intl.DateTimeFormat('de-DE', {
+      hour: '2-digit',
+      minute: '2-digit'
+    }).format(date);
+  }
+
   function mobilitySummary(option: MobilityOption | undefined) {
     if (!option) return null;
     const parts: string[] = [];
@@ -773,9 +588,42 @@
     return parts.filter(Boolean).join(' • ');
   }
 
+  function getDayFlights(day: DayDefinition | undefined): DayArrivalSegment[] {
+    if (!day?.arrival?.segments) return [];
+    return day.arrival.segments.filter((segment) => {
+      const candidate = segment as DayArrivalSegment & {
+        flightNumber?: string;
+        airline?: string;
+      };
+      return candidate.mode === 'flight' || Boolean(candidate.flightNumber) || Boolean(candidate.airline);
+    });
+  }
+
+  function getDayRestaurants(day: DayDefinition | undefined): ActivityRestaurant[] {
+    if (!day?.activities?.length) return [];
+    return day.activities
+      .flatMap((activity) => activity.restaurants ?? [])
+      .filter((restaurant): restaurant is ActivityRestaurant => Boolean(restaurant));
+  }
+
+  function getDayNotes(day: DayDefinition | undefined): string[] {
+    const notes: string[] = [];
+    if (day?.station?.description) {
+      notes.push(day.station.description);
+    }
+    if (day?.station?.timezone) {
+      notes.push(`Zeitzone: ${day.station.timezone}`);
+    }
+    return notes;
+  }
+
+  function getDaySegments(day: DayDefinition | undefined): DayArrivalSegment[] {
+    return day?.arrival?.segments ?? [];
+  }
+
   $: selectedIndexEntry = data.travel.routeIndex.find((entry) => entry.id === selectedRouteId) ?? null;
   $: selectedRoute = data.travel.routes[selectedRouteId] ?? null;
-  $: segmentCollection = buildSegmentCollection(selectedRoute);
+  $: segmentCollection = buildSegmentCollection(selectedRoute, data.travel.transportModes);
   $: stopCollection = buildStopCollection(selectedRoute);
   $: allCoordinates = collectAllCoordinates(segmentCollection, stopCollection);
   $: sliderSteps = buildTimeline(selectedRoute, selectedIndexEntry);
@@ -1160,9 +1008,12 @@
                   {#each selectedRoute.segments as segment}
                     <tr>
                       <td>
-                        <span class="travel__mode-chip" style={`--mode-color: ${resolveModeAppearance(segment.mode).color}`}>
+                        <span
+                          class="travel__mode-chip"
+                          style={`--mode-color: ${getModeAppearance(segment.mode).color}`}
+                        >
                           {data.travel.transportModes[segment.mode]?.icon ?? ''}
-                          {resolveModeAppearance(segment.mode).label}
+                          {getModeAppearance(segment.mode).label}
                         </span>
                       </td>
                       <td>
@@ -1386,16 +1237,13 @@
                         {/if}
                       </div>
                     </header>
-                    {#if day.station?.description}
-                      <p>{day.station.description}</p>
-                    {/if}
-                    {#if day.arrival?.segments?.length}
+                    {#if getDaySegments(day).length}
                       <details class="travel__mini-details" open>
-                        <summary>Anreise & Transfers</summary>
+                        <summary>Transporte &amp; Segmente</summary>
                         <ul class="travel__data-list">
-                          {#each day.arrival.segments as segment}
+                          {#each getDaySegments(day) as segment}
                             <li>
-                              <strong>{resolveModeAppearance(segment.mode ?? '').label}</strong>
+                              <strong>{getModeAppearance(segment.mode ?? '').label}</strong>
                               <div>
                                 {segment.from?.name ?? 'Start'} → {segment.to?.name ?? 'Ziel'} ·
                                 {segment.distanceKm ? `${numberFormatter.format(segment.distanceKm)} km` : 'Distanz offen'} ·
@@ -1409,9 +1257,64 @@
                         </ul>
                       </details>
                     {/if}
+                    {#if getDayFlights(day).length}
+                      <details class="travel__mini-details">
+                        <summary>Flüge</summary>
+                        <ul class="travel__data-list">
+                          {#each getDayFlights(day) as flight}
+                            <li>
+                              <strong>{flight.from?.name ?? 'Start'} → {flight.to?.name ?? 'Ziel'}</strong>
+                              <div>
+                                {flight.airline ? `${flight.airline}${flight.flightNumber ? ` • ${flight.flightNumber}` : ''}` : flight.flightNumber ?? 'Verbindung'}
+                              </div>
+                              <div>
+                                {formatDate(flight.departure)}
+                                {#if formatTime(flight.departure)}
+                                  · Abflug {formatTime(flight.departure)}
+                                {/if}
+                                {#if formatTime(flight.arrival)}
+                                  · Ankunft {formatTime(flight.arrival)}
+                                {/if}
+                              </div>
+                              {#if (flight as any).baggage}
+                                <p>Gepäck: {(flight as any).baggage}</p>
+                              {/if}
+                            </li>
+                          {/each}
+                        </ul>
+                      </details>
+                    {/if}
+                    {#if day.hotels?.length}
+                      <details class="travel__mini-details">
+                        <summary>Unterkünfte</summary>
+                        <ul class="travel__data-list">
+                          {#each day.hotels as hotel}
+                            <li>
+                              <strong>{hotel.name}</strong>
+                              <div>{hotel.city ?? ''} · {hotel.pricePerNight ? `${formatCurrency(hotel.pricePerNight)} pro Nacht` : 'Preis auf Anfrage'}</div>
+                            </li>
+                          {/each}
+                        </ul>
+                      </details>
+                    {/if}
+                    {#if getDayRestaurants(day).length}
+                      <details class="travel__mini-details">
+                        <summary>Kulinarik</summary>
+                        <ul class="travel__data-list">
+                          {#each getDayRestaurants(day) as restaurant}
+                            <li>
+                              <strong>{restaurant.name}</strong>
+                              {#if restaurant.description}
+                                <p>{restaurant.description}</p>
+                              {/if}
+                            </li>
+                          {/each}
+                        </ul>
+                      </details>
+                    {/if}
                     {#if day.activities?.length}
                       <details class="travel__mini-details" open>
-                        <summary>Aktivitäten des Tages</summary>
+                        <summary>Aktivitäten</summary>
                         <ul class="travel__data-list">
                           {#each day.activities as activity}
                             <li>
@@ -1424,15 +1327,12 @@
                         </ul>
                       </details>
                     {/if}
-                    {#if day.hotels?.length}
+                    {#if getDayNotes(day).length}
                       <details class="travel__mini-details">
-                        <summary>Hoteloptionen</summary>
+                        <summary>Hinweise</summary>
                         <ul class="travel__data-list">
-                          {#each day.hotels as hotel}
-                            <li>
-                              <strong>{hotel.name}</strong>
-                              <div>{hotel.city ?? ''} · {hotel.pricePerNight ? `${formatCurrency(hotel.pricePerNight)} pro Nacht` : 'Preis auf Anfrage'}</div>
-                            </li>
+                          {#each getDayNotes(day) as note}
+                            <li>{note}</li>
                           {/each}
                         </ul>
                       </details>
