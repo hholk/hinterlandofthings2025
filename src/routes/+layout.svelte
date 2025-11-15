@@ -4,6 +4,7 @@
   import { gsap } from 'gsap';
   import type LocomotiveScroll from 'locomotive-scroll';
   import 'locomotive-scroll/dist/locomotive-scroll.css';
+  import '../app.css';
   import { initializeAuth } from '$stores/auth';
 
   let container: HTMLDivElement | null = null;
