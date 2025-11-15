@@ -117,11 +117,13 @@ export const chileTravelData: ChileTravelData = {
       budget: {
         flights: [
           'Iberia/LEVEL: Barcelona – Santiago ab 780 € (Carry-On + Personal Item)',
-          'Sky Airline: Santiago – Puerto Natales ab 85 € inkl. 23 kg Aufgabegepäck'
+          'Sky Airline: Santiago – Puerto Natales ab 85 € inkl. 23 kg Aufgabegepäck',
+          'LATAM SuperSaver: Puerto Montt – Santiago oneway ab 49 € mit 23 kg Aufgabegepäck'
         ],
         cars: [
           'Kia Soul (Europcar Puerto Montt) – 32 € / Tag, 800 km frei',
-          'Suzuki Jimny 4x4 (Chilecar Puerto Natales) – 64 € / Tag, unlimitierte km'
+          'Suzuki Jimny 4x4 (Chilecar Puerto Natales) – 64 € / Tag, unlimitierte km',
+          'JAC S3 (Mittag Rent a Car Puerto Varas) – 36 € / Tag, Einweg nach Punta Arenas möglich'
         ]
       },
       insights: [
@@ -188,11 +190,13 @@ export const chileTravelData: ChileTravelData = {
       budget: {
         flights: [
           'LATAM Light: Madrid – Santiago ab 710 € inkl. Boardservice',
-          'JetSmart Promo: Santiago – Calama ab 42 € (Handgepäck + persönliches Item)'
+          'JetSmart Promo: Santiago – Calama ab 42 € (Handgepäck + persönliches Item)',
+          'Sky Airline Eco: La Serena – Santiago ab 34 € (Handgepäck)'
         ],
         cars: [
           'Chevrolet Onix (Econorent Calama) – 28 € / Tag, freie km',
-          'Toyota RAV4 (Localiza La Serena) – 55 € / Tag, inkl. Vollkasko'
+          'Toyota RAV4 (Localiza La Serena) – 55 € / Tag, inkl. Vollkasko',
+          'Suzuki Vitara 4x4 (Koyer Rental San Pedro) – 47 € / Tag, Dachgepäckträger inklusive'
         ]
       },
       insights: [
@@ -253,11 +257,13 @@ export const chileTravelData: ChileTravelData = {
       budget: {
         flights: [
           'Air Europa Basic: Madrid – Santiago ab 690 € mit 10 kg Handgepäck',
-          'Sky Airline Promo: Santiago – La Serena ab 39 € (Frühbucher)'
+          'Sky Airline Promo: Santiago – La Serena ab 39 € (Frühbucher)',
+          'Jetsmart Return: Santiago – Antofagasta ab 58 € für die Kombination mit Strandverlängerung'
         ],
         cars: [
           'Hyundai Accent (Localiza Santiago) – 24 € / Tag, 400 km frei',
-          'MG ZS Compact SUV (United Rent a Car) – 37 € / Tag, unlimitierte km'
+          'MG ZS Compact SUV (United Rent a Car) – 37 € / Tag, unlimitierte km',
+          'Chevrolet Tracker (ChileCars La Serena) – 33 € / Tag, inkl. Zweitfahrer:innen'
         ]
       },
       insights: [
@@ -267,30 +273,34 @@ export const chileTravelData: ChileTravelData = {
       ]
     }
   ],
+  // Kurztrips für Einsteiger:innen: Alle starten und enden in Santiago und lassen sich leicht kombinieren.
   roadTrips: [
     {
-      id: 'valparaiso-weekender',
-      title: 'Valparaíso Weekender',
+      id: 'andes-panorama-loop',
+      title: 'Anden Panorama Loop',
       duration: '2 Tage',
-      distanceKm: 240,
-      description: 'Schnelle Küstenflucht mit Streetart, Pazifik-Sonnenuntergang und frischem Ceviche.',
-      stops: ['Santiago', 'Casablanca Valley', 'Valparaíso', 'Concón']
+      distanceKm: 260,
+      description:
+        'Von Santiago über Farellones in die Hochanden: Seilbahnausblicke, Kondore beobachten und Rückweg über Cajón del Maipo.',
+      stops: ['Santiago', 'Farellones', 'Valle Nevado', 'Cajón del Maipo', 'Santiago']
     },
     {
-      id: 'colchagua-classic',
-      title: 'Colchagua & Maule Weinroute',
+      id: 'pacific-surf-run',
+      title: 'Pacific Surf Run',
       duration: '3 Tage',
-      distanceKm: 520,
-      description: 'Boutique-Wineries, Fahrradtouren durch Rebstöcke und lokale Estancias.',
-      stops: ['Santiago', 'Santa Cruz', 'Vichuquén-See', 'Talca']
+      distanceKm: 480,
+      description:
+        'Kompakter Küsten-Loop mit Surfkurs in Pichilemu, Dünen von Bucalemu und Seafood-Markt in Constitución.',
+      stops: ['Santiago', 'Pichilemu', 'Bucalemu', 'Constitución', 'Santiago']
     },
     {
-      id: 'cajon-del-maipo-escape',
-      title: 'Cajón del Maipo Escape',
-      duration: '1-2 Tage',
-      distanceKm: 180,
-      description: 'Kurzer Andenabstecher mit Thermalquellen, Rafting und Craft-Kaffee.',
-      stops: ['Santiago', 'San José de Maipo', 'Termas Valle de Colina']
+      id: 'wine-stars-sprint',
+      title: 'Wine & Stars Sprint',
+      duration: '2 Tage',
+      distanceKm: 420,
+      description:
+        'Casablanca-Valley für Naturwein, anschließend Sternenbeobachtung im Observatorium Collowara – perfekte Kombi aus Genuss und Nachtfotografie.',
+      stops: ['Santiago', 'Casablanca', 'Monte Patria', 'Observatorio Collowara', 'Santiago']
     }
   ]
 };
