@@ -1,9 +1,17 @@
 import datasetModule from '../../../../travel-routes/travel-routes-data.json';
 import type { LoadedTravelRoutesDataset, RouteDetail, RouteIndexEntry, TravelRoutesDataset } from './types';
 
-const routeModules = import.meta.glob('../../../../travel-routes/data/routes/*.json', {
-  eager: true
-}) as Record<string, RouteDetail>;
+// Für Einsteiger:innen: `import.meta.glob` liefert standardmäßig komplette
+// Modulobjekte zurück. Bei JSON-Dateien steckt der eigentliche Inhalt unter dem
+// `default`-Export. Mit `import: 'default'` erhalten wir direkt den Datensatz –
+// ohne später das Wrapper-Objekt auflösen zu müssen.
+const routeModules = import.meta.glob<RouteDetail>(
+  '../../../../travel-routes/data/routes/*.json',
+  {
+    eager: true,
+    import: 'default'
+  }
+);
 
 function parseRoute(raw: RouteDetail): RouteDetail | null {
   try {
