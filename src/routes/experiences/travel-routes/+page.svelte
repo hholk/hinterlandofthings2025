@@ -16,6 +16,7 @@
   let activeVariant: TravelVariant | undefined = travel.variants[0];
   let mapContainer: HTMLDivElement | null = null;
   let map: maplibregl.Map | null = null;
+  // Wir starten mit einer geschlossenen Legende, um die Karte auf kleinen Displays frei zu halten.
   let legendOpen = false;
 
   const POINT_SOURCE = 'route-points';
@@ -153,25 +154,34 @@
 
   <div class="map-section">
     <div class="map-card">
-      <div class="map-container" bind:this={mapContainer} role="presentation" aria-label="Chile Karte"></div>
-      <div class="map-actions">
-        <Button color="light" class="legend-toggle" on:click={() => (legendOpen = !legendOpen)}>
-          {legendOpen ? 'Legende verbergen' : 'Legende anzeigen'}
-        </Button>
-      </div>
-      {#if legendOpen}
-        <div class="map-legend" role="dialog" aria-label="Kartenerklärung">
-          <h2>Legende</h2>
-          <ul>
-            {#each travel.map.legend as entry}
-              <li>
-                <span class="legend-dot" style={`--legend-color: ${entry.color};`}></span>
-                <span>{entry.label}</span>
-              </li>
-            {/each}
-          </ul>
+      <!-- Für Einsteiger:innen: Die Karte und die Legende teilen sich diesen Container, damit Mobile-User:innen weniger scrollen müssen. -->
+      <div class="map-shell">
+        <div class="map-container" bind:this={mapContainer} role="presentation" aria-label="Chile Karte"></div>
+        <div class="map-overlay" aria-live="polite">
+          <Button
+            color="light"
+            size="xs"
+            class="legend-toggle"
+            aria-expanded={legendOpen}
+            on:click={() => (legendOpen = !legendOpen)}
+          >
+            {legendOpen ? 'Legende schließen' : 'Legende anzeigen'}
+          </Button>
+          {#if legendOpen}
+            <div class="map-legend" role="dialog" aria-label="Kartenerklärung">
+              <h2>Legende</h2>
+              <ul>
+                {#each travel.map.legend as entry}
+                  <li>
+                    <span class="legend-dot" style={`--legend-color: ${entry.color};`}></span>
+                    <span>{entry.label}</span>
+                  </li>
+                {/each}
+              </ul>
+            </div>
+          {/if}
         </div>
-      {/if}
+      </div>
     </div>
   </div>
 
@@ -339,36 +349,43 @@
     background: rgba(15, 23, 42, 0.72);
     border: 1px solid rgba(94, 234, 212, 0.08);
     border-radius: 1.25rem;
-    padding: 1rem;
+    padding: 0.75rem;
     box-shadow: 0 20px 45px rgba(15, 23, 42, 0.35);
   }
 
-  .map-container {
-    width: 100%;
-    min-height: clamp(280px, 50vw, 420px);
+  .map-shell {
+    position: relative;
     border-radius: 1rem;
     overflow: hidden;
   }
 
-  .map-actions {
-    margin-top: 0.75rem;
-    display: flex;
-    justify-content: flex-end;
+  .map-container {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    min-height: 280px;
+  }
+
+  .map-overlay {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    display: grid;
+    gap: 0.5rem;
+    justify-items: end;
   }
 
   .legend-toggle {
-    background: rgba(59, 130, 246, 0.18);
+    background: rgba(15, 23, 42, 0.78);
     border: 1px solid rgba(59, 130, 246, 0.45);
-    color: #cbd5f5;
+    color: #e2e8f0;
     border-radius: 999px;
-    padding: 0.35rem 1.2rem;
+    padding-inline: 0.9rem;
     font-weight: 600;
-    transition: background 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.4);
   }
 
   .legend-toggle:hover {
-    background: rgba(59, 130, 246, 0.28);
-    transform: translateY(-1px);
+    background: rgba(30, 64, 175, 0.55);
   }
 
   .legend-toggle:focus-visible {
@@ -377,13 +394,14 @@
   }
 
   .map-legend {
-    margin-top: 1rem;
-    border-radius: 1rem;
-    background: rgba(15, 23, 42, 0.9);
-    border: 1px solid rgba(148, 163, 184, 0.2);
-    padding: 1rem;
+    width: min(240px, 80vw);
+    border-radius: 0.9rem;
+    background: rgba(15, 23, 42, 0.93);
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    padding: 0.9rem;
     display: grid;
-    gap: 0.75rem;
+    gap: 0.65rem;
+    box-shadow: 0 15px 30px rgba(15, 23, 42, 0.45);
   }
 
   .map-legend h2 {
@@ -420,8 +438,8 @@
   }
 
   .variant-selector :global([role='tablist']) {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 0.5rem;
     list-style: none;
     padding: 0;
@@ -434,12 +452,13 @@
 
   .variant-selector :global([role='tablist'] button) {
     border: none;
-    background: rgba(15, 23, 42, 0.45);
-    color: rgba(148, 163, 184, 0.95);
-    padding: 0.75rem 1.1rem;
-    border-radius: 0.9rem 0.9rem 0 0;
+    background: rgba(15, 23, 42, 0.58);
+    color: rgba(226, 232, 240, 0.8);
+    padding: 0.6rem 0.9rem;
+    border-radius: 0.85rem;
     font-weight: 600;
     transition: all 0.2s ease;
+    min-height: 48px;
   }
 
   .variant-selector :global([role='tablist'] button:hover) {
@@ -448,8 +467,8 @@
 
   .variant-selector :global([role='tablist'] button[aria-selected='true']) {
     color: #38bdf8;
-    background: rgba(15, 23, 42, 0.7);
-    border-bottom: 2px solid #38bdf8;
+    background: rgba(30, 58, 138, 0.65);
+    box-shadow: inset 0 0 0 1px rgba(56, 189, 248, 0.6);
   }
 
   .variant-selector :global([role='tablist'] button:focus-visible) {
@@ -464,9 +483,8 @@
   .variant-selector :global([role='tabpanel']) {
     background: rgba(15, 23, 42, 0.65);
     border: 1px solid rgba(94, 234, 212, 0.12);
-    border-radius: 0 1rem 1rem 1rem;
-    padding: 1rem 1.25rem;
-    margin-top: -0.5rem;
+    border-radius: 1rem;
+    padding: 0.9rem 1.1rem;
   }
 
   .tab-summary {
@@ -642,10 +660,11 @@
 
   @media (min-width: 768px) {
     .map-card {
-      padding: 1.5rem;
+      padding: 1.25rem;
     }
 
     .map-container {
+      aspect-ratio: 16 / 9;
       min-height: 420px;
     }
 
