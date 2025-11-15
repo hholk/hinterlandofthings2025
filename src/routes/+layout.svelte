@@ -9,6 +9,7 @@
   import 'locomotive-scroll/dist/locomotive-scroll.css';
   import '../app.css';
   import { initializeAuth, isAuthenticated } from '$stores/auth';
+  import { isPublicRoute } from '$utils/public-routes';
 
   let container: HTMLDivElement | null = null;
 
@@ -32,8 +33,11 @@
 
     const unsubscribeAuth = isAuthenticated.subscribe((loggedIn) => {
       const onLoginRoute = currentPath === loginPath || currentPath.startsWith(`${loginPath}/`);
+      const onPublicRoute = isPublicRoute(currentPath, base);
 
-      if (!loggedIn && !onLoginRoute) {
+      // Für Einsteiger:innen: Die Chile-Reiserouten sollen ohne Passwort sichtbar sein,
+      // deshalb erlauben wir hier Ausnahmen, bevor wir zum Login umleiten.
+      if (!loggedIn && !onLoginRoute && !onPublicRoute) {
         goto(loginPath, { replaceState: true });
       } else if (loggedIn && onLoginRoute) {
         goto(homePath, { replaceState: true });

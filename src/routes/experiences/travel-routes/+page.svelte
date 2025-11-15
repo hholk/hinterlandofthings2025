@@ -268,7 +268,7 @@
 
     if (mapLoaded && selectedRoute) {
       mapInstance?.resize();
-      ensureMapBounds();
+      ensureMapBounds(allCoordinates);
     }
   }
 
@@ -382,9 +382,9 @@
     return style;
   }
 
-  function ensureMapBounds() {
+  function ensureMapBounds(coordinates: LngLatTuple[]) {
     if (!mapInstance || !maplibre) return;
-    const boundingBox = calculateBoundingBox(allCoordinates);
+    const boundingBox = calculateBoundingBox(coordinates);
     if (!boundingBox) return;
 
     const bounds = new maplibre.LngLatBounds(boundingBox[0], boundingBox[1]);
@@ -407,12 +407,12 @@
     }
   }
 
-  function setupSources() {
+  function setupSources(segments: SegmentCollection, stops: StopCollection) {
     if (!mapInstance) return;
     if (!mapInstance.getSource(ROUTE_SEGMENT_SOURCE)) {
       mapInstance.addSource(ROUTE_SEGMENT_SOURCE, {
         type: 'geojson',
-        data: segmentCollection
+        data: segments
       });
     }
 
@@ -469,7 +469,7 @@
     if (!mapInstance.getSource(ROUTE_STOP_SOURCE)) {
       mapInstance.addSource(ROUTE_STOP_SOURCE, {
         type: 'geojson',
-        data: stopCollection
+        data: stops
       });
       mapInstance.addLayer({
         id: ROUTE_STOP_LAYER,
@@ -502,20 +502,24 @@
     }
   }
 
-  function updateMapData() {
+  function updateMapData(
+    segments: SegmentCollection,
+    stops: StopCollection,
+    coordinates: LngLatTuple[]
+  ) {
     if (!mapInstance) return;
     const segmentSource = mapInstance.getSource(ROUTE_SEGMENT_SOURCE) as GeoJSONSource | undefined;
     const stopSource = mapInstance.getSource(ROUTE_STOP_SOURCE) as GeoJSONSource | undefined;
 
     if (!segmentSource || !stopSource) {
-      setupSources();
-      return updateMapData();
+      setupSources(segments, stops);
+      return updateMapData(segments, stops, coordinates);
     }
 
-    segmentSource.setData(segmentCollection);
-    stopSource.setData(stopCollection);
-    ensureMapBounds();
-    updateMapVisibility();
+    segmentSource.setData(segments);
+    stopSource.setData(stops);
+    ensureMapBounds(coordinates);
+    updateMapVisibility(sliderValue);
   }
 
   function createOpacityExpression(threshold: number) {
@@ -526,11 +530,10 @@
     return ['case', ['<=', ['get', 'order'], threshold], 1, 0.3];
   }
 
-  function updateMapVisibility() {
+  function updateMapVisibility(threshold: number) {
     if (!mapInstance) return;
     if (!mapInstance.getLayer(ROUTE_SEGMENT_LAYER)) return;
 
-    const threshold = sliderValue;
     mapInstance.setPaintProperty(ROUTE_SEGMENT_LAYER, 'line-opacity', createOpacityExpression(threshold));
     if (mapInstance.getLayer(ROUTE_SEGMENT_LAYER_DASHED)) {
       mapInstance.setPaintProperty(
@@ -675,7 +678,7 @@
           if (cancelled) return;
           setupSources();
           mapLoaded = true;
-          updateMapData();
+          updateMapData(segmentCollection, stopCollection, allCoordinates);
         });
 
         map.on('click', ROUTE_STOP_LAYER, handleStopClick);
@@ -846,10 +849,10 @@
     sliderValue = sliderMax;
   }
   $: if (mapLoaded) {
-    updateMapData();
+    updateMapData(segmentCollection, stopCollection, allCoordinates);
   }
   $: if (mapLoaded) {
-    updateMapVisibility();
+    updateMapVisibility(sliderValue);
   }
 </script>
 
