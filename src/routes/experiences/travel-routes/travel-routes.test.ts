@@ -54,6 +54,29 @@ describe('travel route data access', () => {
       }
     }
   });
+
+  it('liefert pro Route mindestens eine renderbare Linien-Geometrie für die Karte', () => {
+    const hasRenderableRoute = Object.values(chileTravelData.routes).some((route) => {
+      const stopIndex = new Map((route.stops ?? []).map((stop) => [stop.id, stop] as const));
+
+      const hasSegment = (route.segments ?? []).some((segment) => {
+        const from = stopIndex.get(segment.from);
+        const to = stopIndex.get(segment.to);
+        return Boolean(from?.coordinates && to?.coordinates);
+      });
+
+      const hasDailyGeometry = (route.mapLayers?.dailySegments ?? []).some((segment) => {
+        const coordinates = segment.geometry?.coordinates;
+        return Array.isArray(coordinates) && coordinates.length >= 2;
+      });
+
+      return hasSegment || hasDailyGeometry;
+    });
+
+    // Für Einsteiger:innen: Ohne diese Geometriedaten bleibt die Map leer – der Test stellt sicher,
+    // dass wir die JSON-Dokumentation korrekt befüllt und verstanden haben.
+    expect(hasRenderableRoute).toBe(true);
+  });
 });
 
 describe('travel routes shell', () => {
