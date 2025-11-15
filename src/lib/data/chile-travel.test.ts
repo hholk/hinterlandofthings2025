@@ -1,20 +1,34 @@
 import { describe, it, expect } from 'vitest';
-import { chileTravelData } from './chile-travel';
+import { buildRouteLineCollection, buildRouteMarkerCollection, chileTravelData } from './chile-travel';
 
-// Für Einsteiger:innen: Diese Tests stellen sicher, dass die Seite immer vollständige Daten erhält.
+// Für Einsteiger:innen: Tests helfen uns, Datenfehler sofort zu entdecken – etwa
+// fehlende Hotels oder Stops ohne Koordinaten. So bleibt die UI robust.
 describe('chileTravelData', () => {
-  it('liefert für jede Variante Flug- und Auto-Sparideen', () => {
-    for (const variant of chileTravelData.variants) {
-      expect(variant.budget.flights.length, `${variant.id} sollte mindestens 2 Flugtipps haben`).toBeGreaterThanOrEqual(2);
-      expect(variant.budget.cars.length, `${variant.id} sollte mindestens 2 Autotipps haben`).toBeGreaterThanOrEqual(2);
+  it('enthält drei vollständig ausgearbeitete Routen', () => {
+    expect(chileTravelData.routes).toHaveLength(3);
+
+    for (const route of chileTravelData.routes) {
+      expect(route.stops.length, `${route.id} benötigt mindestens zwei Stopps`).toBeGreaterThanOrEqual(2);
+      expect(route.transportMix.length, `${route.id} sollte Transportarten nennen`).toBeGreaterThan(0);
+      expect(route.summary.length, `${route.id} braucht eine Beschreibung`).toBeGreaterThan(20);
+
+      for (const stop of route.stops) {
+        expect(stop.coordinates).toHaveLength(2);
+        expect(stop.highlights.length, `${stop.id} sollte Highlights haben`).toBeGreaterThan(0);
+        expect(stop.accommodation.length, `${stop.id} benötigt eine Unterkunftsempfehlung`).toBeGreaterThan(5);
+        expect(stop.stayNights).toBeGreaterThanOrEqual(0);
+      }
     }
   });
 
-  it('stellt drei Roadtrips von Santiago bereit', () => {
-    expect(chileTravelData.roadTrips).toHaveLength(3);
-    for (const trip of chileTravelData.roadTrips) {
-      expect(trip.stops[0]).toBe('Santiago');
-      expect(trip.stops[trip.stops.length - 1]).toBe('Santiago');
-    }
+  it('stellt GeoJSON-Hilfsstrukturen für Karte und Marker bereit', () => {
+    const [firstRoute] = chileTravelData.routes;
+    const markers = buildRouteMarkerCollection(firstRoute);
+    const line = buildRouteLineCollection(firstRoute);
+
+    expect(markers.features).toHaveLength(firstRoute.stops.length);
+    expect(markers.features[0].geometry.type).toBe('Point');
+    expect(line.features[0].geometry.type).toBe('LineString');
+    expect(line.features[0].geometry.coordinates).toEqual(firstRoute.mapPolyline);
   });
 });

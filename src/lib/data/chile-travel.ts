@@ -1,36 +1,41 @@
-// Für Einsteiger:innen: Diese Datei sammelt alle Inhalte für die Chile-Experience
-// an einem Ort. Die UI liest später nur noch strukturierte Daten aus diesem Modul.
-export interface MapStop {
-  day: string;
-  title: string;
+// Für Einsteiger:innen: In dieser Datei sammeln wir alle Reiseinhalte für die Chile-Seite.
+// Die UI kann damit komplett datengetrieben bleiben und muss lediglich diese Struktur rendern.
+
+export interface RouteStop {
+  /** Kennung für Tests und potentielle Deep-Links */
+  id: string;
+  /** Beispielsweise "Tag 1-2" – so erkennen Besucher:innen sofort den Rhythmus. */
+  dayRange: string;
+  location: string;
+  stayNights: number;
   description: string;
+  transportMode: string;
+  travelDistanceKm: number;
+  travelDurationHours: number;
+  accommodation: string;
+  highlights: string[];
   coordinates: [number, number];
 }
 
-export interface BudgetTip {
-  flights: string[];
-  cars: string[];
+export interface RouteEssentials {
+  bestSeason: string;
+  budgetPerPersonEUR: string;
+  pace: 'entspannt' | 'aktiv' | 'intensiv';
+  recommendedFor: string[];
 }
 
-export interface TravelVariant {
+export interface TravelRoute {
   id: string;
   name: string;
-  duration: string;
+  tagline: string;
+  totalDays: number;
+  totalDistanceKm: number;
+  transportMix: string[];
+  color: string;
   summary: string;
-  distanceKm: number;
-  highlights: string[];
-  itinerary: MapStop[];
-  budget: BudgetTip;
-  insights: string[];
-}
-
-export interface RoadTrip {
-  id: string;
-  title: string;
-  duration: string;
-  distanceKm: number;
-  description: string;
-  stops: string[];
+  mapPolyline: [number, number][];
+  stops: RouteStop[];
+  essentials: RouteEssentials;
 }
 
 export interface MapLegendEntry {
@@ -38,305 +43,449 @@ export interface MapLegendEntry {
   color: string;
 }
 
-export interface ChileTravelData {
-  map: {
-    center: [number, number];
-    zoom: number;
-    legend: MapLegendEntry[];
-  };
-  variants: TravelVariant[];
-  roadTrips: RoadTrip[];
+export interface MapSettings {
+  center: [number, number];
+  zoom: number;
+  tileUrl: string;
+  attribution: string;
+  legend: MapLegendEntry[];
 }
 
-// Für Einsteiger:innen: Wir exportieren ein Objekt, das die Seite direkt verwenden kann.
+export interface ChileTravelData {
+  map: MapSettings;
+  routes: TravelRoute[];
+}
+
+// Für Einsteiger:innen: Dieses Objekt wird von der Seite importiert und enthält bereits
+// alle Texte, Koordinaten und Logistik-Infos. Änderungen hier aktualisieren automatisch die UI.
 export const chileTravelData: ChileTravelData = {
   map: {
     center: [-70.6693, -33.4489],
-    zoom: 4.3,
+    zoom: 4.4,
+    tileUrl: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    attribution: '&copy; OpenStreetMap-Mitwirkende',
     legend: [
-      { label: 'Übernachtungsstopp', color: '#38bdf8' },
-      { label: 'Panorama-Etappe', color: '#f97316' }
+      { label: 'Aktive Route', color: '#2563eb' },
+      { label: 'Alternative Route', color: '#a5b4fc' }
     ]
   },
-  variants: [
+  routes: [
     {
-      id: 'andes-seenplatte',
-      name: 'Seenplatte & Patagonien',
-      duration: '16 Tage',
-      summary: 'Von Santiago über die Seenregion bis zu den Granitspitzen des Torres del Paine.',
-      distanceKm: 3400,
-      highlights: [
-        'Fjord-Blick vom Flugzeug nach Puerto Natales',
-        'Kajaktour zwischen den Villarrica-Lavafeldern',
-        'Sonnenaufgang am Base-Torres-Viewpoint'
+      id: 'patagonien-panorama',
+      name: 'Patagonien Panorama',
+      tagline: 'Von den Seen Chiles bis zu den Granittürmen im Süden',
+      totalDays: 16,
+      totalDistanceKm: 3450,
+      transportMix: ['Langstreckenflug', 'Inlandsflug', 'Mietwagen', 'Fährfahrt'],
+      color: '#2563eb',
+      summary:
+        'Kombiniere die chilenische Seenplatte mit Fjorden und dem Torres-del-Paine-Nationalpark – perfekt für Abenteurer:innen, die Fahrtstrecken lieben.',
+      mapPolyline: [
+        [-70.6693, -33.4489],
+        [-71.9545, -39.2822],
+        [-72.9854, -41.3184],
+        [-72.568, -44.321],
+        [-72.506, -51.7295],
+        [-72.9996, -50.9423],
+        [-70.6693, -33.4489]
       ],
-      itinerary: [
+      stops: [
         {
-          day: 'Tag 1-2',
-          title: 'Santiago de Chile',
-          description: 'Ankommen, Sky Costanera besuchen und Streetfood-Tour durch Bellavista.',
+          id: 'scl-arrival',
+          dayRange: 'Tag 1-2',
+          location: 'Santiago de Chile',
+          stayNights: 2,
+          description:
+            'Streetfood-Tour durch Bellavista, Rooftop-Sundowner und erster Überblick über die Reise.',
+          transportMode: 'Langstreckenflug nach Santiago',
+          travelDistanceKm: 0,
+          travelDurationHours: 0,
+          accommodation: 'Hotel Magnolia – Boutiquehotel im Barrio Lastarria',
+          highlights: ['Sky Costanera Viewdeck', 'Pisco Sour Kurs'],
           coordinates: [-70.6693, -33.4489]
         },
         {
-          day: 'Tag 3-5',
-          title: 'Pucón & Villarrica',
-          description: 'Thermalquellen, Vulkanwanderung und Mapuche-Küche.',
+          id: 'pucon-villarrica',
+          dayRange: 'Tag 3-5',
+          location: 'Pucón & Villarrica',
+          stayNights: 3,
+          description:
+            'Thermalquellen, Mapuche-Küche und geführte Vulkanbesteigung mit Steigeisen und Guide.',
+          transportMode: 'Inlandsflug nach Temuco + Mietwagen',
+          travelDistanceKm: 780,
+          travelDurationHours: 5.5,
+          accommodation: 'Hotel Antumalal – Bungalows mit Seeblick',
+          highlights: ['Geothermales Spa', 'Villarrica-Sonnenaufgang'],
           coordinates: [-71.9545, -39.2822]
         },
         {
-          day: 'Tag 6-7',
-          title: 'Puerto Varas',
-          description: 'Seepromenade am Llanquihue und Ausflug zur Insel Chiloé.',
+          id: 'puerto-varas',
+          dayRange: 'Tag 6-7',
+          location: 'Puerto Varas',
+          stayNights: 2,
+          description:
+            'Kajaktour am Llanquihue-See, Abstecher auf die Insel Chiloé und Kaffeerösterei-Besuch.',
+          transportMode: 'Mietwagen',
+          travelDistanceKm: 310,
+          travelDurationHours: 4,
+          accommodation: 'Hotel Awa – Designhotel mit Vulkanblick',
+          highlights: ['Osorno Vulkanpass', 'Holzkirchen von Chiloé'],
           coordinates: [-72.9854, -41.3184]
         },
         {
-          day: 'Tag 8-9',
-          title: 'Carretera Austral Nord',
-          description: 'Roadtrip nach Puyuhuapi mit Hanging Glacier und Fjordblicken.',
+          id: 'carretera-austral',
+          dayRange: 'Tag 8-9',
+          location: 'Carretera Austral Nord',
+          stayNights: 2,
+          description:
+            'Roadtrip nach Puyuhuapi mit Hängegletscher, Fjordblicken und traditionellem Curanto.',
+          transportMode: 'Fährfahrt + Mietwagen',
+          travelDistanceKm: 520,
+          travelDurationHours: 8,
+          accommodation: 'Lodge El Pangue – Fjordlodge mit Spa',
+          highlights: ['Queulat Hängegletscher', 'Thermalquellen von Puyuhuapi'],
           coordinates: [-72.568, -44.321]
         },
         {
-          day: 'Tag 10-12',
-          title: 'Puerto Natales',
-          description: 'Bootsreise zu den Balmaceda-Gletschern und Patagonien-Ranch.',
+          id: 'puerto-natales',
+          dayRange: 'Tag 10-12',
+          location: 'Puerto Natales',
+          stayNights: 3,
+          description:
+            'Fjordcruise zu den Balmaceda-Gletschern, Besuch einer Estancia und Patagonien-Küche.',
+          transportMode: 'Inlandsflug Puerto Montt → Punta Arenas + Bus',
+          travelDistanceKm: 1350,
+          travelDurationHours: 6.5,
+          accommodation: 'The Singular Patagonia – historisches Werft-Hotel',
+          highlights: ['Gletscher-Bootstrip', 'Patagonisches Asado'],
           coordinates: [-72.506, -51.7295]
         },
         {
-          day: 'Tag 13-15',
-          title: 'Torres del Paine Nationalpark',
-          description: 'Base-Torres-Trek, Lago Grey und Guanako-Watching.',
+          id: 'torres-del-paine',
+          dayRange: 'Tag 13-15',
+          location: 'Torres del Paine Nationalpark',
+          stayNights: 3,
+          description:
+            'Base-Torres-Trek, Bootsfahrt auf dem Lago Grey und Wildlife-Spotting mit Ranger:innen.',
+          transportMode: 'Busshuttle',
+          travelDistanceKm: 150,
+          travelDurationHours: 2.5,
+          accommodation: 'EcoCamp Patagonia – nachhaltige Domes',
+          highlights: ['Base Torres Sunrise', 'Guanako-Herden beobachten'],
           coordinates: [-72.9996, -50.9423]
         },
         {
-          day: 'Tag 16',
-          title: 'Santiago Rückflug',
-          description: 'Abendlicher Rückflug über Punta Arenas zurück nach Santiago.',
+          id: 'santiago-return',
+          dayRange: 'Tag 16',
+          location: 'Santiago Rückflug',
+          stayNights: 0,
+          description:
+            'Letzte Souvenirs am Flughafen und optionaler Stopover in Punta Arenas für Pinguine.',
+          transportMode: 'Inlandsflug Punta Arenas → Santiago',
+          travelDistanceKm: 2470,
+          travelDurationHours: 3.4,
+          accommodation: 'Übernachtung im Flugzeug oder Airport-Hotel',
+          highlights: ['Duty-Free Gourmet', 'Patagonia Gin Shop'],
           coordinates: [-70.6693, -33.4489]
         }
       ],
-      budget: {
-        flights: [
-          'Iberia/LEVEL: Barcelona – Santiago ab 780 € (Carry-On + Personal Item)',
-          'Sky Airline: Santiago – Puerto Natales ab 85 € inkl. 23 kg Aufgabegepäck',
-          'LATAM SuperSaver: Puerto Montt – Santiago oneway ab 49 € mit 23 kg Aufgabegepäck'
-        ],
-        cars: [
-          'Kia Soul (Europcar Puerto Montt) – 32 € / Tag, 800 km frei',
-          'Suzuki Jimny 4x4 (Chilecar Puerto Natales) – 64 € / Tag, unlimitierte km',
-          'JAC S3 (Mittag Rent a Car Puerto Varas) – 36 € / Tag, Einweg nach Punta Arenas möglich'
-        ]
-      },
-      insights: [
-        'Die Carretera Austral verlangt gute Planung: Tankstellen nur alle 250 km.',
-        'Torres del Paine verlangt Tagestickets online, am besten 30 Tage vorher.',
-        'Für Nachtbusse zwischen Santiago und Temuco lohnt sich das Salón-Cama-Upgrade.'
-      ]
+      essentials: {
+        bestSeason: 'November – März',
+        budgetPerPersonEUR: 'ab 3.400 €',
+        pace: 'aktiv',
+        recommendedFor: ['Outdoor-Fans', 'Fotograf:innen', 'Reisende mit Trekking-Erfahrung']
+      }
     },
     {
-      id: 'atacama-sternenhimmel',
-      name: 'Atacama & Altiplano',
-      duration: '12 Tage',
-      summary: 'Nordchile mit Geysiren, Salzseen und Sternenhimmel im UNESCO-Reservat.',
-      distanceKm: 2100,
-      highlights: [
-        'Laguna Chaxa bei Sonnenuntergang mit Flamingos',
-        'Sternwarte San Pedro mit Milchstraßen-Fotoworkshop',
-        'Geysirfeld El Tatio im Morgenlicht'
+      id: 'atacama-sternen',
+      name: 'Atacama Sternen-Safari',
+      tagline: 'Geysire, Salzseen und Sternwarten im Norden Chiles',
+      totalDays: 12,
+      totalDistanceKm: 2180,
+      transportMix: ['Langstreckenflug', 'Inlandsflug', 'Mietwagen', 'Geführte Touren'],
+      color: '#f97316',
+      summary:
+        'Der Norden lockt mit surrealen Landschaften, Sternenhimmel und indigener Kultur. Die Route kombiniert geführte Ausflüge mit eigenem Mietwagen.',
+      mapPolyline: [
+        [-70.6693, -33.4489],
+        [-70.5505, -33.6331],
+        [-68.202, -22.9087],
+        [-67.7957, -23.7993],
+        [-67.755, -22.335],
+        [-68.9259, -22.4544],
+        [-70.4861, -29.9045],
+        [-70.6693, -33.4489]
       ],
-      itinerary: [
+      stops: [
         {
-          day: 'Tag 1-2',
-          title: 'Santiago & Valle del Maipo',
-          description: 'Weinprobe bei Concha y Toro und E-Bike-Tour durch Pirque.',
+          id: 'santiago-warmup',
+          dayRange: 'Tag 1-2',
+          location: 'Santiago & Valle del Maipo',
+          stayNights: 2,
+          description:
+            'Weinprobe bei Concha y Toro, Radtour durch Pirque und Vorbereitung auf die Höhenlage.',
+          transportMode: 'Langstreckenflug nach Santiago',
+          travelDistanceKm: 0,
+          travelDurationHours: 0,
+          accommodation: 'Hotel Bidasoa – nachhaltiges Stadthotel',
+          highlights: ['Valle del Maipo E-Bike-Tour', 'Lastarria Food Market'],
           coordinates: [-70.5505, -33.6331]
         },
         {
-          day: 'Tag 3-5',
-          title: 'San Pedro de Atacama',
-          description: 'Mondtal, Salzseen und Marktbesuch in Toconao.',
+          id: 'san-pedro',
+          dayRange: 'Tag 3-5',
+          location: 'San Pedro de Atacama',
+          stayNights: 3,
+          description:
+            'Mondtal, Salzseen und Sternwarte San Pedro mit Milchstraßen-Fotoworkshop.',
+          transportMode: 'Inlandsflug nach Calama + Shuttle',
+          travelDistanceKm: 1250,
+          travelDurationHours: 2.2,
+          accommodation: 'Hotel Desertica – Adobe Suites mit Pool',
+          highlights: ['Valle de la Luna Sunset', 'Astronomie-Session'],
           coordinates: [-68.202, -22.9087]
         },
         {
-          day: 'Tag 6',
-          title: 'Lagunas Miscanti & Miñiques',
-          description: 'Atemberaubende Blau- und Türkistöne auf 4.100 m Höhe.',
+          id: 'altiplano-lagoons',
+          dayRange: 'Tag 6',
+          location: 'Lagunas Miscanti & Miñiques',
+          stayNights: 1,
+          description:
+            'Blaue Lagunen auf 4.100 m Höhe mit Andenflamingos und traditionellem Almuerzo in Socaire.',
+          transportMode: 'Geführte 4x4-Tour',
+          travelDistanceKm: 120,
+          travelDurationHours: 3.5,
+          accommodation: 'Rückkehr nach San Pedro (Hotel Desertica)',
+          highlights: ['Aussichtspunkt Mirador Miscanti', 'Flamingo-Sichtung'],
           coordinates: [-67.7957, -23.7993]
         },
         {
-          day: 'Tag 7',
-          title: 'El Tatio Geysire',
-          description: 'Frühmorgens 80 aktive Geysire erleben und anschließendes Thermalbad.',
+          id: 'el-tatio',
+          dayRange: 'Tag 7',
+          location: 'El Tatio Geysire',
+          stayNights: 0,
+          description:
+            'Sonnenaufgang bei 80 aktiven Geysiren, anschließend Thermalbad und Rückfahrt zum Dorf.',
+          transportMode: 'Minibus-Exkursion',
+          travelDistanceKm: 190,
+          travelDurationHours: 4.5,
+          accommodation: 'Rückkehr nach San Pedro (Hotel Desertica)',
+          highlights: ['Thermalbad', 'Andenfuchs beobachten'],
           coordinates: [-67.755, -22.335]
         },
         {
-          day: 'Tag 8-9',
-          title: 'Calama & Chuquicamata',
-          description: 'Geführte Mine-Tour und Streetfood in Calamas Mercado Central.',
+          id: 'calama-mine',
+          dayRange: 'Tag 8-9',
+          location: 'Calama & Chuquicamata',
+          stayNights: 2,
+          description:
+            'Geführte Tour durch die größte Tagebaumine der Welt und Streetfood im Mercado Central.',
+          transportMode: 'Shuttle San Pedro → Calama',
+          travelDistanceKm: 100,
+          travelDurationHours: 1.5,
+          accommodation: 'Park Hotel Calama – Pooloase in der Wüste',
+          highlights: ['Mine-Visitor-Center', 'Food Market'],
           coordinates: [-68.9259, -22.4544]
         },
         {
-          day: 'Tag 10-11',
-          title: 'La Serena & Elqui-Tal',
-          description: 'Pisco-Brennereien, Sternwarte Mamalluca und Solar-Küche.',
+          id: 'la-serena',
+          dayRange: 'Tag 10-11',
+          location: 'La Serena & Elqui-Tal',
+          stayNights: 2,
+          description:
+            'Pisco-Verkostung, Sternwarte Mamalluca und Solar-Küche in Vicuña.',
+          transportMode: 'Inlandsflug Calama → La Serena',
+          travelDistanceKm: 1040,
+          travelDurationHours: 2.1,
+          accommodation: 'Hotel Terral – Rooftop mit Teleskop',
+          highlights: ['Sternwarte Mamalluca', 'Pisco Destillerie'],
           coordinates: [-70.4861, -29.9045]
         },
         {
-          day: 'Tag 12',
-          title: 'Santiago City Finale',
-          description: 'Souvenirs in Lastarria und Rooftop-Sundowner im Hotel Bidasoa.',
+          id: 'santiago-finale',
+          dayRange: 'Tag 12',
+          location: 'Santiago Finale',
+          stayNights: 0,
+          description:
+            'Letzte Shopping-Runde in Lastarria und Rückflug nach Europa am Abend.',
+          transportMode: 'Inlandsflug La Serena → Santiago',
+          travelDistanceKm: 470,
+          travelDurationHours: 1,
+          accommodation: 'Airport Hotel Holiday Inn (Day Use)',
+          highlights: ['Souvenirs in Lastarria', 'Vegane Küche im Barrio Italia'],
           coordinates: [-70.6693, -33.4489]
         }
       ],
-      budget: {
-        flights: [
-          'LATAM Light: Madrid – Santiago ab 710 € inkl. Boardservice',
-          'JetSmart Promo: Santiago – Calama ab 42 € (Handgepäck + persönliches Item)',
-          'Sky Airline Eco: La Serena – Santiago ab 34 € (Handgepäck)'
-        ],
-        cars: [
-          'Chevrolet Onix (Econorent Calama) – 28 € / Tag, freie km',
-          'Toyota RAV4 (Localiza La Serena) – 55 € / Tag, inkl. Vollkasko',
-          'Suzuki Vitara 4x4 (Koyer Rental San Pedro) – 47 € / Tag, Dachgepäckträger inklusive'
-        ]
-      },
-      insights: [
-        'Für Hochlagen in den Anden mindestens 3 Liter Wasser pro Tag einplanen.',
-        'Geysire nur mit Daunenjacke besuchen – morgens herrschen -5 °C.',
-        'Die meisten Observatorien erlauben keine weiße Stirnlampe – Rotlicht mitnehmen.'
-      ]
+      essentials: {
+        bestSeason: 'April – Oktober',
+        budgetPerPersonEUR: 'ab 2.650 €',
+        pace: 'aktiv',
+        recommendedFor: ['Astronomie-Fans', 'Reisende mit Höhenverträglichkeit', 'Foodies']
+      }
     },
     {
-      id: 'pazifik-wein',
-      name: 'Pazifikküste & Wein',
-      duration: '10 Tage',
-      summary: 'Valparaíso, Casablanca, Elqui-Tal und ein entspannter Abschluss in den Anden.',
-      distanceKm: 1500,
-      highlights: [
-        'Streetart-Tour auf den Cerros von Valparaíso',
-        'Casablanca-Valley Wine Blending Workshop',
-        'Thermalbad und Sternenhimmel im Cajón del Maipo'
+      id: 'pazifik-genuss',
+      name: 'Pazifik Genussreise',
+      tagline: 'Streetart, Wein und Sternenbeobachtung mit entspanntem Tempo',
+      totalDays: 10,
+      totalDistanceKm: 1520,
+      transportMix: ['Langstreckenflug', 'Mietwagen', 'Bahn & Bus'],
+      color: '#0f766e',
+      summary:
+        'Ein Mix aus Küstenstädten, Weinbaugebieten und Wellbeing im Cajón del Maipo – ideal für Genießer:innen und Einsteiger:innen.',
+      mapPolyline: [
+        [-70.6693, -33.4489],
+        [-71.6127, -33.0472],
+        [-71.4062, -33.3218],
+        [-71.254, -29.904],
+        [-70.4789, -30.1485],
+        [-70.049, -33.721],
+        [-70.6693, -33.4489]
       ],
-      itinerary: [
+      stops: [
         {
-          day: 'Tag 1-2',
-          title: 'Santiago Kulinarik',
-          description: 'Mercado Central, chilenische Empanadas und Rooftop-Bar im Barrio Lastarria.',
+          id: 'santiago-food',
+          dayRange: 'Tag 1-2',
+          location: 'Santiago Kulinarik',
+          stayNights: 2,
+          description:
+            'Mercado Central, Empanada-Workshop und Rooftop-Bar im Barrio Lastarria.',
+          transportMode: 'Langstreckenflug nach Santiago',
+          travelDistanceKm: 0,
+          travelDurationHours: 0,
+          accommodation: 'Hotel Luciano K – Art-Déco Hotel mit Spa',
+          highlights: ['Mercado Central', 'Streetart-Tour in Lastarria'],
           coordinates: [-70.6693, -33.4489]
         },
         {
-          day: 'Tag 3-4',
-          title: 'Valparaíso & Viña del Mar',
-          description: 'Ascensor Artillería, Hafenrundfahrt und Beach-Tag in Reñaca.',
+          id: 'valparaiso',
+          dayRange: 'Tag 3-4',
+          location: 'Valparaíso & Viña del Mar',
+          stayNights: 2,
+          description:
+            'Streetart-Spaziergänge, Ascensor-Fahrten und Strandtag in Reñaca.',
+          transportMode: 'Bus oder Mietwagen',
+          travelDistanceKm: 120,
+          travelDurationHours: 2,
+          accommodation: 'Casa Higueras – Boutiquehotel am Hang',
+          highlights: ['Streetart Tour', 'Hafenrundfahrt'],
           coordinates: [-71.6127, -33.0472]
         },
         {
-          day: 'Tag 5',
-          title: 'Casablanca Valley',
-          description: 'Bike & Wine im Weingut Matetic und nachhaltige Küche im Restaurant Equilibrio.',
+          id: 'casablanca',
+          dayRange: 'Tag 5',
+          location: 'Casablanca Valley',
+          stayNights: 1,
+          description:
+            'Bike & Wine im Weingut Matetic, nachhaltige Küche und private Barrel-Verkostung.',
+          transportMode: 'Mietwagen',
+          travelDistanceKm: 45,
+          travelDurationHours: 1,
+          accommodation: 'La Casona Matetic – Weingut mit acht Zimmern',
+          highlights: ['Wein-Blending Workshop', 'Farm-to-Table Dinner'],
           coordinates: [-71.4062, -33.3218]
         },
         {
-          day: 'Tag 6-7',
-          title: 'La Serena & Küstensternwarte',
-          description: 'Sonnenuntergang in Coquimbo und Sternführung in Collowara.',
+          id: 'la-serena-coast',
+          dayRange: 'Tag 6-7',
+          location: 'La Serena & Küstensternwarte',
+          stayNights: 2,
+          description:
+            'Sonnenuntergang in Coquimbo, Observatorium Collowara und Kitesurfen für Einsteiger:innen.',
+          transportMode: 'Inlandsflug Santiago → La Serena',
+          travelDistanceKm: 480,
+          travelDurationHours: 1.1,
+          accommodation: 'Hotel Costa Real – Zimmer mit Meerblick',
+          highlights: ['Observatorio Collowara', 'Coquimbo Seafood Market'],
           coordinates: [-71.254, -29.904]
         },
         {
-          day: 'Tag 8',
-          title: 'Elqui-Tal',
-          description: 'Yoga in Pisco Elqui und Craft-Bier in der Guayacán-Brauerei.',
+          id: 'elqui-valley',
+          dayRange: 'Tag 8',
+          location: 'Elqui-Tal',
+          stayNights: 1,
+          description:
+            'Yoga in Pisco Elqui, Craft-Bier in Guayacán und Besuch kleiner Destillerien.',
+          transportMode: 'Mietwagen',
+          travelDistanceKm: 95,
+          travelDurationHours: 1.5,
+          accommodation: 'Refugio El Molle – Eco-Lodges mit Hängematten',
+          highlights: ['Yoga-Session', 'Craft-Bier-Verkostung'],
           coordinates: [-70.4789, -30.1485]
         },
         {
-          day: 'Tag 9-10',
-          title: 'Cajón del Maipo',
-          description: 'Heißquellen im Termas Valle de Colina und Wanderung zur Morado-Gletscherzunge.',
+          id: 'cajon-maipo',
+          dayRange: 'Tag 9-10',
+          location: 'Cajón del Maipo',
+          stayNights: 2,
+          description:
+            'Thermalbad in den Termas Valle de Colina, Sternenhimmel und leichte Wanderungen.',
+          transportMode: 'Mietwagen zurück nach Santiago',
+          travelDistanceKm: 520,
+          travelDurationHours: 5.5,
+          accommodation: 'Lodge Altiplanico San Alfonso – Chalets im Tal',
+          highlights: ['Termas Valle de Colina', 'Sternenbeobachtung'],
           coordinates: [-70.049, -33.721]
+        },
+        {
+          id: 'departure',
+          dayRange: 'Tag 10 Abend',
+          location: 'Santiago Abreise',
+          stayNights: 0,
+          description: 'Rückgabe des Mietwagens und Rückflug nach Europa.',
+          transportMode: 'Rückfahrt nach Santiago + Langstreckenflug',
+          travelDistanceKm: 60,
+          travelDurationHours: 1.2,
+          accommodation: 'Optional Holiday Inn Airport für Day Room',
+          highlights: ['Duty-Free Weinshop', 'Letzter Spaziergang im Parque Bicentenario'],
+          coordinates: [-70.6693, -33.4489]
         }
       ],
-      budget: {
-        flights: [
-          'Air Europa Basic: Madrid – Santiago ab 690 € mit 10 kg Handgepäck',
-          'Sky Airline Promo: Santiago – La Serena ab 39 € (Frühbucher)',
-          'Jetsmart Return: Santiago – Antofagasta ab 58 € für die Kombination mit Strandverlängerung'
-        ],
-        cars: [
-          'Hyundai Accent (Localiza Santiago) – 24 € / Tag, 400 km frei',
-          'MG ZS Compact SUV (United Rent a Car) – 37 € / Tag, unlimitierte km',
-          'Chevrolet Tracker (ChileCars La Serena) – 33 € / Tag, inkl. Zweitfahrer:innen'
-        ]
-      },
-      insights: [
-        'In Valparaíso lohnt sich das Bip!-Ticket der Metro – spart Wartezeit und Bargeld.',
-        'Für Wein-Workshops rechtzeitig reservieren: Plätze sind auf 12 Teilnehmende begrenzt.',
-        'Straßen ins Cajón del Maipo können nach Regen gesperrt sein – lokale Wetter-Apps prüfen.'
-      ]
-    }
-  ],
-  // Kurztrips für Einsteiger:innen: Alle starten und enden in Santiago und lassen sich leicht kombinieren.
-  roadTrips: [
-    {
-      id: 'andes-panorama-loop',
-      title: 'Anden Panorama Loop',
-      duration: '2 Tage',
-      distanceKm: 260,
-      description:
-        'Von Santiago über Farellones in die Hochanden: Seilbahnausblicke, Kondore beobachten und Rückweg über Cajón del Maipo.',
-      stops: ['Santiago', 'Farellones', 'Valle Nevado', 'Cajón del Maipo', 'Santiago']
-    },
-    {
-      id: 'pacific-surf-run',
-      title: 'Pacific Surf Run',
-      duration: '3 Tage',
-      distanceKm: 480,
-      description:
-        'Kompakter Küsten-Loop mit Surfkurs in Pichilemu, Dünen von Bucalemu und Seafood-Markt in Constitución.',
-      stops: ['Santiago', 'Pichilemu', 'Bucalemu', 'Constitución', 'Santiago']
-    },
-    {
-      id: 'wine-stars-sprint',
-      title: 'Wine & Stars Sprint',
-      duration: '2 Tage',
-      distanceKm: 420,
-      description:
-        'Casablanca-Valley für Naturwein, anschließend Sternenbeobachtung im Observatorium Collowara – perfekte Kombi aus Genuss und Nachtfotografie.',
-      stops: ['Santiago', 'Casablanca', 'Monte Patria', 'Observatorio Collowara', 'Santiago']
+      essentials: {
+        bestSeason: 'September – April',
+        budgetPerPersonEUR: 'ab 2.150 €',
+        pace: 'entspannt',
+        recommendedFor: ['Foodies', 'Paare', 'Chile-Einsteiger:innen']
+      }
     }
   ]
 };
 
-// Hilfsfunktion: Die Karte erwartet GeoJSON-Daten – wir erzeugen sie on-the-fly.
-export function buildVariantGeoJSON(variant: TravelVariant) {
+// Für Einsteiger:innen: Leaflet braucht GeoJSON-Daten. Diese Hilfsfunktionen wandeln
+// unsere Typescript-Strukturen in ein Format, das die Karte direkt zeichnen kann.
+export function buildRouteMarkerCollection(route: TravelRoute) {
   return {
     type: 'FeatureCollection',
-    features: variant.itinerary.map((stop, index) => ({
-      type: 'Feature',
+    features: route.stops.map((stop, index) => ({
+      type: 'Feature' as const,
       geometry: {
-        type: 'Point',
+        type: 'Point' as const,
         coordinates: stop.coordinates
       },
       properties: {
-        order: index,
-        title: stop.title,
-        description: stop.description,
-        day: stop.day
+        index,
+        id: stop.id,
+        location: stop.location,
+        dayRange: stop.dayRange
       }
     }))
   } as const;
 }
 
-// Linienzug für MapLibre – verbindet die Stopps in chronologischer Reihenfolge.
-export function buildVariantLineString(variant: TravelVariant) {
+export function buildRouteLineCollection(route: TravelRoute) {
   return {
     type: 'FeatureCollection',
     features: [
       {
-        type: 'Feature',
+        type: 'Feature' as const,
         geometry: {
-          type: 'LineString',
-          coordinates: variant.itinerary.map((stop) => stop.coordinates)
+          type: 'LineString' as const,
+          coordinates: route.mapPolyline
         },
-        properties: {}
+        properties: {
+          id: route.id,
+          name: route.name
+        }
       }
     ]
   } as const;
