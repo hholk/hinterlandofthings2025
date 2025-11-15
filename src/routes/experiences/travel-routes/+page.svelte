@@ -1,9 +1,10 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
+  import { onMount, tick } from 'svelte';
   import type { PageData } from './$types';
   import type { TravelRoute } from '../../../lib/data/chile-travel';
   import type { FeatureCollection, Geometry } from 'geojson';
   import 'maplibre-gl/dist/maplibre-gl.css';
+  import { calculateBoundingBox, collectRouteCoordinates } from '../../../lib/travel/map-bounds';
 
   type MapLibreModule = typeof import('maplibre-gl');
   type MapLibreMap = import('maplibre-gl').Map;
@@ -27,6 +28,8 @@
   let loadError: string | null = null;
   let resizeCleanup: (() => void) | null = null;
   let activePopup: Popup | null = null;
+  let isMapFullscreen = false;
+  let isLegendVisible = true;
 
   const ROUTE_LINE_SOURCE = 'travel-route-line';
   const ROUTE_LINE_LAYER = 'travel-route-line-layer';
@@ -34,6 +37,45 @@
   const ROUTE_STOP_LAYER = 'travel-route-stops-layer';
   const ROUTE_STOP_LABEL_LAYER = 'travel-route-stop-label-layer';
   const STOP_POPUP_CLASS = 'travel-map-popup';
+  const FULLSCREEN_BODY_CLASS = 'travel-map-fullscreen-open';
+
+  // Für Einsteiger:innen: Diese kleine Hilfsfunktion sorgt dafür, dass wir das
+  // Scrollen der Seite deaktivieren können, sobald die Karte im Vollbildmodus
+  // geöffnet wird. Auf Mobilgeräten verhindert das, dass die Seite "wegrutscht".
+  function setBodyScrollLock(shouldLock: boolean) {
+    if (typeof document === 'undefined') return;
+    document.body.classList.toggle(FULLSCREEN_BODY_CLASS, shouldLock);
+  }
+
+  function updateScrollZoom(enabled: boolean) {
+    if (!mapInstance) return;
+    if (enabled) {
+      mapInstance.scrollZoom.enable();
+    } else {
+      mapInstance.scrollZoom.disable();
+    }
+  }
+
+  async function toggleMapFullscreen() {
+    isMapFullscreen = !isMapFullscreen;
+    setBodyScrollLock(isMapFullscreen);
+    updateScrollZoom(isMapFullscreen);
+    await tick();
+
+    if (mapLoaded && selectedRoute) {
+      mapInstance?.resize();
+      focusRoute(selectedRoute);
+    }
+  }
+
+  function closeMapFullscreen() {
+    if (!isMapFullscreen) return;
+    void toggleMapFullscreen();
+  }
+
+  function toggleLegendVisibility() {
+    isLegendVisible = !isLegendVisible;
+  }
 
   function updateSelectedRoute() {
     selectedRoute = data.travel.routes.find((route) => route.id === selectedRouteId);
@@ -194,13 +236,13 @@
   function focusRoute(route: TravelRoute | undefined) {
     if (!mapInstance || !maplibre || !route) return;
 
-    const coordinates = [...route.mapPolyline, ...route.stops.map((stop) => stop.coordinates)];
+    const coordinates = collectRouteCoordinates(route);
     if (coordinates.length === 0) return;
 
-    const bounds = coordinates.reduce(
-      (acc, coordinate) => acc.extend(coordinate as [number, number]),
-      new maplibre.LngLatBounds(coordinates[0] as [number, number], coordinates[0] as [number, number])
-    );
+    const boundingBox = calculateBoundingBox(coordinates);
+    if (!boundingBox) return;
+
+    const bounds = new maplibre.LngLatBounds(boundingBox[0], boundingBox[1]);
 
     const prefersReducedMotion = typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const isNarrow = typeof window !== 'undefined' && window.innerWidth <= 720;
@@ -327,6 +369,8 @@
       resizeCleanup?.();
       resizeCleanup = null;
       removeMapPopup();
+      setBodyScrollLock(false);
+      updateScrollZoom(false);
 
       if (mapInstance) {
         mapInstance.off('click', ROUTE_STOP_LAYER, handleStopClick);
@@ -369,7 +413,62 @@
   </header>
 
   <div class="travel__layout">
-    <div class="travel__map" aria-live="polite">
+    {#if isMapFullscreen}
+      <div class="travel__map-backdrop" role="presentation" aria-hidden="true" on:click={closeMapFullscreen}></div>
+    {/if}
+    <div class={`travel__map${isMapFullscreen ? ' travel__map--fullscreen' : ''}`} aria-live="polite">
+      <!-- Für Einsteiger:innen: Die Toolbar bündelt alle Map-Aktionen. So können wir
+           Vollbild und Legende einfach erweitern, ohne weitere Controls von
+           MapLibre selbst einblenden zu müssen. -->
+      <div class="travel__map-controls" role="toolbar" aria-label="Karteneinstellungen">
+        <button
+          type="button"
+          class="travel__map-control"
+          title={isLegendVisible ? 'Legende ausblenden' : 'Legende anzeigen'}
+          aria-pressed={isLegendVisible}
+          on:click={toggleLegendVisibility}
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path
+              d="M5 6h14M5 12h9M5 18h14"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+          <span class="travel__sr-only">{isLegendVisible ? 'Legende ausblenden' : 'Legende anzeigen'}</span>
+        </button>
+        <button
+          type="button"
+          class="travel__map-control"
+          title={isMapFullscreen ? 'Vollbild verlassen' : 'Karte im Vollbild anzeigen'}
+          aria-pressed={isMapFullscreen}
+          on:click={toggleMapFullscreen}
+        >
+          {#if isMapFullscreen}
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path
+                d="M9 9H5V5M15 9h4V5M9 15H5v4m10 0h4v-4"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          {:else}
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path
+                d="M15 5h4v4M9 5H5v4m0 10v-4h4m10 4v-4h-4"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          {/if}
+          <span class="travel__sr-only">{isMapFullscreen ? 'Vollbild schließen' : 'Karte im Vollbild anzeigen'}</span>
+        </button>
+      </div>
       <div
         id="travel-map"
         bind:this={mapContainer}
@@ -379,14 +478,16 @@
       {#if loadError}
         <p class="travel__map-error">{loadError}</p>
       {/if}
-      <ul class="travel__legend" aria-label="Legende">
-        {#each data.travel.map.legend as legendItem}
-          <li>
-            <span style={`--legend-color: ${legendItem.color}`}></span>
-            {legendItem.label}
-          </li>
-        {/each}
-      </ul>
+      {#if isLegendVisible}
+        <ul class="travel__legend" aria-label="Legende">
+          {#each data.travel.map.legend as legendItem}
+            <li>
+              <span style={`--legend-color: ${legendItem.color}`}></span>
+              {legendItem.label}
+            </li>
+          {/each}
+        </ul>
+      {/if}
     </div>
 
     <aside class="travel__routes" aria-label="Routen auswählen">
@@ -519,6 +620,10 @@
     background: #0f172a;
   }
 
+  :global(body.travel-map-fullscreen-open) {
+    overflow: hidden;
+  }
+
   .travel {
     display: flex;
     flex-direction: column;
@@ -560,13 +665,78 @@
     overflow: hidden;
     box-shadow: 0 20px 60px rgba(15, 23, 42, 0.15);
     background: #fff;
-    min-height: clamp(320px, 55vh, 520px);
+    height: clamp(220px, 30vh, 380px);
+    min-height: clamp(220px, 30vh, 380px);
+    transition: box-shadow 200ms ease;
+    z-index: 1;
+  }
+
+  .travel__map-controls {
+    position: absolute;
+    top: max(1rem, env(safe-area-inset-top));
+    left: max(1rem, env(safe-area-inset-left));
+    display: flex;
+    gap: 0.5rem;
+    z-index: 5;
+  }
+
+  .travel__map-control {
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(15, 23, 42, 0.82);
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 14px 32px rgba(15, 23, 42, 0.25);
+    cursor: pointer;
+    transition: transform 160ms ease, background 160ms ease, box-shadow 160ms ease;
+  }
+
+  .travel__map-control:hover,
+  .travel__map-control:focus-visible {
+    background: rgba(59, 130, 246, 0.92);
+    transform: translateY(-1px);
+    outline: none;
+    box-shadow: 0 18px 40px rgba(37, 99, 235, 0.35);
+  }
+
+  .travel__map-control svg {
+    width: 1.25rem;
+    height: 1.25rem;
   }
 
   #travel-map {
     width: 100%;
     height: 100%;
-    min-height: clamp(320px, 55vh, 520px);
+    min-height: clamp(220px, 30vh, 380px);
+  }
+
+  .travel__map--fullscreen {
+    position: fixed;
+    inset: 0;
+    border-radius: 0;
+    width: 100vw;
+    height: 100dvh;
+    min-height: 100dvh;
+    box-shadow: none;
+    background: #0f172a;
+    z-index: 60;
+  }
+
+  .travel__map--fullscreen #travel-map {
+    min-height: 100dvh;
+  }
+
+  .travel__map-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(2px);
+    z-index: 50;
+    cursor: pointer;
   }
 
   :global(.maplibregl-canvas) {
@@ -608,7 +778,7 @@
 
   .travel__legend {
     position: absolute;
-    inset: auto 1rem 1rem auto;
+    inset: auto max(1rem, env(safe-area-inset-right)) max(1rem, env(safe-area-inset-bottom)) auto;
     list-style: none;
     margin: 0;
     padding: 0.75rem 1rem;
@@ -621,6 +791,7 @@
     font-size: 0.875rem;
     backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 4;
   }
 
   .travel__legend li {
@@ -635,6 +806,18 @@
     border-radius: 999px;
     background: var(--legend-color);
     display: inline-flex;
+  }
+
+  .travel__sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
   }
 
   .travel__routes {
@@ -891,7 +1074,12 @@
     }
 
     .travel__map {
-      min-height: clamp(280px, 60vh, 460px);
+      height: clamp(220px, 30vh, 360px);
+      min-height: clamp(220px, 30vh, 360px);
+    }
+
+    #travel-map {
+      min-height: clamp(220px, 30vh, 360px);
     }
   }
 
