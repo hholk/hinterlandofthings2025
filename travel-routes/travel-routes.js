@@ -95,8 +95,30 @@ if (hasDocument) {
   });
 }
 
+/**
+ * Für den Datenabruf nutzen wir eine kleine Hilfsfunktion, die konsequent
+ * `cache: "no-store"` setzt. So umgehen wir aggressive Browser- und
+ * GitHub-Pages-Caches und stellen sicher, dass neue Varianten sofort sichtbar
+ * sind – genau das, was sich Beginner:innen beim Debugging wünschen.
+ */
+function fetchFresh(resource, options = {}) {
+  const headers = new Headers(options.headers ?? {});
+  if (!headers.has('cache-control')) {
+    headers.set('cache-control', 'no-store');
+  }
+  if (!headers.has('pragma')) {
+    headers.set('pragma', 'no-cache');
+  }
+
+  return fetch(resource, {
+    ...options,
+    headers,
+    cache: 'no-store',
+  });
+}
+
 async function init() {
-  const response = await fetch('travel-routes-data.json');
+  const response = await fetchFresh('travel-routes-data.json');
   if (!response.ok) {
     throw new Error(`Daten konnten nicht geladen werden (${response.status})`);
   }
@@ -924,7 +946,7 @@ async function loadCuratedRoute(routeId) {
   const entry = state.curatedRoutes.find((r) => r.id === routeId);
   if (!entry) return null;
   try {
-    const response = await fetch(entry.file);
+    const response = await fetchFresh(entry.file);
     if (!response.ok) {
       throw new Error(`Route konnte nicht geladen werden (${response.status})`);
     }
@@ -1412,7 +1434,7 @@ function persistPoiCollection() {
 
 async function loadPoiOverview(path) {
   try {
-    const response = await fetch(path);
+    const response = await fetchFresh(path);
     if (!response.ok) throw new Error(`POI-Datei fehlgeschlagen (${response.status})`);
     const data = await response.json();
     state.poiOverview = Array.isArray(data.items) ? data.items : [];
@@ -1546,4 +1568,5 @@ export {
   copyActivityToRoute,
   dom,
   scrollDetailToStop,
+  fetchFresh,
 };

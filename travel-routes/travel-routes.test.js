@@ -201,6 +201,35 @@ test('copyActivityToRoute clones activities without duplicates', async () => {
   }
 });
 
+test('fetchFresh enforces cache busting headers', async () => {
+  const module = await import('./travel-routes.js');
+  const { fetchFresh } = module;
+
+  let receivedOptions;
+  const originalFetch = globalThis.fetch;
+  globalThis.fetch = async (resource, options) => {
+    receivedOptions = options;
+    return {
+      ok: true,
+      json: async () => ({}),
+    };
+  };
+
+  try {
+    await fetchFresh('test.json', {
+      headers: new Headers({ Accept: 'application/json' }),
+      cache: 'force-cache',
+    });
+
+    assert.equal(receivedOptions.cache, 'no-store');
+    assert.equal(receivedOptions.headers.get('cache-control'), 'no-store');
+    assert.equal(receivedOptions.headers.get('pragma'), 'no-cache');
+    assert.equal(receivedOptions.headers.get('Accept'), 'application/json');
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
+});
+
 test('scrollDetailToStop focuses list entries and falls back gracefully', async () => {
   const module = await import('./travel-routes.js');
   const { dom, scrollDetailToStop } = module;
