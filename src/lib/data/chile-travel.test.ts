@@ -1,12 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import { readdirSync } from 'node:fs';
 import { join } from 'node:path';
-import {
-  availableRouteIds,
-  chileTravelData,
-  loadRouteById,
-  type RouteDetail
-} from './chile-travel';
+import { availableRouteIds, chileTravelData, loadRouteById } from './chile-travel/server';
+import type { RouteDetail } from './chile-travel';
 
 const ROUTE_DATA_DIR = join(process.cwd(), 'travel-routes', 'data', 'routes');
 
@@ -35,6 +31,13 @@ describe('chileTravelData dataset', () => {
       expect(mode.label).toBeTruthy();
       expect(typeof mode.color).toBe('string');
     });
+  });
+
+  it('synchronisiert Route-IDs zwischen Index und routes-Map', () => {
+    const idsFromRoutes = Object.keys(chileTravelData.routes).sort();
+    const idsFromIndex = [...chileTravelData.availableRouteIds].sort();
+
+    expect(idsFromRoutes).toEqual(idsFromIndex);
   });
 
   it('liefert beim Beispielroute-Slider Tagessegmente', () => {

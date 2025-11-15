@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { chileTravelData } from '../data/chile-travel';
+import { chileTravelData } from '../data/chile-travel/server';
 import {
   buildSegmentCollection,
   buildStopCollection,
