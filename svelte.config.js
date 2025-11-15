@@ -1,6 +1,7 @@
 import adapterStatic from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { resolveBasePath } from './config/base-path.js';
+import { adapterOptions } from './config/adapter-options.js';
 
 const dev = process.argv.includes('dev');
 
@@ -9,9 +10,9 @@ const config = {
   preprocess: vitePreprocess(),
   kit: {
     adapter: adapterStatic({
-      // Für Einsteiger:innen: GitHub Pages benötigt eine einzelne HTML-Datei als Fallback,
-      // damit alle Unterseiten auch bei Direktaufrufen funktionieren.
-      fallback: '200.html'
+      // Für Einsteiger:innen: GitHub Pages liefert bei unbekannten Pfaden automatisch 404.html aus.
+      // Mit diesem Fallback landen Besucher:innen trotzdem in der Svelte-App statt auf der GitHub-Fehlerseite.
+      ...adapterOptions
     }),
     alias: {
       $data: 'src/lib/data',
