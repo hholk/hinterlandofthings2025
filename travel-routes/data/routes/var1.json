@@ -1,15 +1,16 @@
 {
   "id": "var1",
-  "name": "Variante 1 – Zentral + Osterinsel + Atacama",
+  "name": "Variante 1 – Flugreise Zentral + Osterinsel + Atacama",
   "color": "#5bd1ff",
   "tags": [
     "culture",
     "nature",
-    "adventure"
+    "adventure",
+    "flight"
   ],
-  "summary": "Kultur, Osterinsel und Atacama mit Surf-Finale in Pichilemu.",
+  "summary": "Flug zu Chiles Top-Spots: Santiago, Rapa Nui und Atacama mit Surf-Finale in Pichilemu.",
   "meta": {
-    "theme": "Kultur • Inseln • Wüste",
+    "theme": "Flugreise • Inseln • Wüste",
     "pace": "ausgewogen",
     "durationDays": 19,
     "costEstimate": 3200,

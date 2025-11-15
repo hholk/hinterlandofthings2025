@@ -174,10 +174,10 @@ async function init() {
 
   dom.app?.setAttribute('data-state-ready', 'true');
 
-  const initialRoute = state.curatedRoutes[0] ?? state.customRoutes[0];
-  if (initialRoute) {
-    await selectRoute(initialRoute.id, initialRoute.source);
-  } else {
+  // Für Einsteiger:innen: Wir starten ohne vorausgewählte Route.
+  // So bleibt die Liste sichtbar und Besucher:innen entscheiden selbst,
+  // wann das Detail-Overlay geladen wird.
+  if (!state.curatedRoutes.length && !state.customRoutes.length) {
     dom.detail.innerHTML = '<div class="travel-empty-state">Noch keine Routen vorhanden.</div>';
   }
 }

@@ -1,15 +1,16 @@
 {
   "id": "var4",
-  "name": "Variante 4 – Instagram-Hotspots",
+  "name": "Variante 4 – Flugreise Instagram-Hotspots",
   "color": "#c792ea",
   "tags": [
     "photography",
     "adventure",
-    "culture"
+    "culture",
+    "flight"
   ],
-  "summary": "Die fotogensten Orte Chiles mit Fokus auf Sunrise & Golden Hour.",
+  "summary": "Flüge verbinden die fotogensten Orte Chiles für Sunrise-Shoots von Rapa Nui bis Patagonien.",
   "meta": {
-    "theme": "IG-Hotspots",
+    "theme": "Flugreise IG-Hotspots",
     "pace": "zügig",
     "durationDays": 19,
     "costEstimate": 3600,

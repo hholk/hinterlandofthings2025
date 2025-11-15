@@ -1,15 +1,16 @@
 {
   "id": "var2",
-  "name": "Variante 2 – Patagonien + Atacama",
+  "name": "Variante 2 – Flug zu Patagonien & Atacama",
   "color": "#8affc1",
   "tags": [
     "nature",
     "adventure",
-    "photography"
+    "photography",
+    "flight"
   ],
-  "summary": "Gletscher und Geysire im schnellen Wechsel.",
+  "summary": "Flüge verbinden Patagonien, Atacama und Santiago für die ultimative Chile-Highlight-Tour.",
   "meta": {
-    "theme": "Patagonien • Atacama",
+    "theme": "Flugreise Patagonien • Atacama",
     "pace": "zügig",
     "durationDays": 19,
     "costEstimate": 3400,
