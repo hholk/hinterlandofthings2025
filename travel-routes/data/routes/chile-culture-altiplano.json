@@ -1,0 +1,704 @@
+{
+  "id": "chile-culture-altiplano",
+  "name": "Kultur & Altiplano – Von Arica bis Humberstone (4.–20. Januar)",
+  "color": "#ff8566",
+  "tags": [
+    "culture",
+    "history",
+    "flight",
+    "roadtrip"
+  ],
+  "summary": "Der 4.–20. Januar gehört dem Norden: Koloniales Arica, archäologische Funde im Valle de Azapa, Aymara-Dörfer rund um Putre und die Salpeter-Geschichte bei Humberstone. Wir bewegen uns mit Mietwagen und Fernbus, schließen mit einem Flug ab Antofagasta nach Santiago ab.",
+  "meta": {
+    "theme": "Nordchile – Geschichte & Hochland",
+    "pace": "ausgewogen",
+    "durationDays": 17,
+    "costEstimate": 2380,
+    "highlights": [
+      "Mumien im Museo de Sitio Colón 10",
+      "Laguna Chungará im Lauca-Nationalpark",
+      "UNESCO-Geisterstadt Humberstone"
+    ],
+    "scores": {
+      "budget": 3,
+      "adventure": 3,
+      "relax": 3,
+      "culture": 5
+    }
+  },
+  "costBreakdown": {
+    "currency": "EUR",
+    "items": [
+      {
+        "category": "Inlandsflüge",
+        "estimate": 520,
+        "notes": "Santiago → Arica, Antofagasta → Santiago"
+      },
+      {
+        "category": "Mietwagen & Bus",
+        "estimate": 460,
+        "notes": "SUV in Arica + Premium-Bus Iquique → Antofagasta"
+      },
+      {
+        "category": "Unterkünfte",
+        "estimate": 940,
+        "notes": "Heritage Hotels & Eco-Lodges"
+      },
+      {
+        "category": "Aktivitäten",
+        "estimate": 280,
+        "notes": "Museen, Community-Guides, Nationalparkpass"
+      },
+      {
+        "category": "Kulinarik",
+        "estimate": 180,
+        "notes": "Seafood, Aymara-Küche, Pisco"
+      }
+    ]
+  },
+  "stops": [
+    {
+      "id": "scl-airport",
+      "name": "Santiago International Airport (SCL)",
+      "type": "airport",
+      "coordinates": {
+        "lat": -33.3929,
+        "lng": -70.7858
+      },
+      "city": "Santiago",
+      "address": {
+        "street": "Armando Cortínez Norte 1701",
+        "city": "Pudahuel",
+        "country": "Chile"
+      },
+      "website": "https://www.nuevopudahuel.cl",
+      "description": "Abflug am 4. Januar Richtung Arica – Fensterplatz für Küstenpanorama sichern.",
+      "timezone": "America/Santiago",
+      "rating": 4.2,
+      "reviewCount": 42876,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1502920514313-52581002a659?w=800&auto=format&fit=crop",
+          "caption": "Boarding im Terminal Internacional",
+          "credit": "Agustín Lautaro",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "arica-airport",
+      "name": "Aeropuerto Chacalluta (ARI)",
+      "type": "airport",
+      "coordinates": {
+        "lat": -18.3486,
+        "lng": -70.3389
+      },
+      "city": "Arica",
+      "address": {
+        "street": "Ruta 5 Norte km 2069",
+        "city": "Arica",
+        "country": "Chile"
+      },
+      "website": "https://www.aeropuertodearica.cl",
+      "description": "Grenznaher Flughafen mit schnellen Mietwagenverbindungen Richtung Valle de Azapa.",
+      "timezone": "America/Santiago",
+      "rating": 4.4,
+      "reviewCount": 5860,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1530988405631-f7aa0834e4c4?w=800&auto=format&fit=crop",
+          "caption": "Anflug auf Arica mit Blick auf den Pazifik",
+          "credit": "Ignacio Pardo",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "arica-town",
+      "name": "Arica – Morro & Paseo 21 de Mayo",
+      "type": "city",
+      "coordinates": {
+        "lat": -18.4746,
+        "lng": -70.2976
+      },
+      "city": "Arica",
+      "address": {
+        "street": "Paseo 21 de Mayo",
+        "city": "Arica",
+        "country": "Chile"
+      },
+      "website": "https://www.aricayparinacota.cl",
+      "description": "Tropisches Flair, koloniale Architektur und perfekter Ausgangspunkt für archäologische Touren.",
+      "timezone": "America/Santiago",
+      "rating": 4.6,
+      "reviewCount": 17890,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&auto=format&fit=crop",
+          "caption": "Abendlicht über dem Morro de Arica",
+          "credit": "Ignacio Rojas",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "azapa-valley",
+      "name": "Valle de Azapa – Museo Colón 10",
+      "type": "museum",
+      "coordinates": {
+        "lat": -18.4720,
+        "lng": -70.1980
+      },
+      "city": "Arica",
+      "address": {
+        "street": "Km 12 Ruta A-27",
+        "city": "Valle de Azapa",
+        "country": "Chile"
+      },
+      "website": "https://www.museosanmigueldeazapa.cl",
+      "description": "Heimat der Chinchorro-Mumien – UNESCO-Welterbe mit interaktiven Ausstellungen.",
+      "timezone": "America/Santiago",
+      "rating": 4.8,
+      "reviewCount": 8540,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1516763296043-0b0b0bf7ba92?w=800&auto=format&fit=crop",
+          "caption": "Chinchorro-Mumie im Museum Colón 10",
+          "credit": "Camila Bustos",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "putre-town",
+      "name": "Putre – Plaza Mayor",
+      "type": "town",
+      "coordinates": {
+        "lat": -18.1977,
+        "lng": -69.5576
+      },
+      "city": "Putre",
+      "address": {
+        "street": "Plaza Mayor",
+        "city": "Putre",
+        "country": "Chile"
+      },
+      "website": "https://www.putre.cl",
+      "description": "Aymara-Kultur, Kolonialkirchen und Ausgangspunkt für Anden-Exkursionen auf 3.500 m.",
+      "timezone": "America/Santiago",
+      "rating": 4.7,
+      "reviewCount": 6120,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1526401485004-46910ecc8e51?w=800&auto=format&fit=crop",
+          "caption": "Adobe-Häuser in Putre",
+          "credit": "Marcelo Díaz",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "lauca-park",
+      "name": "Lauca Nationalpark – Laguna Chungará",
+      "type": "nature",
+      "coordinates": {
+        "lat": -18.2286,
+        "lng": -69.1495
+      },
+      "city": "Parinacota",
+      "address": {
+        "street": "Ruta CH-11",
+        "city": "Parinacota",
+        "country": "Chile"
+      },
+      "website": "https://www.conaf.cl",
+      "description": "Hochandine Lagune mit Blick auf den Vulkan Parinacota – UNESCO-Biosphärenreservat.",
+      "timezone": "America/Santiago",
+      "rating": 4.9,
+      "reviewCount": 10230,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&auto=format&fit=crop",
+          "caption": "Laguna Chungará und Vulkan Parinacota",
+          "credit": "Sebastián Pardo",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "iquique-town",
+      "name": "Iquique – Baquedano Street",
+      "type": "city",
+      "coordinates": {
+        "lat": -20.2141,
+        "lng": -70.1525
+      },
+      "city": "Iquique",
+      "address": {
+        "street": "Calle Baquedano",
+        "city": "Iquique",
+        "country": "Chile"
+      },
+      "website": "https://www.visitiqueque.com",
+      "description": "Holzveranden, Pisco-Bars und Duty-Free-Shopping – maritime Geschichte und moderne Strandkultur.",
+      "timezone": "America/Santiago",
+      "rating": 4.7,
+      "reviewCount": 18920,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1543877087-ebf71f017192?w=800&auto=format&fit=crop",
+          "caption": "Koloniale Holzveranden in Iquique",
+          "credit": "Rodrigo Ruiz",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "humberstone",
+      "name": "Oficina Humberstone",
+      "type": "heritage",
+      "coordinates": {
+        "lat": -20.2055,
+        "lng": -69.7876
+      },
+      "city": "Pozo Almonte",
+      "address": {
+        "street": "Ruta 16 km 47",
+        "city": "Pozo Almonte",
+        "country": "Chile"
+      },
+      "website": "https://www.museohumberstone.cl",
+      "description": "Ehemalige Salpeter-Stadt mit Theater, Schule und Werkstätten – heute UNESCO-Welterbe.",
+      "timezone": "America/Santiago",
+      "rating": 4.8,
+      "reviewCount": 15430,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1542044801-287cbc0d41d4?w=800&auto=format&fit=crop",
+          "caption": "Verlassene Turnhalle in Humberstone",
+          "credit": "Matías Silva",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "antofagasta-airport",
+      "name": "Aeropuerto Andrés Sabella (ANF)",
+      "type": "airport",
+      "coordinates": {
+        "lat": -23.4445,
+        "lng": -70.4451
+      },
+      "city": "Antofagasta",
+      "address": {
+        "street": "Ruta 1 km 25",
+        "city": "Antofagasta",
+        "country": "Chile"
+      },
+      "website": "https://www.aeropuertoantofagasta.cl",
+      "description": "Moderner Flughafen mit direkten Flügen nach Santiago – Mietwagenrückgabe für Nord-Chile-Trips.",
+      "timezone": "America/Santiago",
+      "rating": 4.4,
+      "reviewCount": 6980,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1530988405631-f7aa0834e4c4?w=800&auto=format&fit=crop",
+          "caption": "Abenddämmerung über Antofagasta",
+          "credit": "Ignacio Pardo",
+          "license": "Unsplash License"
+        }
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "culture-seg-01",
+      "from": "scl-airport",
+      "to": "arica-airport",
+      "mode": "flight",
+      "operator": "LATAM",
+      "distanceKm": 2056,
+      "durationHours": 3.3,
+      "carbonKg": 585.96,
+      "description": "Direktflug am 4. Januar – Blick auf den Pazifik und Vulkane der Atacama."
+    },
+    {
+      "id": "culture-seg-02",
+      "from": "arica-airport",
+      "to": "arica-town",
+      "mode": "drive",
+      "operator": "Localiza",
+      "distanceKm": 18,
+      "durationHours": 0.5,
+      "carbonKg": 3.46,
+      "description": "Kurzer Transfer ins Zentrum, Check-in im Heritage-Hotel."
+    },
+    {
+      "id": "culture-seg-03",
+      "from": "arica-town",
+      "to": "azapa-valley",
+      "mode": "drive",
+      "operator": "Localiza",
+      "distanceKm": 12,
+      "durationHours": 0.3,
+      "carbonKg": 2.3,
+      "description": "Besuch des Museums Colón 10 und Olivenhaine."
+    },
+    {
+      "id": "culture-seg-04",
+      "from": "azapa-valley",
+      "to": "putre-town",
+      "mode": "drive",
+      "operator": "Localiza",
+      "distanceKm": 145,
+      "durationHours": 3.0,
+      "carbonKg": 27.84,
+      "description": "Aufstieg ins Altiplano – Akklimatisationstag in Putre."
+    },
+    {
+      "id": "culture-seg-05",
+      "from": "putre-town",
+      "to": "lauca-park",
+      "mode": "drive",
+      "operator": "Localiza",
+      "distanceKm": 45,
+      "durationHours": 1.2,
+      "carbonKg": 8.64,
+      "description": "Ausflug zur Laguna Chungará – Rückkehr am Nachmittag nach Putre."
+    },
+    {
+      "id": "culture-seg-06",
+      "from": "putre-town",
+      "to": "arica-town",
+      "mode": "drive",
+      "operator": "Localiza",
+      "distanceKm": 145,
+      "durationHours": 2.8,
+      "carbonKg": 27.84,
+      "description": "Rückfahrt ans Meer – Mietwagenabgabe in Arica."
+    },
+    {
+      "id": "culture-seg-07",
+      "from": "arica-town",
+      "to": "iquique-town",
+      "mode": "bus",
+      "operator": "Tur Bus Salon Cama",
+      "distanceKm": 307,
+      "durationHours": 5.0,
+      "carbonKg": 15.35,
+      "description": "Küstenfahrt nach Iquique mit komfortablen Liegesitzen."
+    },
+    {
+      "id": "culture-seg-08",
+      "from": "iquique-town",
+      "to": "humberstone",
+      "mode": "drive",
+      "operator": "Local Taxi",
+      "distanceKm": 47,
+      "durationHours": 0.8,
+      "carbonKg": 9.02,
+      "description": "Halbtagesausflug zur Salpeter-Stadt Humberstone."
+    },
+    {
+      "id": "culture-seg-09",
+      "from": "iquique-town",
+      "to": "antofagasta-airport",
+      "mode": "bus",
+      "operator": "Pullman Premium",
+      "distanceKm": 387,
+      "durationHours": 6.0,
+      "carbonKg": 19.35,
+      "description": "Wüstenpanorama entlang der Ruta 1 – Abendankunft am Flughafen."
+    },
+    {
+      "id": "culture-seg-10",
+      "from": "antofagasta-airport",
+      "to": "scl-airport",
+      "mode": "flight",
+      "operator": "Sky Airline",
+      "distanceKm": 1090,
+      "durationHours": 2.1,
+      "carbonKg": 310.65,
+      "description": "Rückflug am 19. Januar – Sonnenuntergang über den Anden inklusive."
+    }
+  ],
+  "flights": [
+    {
+      "id": "culture-flight-01",
+      "fromStopId": "scl-airport",
+      "toStopId": "arica-airport",
+      "airline": "LATAM",
+      "flightNumber": "LA530",
+      "departure": "2025-01-04T07:10:00-03:00",
+      "arrival": "2025-01-04T10:25:00-03:00",
+      "aircraft": "Airbus A321",
+      "cabinClass": "Economy",
+      "baggage": "23 kg Aufgabe",
+      "price": 260,
+      "currency": "EUR",
+      "carbonKg": 585.96
+    },
+    {
+      "id": "culture-flight-02",
+      "fromStopId": "antofagasta-airport",
+      "toStopId": "scl-airport",
+      "airline": "Sky Airline",
+      "flightNumber": "H308",
+      "departure": "2025-01-19T18:00:00-03:00",
+      "arrival": "2025-01-19T20:10:00-03:00",
+      "aircraft": "Airbus A320",
+      "cabinClass": "Economy",
+      "baggage": "23 kg Aufgabe",
+      "price": 260,
+      "currency": "EUR",
+      "carbonKg": 310.65
+    }
+  ],
+  "lodging": [
+    {
+      "id": "hotel-san-marcos",
+      "stopId": "arica-town",
+      "name": "Antay Hotel Arica",
+      "nights": 3,
+      "avgNightlyRateEUR": 130,
+      "amenities": [
+        "Rooftop-Pool",
+        "Spa",
+        "Pisco Bar"
+      ],
+      "url": "https://www.antay.cl",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1505691723518-36a5ac3be353?w=800&auto=format&fit=crop",
+          "caption": "Zimmer mit Blick auf den Pazifik",
+          "credit": "Paula Ortiz",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "putre-lodge",
+      "stopId": "putre-town",
+      "name": "Terrace Lodge Putre",
+      "nights": 4,
+      "avgNightlyRateEUR": 110,
+      "amenities": [
+        "Oxygen Bar",
+        "Gemeinschaftsküche",
+        "Andean Tea"
+      ],
+      "url": "https://www.terracelodge.com",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&auto=format&fit=crop",
+          "caption": "Zimmer mit Alpaka-Deko",
+          "credit": "Laura Espinoza",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "iquique-hotel",
+      "stopId": "iquique-town",
+      "name": "Hotel Gavina Sens",
+      "nights": 4,
+      "avgNightlyRateEUR": 150,
+      "amenities": [
+        "Infinity-Pool",
+        "Beach Access",
+        "Sunset Bar"
+      ],
+      "url": "https://www.hotelgavina.cl",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?w=800&auto=format&fit=crop",
+          "caption": "Pool mit Meerblick in Iquique",
+          "credit": "Laura Espinoza",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "antofagasta-hotel",
+      "stopId": "antofagasta-airport",
+      "name": "Enjoy Antofagasta Hotel",
+      "nights": 2,
+      "avgNightlyRateEUR": 140,
+      "amenities": [
+        "Casino",
+        "Pool",
+        "Spa"
+      ],
+      "url": "https://www.enjoy.cl",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1568495248636-6432b97bd949?w=800&auto=format&fit=crop",
+          "caption": "Zimmer mit Blick auf die Bucht",
+          "credit": "Ignacio Herrera",
+          "license": "Unsplash License"
+        }
+      ]
+    }
+  ],
+  "food": [
+    {
+      "name": "Restaurant Maracuya",
+      "stopId": "arica-town",
+      "type": "Restaurant",
+      "address": "Av. Comandante San Martín 165, Arica",
+      "openingHours": "13:00–23:00",
+      "specialties": [
+        "Ceviche",
+        "Picante de Camarones"
+      ],
+      "priceRange": "€€",
+      "mustTry": [
+        "Ceviche Nikkei",
+        "Pisco Sour con Rica Rica"
+      ],
+      "reservation": "Telefonisch",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1481930955990-333f99e6e30b?w=800&auto=format&fit=crop",
+          "caption": "Seafood in Arica",
+          "credit": "Teresa Moya",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "name": "Kunturi Andean Kitchen",
+      "stopId": "putre-town",
+      "type": "Restaurant",
+      "address": "Calle Comercio 57, Putre",
+      "openingHours": "12:00–21:00",
+      "specialties": [
+        "Quinoa",
+        "Llama-Stew"
+      ],
+      "priceRange": "€€",
+      "mustTry": [
+        "Quinoa Risotto",
+        "Chachacoma Tee"
+      ],
+      "reservation": "Walk-in",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&auto=format&fit=crop",
+          "caption": "Aymara-Gerichte in Putre",
+          "credit": "Camila Gutiérrez",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "name": "Neptune Bar",
+      "stopId": "iquique-town",
+      "type": "Bar",
+      "address": "Baquedano 860, Iquique",
+      "openingHours": "18:00–02:00",
+      "specialties": [
+        "Pisco Cocktails",
+        "Caldillo de Congrio"
+      ],
+      "priceRange": "€€",
+      "mustTry": [
+        "Chumbeque Sour",
+        "Empanadas de Ostión"
+      ],
+      "reservation": "Empfohlen",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&auto=format&fit=crop",
+          "caption": "Cocktails in einer historischen Veranda",
+          "credit": "Camila Gutiérrez",
+          "license": "Unsplash License"
+        }
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "title": "Chinchorro Heritage Tour",
+      "stopId": "azapa-valley",
+      "durationHours": 4,
+      "operator": "Arica Heritage",
+      "price": 48,
+      "currency": "EUR",
+      "website": "https://www.aricaheritage.cl",
+      "meetingPoint": "Museo Colón 10 09:00",
+      "gear": [
+        "Wasser",
+        "Sonnenschutz"
+      ],
+      "difficulty": "leicht",
+      "groupSize": "max. 12 Personen",
+      "included": [
+        "Guide",
+        "Museumseintritt",
+        "Transfer"
+      ],
+      "notes": "Respektvolle Fotografie – Blitz verboten."
+    },
+    {
+      "title": "Aymara Community Experience",
+      "stopId": "putre-town",
+      "durationHours": 6,
+      "operator": "Red Turística Putre",
+      "price": 75,
+      "currency": "EUR",
+      "website": "https://www.redturisticaputre.cl",
+      "meetingPoint": "Plaza Putre 08:00",
+      "gear": [
+        "Warme Kleidung",
+        "Höhenanpassung"
+      ],
+      "difficulty": "mittel",
+      "groupSize": "max. 10 Personen",
+      "included": [
+        "Guide",
+        "Gemeinschafts-Lunch",
+        "Handwerksworkshop"
+      ],
+      "notes": "Hohe Lage – langsam bewegen, Coca-Tee hilft."
+    },
+    {
+      "title": "Humberstone Twilight Walk",
+      "stopId": "humberstone",
+      "durationHours": 3,
+      "operator": "Humberstone Patrimonio",
+      "price": 35,
+      "currency": "EUR",
+      "website": "https://www.museohumberstone.cl",
+      "meetingPoint": "Tor principal 16:00",
+      "gear": [
+        "Fackel",
+        "Kamera"
+      ],
+      "difficulty": "leicht",
+      "groupSize": "max. 15 Personen",
+      "included": [
+        "Guide",
+        "Eintritt",
+        "Audio-Archiv"
+      ],
+      "notes": "Sonnenuntergang liefert dramatisches Licht für Fotos."
+    }
+  ],
+  "notes": "Vorab eine Nacht in Santiago einplanen (3. Januar). Langsame Höhenanpassung in Putre beachten, Hydration ist entscheidend. Bus-Tickets Arica → Iquique & Iquique → Antofagasta online reservieren, um Liegesitze zu sichern.",
+  "metrics": {
+    "totalDistanceKm": 4212,
+    "estimatedCarbonKg": 1010.37,
+    "segmentCount": 10,
+    "flightCount": 2,
+    "stopCount": 9,
+    "groundTransportCarbonKg": 113.96,
+    "totalNights": 13,
+    "avgNightlyRate": 133,
+    "lodgingCount": 4,
+    "foodCount": 3,
+    "activityCount": 3,
+    "averageDailyBudget": 140
+  },
+  "source": "curated"
+}

@@ -94,26 +94,26 @@
       "id": "photography",
       "label": "Fotografie"
     },
-  {
-    "id": "food",
-    "label": "Food"
-  },
-  {
-    "id": "family",
-    "label": "Familienfreundlich"
-  },
-  {
-    "id": "sport",
-    "label": "Sport"
-  },
-  {
-    "id": "luxury",
-    "label": "Luxus"
-  },
-  {
-    "id": "roadtrip",
-    "label": "Roadtrip"
-  },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "family",
+      "label": "Familienfreundlich"
+    },
+    {
+      "id": "sport",
+      "label": "Sport"
+    },
+    {
+      "id": "luxury",
+      "label": "Luxus"
+    },
+    {
+      "id": "roadtrip",
+      "label": "Roadtrip"
+    },
     {
       "id": "flight",
       "label": "Flugreise"
@@ -687,420 +687,6 @@
   ],
   "routeIndex": [
     {
-      "id": "var1",
-      "file": "data/routes/var1.json",
-      "name": "Variante 1 – Flugreise Zentral + Osterinsel + Atacama",
-      "summary": "Flug zu Chiles Top-Spots: Santiago, Rapa Nui und Atacama mit Surf-Finale in Pichilemu.",
-      "color": "#5bd1ff",
-      "tags": [
-        "culture",
-        "nature",
-        "adventure",
-        "flight"
-      ],
-      "meta": {
-        "theme": "Flugreise • Inseln • Wüste",
-        "pace": "ausgewogen",
-        "durationDays": 19,
-        "costEstimate": 3200,
-        "highlights": [
-          "Rapa Nui",
-          "Valle de la Luna",
-          "Streetart Valparaíso"
-        ],
-        "scores": {
-          "budget": 3,
-          "adventure": 3,
-          "relax": 3,
-          "culture": 4
-        }
-      },
-      "metrics": {
-        "totalDistanceKm": 9982.0,
-        "estimatedCarbonKg": 2733.3,
-        "segmentCount": 10,
-        "flightCount": 3,
-        "stopCount": 13,
-        "flightCarbonKg": 2615.6,
-        "groundTransportCarbonKg": 117.7,
-        "totalNights": 9,
-        "avgNightlyRate": 196.67,
-        "lodgingCount": 3,
-        "foodCount": 2,
-        "activityCount": 3,
-        "averageDailyBudget": 168.42
-      },
-      "searchTokens": [
-        "Atacama Stargazing",
-        "Calama Airport (CJC)",
-        "Empanadas Hanga Roa",
-        "H2193",
-        "Hanga Roa Eco Lodge",
-        "Flug zu Chiles Top-Spots: Santiago, Rapa Nui und Atacama mit Surf-Finale in Pichilemu.",
-        "LA329",
-        "LA841",
-        "Mataveri International Airport (IPC)",
-        "Mercado Central",
-        "Pichilemu Zentrum",
-        "Punta de Lobos",
-        "Rano Raraku Vulkan",
-        "Rapa Nui Sunrise",
-        "San Pedro de Atacama",
-        "Santiago International Airport (SCL)",
-        "Santiago – Barrio Lastarria",
-        "Streetart Walk Valparaíso",
-        "Terminal Alameda",
-        "Valle de la Luna",
-        "Valparaíso – Cerro Alegre",
-        "Variante 1 – Flugreise Zentral + Osterinsel + Atacama",
-        "Viña del Mar – Playa Acapulco",
-        "adventure",
-        "culture",
-        "nature",
-        "flight",
-        "Flugreise",
-        "Flugabenteuer",
-        "beste Spots Chile"
-      ]
-    },
-    {
-      "id": "var2",
-      "file": "data/routes/var2.json",
-      "name": "Variante 2 – Flug zu Patagonien & Atacama",
-      "summary": "Flüge verbinden Patagonien, Atacama und Santiago für die ultimative Chile-Highlight-Tour.",
-      "color": "#8affc1",
-      "tags": [
-        "nature",
-        "adventure",
-        "photography",
-        "flight"
-      ],
-      "meta": {
-        "theme": "Flugreise Patagonien • Atacama",
-        "pace": "zügig",
-        "durationDays": 19,
-        "costEstimate": 3400,
-        "highlights": [
-          "Base Torres",
-          "El Tatio",
-          "Lago Grey"
-        ],
-        "scores": {
-          "budget": 2,
-          "adventure": 4,
-          "relax": 2,
-          "culture": 3
-        }
-      },
-      "metrics": {
-        "totalDistanceKm": 7654.0,
-        "estimatedCarbonKg": 2034.2,
-        "segmentCount": 8,
-        "flightCount": 3,
-        "stopCount": 9,
-        "flightCarbonKg": 2002.2,
-        "groundTransportCarbonKg": 32.0,
-        "totalNights": 8,
-        "avgNightlyRate": 230.0,
-        "lodgingCount": 3,
-        "foodCount": 2,
-        "activityCount": 2,
-        "averageDailyBudget": 178.95
-      },
-      "searchTokens": [
-        "Base Torres Trek",
-        "Calama Airport (CJC)",
-        "Damiana Elena",
-        "El Huerto",
-        "Geysire del Tatio",
-        "Flüge verbinden Patagonien, Atacama und Santiago für die ultimative Chile-Highlight-Tour.",
-        "H520",
-        "LA285",
-        "LA329",
-        "Puerto Natales",
-        "Punta Arenas Airport (PUQ)",
-        "San Pedro de Atacama",
-        "Santiago International Airport (SCL)",
-        "Santiago – Barrio Lastarria",
-        "Torres del Paine – Base Torres",
-        "Valle de la Luna",
-        "Valparaíso – Cerro Alegre",
-        "Variante 2 – Flug zu Patagonien & Atacama",
-        "adventure",
-        "nature",
-        "photography",
-        "flight",
-        "Flugreise",
-        "Chile Highlights",
-        "Beste Spots Chile"
-      ]
-    },
-    {
-      "id": "var3",
-      "file": "data/routes/var3.json",
-      "name": "Variante 3 – Roadtrip Küste • Seen • Chiloé",
-      "summary": "Gemächlicher Roadtrip auf eigener Achse von Santiago über Seenland bis Chiloé.",
-      "color": "#ffb86b",
-      "tags": [
-        "nature",
-        "food",
-        "culture",
-        "roadtrip"
-      ],
-      "meta": {
-        "theme": "Roadtrip Küste & Seen",
-        "pace": "gemütlich",
-        "durationDays": 19,
-        "costEstimate": 2600,
-        "highlights": [
-          "Valparaíso",
-          "Pucón",
-          "Chiloé"
-        ],
-        "scores": {
-          "budget": 4,
-          "adventure": 3,
-          "relax": 4,
-          "culture": 3
-        }
-      },
-      "metrics": {
-        "totalDistanceKm": 2428.0,
-        "estimatedCarbonKg": 550.5,
-        "segmentCount": 7,
-        "flightCount": 1,
-        "stopCount": 9,
-        "flightCarbonKg": 261.5,
-        "groundTransportCarbonKg": 289.0,
-        "totalNights": 8,
-        "avgNightlyRate": 160.0,
-        "lodgingCount": 3,
-        "foodCount": 2,
-        "activityCount": 2,
-        "averageDailyBudget": 136.84
-      },
-      "searchTokens": [
-        "Apice Cocina",
-        "Castro – Palafitos",
-        "Feria Costumbrista de Chonchi",
-        "Gemächlicher Roadtrip auf eigener Achse von Santiago über Seenland bis Chiloé.",
-        "H012",
-        "Kayak Llanquihue",
-        "Pichilemu Zentrum",
-        "Pucón – Huerquehue Trailhead",
-        "Puerto Montt Airport (PMC)",
-        "Puerto Varas",
-        "Santiago International Airport (SCL)",
-        "Santiago – Barrio Lastarria",
-        "Surfkurs Punta de Lobos",
-        "Valparaíso – Cerro Alegre",
-        "Variante 3 – Roadtrip Küste • Seen • Chiloé",
-        "Viña del Mar – Playa Acapulco",
-        "culture",
-        "food",
-        "nature",
-        "roadtrip",
-        "Roadtrip",
-        "Road trip"
-      ]
-    },
-    {
-      "id": "var4",
-      "file": "data/routes/var4.json",
-      "name": "Variante 4 – Flugreise Instagram-Hotspots",
-      "summary": "Flüge verbinden die fotogensten Orte Chiles für Sunrise-Shoots von Rapa Nui bis Patagonien.",
-      "color": "#c792ea",
-      "tags": [
-        "photography",
-        "adventure",
-        "culture",
-        "flight"
-      ],
-      "meta": {
-        "theme": "Flugreise IG-Hotspots",
-        "pace": "zügig",
-        "durationDays": 19,
-        "costEstimate": 3600,
-        "highlights": [
-          "Ahu Tongariki",
-          "Base Torres",
-          "Valle de la Luna"
-        ],
-        "scores": {
-          "budget": 2,
-          "adventure": 3,
-          "relax": 2,
-          "culture": 3
-        }
-      },
-      "metrics": {
-        "totalDistanceKm": 7506.0,
-        "estimatedCarbonKg": 2057.8,
-        "segmentCount": 7,
-        "flightCount": 3,
-        "stopCount": 8,
-        "flightCarbonKg": 1974.5,
-        "groundTransportCarbonKg": 83.3,
-        "totalNights": 5,
-        "avgNightlyRate": 376.0,
-        "lodgingCount": 2,
-        "foodCount": 1,
-        "activityCount": 1,
-        "averageDailyBudget": 189.47
-      },
-      "searchTokens": [
-        "Café Matilde",
-        "Flüge verbinden die fotogensten Orte Chiles für Sunrise-Shoots von Rapa Nui bis Patagonien.",
-        "JA117",
-        "LA330",
-        "LA841",
-        "Mataveri International Airport (IPC)",
-        "Pichilemu Zentrum",
-        "Punta de Lobos",
-        "Rano Raraku Vulkan",
-        "Santiago – Barrio Lastarria",
-        "Sunrise Moai Shooting",
-        "Torres del Paine – Base Torres",
-        "Valle de la Luna",
-        "Valparaíso – Cerro Alegre",
-        "Variante 4 – Flugreise Instagram-Hotspots",
-        "adventure",
-        "culture",
-        "photography",
-        "flight",
-        "Flugreise",
-        "Chile Sunrise",
-        "Beste Spots Chile"
-      ]
-    },
-    {
-      "id": "var5",
-      "file": "data/routes/var5.json",
-      "name": "Variante 5 – Budget & Bus",
-      "summary": "Roadtrip mit Langstreckenbussen, Hostales und lokalen Märkten quer durch Chile.",
-      "color": "#f7768e",
-      "tags": [
-        "budget",
-        "culture",
-        "nature",
-        "roadtrip"
-      ],
-      "meta": {
-        "theme": "Roadtrip Budget & Bus",
-        "pace": "ausgewogen",
-        "durationDays": 19,
-        "costEstimate": 2200,
-        "highlights": [
-          "Elqui-Tal",
-          "San Pedro",
-          "Chiloé"
-        ],
-        "scores": {
-          "budget": 5,
-          "adventure": 3,
-          "relax": 3,
-          "culture": 3
-        }
-      },
-      "metrics": {
-        "totalDistanceKm": 4974.0,
-        "estimatedCarbonKg": 248.7,
-        "segmentCount": 8,
-        "flightCount": 0,
-        "stopCount": 9,
-        "totalNights": 5,
-        "avgNightlyRate": 49.0,
-        "lodgingCount": 2,
-        "foodCount": 2,
-        "activityCount": 1,
-        "averageDailyBudget": 115.79
-      },
-      "searchTokens": [
-        "Antofagasta – Hand des Desierto",
-        "Cafe El Kiosco",
-        "Castro – Palafitos",
-        "La Recova Market",
-        "La Serena",
-        "Roadtrip mit Langstreckenbussen, Hostales und lokalen Märkten quer durch Chile.",
-        "Observatorium Mamalluca",
-        "Pucón – Huerquehue Trailhead",
-        "Puerto Varas",
-        "San Pedro de Atacama",
-        "Santiago – Barrio Lastarria",
-        "Terminal Alameda",
-        "Variante 5 – Budget & Bus",
-        "Vicuña",
-        "budget",
-        "culture",
-        "nature",
-        "roadtrip",
-        "Roadtrip",
-        "Road trip"
-      ]
-    },
-    {
-      "id": "var6",
-      "file": "data/routes/var6.json",
-      "name": "Variante 6 – Kulinarik & Weintäler",
-      "summary": "Genussvoller Roadtrip im Mietwagen zwischen Santiago, den Weintälern und Concepción.",
-      "color": "#52fa7c",
-      "tags": [
-        "food",
-        "wine",
-        "culture",
-        "roadtrip"
-      ],
-      "meta": {
-        "theme": "Roadtrip Wein & Küche",
-        "pace": "gemütlich",
-        "durationDays": 19,
-        "costEstimate": 2500,
-        "highlights": [
-          "Casablanca",
-          "Colchagua",
-          "Concepción"
-        ],
-        "scores": {
-          "budget": 4,
-          "adventure": 2,
-          "relax": 4,
-          "culture": 4
-        }
-      },
-      "metrics": {
-        "totalDistanceKm": 1140.0,
-        "estimatedCarbonKg": 147.9,
-        "segmentCount": 5,
-        "flightCount": 0,
-        "stopCount": 6,
-        "totalNights": 5,
-        "avgNightlyRate": 240.0,
-        "lodgingCount": 2,
-        "foodCount": 2,
-        "activityCount": 2,
-        "averageDailyBudget": 131.58
-      },
-      "searchTokens": [
-        "Bocanáriz Wine Bar",
-        "Chilenischer Kochkurs",
-        "Concepción – Mercado Central",
-        "Fabrica de Cecinas Fischer",
-        "Santa Cruz – Colchagua",
-        "Santiago – Barrio Lastarria",
-        "Talca – Altos de Lircay",
-        "Valparaíso – Cerro Alegre",
-        "Variante 6 – Kulinarik & Weintäler",
-        "Genussvoller Roadtrip im Mietwagen zwischen Santiago, den Weintälern und Concepción.",
-        "Weinverkostung Casa del Bosque",
-        "culture",
-        "food",
-        "wine",
-        "roadtrip",
-        "Roadtrip",
-        "Road trip"
-      ]
-    },
-    {
       "id": "example-andes-pacific",
       "file": "data/routes/example-andes-pacific.json",
       "name": "Beispiel – Anden & Pazifik Explorer (3 Tage)",
@@ -1163,6 +749,376 @@
         "short-break",
         "flight",
         "bus",
+        "roadtrip"
+      ]
+    },
+    {
+      "id": "chile-lakes-loop",
+      "file": "data/routes/chile-lakes-loop.json",
+      "name": "Seen & Vulkane – Lakes District Circuit (4.–20. Januar)",
+      "summary": "Vom 4. bis 20. Januar geht es von Santiago in den chilenischen Süden: Temuco, Pucón, Huilo Huilo, Puerto Varas und Chiloé liefern eine Parade an Seen, Thermalquellen und Vulkanblicken, bevor es entspannt nach Santiago zurückgeht.",
+      "color": "#4cb5ab",
+      "tags": [
+        "nature",
+        "roadtrip",
+        "flight"
+      ],
+      "meta": {
+        "theme": "Seen, Thermen & Andenblicke",
+        "pace": "ausgewogen",
+        "durationDays": 17,
+        "costEstimate": 2850,
+        "highlights": [
+          "Kayak auf dem Lago Villarrica",
+          "Thermalbad in den Termas Geométricas",
+          "Sonnenuntergang über dem Lago Llanquihue"
+        ],
+        "scores": {
+          "budget": 3,
+          "adventure": 4,
+          "relax": 4,
+          "culture": 3
+        }
+      },
+      "metrics": {
+        "totalDistanceKm": 2152,
+        "estimatedCarbonKg": 553.38,
+        "segmentCount": 8,
+        "flightCount": 2,
+        "stopCount": 8,
+        "groundTransportCarbonKg": 116.46,
+        "totalNights": 14,
+        "avgNightlyRate": 195,
+        "lodgingCount": 4,
+        "foodCount": 3,
+        "activityCount": 4,
+        "averageDailyBudget": 168
+      },
+      "searchTokens": [
+        "Seen & Vulkane – Lakes District Circuit (4.–20. Januar)",
+        "Vom 4. bis 20. Januar geht es von Santiago in den chilenischen Süden: Temuco, Pucón, Huilo Huilo, Puerto Varas und Chiloé liefern eine Parade an Seen, Thermalquellen und Vulkanblicken, bevor es entspannt nach Santiago zurückgeht.",
+        "Santiago International Airport (SCL)",
+        "Aeropuerto La Araucanía (ZCO)",
+        "Pucón Uferpromenade",
+        "Huilo Huilo Biosphärenreservat",
+        "Puerto Varas – Costanera",
+        "Castro Palafitos",
+        "Aeropuerto El Tepual (PMC)",
+        "Santiago – Barrio Lastarria",
+        "Kayak auf dem Lago Villarrica",
+        "Thermalbad in den Termas Geométricas",
+        "Sonnenuntergang über dem Lago Llanquihue",
+        "nature",
+        "roadtrip",
+        "flight"
+      ]
+    },
+    {
+      "id": "chile-panamericana-roadtrip",
+      "file": "data/routes/chile-panamericana-roadtrip.json",
+      "name": "Panamericana Roadtrip & Küstenwüste (4.–20. Januar)",
+      "summary": "Ab 4. Januar geht es im Mietwagen von Santiago über Valparaíso und La Serena bis zur Mondlandschaft von Bahía Inglesa und dem Parque Pan de Azúcar. Ein entspannter Loop mit viel Sonne, Meer und Sternenhimmel, bevor es am 19. Januar per Kurzflug zurück nach Santiago geht.",
+      "color": "#f4a259",
+      "tags": [
+        "roadtrip",
+        "nature",
+        "culture"
+      ],
+      "meta": {
+        "theme": "Küste, Observatorien & Atacama-Vorstufe",
+        "pace": "gemütlich",
+        "durationDays": 17,
+        "costEstimate": 2450,
+        "highlights": [
+          "Streetart & Aufzüge in Valparaíso",
+          "Sternegucken im Valle del Elqui",
+          "Türkises Wasser von Bahía Inglesa"
+        ],
+        "scores": {
+          "budget": 3,
+          "adventure": 3,
+          "relax": 4,
+          "culture": 4
+        }
+      },
+      "metrics": {
+        "totalDistanceKm": 1365,
+        "estimatedCarbonKg": 401.31,
+        "segmentCount": 7,
+        "flightCount": 1,
+        "stopCount": 8,
+        "groundTransportCarbonKg": 209.59,
+        "totalNights": 11,
+        "avgNightlyRate": 155,
+        "lodgingCount": 4,
+        "foodCount": 3,
+        "activityCount": 3,
+        "averageDailyBudget": 144
+      },
+      "searchTokens": [
+        "Panamericana Roadtrip & Küstenwüste (4.–20. Januar)",
+        "Ab 4. Januar geht es im Mietwagen von Santiago über Valparaíso und La Serena bis zur Mondlandschaft von Bahía Inglesa und dem Parque Pan de Azúcar. Ein entspannter Loop mit viel Sonne, Meer und Sternenhimmel, bevor es am 19. Januar per Kurzflug zurück nach Santiago geht.",
+        "Santiago – Barrio Italia",
+        "Valparaíso – Cerro Alegre",
+        "La Serena Avenida del Mar",
+        "Vicuña – Plaza Gabriela Mistral",
+        "Bahía Inglesa – Playa La Piscina",
+        "Parque Nacional Pan de Azúcar",
+        "Aeropuerto Desierto de Atacama (CPO)",
+        "Santiago International Airport (SCL)",
+        "Streetart & Aufzüge in Valparaíso",
+        "Sternegucken im Valle del Elqui",
+        "Türkises Wasser von Bahía Inglesa",
+        "roadtrip",
+        "nature",
+        "culture"
+      ]
+    },
+    {
+      "id": "chile-instagram-highlights",
+      "file": "data/routes/chile-instagram-highlights.json",
+      "name": "Instagram Highlights – Atacama & Patagonia Shots (4.–20. Januar)",
+      "summary": "Von Santiago aus geht es am 4. Januar zu den fotogensten Kulissen Chiles: Salzseen und Geysire in der Atacama-Wüste, danach weiter nach Patagonien für Gletscher, Guanako-Herden und Sonnenaufgänge im Torres-del-Paine-Nationalpark. Viel Zeit für Instagram-taugliche Motive und genug Pausen zum Bearbeiten der Shots.",
+      "color": "#d66bff",
+      "tags": [
+        "photography",
+        "adventure",
+        "flight"
+      ],
+      "meta": {
+        "theme": "Fototour Wüste & Eis",
+        "pace": "anspruchsvoll",
+        "durationDays": 17,
+        "costEstimate": 3650,
+        "highlights": [
+          "Milchstraße über San Pedro de Atacama",
+          "El Tatio Geysire bei Sonnenaufgang",
+          "Laguna Amarga mit Torres-Spiegelung"
+        ],
+        "scores": {
+          "budget": 2,
+          "adventure": 5,
+          "relax": 3,
+          "culture": 3
+        }
+      },
+      "metrics": {
+        "totalDistanceKm": 6613,
+        "estimatedCarbonKg": 2055.75,
+        "segmentCount": 12,
+        "flightCount": 4,
+        "stopCount": 10,
+        "groundTransportCarbonKg": 121.31,
+        "totalNights": 14,
+        "avgNightlyRate": 310,
+        "lodgingCount": 4,
+        "foodCount": 3,
+        "activityCount": 4,
+        "averageDailyBudget": 215
+      },
+      "searchTokens": [
+        "Instagram Highlights – Atacama & Patagonia Shots (4.–20. Januar)",
+        "Von Santiago aus geht es am 4. Januar zu den fotogensten Kulissen Chiles: Salzseen und Geysire in der Atacama-Wüste, danach weiter nach Patagonien für Gletscher, Guanako-Herden und Sonnenaufgänge im Torres-del-Paine-Nationalpark. Viel Zeit für Instagram-taugliche Motive und genug Pausen zum Bearbeiten der Shots.",
+        "Santiago – Sky Costanera Aussicht",
+        "Santiago International Airport (SCL)",
+        "Aeropuerto El Loa (CJC)",
+        "San Pedro de Atacama",
+        "Geysers del Tatio",
+        "Valle del Arcoíris",
+        "Aeropuerto Presidente Ibáñez (PUQ)",
+        "Puerto Natales Waterfront",
+        "Torres del Paine – Base Las Torres",
+        "Laguna Amarga Aussichtspunkt",
+        "Milchstraße über San Pedro de Atacama",
+        "El Tatio Geysire bei Sonnenaufgang",
+        "Laguna Amarga mit Torres-Spiegelung",
+        "photography",
+        "adventure",
+        "flight"
+      ]
+    },
+    {
+      "id": "chile-carretera-austral",
+      "file": "data/routes/chile-carretera-austral.json",
+      "name": "Carretera Austral Expedition (4.–20. Januar)",
+      "summary": "Ein zweiwöchiges Abenteuer entlang der legendären Carretera Austral: Ab 4. Januar fliegen wir nach Balmaceda, erkunden Coyhaique, die Marmorhöhlen von Puerto Río Tranquilo, das neue Parque Patagonia und das Stelzendorf Caleta Tortel, bevor es am 19. Januar zurück nach Santiago geht.",
+      "color": "#3a8fb7",
+      "tags": [
+        "adventure",
+        "nature",
+        "roadtrip",
+        "flight"
+      ],
+      "meta": {
+        "theme": "Patagonien Off the Beaten Path",
+        "pace": "sportlich",
+        "durationDays": 17,
+        "costEstimate": 3120,
+        "highlights": [
+          "Bootstour zu den Capillas de Mármol",
+          "Trekking im Parque Patagonia",
+          "Sonnenuntergang in Caleta Tortel"
+        ],
+        "scores": {
+          "budget": 2,
+          "adventure": 5,
+          "relax": 3,
+          "culture": 2
+        }
+      },
+      "metrics": {
+        "totalDistanceKm": 3818,
+        "estimatedCarbonKg": 1163.62,
+        "segmentCount": 8,
+        "flightCount": 2,
+        "stopCount": 7,
+        "groundTransportCarbonKg": 228.53,
+        "totalNights": 13,
+        "avgNightlyRate": 218,
+        "lodgingCount": 4,
+        "foodCount": 3,
+        "activityCount": 3,
+        "averageDailyBudget": 183
+      },
+      "searchTokens": [
+        "Carretera Austral Expedition (4.–20. Januar)",
+        "Ein zweiwöchiges Abenteuer entlang der legendären Carretera Austral: Ab 4. Januar fliegen wir nach Balmaceda, erkunden Coyhaique, die Marmorhöhlen von Puerto Río Tranquilo, das neue Parque Patagonia und das Stelzendorf Caleta Tortel, bevor es am 19. Januar zurück nach Santiago geht.",
+        "Santiago International Airport (SCL)",
+        "Aeropuerto Balmaceda (BBA)",
+        "Coyhaique Plaza de Armas",
+        "Puerto Río Tranquilo",
+        "Capillas de Mármol",
+        "Parque Nacional Patagonia – Casa Piedra",
+        "Caleta Tortel Stegstadt",
+        "Bootstour zu den Capillas de Mármol",
+        "Trekking im Parque Patagonia",
+        "Sonnenuntergang in Caleta Tortel",
+        "adventure",
+        "nature",
+        "roadtrip",
+        "flight"
+      ]
+    },
+    {
+      "id": "chile-wine-gastronomy",
+      "file": "data/routes/chile-wine-gastronomy.json",
+      "name": "Wein & Gastronomie – Valleys & Küste (4.–20. Januar)",
+      "summary": "Kulinarischer Genuss vom 4. bis 20. Januar: Wir starten in Santiago, entdecken die Weintäler Casablanca und Colchagua, kochen in Talca mit lokalen Chefs und genießen frische Meeresküche in Concepción, bevor wir für das Abschlussdinner nach Santiago zurückkehren.",
+      "color": "#c16b4f",
+      "tags": [
+        "food",
+        "wine",
+        "roadtrip"
+      ],
+      "meta": {
+        "theme": "Food & Wine Slow Travel",
+        "pace": "gemütlich",
+        "durationDays": 17,
+        "costEstimate": 1980,
+        "highlights": [
+          "Wine Tasting im Valle de Casablanca",
+          "Bike & Wine Tour in Santa Cruz",
+          "Seafood Markt in Concepción"
+        ],
+        "scores": {
+          "budget": 3,
+          "adventure": 2,
+          "relax": 4,
+          "culture": 4
+        }
+      },
+      "metrics": {
+        "totalDistanceKm": 1120,
+        "estimatedCarbonKg": 162.26,
+        "segmentCount": 6,
+        "flightCount": 0,
+        "stopCount": 6,
+        "groundTransportCarbonKg": 162.26,
+        "totalNights": 13,
+        "avgNightlyRate": 175,
+        "lodgingCount": 4,
+        "foodCount": 3,
+        "activityCount": 3,
+        "averageDailyBudget": 116
+      },
+      "searchTokens": [
+        "Wein & Gastronomie – Valleys & Küste (4.–20. Januar)",
+        "Kulinarischer Genuss vom 4. bis 20. Januar: Wir starten in Santiago, entdecken die Weintäler Casablanca und Colchagua, kochen in Talca mit lokalen Chefs und genießen frische Meeresküche in Concepción, bevor wir für das Abschlussdinner nach Santiago zurückkehren.",
+        "Santiago – Barrio Lastarria",
+        "Valle de Casablanca",
+        "Valparaíso – Puerto",
+        "Santa Cruz – Colchagua Valley",
+        "Talca – Mercado Central",
+        "Concepción – Mercado Central",
+        "Wine Tasting im Valle de Casablanca",
+        "Bike & Wine Tour in Santa Cruz",
+        "Seafood Markt in Concepción",
+        "food",
+        "wine",
+        "roadtrip"
+      ]
+    },
+    {
+      "id": "chile-culture-altiplano",
+      "file": "data/routes/chile-culture-altiplano.json",
+      "name": "Kultur & Altiplano – Von Arica bis Humberstone (4.–20. Januar)",
+      "summary": "Der 4.–20. Januar gehört dem Norden: Koloniales Arica, archäologische Funde im Valle de Azapa, Aymara-Dörfer rund um Putre und die Salpeter-Geschichte bei Humberstone. Wir bewegen uns mit Mietwagen und Fernbus, schließen mit einem Flug ab Antofagasta nach Santiago ab.",
+      "color": "#ff8566",
+      "tags": [
+        "culture",
+        "history",
+        "flight",
+        "roadtrip"
+      ],
+      "meta": {
+        "theme": "Nordchile – Geschichte & Hochland",
+        "pace": "ausgewogen",
+        "durationDays": 17,
+        "costEstimate": 2380,
+        "highlights": [
+          "Mumien im Museo de Sitio Colón 10",
+          "Laguna Chungará im Lauca-Nationalpark",
+          "UNESCO-Geisterstadt Humberstone"
+        ],
+        "scores": {
+          "budget": 3,
+          "adventure": 3,
+          "relax": 3,
+          "culture": 5
+        }
+      },
+      "metrics": {
+        "totalDistanceKm": 4212,
+        "estimatedCarbonKg": 1010.37,
+        "segmentCount": 10,
+        "flightCount": 2,
+        "stopCount": 9,
+        "groundTransportCarbonKg": 113.96,
+        "totalNights": 13,
+        "avgNightlyRate": 133,
+        "lodgingCount": 4,
+        "foodCount": 3,
+        "activityCount": 3,
+        "averageDailyBudget": 140
+      },
+      "searchTokens": [
+        "Kultur & Altiplano – Von Arica bis Humberstone (4.–20. Januar)",
+        "Der 4.–20. Januar gehört dem Norden: Koloniales Arica, archäologische Funde im Valle de Azapa, Aymara-Dörfer rund um Putre und die Salpeter-Geschichte bei Humberstone. Wir bewegen uns mit Mietwagen und Fernbus, schließen mit einem Flug ab Antofagasta nach Santiago ab.",
+        "Santiago International Airport (SCL)",
+        "Aeropuerto Chacalluta (ARI)",
+        "Arica – Morro & Paseo 21 de Mayo",
+        "Valle de Azapa – Museo Colón 10",
+        "Putre – Plaza Mayor",
+        "Lauca Nationalpark – Laguna Chungará",
+        "Iquique – Baquedano Street",
+        "Oficina Humberstone",
+        "Aeropuerto Andrés Sabella (ANF)",
+        "Mumien im Museo de Sitio Colón 10",
+        "Laguna Chungará im Lauca-Nationalpark",
+        "UNESCO-Geisterstadt Humberstone",
+        "culture",
+        "history",
+        "flight",
         "roadtrip"
       ]
     }

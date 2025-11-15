@@ -1,0 +1,542 @@
+{
+  "id": "chile-wine-gastronomy",
+  "name": "Wein & Gastronomie – Valleys & Küste (4.–20. Januar)",
+  "color": "#c16b4f",
+  "tags": [
+    "food",
+    "wine",
+    "roadtrip"
+  ],
+  "summary": "Kulinarischer Genuss vom 4. bis 20. Januar: Wir starten in Santiago, entdecken die Weintäler Casablanca und Colchagua, kochen in Talca mit lokalen Chefs und genießen frische Meeresküche in Concepción, bevor wir für das Abschlussdinner nach Santiago zurückkehren.",
+  "meta": {
+    "theme": "Food & Wine Slow Travel",
+    "pace": "gemütlich",
+    "durationDays": 17,
+    "costEstimate": 1980,
+    "highlights": [
+      "Wine Tasting im Valle de Casablanca",
+      "Bike & Wine Tour in Santa Cruz",
+      "Seafood Markt in Concepción"
+    ],
+    "scores": {
+      "budget": 3,
+      "adventure": 2,
+      "relax": 4,
+      "culture": 4
+    }
+  },
+  "costBreakdown": {
+    "currency": "EUR",
+    "items": [
+      {
+        "category": "Mietwagen",
+        "estimate": 420,
+        "notes": "Kompakt-SUV ab/bis Santiago"
+      },
+      {
+        "category": "Unterkünfte",
+        "estimate": 920,
+        "notes": "Weingut-Lodges & Boutique-Hotels"
+      },
+      {
+        "category": "Degustationen",
+        "estimate": 320,
+        "notes": "Premium Tastings & Kochkurs"
+      },
+      {
+        "category": "Kulinarik",
+        "estimate": 220,
+        "notes": "Restaurants & Märkte"
+      },
+      {
+        "category": "Transfers",
+        "estimate": 100,
+        "notes": "Privater Shuttle Concepción → Santiago"
+      }
+    ]
+  },
+  "stops": [
+    {
+      "id": "santiago-gourmet",
+      "name": "Santiago – Barrio Lastarria",
+      "type": "city",
+      "coordinates": {
+        "lat": -33.4406,
+        "lng": -70.6420
+      },
+      "city": "Santiago",
+      "address": {
+        "street": "José Victorino Lastarria",
+        "city": "Santiago",
+        "country": "Chile"
+      },
+      "website": "https://www.santiagoturismo.cl",
+      "description": "Tapasbars, Weinboutiquen und das Museo de Artes Visuales – perfekter Auftakt für Foodies.",
+      "timezone": "America/Santiago",
+      "rating": 4.8,
+      "reviewCount": 40211,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800&auto=format&fit=crop",
+          "caption": "Abendstimmung im Barrio Lastarria",
+          "credit": "María Fernanda Rojas",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "casablanca-valley",
+      "name": "Valle de Casablanca",
+      "type": "nature",
+      "coordinates": {
+        "lat": -33.3070,
+        "lng": -71.4020
+      },
+      "city": "Casablanca",
+      "address": {
+        "street": "Ruta 68 km 70",
+        "city": "Casablanca",
+        "country": "Chile"
+      },
+      "website": "https://www.vallecasablanca.cl",
+      "description": "Cool-Climate-Weine, Chardonnay & Sauvignon Blanc – nur eine Stunde von Santiago entfernt.",
+      "timezone": "America/Santiago",
+      "rating": 4.7,
+      "reviewCount": 14560,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1528825871115-3581a5387919?w=800&auto=format&fit=crop",
+          "caption": "Weinberge im Morgenlicht",
+          "credit": "Sebastián Pardo",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "valparaiso-bay",
+      "name": "Valparaíso – Puerto",
+      "type": "city",
+      "coordinates": {
+        "lat": -33.0400,
+        "lng": -71.6296
+      },
+      "city": "Valparaíso",
+      "address": {
+        "street": "Muelle Prat",
+        "city": "Valparaíso",
+        "country": "Chile"
+      },
+      "website": "https://www.visitvalparaiso.cl",
+      "description": "Streetfood, Fischmärkte und Rooftop-Bars – kulinarischer Mix am Pazifik.",
+      "timezone": "America/Santiago",
+      "rating": 4.6,
+      "reviewCount": 25400,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1526402462922-1e1d481d87fd?w=800&auto=format&fit=crop",
+          "caption": "Hafenblick bei Sonnenuntergang",
+          "credit": "Fabiola Peñailillo",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "santa-cruz",
+      "name": "Santa Cruz – Colchagua Valley",
+      "type": "town",
+      "coordinates": {
+        "lat": -34.6398,
+        "lng": -71.3589
+      },
+      "city": "Santa Cruz",
+      "address": {
+        "street": "Plaza de Armas",
+        "city": "Santa Cruz",
+        "country": "Chile"
+      },
+      "website": "https://www.colchaguavalley.cl",
+      "description": "Rotwein-Hochburg mit Museen, Bike-Routen und Premium-Weingütern.",
+      "timezone": "America/Santiago",
+      "rating": 4.8,
+      "reviewCount": 13210,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1528821154947-1aa3d1c3c88f?w=800&auto=format&fit=crop",
+          "caption": "Weingut im Colchagua Valley",
+          "credit": "Camila Herrera",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "talca-city",
+      "name": "Talca – Mercado Central",
+      "type": "city",
+      "coordinates": {
+        "lat": -35.4264,
+        "lng": -71.6554
+      },
+      "city": "Talca",
+      "address": {
+        "street": "Av. Manuel Rodríguez",
+        "city": "Talca",
+        "country": "Chile"
+      },
+      "website": "https://www.talcatour.cl",
+      "description": "Urbaner Mix aus Bauernmarkt, Craft-Bier und Kochschulen.",
+      "timezone": "America/Santiago",
+      "rating": 4.5,
+      "reviewCount": 9860,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&auto=format&fit=crop",
+          "caption": "Marktstände voller frischer Zutaten",
+          "credit": "Camila Gutiérrez",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "concepcion-coast",
+      "name": "Concepción – Mercado Central",
+      "type": "city",
+      "coordinates": {
+        "lat": -36.8269,
+        "lng": -73.0498
+      },
+      "city": "Concepción",
+      "address": {
+        "street": "Cochrane 440",
+        "city": "Concepción",
+        "country": "Chile"
+      },
+      "website": "https://www.concepcion.cl",
+      "description": "Lebhafter Markt mit Muscheln, Seeigeln und Live-Musik in der Food Hall.",
+      "timezone": "America/Santiago",
+      "rating": 4.7,
+      "reviewCount": 12040,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1529257414771-1960ab1f3d30?w=800&auto=format&fit=crop",
+          "caption": "Seafood-Stände in Concepción",
+          "credit": "Nicolás Pérez",
+          "license": "Unsplash License"
+        }
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "wine-seg-01",
+      "from": "santiago-gourmet",
+      "to": "casablanca-valley",
+      "mode": "drive",
+      "operator": "Europcar",
+      "distanceKm": 78,
+      "durationHours": 1.3,
+      "carbonKg": 14.98,
+      "description": "Abfahrt 4. Januar – Stop in den Hügeln von Lo Abarca für Austern."
+    },
+    {
+      "id": "wine-seg-02",
+      "from": "casablanca-valley",
+      "to": "valparaiso-bay",
+      "mode": "drive",
+      "operator": "Europcar",
+      "distanceKm": 32,
+      "durationHours": 0.6,
+      "carbonKg": 6.14,
+      "description": "Kurze Fahrt zum Abendessen mit Meerblick in Valparaíso."
+    },
+    {
+      "id": "wine-seg-03",
+      "from": "valparaiso-bay",
+      "to": "santa-cruz",
+      "mode": "drive",
+      "operator": "Europcar",
+      "distanceKm": 230,
+      "durationHours": 3.5,
+      "carbonKg": 44.16,
+      "description": "Ruta 5 Sur Richtung Colchagua – Mittagspause in Rancagua."
+    },
+    {
+      "id": "wine-seg-04",
+      "from": "santa-cruz",
+      "to": "talca-city",
+      "mode": "drive",
+      "operator": "Europcar",
+      "distanceKm": 140,
+      "durationHours": 2.0,
+      "carbonKg": 26.88,
+      "description": "Über den Weinhügeln des Maule – Workshop in Talca am Abend."
+    },
+    {
+      "id": "wine-seg-05",
+      "from": "talca-city",
+      "to": "concepcion-coast",
+      "mode": "drive",
+      "operator": "Europcar",
+      "distanceKm": 240,
+      "durationHours": 3.8,
+      "carbonKg": 46.08,
+      "description": "Grüne Landschaften des Bío-Bío – Kaffee-Stopp in Chillán."
+    },
+    {
+      "id": "wine-seg-06",
+      "from": "concepcion-coast",
+      "to": "santiago-gourmet",
+      "mode": "bus",
+      "operator": "Eme Bus Premium",
+      "distanceKm": 500,
+      "durationHours": 5.5,
+      "carbonKg": 25,
+      "description": "Komfortabler Premium-Bus zurück nach Santiago am 18. Januar."
+    }
+  ],
+  "lodging": [
+    {
+      "id": "matetic-la-casona",
+      "stopId": "casablanca-valley",
+      "name": "La Casona at Matetic Vineyards",
+      "nights": 3,
+      "avgNightlyRateEUR": 180,
+      "amenities": [
+        "Bike-Trails",
+        "Pool",
+        "Farm-to-Table Restaurant"
+      ],
+      "url": "https://www.matetic.com",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1505691723518-36a5ac3be353?w=800&auto=format&fit=crop",
+          "caption": "Landhaus zwischen den Weinreben",
+          "credit": "Paula Ortiz",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "lapostolle-residence",
+      "stopId": "santa-cruz",
+      "name": "Lapostolle Residence",
+      "nights": 4,
+      "avgNightlyRateEUR": 260,
+      "amenities": [
+        "Private Wine Cellar",
+        "Infinity-Pool",
+        "Degustationsmenü"
+      ],
+      "url": "https://www.lapostolle.com",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1528825871115-3581a5387919?w=800&auto=format&fit=crop",
+          "caption": "Suite mit Blick auf Weinberge",
+          "credit": "Sebastián Pardo",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "talca-cooking-loft",
+      "stopId": "talca-city",
+      "name": "Chef's Loft Talca",
+      "nights": 3,
+      "avgNightlyRateEUR": 140,
+      "amenities": [
+        "Showküche",
+        "Kräutergarten",
+        "Weinkeller"
+      ],
+      "url": "https://www.chefslofttalca.cl",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&auto=format&fit=crop",
+          "caption": "Loft mit großer Kochinsel",
+          "credit": "Laura Espinoza",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "concepcion-boutique",
+      "stopId": "concepcion-coast",
+      "name": "Hotel Mercure Concepción",
+      "nights": 3,
+      "avgNightlyRateEUR": 120,
+      "amenities": [
+        "Rooftop-Bar",
+        "Fitness",
+        "Late Checkout"
+      ],
+      "url": "https://all.accor.com",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1568495248636-6432b97bd949?w=800&auto=format&fit=crop",
+          "caption": "Modernes Zimmer im Stadtzentrum",
+          "credit": "Ignacio Herrera",
+          "license": "Unsplash License"
+        }
+      ]
+    }
+  ],
+  "food": [
+    {
+      "name": "Bocanáriz Wine Bar",
+      "stopId": "santiago-gourmet",
+      "type": "Winebar",
+      "address": "José Victorino Lastarria 276, Santiago",
+      "openingHours": "12:30–01:00",
+      "specialties": [
+        "Flight Degustation",
+        "Empanadas de Queso"
+      ],
+      "priceRange": "€€",
+      "mustTry": [
+        "Bocanáriz Flight",
+        "Ceviche"
+      ],
+      "reservation": "Online",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?w=800&auto=format&fit=crop",
+          "caption": "Weinprobe in Santiago",
+          "credit": "Ignacio Rodríguez",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "name": "Restaurant Fuegos de Apalta",
+      "stopId": "santa-cruz",
+      "type": "Restaurant",
+      "address": "Camino a Apalta Km 2",
+      "openingHours": "13:00–22:00",
+      "specialties": [
+        "Holzfeuerküche",
+        "Lamm aus Apalta"
+      ],
+      "priceRange": "€€€",
+      "mustTry": [
+        "Kräutergeröstetes Lamm",
+        "Sopaipillas mit Pebre"
+      ],
+      "reservation": "Empfohlen",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1525755662778-989d0524087e?w=800&auto=format&fit=crop",
+          "caption": "Offene Feuerküche",
+          "credit": "Verónica Palma",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "name": "Mercado Central Concepción",
+      "stopId": "concepcion-coast",
+      "type": "Markt",
+      "address": "Cochrane 440, Concepción",
+      "openingHours": "08:00–20:00",
+      "specialties": [
+        "Seafood",
+        "Empanadas de Mariscos"
+      ],
+      "priceRange": "€",
+      "mustTry": [
+        "Chupe de Jaiba",
+        "Erizos"
+      ],
+      "reservation": "Walk-in",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1529257414771-1960ab1f3d30?w=800&auto=format&fit=crop",
+          "caption": "Fischstände voller Auswahl",
+          "credit": "Nicolás Pérez",
+          "license": "Unsplash License"
+        }
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "title": "Casablanca Wine Flight",
+      "stopId": "casablanca-valley",
+      "durationHours": 3,
+      "operator": "Bodegas RE",
+      "price": 55,
+      "currency": "EUR",
+      "website": "https://www.bodegasre.cl",
+      "meetingPoint": "Bodega RE 11:00",
+      "gear": [
+        "Kamera",
+        "Sonnenschutz"
+      ],
+      "difficulty": "leicht",
+      "groupSize": "max. 10 Personen",
+      "included": [
+        "Degustation",
+        "Käseplatte"
+      ],
+      "notes": "Fahrt ohne Auto zurück? Chauffeurservice dazubuchen."
+    },
+    {
+      "title": "Colchagua Bike & Wine",
+      "stopId": "santa-cruz",
+      "durationHours": 5,
+      "operator": "Colchagua Bike",
+      "price": 75,
+      "currency": "EUR",
+      "website": "https://www.colchaguabike.cl",
+      "meetingPoint": "Plaza Santa Cruz 09:30",
+      "gear": [
+        "Bequeme Kleidung",
+        "Helm wird gestellt"
+      ],
+      "difficulty": "mittel",
+      "groupSize": "max. 8 Personen",
+      "included": [
+        "Bike",
+        "Guide",
+        "Picknick"
+      ],
+      "notes": "Alkoholfrei starten – Tastings erst am Ende."
+    },
+    {
+      "title": "Talca Chef's Table",
+      "stopId": "talca-city",
+      "durationHours": 4,
+      "operator": "Chef's Loft Talca",
+      "price": 85,
+      "currency": "EUR",
+      "website": "https://www.chefslofttalca.cl",
+      "meetingPoint": "Loft Küche 17:00",
+      "gear": [
+        "Schürze",
+        "Notizbuch"
+      ],
+      "difficulty": "leicht",
+      "groupSize": "max. 6 Personen",
+      "included": [
+        "Workshop",
+        "4-Gang-Menü",
+        "Weinbegleitung"
+      ],
+      "notes": "Saisonale Produkte vom Markt – Vegetarische Option verfügbar."
+    }
+  ],
+  "notes": "Anreise am 3. Januar, Mietwagenübernahme 4. Januar. Chauffeur oder Sammeltaxi nach Degustationen nutzen – Chile hat 0,0‰-Grenze. Rücktransfer von Concepción nach Santiago per Premium-Bus am 18. Januar, letztes Dinner in Lastarria am 19. Januar.",
+  "metrics": {
+    "totalDistanceKm": 1120,
+    "estimatedCarbonKg": 162.26,
+    "segmentCount": 6,
+    "flightCount": 0,
+    "stopCount": 6,
+    "groundTransportCarbonKg": 162.26,
+    "totalNights": 13,
+    "avgNightlyRate": 175,
+    "lodgingCount": 4,
+    "foodCount": 3,
+    "activityCount": 3,
+    "averageDailyBudget": 116
+  },
+  "source": "curated"
+}

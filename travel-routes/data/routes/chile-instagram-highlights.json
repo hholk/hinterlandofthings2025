@@ -1,0 +1,806 @@
+{
+  "id": "chile-instagram-highlights",
+  "name": "Instagram Highlights – Atacama & Patagonia Shots (4.–20. Januar)",
+  "color": "#d66bff",
+  "tags": [
+    "photography",
+    "adventure",
+    "flight"
+  ],
+  "summary": "Von Santiago aus geht es am 4. Januar zu den fotogensten Kulissen Chiles: Salzseen und Geysire in der Atacama-Wüste, danach weiter nach Patagonien für Gletscher, Guanako-Herden und Sonnenaufgänge im Torres-del-Paine-Nationalpark. Viel Zeit für Instagram-taugliche Motive und genug Pausen zum Bearbeiten der Shots.",
+  "meta": {
+    "theme": "Fototour Wüste & Eis",
+    "pace": "anspruchsvoll",
+    "durationDays": 17,
+    "costEstimate": 3650,
+    "highlights": [
+      "Milchstraße über San Pedro de Atacama",
+      "El Tatio Geysire bei Sonnenaufgang",
+      "Laguna Amarga mit Torres-Spiegelung"
+    ],
+    "scores": {
+      "budget": 2,
+      "adventure": 5,
+      "relax": 3,
+      "culture": 3
+    }
+  },
+  "costBreakdown": {
+    "currency": "EUR",
+    "items": [
+      {
+        "category": "Inlandsflüge",
+        "estimate": 980,
+        "notes": "SCL↔CJC & SCL↔PUQ (jeweils Flex-Tarif)"
+      },
+      {
+        "category": "Guided Shoots",
+        "estimate": 640,
+        "notes": "Astrofotografie, Sunrise Hikes, Gletscher-Cruise"
+      },
+      {
+        "category": "Unterkünfte",
+        "estimate": 1480,
+        "notes": "Design-Hotels & Glamping"
+      },
+      {
+        "category": "Transport",
+        "estimate": 320,
+        "notes": "4x4-Transfers, Privatshuttle, Parkeintritte"
+      },
+      {
+        "category": "Verpflegung",
+        "estimate": 230,
+        "notes": "Foodtrucks in San Pedro, Patagonische Küche"
+      }
+    ]
+  },
+  "stops": [
+    {
+      "id": "santiago-sky",
+      "name": "Santiago – Sky Costanera Aussicht",
+      "type": "city",
+      "coordinates": {
+        "lat": -33.4173,
+        "lng": -70.6073
+      },
+      "city": "Santiago",
+      "address": {
+        "street": "Av. Andrés Bello 2425",
+        "city": "Providencia",
+        "country": "Chile"
+      },
+      "website": "https://www.skycostanera.cl",
+      "description": "360°-Aussichtsplattform über Santiago – perfekter Ort für den Auftakt-Post am Abend vor Abflug.",
+      "timezone": "America/Santiago",
+      "rating": 4.7,
+      "reviewCount": 50320,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1543472750-169a8f02c545?w=800&auto=format&fit=crop",
+          "caption": "Blick vom Sky Costanera kurz nach Sonnenuntergang",
+          "credit": "Carolina Lagos",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "scl-airport",
+      "name": "Santiago International Airport (SCL)",
+      "type": "airport",
+      "coordinates": {
+        "lat": -33.3929,
+        "lng": -70.7858
+      },
+      "city": "Santiago",
+      "address": {
+        "street": "Armando Cortínez Norte 1701",
+        "city": "Pudahuel",
+        "country": "Chile"
+      },
+      "website": "https://www.nuevopudahuel.cl",
+      "description": "Basecamp für alle Inlandsflüge – checke früh ein, um Fensterplätze zu sichern.",
+      "timezone": "America/Santiago",
+      "rating": 4.2,
+      "reviewCount": 42876,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1502920514313-52581002a659?w=800&auto=format&fit=crop",
+          "caption": "Boardingbereich am frühen Morgen",
+          "credit": "Agustín Lautaro",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "calama-airport",
+      "name": "Aeropuerto El Loa (CJC)",
+      "type": "airport",
+      "coordinates": {
+        "lat": -22.4950,
+        "lng": -68.9030
+      },
+      "city": "Calama",
+      "address": {
+        "street": "Ruta 23",
+        "city": "Calama",
+        "country": "Chile"
+      },
+      "website": "https://www.aeropuertocalama.cl",
+      "description": "Tor zur Atacama – Mietwagen & 4x4-Shuttles warten direkt am Terminal.",
+      "timezone": "America/Santiago",
+      "rating": 4.4,
+      "reviewCount": 7210,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1530988405631-f7aa0834e4c4?w=800&auto=format&fit=crop",
+          "caption": "Anflug auf die Kupferstadt Calama",
+          "credit": "Ignacio Pardo",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "san-pedro-town",
+      "name": "San Pedro de Atacama",
+      "type": "town",
+      "coordinates": {
+        "lat": -22.9087,
+        "lng": -68.1997
+      },
+      "city": "San Pedro de Atacama",
+      "address": {
+        "street": "Calle Caracoles",
+        "city": "San Pedro de Atacama",
+        "country": "Chile"
+      },
+      "website": "https://www.sanpedrodeatacama.com",
+      "description": "Adobe-Gassen, Salzpfannen und sternenklare Nächte – Photospot Nummer eins in der Atacama.",
+      "timezone": "America/Santiago",
+      "rating": 4.8,
+      "reviewCount": 35840,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1526401485004-46910ecc8e51?w=800&auto=format&fit=crop",
+          "caption": "Staubige Gasse in San Pedro beim Sunset",
+          "credit": "Marcelo Díaz",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "el-tatio",
+      "name": "Geysers del Tatio",
+      "type": "nature",
+      "coordinates": {
+        "lat": -22.3350,
+        "lng": -68.0140
+      },
+      "city": "San Pedro de Atacama",
+      "address": {
+        "street": "Ruta B-245",
+        "city": "Putana",
+        "country": "Chile"
+      },
+      "website": "https://www.conaf.cl",
+      "description": "Geysire auf 4.200 m – spektakuläre Dampfsäulen im ersten Licht.",
+      "timezone": "America/Santiago",
+      "rating": 4.9,
+      "reviewCount": 22110,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1548696319-48ee7535e8b5?w=800&auto=format&fit=crop",
+          "caption": "El Tatio kurz nach Sonnenaufgang",
+          "credit": "Sofía Arancibia",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "rainbow-valley",
+      "name": "Valle del Arcoíris",
+      "type": "nature",
+      "coordinates": {
+        "lat": -23.2675,
+        "lng": -68.2652
+      },
+      "city": "San Pedro de Atacama",
+      "address": {
+        "street": "Ruta 23",
+        "city": "San Pedro",
+        "country": "Chile"
+      },
+      "website": "https://www.atacamachile.com",
+      "description": "Mineralien sorgen für bunte Felsformationen – perfekter Ort für Drohnen- und Portraitshootings.",
+      "timezone": "America/Santiago",
+      "rating": 4.7,
+      "reviewCount": 9120,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+          "caption": "Farbschichten im Valle del Arcoíris",
+          "credit": "Ignacia Rojas",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "punta-arenas-airport",
+      "name": "Aeropuerto Presidente Ibáñez (PUQ)",
+      "type": "airport",
+      "coordinates": {
+        "lat": -53.0027,
+        "lng": -70.8546
+      },
+      "city": "Punta Arenas",
+      "address": {
+        "street": "Ruta 9",
+        "city": "Punta Arenas",
+        "country": "Chile"
+      },
+      "website": "https://www.aeropuertodepuntaarenas.cl",
+      "description": "Gateway nach Patagonien – warm anziehen, der Wind startet direkt beim Aussteigen.",
+      "timezone": "America/Punta_Arenas",
+      "rating": 4.6,
+      "reviewCount": 8030,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+          "caption": "Runway mit Blick über die Magellanstraße",
+          "credit": "Ignacia Rojas",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "puerto-natales",
+      "name": "Puerto Natales Waterfront",
+      "type": "town",
+      "coordinates": {
+        "lat": -51.7235,
+        "lng": -72.5058
+      },
+      "city": "Puerto Natales",
+      "address": {
+        "street": "Costanera Pedro Montt",
+        "city": "Puerto Natales",
+        "country": "Chile"
+      },
+      "website": "https://www.puertonatalesturismo.cl",
+      "description": "Dramatische Fjorde, Streetfood-Trucks und Ausgangspunkt für Torres del Paine.",
+      "timezone": "America/Punta_Arenas",
+      "rating": 4.8,
+      "reviewCount": 15480,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800&auto=format&fit=crop",
+          "caption": "Stillgelegte Pier – Klassiker für Langzeitbelichtungen",
+          "credit": "María Fernanda Rojas",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "torres-del-paine",
+      "name": "Torres del Paine – Base Las Torres",
+      "type": "nature",
+      "coordinates": {
+        "lat": -50.9514,
+        "lng": -72.9653
+      },
+      "city": "Torres del Paine",
+      "address": {
+        "street": "Sendero Base Torres",
+        "city": "Torres del Paine",
+        "country": "Chile"
+      },
+      "website": "https://www.parquetorresdelpaine.cl",
+      "description": "Ikonischer Aussichtspunkt auf die Granittürme – Pflichtshot bei Sonnenaufgang.",
+      "timezone": "America/Punta_Arenas",
+      "rating": 5.0,
+      "reviewCount": 28760,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&auto=format&fit=crop",
+          "caption": "Sonnenaufgang an der Laguna Torre",
+          "credit": "Hernán Calderón",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "laguna-amarga",
+      "name": "Laguna Amarga Aussichtspunkt",
+      "type": "nature",
+      "coordinates": {
+        "lat": -50.9751,
+        "lng": -72.7927
+      },
+      "city": "Torres del Paine",
+      "address": {
+        "street": "Acceso Laguna Amarga",
+        "city": "Torres del Paine",
+        "country": "Chile"
+      },
+      "website": "https://www.conaf.cl",
+      "description": "Spiegelnder See mit den Torres im Hintergrund – beliebter Spot für Drohnenaufnahmen.",
+      "timezone": "America/Punta_Arenas",
+      "rating": 4.9,
+      "reviewCount": 11230,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&auto=format&fit=crop",
+          "caption": "Laguna Amarga kurz nach Sonnenaufgang",
+          "credit": "Felipe Santander",
+          "license": "Unsplash License"
+        }
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "insta-seg-01",
+      "from": "scl-airport",
+      "to": "calama-airport",
+      "mode": "flight",
+      "operator": "LATAM",
+      "distanceKm": 1254,
+      "durationHours": 2.2,
+      "carbonKg": 357.39,
+      "description": "Fensterplatz links reservieren – Andenketten im Morgenlicht."
+    },
+    {
+      "id": "insta-seg-02",
+      "from": "calama-airport",
+      "to": "san-pedro-town",
+      "mode": "drive",
+      "operator": "Desert Transfer 4x4",
+      "distanceKm": 98,
+      "durationHours": 1.5,
+      "carbonKg": 18.82,
+      "description": "Privater Shuttle mit Stopps an der Cordillera de la Sal."
+    },
+    {
+      "id": "insta-seg-03",
+      "from": "san-pedro-town",
+      "to": "el-tatio",
+      "mode": "drive",
+      "operator": "Andes Photo Tours",
+      "distanceKm": 90,
+      "durationHours": 2.5,
+      "carbonKg": 17.28,
+      "description": "Nachtfahrt ab 04:00 Uhr – Sternenhimmel inklusive."
+    },
+    {
+      "id": "insta-seg-04",
+      "from": "san-pedro-town",
+      "to": "rainbow-valley",
+      "mode": "drive",
+      "operator": "Andes Photo Tours",
+      "distanceKm": 42,
+      "durationHours": 1.2,
+      "carbonKg": 8.06,
+      "description": "Mittagsfahrt für satte Farben – Polfilter einpacken."
+    },
+    {
+      "id": "insta-seg-05",
+      "from": "san-pedro-town",
+      "to": "calama-airport",
+      "mode": "drive",
+      "operator": "Desert Transfer 4x4",
+      "distanceKm": 98,
+      "durationHours": 1.5,
+      "carbonKg": 18.82,
+      "description": "Zurück nach Calama für den Weiterflug am 10. Januar."
+    },
+    {
+      "id": "insta-seg-06",
+      "from": "calama-airport",
+      "to": "scl-airport",
+      "mode": "flight",
+      "operator": "LATAM",
+      "distanceKm": 1254,
+      "durationHours": 2.2,
+      "carbonKg": 357.39,
+      "description": "Mittagsflug nach Santiago – direkter Anschluss nach Patagonien."
+    },
+    {
+      "id": "insta-seg-07",
+      "from": "scl-airport",
+      "to": "punta-arenas-airport",
+      "mode": "flight",
+      "operator": "Sky Airline",
+      "distanceKm": 2175,
+      "durationHours": 3.2,
+      "carbonKg": 619.88,
+      "description": "Sitze rechts für Sicht auf den Campo de Hielo Sur."
+    },
+    {
+      "id": "insta-seg-08",
+      "from": "punta-arenas-airport",
+      "to": "puerto-natales",
+      "mode": "drive",
+      "operator": "Bus Sur",
+      "distanceKm": 248,
+      "durationHours": 3.0,
+      "carbonKg": 12.4,
+      "description": "Bus mit USB-Steckdosen – Akkus unterwegs laden."
+    },
+    {
+      "id": "insta-seg-09",
+      "from": "puerto-natales",
+      "to": "torres-del-paine",
+      "mode": "drive",
+      "operator": "Patagonia Transfers",
+      "distanceKm": 112,
+      "durationHours": 2.0,
+      "carbonKg": 21.5,
+      "description": "Privattransfer mit kurzen Fotostopps an der Cueva del Milodón."
+    },
+    {
+      "id": "insta-seg-10",
+      "from": "torres-del-paine",
+      "to": "laguna-amarga",
+      "mode": "drive",
+      "operator": "Patagonia Transfers",
+      "distanceKm": 34,
+      "durationHours": 0.9,
+      "carbonKg": 6.53,
+      "description": "Früher Morgen für Spiegelungen – Stativ im Kofferraum."
+    },
+    {
+      "id": "insta-seg-11",
+      "from": "laguna-amarga",
+      "to": "punta-arenas-airport",
+      "mode": "drive",
+      "operator": "Bus Sur",
+      "distanceKm": 350,
+      "durationHours": 5.0,
+      "carbonKg": 17.5,
+      "description": "Langstreckenbus zurück zum Flughafen (18. Januar)."
+    },
+    {
+      "id": "insta-seg-12",
+      "from": "punta-arenas-airport",
+      "to": "scl-airport",
+      "mode": "flight",
+      "operator": "LATAM",
+      "distanceKm": 2175,
+      "durationHours": 3.3,
+      "carbonKg": 619.88,
+      "description": "Rückflug am 19. Januar – Golden Hour beim Landeanflug einfangen."
+    }
+  ],
+  "flights": [
+    {
+      "id": "insta-flight-01",
+      "fromStopId": "scl-airport",
+      "toStopId": "calama-airport",
+      "airline": "LATAM",
+      "flightNumber": "LA128",
+      "departure": "2025-01-04T07:45:00-03:00",
+      "arrival": "2025-01-04T10:05:00-03:00",
+      "aircraft": "Airbus A321neo",
+      "cabinClass": "Economy+",
+      "baggage": "2x23 kg Aufgabe für Kameraequipment",
+      "price": 260,
+      "currency": "EUR",
+      "carbonKg": 357.39
+    },
+    {
+      "id": "insta-flight-02",
+      "fromStopId": "calama-airport",
+      "toStopId": "scl-airport",
+      "airline": "LATAM",
+      "flightNumber": "LA129",
+      "departure": "2025-01-10T12:20:00-03:00",
+      "arrival": "2025-01-10T14:40:00-03:00",
+      "aircraft": "Airbus A321neo",
+      "cabinClass": "Economy+",
+      "baggage": "2x23 kg",
+      "price": 250,
+      "currency": "EUR",
+      "carbonKg": 357.39
+    },
+    {
+      "id": "insta-flight-03",
+      "fromStopId": "scl-airport",
+      "toStopId": "punta-arenas-airport",
+      "airline": "Sky Airline",
+      "flightNumber": "H205",
+      "departure": "2025-01-10T17:15:00-03:00",
+      "arrival": "2025-01-10T20:25:00-03:00",
+      "aircraft": "Airbus A321",
+      "cabinClass": "Premium Economy",
+      "baggage": "2x23 kg",
+      "price": 310,
+      "currency": "EUR",
+      "carbonKg": 619.88
+    },
+    {
+      "id": "insta-flight-04",
+      "fromStopId": "punta-arenas-airport",
+      "toStopId": "scl-airport",
+      "airline": "LATAM",
+      "flightNumber": "LA286",
+      "departure": "2025-01-19T18:30:00-03:00",
+      "arrival": "2025-01-19T21:40:00-03:00",
+      "aircraft": "Boeing 787-8",
+      "cabinClass": "Premium Economy",
+      "baggage": "2x23 kg",
+      "price": 360,
+      "currency": "EUR",
+      "carbonKg": 619.88
+    }
+  ],
+  "lodging": [
+    {
+      "id": "noi-san-pedro",
+      "stopId": "san-pedro-town",
+      "name": "NOI Casa Atacama",
+      "nights": 5,
+      "avgNightlyRateEUR": 240,
+      "amenities": [
+        "Adobe-Suites",
+        "Solar Pool",
+        "Photo Concierge"
+      ],
+      "url": "https://www.noihotels.com",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1505691723518-36a5ac3be353?w=800&auto=format&fit=crop",
+          "caption": "Design-Suite in San Pedro",
+          "credit": "Paula Ortiz",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "desert-glamping",
+      "stopId": "rainbow-valley",
+      "name": "Atacama Star Domes",
+      "nights": 2,
+      "avgNightlyRateEUR": 210,
+      "amenities": [
+        "Transparente Dächer",
+        "Nachts mit Teleskop",
+        "Privatkoch"
+      ],
+      "url": "https://www.atacamastardomes.cl",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1470246973918-29a93221c455?w=800&auto=format&fit=crop",
+          "caption": "Glamping-Kuppel unter Sternen",
+          "credit": "Gonzalo Vera",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "singular-patagonia",
+      "stopId": "puerto-natales",
+      "name": "The Singular Patagonia",
+      "nights": 4,
+      "avgNightlyRateEUR": 380,
+      "amenities": [
+        "Industrie-Design",
+        "Spa",
+        "Bootsanleger"
+      ],
+      "url": "https://www.thesingular.com",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1519824145371-296894a0daa9?w=800&auto=format&fit=crop",
+          "caption": "The Singular mit Fjordblick",
+          "credit": "Valentina Vergara",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "patagonia-camp",
+      "stopId": "torres-del-paine",
+      "name": "Patagonia Camp",
+      "nights": 3,
+      "avgNightlyRateEUR": 410,
+      "amenities": [
+        "Yurten mit Glasdach",
+        "All-Inclusive Transfers",
+        "Guide-Team"
+      ],
+      "url": "https://www.patagoniacamp.com",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&auto=format&fit=crop",
+          "caption": "Yurte mit Blick auf den See",
+          "credit": "Andrés Peña",
+          "license": "Unsplash License"
+        }
+      ]
+    }
+  ],
+  "food": [
+    {
+      "name": "Baltinache",
+      "stopId": "san-pedro-town",
+      "type": "Restaurant",
+      "address": "Calle Caracoles 90, San Pedro de Atacama",
+      "openingHours": "19:00–23:00",
+      "specialties": [
+        "Degustationsmenü",
+        "Lokale Zutaten"
+      ],
+      "priceRange": "€€€",
+      "mustTry": [
+        "Quinoa Risotto",
+        "Chañar Dessert"
+      ],
+      "reservation": "Online Pflicht",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&auto=format&fit=crop",
+          "caption": "Feines Degustationsmenü",
+          "credit": "Camila Gutiérrez",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "name": "LomoHouse Foodtruck",
+      "stopId": "san-pedro-town",
+      "type": "Streetfood",
+      "address": "Calle Gustavo Le Paige 456",
+      "openingHours": "18:00–01:00",
+      "specialties": [
+        "Lomo Saltado Burger",
+        "Veggie Bowls"
+      ],
+      "priceRange": "€",
+      "mustTry": [
+        "Lomo Saltado Burger",
+        "Maracuya Limonade"
+      ],
+      "reservation": "Walk-in",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1550547660-d9450f859349?w=800&auto=format&fit=crop",
+          "caption": "Streetfood in San Pedro",
+          "credit": "Tomás Castro",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "name": "Afrigonia",
+      "stopId": "puerto-natales",
+      "type": "Restaurant",
+      "address": "Eberhard 323, Puerto Natales",
+      "openingHours": "18:30–22:30",
+      "specialties": [
+        "Patagonisches Lamm",
+        "Königskrabbe"
+      ],
+      "priceRange": "€€€",
+      "mustTry": [
+        "Centolla-Curry",
+        "Pinot Noir aus der Region"
+      ],
+      "reservation": "Telefonisch",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=800&auto=format&fit=crop",
+          "caption": "Fine Dining in Puerto Natales",
+          "credit": "Natalia Prado",
+          "license": "Unsplash License"
+        }
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "title": "Astrofotografie Workshop",
+      "stopId": "san-pedro-town",
+      "durationHours": 4,
+      "operator": "Atacama Photo Experience",
+      "price": 95,
+      "currency": "EUR",
+      "website": "https://www.atacamaphotoexperience.com",
+      "meetingPoint": "Plaza de San Pedro 21:00",
+      "gear": [
+        "DSLR",
+        "Stativ",
+        "Fernauslöser"
+      ],
+      "difficulty": "leicht",
+      "groupSize": "max. 8 Personen",
+      "included": [
+        "Transport",
+        "Guide",
+        "Lightroom Presets"
+      ],
+      "notes": "Akku aufladen und Ersatzkarten einpacken."
+    },
+    {
+      "title": "Sunrise Shoot El Tatio",
+      "stopId": "el-tatio",
+      "durationHours": 6,
+      "operator": "Andes Photo Tours",
+      "price": 110,
+      "currency": "EUR",
+      "website": "https://www.andesphototours.com",
+      "meetingPoint": "Hotel Lobby 04:00",
+      "gear": [
+        "Weitwinkel",
+        "Thermoflasche"
+      ],
+      "difficulty": "mittel",
+      "groupSize": "max. 6 Personen",
+      "included": [
+        "Guide",
+        "Frühstück",
+        "Parkeintritt"
+      ],
+      "notes": "Warme Kleidung (0°C) und Handschuhe einpacken."
+    },
+    {
+      "title": "Grey Glacier Navigation",
+      "stopId": "puerto-natales",
+      "durationHours": 4,
+      "operator": "Lago Grey",
+      "price": 120,
+      "currency": "EUR",
+      "website": "https://www.lagogrey.com",
+      "meetingPoint": "Hotel The Singular 13:00",
+      "gear": [
+        "Teleobjektiv",
+        "Winddichte Jacke"
+      ],
+      "difficulty": "leicht",
+      "groupSize": "max. 50 Personen",
+      "included": [
+        "Boot",
+        "Guide",
+        "Heißgetränk"
+      ],
+      "notes": "Polarizer-Filter hilft bei Spiegelungen."
+    },
+    {
+      "title": "Sunrise Hike Base Torres",
+      "stopId": "torres-del-paine",
+      "durationHours": 8,
+      "operator": "Patagonia Camp Guides",
+      "price": 140,
+      "currency": "EUR",
+      "website": "https://www.patagoniacamp.com",
+      "meetingPoint": "Camp Rezeption 02:30",
+      "gear": [
+        "Trekkingstöcke",
+        "Headlamp"
+      ],
+      "difficulty": "anspruchsvoll",
+      "groupSize": "max. 6 Personen",
+      "included": [
+        "Guide",
+        "Frühstücksbox",
+        "Transport"
+      ],
+      "notes": "3 Liter Wasser + Snacks einpacken, Wetterfenster beachten."
+    }
+  ],
+  "notes": "Plane eine Nacht in Santiago am 3. Januar zum Ankommen. Zwischen den Regionen genügend Zeitpuffer lassen, um Bilder zu sichern und Drohnen-Akkus zu laden.",
+  "metrics": {
+    "totalDistanceKm": 6613,
+    "estimatedCarbonKg": 2055.75,
+    "segmentCount": 12,
+    "flightCount": 4,
+    "stopCount": 10,
+    "groundTransportCarbonKg": 121.31,
+    "totalNights": 14,
+    "avgNightlyRate": 310,
+    "lodgingCount": 4,
+    "foodCount": 3,
+    "activityCount": 4,
+    "averageDailyBudget": 215
+  },
+  "source": "curated"
+}

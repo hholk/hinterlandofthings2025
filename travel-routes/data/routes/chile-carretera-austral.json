@@ -1,0 +1,626 @@
+{
+  "id": "chile-carretera-austral",
+  "name": "Carretera Austral Expedition (4.–20. Januar)",
+  "color": "#3a8fb7",
+  "tags": [
+    "adventure",
+    "nature",
+    "roadtrip",
+    "flight"
+  ],
+  "summary": "Ein zweiwöchiges Abenteuer entlang der legendären Carretera Austral: Ab 4. Januar fliegen wir nach Balmaceda, erkunden Coyhaique, die Marmorhöhlen von Puerto Río Tranquilo, das neue Parque Patagonia und das Stelzendorf Caleta Tortel, bevor es am 19. Januar zurück nach Santiago geht.",
+  "meta": {
+    "theme": "Patagonien Off the Beaten Path",
+    "pace": "sportlich",
+    "durationDays": 17,
+    "costEstimate": 3120,
+    "highlights": [
+      "Bootstour zu den Capillas de Mármol",
+      "Trekking im Parque Patagonia",
+      "Sonnenuntergang in Caleta Tortel"
+    ],
+    "scores": {
+      "budget": 2,
+      "adventure": 5,
+      "relax": 3,
+      "culture": 2
+    }
+  },
+  "costBreakdown": {
+    "currency": "EUR",
+    "items": [
+      {
+        "category": "Flüge",
+        "estimate": 540,
+        "notes": "Santiago ↔ Balmaceda"
+      },
+      {
+        "category": "Mietwagen",
+        "estimate": 940,
+        "notes": "4x4 SUV inklusive Gravel-Versicherung"
+      },
+      {
+        "category": "Unterkünfte",
+        "estimate": 1180,
+        "notes": "Eco-Lodges & Boutique-Refugios"
+      },
+      {
+        "category": "Aktivitäten",
+        "estimate": 320,
+        "notes": "Bootstour, Trekking-Guide, Rafting"
+      },
+      {
+        "category": "Verpflegung",
+        "estimate": 140,
+        "notes": "Patagonische Küche & Lunchpakete"
+      }
+    ]
+  },
+  "stops": [
+    {
+      "id": "scl-airport",
+      "name": "Santiago International Airport (SCL)",
+      "type": "airport",
+      "coordinates": {
+        "lat": -33.3929,
+        "lng": -70.7858
+      },
+      "city": "Santiago",
+      "address": {
+        "street": "Armando Cortínez Norte 1701",
+        "city": "Pudahuel",
+        "country": "Chile"
+      },
+      "website": "https://www.nuevopudahuel.cl",
+      "description": "Startpunkt am 4. Januar – Mietwagen und Outdoor-Gear werden hier aufgegeben.",
+      "timezone": "America/Santiago",
+      "rating": 4.2,
+      "reviewCount": 42876,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1502920514313-52581002a659?w=800&auto=format&fit=crop",
+          "caption": "Boardingbereich am frühen Morgen",
+          "credit": "Agustín Lautaro",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "balmaceda-airport",
+      "name": "Aeropuerto Balmaceda (BBA)",
+      "type": "airport",
+      "coordinates": {
+        "lat": -45.9161,
+        "lng": -71.6896
+      },
+      "city": "Balmaceda",
+      "address": {
+        "street": "Ruta 7",
+        "city": "Balmaceda",
+        "country": "Chile"
+      },
+      "website": "https://www.aeropuertoaysen.cl",
+      "description": "Tor zur Region Aysén – Mietwagenstationen direkt nach der Ankunft.",
+      "timezone": "America/Santiago",
+      "rating": 4.5,
+      "reviewCount": 6120,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1530988405631-f7aa0834e4c4?w=800&auto=format&fit=crop",
+          "caption": "Andenketten rund um Balmaceda",
+          "credit": "Ignacio Pardo",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "coyhaique",
+      "name": "Coyhaique Plaza de Armas",
+      "type": "city",
+      "coordinates": {
+        "lat": -45.5752,
+        "lng": -72.0683
+      },
+      "city": "Coyhaique",
+      "address": {
+        "street": "Plaza de Armas",
+        "city": "Coyhaique",
+        "country": "Chile"
+      },
+      "website": "https://www.patagonia-aysen.cl",
+      "description": "Hauptstadt der Region Aysén mit Craft-Bier-Szene und guter Outdoor-Infrastruktur.",
+      "timezone": "America/Santiago",
+      "rating": 4.6,
+      "reviewCount": 9720,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&auto=format&fit=crop",
+          "caption": "Coyhaique umgeben von Bergen",
+          "credit": "Andrés Peña",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "rio-tranquilo",
+      "name": "Puerto Río Tranquilo",
+      "type": "town",
+      "coordinates": {
+        "lat": -46.6223,
+        "lng": -72.6801
+      },
+      "city": "Lago General Carrera",
+      "address": {
+        "street": "Ruta 7",
+        "city": "Río Tranquilo",
+        "country": "Chile"
+      },
+      "website": "https://www.carretera-austral.cl",
+      "description": "Dorf am Lago General Carrera – Ausgangspunkt für Marble Caves & Exploradores-Gletscher.",
+      "timezone": "America/Santiago",
+      "rating": 4.8,
+      "reviewCount": 8450,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&auto=format&fit=crop",
+          "caption": "Sonnenuntergang am Lago General Carrera",
+          "credit": "Andrés Peña",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "marble-caves",
+      "name": "Capillas de Mármol",
+      "type": "nature",
+      "coordinates": {
+        "lat": -46.6528,
+        "lng": -72.6286
+      },
+      "city": "Lago General Carrera",
+      "address": {
+        "street": "Caverna de Mármol",
+        "city": "Puerto Río Tranquilo",
+        "country": "Chile"
+      },
+      "website": "https://www.conaf.cl",
+      "description": "Berühmte Marmorhöhlen – blaues Wasser trifft skulpturale Felsen, nur per Boot erreichbar.",
+      "timezone": "America/Santiago",
+      "rating": 4.9,
+      "reviewCount": 12650,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1542044801-287cbc0d41d4?w=800&auto=format&fit=crop",
+          "caption": "Lichtspiele in den Capillas de Mármol",
+          "credit": "Matías Silva",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "patagonia-park",
+      "name": "Parque Nacional Patagonia – Casa Piedra",
+      "type": "nature",
+      "coordinates": {
+        "lat": -47.1948,
+        "lng": -72.3334
+      },
+      "city": "Cochrane",
+      "address": {
+        "street": "Ruta X-83",
+        "city": "Cochrane",
+        "country": "Chile"
+      },
+      "website": "https://www.parquepatagonia.org",
+      "description": "Ehemalige Estancia, heute Nationalpark mit Guanako-Herden, Pumasichtungen und brandneuen Trails.",
+      "timezone": "America/Santiago",
+      "rating": 4.9,
+      "reviewCount": 5240,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&auto=format&fit=crop",
+          "caption": "Trail im Parque Patagonia",
+          "credit": "Felipe Santander",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "caleta-tortel",
+      "name": "Caleta Tortel Stegstadt",
+      "type": "town",
+      "coordinates": {
+        "lat": -47.7970,
+        "lng": -73.5451
+      },
+      "city": "Caleta Tortel",
+      "address": {
+        "street": "Pasarelas de Ciprés",
+        "city": "Caleta Tortel",
+        "country": "Chile"
+      },
+      "website": "https://www.patagonia-aysen.cl",
+      "description": "Stelzenstadt ohne Autos – Holzstege, Fjordblick und ruhige Abende.",
+      "timezone": "America/Santiago",
+      "rating": 4.8,
+      "reviewCount": 6230,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+          "caption": "Holzstege von Caleta Tortel",
+          "credit": "Ignacia Rojas",
+          "license": "Unsplash License"
+        }
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "austral-seg-01",
+      "from": "scl-airport",
+      "to": "balmaceda-airport",
+      "mode": "flight",
+      "operator": "LATAM",
+      "distanceKm": 1630,
+      "durationHours": 2.7,
+      "carbonKg": 464.55,
+      "description": "Abflug 4. Januar – Sitze links für Blick auf den Campo de Hielo Norte."
+    },
+    {
+      "id": "austral-seg-02",
+      "from": "balmaceda-airport",
+      "to": "coyhaique",
+      "mode": "drive",
+      "operator": "Europcar",
+      "distanceKm": 56,
+      "durationHours": 1.0,
+      "carbonKg": 10.75,
+      "description": "Kurze Fahrt nach Coyhaique über den Cerro Castillo Pass."
+    },
+    {
+      "id": "austral-seg-03",
+      "from": "coyhaique",
+      "to": "rio-tranquilo",
+      "mode": "drive",
+      "operator": "Europcar",
+      "distanceKm": 217,
+      "durationHours": 4.5,
+      "carbonKg": 41.66,
+      "description": "Schotterabschnitte – Zeit für Fotostopps an der Cuesta del Diablo."
+    },
+    {
+      "id": "austral-seg-04",
+      "from": "rio-tranquilo",
+      "to": "marble-caves",
+      "mode": "ferry",
+      "operator": "Capillas de Mármol Tours",
+      "distanceKm": 30,
+      "durationHours": 1.5,
+      "carbonKg": 5.4,
+      "description": "Bootstour zu den Marmorhöhlen – beste Lichtverhältnisse am Morgen."
+    },
+    {
+      "id": "austral-seg-05",
+      "from": "rio-tranquilo",
+      "to": "patagonia-park",
+      "mode": "drive",
+      "operator": "Europcar",
+      "distanceKm": 115,
+      "durationHours": 2.8,
+      "carbonKg": 22.08,
+      "description": "Weiter Richtung Süden – Guanako-Herden entlang der Ruta X-83."
+    },
+    {
+      "id": "austral-seg-06",
+      "from": "patagonia-park",
+      "to": "caleta-tortel",
+      "mode": "drive",
+      "operator": "Europcar",
+      "distanceKm": 240,
+      "durationHours": 5.0,
+      "carbonKg": 46.08,
+      "description": "Schmale Schotterstraßen – langsames Tempo einplanen."
+    },
+    {
+      "id": "austral-seg-07",
+      "from": "caleta-tortel",
+      "to": "balmaceda-airport",
+      "mode": "drive",
+      "operator": "Europcar",
+      "distanceKm": 430,
+      "durationHours": 8.5,
+      "carbonKg": 82.56,
+      "description": "Rückfahrt mit Zwischenstopp in Coyhaique zur Mietwagenabgabe."
+    },
+    {
+      "id": "austral-seg-08",
+      "from": "balmaceda-airport",
+      "to": "scl-airport",
+      "mode": "flight",
+      "operator": "Sky Airline",
+      "distanceKm": 1630,
+      "durationHours": 2.8,
+      "carbonKg": 464.55,
+      "description": "Rückflug am 19. Januar – Ankunft in Santiago am Abend."
+    }
+  ],
+  "flights": [
+    {
+      "id": "austral-flight-01",
+      "fromStopId": "scl-airport",
+      "toStopId": "balmaceda-airport",
+      "airline": "LATAM",
+      "flightNumber": "LA285",
+      "departure": "2025-01-04T09:15:00-03:00",
+      "arrival": "2025-01-04T11:55:00-03:00",
+      "aircraft": "Airbus A320",
+      "cabinClass": "Economy",
+      "baggage": "23 kg Aufgabe",
+      "price": 270,
+      "currency": "EUR",
+      "carbonKg": 464.55
+    },
+    {
+      "id": "austral-flight-02",
+      "fromStopId": "balmaceda-airport",
+      "toStopId": "scl-airport",
+      "airline": "Sky Airline",
+      "flightNumber": "H278",
+      "departure": "2025-01-19T17:40:00-03:00",
+      "arrival": "2025-01-19T20:25:00-03:00",
+      "aircraft": "Airbus A321",
+      "cabinClass": "Economy Flex",
+      "baggage": "23 kg Aufgabe",
+      "price": 270,
+      "currency": "EUR",
+      "carbonKg": 464.55
+    }
+  ],
+  "lodging": [
+    {
+      "id": "pampas-lodge",
+      "stopId": "coyhaique",
+      "name": "Pampas Lodge Coyhaique",
+      "nights": 2,
+      "avgNightlyRateEUR": 160,
+      "amenities": [
+        "Holzsauna",
+        "Aussichtsterrasse",
+        "Breakfast Buffet"
+      ],
+      "url": "https://www.pampaslodge.cl",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1505691723518-36a5ac3be353?w=800&auto=format&fit=crop",
+          "caption": "Gemütliche Suite mit Talblick",
+          "credit": "Paula Ortiz",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "mallin-colorado",
+      "stopId": "rio-tranquilo",
+      "name": "Mallín Colorado Eco-Lodge",
+      "nights": 4,
+      "avgNightlyRateEUR": 210,
+      "amenities": [
+        "Holzkabinen",
+        "Guide-Service",
+        "Restaurant"
+      ],
+      "url": "https://www.mallincolorado.com",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1505691723549-5b9d7d0fba51?w=800&auto=format&fit=crop",
+          "caption": "Blockhütte mit Seeblick",
+          "credit": "Francisca León",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "patagonia-lodge",
+      "stopId": "patagonia-park",
+      "name": "Explora Parque Patagonia",
+      "nights": 4,
+      "avgNightlyRateEUR": 320,
+      "amenities": [
+        "All-inclusive Ausflüge",
+        "Hot Tubs",
+        "Vorträge"
+      ],
+      "url": "https://www.explora.com",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1519824145371-296894a0daa9?w=800&auto=format&fit=crop",
+          "caption": "Explora Lodge im Tal Chacabuco",
+          "credit": "Valentina Vergara",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "tortel-lodge",
+      "stopId": "caleta-tortel",
+      "name": "Entre Hielos Lodge",
+      "nights": 3,
+      "avgNightlyRateEUR": 180,
+      "amenities": [
+        "Holzterrasse",
+        "Kayak-Verleih",
+        "Frühstück inkl."
+      ],
+      "url": "https://www.entrehielos.cl",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&auto=format&fit=crop",
+          "caption": "Zimmer mit Blick auf die Fjorde",
+          "credit": "Andrés Peña",
+          "license": "Unsplash License"
+        }
+      ]
+    }
+  ],
+  "food": [
+    {
+      "name": "Mamma Gaucha",
+      "stopId": "coyhaique",
+      "type": "Restaurant",
+      "address": "Baquedano 278, Coyhaique",
+      "openingHours": "13:00–23:00",
+      "specialties": [
+        "Patagonische Pizza",
+        "Craft Beer"
+      ],
+      "priceRange": "€€",
+      "mustTry": [
+        "Lamb Pizza",
+        "Calafate Sour"
+      ],
+      "reservation": "Empfohlen",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=800&auto=format&fit=crop",
+          "caption": "Holzofenpizza in Coyhaique",
+          "credit": "Sofía Bravo",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "name": "Cervecería Río Tranquilo",
+      "stopId": "rio-tranquilo",
+      "type": "Brauerei",
+      "address": "Ruta 7 km 216",
+      "openingHours": "16:00–23:00",
+      "specialties": [
+        "Craft Beer",
+        "Burger"
+      ],
+      "priceRange": "€",
+      "mustTry": [
+        "Lupulo Austral IPA",
+        "Trucha Burger"
+      ],
+      "reservation": "Walk-in",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&auto=format&fit=crop",
+          "caption": "Burger & Beer nach einem langen Fahrtag",
+          "credit": "Camila Gutiérrez",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "name": "Café Caleta Tortel",
+      "stopId": "caleta-tortel",
+      "type": "Café",
+      "address": "Pasarela Principal s/n",
+      "openingHours": "09:00–19:00",
+      "specialties": [
+        "Kuchen",
+        "Kräutertee"
+      ],
+      "priceRange": "€",
+      "mustTry": [
+        "Calafate Kuchen",
+        "Mate Infusion"
+      ],
+      "reservation": "Walk-in",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1504753793650-d4a2b783c15e?w=800&auto=format&fit=crop",
+          "caption": "Nachmittagskaffee auf der Holzterrasse",
+          "credit": "María Antonia",
+          "license": "Unsplash License"
+        }
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "title": "Marble Caves Sunrise Boat",
+      "stopId": "marble-caves",
+      "durationHours": 2,
+      "operator": "Capillas de Mármol Tours",
+      "price": 70,
+      "currency": "EUR",
+      "website": "https://www.capillasdemarmol.cl",
+      "meetingPoint": "Muelle Puerto Río Tranquilo 07:00",
+      "gear": [
+        "Windjacke",
+        "Kamera"
+      ],
+      "difficulty": "leicht",
+      "groupSize": "max. 10 Personen",
+      "included": [
+        "Boot",
+        "Guide",
+        "Schwimmweste"
+      ],
+      "notes": "Beste Farben bei flachem Morgenlicht."
+    },
+    {
+      "title": "Glaciar Exploradores Trek",
+      "stopId": "rio-tranquilo",
+      "durationHours": 8,
+      "operator": "Huente Co",
+      "price": 120,
+      "currency": "EUR",
+      "website": "https://www.huente-co.cl",
+      "meetingPoint": "Basecamp 07:30",
+      "gear": [
+        "Steigeisen",
+        "Handschuhe"
+      ],
+      "difficulty": "anspruchsvoll",
+      "groupSize": "max. 8 Personen",
+      "included": [
+        "Guide",
+        "Ausrüstung",
+        "Lunchbox"
+      ],
+      "notes": "Grundfitness erforderlich – Sicherheitsbriefing obligatorisch."
+    },
+    {
+      "title": "Patagonia Park Wildlife Hike",
+      "stopId": "patagonia-park",
+      "durationHours": 5,
+      "operator": "Explora Guides",
+      "price": 90,
+      "currency": "EUR",
+      "website": "https://www.explora.com",
+      "meetingPoint": "Casa Piedra 09:00",
+      "gear": [
+        "Fernglas",
+        "Sonnenschutz"
+      ],
+      "difficulty": "mittel",
+      "groupSize": "max. 6 Personen",
+      "included": [
+        "Guide",
+        "Snacks",
+        "Transfers"
+      ],
+      "notes": "Pumasichtung möglich – respektvoller Abstand."
+    }
+  ],
+  "notes": "Plane eine Übernachtung in Santiago am 3. Januar. 4x4 rechtzeitig reservieren – Winterreifen sind trotz Sommers sinnvoll. Lange Etappen (z. B. Caleta Tortel → Balmaceda) früh starten.",
+  "metrics": {
+    "totalDistanceKm": 3818,
+    "estimatedCarbonKg": 1163.62,
+    "segmentCount": 8,
+    "flightCount": 2,
+    "stopCount": 7,
+    "groundTransportCarbonKg": 228.53,
+    "totalNights": 13,
+    "avgNightlyRate": 218,
+    "lodgingCount": 4,
+    "foodCount": 3,
+    "activityCount": 3,
+    "averageDailyBudget": 183
+  },
+  "source": "curated"
+}

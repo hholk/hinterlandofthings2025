@@ -1,0 +1,675 @@
+{
+  "id": "chile-lakes-loop",
+  "name": "Seen & Vulkane – Lakes District Circuit (4.–20. Januar)",
+  "color": "#4cb5ab",
+  "tags": [
+    "nature",
+    "roadtrip",
+    "flight"
+  ],
+  "summary": "Vom 4. bis 20. Januar geht es von Santiago in den chilenischen Süden: Temuco, Pucón, Huilo Huilo, Puerto Varas und Chiloé liefern eine Parade an Seen, Thermalquellen und Vulkanblicken, bevor es entspannt nach Santiago zurückgeht.",
+  "meta": {
+    "theme": "Seen, Thermen & Andenblicke",
+    "pace": "ausgewogen",
+    "durationDays": 17,
+    "costEstimate": 2850,
+    "highlights": [
+      "Kayak auf dem Lago Villarrica",
+      "Thermalbad in den Termas Geométricas",
+      "Sonnenuntergang über dem Lago Llanquihue"
+    ],
+    "scores": {
+      "budget": 3,
+      "adventure": 4,
+      "relax": 4,
+      "culture": 3
+    }
+  },
+  "costBreakdown": {
+    "currency": "EUR",
+    "items": [
+      {
+        "category": "Inlandsflüge",
+        "estimate": 520,
+        "notes": "Santiago ↔ Temuco, Puerto Montt → Santiago"
+      },
+      {
+        "category": "Mietwagen & Treibstoff",
+        "estimate": 610,
+        "notes": "SUV-Klasse inkl. Einweggebühr auf Chiloé"
+      },
+      {
+        "category": "Unterkünfte",
+        "estimate": 1180,
+        "notes": "Boutique-Lodges mit Frühstück"
+      },
+      {
+        "category": "Aktivitäten",
+        "estimate": 310,
+        "notes": "Kayak, Thermalpass & Insel-Guide"
+      },
+      {
+        "category": "Kulinarik",
+        "estimate": 230,
+        "notes": "Fisch, Curanto, Craft Beer"
+      }
+    ]
+  },
+  "stops": [
+    {
+      "id": "scl-airport",
+      "name": "Santiago International Airport (SCL)",
+      "type": "airport",
+      "coordinates": {
+        "lat": -33.3929,
+        "lng": -70.7858
+      },
+      "city": "Santiago",
+      "address": {
+        "street": "Armando Cortínez Norte 1701",
+        "city": "Pudahuel",
+        "country": "Chile"
+      },
+      "website": "https://www.nuevopudahuel.cl",
+      "openingHours": "24/7",
+      "description": "Drehkreuz für internationale und nationale Verbindungen – perfekter Startpunkt für den Seen-Roadtrip.",
+      "timezone": "America/Santiago",
+      "rating": 4.2,
+      "reviewCount": 42876,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1502920514313-52581002a659?w=800&auto=format&fit=crop",
+          "caption": "Boardingbereich am Flughafen Santiago",
+          "credit": "Agustín Lautaro",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "temuco-airport",
+      "name": "Aeropuerto La Araucanía (ZCO)",
+      "type": "airport",
+      "coordinates": {
+        "lat": -38.7668,
+        "lng": -72.6371
+      },
+      "city": "Temuco",
+      "address": {
+        "street": "Ruta 5 Sur Km 692",
+        "city": "Freire",
+        "country": "Chile"
+      },
+      "website": "https://www.aeropuertoregionalaraucania.cl",
+      "openingHours": "05:00–23:30",
+      "description": "Regionalflughafen südlich von Temuco mit schnellen Mietwagenanbindungen in Richtung Pucón.",
+      "timezone": "America/Santiago",
+      "rating": 4.4,
+      "reviewCount": 5120,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1518544889280-90b38f8521e9?w=800&auto=format&fit=crop",
+          "caption": "Früher Morgen auf dem Rollfeld von Temuco",
+          "credit": "Constanza Vidal",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "pucon-town",
+      "name": "Pucón Uferpromenade",
+      "type": "town",
+      "coordinates": {
+        "lat": -39.2822,
+        "lng": -71.9771
+      },
+      "city": "Pucón",
+      "address": {
+        "street": "Av. O'Higgins",
+        "city": "Pucón",
+        "country": "Chile"
+      },
+      "website": "https://www.pucon.cl",
+      "description": "Zentrum des chilenischen Seengebiets mit schwarzem Lavastrand, Blick auf den Villarrica und zahlreichen Outdoor-Schulen.",
+      "timezone": "America/Santiago",
+      "rating": 4.8,
+      "reviewCount": 22310,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1542044801-287cbc0d41d4?w=800&auto=format&fit=crop",
+          "caption": "Sonnenuntergang über dem Lago Villarrica",
+          "credit": "Matías Silva",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "huilo-huilo-reserve",
+      "name": "Huilo Huilo Biosphärenreservat",
+      "type": "nature",
+      "coordinates": {
+        "lat": -39.9143,
+        "lng": -72.0265
+      },
+      "city": "Neltume",
+      "address": {
+        "street": "Ruta 203-Ch Km 55",
+        "city": "Panguipulli",
+        "country": "Chile"
+      },
+      "website": "https://www.huilohuilo.com",
+      "description": "Privates Naturschutzgebiet mit märchenhaften Lodges, Wasserfällen und Araukarienwäldern.",
+      "timezone": "America/Santiago",
+      "rating": 4.9,
+      "reviewCount": 17845,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1519682577862-22b62b24e493?w=800&auto=format&fit=crop",
+          "caption": "Holzbrücke über den Río Fuy",
+          "credit": "Felipe Muñoz",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "puerto-varas-town",
+      "name": "Puerto Varas – Costanera",
+      "type": "town",
+      "coordinates": {
+        "lat": -41.3202,
+        "lng": -72.9853
+      },
+      "city": "Puerto Varas",
+      "address": {
+        "street": "Av. Philippi",
+        "city": "Puerto Varas",
+        "country": "Chile"
+      },
+      "website": "https://www.ptoparas.cl",
+      "description": "Deutsche Kolonialarchitektur, künstlerische Cafés und Panoramablicke auf die Vulkane Osorno & Calbuco.",
+      "timezone": "America/Santiago",
+      "rating": 4.7,
+      "reviewCount": 31560,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1526392060635-9d6019884377?w=800&auto=format&fit=crop",
+          "caption": "Blick auf die Iglesia del Sagrado Corazón",
+          "credit": "Carolina Bravo",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "castro-town",
+      "name": "Castro Palafitos",
+      "type": "town",
+      "coordinates": {
+        "lat": -42.4805,
+        "lng": -73.7620
+      },
+      "city": "Castro",
+      "address": {
+        "street": "Pedro Montt",
+        "city": "Castro",
+        "country": "Chile"
+      },
+      "website": "https://www.chiloe.travel",
+      "description": "Hauptstadt der Insel Chiloé mit ikonischen Pfahlbauten, Holzkirchen und Märkten voller Meeresfrüchte.",
+      "timezone": "America/Santiago",
+      "rating": 4.6,
+      "reviewCount": 18650,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1526401485004-46910ecc8e51?w=800&auto=format&fit=crop",
+          "caption": "Farbenfrohe Palafitos am Fjord",
+          "credit": "Marcelo Díaz",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "pmo-airport",
+      "name": "Aeropuerto El Tepual (PMC)",
+      "type": "airport",
+      "coordinates": {
+        "lat": -41.4389,
+        "lng": -73.0950
+      },
+      "city": "Puerto Montt",
+      "address": {
+        "street": "Aeropuerto El Tepual",
+        "city": "Puerto Montt",
+        "country": "Chile"
+      },
+      "website": "https://www.aeropuertodelsur.cl",
+      "description": "Regionalflughafen für die Seenregion und Chiloé mit täglichen Verbindungen nach Santiago.",
+      "timezone": "America/Santiago",
+      "rating": 4.5,
+      "reviewCount": 9570,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&auto=format&fit=crop",
+          "caption": "Terminal von Puerto Montt am frühen Abend",
+          "credit": "Isidora Salazar",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "santiago-city",
+      "name": "Santiago – Barrio Lastarria",
+      "type": "city",
+      "coordinates": {
+        "lat": -33.4406,
+        "lng": -70.6420
+      },
+      "city": "Santiago",
+      "address": {
+        "street": "José Victorino Lastarria",
+        "city": "Santiago",
+        "country": "Chile"
+      },
+      "website": "https://www.santiagoturismo.cl",
+      "description": "Kulturelles Herz Santiagos mit Designhotels, Theatern und hervorragenden Restaurants – ideal zum Finale der Tour.",
+      "timezone": "America/Santiago",
+      "rating": 4.8,
+      "reviewCount": 40211,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1543877087-ebf71f017192?w=800&auto=format&fit=crop",
+          "caption": "Straßenszene im Barrio Lastarria",
+          "credit": "Rodrigo Ruiz",
+          "license": "Unsplash License"
+        }
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "lake-seg-01",
+      "from": "scl-airport",
+      "to": "temuco-airport",
+      "mode": "flight",
+      "operator": "LATAM",
+      "distanceKm": 604,
+      "durationHours": 1.6,
+      "carbonKg": 172.14,
+      "description": "Direktflug am 4. Januar – Start in das Seenabenteuer."
+    },
+    {
+      "id": "lake-seg-02",
+      "from": "temuco-airport",
+      "to": "pucon-town",
+      "mode": "drive",
+      "operator": "Europcar",
+      "distanceKm": 110,
+      "durationHours": 1.8,
+      "carbonKg": 21.12,
+      "description": "Mietwagenübernahme und Fahrt nach Pucón entlang des Lago Villarrica."
+    },
+    {
+      "id": "lake-seg-03",
+      "from": "pucon-town",
+      "to": "huilo-huilo-reserve",
+      "mode": "drive",
+      "operator": "Europcar",
+      "distanceKm": 130,
+      "durationHours": 2.2,
+      "carbonKg": 24.96,
+      "description": "Panoramafahrt durch Araukarienwälder zum Biosphärenreservat."
+    },
+    {
+      "id": "lake-seg-04",
+      "from": "huilo-huilo-reserve",
+      "to": "puerto-varas-town",
+      "mode": "drive",
+      "operator": "Europcar",
+      "distanceKm": 260,
+      "durationHours": 4.5,
+      "carbonKg": 49.92,
+      "description": "Über den Lago Ranco nach Puerto Varas – Fotostopps an Wasserfällen einplanen."
+    },
+    {
+      "id": "lake-seg-05",
+      "from": "puerto-varas-town",
+      "to": "castro-town",
+      "mode": "ferry",
+      "operator": "Naviera Paredes",
+      "distanceKm": 90,
+      "durationHours": 3.0,
+      "carbonKg": 16.2,
+      "description": "Fähre über den Chacao-Kanal und weiter südlich nach Castro."
+    },
+    {
+      "id": "lake-seg-06",
+      "from": "castro-town",
+      "to": "pmo-airport",
+      "mode": "drive",
+      "operator": "Localiza",
+      "distanceKm": 25,
+      "durationHours": 0.6,
+      "carbonKg": 4.8,
+      "description": "Rückfahrt Richtung Festland, Mietwagenabgabe in El Tepual."
+    },
+    {
+      "id": "lake-seg-07",
+      "from": "pmo-airport",
+      "to": "scl-airport",
+      "mode": "flight",
+      "operator": "Sky Airline",
+      "distanceKm": 915,
+      "durationHours": 1.7,
+      "carbonKg": 260.78,
+      "description": "Abendflug am 19. Januar zurück nach Santiago."
+    },
+    {
+      "id": "lake-seg-08",
+      "from": "scl-airport",
+      "to": "santiago-city",
+      "mode": "drive",
+      "operator": "Transfer Delfos",
+      "distanceKm": 18,
+      "durationHours": 0.5,
+      "carbonKg": 3.46,
+      "description": "Privater Shuttle in den Barrio Lastarria für den Abschiedsabend."
+    }
+  ],
+  "flights": [
+    {
+      "id": "lake-flight-01",
+      "fromStopId": "scl-airport",
+      "toStopId": "temuco-airport",
+      "airline": "LATAM",
+      "flightNumber": "LA236",
+      "departure": "2025-01-04T08:15:00-03:00",
+      "arrival": "2025-01-04T09:50:00-03:00",
+      "aircraft": "Airbus A320neo",
+      "cabinClass": "Economy",
+      "baggage": "23 kg Aufgabe + 8 kg Handgepäck",
+      "price": 210,
+      "currency": "EUR",
+      "carbonKg": 172.14
+    },
+    {
+      "id": "lake-flight-02",
+      "fromStopId": "pmo-airport",
+      "toStopId": "scl-airport",
+      "airline": "Sky Airline",
+      "flightNumber": "H266",
+      "departure": "2025-01-19T19:10:00-03:00",
+      "arrival": "2025-01-19T21:00:00-03:00",
+      "aircraft": "Airbus A321",
+      "cabinClass": "Economy Flex",
+      "baggage": "23 kg Aufgabe + 10 kg Handgepäck",
+      "price": 310,
+      "currency": "EUR",
+      "carbonKg": 260.78
+    }
+  ],
+  "lodging": [
+    {
+      "id": "hotel-antumalal",
+      "stopId": "pucon-town",
+      "name": "Hotel Antumalal",
+      "nights": 4,
+      "avgNightlyRateEUR": 190,
+      "amenities": [
+        "Seeblick-Suiten",
+        "Privater Steg",
+        "Spa mit Infinity-Pool"
+      ],
+      "url": "https://www.antumalal.com",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1505691723518-36a5ac3be353?w=800&auto=format&fit=crop",
+          "caption": "Designsuite mit Blick auf den Lago Villarrica",
+          "credit": "Paula Ortiz",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "huilo-huilo-nothofagus",
+      "stopId": "huilo-huilo-reserve",
+      "name": "Nothofagus Hotel & Spa",
+      "nights": 3,
+      "avgNightlyRateEUR": 220,
+      "amenities": [
+        "Baumhaus-Architektur",
+        "Thermalbecken",
+        "Guided Reserve Walks"
+      ],
+      "url": "https://www.huilohuilo.com/nothofagus",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+          "caption": "Lobby unter einer Holzkuppel",
+          "credit": "Ignacia Rojas",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "hotel-aubrey",
+      "stopId": "puerto-varas-town",
+      "name": "Hotel AWA",
+      "nights": 4,
+      "avgNightlyRateEUR": 210,
+      "amenities": [
+        "Designkubus am Lago Llanquihue",
+        "Indoor-Pool",
+        "Kayak-Verleih"
+      ],
+      "url": "https://www.hotelawa.cl",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1505691723549-5b9d7d0fba51?w=800&auto=format&fit=crop",
+          "caption": "Minimalistische Suite mit Vulkanblick",
+          "credit": "Francisca León",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "palafito-1326",
+      "stopId": "castro-town",
+      "name": "Palafito 1326 Hotel Boutique",
+      "nights": 3,
+      "avgNightlyRateEUR": 160,
+      "amenities": [
+        "Zimmer über dem Wasser",
+        "Frühstück mit lokalem Honig",
+        "Kamin-Lounge"
+      ],
+      "url": "https://www.palafito1326.cl",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1464146072230-91cabc968266?w=800&auto=format&fit=crop",
+          "caption": "Palafito-Zimmer bei Flut",
+          "credit": "Rocío Fernández",
+          "license": "Unsplash License"
+        }
+      ]
+    }
+  ],
+  "food": [
+    {
+      "name": "Trawen Restaurante",
+      "stopId": "pucon-town",
+      "type": "Restaurant",
+      "address": "Colo Colo 232, Pucón",
+      "openingHours": "13:00–23:00",
+      "specialties": [
+        "Kürbissuppe mit Merkén",
+        "Trucha aus dem Lago Villarrica"
+      ],
+      "priceRange": "€€",
+      "mustTry": [
+        "Merluza Austral",
+        "Hausgemachte Kuchen"
+      ],
+      "reservation": "Empfohlen",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop",
+          "caption": "Regionaler Lunch in Pucón",
+          "credit": "Camila Sánchez",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "name": "Fogón del Leñador",
+      "stopId": "puerto-varas-town",
+      "type": "Restaurant",
+      "address": "Ruta 225 Km 4, Ensenada",
+      "openingHours": "12:30–22:00",
+      "specialties": [
+        "Patagonisches Lamm",
+        "Kräuter aus dem Eigenen Garten"
+      ],
+      "priceRange": "€€",
+      "mustTry": [
+        "Curanto al Hoyo",
+        "Kunsthandwerk-Bier"
+      ],
+      "reservation": "Telefonisch",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1498654896293-37aacf113fd9?w=800&auto=format&fit=crop",
+          "caption": "Holzofen-Küche im Fogón",
+          "credit": "Sebastián Pino",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "name": "Mercado Municipal Castro",
+      "stopId": "castro-town",
+      "type": "Markt",
+      "address": "Eusebio Lillo 146, Castro",
+      "openingHours": "09:00–18:30",
+      "specialties": [
+        "Curanto",
+        "Queso de Chiloé"
+      ],
+      "priceRange": "€",
+      "mustTry": [
+        "Milcao",
+        "Erizos frisch aus dem Pazifik"
+      ],
+      "reservation": "Walk-in",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1555992336-cbf3d0c0f27c?w=800&auto=format&fit=crop",
+          "caption": "Fischstände im Mercado de Castro",
+          "credit": "Juan Ruz",
+          "license": "Unsplash License"
+        }
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "title": "Kayak-Session Lago Villarrica",
+      "stopId": "pucon-town",
+      "durationHours": 3,
+      "operator": "Kayak Pucón",
+      "price": 65,
+      "currency": "EUR",
+      "website": "https://www.kayakpucon.com",
+      "meetingPoint": "Muelle Pucón 09:00",
+      "gear": [
+        "Neoprenanzug",
+        "Schwimmweste"
+      ],
+      "difficulty": "mittel",
+      "groupSize": "max. 10 Personen",
+      "included": [
+        "Guide",
+        "Fotos",
+        "Snack"
+      ],
+      "notes": "Beste Lichtstimmung kurz nach Sonnenaufgang."
+    },
+    {
+      "title": "Thermen-Ticket Termas Geométricas",
+      "stopId": "huilo-huilo-reserve",
+      "durationHours": 4,
+      "operator": "Termas Geométricas",
+      "price": 52,
+      "currency": "EUR",
+      "website": "https://www.termasgeometricas.cl",
+      "meetingPoint": "Eingang Termas 10:00",
+      "gear": [
+        "Badesachen",
+        "Flip-Flops"
+      ],
+      "difficulty": "leicht",
+      "groupSize": "individuell",
+      "included": [
+        "Schließfach",
+        "Handtuch"
+      ],
+      "notes": "Online-Slot vorab buchen – begrenzte Besucherzahl."
+    },
+    {
+      "title": "Vulkan Osorno Sunset Hike",
+      "stopId": "puerto-varas-town",
+      "durationHours": 5,
+      "operator": "Turismo Lago Llanquihue",
+      "price": 78,
+      "currency": "EUR",
+      "website": "https://www.turismollanquihue.cl",
+      "meetingPoint": "Plaza de Armas Puerto Varas 15:00",
+      "gear": [
+        "Windjacke",
+        "Stirnlampe"
+      ],
+      "difficulty": "mittel",
+      "groupSize": "max. 8 Personen",
+      "included": [
+        "Transfers",
+        "Heißgetränke"
+      ],
+      "notes": "Bei klarer Sicht grandiose Fotos – Stativ erlaubt."
+    },
+    {
+      "title": "Chiloé Palafitos & Kirchen Tour",
+      "stopId": "castro-town",
+      "durationHours": 6,
+      "operator": "Chiloé Patrimonial",
+      "price": 55,
+      "currency": "EUR",
+      "website": "https://www.chiloepatrimonial.cl",
+      "meetingPoint": "Plaza de Armas Castro 09:30",
+      "gear": [
+        "Regenjacke",
+        "Kamera"
+      ],
+      "difficulty": "leicht",
+      "groupSize": "max. 12 Personen",
+      "included": [
+        "Guide",
+        "Fähre",
+        "Lunchbox"
+      ],
+      "notes": "UNESCO-Holzkirchen respektvoll betreten, Schultern bedecken."
+    }
+  ],
+  "notes": "Plane die ersten beiden Nächte (4./5. Januar) in Pucón, um Jetlag zu glätten. Rückkehr nach Santiago am 19. Januar mit Zeit für das Festival \"Santiago a Mil\".",
+  "metrics": {
+    "totalDistanceKm": 2152,
+    "estimatedCarbonKg": 553.38,
+    "segmentCount": 8,
+    "flightCount": 2,
+    "stopCount": 8,
+    "groundTransportCarbonKg": 116.46,
+    "totalNights": 14,
+    "avgNightlyRate": 195,
+    "lodgingCount": 4,
+    "foodCount": 3,
+    "activityCount": 4,
+    "averageDailyBudget": 168
+  },
+  "source": "curated"
+}
