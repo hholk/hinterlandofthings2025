@@ -47,6 +47,8 @@ META = {
         "center": [-30, -71],
         "zoom": 4,
         "tileLayer": "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+        "styleUrl": "https://basemaps.cartocdn.com/gl/positron-gl-style/style.json",
+        "glyphsUrl": "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf",
         "attribution": "© OpenStreetMap",
     },
 }

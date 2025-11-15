@@ -26,7 +26,8 @@
     EMPTY_STOPS,
     resolveModeAppearance as resolveModeAppearanceBase,
     type SegmentCollection,
-    type StopCollection
+    type StopCollection,
+    type StopProperties
   } from '../../../lib/travel/map-data';
 
   type MapLibreModule = typeof import('maplibre-gl');
@@ -349,12 +350,15 @@
     return steps;
   }
 
-  function createRasterStyle(): StyleSpecification {
+  function createMapStyle(): StyleSpecification | string {
     const map = data.travel.meta.map;
+    if (map.styleUrl) {
+      return map.styleUrl;
+    }
     const tiles = resolveTileUrls(map);
-    return {
+    const style: StyleSpecification = {
       version: 8,
-      glyphs: 'https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf',
+      glyphs: map.glyphsUrl ?? 'https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf',
       sources: {
         osm: {
           type: 'raster',
@@ -372,6 +376,10 @@
         }
       ]
     };
+    if (map.spriteUrl) {
+      style.sprite = map.spriteUrl;
+    }
+    return style;
   }
 
   function ensureMapBounds() {
@@ -540,14 +548,73 @@
     );
   }
 
+  function escapeHtml(value: string | undefined | null) {
+    if (!value) return '';
+    const map: Record<string, string> = {
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#39;'
+    };
+    return value.replace(/[&<>"']/g, (char) => map[char] ?? char);
+  }
+
+  function escapeAttribute(value: string | undefined | null) {
+    return escapeHtml(value);
+  }
+
+  function renderStopPopupContent(properties: StopProperties) {
+    const title = escapeHtml(properties.title ?? properties.name ?? 'Highlight');
+    const subtitle = properties.subtitle
+      ? `<span class="travel-map-popup__subtitle">${escapeHtml(properties.subtitle)}</span>`
+      : '';
+    const description = properties.description
+      ? `<p class="travel-map-popup__description">${escapeHtml(properties.description)}</p>`
+      : '';
+    const metaParts = [properties.city, properties.type]
+      .map((value) => (value ? escapeHtml(String(value)) : ''))
+      .filter((value) => value.length > 0);
+    const meta = metaParts.length
+      ? `<p class="travel-map-popup__meta">${metaParts.join(' • ')}</p>`
+      : '';
+
+    let media = '';
+    if (properties.photoUrl) {
+      const altText = properties.photoCaption ?? properties.title ?? properties.name ?? 'POI Bild';
+      const captionParts = [properties.photoCaption, properties.photoCredit]
+        .map((value) => (value ? escapeHtml(value) : ''))
+        .filter((value) => value.length > 0);
+      const caption = captionParts.length
+        ? `<figcaption>${captionParts.join(' • ')}</figcaption>`
+        : '';
+      media = `
+        <figure class="travel-map-popup__media">
+          <img src="${escapeAttribute(properties.photoUrl)}" alt="${escapeAttribute(altText)}" loading="lazy" decoding="async" />
+          ${caption}
+        </figure>
+      `;
+    }
+
+    return `
+      ${media}
+      <div class="travel-map-popup__body">
+        <strong class="travel-map-popup__title">${title}</strong>
+        ${subtitle}
+        ${meta}
+        ${description}
+      </div>
+    `;
+  }
+
   function handleStopClick(event: MapLayerMouseEvent) {
     if (!mapInstance || !maplibre) return;
     const feature = event.features?.[0];
     if (!feature || feature.geometry.type !== 'Point') return;
 
     const coordinates = feature.geometry.coordinates as [number, number];
-    const title = typeof feature.properties?.title === 'string' ? feature.properties.title : '';
-    const subtitle = typeof feature.properties?.subtitle === 'string' ? feature.properties.subtitle : '';
+    const properties = feature.properties as StopProperties | undefined;
+    if (!properties) return;
 
     removeMapPopup();
 
@@ -555,11 +622,11 @@
       closeButton: false,
       closeOnClick: false,
       offset: [0, 12],
-      maxWidth: '240px',
+      maxWidth: '320px',
       className: STOP_POPUP_CLASS
     })
       .setLngLat(coordinates)
-      .setHTML(`<strong>${title}</strong>${subtitle ? `<div>${subtitle}</div>` : ''}`)
+      .setHTML(renderStopPopupContent(properties))
       .addTo(mapInstance);
   }
 
@@ -587,7 +654,7 @@
 
         const map = new module.Map({
           container: mapContainer,
-          style: createRasterStyle(),
+          style: createMapStyle(),
           center: data.travel.meta.map.center,
           zoom: data.travel.meta.map.zoom,
           maxZoom: 12,
@@ -1702,6 +1769,56 @@
 
   :global(.maplibregl-popup-close-button) {
     display: none;
+  }
+
+  :global(.travel-map-popup__body) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  :global(.travel-map-popup__title) {
+    font-size: 1rem;
+  }
+
+  :global(.travel-map-popup__subtitle) {
+    display: block;
+    font-size: 0.85rem;
+    color: #94a3b8;
+  }
+
+  :global(.travel-map-popup__meta) {
+    margin: 0;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #7dd3fc;
+  }
+
+  :global(.travel-map-popup__description) {
+    margin: 0;
+    color: #e2e8f0;
+    font-size: 0.85rem;
+  }
+
+  :global(.travel-map-popup__media) {
+    margin: 0 0 0.6rem;
+    border-radius: 0.65rem;
+    overflow: hidden;
+    background: rgba(15, 23, 42, 0.4);
+  }
+
+  :global(.travel-map-popup__media img) {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  :global(.travel-map-popup__media figcaption) {
+    margin: 0;
+    padding: 0.35rem 0.5rem 0.4rem;
+    font-size: 0.7rem;
+    color: #cbd5f5;
   }
 
   .travel__map-error {

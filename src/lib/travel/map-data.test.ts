@@ -34,6 +34,16 @@ describe('map-data helpers', () => {
     });
   });
 
+  it('keeps descriptive details and hero images on stop features', () => {
+    const stops = buildStopCollection(route);
+    const enriched = stops.features.find(
+      (feature) => feature.properties?.photoUrl && feature.properties?.description
+    );
+    expect(enriched).toBeTruthy();
+    expect(typeof enriched?.properties?.description === 'string').toBe(true);
+    expect(typeof enriched?.properties?.photoUrl === 'string').toBe(true);
+  });
+
   it('falls back to defaults for unknown transport modes', () => {
     const appearance = resolveModeAppearance('unknown-mode', transportModes);
     expect(appearance.color).toBe('#2563eb');
