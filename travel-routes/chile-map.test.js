@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 
-import { calculateBounds, demoData } from './chile-map.js';
+import { calculateBounds, demoData, getRouteFeatures } from './chile-map.js';
 
 function countByGeometry(type) {
   return demoData.features.filter((feature) => feature.geometry?.type === type).length;
@@ -14,6 +14,15 @@ test('demoData contains at least one route and multiple POIs', () => {
   assert.ok(poiCount >= 3, 'es werden mehrere POIs erwartet');
   demoData.features.forEach((feature) => {
     assert.ok(feature.properties?.name, 'jedes Feature braucht einen Namen');
+  });
+});
+
+test('getRouteFeatures exposes selectable routes with ids', () => {
+  const routes = getRouteFeatures(demoData);
+  assert.ok(routes.length >= 2, 'mindestens zwei auswählbare Routen');
+  routes.forEach((route) => {
+    assert.equal(route.geometry?.type, 'LineString');
+    assert.ok(route.id, 'jede Route besitzt eine ID für feature-state');
   });
 });
 

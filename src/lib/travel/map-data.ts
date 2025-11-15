@@ -4,6 +4,7 @@ import type {
   DayArrivalSegment,
   DayDefinition,
   LoadedTravelRoutesDataset,
+  ResourceImage,
   RouteDetail,
   RouteSegment,
   RouteStop
@@ -27,6 +28,11 @@ export interface StopProperties {
   title: string;
   subtitle?: string;
   type?: string;
+  city?: string;
+  description?: string;
+  photoUrl?: string;
+  photoCaption?: string;
+  photoCredit?: string;
 }
 
 export type SegmentCollection = FeatureCollection<Geometry, SegmentProperties>;
@@ -173,6 +179,18 @@ export function buildSegmentCollection(
   return { type: 'FeatureCollection', features };
 }
 
+function pickPrimaryImage(images?: ResourceImage[] | null) {
+  if (!Array.isArray(images)) {
+    return null;
+  }
+  for (const image of images) {
+    if (image && typeof image.url === 'string' && image.url.trim().length > 0) {
+      return image;
+    }
+  }
+  return null;
+}
+
 export function buildStopCollection(route: RouteDetail | null): StopCollection {
   if (!route) return EMPTY_STOPS;
   const features: StopCollection['features'] = [];
@@ -181,6 +199,7 @@ export function buildStopCollection(route: RouteDetail | null): StopCollection {
     route.stops.forEach((stop: RouteStop, index) => {
       const coordinate = normalizeCoordinate(stop.coordinates);
       if (!coordinate) return;
+      const heroImage = pickPrimaryImage(stop.photos ?? null);
       features.push({
         type: 'Feature',
         geometry: {
@@ -194,7 +213,12 @@ export function buildStopCollection(route: RouteDetail | null): StopCollection {
           label: String(index + 1),
           title: stop.name ?? stop.city ?? stop.id,
           subtitle: stop.city ?? stop.type,
-          type: stop.type
+          type: stop.type,
+          city: stop.city,
+          description: stop.description,
+          photoUrl: heroImage?.url,
+          photoCaption: heroImage?.caption,
+          photoCredit: heroImage?.credit
         }
       });
     });
@@ -212,7 +236,9 @@ export function buildStopCollection(route: RouteDetail | null): StopCollection {
             label: String(index + 1),
             title: day.station?.name ?? `Station ${index + 1}`,
             subtitle: day.date,
-            type: 'station'
+            type: 'station',
+            city: day.station?.name,
+            description: day.station?.description
           }
         });
       }
@@ -220,6 +246,7 @@ export function buildStopCollection(route: RouteDetail | null): StopCollection {
         const pointCoordinate = normalizeCoordinate(point.coordinates);
         if (!pointCoordinate) return;
         const orderValue = index + pointIndex / 10 + 0.01;
+        const heroImage = pickPrimaryImage(point.images ?? null);
         features.push({
           type: 'Feature',
           geometry: { type: 'Point', coordinates: pointCoordinate },
@@ -230,7 +257,11 @@ export function buildStopCollection(route: RouteDetail | null): StopCollection {
             label: String(index + 1),
             title: point.name ?? point.id,
             subtitle: point.type,
-            type: point.type
+            type: point.type,
+            description: point.description,
+            photoUrl: heroImage?.url,
+            photoCaption: heroImage?.caption,
+            photoCredit: heroImage?.credit
           }
         });
       });

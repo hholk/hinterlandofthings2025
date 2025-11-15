@@ -55,6 +55,27 @@
         padding: 1rem;
         border-radius: 1rem;
       }
+      .map-toolbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        align-items: center;
+        margin-bottom: 0.75rem;
+      }
+      .map-toolbar label {
+        font-weight: 600;
+        font-size: 0.95rem;
+      }
+      .map-toolbar select {
+        flex: 1;
+        min-width: 180px;
+        background: #0f172a;
+        color: var(--text);
+        border-radius: 0.5rem;
+        border: 1px solid #1f2937;
+        padding: 0.45rem 0.75rem;
+        font-size: 1rem;
+      }
       #map-status {
         margin: 0.5rem 0 0;
         font-size: 0.95rem;
@@ -81,6 +102,10 @@
         </p>
       </header>
       <section class="map-wrapper">
+        <div class="map-toolbar">
+          <label for="route-select">Route auswählen</label>
+          <select id="route-select" aria-label="Route auswählen"></select>
+        </div>
         <div id="map" role="application" aria-label="Chile interaktive Karte"></div>
         <p id="map-status" role="status">Initialisiere Karte …</p>
       </section>

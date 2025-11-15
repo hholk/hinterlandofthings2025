@@ -287,6 +287,9 @@ export interface TravelMeta {
     center: [number, number];
     zoom: number;
     tileLayer: string;
+    styleUrl?: string;
+    glyphsUrl?: string;
+    spriteUrl?: string;
     attribution?: string;
   };
 }
