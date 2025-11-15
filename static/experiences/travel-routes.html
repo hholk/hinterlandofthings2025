@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <title>Weiterleitung zur Travel Experience</title>
+    <meta http-equiv="refresh" content="0; url=./travel-routes/" />
+    <script>
+      // Für Einsteiger:innen: Wir leiten alte .html-Links auf die neue SvelteKit-Route um.
+      (function redirectLegacyRoute() {
+        var targetPath = location.pathname.replace(/travel-routes\.html$/, 'travel-routes/');
+        // Falls der Pfad eine andere .html-Datei enthält, sichern wir ab und hängen einen Slash an.
+        if (!/\/travel-routes\/$/.test(targetPath)) {
+          targetPath = location.pathname.replace(/\.html$/, '/');
+        }
+        var target = targetPath + location.search + location.hash;
+        window.location.replace(target);
+      })();
+    </script>
+  </head>
+  <body>
+    <p>
+      Weiterleitung aktiv … falls dein Browser nicht automatisch umschaltet, öffne bitte
+      <a href="./travel-routes/">die aktuelle Travel-Routes-Seite</a>.
+    </p>
+  </body>
+</html>

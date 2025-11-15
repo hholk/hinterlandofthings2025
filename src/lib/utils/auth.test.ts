@@ -9,7 +9,7 @@ describe('auth helpers', () => {
   });
 
   it('accepts the correct password hash', async () => {
-    const result = await verifyPassword('689i9052A.hint', PASSWORD_HASH);
+    const result = await verifyPassword('hinterland2025', PASSWORD_HASH);
     expect(result).toBe(true);
   });
 });
