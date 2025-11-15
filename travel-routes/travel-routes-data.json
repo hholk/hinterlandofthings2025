@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Chile – Interaktive Reiserouten",
-    "subtitle": "Modulares Toolkit für 7 kuratierte Varianten plus eigene Entwürfe",
+    "subtitle": "Modulares Toolkit für 6 kuratierte Varianten – drei Roadtrips und drei Flugabenteuer – plus eigene Entwürfe",
     "defaultDurationDays": 19,
     "currency": "EUR",
     "editor": {
@@ -97,6 +97,14 @@
     {
       "id": "food",
       "label": "Food"
+    },
+    {
+      "id": "roadtrip",
+      "label": "Roadtrip"
+    },
+    {
+      "id": "flight",
+      "label": "Flugreise"
     }
   ],
   "gallery": [
@@ -212,16 +220,17 @@
     {
       "id": "var1",
       "file": "data/routes/var1.json",
-      "name": "Variante 1 – Zentral + Osterinsel + Atacama",
-      "summary": "Kultur, Osterinsel und Atacama mit Surf-Finale in Pichilemu.",
+      "name": "Variante 1 – Flugreise Zentral + Osterinsel + Atacama",
+      "summary": "Flug zu Chiles Top-Spots: Santiago, Rapa Nui und Atacama mit Surf-Finale in Pichilemu.",
       "color": "#5bd1ff",
       "tags": [
         "culture",
         "nature",
-        "adventure"
+        "adventure",
+        "flight"
       ],
       "meta": {
-        "theme": "Kultur • Inseln • Wüste",
+        "theme": "Flugreise • Inseln • Wüste",
         "pace": "ausgewogen",
         "durationDays": 19,
         "costEstimate": 3200,
@@ -258,7 +267,7 @@
         "Empanadas Hanga Roa",
         "H2193",
         "Hanga Roa Eco Lodge",
-        "Kultur, Osterinsel und Atacama mit Surf-Finale in Pichilemu.",
+        "Flug zu Chiles Top-Spots: Santiago, Rapa Nui und Atacama mit Surf-Finale in Pichilemu.",
         "LA329",
         "LA841",
         "Mataveri International Airport (IPC)",
@@ -274,26 +283,31 @@
         "Terminal Alameda",
         "Valle de la Luna",
         "Valparaíso – Cerro Alegre",
-        "Variante 1 – Zentral + Osterinsel + Atacama",
+        "Variante 1 – Flugreise Zentral + Osterinsel + Atacama",
         "Viña del Mar – Playa Acapulco",
         "adventure",
         "culture",
-        "nature"
+        "nature",
+        "flight",
+        "Flugreise",
+        "Flugabenteuer",
+        "beste Spots Chile"
       ]
     },
     {
       "id": "var2",
       "file": "data/routes/var2.json",
-      "name": "Variante 2 – Patagonien + Atacama",
-      "summary": "Gletscher und Geysire im schnellen Wechsel.",
+      "name": "Variante 2 – Flug zu Patagonien & Atacama",
+      "summary": "Flüge verbinden Patagonien, Atacama und Santiago für die ultimative Chile-Highlight-Tour.",
       "color": "#8affc1",
       "tags": [
         "nature",
         "adventure",
-        "photography"
+        "photography",
+        "flight"
       ],
       "meta": {
-        "theme": "Patagonien • Atacama",
+        "theme": "Flugreise Patagonien • Atacama",
         "pace": "zügig",
         "durationDays": 19,
         "costEstimate": 3400,
@@ -330,7 +344,7 @@
         "Damiana Elena",
         "El Huerto",
         "Geysire del Tatio",
-        "Gletscher und Geysire im schnellen Wechsel.",
+        "Flüge verbinden Patagonien, Atacama und Santiago für die ultimative Chile-Highlight-Tour.",
         "H520",
         "LA285",
         "LA329",
@@ -342,25 +356,30 @@
         "Torres del Paine – Base Torres",
         "Valle de la Luna",
         "Valparaíso – Cerro Alegre",
-        "Variante 2 – Patagonien + Atacama",
+        "Variante 2 – Flug zu Patagonien & Atacama",
         "adventure",
         "nature",
-        "photography"
+        "photography",
+        "flight",
+        "Flugreise",
+        "Chile Highlights",
+        "Beste Spots Chile"
       ]
     },
     {
       "id": "var3",
       "file": "data/routes/var3.json",
       "name": "Variante 3 – Roadtrip Küste • Seen • Chiloé",
-      "summary": "Gemächlicher Roadtrip von Santiago bis Chiloé.",
+      "summary": "Gemächlicher Roadtrip auf eigener Achse von Santiago über Seenland bis Chiloé.",
       "color": "#ffb86b",
       "tags": [
         "nature",
         "food",
-        "culture"
+        "culture",
+        "roadtrip"
       ],
       "meta": {
-        "theme": "Küste & Seen Roadtrip",
+        "theme": "Roadtrip Küste & Seen",
         "pace": "gemütlich",
         "durationDays": 19,
         "costEstimate": 2600,
@@ -395,7 +414,7 @@
         "Apice Cocina",
         "Castro – Palafitos",
         "Feria Costumbrista de Chonchi",
-        "Gemächlicher Roadtrip von Santiago bis Chiloé.",
+        "Gemächlicher Roadtrip auf eigener Achse von Santiago über Seenland bis Chiloé.",
         "H012",
         "Kayak Llanquihue",
         "Pichilemu Zentrum",
@@ -410,22 +429,26 @@
         "Viña del Mar – Playa Acapulco",
         "culture",
         "food",
-        "nature"
+        "nature",
+        "roadtrip",
+        "Roadtrip",
+        "Road trip"
       ]
     },
     {
       "id": "var4",
       "file": "data/routes/var4.json",
-      "name": "Variante 4 – Instagram-Hotspots",
-      "summary": "Die fotogensten Orte Chiles mit Fokus auf Sunrise & Golden Hour.",
+      "name": "Variante 4 – Flugreise Instagram-Hotspots",
+      "summary": "Flüge verbinden die fotogensten Orte Chiles für Sunrise-Shoots von Rapa Nui bis Patagonien.",
       "color": "#c792ea",
       "tags": [
         "photography",
         "adventure",
-        "culture"
+        "culture",
+        "flight"
       ],
       "meta": {
-        "theme": "IG-Hotspots",
+        "theme": "Flugreise IG-Hotspots",
         "pace": "zügig",
         "durationDays": 19,
         "costEstimate": 3600,
@@ -458,7 +481,7 @@
       },
       "searchTokens": [
         "Café Matilde",
-        "Die fotogensten Orte Chiles mit Fokus auf Sunrise & Golden Hour.",
+        "Flüge verbinden die fotogensten Orte Chiles für Sunrise-Shoots von Rapa Nui bis Patagonien.",
         "JA117",
         "LA330",
         "LA841",
@@ -471,25 +494,30 @@
         "Torres del Paine – Base Torres",
         "Valle de la Luna",
         "Valparaíso – Cerro Alegre",
-        "Variante 4 – Instagram-Hotspots",
+        "Variante 4 – Flugreise Instagram-Hotspots",
         "adventure",
         "culture",
-        "photography"
+        "photography",
+        "flight",
+        "Flugreise",
+        "Chile Sunrise",
+        "Beste Spots Chile"
       ]
     },
     {
       "id": "var5",
       "file": "data/routes/var5.json",
       "name": "Variante 5 – Budget & Bus",
-      "summary": "Langstreckenbusse, Hostales und lokale Märkte.",
+      "summary": "Roadtrip mit Langstreckenbussen, Hostales und lokalen Märkten quer durch Chile.",
       "color": "#f7768e",
       "tags": [
         "budget",
         "culture",
-        "nature"
+        "nature",
+        "roadtrip"
       ],
       "meta": {
-        "theme": "Budget & Bus",
+        "theme": "Roadtrip Budget & Bus",
         "pace": "ausgewogen",
         "durationDays": 19,
         "costEstimate": 2200,
@@ -524,7 +552,7 @@
         "Castro – Palafitos",
         "La Recova Market",
         "La Serena",
-        "Langstreckenbusse, Hostales und lokale Märkte.",
+        "Roadtrip mit Langstreckenbussen, Hostales und lokalen Märkten quer durch Chile.",
         "Observatorium Mamalluca",
         "Pucón – Huerquehue Trailhead",
         "Puerto Varas",
@@ -535,22 +563,26 @@
         "Vicuña",
         "budget",
         "culture",
-        "nature"
+        "nature",
+        "roadtrip",
+        "Roadtrip",
+        "Road trip"
       ]
     },
     {
       "id": "var6",
       "file": "data/routes/var6.json",
       "name": "Variante 6 – Kulinarik & Weintäler",
-      "summary": "Wein- und Food-Fokus zwischen Santiago und Concepción.",
+      "summary": "Genussvoller Roadtrip im Mietwagen zwischen Santiago, den Weintälern und Concepción.",
       "color": "#52fa7c",
       "tags": [
         "food",
         "wine",
-        "culture"
+        "culture",
+        "roadtrip"
       ],
       "meta": {
-        "theme": "Wein & Küche",
+        "theme": "Roadtrip Wein & Küche",
         "pace": "gemütlich",
         "durationDays": 19,
         "costEstimate": 2500,
@@ -589,77 +621,14 @@
         "Talca – Altos de Lircay",
         "Valparaíso – Cerro Alegre",
         "Variante 6 – Kulinarik & Weintäler",
-        "Wein- und Food-Fokus zwischen Santiago und Concepción.",
+        "Genussvoller Roadtrip im Mietwagen zwischen Santiago, den Weintälern und Concepción.",
         "Weinverkostung Casa del Bosque",
         "culture",
         "food",
-        "wine"
-      ]
-    },
-    {
-      "id": "var7",
-      "file": "data/routes/var7.json",
-      "name": "Variante 7 – Honeymoon Light",
-      "summary": "Entspannter Mix aus Wellness, Boutiquehotels und Highlights.",
-      "color": "#ff79c6",
-      "tags": [
-        "honeymoon",
-        "relax",
-        "nature"
-      ],
-      "meta": {
-        "theme": "Honeymoon Light",
-        "pace": "gemütlich",
-        "durationDays": 19,
-        "costEstimate": 3700,
-        "highlights": [
-          "Thermen Maipo",
-          "Boutique Atacama",
-          "EcoCamp"
-        ],
-        "scores": {
-          "budget": 2,
-          "adventure": 3,
-          "relax": 5,
-          "culture": 3
-        }
-      },
-      "metrics": {
-        "totalDistanceKm": 7140.0,
-        "estimatedCarbonKg": 2000.4,
-        "segmentCount": 7,
-        "flightCount": 4,
-        "stopCount": 8,
-        "flightCarbonKg": 1504.8,
-        "groundTransportCarbonKg": 495.6,
-        "totalNights": 9,
-        "avgNightlyRate": 378.89,
-        "lodgingCount": 3,
-        "foodCount": 2,
-        "activityCount": 2,
-        "averageDailyBudget": 194.74
-      },
-      "searchTokens": [
-        "Boragó",
-        "Cajón del Maipo – Thermen",
-        "Castro – Palafitos",
-        "Cocina y Amor",
-        "Colchagua Weinlodge",
-        "EcoCamp Patagonia",
-        "Entspannter Mix aus Wellness, Boutiquehotels und Highlights.",
-        "H420",
-        "LA286",
-        "LA330",
-        "Private Thermal Retreat",
-        "Puerto Varas",
-        "San Pedro Boutiquehotel",
-        "Santiago International Airport (SCL)",
-        "Santiago – Barrio Lastarria",
-        "Sunset Cruise Llanquihue",
-        "Variante 7 – Honeymoon Light",
-        "honeymoon",
-        "nature",
-        "relax"
+        "wine",
+        "roadtrip",
+        "Roadtrip",
+        "Road trip"
       ]
     }
   ],

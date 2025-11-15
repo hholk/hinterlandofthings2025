@@ -18,7 +18,14 @@ const allowedModes = new Set(Object.keys(data.transportModes));
 
 test('meta information is present', () => {
   assert.ok(data.meta?.title, 'meta title missing');
-  assert.ok(Array.isArray(data.routeIndex) && data.routeIndex.length === 7, 'expected 7 routes');
+  assert.ok(Array.isArray(data.routeIndex) && data.routeIndex.length === 6, 'expected 6 routes');
+});
+
+test('route index highlights three flight and three roadtrip options', () => {
+  const flights = data.routeIndex.filter((entry) => entry.tags?.includes('flight'));
+  const roadtrips = data.routeIndex.filter((entry) => entry.tags?.includes('roadtrip'));
+  assert.equal(flights.length, 3, 'expected 3 flight-based routes');
+  assert.equal(roadtrips.length, 3, 'expected 3 roadtrip routes');
 });
 
 // Wir prüfen das Stylesheet direkt, damit der Grid-Anteil für Einsteiger:innen
