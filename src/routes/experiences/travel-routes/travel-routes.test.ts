@@ -35,6 +35,25 @@ describe('travel route data access', () => {
     expect(routeWithSegments).toBeDefined();
     expect(routeWithSegments?.stops?.length ?? 0).toBeGreaterThan(0);
   });
+
+  it('verknüpft Detailmodule mit bestehenden Stopps', () => {
+    for (const route of Object.values(chileTravelData.routes)) {
+      const stopIds = new Set((route.stops ?? []).map((stop) => stop.id));
+      const referencedStopIds = [
+        ...(route.activities ?? []).map((activity) => activity.stopId),
+        ...(route.food ?? []).map((spot) => spot.stopId),
+        ...(route.lodging ?? []).map((stay) => stay.stopId)
+      ].filter((value): value is string => typeof value === 'string' && value.trim().length > 0);
+
+      // Für Einsteiger:innen: Jeder Detailblock verweist über stopId auf die Karte –
+      // so bleibt klar, zu welchem Ort Aktivitäten, Food & Lodging gehören.
+      for (const stopId of referencedStopIds) {
+        if (!stopIds.has(stopId)) {
+          throw new Error(`Route ${route.id} referenziert unbekannten Stop ${stopId}`);
+        }
+      }
+    }
+  });
 });
 
 describe('travel routes shell', () => {
