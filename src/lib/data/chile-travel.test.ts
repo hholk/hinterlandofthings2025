@@ -1,11 +1,18 @@
 import { describe, it, expect } from 'vitest';
-import { buildRouteLineCollection, buildRouteMarkerCollection, chileTravelData } from './chile-travel';
+import {
+  availableRouteIds,
+  buildRouteLineCollection,
+  buildRouteMarkerCollection,
+  chileTravelData,
+  loadRouteById
+} from './chile-travel';
 
 // Für Einsteiger:innen: Tests helfen uns, Datenfehler sofort zu entdecken – etwa
 // fehlende Hotels oder Stops ohne Koordinaten. So bleibt die UI robust.
 describe('chileTravelData', () => {
   it('enthält drei vollständig ausgearbeitete Routen', () => {
     expect(chileTravelData.routes).toHaveLength(3);
+    expect(availableRouteIds).toEqual(chileTravelData.routes.map((route) => route.id));
 
     for (const route of chileTravelData.routes) {
       expect(route.stops.length, `${route.id} benötigt mindestens zwei Stopps`).toBeGreaterThanOrEqual(2);
@@ -19,6 +26,14 @@ describe('chileTravelData', () => {
         expect(stop.stayNights).toBeGreaterThanOrEqual(0);
       }
     }
+  });
+
+  it('lädt einzelne Routenmodule dynamisch nach', async () => {
+    const [firstId] = availableRouteIds;
+    const dynamicRoute = await loadRouteById(firstId);
+
+    expect(dynamicRoute?.id).toBe(firstId);
+    expect(dynamicRoute?.stops.length).toBeGreaterThan(0);
   });
 
   it('stellt GeoJSON-Hilfsstrukturen für Karte und Marker bereit', () => {

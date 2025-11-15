@@ -2,6 +2,15 @@
   import { onMount } from 'svelte';
   import type { PageData } from './$types';
   import type { TravelRoute } from '../../../lib/data/chile-travel';
+  import type { FeatureCollection, Geometry } from 'geojson';
+  import 'maplibre-gl/dist/maplibre-gl.css';
+
+  type MapLibreModule = typeof import('maplibre-gl');
+  type MapLibreMap = import('maplibre-gl').Map;
+  type MapLayerMouseEvent = import('maplibre-gl').MapLayerMouseEvent;
+  type Popup = import('maplibre-gl').Popup;
+  type GeoJSONSource = import('maplibre-gl').GeoJSONSource;
+  type StyleSpecification = import('maplibre-gl').StyleSpecification;
 
   export let data: PageData;
 
@@ -12,13 +21,19 @@
   let selectedRoute: TravelRoute | undefined = data.travel.routes.find((route) => route.id === selectedRouteId);
 
   let mapContainer: HTMLDivElement | null = null;
-  let mapInstance: any = null;
-  let leaflet: any = null;
-  let markerLayer: any = null;
-  let lineLayer: any = null;
+  let mapInstance: MapLibreMap | null = null;
+  let maplibre: MapLibreModule | null = null;
+  let mapLoaded = false;
   let loadError: string | null = null;
+  let resizeCleanup: (() => void) | null = null;
+  let activePopup: Popup | null = null;
 
-  const LEAFLET_SCRIPT_URL = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+  const ROUTE_LINE_SOURCE = 'travel-route-line';
+  const ROUTE_LINE_LAYER = 'travel-route-line-layer';
+  const ROUTE_STOP_SOURCE = 'travel-route-stops';
+  const ROUTE_STOP_LAYER = 'travel-route-stops-layer';
+  const ROUTE_STOP_LABEL_LAYER = 'travel-route-stop-label-layer';
+  const STOP_POPUP_CLASS = 'travel-map-popup';
 
   function updateSelectedRoute() {
     selectedRoute = data.travel.routes.find((route) => route.id === selectedRouteId);
@@ -34,74 +49,207 @@
     document.body.classList.remove('travel-body');
   }
 
-  // Für Einsteiger:innen: Diese Hilfsfunktion lädt Leaflet nur im Browser.
-  async function ensureLeaflet(): Promise<any> {
+  async function ensureMapLibre(): Promise<MapLibreModule | null> {
     if (typeof window === 'undefined') return null;
-    if (leaflet) return leaflet;
+    if (maplibre) return maplibre;
 
-    if ((window as typeof window & { L?: unknown }).L) {
-      leaflet = (window as typeof window & { L: any }).L;
-      return leaflet;
-    }
-
-    await new Promise<void>((resolve, reject) => {
-      const existing = document.querySelector('script[data-leaflet]') as HTMLScriptElement | null;
-      const script = existing ?? document.createElement('script');
-
-      script.src = LEAFLET_SCRIPT_URL;
-      script.async = true;
-      script.defer = true;
-      script.dataset.leaflet = 'true';
-      script.addEventListener('load', () => resolve(), { once: true });
-      script.addEventListener('error', () => reject(new Error('Leaflet konnte nicht geladen werden.')));
-
-      if (!existing) {
-        document.head.appendChild(script);
-      }
-    });
-
-    leaflet = (window as typeof window & { L: any }).L;
-    return leaflet;
+    const module = await import('maplibre-gl');
+    maplibre = module;
+    return maplibre;
   }
 
-  function renderRoute(route: TravelRoute | undefined) {
-    if (!route || !leaflet || !mapInstance) return;
-
-    if (markerLayer) {
-      mapInstance.removeLayer(markerLayer);
-      markerLayer = null;
+  function removeMapPopup() {
+    if (activePopup) {
+      activePopup.remove();
+      activePopup = null;
     }
-    if (lineLayer) {
-      mapInstance.removeLayer(lineLayer);
-      lineLayer = null;
-    }
+  }
 
-    lineLayer = leaflet.polyline(route.mapPolyline, {
-      color: route.color,
-      weight: 4,
-      opacity: 0.95
-    }).addTo(mapInstance);
+  function createRasterStyle(): StyleSpecification {
+    const tiles: string[] = [data.travel.map.tileUrl];
+    return {
+      version: 8,
+      glyphs: 'https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf',
+      sources: {
+        osm: {
+          type: 'raster',
+          tiles,
+          tileSize: 256,
+          attribution: data.travel.map.attribution,
+          maxzoom: data.travel.map.maxZoom ?? 12
+        }
+      },
+      layers: [
+        {
+          id: 'osm-base',
+          type: 'raster',
+          source: 'osm'
+        }
+      ]
+    };
+  }
 
-    markerLayer = leaflet.layerGroup(
-      route.stops.map((stop, index) =>
-        leaflet
-          .circleMarker(stop.coordinates, {
-            radius: 6,
-            weight: 2,
+  function createLineFeature(route: TravelRoute): FeatureCollection<Geometry, Record<string, unknown>> {
+    return {
+      type: 'FeatureCollection',
+      features: [
+        {
+          type: 'Feature',
+          geometry: {
+            type: 'LineString',
+            coordinates: route.mapPolyline
+          },
+          properties: {
             color: route.color,
-            fillColor: '#ffffff',
-            fillOpacity: 1
-          })
-          .bindTooltip(`${index + 1}. ${stop.dayRange} – ${stop.location}`, { direction: 'top' })
-      )
-    ).addTo(mapInstance);
+            id: route.id,
+            name: route.name
+          }
+        }
+      ]
+    };
+  }
 
-    try {
-      const bounds = lineLayer.getBounds();
-      mapInstance.fitBounds(bounds, { padding: [32, 32] });
-    } catch (error) {
-      console.warn('Konnte Bounds nicht setzen', error);
+  function createStopCollection(route: TravelRoute): FeatureCollection<Geometry, Record<string, unknown>> {
+    return {
+      type: 'FeatureCollection',
+      features: route.stops.map((stop, index) => ({
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: stop.coordinates
+        },
+        properties: {
+          id: stop.id,
+          index,
+          label: `${index + 1}`,
+          color: route.color,
+          title: `${index + 1}. ${stop.location}`,
+          subtitle: stop.dayRange
+        }
+      }))
+    };
+  }
+
+  function setupSources(route: TravelRoute | undefined) {
+    if (!mapInstance || !maplibre || !route) return;
+    const lineData = createLineFeature(route);
+    const stopData = createStopCollection(route);
+
+    if (!mapInstance.getSource(ROUTE_LINE_SOURCE)) {
+      mapInstance.addSource(ROUTE_LINE_SOURCE, {
+        type: 'geojson',
+        data: lineData
+      });
+      mapInstance.addLayer({
+        id: ROUTE_LINE_LAYER,
+        type: 'line',
+        source: ROUTE_LINE_SOURCE,
+        layout: {
+          'line-cap': 'round',
+          'line-join': 'round'
+        },
+        paint: {
+          'line-color': ['coalesce', ['get', 'color'], '#2563eb'],
+          'line-width': 4,
+          'line-opacity': 0.94
+        }
+      });
     }
+
+    if (!mapInstance.getSource(ROUTE_STOP_SOURCE)) {
+      mapInstance.addSource(ROUTE_STOP_SOURCE, {
+        type: 'geojson',
+        data: stopData
+      });
+      mapInstance.addLayer({
+        id: ROUTE_STOP_LAYER,
+        type: 'circle',
+        source: ROUTE_STOP_SOURCE,
+        paint: {
+          'circle-radius': 6,
+          'circle-color': ['coalesce', ['get', 'color'], '#1e293b'],
+          'circle-stroke-color': '#ffffff',
+          'circle-stroke-width': 2
+        }
+      });
+      mapInstance.addLayer({
+        id: ROUTE_STOP_LABEL_LAYER,
+        type: 'symbol',
+        source: ROUTE_STOP_SOURCE,
+        layout: {
+          'text-field': ['get', 'label'],
+          'text-size': 11,
+          'text-offset': [0, 1.2],
+          'text-font': ['Open Sans Bold', 'Arial Unicode MS Bold']
+        },
+        paint: {
+          'text-color': '#0f172a',
+          'text-halo-color': '#ffffff',
+          'text-halo-width': 1
+        }
+      });
+    }
+  }
+
+  function focusRoute(route: TravelRoute | undefined) {
+    if (!mapInstance || !maplibre || !route) return;
+
+    const coordinates = [...route.mapPolyline, ...route.stops.map((stop) => stop.coordinates)];
+    if (coordinates.length === 0) return;
+
+    const bounds = coordinates.reduce(
+      (acc, coordinate) => acc.extend(coordinate as [number, number]),
+      new maplibre.LngLatBounds(coordinates[0] as [number, number], coordinates[0] as [number, number])
+    );
+
+    const prefersReducedMotion = typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const isNarrow = typeof window !== 'undefined' && window.innerWidth <= 720;
+    const paddingValue = isNarrow ? data.travel.map.mobilePadding ?? 120 : 64;
+
+    mapInstance.fitBounds(bounds, {
+      padding: { top: 48, right: paddingValue, bottom: paddingValue + 24, left: paddingValue },
+      duration: prefersReducedMotion ? 0 : 800,
+      maxZoom: data.travel.map.maxZoom ?? 12
+    });
+  }
+
+  function updateRouteOnMap(route: TravelRoute | undefined) {
+    if (!mapInstance || !maplibre || !route) return;
+
+    const lineSource = mapInstance.getSource(ROUTE_LINE_SOURCE) as GeoJSONSource | undefined;
+    const stopSource = mapInstance.getSource(ROUTE_STOP_SOURCE) as GeoJSONSource | undefined;
+
+    if (!lineSource || !stopSource) {
+      setupSources(route);
+      return updateRouteOnMap(route);
+    }
+
+    lineSource.setData(createLineFeature(route));
+    stopSource.setData(createStopCollection(route));
+    focusRoute(route);
+  }
+
+  function handleStopClick(event: MapLayerMouseEvent) {
+    if (!mapInstance || !maplibre) return;
+    const feature = event.features?.[0];
+    if (!feature || feature.geometry.type !== 'Point') return;
+
+    const coordinates = feature.geometry.coordinates as [number, number];
+    const title = typeof feature.properties?.title === 'string' ? feature.properties.title : '';
+    const subtitle = typeof feature.properties?.subtitle === 'string' ? feature.properties.subtitle : '';
+
+    removeMapPopup();
+
+    activePopup = new maplibre.Popup({
+      closeButton: false,
+      closeOnClick: false,
+      offset: [0, 12],
+      maxWidth: '220px',
+      className: STOP_POPUP_CLASS
+    })
+      .setLngLat(coordinates)
+      .setHTML(`<strong>${title}</strong><div>${subtitle}</div>`)
+      .addTo(mapInstance);
   }
 
   onMount(() => {
@@ -111,22 +259,61 @@
 
     const boot = async () => {
       try {
-        const L = await ensureLeaflet();
-        if (!L || cancelled) return;
+        const module = await ensureMapLibre();
+        if (!module || cancelled || !mapContainer) return;
 
-        leaflet = L;
-        mapInstance = L.map(mapContainer, {
+        maplibre = module;
+        loadError = null;
+
+        mapInstance = new module.Map({
+          container: mapContainer,
+          style: createRasterStyle(),
           center: data.travel.map.center,
           zoom: data.travel.map.zoom,
-          scrollWheelZoom: false
+          maxZoom: data.travel.map.maxZoom ?? 12,
+          attributionControl: false,
+          scrollZoom: false
         });
 
-        L.tileLayer(data.travel.map.tileUrl, {
-          attribution: data.travel.map.attribution,
-          maxZoom: 12
-        }).addTo(mapInstance);
+        mapInstance.dragRotate.disable();
+        mapInstance.touchZoomRotate.enable();
+        mapInstance.touchZoomRotate.enableRotation();
 
-        renderRoute(selectedRoute);
+        mapInstance.addControl(new module.NavigationControl({ showCompass: false }), 'top-right');
+        mapInstance.addControl(new module.AttributionControl({ compact: true }));
+
+        mapInstance.on('load', () => {
+          if (cancelled) return;
+          setupSources(selectedRoute);
+          mapLoaded = true;
+          updateRouteOnMap(selectedRoute);
+        });
+
+        mapInstance.on('click', ROUTE_STOP_LAYER, handleStopClick);
+        mapInstance.on('mouseenter', ROUTE_STOP_LAYER, () => {
+          if (mapInstance) {
+            mapInstance.getCanvas().style.cursor = 'pointer';
+          }
+        });
+        mapInstance.on('mouseleave', ROUTE_STOP_LAYER, () => {
+          if (mapInstance) {
+            mapInstance.getCanvas().style.cursor = '';
+          }
+        });
+
+        if (typeof window !== 'undefined') {
+          if ('ResizeObserver' in window && mapContainer) {
+            const observer = new ResizeObserver(() => {
+              mapInstance?.resize();
+            });
+            observer.observe(mapContainer);
+            resizeCleanup = () => observer.disconnect();
+          } else {
+            const resizeHandler = () => mapInstance?.resize();
+            window.addEventListener('resize', resizeHandler, { passive: true });
+            resizeCleanup = () => window.removeEventListener('resize', resizeHandler);
+          }
+        }
       } catch (error) {
         loadError = error instanceof Error ? error.message : 'Unbekannter Fehler beim Laden der Karte';
       }
@@ -137,19 +324,25 @@
 
     return () => {
       cancelled = true;
+      resizeCleanup?.();
+      resizeCleanup = null;
+      removeMapPopup();
+
       if (mapInstance) {
+        mapInstance.off('click', ROUTE_STOP_LAYER, handleStopClick);
         mapInstance.remove();
         mapInstance = null;
       }
-      markerLayer = null;
-      lineLayer = null;
+
+      mapLoaded = false;
       removeBodyTheme();
     };
   });
 
   $: updateSelectedRoute();
-  $: if (mapInstance && selectedRoute) {
-    renderRoute(selectedRoute);
+  $: if (mapLoaded && selectedRoute) {
+    removeMapPopup();
+    updateRouteOnMap(selectedRoute);
   }
 </script>
 
@@ -162,12 +355,8 @@
         'Interaktive Chile-Routen mit Karte, detaillierten Stopps und Logistik-Tipps.'
     }
   />
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha512-sA+e2PK0FG3blwYqCCptdJOwA/6R1/pnS1AZJgYzu3n6PvJEa3TBUnIFmLnb5DxF0E2SABOeHG3H0p+0bBt5JQ=="
-    crossorigin=""
-  />
+  <!-- Für Einsteiger:innen: Die MapLibre-Styles werden über den JS-Import gebündelt, daher braucht es hier keinen separaten
+       CDN-Link mehr. -->
 </svelte:head>
 
 <section class="travel" aria-labelledby="travel-title">
@@ -371,13 +560,40 @@
     overflow: hidden;
     box-shadow: 0 20px 60px rgba(15, 23, 42, 0.15);
     background: #fff;
-    min-height: 420px;
+    min-height: clamp(320px, 55vh, 520px);
   }
 
   #travel-map {
     width: 100%;
     height: 100%;
-    min-height: 420px;
+    min-height: clamp(320px, 55vh, 520px);
+  }
+
+  :global(.maplibregl-canvas) {
+    outline: none;
+  }
+
+  :global(.maplibregl-ctrl-top-right),
+  :global(.maplibregl-ctrl-bottom-right) {
+    margin: 12px;
+  }
+
+  :global(.maplibregl-popup.travel-map-popup .maplibregl-popup-content) {
+    background: rgba(15, 23, 42, 0.92);
+    color: #f8fafc;
+    border-radius: 0.75rem;
+    box-shadow: 0 18px 44px rgba(15, 23, 42, 0.35);
+    font-size: 0.85rem;
+    line-height: 1.35;
+    padding: 0.85rem 1rem;
+  }
+
+  :global(.maplibregl-popup.travel-map-popup .maplibregl-popup-tip) {
+    border-top-color: rgba(15, 23, 42, 0.92);
+  }
+
+  :global(.maplibregl-popup-close-button) {
+    display: none;
   }
 
   .travel__map-error {
@@ -403,6 +619,8 @@
     flex-direction: column;
     gap: 0.5rem;
     font-size: 0.875rem;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .travel__legend li {
@@ -673,7 +891,69 @@
     }
 
     .travel__map {
-      min-height: 320px;
+      min-height: clamp(280px, 60vh, 460px);
+    }
+  }
+
+  @media (max-width: 720px) {
+    .travel {
+      padding: clamp(1rem, 4vw, 2rem);
+      gap: 2.5rem;
+    }
+
+    .travel__legend {
+      position: static;
+      margin: 0.75rem auto 0;
+      flex-direction: row;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .travel__routes {
+      padding: 1.25rem;
+    }
+
+    .travel__routes ul {
+      flex-direction: row;
+      overflow-x: auto;
+      gap: 0.75rem;
+      scroll-snap-type: x proximity;
+      padding-bottom: 0.5rem;
+      scrollbar-width: thin;
+    }
+
+    .travel__routes li {
+      flex: 0 0 min(85%, 280px);
+      scroll-snap-align: start;
+    }
+
+    .travel__routes ul::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    .travel__routes ul::-webkit-scrollbar-thumb {
+      background: rgba(99, 102, 241, 0.4);
+      border-radius: 999px;
+    }
+
+    .travel__routes button {
+      min-height: 9.5rem;
+    }
+
+    .travel__detail {
+      padding: clamp(1.25rem, 4vw, 2rem);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .travel__routes button {
+      transition: none;
+    }
+
+    .travel__routes button:hover,
+    .travel__routes button:focus-visible {
+      transform: none;
+      box-shadow: 0 0 0 1px var(--route-color);
     }
   }
 </style>

@@ -7,7 +7,8 @@ import { load } from './+page';
 import {
   chileTravelData,
   buildRouteMarkerCollection,
-  buildRouteLineCollection
+  buildRouteLineCollection,
+  loadRouteById
 } from '../../../lib/data/chile-travel';
 
 // Für Einsteiger:innen: Tests helfen sicherzustellen, dass die Daten weiterhin korrekt
@@ -32,6 +33,13 @@ describe('travel route geo data helpers', () => {
     expect(markers.features[0].geometry.type).toBe('Point');
     expect(line.features[0].geometry.type).toBe('LineString');
     expect(line.features[0].geometry.coordinates).toEqual(firstRoute.mapPolyline);
+  });
+
+  it('liefert dieselbe Route per dynamischem Loader', async () => {
+    const firstRoute = chileTravelData.routes[0];
+    const loadedRoute = await loadRouteById(firstRoute.id);
+
+    expect(loadedRoute?.name).toBe(firstRoute.name);
   });
 });
 
