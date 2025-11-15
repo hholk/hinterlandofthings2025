@@ -3,8 +3,8 @@ import type { PageData } from './$types';
 import { readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { load } from './+page';
-import { chileTravelData, loadRouteById } from '../../../lib/data/chile-travel';
+import { load } from './+page.server';
+import { chileTravelData, loadRouteById } from '../../../lib/data/chile-travel/server';
 
 describe('travel routes page load', () => {
   it('liefert die konfigurierte Experience und die JSON-Daten', async () => {
