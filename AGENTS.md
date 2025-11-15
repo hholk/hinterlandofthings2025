@@ -50,3 +50,10 @@
 - Vor Projektstart aktiv nach GitHub-Username, Repository-Namen, GitHub-Pages-Typ (User/Org vs. Projekt-Page) und Custom-Domain fragen.
 - Die abgefragten Werte intern merken und konsequent in allen Konfigurationen (Base-Path, Actions-Workflow, `CNAME` etc.) nutzen.
 - Die Antworten der Nutzer:innen bestimmen die Konfiguration des Deployments.
+
+## MapLibre-Referenzseite für die Chile-Reiseplanung
+- Die statische Referenz lebt in `travel-routes/chile-map.html` und zieht ihre Logik aus `travel-routes/chile-map.js`. Die Seite
+  ist ohne Build-Tooling lauffähig, nutzt MapLibre per CDN und lädt die Daten über `travel-routes/travel-routes-data.json`.
+- Die Funktionen `initMap`, `addGeoJsonSource`, `addRouteLayer`, `addPoiLayer` und `fitMapToData` sind dort bewusst modular
+  implementiert, damit weitere Features sie leicht übernehmen können.
+- Anpassungen am GeoJSON-Aufbau oder der MapLibre-Konfiguration müssen von Tests begleitet werden (`travel-routes/chile-map.test.js` via `node --test travel-routes/chile-map.test.js`).
