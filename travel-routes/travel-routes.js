@@ -16,6 +16,38 @@ const assetBase = (() => {
   }
 })();
 
+// Für Einsteiger:innen: Wenn wir diese Datei innerhalb von Vite oder SvelteKit bundeln,
+// werden statische Assets (unsere JSON-Dateien) an neue Speicherorte kopiert. Damit
+// `fetch()` trotzdem die richtigen Pfade findet, erzeugen wir zur Build-Zeit ein kleines
+// Manifest aller JSON-Dateien. Läuft das Skript ohne Bundler (klassische statische Seite),
+// fällt `import.meta.glob` einfach weg und wir greifen wie bisher auf relative Pfade zu.
+function buildAssetManifest() {
+  if (!import.meta || typeof import.meta.glob !== 'function') {
+    return null;
+  }
+
+  const manifest = new Map();
+  const assets = import.meta.glob('./**/*.json', { as: 'url', eager: true });
+
+  Object.entries(assets).forEach(([key, url]) => {
+    const normalized = key.replace(/^\.\//, '');
+    manifest.set(normalized, url);
+    manifest.set(`./${normalized}`, url);
+  });
+
+  return manifest;
+}
+
+let assetManifest = buildAssetManifest();
+
+function setAssetManifestForTesting(manifest) {
+  assetManifest = manifest;
+}
+
+function resetAssetManifestForTesting() {
+  assetManifest = buildAssetManifest();
+}
+
 const state = {
   data: null,
   curatedRoutes: [],
@@ -126,6 +158,19 @@ function resolveResource(resource) {
     return resource;
   }
   if (typeof resource === 'string') {
+    if (assetManifest) {
+      const candidates = [resource];
+      const normalized = resource.replace(/^\.\//, '');
+      if (normalized !== resource) {
+        candidates.push(normalized);
+      }
+      candidates.push(`./${normalized}`);
+      for (const candidate of candidates) {
+        if (assetManifest.has(candidate)) {
+          return assetManifest.get(candidate);
+        }
+      }
+    }
     // Relative Pfade verlinken wir zuverlässig auf den Ordner der aktuellen Datei.
     if (/^[a-z]+:/i.test(resource) || resource.startsWith('/')) {
       return resource;
@@ -1775,4 +1820,7 @@ export {
   scrollDetailToStop,
   fetchFresh,
   createCustomRouteFromSuggestion,
+  setAssetManifestForTesting,
+  resetAssetManifestForTesting,
+  resolveResource,
 };
