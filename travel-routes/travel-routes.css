@@ -93,6 +93,16 @@ body.travel-body {
   font-weight: 700;
 }
 
+.travel-panel__cta {
+  display: grid;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.travel-panel__cta-hint {
+  margin: 0;
+}
+
 .travel-panel__section {
   background: linear-gradient(180deg, rgba(10, 18, 28, 0.92), rgba(12, 24, 36, 0.88));
   border: 1px solid var(--travel-border);
@@ -830,6 +840,112 @@ body.travel-body {
   height: 12px;
   border-radius: 50%;
   border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.travel-suggestions__backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.62);
+  backdrop-filter: blur(4px);
+  z-index: 80;
+}
+
+.travel-suggestions {
+  position: fixed;
+  top: 5vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(960px, calc(100vw - 2rem));
+  max-height: calc(100vh - 4rem);
+  overflow-y: auto;
+  background: #0f172a;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 1.25rem;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  display: grid;
+  gap: 1.5rem;
+  z-index: 90;
+  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.45);
+}
+
+.travel-suggestions__header {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.travel-suggestions__grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.travel-suggestion {
+  background: rgba(15, 23, 42, 0.72);
+  border: 1px solid rgba(94, 234, 212, 0.2);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.travel-suggestion__header {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.travel-suggestion__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: rgba(226, 232, 240, 0.78);
+}
+
+.travel-suggestion__highlights {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.travel-suggestion__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.travel-suggestion__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: rgba(94, 234, 212, 0.12);
+  color: rgba(226, 232, 240, 0.85);
+}
+
+.travel-suggestion__cta {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+@media (max-width: 720px) {
+  .travel-suggestions {
+    top: 1.5rem;
+    max-height: calc(100vh - 3rem);
+    padding: 1.25rem;
+  }
+
+  .travel-suggestions__header {
+    gap: 1rem;
+  }
 }
 
 /* Responsive Layout für kleinere Geräte */

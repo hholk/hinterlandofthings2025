@@ -28,6 +28,7 @@ const state = {
   poiOverview: [],
   poiCollection: new Set(),
   detailView: 'planning',
+  suggestionIndex: new Map(),
 };
 
 const mapState = {
@@ -56,6 +57,11 @@ const dom = hasDocument
       panelToggle: document.querySelector('.travel-panel-toggle'),
       chipButtons: document.querySelectorAll('.travel-chip'),
       poiList: document.getElementById('travel-poi-list'),
+      suggestionOpen: document.getElementById('travel-suggestions-open'),
+      suggestionClose: document.getElementById('travel-suggestions-close'),
+      suggestionDialog: document.getElementById('travel-suggestions'),
+      suggestionList: document.getElementById('travel-suggestion-list'),
+      suggestionBackdrop: document.getElementById('travel-suggestions-backdrop'),
     }
   : {
       app: null,
@@ -73,6 +79,11 @@ const dom = hasDocument
       panelToggle: null,
       chipButtons: [],
       poiList: null,
+      suggestionOpen: null,
+      suggestionClose: null,
+      suggestionDialog: null,
+      suggestionList: null,
+      suggestionBackdrop: null,
     };
 
 const templates = hasDocument
@@ -92,6 +103,8 @@ const templates = hasDocument
 const LOCAL_STORAGE_KEY = 'travel-routes.custom';
 const NOTES_KEY = 'travel-routes.notes';
 const POI_COLLECTION_KEY = 'travel-routes.poi-collection';
+
+let lastSuggestionTrigger = null;
 
 if (hasDocument) {
   init().catch((error) => {
@@ -154,18 +167,21 @@ async function init() {
   state.curatedRoutes = (data.routeIndex ?? []).map((route) => ({ ...route, source: 'curated' }));
   state.customRoutes = loadCustomRoutes();
   state.poiCollection = loadPoiCollection();
+  state.suggestionIndex = new Map((data.suggestionLibrary ?? []).map((item) => [item.id, item]));
 
   initMap(data);
   renderTags();
   renderGallery();
   renderEvents();
   renderRoutes();
+  renderSuggestionLibrary();
   setupFilterChips();
   setupSearch();
   setupMarkdown();
   setupPanelToggle();
   setupViewToggle();
   setupResponsivePanel();
+  setupSuggestionOverlay();
 
   if (data.poiOverview?.file) {
     await loadPoiOverview(data.poiOverview.file);
@@ -1052,6 +1068,62 @@ function renderEvents() {
     .join('');
 }
 
+function renderSuggestionLibrary() {
+  if (!dom.suggestionList) return;
+  const suggestions = state.data?.suggestionLibrary ?? [];
+  if (!suggestions.length) {
+    dom.suggestionList.innerHTML = '<div class="travel-empty-state">Noch keine Vorschläge hinterlegt.</div>';
+    return;
+  }
+
+  dom.suggestionList.innerHTML = '';
+
+  suggestions.forEach((suggestion) => {
+    const card = document.createElement('article');
+    card.className = 'travel-suggestion';
+    const highlights = (suggestion.highlights ?? [])
+      .map((item) => `<li>• ${item}</li>`)
+      .join('');
+    const badges = [
+      suggestion.type === 'flight' ? 'Flugabenteuer' : 'Roadtrip',
+      suggestion.vibe ?? null,
+      suggestion.effort ? `Aufwand: ${suggestion.effort}` : null,
+    ]
+      .filter(Boolean)
+      .map((label) => `<span class="travel-suggestion__badge">${label}</span>`)
+      .join('');
+
+    card.innerHTML = `
+      <div class="travel-suggestion__header">
+        <h3>${suggestion.title}</h3>
+        <p>${suggestion.summary ?? ''}</p>
+      </div>
+      <div class="travel-suggestion__meta">
+        <span>${suggestion.durationDays ?? state.data?.meta?.defaultDurationDays ?? 7} Tage</span>
+        <span>Kosten ~€${formatCurrency(suggestion.costEstimate ?? 0)}</span>
+        ${suggestion.mapFocus?.region ? `<span>${suggestion.mapFocus.region}</span>` : ''}
+      </div>
+      <div class="travel-suggestion__badges">${badges}</div>
+      <ul class="travel-suggestion__highlights">${highlights}</ul>
+      ${suggestion.special ? `<p class="travel-text-muted">${suggestion.special}</p>` : ''}
+      <div class="travel-suggestion__cta">
+        <button class="travel-button" type="button" data-suggestion="${suggestion.id}">
+          Eigene Route starten
+        </button>
+      </div>
+    `;
+
+    card.querySelector('button')?.addEventListener('click', () => {
+      const created = createCustomRouteFromSuggestion(suggestion.id);
+      if (created) {
+        closeSuggestionOverlay();
+      }
+    });
+
+    dom.suggestionList.appendChild(card);
+  });
+}
+
 function renderTags() {
   if (!dom.tagList) return;
   dom.tagList.innerHTML = '';
@@ -1167,6 +1239,112 @@ function setupResponsivePanel() {
   } else if (typeof query.addListener === 'function') {
     query.addListener(syncVisibility);
   }
+}
+
+function setupSuggestionOverlay() {
+  if (!dom.suggestionDialog || !dom.suggestionOpen) return;
+  dom.suggestionDialog.setAttribute('aria-hidden', 'true');
+  dom.suggestionDialog.setAttribute('data-open', 'false');
+  dom.suggestionBackdrop?.setAttribute('data-open', 'false');
+
+  dom.suggestionOpen.addEventListener('click', () => {
+    openSuggestionOverlay();
+  });
+
+  dom.suggestionClose?.addEventListener('click', () => {
+    closeSuggestionOverlay();
+  });
+
+  dom.suggestionBackdrop?.addEventListener('click', () => {
+    closeSuggestionOverlay();
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && dom.suggestionDialog?.getAttribute('data-open') === 'true') {
+      closeSuggestionOverlay();
+    }
+  });
+}
+
+function openSuggestionOverlay() {
+  if (!dom.suggestionDialog) return;
+  if (document.activeElement instanceof HTMLElement) {
+    lastSuggestionTrigger = document.activeElement;
+  }
+  dom.suggestionDialog.removeAttribute('hidden');
+  dom.suggestionDialog.setAttribute('data-open', 'true');
+  dom.suggestionDialog.setAttribute('aria-hidden', 'false');
+  dom.suggestionBackdrop?.removeAttribute('hidden');
+  dom.suggestionBackdrop?.setAttribute('data-open', 'true');
+  dom.suggestionClose?.focus();
+}
+
+function closeSuggestionOverlay() {
+  if (!dom.suggestionDialog) return;
+  dom.suggestionDialog.setAttribute('aria-hidden', 'true');
+  dom.suggestionDialog.setAttribute('data-open', 'false');
+  dom.suggestionDialog.setAttribute('hidden', '');
+  dom.suggestionBackdrop?.setAttribute('hidden', '');
+  dom.suggestionBackdrop?.setAttribute('data-open', 'false');
+  if (lastSuggestionTrigger instanceof HTMLElement) {
+    lastSuggestionTrigger.focus();
+  }
+}
+
+function createCustomRouteFromSuggestion(suggestionId) {
+  const suggestion = state.suggestionIndex.get(suggestionId);
+  if (!suggestion) {
+    return null;
+  }
+
+  // Für Einsteiger:innen: Wir erzeugen eine minimale Custom-Route mit
+  // Metadaten aus dem Vorschlag, damit sich die Details später frei befüllen lassen.
+  const newId = `custom-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 6)}`;
+  const duration = suggestion.durationDays ?? state.data?.meta?.defaultDurationDays ?? 7;
+  const route = {
+    id: newId,
+    source: 'custom',
+    name: suggestion.title,
+    color: suggestion.type === 'flight' ? '#c792ea' : '#5bd1ff',
+    tags: suggestion.tags ?? [],
+    summary: suggestion.summary ?? '',
+    meta: {
+      theme: suggestion.theme ?? suggestion.title,
+      pace: suggestion.effort ?? 'flexibel',
+      durationDays: duration,
+      costEstimate: suggestion.costEstimate ?? 0,
+      highlights: suggestion.highlights ?? [],
+    },
+    metrics: {
+      totalDistanceKm: suggestion.metrics?.totalDistanceKm ?? 0,
+      estimatedCarbonKg: suggestion.metrics?.estimatedCarbonKg ?? 0,
+      segmentCount: 0,
+      foodCount: 0,
+      activityCount: 0,
+      lodgingCount: 0,
+    },
+    notes: suggestion.quickNote ?? '',
+    stops: [],
+    segments: [],
+    flights: [],
+    lodging: [],
+    food: [],
+    activities: [],
+  };
+
+  state.customRoutes.push(route);
+  persistCustomRoutes();
+  state.routeDetails.set(route.id, route);
+  selectFilter('custom');
+  renderRoutes();
+  void selectRoute(route.id, 'custom');
+
+  if (mapState.map && suggestion.mapFocus?.center) {
+    const zoom = suggestion.mapFocus.zoom ?? mapState.map.getZoom();
+    mapState.map.setView(suggestion.mapFocus.center, zoom);
+  }
+
+  return route;
 }
 
 function setupViewToggle() {
@@ -1596,4 +1774,5 @@ export {
   dom,
   scrollDetailToStop,
   fetchFresh,
+  createCustomRouteFromSuggestion,
 };
