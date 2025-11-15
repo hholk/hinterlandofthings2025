@@ -1,10 +1,14 @@
 import { describe, expect, it } from 'vitest';
+import { readdirSync } from 'node:fs';
+import { join } from 'node:path';
 import {
   availableRouteIds,
   chileTravelData,
   loadRouteById,
   type RouteDetail
 } from './chile-travel';
+
+const ROUTE_DATA_DIR = join(process.cwd(), 'travel-routes', 'data', 'routes');
 
 // Für Einsteiger:innen: Die Tests überprüfen, dass wirklich alle JSON-Dateien
 // in den Datensatz einfließen. Sobald ein neues File im Ordner liegt, darf der
@@ -39,6 +43,18 @@ describe('chileTravelData dataset', () => {
     expect(Array.isArray(example?.days)).toBe(true);
     expect(example?.days?.length).toBe(3);
     expect(example?.mapLayers?.dailySegments?.length).toBe(example?.days?.length);
+  });
+
+  it('bindet jede JSON-Datei aus travel-routes/data/routes ein', () => {
+    const files = readdirSync(ROUTE_DATA_DIR).filter((file) => file.endsWith('.json'));
+    const idsFromFiles = files.map((file) => file.replace(/\.json$/u, ''));
+
+    // Für Einsteiger:innen: So stellen wir sicher, dass das Manifest nicht
+    // veraltet. Jeder neue JSON-Slug muss automatisch verfügbar sein.
+    idsFromFiles.forEach((id) => {
+      expect(chileTravelData.availableRouteIds).toContain(id);
+      expect(chileTravelData.routes[id]).toBeDefined();
+    });
   });
 });
 
