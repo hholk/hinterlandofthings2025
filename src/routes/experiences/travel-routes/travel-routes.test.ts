@@ -4,53 +4,47 @@ import { readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { load } from './+page';
-import {
-  chileTravelData,
-  buildRouteMarkerCollection,
-  buildRouteLineCollection,
-  loadRouteById
-} from '../../../lib/data/chile-travel';
+import { chileTravelData, loadRouteById } from '../../../lib/data/chile-travel';
 
-// Für Einsteiger:innen: Tests helfen sicherzustellen, dass die Daten weiterhin korrekt
-// in die Seite geladen werden und das GeoJSON für die Kartenansicht konsistent bleibt.
 describe('travel routes page load', () => {
-  it('liefert die konfigurierte Experience und alle Travel-Daten', async () => {
-    const result = (await load({} as never)) as PageData;
+  it('liefert die konfigurierte Experience und die JSON-Daten', async () => {
+    const result = (await load({} as never)) as PageData & { travel: typeof chileTravelData };
 
     expect(result.experience?.id).toBe('travel-routes');
-    expect(result.travel).toBe(chileTravelData);
-    expect(result.travel.routes.length).toBeGreaterThan(0);
+    expect(result.travel.availableRouteIds.length).toBeGreaterThanOrEqual(6);
+    const routeKeys = Object.keys(result.travel.routes).sort();
+    const expectedKeys = [...result.travel.availableRouteIds].sort();
+    expect(routeKeys).toEqual(expectedKeys);
   });
 });
 
-describe('travel route geo data helpers', () => {
-  it('erzeugt Marker und Linienzug aus der ersten Route', () => {
-    const firstRoute = chileTravelData.routes[0];
-    const markers = buildRouteMarkerCollection(firstRoute);
-    const line = buildRouteLineCollection(firstRoute);
+describe('travel route data access', () => {
+  it('lädt eine Route aus dem Manifest nach ID', async () => {
+    const [firstId] = chileTravelData.availableRouteIds;
+    expect(firstId).toBeTruthy();
 
-    expect(markers.features).toHaveLength(firstRoute.stops.length);
-    expect(markers.features[0].geometry.type).toBe('Point');
-    expect(line.features[0].geometry.type).toBe('LineString');
-    expect(line.features[0].geometry.coordinates).toEqual(firstRoute.mapPolyline);
+    const route = await loadRouteById(firstId);
+    expect(route?.id).toBe(firstId);
+    expect(route?.name).toBe(chileTravelData.routes[firstId].name);
   });
 
-  it('liefert dieselbe Route per dynamischem Loader', async () => {
-    const firstRoute = chileTravelData.routes[0];
-    const loadedRoute = await loadRouteById(firstRoute.id);
-
-    expect(loadedRoute?.name).toBe(firstRoute.name);
+  it('stellt mindestens eine Route mit Segmenten und Stopps bereit', () => {
+    const routeWithSegments = Object.values(chileTravelData.routes).find(
+      (route) => Array.isArray(route.segments) && route.segments.length > 0
+    );
+    expect(routeWithSegments).toBeDefined();
+    expect(routeWithSegments?.stops?.length ?? 0).toBeGreaterThan(0);
   });
 });
 
 describe('travel routes shell', () => {
-  it('stellt Karte, Routenliste und Detailbereich bereit', () => {
+  it('enthält Karte, Zeitverlauf und Detail-Spoiler', () => {
     const currentDir = dirname(fileURLToPath(import.meta.url));
     const source = readFileSync(join(currentDir, '+page.svelte'), 'utf8');
 
     expect(source).toContain('id="travel-map"');
-    expect(source).toContain('travel__routes');
-    expect(source).toContain('Fortbewegungsmix');
-    expect(source).toContain('Etappen & Aufenthalte');
+    expect(source).toContain('travel__map-slider');
+    expect(source).toContain('Stationen & Stopps');
+    expect(source).toContain('Kostenübersicht');
   });
 });
