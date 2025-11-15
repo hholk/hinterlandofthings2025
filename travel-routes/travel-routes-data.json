@@ -1099,6 +1099,72 @@
         "Roadtrip",
         "Road trip"
       ]
+    },
+    {
+      "id": "example-andes-pacific",
+      "file": "data/routes/example-andes-pacific.json",
+      "name": "Beispiel – Anden & Pazifik Explorer (3 Tage)",
+      "summary": "Komprimiertes Beispiel für den Karten-Slider: Santiago, Valparaíso und Cajón del Maipo mit Flug, Bus und Mietwagen.",
+      "color": "#ff9f5b",
+      "tags": [
+        "example",
+        "short-break",
+        "flight",
+        "bus",
+        "roadtrip"
+      ],
+      "meta": {
+        "theme": "Demo – Multi-Modaler Chile-Trip",
+        "pace": "kompakt",
+        "durationDays": 3,
+        "costEstimate": 780,
+        "highlights": [
+          "Santiago de Chile",
+          "Valparaíso Streetart",
+          "Cajón del Maipo"
+        ],
+        "scores": {
+          "budget": 3,
+          "adventure": 3,
+          "relax": 3,
+          "culture": 4
+        }
+      },
+      "metrics": {
+        "totalDistanceKm": 1500,
+        "estimatedCarbonKg": 420,
+        "segmentCount": 5,
+        "flightCount": 1,
+        "stopCount": 3,
+        "totalNights": 2,
+        "avgNightlyRate": 160,
+        "lodgingCount": 3,
+        "foodCount": 9,
+        "activityCount": 9,
+        "averageDailyBudget": 260
+      },
+      "searchTokens": [
+        "Beispielroute",
+        "Anden & Pazifik Explorer",
+        "Santiago International Airport (SCL)",
+        "Barrio Lastarria",
+        "Cerro San Cristóbal",
+        "Museo Chileno de Arte Precolombino",
+        "Valparaíso Terminal Rodoviario",
+        "Cerro Alegre Streetart",
+        "Plaza Sotomayor",
+        "Playa Reñaca",
+        "Cajón del Maipo",
+        "Termas Baños Colina",
+        "Embalse El Yeso",
+        "Example Slider",
+        "Multi-Modal",
+        "example",
+        "short-break",
+        "flight",
+        "bus",
+        "roadtrip"
+      ]
     }
   ],
   "poiOverview": {

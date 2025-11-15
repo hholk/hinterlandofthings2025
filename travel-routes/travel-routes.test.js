@@ -9,16 +9,21 @@ const jsonPath = join(__dirname, 'travel-routes-data.json');
 const cssPath = join(__dirname, 'travel-routes.css');
 const data = JSON.parse(readFileSync(jsonPath, 'utf8'));
 const cssSource = readFileSync(cssPath, 'utf8');
-const routes = (data.routeIndex ?? []).map((entry) => {
+const rawRoutes = (data.routeIndex ?? []).map((entry) => {
   const routePath = join(__dirname, entry.file);
   return JSON.parse(readFileSync(routePath, 'utf8'));
 });
+
+// Klassische Varianten im Datensatz besitzen "stops" und "segments".
+// Das neue Beispiel für den Karten-Slider nutzt dagegen ein "days"-Schema.
+const routes = rawRoutes.filter((route) => Array.isArray(route.stops));
+const exampleRoute = rawRoutes.find((route) => route.id === 'example-andes-pacific');
 
 const allowedModes = new Set(Object.keys(data.transportModes));
 
 test('meta information is present', () => {
   assert.ok(data.meta?.title, 'meta title missing');
-  assert.ok(Array.isArray(data.routeIndex) && data.routeIndex.length === 6, 'expected 6 routes');
+  assert.ok(Array.isArray(data.routeIndex) && data.routeIndex.length === 7, 'expected 7 routes');
 });
 
 test('suggestion library exposes mindestens ein Dutzend Mix-and-Match-Ideen', () => {
@@ -30,11 +35,11 @@ test('suggestion library exposes mindestens ein Dutzend Mix-and-Match-Ideen', ()
   assert.ok(roadtrips.length >= 3, 'expected at least 3 roadtrip ideas');
 });
 
-test('route index highlights three flight and three roadtrip options', () => {
+test('route index highlights mindestens drei Flug- und Roadtrip-Optionen', () => {
   const flights = data.routeIndex.filter((entry) => entry.tags?.includes('flight'));
   const roadtrips = data.routeIndex.filter((entry) => entry.tags?.includes('roadtrip'));
-  assert.equal(flights.length, 3, 'expected 3 flight-based routes');
-  assert.equal(roadtrips.length, 3, 'expected 3 roadtrip routes');
+  assert.ok(flights.length >= 3, 'expected at least 3 flight-based routes');
+  assert.ok(roadtrips.length >= 3, 'expected at least 3 roadtrip routes');
 });
 
 // Wir prüfen das Stylesheet direkt, damit der Grid-Anteil für Einsteiger:innen
@@ -134,6 +139,64 @@ test('lodging and food entries contain enrichments', () => {
     (route.activities ?? []).forEach((activity) => {
       assert.ok(activity.website, 'activity website missing');
       assert.ok(activity.difficulty, 'activity difficulty missing');
+    });
+  });
+});
+
+// Für Einsteiger:innen dokumentieren wir hier das neue Beispieldatenset, das den Karten-Slider erklärt.
+// Der Test prüft, dass alle Tagesabschnitte Kartenpunkte, Bilder und Mobilitätsangaben enthalten.
+test('example slider route bietet tagesbasierte Segmente mit Kartenkontext', () => {
+  assert.ok(exampleRoute, 'example route missing');
+  assert.ok(Array.isArray(exampleRoute.days), 'example days missing');
+  assert.equal(exampleRoute.days.length, 3, 'example should cover exactly 3 days');
+  assert.ok(Array.isArray(exampleRoute.mapLayers?.dailySegments), 'daily segments missing');
+  assert.equal(
+    exampleRoute.mapLayers.dailySegments.length,
+    exampleRoute.days.length,
+    'each day should expose one geometry segment'
+  );
+
+  exampleRoute.days.forEach((day) => {
+    assert.ok(day.date, 'day needs date');
+    assert.ok(day.station?.name, 'station name missing');
+    assert.ok(Array.isArray(day.station.images) && day.station.images.length >= 2, 'station needs multiple images');
+
+    assert.ok(Array.isArray(day.arrival?.segments) && day.arrival.segments.length > 0, 'arrival segments missing');
+    day.arrival.segments.forEach((segment) => {
+      assert.ok(segment.mode, 'segment mode missing');
+      assert.ok(Array.isArray(segment.images) && segment.images.length >= 2, 'segments need multiple images');
+    });
+
+    assert.ok(Array.isArray(day.arrival?.mapPoints) && day.arrival.mapPoints.length > 0, 'arrival map points missing');
+    day.arrival.mapPoints.forEach((point) => {
+      assert.ok(point.id, 'map point id missing');
+      assert.ok(point.coordinates?.lat, 'map point lat missing');
+      assert.ok(point.coordinates?.lng, 'map point lng missing');
+      assert.ok(Array.isArray(point.images) && point.images.length >= 2, 'map point images missing');
+    });
+
+    assert.ok(Array.isArray(day.activities) && day.activities.length > 0, 'activities missing');
+    day.activities.forEach((activity) => {
+      assert.ok(activity.name, 'activity name missing');
+      assert.ok(Array.isArray(activity.images) && activity.images.length >= 2, 'activity images missing');
+      assert.ok(Array.isArray(activity.restaurants), 'activity restaurants missing');
+      activity.restaurants.forEach((restaurant) => {
+        assert.ok(Array.isArray(restaurant.images) && restaurant.images.length >= 2, 'restaurant images missing');
+      });
+    });
+
+    assert.ok(Array.isArray(day.hotels) && day.hotels.length >= 5, 'need at least five hotel suggestions');
+    day.hotels.forEach((hotel) => {
+      assert.ok(Array.isArray(hotel.images) && hotel.images.length >= 2, 'hotel images missing');
+      assert.ok(hotel.url, 'hotel url missing');
+    });
+
+    assert.ok(day.mobilityOptions?.nextFlight, 'next flight missing');
+    assert.ok(day.mobilityOptions?.nextBus, 'next bus missing');
+    assert.ok(day.mobilityOptions?.nextDrive, 'next drive missing');
+    ['nextFlight', 'nextBus', 'nextDrive'].forEach((key) => {
+      const option = day.mobilityOptions[key];
+      assert.ok(Array.isArray(option.images) && option.images.length >= 2, `${key} images missing`);
     });
   });
 });
