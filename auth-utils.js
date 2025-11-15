@@ -1,6 +1,13 @@
 (function (global) {
   'use strict';
 
+  // Für Einsteiger:innen: Wir kapseln alle Auth-Helfer hier, damit sowohl die
+  // statischen HTML-Seiten als auch die Svelte-App denselben Wissensstand nutzen.
+  const AUTH_COOKIE_NAME = 'auth-token';
+  const AUTH_COOKIE_VALUE = 'authenticated';
+  const COOKIE_MAX_AGE_SECONDS = 60 * 60 * 12; // 12 Stunden Gültigkeit wie in der Svelte-App.
+  const REDIRECT_STORAGE_KEY = 'auth:post-login-redirect';
+
   /**
    * Create a SHA-256 hash for the provided password.
    * Uses the browser SubtleCrypto API when available and
@@ -170,11 +177,149 @@
     return typeof process !== 'undefined' && process.versions && process.versions.node;
   }
 
+  /**
+   * Prüft, ob ein gültiges Auth-Cookie oder – als Fallback für ältere Builds –
+   * ein LocalStorage-Flag existiert.
+   * @param {string} [cookieSource] - Optionaler Cookie-String für Tests.
+   * @param {{ getItem(key: string): string | null }} [storage]
+   * @returns {boolean}
+   */
+  function hasActiveSession(cookieSource, storage) {
+    const cookies = typeof cookieSource === 'string' ? cookieSource : getDocumentCookie();
+    const cookieEntries = cookies
+      .split(';')
+      .map((entry) => entry.trim())
+      .filter(Boolean);
+
+    const hasCookie = cookieEntries.some((entry) => entry === `${AUTH_COOKIE_NAME}=${AUTH_COOKIE_VALUE}`);
+    if (hasCookie) {
+      return true;
+    }
+
+    const store = storage || getLocalStorage();
+    if (!store) {
+      return false;
+    }
+
+    return store.getItem && store.getItem('auth') === 'true';
+  }
+
+  /**
+   * Setzt das Auth-Cookie und synchronisiert das LocalStorage-Flag.
+   * @param {{ cookiePath?: string }} [options]
+   */
+  function persistSession(options) {
+    const cookiePath = (options && options.cookiePath) || '/';
+    const doc = getDocument();
+
+    if (doc) {
+      doc.cookie = `${AUTH_COOKIE_NAME}=${AUTH_COOKIE_VALUE}; Path=${cookiePath}; Max-Age=${COOKIE_MAX_AGE_SECONDS}; SameSite=Lax`;
+    }
+
+    const store = getLocalStorage();
+    if (store) {
+      store.setItem('auth', 'true');
+    }
+  }
+
+  /**
+   * Entfernt das Auth-Cookie und bereinigt LocalStorage.
+   * @param {{ cookiePath?: string }} [options]
+   */
+  function clearSession(options) {
+    const cookiePath = (options && options.cookiePath) || '/';
+    const doc = getDocument();
+
+    if (doc) {
+      doc.cookie = `${AUTH_COOKIE_NAME}=; Path=${cookiePath}; Max-Age=0; SameSite=Lax`;
+    }
+
+    const store = getLocalStorage();
+    if (store) {
+      store.removeItem('auth');
+    }
+  }
+
+  /**
+   * Merkt sich die Zieladresse, damit wir nach erfolgreichem Login dorthin zurückkehren können.
+   * @param {string} targetUrl
+   */
+  function rememberRedirect(targetUrl) {
+    if (typeof targetUrl !== 'string' || !targetUrl) {
+      return;
+    }
+
+    const storage = getSessionStorage();
+    storage?.setItem(REDIRECT_STORAGE_KEY, targetUrl);
+  }
+
+  /**
+   * Liest den gespeicherten Redirect einmalig aus und entfernt ihn anschließend.
+   * @returns {string | null}
+   */
+  function consumeRedirect() {
+    const storage = getSessionStorage();
+    if (!storage) {
+      return null;
+    }
+
+    const value = storage.getItem(REDIRECT_STORAGE_KEY);
+    if (value) {
+      storage.removeItem(REDIRECT_STORAGE_KEY);
+      return value;
+    }
+
+    return null;
+  }
+
+  function getDocument() {
+    if (typeof global !== 'undefined' && global.document) {
+      return global.document;
+    }
+    if (typeof document !== 'undefined') {
+      return document;
+    }
+    return undefined;
+  }
+
+  function getDocumentCookie() {
+    const doc = getDocument();
+    return doc && typeof doc.cookie === 'string' ? doc.cookie : '';
+  }
+
+  function getLocalStorage() {
+    if (typeof global !== 'undefined' && global.localStorage) {
+      return global.localStorage;
+    }
+    if (typeof localStorage !== 'undefined') {
+      return localStorage;
+    }
+    return undefined;
+  }
+
+  function getSessionStorage() {
+    if (typeof global !== 'undefined' && global.sessionStorage) {
+      return global.sessionStorage;
+    }
+    if (typeof sessionStorage !== 'undefined') {
+      return sessionStorage;
+    }
+    return undefined;
+  }
+
   const api = {
     hashPassword,
     hashPasswordSync,
     verifyPassword,
     verifyPasswordSync,
+    hasActiveSession,
+    persistSession,
+    clearSession,
+    rememberRedirect,
+    consumeRedirect,
+    AUTH_COOKIE_NAME,
+    AUTH_COOKIE_VALUE,
+    COOKIE_MAX_AGE_SECONDS,
   };
 
   if (typeof module !== 'undefined' && module.exports) {

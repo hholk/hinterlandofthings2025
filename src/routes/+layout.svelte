@@ -1,22 +1,51 @@
 <script lang="ts">
   import { browser } from '$app/environment';
+  import { base } from '$app/paths';
+  import { goto } from '$app/navigation';
+  import { page } from '$app/stores';
   import { onMount } from 'svelte';
   import { gsap } from 'gsap';
   import type LocomotiveScroll from 'locomotive-scroll';
   import 'locomotive-scroll/dist/locomotive-scroll.css';
   import '../app.css';
-  import { initializeAuth } from '$stores/auth';
+  import { initializeAuth, isAuthenticated } from '$stores/auth';
 
   let container: HTMLDivElement | null = null;
 
   // Für Einsteiger:innen: onMount läuft nur im Browser, nicht auf dem Server.
   // So stellen wir sicher, dass Animationen nur dort laufen, wo DOM verfügbar ist.
   onMount(() => {
-    if (!browser || !container) {
+    if (!browser) {
       return undefined;
     }
 
+    // Erst den Auth-Store synchronisieren, bevor wir Animationen oder Navigationslogik starten.
     initializeAuth();
+
+    let currentPath = globalThis.location?.pathname ?? '';
+    const loginPath = `${base || ''}/login`;
+    const homePath = `${base || ''}/`;
+
+    const unsubscribePage = page.subscribe(($page) => {
+      currentPath = $page.url.pathname;
+    });
+
+    const unsubscribeAuth = isAuthenticated.subscribe((loggedIn) => {
+      const onLoginRoute = currentPath === loginPath || currentPath.startsWith(`${loginPath}/`);
+
+      if (!loggedIn && !onLoginRoute) {
+        goto(loginPath, { replaceState: true });
+      } else if (loggedIn && onLoginRoute) {
+        goto(homePath, { replaceState: true });
+      }
+    });
+
+    if (!container) {
+      return () => {
+        unsubscribeAuth();
+        unsubscribePage();
+      };
+    }
 
     let loco: LocomotiveScroll | undefined;
     let ctx: gsap.Context | undefined;
@@ -41,6 +70,8 @@
     })();
 
     return () => {
+      unsubscribeAuth();
+      unsubscribePage();
       ctx?.revert();
       loco?.destroy();
     };

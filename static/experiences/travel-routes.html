@@ -4,6 +4,9 @@
     <meta charset="utf-8" />
     <title>Weiterleitung zur Travel Experience</title>
     <meta http-equiv="refresh" content="0; url=./travel-routes/" />
+    <!-- Sicherstellen, dass die Weiterleitung nur mit gültiger Session greift. -->
+    <script src="../auth-utils.js"></script>
+    <script src="../protect.js"></script>
     <script>
       // Für Einsteiger:innen: Wir leiten alte .html-Links auf die neue SvelteKit-Route um.
       (function redirectLegacyRoute() {

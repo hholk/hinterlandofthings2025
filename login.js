@@ -10,6 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const successPanel = document.getElementById('post-login-panel');
   const successGrid = document.getElementById('experience-grid-login');
   let hasRenderedSuccessView = false;
+  const authUtils = window.AuthUtils || {};
+  // Für Einsteiger:innen: Path "/" sorgt dafür, dass das Cookie für alle Unterseiten gilt.
+  const COOKIE_PATH = '/';
 
   // Helper to show inline feedback instead of disruptive alert pop-ups.
   const showMessage = (text, type = 'info') => {
@@ -77,9 +80,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     }
+
+    const redirectTarget = typeof authUtils.consumeRedirect === 'function' ? authUtils.consumeRedirect() : null;
+    if (redirectTarget) {
+      // Mini-Verzögerung, damit sich Screenreader orientieren können, bevor wir weiterleiten.
+      window.setTimeout(() => {
+        window.location.replace(redirectTarget);
+      }, 450);
+    }
   };
 
-  if (localStorage.getItem('auth') === 'true') {
+  if (typeof authUtils.hasActiveSession === 'function' ? authUtils.hasActiveSession() : localStorage.getItem('auth') === 'true') {
     revealSuccessView();
     showMessage('Du bist bereits angemeldet – wähle jetzt eine Unterseite.', 'success');
   }
@@ -92,6 +103,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!password) {
       showMessage('Bitte gib dein Passwort ein.', 'error');
       passwordInput.focus();
+      if (typeof authUtils.clearSession === 'function') {
+        authUtils.clearSession({ cookiePath: COOKIE_PATH });
+      }
       return;
     }
 
@@ -101,7 +115,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (isValid) {
         showMessage('Erfolgreich angemeldet. Wähle jetzt deine Unterseite!', 'success');
-        localStorage.setItem('auth', 'true');
+        if (typeof authUtils.persistSession === 'function') {
+          authUtils.persistSession({ cookiePath: COOKIE_PATH });
+        } else {
+          localStorage.setItem('auth', 'true');
+        }
         revealSuccessView();
       } else {
         showMessage('Das Passwort stimmt nicht. Bitte versuche es erneut.', 'error');
@@ -109,9 +127,15 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => form.classList.remove('shake'), 600);
         passwordInput.focus();
         passwordInput.select();
+        if (typeof authUtils.clearSession === 'function') {
+          authUtils.clearSession({ cookiePath: COOKIE_PATH });
+        }
       }
     } catch (error) {
       console.error('Login failed', error);
+      if (typeof authUtils.clearSession === 'function') {
+        authUtils.clearSession({ cookiePath: COOKIE_PATH });
+      }
       showMessage('Etwas ist schiefgelaufen. Bitte lade die Seite neu und versuche es erneut.', 'error');
     } finally {
       setLoading(false);
