@@ -8,6 +8,13 @@
  */
 
 const hasDocument = typeof document !== 'undefined';
+const assetBase = (() => {
+  try {
+    return new URL('.', import.meta.url);
+  } catch (error) {
+    return null;
+  }
+})();
 
 const state = {
   data: null,
@@ -101,6 +108,24 @@ if (hasDocument) {
  * GitHub-Pages-Caches und stellen sicher, dass neue Varianten sofort sichtbar
  * sind – genau das, was sich Beginner:innen beim Debugging wünschen.
  */
+function resolveResource(resource) {
+  if (!assetBase) {
+    return resource;
+  }
+  if (typeof resource === 'string') {
+    // Relative Pfade verlinken wir zuverlässig auf den Ordner der aktuellen Datei.
+    if (/^[a-z]+:/i.test(resource) || resource.startsWith('/')) {
+      return resource;
+    }
+    try {
+      return new URL(resource, assetBase).href;
+    } catch (error) {
+      return resource;
+    }
+  }
+  return resource;
+}
+
 function fetchFresh(resource, options = {}) {
   const headers = new Headers(options.headers ?? {});
   if (!headers.has('cache-control')) {
@@ -110,7 +135,9 @@ function fetchFresh(resource, options = {}) {
     headers.set('pragma', 'no-cache');
   }
 
-  return fetch(resource, {
+  const resolvedResource = resolveResource(resource);
+
+  return fetch(resolvedResource, {
     ...options,
     headers,
     cache: 'no-store',
