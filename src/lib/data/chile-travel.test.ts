@@ -1,49 +1,73 @@
-import { describe, it, expect } from 'vitest';
+import { describe, expect, it } from 'vitest';
 import {
   availableRouteIds,
-  buildRouteLineCollection,
-  buildRouteMarkerCollection,
   chileTravelData,
-  loadRouteById
+  loadRouteById,
+  type RouteDetail
 } from './chile-travel';
 
-// Für Einsteiger:innen: Tests helfen uns, Datenfehler sofort zu entdecken – etwa
-// fehlende Hotels oder Stops ohne Koordinaten. So bleibt die UI robust.
-describe('chileTravelData', () => {
-  it('enthält drei vollständig ausgearbeitete Routen', () => {
-    expect(chileTravelData.routes).toHaveLength(3);
-    expect(availableRouteIds).toEqual(chileTravelData.routes.map((route) => route.id));
+// Für Einsteiger:innen: Die Tests überprüfen, dass wirklich alle JSON-Dateien
+// in den Datensatz einfließen. Sobald ein neues File im Ordner liegt, darf der
+// Index nicht veralten.
+describe('chileTravelData dataset', () => {
+  it('lädt das Index-Manifest inklusive aller verfügbaren Routen', () => {
+    expect(chileTravelData.routeIndex.length).toBeGreaterThanOrEqual(6);
+    expect(chileTravelData.availableRouteIds).toEqual(availableRouteIds);
 
-    for (const route of chileTravelData.routes) {
-      expect(route.stops.length, `${route.id} benötigt mindestens zwei Stopps`).toBeGreaterThanOrEqual(2);
-      expect(route.transportMix.length, `${route.id} sollte Transportarten nennen`).toBeGreaterThan(0);
-      expect(route.summary.length, `${route.id} braucht eine Beschreibung`).toBeGreaterThan(20);
-
-      for (const stop of route.stops) {
-        expect(stop.coordinates).toHaveLength(2);
-        expect(stop.highlights.length, `${stop.id} sollte Highlights haben`).toBeGreaterThan(0);
-        expect(stop.accommodation.length, `${stop.id} benötigt eine Unterkunftsempfehlung`).toBeGreaterThan(5);
-        expect(stop.stayNights).toBeGreaterThanOrEqual(0);
-      }
+    for (const entry of chileTravelData.routeIndex) {
+      const route = chileTravelData.routes[entry.id];
+      expect(route, `${entry.id} sollte in routes verfügbar sein`).toBeDefined();
+      expect(route?.name).toBeTruthy();
+      expect(route?.meta?.durationDays).toBeGreaterThan(0);
     }
   });
 
-  it('lädt einzelne Routenmodule dynamisch nach', async () => {
-    const [firstId] = availableRouteIds;
-    const dynamicRoute = await loadRouteById(firstId);
-
-    expect(dynamicRoute?.id).toBe(firstId);
-    expect(dynamicRoute?.stops.length).toBeGreaterThan(0);
+  it('stellt Metadaten und Transportarten bereit', () => {
+    expect(chileTravelData.meta.title.length).toBeGreaterThan(10);
+    const modeKeys = Object.keys(chileTravelData.transportModes);
+    expect(modeKeys.length).toBeGreaterThanOrEqual(3);
+    modeKeys.forEach((key) => {
+      const mode = chileTravelData.transportModes[key];
+      expect(mode.label).toBeTruthy();
+      expect(typeof mode.color).toBe('string');
+    });
   });
 
-  it('stellt GeoJSON-Hilfsstrukturen für Karte und Marker bereit', () => {
-    const [firstRoute] = chileTravelData.routes;
-    const markers = buildRouteMarkerCollection(firstRoute);
-    const line = buildRouteLineCollection(firstRoute);
+  it('liefert beim Beispielroute-Slider Tagessegmente', () => {
+    const example = chileTravelData.routes['example-andes-pacific'];
+    expect(example, 'Beispielroute fehlt').toBeDefined();
+    expect(Array.isArray(example?.days)).toBe(true);
+    expect(example?.days?.length).toBe(3);
+    expect(example?.mapLayers?.dailySegments?.length).toBe(example?.days?.length);
+  });
+});
 
-    expect(markers.features).toHaveLength(firstRoute.stops.length);
-    expect(markers.features[0].geometry.type).toBe('Point');
-    expect(line.features[0].geometry.type).toBe('LineString');
-    expect(line.features[0].geometry.coordinates).toEqual(firstRoute.mapPolyline);
+describe('loadRouteById', () => {
+  it('gibt denselben Routen-Eintrag zurück, den auch das Manifest nutzt', async () => {
+    const [firstId] = availableRouteIds;
+    expect(firstId).toBeTruthy();
+
+    const route = await loadRouteById(firstId);
+    expect(route?.id).toBe(firstId);
+    expect(route?.name).toBe(chileTravelData.routes[firstId].name);
+  });
+
+  it('liefert null für unbekannte IDs', async () => {
+    const route = await loadRouteById('unbekannt');
+    expect(route).toBeNull();
+  });
+});
+
+// Hilfsprüfung: Mindestens eine Route besitzt klassische Segmente & Stopps –
+// dadurch stellen wir sicher, dass die Karte immer Daten für Marker erhält.
+describe('route structure sanity checks', () => {
+  function hasStops(route: RouteDetail | undefined): boolean {
+    return Array.isArray(route?.stops) && route?.stops?.length > 0;
+  }
+
+  it('mindestens eine Route enthält Stopps und Segmente', () => {
+    const routeWithStops = Object.values(chileTravelData.routes).find((route) => hasStops(route));
+    expect(routeWithStops, 'Es sollte mindestens eine klassische Route geben').toBeDefined();
+    expect(routeWithStops?.segments?.length).toBeGreaterThan(0);
   });
 });

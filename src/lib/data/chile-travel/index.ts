@@ -1,115 +1,80 @@
-import type { ChileTravelData, MapSettings, TravelRoute } from './types';
+import datasetRaw from '../../../../travel-routes/travel-routes-data.json?raw';
+import type { LoadedTravelRoutesDataset, RouteDetail, RouteIndexEntry, TravelRoutesDataset } from './types';
 
-type RouteModule = {
-  default?: TravelRoute;
-  [exportName: string]: unknown;
-};
-
-const eagerRouteModules = import.meta.glob('./routes/*.ts', { eager: true }) as Record<string, RouteModule>;
-const lazyRouteModules = import.meta.glob('./routes/*.ts');
-
-const ROUTE_ORDER = ['patagonien-panorama', 'atacama-sternen', 'pazifik-genuss'];
-
-function extractRoute(module: RouteModule): TravelRoute | null {
-  if (module.default) {
-    return module.default;
-  }
-
-  const fallback = Object.values(module).find((candidate): candidate is TravelRoute => {
-    if (typeof candidate !== 'object' || candidate === null) return false;
-    return 'id' in candidate && 'stops' in candidate;
-  });
-
-  return fallback ?? null;
-}
-
-// Für Einsteiger:innen: Die Map-Konfiguration enthält bewusst Raster-Tiles von
-// OpenStreetMap. Damit bleibt die Karte DSGVO-konform, performant und kostenlos.
-const chileMapSettings: MapSettings = {
-  center: [-70.6693, -33.4489],
-  zoom: 4.4,
-  tileUrl: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-  attribution: '&copy; OpenStreetMap-Mitwirkende',
-  legend: [
-    { label: 'Aktive Route', color: '#2563eb' },
-    { label: 'Alternative Route', color: '#a5b4fc' }
-  ],
-  mobilePadding: 120,
-  maxZoom: 12
-};
-
-const travelRoutesInternal = Object.values(eagerRouteModules)
-  .map((module) => extractRoute(module))
-  .filter((route): route is TravelRoute => Boolean(route));
-
-travelRoutesInternal.sort((a, b) => {
-  const indexA = ROUTE_ORDER.indexOf(a.id);
-  const indexB = ROUTE_ORDER.indexOf(b.id);
-  const safeA = indexA === -1 ? Number.MAX_SAFE_INTEGER : indexA;
-  const safeB = indexB === -1 ? Number.MAX_SAFE_INTEGER : indexB;
-  if (safeA !== safeB) {
-    return safeA - safeB;
-  }
-  return a.name.localeCompare(b.name, 'de');
+const routeModules = import.meta.glob('../../../../travel-routes/data/routes/*.json', {
+  eager: true,
+  as: 'raw'
 });
 
-export const travelRoutes = travelRoutesInternal;
+function parseRoute(raw: string): RouteDetail | null {
+  try {
+    const parsed = JSON.parse(raw) as RouteDetail;
+    if (parsed && typeof parsed.id === 'string') {
+      if (!parsed.name && typeof (parsed as { title?: string }).title === 'string') {
+        parsed.name = (parsed as { title?: string }).title as string;
+      }
+      return parsed;
+    }
+  } catch (error) {
+    console.warn('Route konnte nicht geparst werden', error);
+  }
+  return null;
+}
 
-export const availableRouteIds = travelRoutesInternal.map((route) => route.id);
+const routes: Record<string, RouteDetail> = {};
+for (const raw of Object.values(routeModules)) {
+  const route = parseRoute(raw);
+  if (route) {
+    routes[route.id] = route;
+  }
+}
 
-export const chileTravelData: ChileTravelData = {
-  map: chileMapSettings,
-  routes: travelRoutesInternal
+function parseDataset(raw: string): TravelRoutesDataset {
+  try {
+    return JSON.parse(raw) as TravelRoutesDataset;
+  } catch (error) {
+    console.warn('Konnte travel-routes-data.json nicht parsen', error);
+    throw error;
+  }
+}
+
+const baseDataset = parseDataset(datasetRaw);
+
+const filteredIndex: RouteIndexEntry[] = baseDataset.routeIndex.filter((entry) => {
+  if (routes[entry.id]) return true;
+  console.warn(`Route ${entry.id} fehlt im Datensatz und wird übersprungen.`);
+  return false;
+});
+
+for (const entry of filteredIndex) {
+  const route = routes[entry.id];
+  if (!route) continue;
+  if (!route.name && entry.name) {
+    route.name = entry.name;
+  }
+  if (!route.meta && entry.meta) {
+    route.meta = { ...entry.meta };
+  } else if (route.meta && entry.meta?.durationDays && !route.meta.durationDays) {
+    route.meta.durationDays = entry.meta.durationDays;
+  }
+}
+
+const availableRouteIds = filteredIndex.map((entry) => entry.id);
+
+// Für Einsteiger:innen: Wir kombinieren das Index-Manifest mit den einzelnen
+// JSON-Dateien. `import.meta.glob` beobachtet den Ordner – neue Dateien werden
+// automatisch eingebunden, ohne dass zusätzlicher Code nötig ist.
+export const chileTravelData: LoadedTravelRoutesDataset = {
+  ...baseDataset,
+  routeIndex: filteredIndex,
+  routes,
+  availableRouteIds
 };
 
-export async function loadRouteById(id: string): Promise<TravelRoute | null> {
-  const entry = Object.entries(lazyRouteModules).find(([path]) => path.includes(`/${id}.ts`));
-  if (!entry) {
-    return null;
-  }
+export { availableRouteIds };
 
-  const module = (await entry[1]()) as RouteModule;
-  return extractRoute(module);
-}
-
-// Für Einsteiger:innen: Leaflet- und MapLibre-Hilfen nutzen dieselben GeoJSON-
-// Strukturen. Damit bleiben Tests und andere Visualisierungen kompatibel.
-export function buildRouteMarkerCollection(route: TravelRoute) {
-  return {
-    type: 'FeatureCollection',
-    features: route.stops.map((stop, index) => ({
-      type: 'Feature' as const,
-      geometry: {
-        type: 'Point' as const,
-        coordinates: stop.coordinates
-      },
-      properties: {
-        index,
-        id: stop.id,
-        location: stop.location,
-        dayRange: stop.dayRange
-      }
-    }))
-  } as const;
-}
-
-export function buildRouteLineCollection(route: TravelRoute) {
-  return {
-    type: 'FeatureCollection',
-    features: [
-      {
-        type: 'Feature' as const,
-        geometry: {
-          type: 'LineString' as const,
-          coordinates: route.mapPolyline
-        },
-        properties: {
-          id: route.id,
-          name: route.name
-        }
-      }
-    ]
-  } as const;
+export async function loadRouteById(id: string): Promise<RouteDetail | null> {
+  return routes[id] ?? null;
 }
 
 export * from './types';

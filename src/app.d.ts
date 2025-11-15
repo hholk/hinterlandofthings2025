@@ -9,3 +9,11 @@ declare global {
 }
 
 export {};
+
+// Für Einsteiger:innen: Mit diesem Modul-Stub kann TypeScript JSON-Dateien mit dem
+// Suffix `?raw` als einfache Zeichenketten behandeln. So lassen sich komplexe
+// Datensätze einlesen und anschließend per `JSON.parse` weiterverarbeiten.
+declare module '*.json?raw' {
+  const content: string;
+  export default content;
+}
