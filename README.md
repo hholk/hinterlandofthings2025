@@ -1,33 +1,58 @@
-# hinterlandofthings2025
-Kleine PWA, um sich auf der Hinterland of Things 2025 zu orientieren. Offline und client-seitig. Die eigentliche PWA befindet sich nun unter `hinterland.html`. Eine neue Startseite `index.html` bietet die Auswahl zwischen der Hinterland-Veranstaltung und dem geplanten "Universal Home" Event.
+# Interactive Briefing Hub (SvelteKit Edition)
 
-**Connection to Miele:** This content relates to ongoing work at Miele.
+Diese Version migriert das bisherige statische Setup vollständig auf [SvelteKit](https://kit.svelte.dev/).
+Moderne Animationen kommen über [GSAP](https://gsap.com/) und smooth scrolling via
+[Locomotive Scroll](https://locomotivemtl.github.io/locomotive-scroll/) aus der empfohlenen
+JavaScript-Library-Sammlung.
 
-## Warum teilnehmen?
+## Schnellstart
 
-Als KI-Sprachmodell erkenne ich hier zahlreiche Chancen: Die Veranstaltung bietet Einblicke in neue Technologien, ermöglicht wertvolle Kontakte und inspiriert zu innovativen Ideen. Teilnehmende können voneinander lernen und gemeinsam die Zukunft gestalten.
+```bash
+npm install
+npm run dev    # Entwicklungsserver
+npm run build  # Produktions-Build
+npm run preview
+npm run test   # Vitest + jsdom
+```
 
-## Login & Zugang
+## GitHub Pages & Stealth Login
 
-- **Standardpasswort:** `689i9052A.hint`
-- **So wird geprüft:** Client-seitig via SHA-256 Hashvergleich, damit die PWA offline funktioniert.
-- **Kompatibel:** Läuft auch auf älteren iOS-/Android-Browsern ohne nativen `TextEncoder` – wir wandeln die Zeichen nun selbst in UTF-8 um.
-- **Passwort ändern:**
-  1. `PASSWORD="DeinNeuesPasswort" node generate_credentials.js`
-  2. Die generierte `credentials.js` einchecken.
-- **Tipp:** Nach dem Login wird ein `auth`-Flag im `localStorage` gesetzt. Zum Abmelden einfach den lokalen Speicher für die Domain leeren.
-- **Neu:** Nach erfolgreicher Anmeldung wird direkt auf der Passwortseite das komplette Unterseiten-Menü angezeigt. Die Daten liegen in `experience-pages.js`, die Darstellung übernimmt `experience-ui.js` (inkl. VanillaTilt für die Glas-Parallax-Effekte).
+- **Statischer Build:** Dank `@sveltejs/adapter-static` rendert `npm run build` alle Seiten als HTML.
+- **Basis-Pfad:** Deployments unter `https://<user>.github.io/<repo>` setzen `BASE_PATH=/hinterlandofthings2025` (oder nutzen das
+  automatisch erkannte `GITHUB_REPOSITORY`).
+- **.nojekyll:** Die Datei `static/.nojekyll` stellt sicher, dass GitHub Pages die `_app`-Assets ausliefert.
+- **Stealth Login im Client:**
+  - `PASSWORD_HASH` liegt weiterhin in `src/lib/utils/auth.ts`.
+  - `src/lib/stores/auth.ts` prüft Cookies im Browser und steuert die Weiterleitung.
+  - Die Login-Seite (`src/routes/login/+page.svelte`) verifiziert den Hash direkt im Browser und schreibt ein Session-Cookie.
+  - Kommentare in den Dateien erklären Einsteiger:innen jeden Schritt.
 
-## UI-Richtlinien
+## Inhaltliche Module
 
-- Die Passwortseite definiert Farben, Glas-Optik und Typografie. Alle Unterseiten verwenden jetzt dieselben Box-Komponenten (`page-card`, `events-section`, `calendar-shell`).
-- Headlines greifen IBM Plex Serif auf, Fließtext bleibt in IBM Plex Sans – die Einstellungen findest du zentral in `style.css`.
-- Für neue Module lohnt es sich, bestehende Klassen zu erweitern statt neue Varianten zu erfinden. So bleibt das Look & Feel konsistent.
+| Bereich | Datei | Hinweis |
+| --- | --- | --- |
+| Landing Page | `src/routes/+page.svelte` | Hero, Kartenraster & Fahrplan-Übersicht |
+| Experiences | `src/routes/experiences/[slug]/+page.svelte` | Platzhalter pro Modul, Daten aus `src/lib/data/experiences.ts` |
+| Fahrplan | `src/lib/components/ScheduleTable.svelte` | Lädt Markdown-Slots aus `src/lib/data/timeslots.json` |
 
-## Neu: Travel Experience (Chile)
+## Tests & Qualitätssicherung
 
-- Unter `travel-routes/index.html` findest du eine komplett modulare Reiserouten-Seite. Die Daten liegen in `travel-routes/travel-routes-data.json` und lassen sich über das Hilfsskript `travel-routes/build_data.py` bequem pflegen.
-- Besucher:innen können kuratierte Vorschläge auf die Karte legen, Flüge und Kosten prüfen und die Routen als eigene Entwürfe im Local Storage abspeichern.
-- Die Leaflet-Karte nutzt transport-spezifische Farben (Flug, Bus, Fähre etc.), Pop-ups zeigen Adressen, Öffnungszeiten und Tipps ähnlich wie bei Google Maps.
-- Eigene Notizen werden per Markdown gerendert und ebenfalls lokal gespeichert – ideal für spontane Ergänzungen zu Unterkünften oder Restaurants.
-- Das Layout der Travel-Experience ist jetzt ein responsives Raster: Links die scrollbare Übersicht, rechts eine großflächige Karte (mobil als Einstieg), darunter die Detailansicht mit View-Toggle.
+- `npm run test` führt unter anderem `src/lib/utils/auth.test.ts`, `src/lib/stores/auth.test.ts` und `config/base-path.test.ts` aus,
+  damit Login und GitHub-Pages-Pfad stabil bleiben.
+- `npm run lint` startet `svelte-check` und synchronisiert das SvelteKit-Projekt.
+
+## Passwort ändern
+
+1. Neues Passwort hashen (z. B. in Node):
+   ```js
+   import crypto from 'node:crypto';
+   const hash = crypto.createHash('sha256').update('DEIN_NEUES_PASSWORT').digest('hex');
+   console.log(hash);
+   ```
+2. Den Hash in `PASSWORD_HASH` ersetzen.
+
+## Migration weiterer Inhalte
+
+- Die bisherigen HTML-Dateien können nach und nach in `src/routes` übertragen werden.
+- Das Daten-Array in `src/lib/data/experiences.ts` steuert Navigationspunkte sowie die Detailseiten.
+- Kommentare helfen Einsteiger:innen beim Ergänzen neuer Module.
