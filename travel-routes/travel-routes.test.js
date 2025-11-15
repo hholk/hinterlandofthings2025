@@ -120,6 +120,19 @@ test('every route has valid stops and segments', () => {
   });
 });
 
+test('every stop exposes spoiler notes for the station view', () => {
+  routes.forEach((route) => {
+    route.stops.forEach((stop) => {
+      assert.ok(Array.isArray(stop.notes), `stop ${stop.id} notes missing`);
+      assert.ok(stop.notes.length > 0, `stop ${stop.id} notes should not be empty`);
+      stop.notes.forEach((note, index) => {
+        assert.equal(typeof note, 'string', `note ${index} in ${stop.id} must be string`);
+        assert.ok(note.trim().length >= 10, `note ${index} in ${stop.id} too short`);
+      });
+    });
+  });
+});
+
 test('routes expose metrics for planning', () => {
   routes.forEach((route) => {
     assert.ok(route.metrics, 'metrics missing');

@@ -83,6 +83,10 @@
           "credit": "Agustín Lautaro",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Check-in in Santiago International Airport (SCL) öffnet rund zwei Stunden vor Abflug – morgens bilden sich hier längere Sicherheits-Schlangen.",
+        "Vorab gebuchte Transfers verkürzen die Fahrt in Richtung Santiago; spontane Taxis sind im Januar oft ausgelastet."
       ]
     },
     {
@@ -111,6 +115,10 @@
           "credit": "Ignacio Pardo",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Check-in in Aeropuerto Balmaceda (BBA) öffnet rund zwei Stunden vor Abflug – morgens bilden sich hier längere Sicherheits-Schlangen.",
+        "Vorab gebuchte Transfers verkürzen die Fahrt in Richtung Balmaceda; spontane Taxis sind im Januar oft ausgelastet."
       ]
     },
     {
@@ -139,6 +147,10 @@
           "credit": "Andrés Peña",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Nutze den frühen Vormittag, um Coyhaique Plaza de Armas zu Fuß zu erkunden, bevor die Sonne die Straßenschluchten aufheizt.",
+        "Beliebte Restaurants in Coyhaique sollte man spätestens am Vortag reservieren – Januar zählt zur Hochsaison."
       ]
     },
     {
@@ -167,6 +179,10 @@
           "credit": "Andrés Peña",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Puerto Río Tranquilo zeigt sich zur Golden Hour besonders fotogen – Kamera oder Drohne rechtzeitig laden.",
+        "Rund um Lago General Carrera sind Parkplätze begrenzt; Anreise vor 10 Uhr erleichtert die Suche."
       ]
     },
     {
@@ -195,6 +211,10 @@
           "credit": "Matías Silva",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Das Wetter im Gebiet Capillas de Mármol schlägt schnell um – Regenjacke und Sonnenschutz griffbereit halten.",
+        "Für Ranger-Briefings und Permit-Kontrollen immer 15 Minuten Zeitpuffer einplanen."
       ]
     },
     {
@@ -223,6 +243,10 @@
           "credit": "Felipe Santander",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Das Wetter im Gebiet Parque Nacional Patagonia – Casa Piedra schlägt schnell um – Regenjacke und Sonnenschutz griffbereit halten.",
+        "Für Ranger-Briefings und Permit-Kontrollen immer 15 Minuten Zeitpuffer einplanen."
       ]
     },
     {
@@ -230,7 +254,7 @@
       "name": "Caleta Tortel Stegstadt",
       "type": "town",
       "coordinates": {
-        "lat": -47.7970,
+        "lat": -47.797,
         "lng": -73.5451
       },
       "city": "Caleta Tortel",
@@ -251,6 +275,10 @@
           "credit": "Ignacia Rojas",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Caleta Tortel Stegstadt zeigt sich zur Golden Hour besonders fotogen – Kamera oder Drohne rechtzeitig laden.",
+        "Rund um Caleta Tortel sind Parkplätze begrenzt; Anreise vor 10 Uhr erleichtert die Suche."
       ]
     }
   ],

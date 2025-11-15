@@ -82,6 +82,10 @@
           "credit": "María Fernanda Rojas",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Nutze den frühen Vormittag, um Santiago – Barrio Italia zu Fuß zu erkunden, bevor die Sonne die Straßenschluchten aufheizt.",
+        "Beliebte Restaurants in Santiago sollte man spätestens am Vortag reservieren – Januar zählt zur Hochsaison."
       ]
     },
     {
@@ -110,6 +114,10 @@
           "credit": "Fabiola Peñailillo",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Nutze den frühen Vormittag, um Valparaíso – Cerro Alegre zu Fuß zu erkunden, bevor die Sonne die Straßenschluchten aufheizt.",
+        "Beliebte Restaurants in Valparaíso sollte man spätestens am Vortag reservieren – Januar zählt zur Hochsaison."
       ]
     },
     {
@@ -118,7 +126,7 @@
       "type": "city",
       "coordinates": {
         "lat": -29.9118,
-        "lng": -71.2590
+        "lng": -71.259
       },
       "city": "La Serena",
       "address": {
@@ -138,6 +146,10 @@
           "credit": "Cristóbal Maturana",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Nutze den frühen Vormittag, um La Serena Avenida del Mar zu Fuß zu erkunden, bevor die Sonne die Straßenschluchten aufheizt.",
+        "Beliebte Restaurants in La Serena sollte man spätestens am Vortag reservieren – Januar zählt zur Hochsaison."
       ]
     },
     {
@@ -145,7 +157,7 @@
       "name": "Vicuña – Plaza Gabriela Mistral",
       "type": "town",
       "coordinates": {
-        "lat": -30.0310,
+        "lat": -30.031,
         "lng": -70.7084
       },
       "city": "Vicuña",
@@ -166,6 +178,10 @@
           "credit": "Ignacio Contreras",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Vicuña – Plaza Gabriela Mistral zeigt sich zur Golden Hour besonders fotogen – Kamera oder Drohne rechtzeitig laden.",
+        "Rund um Vicuña sind Parkplätze begrenzt; Anreise vor 10 Uhr erleichtert die Suche."
       ]
     },
     {
@@ -194,6 +210,10 @@
           "credit": "Cristóbal Maturana",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "An windigen Tagen weht am Bahía Inglesa – Playa La Piscina feiner Sand – Kameraausrüstung gut verstauen.",
+        "Liegestühle werden meist bar bezahlt; etwas Kleingeld für Händler:innen in Caldera mitnehmen."
       ]
     },
     {
@@ -222,6 +242,10 @@
           "credit": "Sebastián Pardo",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Das Wetter im Gebiet Parque Nacional Pan de Azúcar schlägt schnell um – Regenjacke und Sonnenschutz griffbereit halten.",
+        "Für Ranger-Briefings und Permit-Kontrollen immer 15 Minuten Zeitpuffer einplanen."
       ]
     },
     {
@@ -250,6 +274,10 @@
           "credit": "Andrés Molina",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Check-in in Aeropuerto Desierto de Atacama (CPO) öffnet rund zwei Stunden vor Abflug – morgens bilden sich hier längere Sicherheits-Schlangen.",
+        "Vorab gebuchte Transfers verkürzen die Fahrt in Richtung Copiapó; spontane Taxis sind im Januar oft ausgelastet."
       ]
     },
     {
@@ -278,6 +306,10 @@
           "credit": "Agustín Lautaro",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Check-in in Santiago International Airport (SCL) öffnet rund zwei Stunden vor Abflug – morgens bilden sich hier längere Sicherheits-Schlangen.",
+        "Vorab gebuchte Transfers verkürzen die Fahrt in Richtung Santiago; spontane Taxis sind im Januar oft ausgelastet."
       ]
     }
   ],

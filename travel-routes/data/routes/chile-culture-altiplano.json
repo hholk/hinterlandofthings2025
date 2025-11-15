@@ -83,6 +83,10 @@
           "credit": "Agustín Lautaro",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Check-in in Santiago International Airport (SCL) öffnet rund zwei Stunden vor Abflug – morgens bilden sich hier längere Sicherheits-Schlangen.",
+        "Vorab gebuchte Transfers verkürzen die Fahrt in Richtung Santiago; spontane Taxis sind im Januar oft ausgelastet."
       ]
     },
     {
@@ -111,6 +115,10 @@
           "credit": "Ignacio Pardo",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Check-in in Aeropuerto Chacalluta (ARI) öffnet rund zwei Stunden vor Abflug – morgens bilden sich hier längere Sicherheits-Schlangen.",
+        "Vorab gebuchte Transfers verkürzen die Fahrt in Richtung Arica; spontane Taxis sind im Januar oft ausgelastet."
       ]
     },
     {
@@ -139,6 +147,10 @@
           "credit": "Ignacio Rojas",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Nutze den frühen Vormittag, um Arica – Morro & Paseo 21 de Mayo zu Fuß zu erkunden, bevor die Sonne die Straßenschluchten aufheizt.",
+        "Beliebte Restaurants in Arica sollte man spätestens am Vortag reservieren – Januar zählt zur Hochsaison."
       ]
     },
     {
@@ -146,8 +158,8 @@
       "name": "Valle de Azapa – Museo Colón 10",
       "type": "museum",
       "coordinates": {
-        "lat": -18.4720,
-        "lng": -70.1980
+        "lat": -18.472,
+        "lng": -70.198
       },
       "city": "Arica",
       "address": {
@@ -167,6 +179,10 @@
           "credit": "Camila Bustos",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Online-Zeitfenster für Valle de Azapa – Museo Colón 10 sichern, denn Tageskontingente sind begrenzt.",
+        "Audioguides und Sonderausstellungen lassen sich gegen kleine Gebühr vor Ort hinzufügen."
       ]
     },
     {
@@ -195,6 +211,10 @@
           "credit": "Marcelo Díaz",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Putre – Plaza Mayor zeigt sich zur Golden Hour besonders fotogen – Kamera oder Drohne rechtzeitig laden.",
+        "Rund um Putre sind Parkplätze begrenzt; Anreise vor 10 Uhr erleichtert die Suche."
       ]
     },
     {
@@ -223,6 +243,10 @@
           "credit": "Sebastián Pardo",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Das Wetter im Gebiet Lauca Nationalpark – Laguna Chungará schlägt schnell um – Regenjacke und Sonnenschutz griffbereit halten.",
+        "Für Ranger-Briefings und Permit-Kontrollen immer 15 Minuten Zeitpuffer einplanen."
       ]
     },
     {
@@ -251,6 +275,10 @@
           "credit": "Rodrigo Ruiz",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Nutze den frühen Vormittag, um Iquique – Baquedano Street zu Fuß zu erkunden, bevor die Sonne die Straßenschluchten aufheizt.",
+        "Beliebte Restaurants in Iquique sollte man spätestens am Vortag reservieren – Januar zählt zur Hochsaison."
       ]
     },
     {
@@ -279,6 +307,10 @@
           "credit": "Matías Silva",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Oficina Humberstone ist UNESCO-geschützt – respektiere Absperrungen und verzichte auf Drohnenaufnahmen.",
+        "Das Kopfsteinpflaster rund um Pozo Almonte kann glatt sein; feste Schuhe helfen bei Spaziergängen."
       ]
     },
     {
@@ -307,6 +339,10 @@
           "credit": "Ignacio Pardo",
           "license": "Unsplash License"
         }
+      ],
+      "notes": [
+        "Check-in in Aeropuerto Andrés Sabella (ANF) öffnet rund zwei Stunden vor Abflug – morgens bilden sich hier längere Sicherheits-Schlangen.",
+        "Vorab gebuchte Transfers verkürzen die Fahrt in Richtung Antofagasta; spontane Taxis sind im Januar oft ausgelastet."
       ]
     }
   ],
