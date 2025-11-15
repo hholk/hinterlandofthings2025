@@ -32,7 +32,7 @@
       },
       {
         "dayId": "day-3",
-        "mode": "car",
+        "mode": "drive",
         "geometry": {
           "type": "LineString",
           "coordinates": [

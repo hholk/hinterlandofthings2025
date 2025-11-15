@@ -929,6 +929,8 @@
             Jede Option enthält Entfernungen, Transport und Unterkünfte für jeden Halt.
           </p>
         </div>
+        <!-- Für Einsteiger:innen: Die Liste verwendet Scroll-Snap, damit wirklich nur eine horizontale Reihe sichtbar ist
+             und wir per Wischgeste durch die Karten sliden können. -->
         <ul class="travel__route-track">
           {#each data.travel.routeIndex as entry}
             <li>
@@ -968,6 +970,8 @@
             <p>{selectedRoute.summary}</p>
           {/if}
         </div>
+        <!-- Für Einsteiger:innen: Das Definition-List-Pattern bleibt erhalten, aber per Flexbox entstehen echte
+             "Kacheln", die sich auf großen Screens in einer horizontalen Reihe anordnen. -->
         <dl class="travel__metrics">
           {#if selectedRoute.meta?.durationDays}
             <div>
@@ -1767,24 +1771,30 @@
     font-size: 0.9rem;
   }
 
+  /* Für Einsteiger:innen: Grid + Scroll-Snap sorgt dafür, dass die Karten exakt eine Reihe bilden
+     und per Trackpad/Touch sanft sliden – ganz ohne zusätzliche Slider-Bibliothek. */
   .travel__route-track {
     list-style: none;
     margin: 0;
-    padding: 0.25rem 0 0.5rem;
-    display: flex;
+    padding: 0.25rem 0 0.75rem;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(min(20rem, 85vw), 1fr);
     gap: 1rem;
     overflow-x: auto;
-    scroll-snap-type: x proximity;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 0.75rem;
   }
 
   .travel__route-track li {
-    flex: 0 0 auto;
-    scroll-snap-align: start;
+    scroll-snap-align: center;
   }
 
   .travel__route-track button {
     width: 100%;
-    min-width: min(18rem, 75vw);
+    min-width: unset;
+    height: 100%;
     text-align: left;
     border: 1px solid rgba(15, 23, 42, 0.12);
     border-radius: 1rem;
@@ -1868,16 +1878,21 @@
   }
 
   .travel__metrics {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
     margin: 0;
+    justify-content: flex-end;
   }
 
   .travel__metrics div {
     background: rgba(99, 102, 241, 0.08);
     border-radius: 0.75rem;
-    padding: 0.75rem 1rem;
+    padding: 0.85rem 1.1rem;
+    min-width: min(12rem, 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
   }
 
   .travel__metrics dt {
@@ -2216,16 +2231,12 @@
 
   @media (min-width: 960px) {
     .travel__route-track {
-      flex-wrap: wrap;
-      overflow-x: visible;
+      grid-auto-columns: minmax(20rem, 24rem);
+      padding-inline: 0.5rem;
     }
 
     .travel__route-track li {
-      flex: 1 1 18rem;
-    }
-
-    .travel__route-track button {
-      min-width: 16rem;
+      scroll-snap-align: start;
     }
   }
 

@@ -10,8 +10,8 @@
     },
     "map": {
       "center": [
-        -30,
-        -71
+        -71,
+        -30
       ],
       "zoom": 4,
       "tileLayer": "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
