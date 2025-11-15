@@ -34,6 +34,8 @@
 - Am Ende jeder Ausführung muss geprüft werden, ob durch die vorgenommenen Änderungen Informationen in `agents.md` veraltet sind (z. B. Stack-Anpassungen, neue Deploy-Strategie, veränderte Limits oder Workflows) und die Datei ggf. sofort aktualisiert werden.
 - Änderungen an Build- oder Deployment-Logik, am Deployment-Ziel, am Base-Path oder am Core-Stack (SvelteKit/Tailwind/Flowbite) dürfen **nur** zusammen mit einem aktualisierten `agents.md` committed werden.
 - Prüfe bei neuen oder angepassten Funktionalitäten stets die Original-Dokumentation der verwendeten Libraries (z. B. MapLibre, Flowbite, Tailwind), bevor du Code übernimmst oder APIs nutzt.
+- Wenn du Aufrufe oder Parameter veränderst, lies die jeweils aktuelle Referenz (MapLibre, Flowbite, Tailwind, Vite etc.), um sicherzustellen, dass Methodennamen, Optionen und Defaults exakt dem veröffentlichten Stand entsprechen.
+- Wird ausdrücklich um Bugfixing oder eine Korrektur gebeten, führe Builds und relevante Testläufe mit maximaler Verbosität aus (z. B. `npm run build -- --debug --verbose`), damit Logs für das Debugging vollständig vorliegen.
 - Diese Selbstverpflichtung ist Teil dieser Datei und dokumentiert die Pflicht zur eigenen Aktualisierung (rekursive Dokumentation).
 
 ## Do & Don't für GitHub Pages
