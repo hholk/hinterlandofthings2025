@@ -96,6 +96,32 @@
     currency: data.travel.meta.currency ?? 'EUR'
   });
 
+  // Für Einsteiger:innen: MapLibre möchte eine Liste konkreter Tile-URLs.
+  // Unser Datensatz nutzt teilweise das Platzhalter-Format "https://{s}.tile...",
+  // deshalb erzeugen wir hier eine bereinigte Variante ohne Überraschungen.
+  function resolveTileUrls(mapConfig: typeof data.travel.meta.map): string[] {
+    const fallback = ['https://tile.openstreetmap.org/{z}/{x}/{y}.png'];
+    const rawSource = mapConfig.tileLayer as unknown;
+
+    if (Array.isArray(rawSource)) {
+      const valid = rawSource.filter(
+        (entry): entry is string => typeof entry === 'string' && entry.trim().length > 0
+      );
+      return valid.length > 0 ? valid : fallback;
+    }
+
+    if (typeof rawSource === 'string') {
+      if (rawSource.includes('{s}')) {
+        const mapWithSubdomains = mapConfig as typeof mapConfig & { tileSubdomains?: string[] };
+        const subdomains = mapWithSubdomains.tileSubdomains ?? ['a', 'b', 'c'];
+        return subdomains.map((subdomain) => rawSource.replace('{s}', subdomain));
+      }
+      return [rawSource];
+    }
+
+    return fallback;
+  }
+
   function setBodyScrollLock(shouldLock: boolean) {
     if (!hasDocument) return;
     document.body.classList.toggle(FULLSCREEN_BODY_CLASS, shouldLock);
@@ -442,13 +468,14 @@
 
   function createRasterStyle(): StyleSpecification {
     const map = data.travel.meta.map;
+    const tiles = resolveTileUrls(map);
     return {
       version: 8,
       glyphs: 'https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf',
       sources: {
         osm: {
           type: 'raster',
-          tiles: [map.tileLayer],
+          tiles,
           tileSize: 256,
           attribution: map.attribution ?? '© OpenStreetMap',
           maxzoom: 14
@@ -791,137 +818,145 @@
     {#if isMapFullscreen}
       <div class="travel__map-backdrop" role="presentation" aria-hidden="true" on:click={closeMapFullscreen}></div>
     {/if}
-    <div class={`travel__map${isMapFullscreen ? ' travel__map--fullscreen' : ''}`} aria-live="polite">
-      <div class="travel__map-controls" role="toolbar" aria-label="Karteneinstellungen">
-        <button
-          type="button"
-          class="travel__map-control"
-          title={isLegendVisible ? 'Legende ausblenden' : 'Legende anzeigen'}
-          aria-pressed={isLegendVisible}
-          on:click={toggleLegendVisibility}
-        >
-          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path
-              d="M5 6h14M5 12h9M5 18h14"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-            />
-          </svg>
-          <span class="travel__sr-only">{isLegendVisible ? 'Legende ausblenden' : 'Legende anzeigen'}</span>
-        </button>
-        <button
-          type="button"
-          class="travel__map-control"
-          title={isMapFullscreen ? 'Vollbild verlassen' : 'Karte im Vollbild anzeigen'}
-          aria-pressed={isMapFullscreen}
-          on:click={toggleMapFullscreen}
-        >
-          {#if isMapFullscreen}
+    <div class="travel__map-shell">
+      <div class={`travel__map${isMapFullscreen ? ' travel__map--fullscreen' : ''}`} aria-live="polite">
+        <div class="travel__map-controls" role="toolbar" aria-label="Karteneinstellungen">
+          <button
+            type="button"
+            class="travel__map-control"
+            title={isLegendVisible ? 'Legende ausblenden' : 'Legende anzeigen'}
+            aria-pressed={isLegendVisible}
+            on:click={toggleLegendVisibility}
+          >
             <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
               <path
-                d="M9 9H5V5M15 9h4V5M9 15H5v4m10 0h4v-4"
+                d="M5 6h14M5 12h9M5 18h14"
                 stroke="currentColor"
                 stroke-width="2"
                 stroke-linecap="round"
-                stroke-linejoin="round"
               />
             </svg>
-          {:else}
-            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-              <path
-                d="M15 5h4v4M9 5H5v4m0 10v-4h4m10 4v-4h-4"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          {/if}
-          <span class="travel__sr-only">{isMapFullscreen ? 'Vollbild schließen' : 'Karte im Vollbild anzeigen'}</span>
-        </button>
-      </div>
-      <div
-        id="travel-map"
-        bind:this={mapContainer}
-        role="application"
-        aria-label="Interaktive Karte von Chile"
-      ></div>
-      {#if loadError}
-        <p class="travel__map-error">{loadError}</p>
-      {/if}
-      {#if sliderSteps.length > 0}
-        <div class="travel__map-slider" role="group" aria-label="Zeitverlauf">
-          <div class="travel__map-slider-head">
-            <label for="travel-map-slider">Zeitverlauf</label>
-            <span>Schritt {sliderValue + 1} von {sliderSteps.length}</span>
-          </div>
-          <input
-            id="travel-map-slider"
-            type="range"
-            min="0"
-            max={sliderMax}
-            step="1"
-            bind:value={sliderValue}
-            aria-valuetext={sliderLabel}
-          />
-          <div class="travel__map-slider-label">
-            <strong>{sliderLabel}</strong>
-            {#if sliderSteps[sliderValue]?.description}
-              <span>{sliderSteps[sliderValue]?.description}</span>
+            <span class="travel__sr-only">{isLegendVisible ? 'Legende ausblenden' : 'Legende anzeigen'}</span>
+          </button>
+          <button
+            type="button"
+            class="travel__map-control"
+            title={isMapFullscreen ? 'Vollbild verlassen' : 'Karte im Vollbild anzeigen'}
+            aria-pressed={isMapFullscreen}
+            on:click={toggleMapFullscreen}
+          >
+            {#if isMapFullscreen}
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  d="M9 9H5V5M15 9h4V5M9 15H5v4m10 0h4v-4"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            {:else}
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  d="M15 5h4v4M9 5H5v4m0 10v-4h4m10 4v-4h-4"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
             {/if}
-          </div>
+            <span class="travel__sr-only">{isMapFullscreen ? 'Vollbild schließen' : 'Karte im Vollbild anzeigen'}</span>
+          </button>
         </div>
-      {/if}
-      {#if isLegendVisible}
-        <ul class="travel__legend" aria-label="Legende">
-          {#each Object.entries(data.travel.transportModes) as [modeKey, mode]}
+        <div
+          id="travel-map"
+          bind:this={mapContainer}
+          role="application"
+          aria-label="Interaktive Karte von Chile"
+        ></div>
+        {#if loadError}
+          <p class="travel__map-error">{loadError}</p>
+        {/if}
+        {#if sliderSteps.length > 0}
+          <div class="travel__map-slider" role="group" aria-label="Zeitverlauf">
+            <div class="travel__map-slider-head">
+              <label for="travel-map-slider">Zeitverlauf</label>
+              <span>Schritt {sliderValue + 1} von {sliderSteps.length}</span>
+            </div>
+            <input
+              id="travel-map-slider"
+              type="range"
+              min="0"
+              max={sliderMax}
+              step="1"
+              bind:value={sliderValue}
+              aria-valuetext={sliderLabel}
+            />
+            <div class="travel__map-slider-label">
+              <strong>{sliderLabel}</strong>
+              {#if sliderSteps[sliderValue]?.description}
+                <span>{sliderSteps[sliderValue]?.description}</span>
+              {/if}
+            </div>
+          </div>
+        {/if}
+        {#if isLegendVisible}
+          <ul class="travel__legend" aria-label="Legende">
+            {#each Object.entries(data.travel.transportModes) as [modeKey, mode]}
+              <li>
+                <span style={`--legend-color: ${mode.color}`}>{mode.icon ?? ''}</span>
+                <div>
+                  <strong>{mode.label}</strong>
+                  {#if mode.description}
+                    <p>{mode.description}</p>
+                  {/if}
+                </div>
+              </li>
+            {/each}
+          </ul>
+        {/if}
+      </div>
+
+      <!-- Für Einsteiger:innen: Direkt unter der Karte sitzt die horizontale Routenauswahl als Nav. -->
+      <nav
+        class={`travel__routes${isMapFullscreen ? ' travel__routes--hidden' : ''}`}
+        aria-label="Routen auswählen"
+      >
+        <div class="travel__routes-header">
+          <h2>Routenübersicht</h2>
+          <p class="travel__routes-hint">
+            Jede Option enthält Entfernungen, Transport und Unterkünfte für jeden Halt.
+          </p>
+        </div>
+        <ul class="travel__route-track">
+          {#each data.travel.routeIndex as entry}
             <li>
-              <span style={`--legend-color: ${mode.color}`}>{mode.icon ?? ''}</span>
-              <div>
-                <strong>{mode.label}</strong>
-                {#if mode.description}
-                  <p>{mode.description}</p>
+              <button
+                type="button"
+                class:selected={entry.id === selectedRouteId}
+                style={`--route-color: ${entry.color ?? '#2563eb'}`}
+                on:click={() => selectRoute(entry.id)}
+              >
+                <span class="travel__route-name">{entry.name}</span>
+                <span class="travel__route-meta">
+                  {entry.meta?.durationDays ?? selectedRoute?.meta?.durationDays ?? data.travel.meta.defaultDurationDays} Tage ·
+                  {entry.metrics?.totalDistanceKm ? `${numberFormatter.format(entry.metrics.totalDistanceKm)} km` : 'flexibel'}
+                </span>
+                <span class="travel__route-tagline">{entry.summary}</span>
+                {#if entry.tags?.length}
+                  <span class="travel__route-tags">
+                    {#each entry.tags as tag}
+                      <span>{tag}</span>
+                    {/each}
+                  </span>
                 {/if}
-              </div>
+              </button>
             </li>
           {/each}
         </ul>
-      {/if}
+      </nav>
     </div>
-
-    <aside class="travel__routes" aria-label="Routen auswählen">
-      <h2>Routenübersicht</h2>
-      <p class="travel__routes-hint">
-        Jede Option enthält Entfernungen, Transport und Unterkünfte für jeden Halt.
-      </p>
-      <ul>
-        {#each data.travel.routeIndex as entry}
-          <li>
-            <button
-              type="button"
-              class:selected={entry.id === selectedRouteId}
-              style={`--route-color: ${entry.color ?? '#2563eb'}`}
-              on:click={() => selectRoute(entry.id)}
-            >
-              <span class="travel__route-name">{entry.name}</span>
-              <span class="travel__route-meta">
-                {entry.meta?.durationDays ?? selectedRoute?.meta?.durationDays ?? data.travel.meta.defaultDurationDays} Tage ·
-                {entry.metrics?.totalDistanceKm ? `${numberFormatter.format(entry.metrics.totalDistanceKm)} km` : 'flexibel'}
-              </span>
-              <span class="travel__route-tagline">{entry.summary}</span>
-              {#if entry.tags?.length}
-                <span class="travel__route-tags">
-                  {#each entry.tags as tag}
-                    <span>{tag}</span>
-                  {/each}
-                </span>
-              {/if}
-            </button>
-          </li>
-        {/each}
-      </ul>
-    </aside>
   </div>
 
   {#if selectedRoute}
@@ -1502,10 +1537,17 @@
   }
 
   .travel__layout {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: minmax(0, 2fr) minmax(18rem, 1fr);
-    align-items: start;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+  }
+
+  .travel__map-shell {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
   }
 
   .travel__map {
@@ -1697,10 +1739,20 @@
   .travel__routes {
     background: rgba(15, 23, 42, 0.04);
     border-radius: 1.25rem;
-    padding: 1.5rem;
+    padding: 1.25rem 1.5rem;
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 1rem;
+  }
+
+  .travel__routes--hidden {
+    display: none;
+  }
+
+  .travel__routes-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
   }
 
   .travel__routes h2 {
@@ -1709,17 +1761,30 @@
     margin: 0;
   }
 
-  .travel__routes ul {
-    list-style: none;
+  .travel__routes-hint {
     margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
+    color: #475569;
+    font-size: 0.9rem;
   }
 
-  .travel__routes button {
+  .travel__route-track {
+    list-style: none;
+    margin: 0;
+    padding: 0.25rem 0 0.5rem;
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+  }
+
+  .travel__route-track li {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+
+  .travel__route-track button {
     width: 100%;
+    min-width: min(18rem, 75vw);
     text-align: left;
     border: 1px solid rgba(15, 23, 42, 0.12);
     border-radius: 1rem;
@@ -1732,15 +1797,15 @@
     transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
   }
 
-  .travel__routes button:hover,
-  .travel__routes button:focus-visible {
+  .travel__route-track button:hover,
+  .travel__route-track button:focus-visible {
     border-color: var(--route-color);
     box-shadow: 0 14px 30px rgba(99, 102, 241, 0.2);
     transform: translateY(-1px);
     outline: none;
   }
 
-  .travel__routes button.selected {
+  .travel__route-track button.selected {
     border-color: var(--route-color);
     box-shadow: 0 20px 40px rgba(99, 102, 241, 0.18);
   }
@@ -2149,13 +2214,18 @@
     border: 0;
   }
 
-  @media (max-width: 1100px) {
-    .travel__layout {
-      grid-template-columns: 1fr;
+  @media (min-width: 960px) {
+    .travel__route-track {
+      flex-wrap: wrap;
+      overflow-x: visible;
     }
 
-    .travel__routes {
-      order: -1;
+    .travel__route-track li {
+      flex: 1 1 18rem;
+    }
+
+    .travel__route-track button {
+      min-width: 16rem;
     }
   }
 
@@ -2170,6 +2240,15 @@
 
     .travel__map-slider {
       padding: 0.85rem 1rem 1.1rem;
+    }
+
+    .travel__routes {
+      padding: 1rem;
+    }
+
+    .travel__route-track {
+      gap: 0.75rem;
+      padding: 0.25rem 0;
     }
 
     .travel__detail {
