@@ -19,6 +19,9 @@
   - `npm run dev` – Lokaler Entwicklungsserver mit automatischem Reload.
   - `npm run build` – Statischer Produktions-Build mit `@sveltejs/adapter-static`.
   - `npm run preview` – Lokale Vorschau des statischen Builds.
+- Für Karten- und Reise-Demos existiert eine Beispiel-Route (`travel-routes/data/routes/example-andes-pacific.json`),
+  die das tagesbasierte Slider-Schema samt Mobilitäts- und Kartenpunkten dokumentiert. Neue Funktionen sollten sich an
+  diesem Format orientieren.
 - GitHub-Actions-Workflow (`.github/workflows/pages.yml`):
   - Trigger: Push auf den Standard-Branch (z. B. `main`).
   - Schritte: `actions/setup-node`, `npm ci`, `npm run build`.

@@ -1,0 +1,1353 @@
+{
+  "id": "example-andes-pacific",
+  "title": "Beispielroute – Anden & Pazifik Explorer",
+  "summary": "Drei Tage durch Zentralchile: Start in Santiago, Küstenflair in Valparaíso und Andenpanorama in Cajón del Maipo.",
+  "slider": {
+    "enabled": true,
+    "label": "Tagesübersicht"
+  },
+  "mapLayers": {
+    "dailySegments": [
+      {
+        "dayId": "day-1",
+        "mode": "flight",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [-58.5358, -34.8222],
+            [-70.792, -33.3929]
+          ]
+        }
+      },
+      {
+        "dayId": "day-2",
+        "mode": "bus",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [-70.6629, -33.4513],
+            [-71.6127, -33.0461]
+          ]
+        }
+      },
+      {
+        "dayId": "day-3",
+        "mode": "car",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [-70.6629, -33.4513],
+            [-70.3653, -33.6511]
+          ]
+        }
+      }
+    ]
+  },
+  "days": [
+    {
+      "id": "day-1",
+      "date": "2025-02-10",
+      "station": {
+        "name": "Santiago de Chile",
+        "timezone": "America/Santiago",
+        "coordinates": { "lat": -33.4489, "lng": -70.6693 },
+        "description": "Metropole in den Anden mit lebendigen Vierteln, Rooftop-Bars und Museen.",
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1526401485004-46910ecc8e51?w=800&auto=format&fit=crop",
+            "caption": "Skyline von Santiago vor den Anden",
+            "credit": "Diego Marin",
+            "license": "Unsplash License"
+          },
+          {
+            "url": "https://images.unsplash.com/photo-1526481280695-3c4692349813?w=800&auto=format&fit=crop",
+            "caption": "Straßenszene im Barrio Lastarria",
+            "credit": "Javiera Larenas",
+            "license": "Unsplash License"
+          }
+        ]
+      },
+      "arrival": {
+        "segments": [
+          {
+            "mode": "flight",
+            "from": {
+              "name": "Buenos Aires Ministro Pistarini International (EZE)",
+              "coordinates": { "lat": -34.8222, "lng": -58.5358 }
+            },
+            "to": {
+              "name": "Santiago International Airport (SCL)",
+              "coordinates": { "lat": -33.3929, "lng": -70.7858 }
+            },
+            "flightNumber": "LA780",
+            "departure": "2025-02-10T07:35:00-03:00",
+            "arrival": "2025-02-10T09:50:00-03:00",
+            "airline": "LATAM",
+            "aircraft": "Airbus A321",
+            "baggage": {
+              "checked": "23 kg",
+              "carryOn": "8 kg"
+            },
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1518552781800-1fb841be351d?w=800&auto=format&fit=crop",
+                "caption": "LATAM Maschine am Gate",
+                "credit": "Rocío Vega",
+                "license": "Unsplash License"
+              },
+              {
+                "url": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&auto=format&fit=crop",
+                "caption": "Blick auf die Anden während des Anflugs",
+                "credit": "Juan Santillán",
+                "license": "Unsplash License"
+              }
+            ]
+          },
+          {
+            "mode": "airport-shuttle",
+            "from": {
+              "name": "Santiago International Airport",
+              "coordinates": { "lat": -33.3929, "lng": -70.7858 }
+            },
+            "to": {
+              "name": "Downtown Shuttle Hub – Bellavista",
+              "coordinates": { "lat": -33.4301, "lng": -70.6347 }
+            },
+            "operator": "Centropuerto",
+            "frequencyMinutes": 20,
+            "durationMinutes": 35,
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1477414348463-c0eb7f1359b6?w=800&auto=format&fit=crop",
+                "caption": "Shuttle-Bus vor dem Terminal",
+                "credit": "Camila Soto",
+                "license": "Unsplash License"
+              },
+              {
+                "url": "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?w=800&auto=format&fit=crop",
+                "caption": "Innenraum des Flughafenbusses",
+                "credit": "Pedro Guerra",
+                "license": "Unsplash License"
+              }
+            ]
+          }
+        ],
+        "mapPoints": [
+          {
+            "id": "scl-airport",
+            "type": "airport",
+            "name": "Aeropuerto Arturo Merino Benítez (SCL)",
+            "coordinates": { "lat": -33.3929, "lng": -70.7858 },
+            "address": "Pudahuel, Región Metropolitana, Chile",
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800&auto=format&fit=crop",
+                "caption": "Terminalgebäude SCL",
+                "credit": "Andrés Vera",
+                "license": "Unsplash License"
+              },
+              {
+                "url": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&auto=format&fit=crop",
+                "caption": "Landebahnen mit Andenpanorama",
+                "credit": "Juan Santillán",
+                "license": "Unsplash License"
+              }
+            ]
+          },
+          {
+            "id": "bellavista-shuttle",
+            "type": "bus-station",
+            "name": "Centropuerto Bellavista Stop",
+            "coordinates": { "lat": -33.4301, "lng": -70.6347 },
+            "address": "Avenida Bellavista 160, Recoleta",
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1528989385568-3ac196525f80?w=800&auto=format&fit=crop",
+                "caption": "Haltestelle in Bellavista",
+                "credit": "Valentina Díaz",
+                "license": "Unsplash License"
+              },
+              {
+                "url": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&auto=format&fit=crop",
+                "caption": "Straßenleben im Künstlerviertel",
+                "credit": "Felipe Silva",
+                "license": "Unsplash License"
+              }
+            ]
+          },
+          {
+            "id": "providencia-car-rental",
+            "type": "car-rental",
+            "name": "Localiza Rent a Car – Providencia",
+            "coordinates": { "lat": -33.4233, "lng": -70.6097 },
+            "address": "Av. Nueva Providencia 1881, Santiago",
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+                "caption": "Fahrzeugflotte der Vermietung",
+                "credit": "Alejandro Barba",
+                "license": "Unsplash License"
+              },
+              {
+                "url": "https://images.unsplash.com/photo-1529429617124-aee7d6eab8ad?w=800&auto=format&fit=crop",
+                "caption": "Schalterbereich der Autovermietung",
+                "credit": "Constanza Reinoso",
+                "license": "Unsplash License"
+              }
+            ]
+          }
+        ]
+      },
+      "activities": [
+        {
+          "id": "barrio-lastarria",
+          "type": "neighborhood",
+          "name": "Barrio Lastarria Spaziergang",
+          "description": "Kopfsteinpflastergassen mit Boutiquen, Straßenkunst und Pop-up-Märkten.",
+          "recommendedDurationMinutes": 120,
+          "restaurants": [
+            {
+              "name": "Bocanáriz",
+              "specialties": ["Chilenische Weine", "Empanadas"],
+              "priceRange": "€€€",
+              "url": "https://www.bocanariz.cl",
+              "images": [
+                {
+                  "url": "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=800&auto=format&fit=crop",
+                  "caption": "Weinbar Bocanáriz",
+                  "credit": "Carolina Ugarte",
+                  "license": "Unsplash License"
+                },
+                {
+                  "url": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&auto=format&fit=crop",
+                  "caption": "Empanadas und Wein",
+                  "credit": "Anna Tarazevich",
+                  "license": "Unsplash License"
+                }
+              ]
+            }
+          ],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1529429617124-aee7d6eab8ad?w=800&auto=format&fit=crop",
+              "caption": "Straßenkunst in Lastarria",
+              "credit": "Constanza Reinoso",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1526481280695-3c4692349813?w=800&auto=format&fit=crop",
+              "caption": "Cafés entlang der Straße",
+              "credit": "Javiera Larenas",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        {
+          "id": "cerro-san-cristobal",
+          "type": "viewpoint",
+          "name": "Aussichtspunkt Cerro San Cristóbal",
+          "description": "Panorama über die Stadt, erreichbar per Standseilbahn oder zu Fuß.",
+          "recommendedDurationMinutes": 180,
+          "restaurants": [
+            {
+              "name": "Divertimento Chileno",
+              "specialties": ["Pastel de Choclo", "Pisco Sour"],
+              "priceRange": "€€",
+              "url": "https://www.divertimento.cl",
+              "images": [
+                {
+                  "url": "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800&auto=format&fit=crop",
+                  "caption": "Pastel de Choclo mit Aussicht",
+                  "credit": "María Paz",
+                  "license": "Unsplash License"
+                },
+                {
+                  "url": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&auto=format&fit=crop",
+                  "caption": "Pisco Sour am Hang",
+                  "credit": "Anna Tarazevich",
+                  "license": "Unsplash License"
+                }
+              ]
+            }
+          ],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1478117710974-3f8443a7b1b5?w=800&auto=format&fit=crop",
+              "caption": "Seilbahn auf den Cerro San Cristóbal",
+              "credit": "Sebastián Paredes",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1529338296731-c4280a00d6cd?w=800&auto=format&fit=crop",
+              "caption": "Sonnenuntergang über Santiago",
+              "credit": "Claudia Reyes",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        {
+          "id": "museo-chileno-arte-precolombino",
+          "type": "museum",
+          "name": "Museo Chileno de Arte Precolombino",
+          "description": "Eine der bedeutendsten Sammlungen präkolumbischer Kunst in Südamerika.",
+          "recommendedDurationMinutes": 150,
+          "restaurants": [
+            {
+              "name": "Cafe del Museo",
+              "specialties": ["Kaffee aus dem Altiplano", "Süßgebäck"],
+              "priceRange": "€€",
+              "url": "https://www.precolombino.cl",
+              "images": [
+                {
+                  "url": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&auto=format&fit=crop",
+                  "caption": "Desserts im Museumscafé",
+                  "credit": "Anna Tarazevich",
+                  "license": "Unsplash License"
+                },
+                {
+                  "url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop",
+                  "caption": "Innenhof des Museums",
+                  "credit": "Gabriel Pino",
+                  "license": "Unsplash License"
+                }
+              ]
+            }
+          ],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1578926148546-30ddf3f6b22c?w=800&auto=format&fit=crop",
+              "caption": "Exponate im Museum",
+              "credit": "Laura Torres",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1530023367847-a683933f4177?w=800&auto=format&fit=crop",
+              "caption": "Innenhof mit Skulpturen",
+              "credit": "Jorge Molina",
+              "license": "Unsplash License"
+            }
+          ]
+        }
+      ],
+      "hotels": [
+        {
+          "id": "hotel-magnolia",
+          "name": "Hotel Magnolia",
+          "reviewHighlights": ["Design trifft Heritage", "Rooftop-Bar mit Blick auf den Cerro Santa Lucía"],
+          "avgNightlyRateEUR": 185,
+          "url": "https://www.hotelmagnolia.cl",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1505692794403-34cb5cf055b2?w=800&auto=format&fit=crop",
+              "caption": "Lobby des Hotel Magnolia",
+              "credit": "Sebastián Araya",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&auto=format&fit=crop",
+              "caption": "Zimmer im Boutique-Stil",
+              "credit": "Kate Stone",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        {
+          "id": "casa-bellas-artes",
+          "name": "Casa Bellas Artes",
+          "reviewHighlights": ["Künstlerische Einrichtung", "Familiengeführte Atmosphäre"],
+          "avgNightlyRateEUR": 95,
+          "url": "https://www.casabellasartes.cl",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=800&auto=format&fit=crop",
+              "caption": "Gemeinschaftsbereich mit Kunstwerken",
+              "credit": "Daniela Muñoz",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1554995207-c18c203602cb?w=800&auto=format&fit=crop",
+              "caption": "Zimmer mit Balkon",
+              "credit": "Felipe Godoy",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        {
+          "id": "hotel-soleil",
+          "name": "Hotel Soleil",
+          "reviewHighlights": ["Gutes Preis-Leistungs-Verhältnis", "Großes Frühstücksbuffet"],
+          "avgNightlyRateEUR": 70,
+          "url": "https://www.hotelsoleil.cl",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1505691723518-36a5ac3be353?w=800&auto=format&fit=crop",
+              "caption": "Frühstücksbuffet mit lokalen Produkten",
+              "credit": "Sofía Bravo",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=800&auto=format&fit=crop",
+              "caption": "Lounge des Hotels",
+              "credit": "Daniela Muñoz",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        {
+          "id": "w-santiago",
+          "name": "W Santiago",
+          "reviewHighlights": ["Infinity-Pool auf dem Dach", "Panorama über die Anden"],
+          "avgNightlyRateEUR": 240,
+          "url": "https://www.marriott.com/en-us/hotels/sclwh-w-santiago",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&auto=format&fit=crop",
+              "caption": "Rooftop-Pool des W Santiago",
+              "credit": "Marcelo Díaz",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1505691723518-36a5ac3be353?w=800&auto=format&fit=crop",
+              "caption": "Zimmer mit Blick auf die Anden",
+              "credit": "Sofía Bravo",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        {
+          "id": "hostal-forestal",
+          "name": "Hostal Forestal",
+          "reviewHighlights": ["Budgetfreundlich", "Community-Events und Stadtführungen"],
+          "avgNightlyRateEUR": 35,
+          "url": "https://www.hostalforestal.cl",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&auto=format&fit=crop",
+              "caption": "Gemeinschaftsküche des Hostels",
+              "credit": "Ignacio Rojas",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&auto=format&fit=crop",
+              "caption": "Schlafsaal mit privaten Vorhängen",
+              "credit": "Laura Espinoza",
+              "license": "Unsplash License"
+            }
+          ]
+        }
+      ],
+      "mobilityOptions": {
+        "nextFlight": {
+          "summary": "Optionaler Inlandsflug nach Calama für Atacama-Extension",
+          "operator": "LATAM",
+          "flightNumber": "LA122",
+          "departure": "2025-02-13T07:15:00-03:00",
+          "arrival": "2025-02-13T09:10:00-03:00",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1474302729578-afab1a117fc1?w=800&auto=format&fit=crop",
+              "caption": "Boarding am Terminal National",
+              "credit": "Claudio Pérez",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1472252369995-6d9b2177ed73?w=800&auto=format&fit=crop",
+              "caption": "Flug über die Anden",
+              "credit": "Isidora León",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        "nextBus": {
+          "summary": "Direktbus nach Valparaíso (Terminal Alameda → Terminal Rodoviario)",
+          "operator": "TurBus",
+          "durationMinutes": 110,
+          "frequencyMinutes": 20,
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1470123808288-1e59739c26da?w=800&auto=format&fit=crop",
+                "caption": "Fernbus am Terminal Alameda",
+                "credit": "Mauricio Rojas",
+                "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1524492449093-4fe20d59d2ed?w=800&auto=format&fit=crop",
+              "caption": "Sitze im Reisebus",
+              "credit": "Anton Barros",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        "nextDrive": {
+          "summary": "Rundfahrt ins Maipo-Tal mit Abgabe in Santiago – keine Einweggebühr",
+          "rentalPickup": "Localiza Rent a Car – Providencia",
+          "rentalDropoff": "gleiche Station",
+          "distanceKm": 180,
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&auto=format&fit=crop",
+              "caption": "Fahrt durch das Maipo-Tal",
+              "credit": "Cristobal Leon",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1493244040629-496f6d136cc3?w=800&auto=format&fit=crop",
+              "caption": "Picknick im Weinberg",
+              "credit": "Carla Henríquez",
+              "license": "Unsplash License"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "day-2",
+      "date": "2025-02-11",
+      "station": {
+        "name": "Valparaíso",
+        "timezone": "America/Santiago",
+        "coordinates": { "lat": -33.0472, "lng": -71.6127 },
+        "description": "UNESCO-Welterbe-Hafenstadt mit funkelnder Streetart und historischen Aufzügen.",
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1526402462922-1e1d481d87fd?w=800&auto=format&fit=crop",
+            "caption": "Bunte Häuser am Cerro Alegre",
+            "credit": "Fabiola Peñailillo",
+            "license": "Unsplash License"
+          },
+          {
+            "url": "https://images.unsplash.com/photo-1529346528741-5e65d6d5bbff?w=800&auto=format&fit=crop",
+            "caption": "Treppen mit Streetart",
+            "credit": "Tomás Sánchez",
+            "license": "Unsplash License"
+          }
+        ]
+      },
+      "arrival": {
+        "segments": [
+          {
+            "mode": "bus",
+            "from": {
+              "name": "Terminal Alameda (Santiago)",
+              "coordinates": { "lat": -33.4576, "lng": -70.6621 }
+            },
+            "to": {
+              "name": "Terminal Rodoviario Valparaíso",
+              "coordinates": { "lat": -33.0476, "lng": -71.6049 }
+            },
+            "operator": "TurBus",
+            "durationMinutes": 110,
+            "ticketUrl": "https://www.turbus.cl",
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+                "caption": "Fernbus am Gate",
+                "credit": "Alejandro Barba",
+                "license": "Unsplash License"
+              },
+              {
+                "url": "https://images.unsplash.com/photo-1524492449093-4fe20d59d2ed?w=800&auto=format&fit=crop",
+                "caption": "Komfortable Sitze mit Steckdosen",
+                "credit": "Anton Barros",
+                "license": "Unsplash License"
+              }
+            ]
+          }
+        ],
+        "mapPoints": [
+          {
+            "id": "terminal-alameda",
+            "type": "bus-terminal",
+            "name": "Terminal Alameda",
+            "coordinates": { "lat": -33.4576, "lng": -70.6621 },
+            "address": "Av. Libertador Bernardo O'Higgins 3850, Estación Central",
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1528989385568-3ac196525f80?w=800&auto=format&fit=crop",
+                "caption": "Busterminal in Santiago",
+                "credit": "Valentina Díaz",
+                "license": "Unsplash License"
+              },
+              {
+                "url": "https://images.unsplash.com/photo-1470123808288-1e59739c26da?w=800&auto=format&fit=crop",
+                "caption": "Nachtbusse bereit zur Abfahrt",
+                "credit": "Mauricio Rojas",
+                "license": "Unsplash License"
+              }
+            ]
+          },
+          {
+            "id": "terminal-valparaiso",
+            "type": "bus-terminal",
+            "name": "Terminal Rodoviario de Valparaíso",
+            "coordinates": { "lat": -33.0476, "lng": -71.6049 },
+            "address": "Pedro Montt 2860, Valparaíso",
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&auto=format&fit=crop",
+                "caption": "Ankunft im Terminal Valparaíso",
+                "credit": "Pablo Alvarado",
+                "license": "Unsplash License"
+              },
+              {
+                "url": "https://images.unsplash.com/photo-1519923834699-ef0b7cde4712?w=800&auto=format&fit=crop",
+                "caption": "Busticketschalter",
+                "credit": "Daniela Rivas",
+                "license": "Unsplash License"
+              }
+            ]
+          },
+          {
+            "id": "valparaiso-funicular",
+            "type": "transport",
+            "name": "Ascensor El Peral",
+            "coordinates": { "lat": -33.0408, "lng": -71.6281 },
+            "address": "Pasaje Miramar 145, Valparaíso",
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1583227397020-28f0b9230e1a?w=800&auto=format&fit=crop",
+                "caption": "Historischer Aufzug",
+                "credit": "Fernanda Osorio",
+                "license": "Unsplash License"
+              },
+              {
+                "url": "https://images.unsplash.com/photo-1526402462922-1e1d481d87fd?w=800&auto=format&fit=crop",
+                "caption": "Blick vom Aufzug auf den Hafen",
+                "credit": "Fabiola Peñailillo",
+                "license": "Unsplash License"
+              }
+            ]
+          }
+        ]
+      },
+      "activities": [
+        {
+          "id": "cerro-alegre",
+          "type": "neighborhood",
+          "name": "Cerro Alegre Streetart-Loop",
+          "description": "Geführter Walk durch Gassen voller Murals und Galerien.",
+          "recommendedDurationMinutes": 150,
+          "restaurants": [
+            {
+              "name": "Café del Poeta",
+              "specialties": ["Kuchen mit Chirimoya", "Cold Brew"],
+              "priceRange": "€€",
+              "url": "https://www.cafedelpoeta.cl",
+              "images": [
+                {
+                  "url": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=800&auto=format&fit=crop",
+                  "caption": "Latte Art im Café del Poeta",
+                  "credit": "Ignacia Campos",
+                  "license": "Unsplash License"
+                },
+                {
+                  "url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop",
+                  "caption": "Innenraum des Cafés",
+                  "credit": "Gabriel Pino",
+                  "license": "Unsplash License"
+                }
+              ]
+            }
+          ],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1516131206008-dd041a9764fd?w=800&auto=format&fit=crop",
+              "caption": "Streetart am Cerro Alegre",
+              "credit": "Marcela Bravo",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1542317854-0d6d02aca827?w=800&auto=format&fit=crop",
+              "caption": "Bunte Treppen mit Versen",
+              "credit": "Rafael Saavedra",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        {
+          "id": "plaza-sotomayor",
+          "type": "historic-quarter",
+          "name": "Plaza Sotomayor & Hafenrundfahrt",
+          "description": "Geschichtsträchtiger Platz kombiniert mit einer 45-minütigen Bootstour.",
+          "recommendedDurationMinutes": 120,
+          "restaurants": [
+            {
+              "name": "Restaurant Oda Pacifico",
+              "specialties": ["Ceviche", "Tagesfang aus dem Pazifik"],
+              "priceRange": "€€€",
+              "url": "https://www.odapacifico.cl",
+              "images": [
+                {
+                  "url": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&auto=format&fit=crop",
+                  "caption": "Frischer Fisch mit Meerblick",
+                  "credit": "Anna Tarazevich",
+                  "license": "Unsplash License"
+                },
+                {
+                  "url": "https://images.unsplash.com/photo-1470115636492-6d2b56f9146e?w=800&auto=format&fit=crop",
+                  "caption": "Bootsrundfahrt im Hafen",
+                  "credit": "Patricio Lagos",
+                  "license": "Unsplash License"
+                }
+              ]
+            }
+          ],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1470115636492-6d2b56f9146e?w=800&auto=format&fit=crop",
+              "caption": "Boote im Hafen von Valparaíso",
+              "credit": "Patricio Lagos",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=800&auto=format&fit=crop",
+              "caption": "Historische Gebäude an der Plaza",
+              "credit": "Manuel Ortiz",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        {
+          "id": "vina-del-mar-beach",
+          "type": "beach",
+          "name": "Strandausflug Playa Reñaca",
+          "description": "Nachmittagsfahrt nach Viña del Mar für Strand und Sonnenuntergang.",
+          "recommendedDurationMinutes": 210,
+          "restaurants": [
+            {
+              "name": "Tía Carlina",
+              "specialties": ["Mariscada", "Chupe de Jaiba"],
+              "priceRange": "€€",
+              "url": "https://www.tiacarlina.cl",
+              "images": [
+                {
+                  "url": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=800&auto=format&fit=crop",
+                  "caption": "Meeresfrüchteplatte",
+                  "credit": "Ignacia Campos",
+                  "license": "Unsplash License"
+                },
+                {
+                  "url": "https://images.unsplash.com/photo-1526481280695-3c4692349813?w=800&auto=format&fit=crop",
+                  "caption": "Restaurantterrasse mit Meerblick",
+                  "credit": "Javiera Larenas",
+                  "license": "Unsplash License"
+                }
+              ]
+            }
+          ],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&auto=format&fit=crop",
+              "caption": "Sonnenuntergang an der Playa Reñaca",
+              "credit": "Pablo Alvarado",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&auto=format&fit=crop",
+              "caption": "Wellenreiten bei Viña del Mar",
+              "credit": "Frank McKenna",
+              "license": "Unsplash License"
+            }
+          ]
+        }
+      ],
+      "hotels": [
+        {
+          "id": "hotel-fauna",
+          "name": "Hotel Fauna",
+          "reviewHighlights": ["Rooftop-Bar mit Hafenblick", "Design inspiriert von Streetart"],
+          "avgNightlyRateEUR": 140,
+          "url": "https://www.hotelfauna.cl",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&auto=format&fit=crop",
+              "caption": "Dachterrasse des Hotel Fauna",
+              "credit": "Marcelo Díaz",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&auto=format&fit=crop",
+              "caption": "Suite mit Hafenblick",
+              "credit": "Kate Stone",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        {
+          "id": "verso-hotel",
+          "name": "Verso Hotel",
+          "reviewHighlights": ["Literatur-Themenzimmer", "Frühstück im Dachgarten"],
+          "avgNightlyRateEUR": 110,
+          "url": "https://www.versohotel.cl",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1554995207-c18c203602cb?w=800&auto=format&fit=crop",
+              "caption": "Zimmer mit Balkon",
+              "credit": "Felipe Godoy",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&auto=format&fit=crop",
+              "caption": "Dachgarten beim Frühstück",
+              "credit": "Laura Espinoza",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        {
+          "id": "winebox-valparaiso",
+          "name": "WineBox Valparaíso",
+          "reviewHighlights": ["Container-Design", "Eigene Rooftop-Weinbar"],
+          "avgNightlyRateEUR": 95,
+          "url": "https://www.wineboxvalparaiso.com",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1505692794403-34cb5cf055b2?w=800&auto=format&fit=crop",
+              "caption": "Container-Zimmer",
+              "credit": "Sebastián Araya",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=800&auto=format&fit=crop",
+              "caption": "Rooftop mit Weinfässern",
+              "credit": "Daniela Muñoz",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        {
+          "id": "ibis-valparaiso",
+          "name": "ibis Valparaíso",
+          "reviewHighlights": ["Direkt am Hafen", "Stabile WLAN-Verbindung"],
+          "avgNightlyRateEUR": 75,
+          "url": "https://all.accor.com/hotel/7572/index.de.shtml",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1505691723518-36a5ac3be353?w=800&auto=format&fit=crop",
+              "caption": "Zimmer im ibis Valparaíso",
+              "credit": "Sofía Bravo",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&auto=format&fit=crop",
+              "caption": "Frühstücksbereich",
+              "credit": "Laura Espinoza",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        {
+          "id": "hostal-jacob",
+          "name": "Hostal Jacob",
+          "reviewHighlights": ["Gemeinschaftsküche", "Kurze Wege zum Hafen"],
+          "avgNightlyRateEUR": 40,
+          "url": "https://www.hostaljacob.cl",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&auto=format&fit=crop",
+              "caption": "Gemeinschaftsbereich des Hostels",
+              "credit": "Ignacio Rojas",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&auto=format&fit=crop",
+              "caption": "Schlafsaal",
+              "credit": "Laura Espinoza",
+              "license": "Unsplash License"
+            }
+          ]
+        }
+      ],
+      "mobilityOptions": {
+        "nextFlight": {
+          "summary": "Inlandsflug von Valparaíso (VAP) nach La Serena (LSC)",
+          "operator": "Dap Air",
+          "flightNumber": "DAP123",
+          "departure": "2025-02-12T09:30:00-03:00",
+          "arrival": "2025-02-12T10:40:00-03:00",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1472252369995-6d9b2177ed73?w=800&auto=format&fit=crop",
+              "caption": "Regionalflugzeug auf dem Vorfeld",
+              "credit": "Isidora León",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1470115636492-6d2b56f9146e?w=800&auto=format&fit=crop",
+              "caption": "Start über der Bucht",
+              "credit": "Patricio Lagos",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        "nextBus": {
+          "summary": "Buslinie nach Casablanca für Weinverkostung",
+          "operator": "Condor Bus",
+          "durationMinutes": 45,
+          "frequencyMinutes": 30,
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1470123808288-1e59739c26da?w=800&auto=format&fit=crop",
+              "caption": "Regionalbus Richtung Casablanca",
+              "credit": "Mauricio Rojas",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&auto=format&fit=crop",
+              "caption": "Weinberge von Casablanca",
+              "credit": "Cristobal Leon",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        "nextDrive": {
+          "summary": "Tagesausflug mit Mietwagen nach Reñaca und Concón – Rückgabe in Valparaíso",
+          "rentalPickup": "Europcar Valparaíso",
+          "rentalDropoff": "Europcar Valparaíso",
+          "distanceKm": 40,
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&auto=format&fit=crop",
+              "caption": "Küstenstraße nach Concón",
+              "credit": "Pablo Alvarado",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1493244040629-496f6d136cc3?w=800&auto=format&fit=crop",
+              "caption": "Sanddünen von Concón",
+              "credit": "Carla Henríquez",
+              "license": "Unsplash License"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "day-3",
+      "date": "2025-02-12",
+      "station": {
+        "name": "Cajón del Maipo",
+        "timezone": "America/Santiago",
+        "coordinates": { "lat": -33.6532, "lng": -70.3346 },
+        "description": "Andenschlucht südöstlich von Santiago mit heißen Quellen und Trekkingrouten.",
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1471189641895-16c58a695bcb?w=800&auto=format&fit=crop",
+            "caption": "Bergpanorama im Cajón del Maipo",
+            "credit": "Sebastián Pardo",
+            "license": "Unsplash License"
+          },
+          {
+            "url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=800&auto=format&fit=crop",
+            "caption": "Embalse El Yeso",
+            "credit": "Camila Varela",
+            "license": "Unsplash License"
+          }
+        ]
+      },
+      "arrival": {
+        "segments": [
+          {
+            "mode": "car",
+            "from": {
+              "name": "Santiago – Providencia",
+              "coordinates": { "lat": -33.4233, "lng": -70.6097 }
+            },
+            "to": {
+              "name": "Baños Colina",
+              "coordinates": { "lat": -33.7839, "lng": -70.3602 }
+            },
+            "rental": {
+              "provider": "Localiza",
+              "pickup": "Providencia",
+              "dropoff": "Providencia",
+              "vehicleClass": "SUV Kompakt"
+            },
+            "distanceKm": 220,
+            "durationMinutes": 240,
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&auto=format&fit=crop",
+                "caption": "Straße ins Maipo-Tal",
+                "credit": "Pablo Alvarado",
+                "license": "Unsplash License"
+              },
+              {
+                "url": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&auto=format&fit=crop",
+                "caption": "Picknick am Fluss",
+                "credit": "Cristobal Leon",
+                "license": "Unsplash License"
+              }
+            ]
+          }
+        ],
+        "mapPoints": [
+          {
+            "id": "banos-colina",
+            "type": "hot-springs",
+            "name": "Termas Baños Colina",
+            "coordinates": { "lat": -33.7839, "lng": -70.3602 },
+            "address": "Camino Embalse El Yeso km 60",
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=800&auto=format&fit=crop",
+                "caption": "Natürliche Thermalbecken",
+                "credit": "Camila Varela",
+                "license": "Unsplash License"
+              },
+              {
+                "url": "https://images.unsplash.com/photo-1471189641895-16c58a695bcb?w=800&auto=format&fit=crop",
+                "caption": "Gebirgskulisse bei den Termen",
+                "credit": "Sebastián Pardo",
+                "license": "Unsplash License"
+              }
+            ]
+          },
+          {
+            "id": "embalse-el-yeso",
+            "type": "viewpoint",
+            "name": "Mirador Embalse El Yeso",
+            "coordinates": { "lat": -33.6593, "lng": -70.0942 },
+            "address": "Embalse El Yeso",
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=800&auto=format&fit=crop",
+                "caption": "Türkises Wasser des Stausees",
+                "credit": "Camila Varela",
+                "license": "Unsplash License"
+              },
+              {
+                "url": "https://images.unsplash.com/photo-1471189641895-16c58a695bcb?w=800&auto=format&fit=crop",
+                "caption": "Schneebedeckte Gipfel",
+                "credit": "Sebastián Pardo",
+                "license": "Unsplash License"
+              }
+            ]
+          },
+          {
+            "id": "san-jose-gas",
+            "type": "service",
+            "name": "Tankstelle Copec San José de Maipo",
+            "coordinates": { "lat": -33.6163, "lng": -70.3514 },
+            "address": "Av. Miguel Varas 315, San José de Maipo",
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1529429617124-aee7d6eab8ad?w=800&auto=format&fit=crop",
+                "caption": "Tankstelle im Maipo-Tal",
+                "credit": "Constanza Reinoso",
+                "license": "Unsplash License"
+              },
+              {
+                "url": "https://images.unsplash.com/photo-1528989385568-3ac196525f80?w=800&auto=format&fit=crop",
+                "caption": "Shop mit Snacks",
+                "credit": "Valentina Díaz",
+                "license": "Unsplash License"
+              }
+            ]
+          }
+        ]
+      },
+      "activities": [
+        {
+          "id": "glacier-trek",
+          "type": "hike",
+          "name": "Wanderung zum Gletschervorstoss El Morado",
+          "description": "Geführte Bergtour mit Aussicht auf den San-Francisco-Gletscher.",
+          "recommendedDurationMinutes": 240,
+          "restaurants": [
+            {
+              "name": "La Calchona",
+              "specialties": ["Lamm aus dem Ofen", "Hausgemachte Sopaipillas"],
+              "priceRange": "€€",
+              "url": "https://www.lacalchona.cl",
+              "images": [
+                {
+                  "url": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&auto=format&fit=crop",
+                  "caption": "Lammgericht",
+                  "credit": "Anna Tarazevich",
+                  "license": "Unsplash License"
+                },
+                {
+                  "url": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=800&auto=format&fit=crop",
+                  "caption": "Gemütliches Berghotel",
+                  "credit": "Leonardo Miranda",
+                  "license": "Unsplash License"
+                }
+              ]
+            }
+          ],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=800&auto=format&fit=crop",
+              "caption": "Trekkingpfad im Maipo-Tal",
+              "credit": "Andrés Castillo",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=800&auto=format&fit=crop",
+              "caption": "Gletscherblick",
+              "credit": "Camilo Vargas",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        {
+          "id": "hot-springs-relax",
+          "type": "wellness",
+          "name": "Thermalbad Baños Colina",
+          "description": "Natürliche Terrassenbecken mit mineralhaltigem Wasser.",
+          "recommendedDurationMinutes": 180,
+          "restaurants": [
+            {
+              "name": "Refugio del Maipo",
+              "specialties": ["Cazuela", "Kräutertee aus den Anden"],
+              "priceRange": "€€",
+              "url": "https://www.refugiodelmaipo.cl",
+              "images": [
+                {
+                  "url": "https://images.unsplash.com/photo-1470115636492-6d2b56f9146e?w=800&auto=format&fit=crop",
+                  "caption": "Suppe nach der Wanderung",
+                  "credit": "Patricio Lagos",
+                  "license": "Unsplash License"
+                },
+                {
+                  "url": "https://images.unsplash.com/photo-1471189641895-16c58a695bcb?w=800&auto=format&fit=crop",
+                  "caption": "Berghütte",
+                  "credit": "Sebastián Pardo",
+                  "license": "Unsplash License"
+                }
+              ]
+            }
+          ],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=800&auto=format&fit=crop",
+              "caption": "Thermalbecken bei Sonnenuntergang",
+              "credit": "Camila Varela",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1471189641895-16c58a695bcb?w=800&auto=format&fit=crop",
+              "caption": "Dampfende Pools im Morgenlicht",
+              "credit": "Sebastián Pardo",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        {
+          "id": "stargazing-maipo",
+          "type": "other",
+          "name": "Sternenbeobachtung im Observatorio Cielos de Colina",
+          "description": "Abendlicher Workshop mit Teleskopen und Astrofotografie.",
+          "recommendedDurationMinutes": 150,
+          "restaurants": [
+            {
+              "name": "Café del Observatorio",
+              "specialties": ["Heißer Kakao", "Empanadas de Queso"],
+              "priceRange": "€",
+              "url": "https://www.cielosdemaipo.cl",
+              "images": [
+                {
+                  "url": "https://images.unsplash.com/photo-1458640904116-093b74971de9?w=800&auto=format&fit=crop",
+                  "caption": "Heiße Getränke unter dem Sternenhimmel",
+                  "credit": "Nicolás Astudillo",
+                  "license": "Unsplash License"
+                },
+                {
+                  "url": "https://images.unsplash.com/photo-1589308078055-44e511e7d303?w=800&auto=format&fit=crop",
+                  "caption": "Empanadas frisch aus dem Ofen",
+                  "credit": "Gabriel Gurrola",
+                  "license": "Unsplash License"
+                }
+              ]
+            }
+          ],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1458640904116-093b74971de9?w=800&auto=format&fit=crop",
+              "caption": "Milchstraße über den Anden",
+              "credit": "Nicolás Astudillo",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800&auto=format&fit=crop",
+              "caption": "Teleskop-Setup für Besucher",
+              "credit": "Andrés Vera",
+              "license": "Unsplash License"
+            }
+          ]
+        }
+      ],
+      "hotels": [
+        {
+          "id": "cabanas-del-maipo",
+          "name": "Cabañas del Maipo",
+          "reviewHighlights": ["Private Holz-Hütten", "Feuerstellen unter dem Sternenhimmel"],
+          "avgNightlyRateEUR": 130,
+          "url": "https://www.cabanasdelmaipo.cl",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=800&auto=format&fit=crop",
+              "caption": "Cabin im Wald",
+              "credit": "Daniela Muñoz",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1518601761665-11c0f6fcb125?w=800&auto=format&fit=crop",
+              "caption": "Feuerstelle am Abend",
+              "credit": "Miguel Salas",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        {
+          "id": "hotel-cascada",
+          "name": "Hotel Boutique La Cascada",
+          "reviewHighlights": ["Infinity-Pool mit Bergsicht", "Lokale Gourmetküche"],
+          "avgNightlyRateEUR": 210,
+          "url": "https://www.lacascadamaipo.cl",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1505692794403-34cb5cf055b2?w=800&auto=format&fit=crop",
+              "caption": "Poolbereich",
+              "credit": "Sebastián Araya",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&auto=format&fit=crop",
+              "caption": "Suite mit Bergblick",
+              "credit": "Marcelo Díaz",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        {
+          "id": "refugio-lo-valdes",
+          "name": "Refugio Lo Valdés",
+          "reviewHighlights": ["Bergsteiger-Community", "Geführte Touren ab Haustür"],
+          "avgNightlyRateEUR": 90,
+          "url": "https://www.refugiolovaldes.cl",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=800&auto=format&fit=crop",
+              "caption": "Refugio in den Bergen",
+              "credit": "Leonardo Miranda",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1471189641895-16c58a695bcb?w=800&auto=format&fit=crop",
+              "caption": "Umgebung des Refugios",
+              "credit": "Sebastián Pardo",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        {
+          "id": "glamping-andino",
+          "name": "Glamping Andino",
+          "reviewHighlights": ["Kuppelzelte mit Ofen", "Sternenhimmel inklusive"],
+          "avgNightlyRateEUR": 160,
+          "url": "https://www.glampingandino.cl",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&auto=format&fit=crop",
+              "caption": "Glamping-Kuppel",
+              "credit": "Laura Espinoza",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1458640904116-093b74971de9?w=800&auto=format&fit=crop",
+              "caption": "Nachthimmel über dem Camp",
+              "credit": "Nicolás Astudillo",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        {
+          "id": "hostal-el-morado",
+          "name": "Hostal El Morado",
+          "reviewHighlights": ["Budgetfreundlich", "Gemeinsame Küche für Selbstversorger"],
+          "avgNightlyRateEUR": 55,
+          "url": "https://www.hostalelmorado.cl",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&auto=format&fit=crop",
+              "caption": "Gemeinschaftsraum",
+              "credit": "Ignacio Rojas",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&auto=format&fit=crop",
+              "caption": "Zimmer mit Blick ins Tal",
+              "credit": "Laura Espinoza",
+              "license": "Unsplash License"
+            }
+          ]
+        }
+      ],
+      "mobilityOptions": {
+        "nextFlight": {
+          "summary": "Rückflug nach Santiago (Heli-Transfer nach Tobalaba Heliport)",
+          "operator": "Santiago Helitours",
+          "flightNumber": "HELI07",
+          "departure": "2025-02-12T18:00:00-03:00",
+          "arrival": "2025-02-12T18:30:00-03:00",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1470115636492-6d2b56f9146e?w=800&auto=format&fit=crop",
+              "caption": "Helikopter über dem Tal",
+              "credit": "Patricio Lagos",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=800&auto=format&fit=crop",
+              "caption": "Landung am Helipad",
+              "credit": "Manuel Ortiz",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        "nextBus": {
+          "summary": "Shuttle-Bus nach Metrostation Las Mercedes",
+          "operator": "Turistik",
+          "durationMinutes": 75,
+          "frequencyMinutes": 60,
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?w=800&auto=format&fit=crop",
+              "caption": "Minibus im Maipo-Tal",
+              "credit": "Pedro Guerra",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1528989385568-3ac196525f80?w=800&auto=format&fit=crop",
+              "caption": "Bushaltestelle mit Blick ins Tal",
+              "credit": "Valentina Díaz",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        "nextDrive": {
+          "summary": "Rückfahrt nach Santiago über Camino al Volcán – Rückgabe bei Localiza",
+          "rentalPickup": "Localiza Providencia",
+          "rentalDropoff": "Localiza Providencia",
+          "distanceKm": 110,
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&auto=format&fit=crop",
+              "caption": "Straße zurück nach Santiago",
+              "credit": "Cristobal Leon",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=800&auto=format&fit=crop",
+              "caption": "Stop im Dorf San José de Maipo",
+              "credit": "Leonardo Miranda",
+              "license": "Unsplash License"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
