@@ -26,6 +26,30 @@ test('meta information is present', () => {
   assert.ok(Array.isArray(data.routeIndex) && data.routeIndex.length === 7, 'expected 7 routes');
 });
 
+const januaryRouteIds = [
+  'chile-lakes-loop',
+  'chile-panamericana-roadtrip',
+  'chile-instagram-highlights',
+  'chile-carretera-austral',
+  'chile-wine-gastronomy',
+  'chile-culture-altiplano',
+];
+
+const routesById = new Map(rawRoutes.map((route) => [route.id, route]));
+
+test('january expeditions stay true to the 4.–20. januar timeline', () => {
+  januaryRouteIds.forEach((id) => {
+    const indexEntry = data.routeIndex.find((entry) => entry.id === id);
+    assert.ok(indexEntry, `route index entry missing for ${id}`);
+    assert.ok(/Januar/.test(indexEntry.summary), 'summary should mention January window');
+
+    const route = routesById.get(id);
+    assert.ok(route, `route json missing for ${id}`);
+    assert.equal(route.meta?.durationDays, 17, 'expected 17-day itineraries');
+    assert.ok(route.summary.includes('4.'), 'summary should reference the 4. Januar start');
+  });
+});
+
 test('suggestion library exposes mindestens ein Dutzend Mix-and-Match-Ideen', () => {
   assert.ok(Array.isArray(data.suggestionLibrary), 'suggestion library missing');
   assert.ok(data.suggestionLibrary.length >= 12, 'expected at least 12 suggestion entries');

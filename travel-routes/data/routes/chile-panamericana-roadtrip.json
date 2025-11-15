@@ -1,0 +1,626 @@
+{
+  "id": "chile-panamericana-roadtrip",
+  "name": "Panamericana Roadtrip & Küstenwüste (4.–20. Januar)",
+  "color": "#f4a259",
+  "tags": [
+    "roadtrip",
+    "nature",
+    "culture"
+  ],
+  "summary": "Ab 4. Januar geht es im Mietwagen von Santiago über Valparaíso und La Serena bis zur Mondlandschaft von Bahía Inglesa und dem Parque Pan de Azúcar. Ein entspannter Loop mit viel Sonne, Meer und Sternenhimmel, bevor es am 19. Januar per Kurzflug zurück nach Santiago geht.",
+  "meta": {
+    "theme": "Küste, Observatorien & Atacama-Vorstufe",
+    "pace": "gemütlich",
+    "durationDays": 17,
+    "costEstimate": 2450,
+    "highlights": [
+      "Streetart & Aufzüge in Valparaíso",
+      "Sternegucken im Valle del Elqui",
+      "Türkises Wasser von Bahía Inglesa"
+    ],
+    "scores": {
+      "budget": 3,
+      "adventure": 3,
+      "relax": 4,
+      "culture": 4
+    }
+  },
+  "costBreakdown": {
+    "currency": "EUR",
+    "items": [
+      {
+        "category": "Mietwagen & Treibstoff",
+        "estimate": 720,
+        "notes": "SUV ab Santiago, Rückgabe in Copiapó"
+      },
+      {
+        "category": "Inlandsflug",
+        "estimate": 190,
+        "notes": "Copiapó → Santiago am 19. Januar"
+      },
+      {
+        "category": "Unterkünfte",
+        "estimate": 980,
+        "notes": "Boutique-Hotels & Eco-Lodges"
+      },
+      {
+        "category": "Aktivitäten",
+        "estimate": 320,
+        "notes": "Streetart-Tour, Observatorium, Sandboarding"
+      },
+      {
+        "category": "Kulinarik",
+        "estimate": 240,
+        "notes": "Fischmärkte, Pisco-Verkostungen"
+      }
+    ]
+  },
+  "stops": [
+    {
+      "id": "santiago-city",
+      "name": "Santiago – Barrio Italia",
+      "type": "city",
+      "coordinates": {
+        "lat": -33.4426,
+        "lng": -70.6233
+      },
+      "city": "Santiago",
+      "address": {
+        "street": "Av. Italia",
+        "city": "Providencia",
+        "country": "Chile"
+      },
+      "website": "https://www.santiagoturismo.cl",
+      "description": "Designläden, Cafés und Streetfood – ideal, um den Roadtrip mit einem gemütlichen Abend einzuläuten.",
+      "timezone": "America/Santiago",
+      "rating": 4.7,
+      "reviewCount": 19870,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800&auto=format&fit=crop",
+          "caption": "Abendliche Stimmung im Barrio Italia",
+          "credit": "María Fernanda Rojas",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "valparaiso-hill",
+      "name": "Valparaíso – Cerro Alegre",
+      "type": "city",
+      "coordinates": {
+        "lat": -33.0458,
+        "lng": -71.6197
+      },
+      "city": "Valparaíso",
+      "address": {
+        "street": "Pasaje Gálvez",
+        "city": "Valparaíso",
+        "country": "Chile"
+      },
+      "website": "https://www.visitvalparaiso.cl",
+      "description": "Bunte Murals, historische Aufzüge und Rooftop-Blicke auf den Pazifik – perfekter Auftakt an der Küste.",
+      "timezone": "America/Santiago",
+      "rating": 4.8,
+      "reviewCount": 26740,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1526402462922-1e1d481d87fd?w=800&auto=format&fit=crop",
+          "caption": "Streetart im Cerro Alegre",
+          "credit": "Fabiola Peñailillo",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "la-serena-coast",
+      "name": "La Serena Avenida del Mar",
+      "type": "city",
+      "coordinates": {
+        "lat": -29.9118,
+        "lng": -71.2590
+      },
+      "city": "La Serena",
+      "address": {
+        "street": "Avenida del Mar",
+        "city": "La Serena",
+        "country": "Chile"
+      },
+      "website": "https://www.turismolaserena.cl",
+      "description": "Koloniale Altstadt, lange Sandstrände und als Tor zum Valle del Elqui bekannt.",
+      "timezone": "America/Santiago",
+      "rating": 4.6,
+      "reviewCount": 18320,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&auto=format&fit=crop",
+          "caption": "Sonnenuntergang an der Küste von La Serena",
+          "credit": "Cristóbal Maturana",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "vicuna-town",
+      "name": "Vicuña – Plaza Gabriela Mistral",
+      "type": "town",
+      "coordinates": {
+        "lat": -30.0310,
+        "lng": -70.7084
+      },
+      "city": "Vicuña",
+      "address": {
+        "street": "Gabriela Mistral 260",
+        "city": "Vicuña",
+        "country": "Chile"
+      },
+      "website": "https://www.vicunaturismo.cl",
+      "description": "Charmante Kleinstadt mitten im Valle del Elqui, berühmt für Pisco-Destillerien und Observatorien.",
+      "timezone": "America/Santiago",
+      "rating": 4.7,
+      "reviewCount": 8210,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1473177104440-ffee2f376098?w=800&auto=format&fit=crop",
+          "caption": "Sternklare Nächte über dem Valle del Elqui",
+          "credit": "Ignacio Contreras",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "bahia-inglesa",
+      "name": "Bahía Inglesa – Playa La Piscina",
+      "type": "beach",
+      "coordinates": {
+        "lat": -27.0944,
+        "lng": -70.8429
+      },
+      "city": "Caldera",
+      "address": {
+        "street": "Av. El Morro",
+        "city": "Bahía Inglesa",
+        "country": "Chile"
+      },
+      "website": "https://www.atacamachile.com",
+      "description": "Türkisblaues Wasser, weißer Sand und chillige Strandbars – perfekter Kontrast zur Hauptstadt.",
+      "timezone": "America/Santiago",
+      "rating": 4.8,
+      "reviewCount": 15400,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&auto=format&fit=crop",
+          "caption": "Karibikgefühl in der Atacama",
+          "credit": "Cristóbal Maturana",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "pan-de-azucar",
+      "name": "Parque Nacional Pan de Azúcar",
+      "type": "nature",
+      "coordinates": {
+        "lat": -26.1667,
+        "lng": -70.6167
+      },
+      "city": "Chañaral",
+      "address": {
+        "street": "Ruta C-120",
+        "city": "Chañaral",
+        "country": "Chile"
+      },
+      "website": "https://www.conaf.cl",
+      "description": "Küste, Kaktuslandschaften und Pinguinkolonien – Highlight jeder Atacama-Roadtour.",
+      "timezone": "America/Santiago",
+      "rating": 4.9,
+      "reviewCount": 9120,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&auto=format&fit=crop",
+          "caption": "Kaktuspfade mit Meerblick",
+          "credit": "Sebastián Pardo",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "cpo-airport",
+      "name": "Aeropuerto Desierto de Atacama (CPO)",
+      "type": "airport",
+      "coordinates": {
+        "lat": -27.2612,
+        "lng": -70.7792
+      },
+      "city": "Copiapó",
+      "address": {
+        "street": "Ruta 5 Norte km 811",
+        "city": "Caldera",
+        "country": "Chile"
+      },
+      "website": "https://www.aeropuertocopiapo.cl",
+      "description": "Regionalflughafen nahe Copiapó mit täglichen Rückflügen nach Santiago.",
+      "timezone": "America/Santiago",
+      "rating": 4.4,
+      "reviewCount": 4680,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1500043207442-dc87aeac9cc6?w=800&auto=format&fit=crop",
+          "caption": "Terminalgebäude des Flughafens Copiapó",
+          "credit": "Andrés Molina",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "scl-airport",
+      "name": "Santiago International Airport (SCL)",
+      "type": "airport",
+      "coordinates": {
+        "lat": -33.3929,
+        "lng": -70.7858
+      },
+      "city": "Santiago",
+      "address": {
+        "street": "Armando Cortínez Norte 1701",
+        "city": "Pudahuel",
+        "country": "Chile"
+      },
+      "website": "https://www.nuevopudahuel.cl",
+      "description": "Rückkehr am 19. Januar – von hier geht es weiter ins Stadtzentrum für den letzten Abend.",
+      "timezone": "America/Santiago",
+      "rating": 4.2,
+      "reviewCount": 42876,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1502920514313-52581002a659?w=800&auto=format&fit=crop",
+          "caption": "Boardingbereich in Santiago",
+          "credit": "Agustín Lautaro",
+          "license": "Unsplash License"
+        }
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "panam-seg-01",
+      "from": "santiago-city",
+      "to": "valparaiso-hill",
+      "mode": "drive",
+      "operator": "Europcar",
+      "distanceKm": 116,
+      "durationHours": 2.0,
+      "carbonKg": 22.27,
+      "description": "Start 4. Januar – Küstenroadtrip via Ruta 68 mit Stopp in Casablanca."
+    },
+    {
+      "id": "panam-seg-02",
+      "from": "valparaiso-hill",
+      "to": "la-serena-coast",
+      "mode": "drive",
+      "operator": "Europcar",
+      "distanceKm": 398,
+      "durationHours": 5.5,
+      "carbonKg": 76.42,
+      "description": "Panamericana Norte mit Fotostopp in Los Molles."
+    },
+    {
+      "id": "panam-seg-03",
+      "from": "la-serena-coast",
+      "to": "vicuna-town",
+      "mode": "drive",
+      "operator": "Europcar",
+      "distanceKm": 65,
+      "durationHours": 1.1,
+      "carbonKg": 12.48,
+      "description": "Einrollen ins Valle del Elqui – Pisco-Destillerie am Nachmittag."
+    },
+    {
+      "id": "panam-seg-04",
+      "from": "vicuna-town",
+      "to": "bahia-inglesa",
+      "mode": "drive",
+      "operator": "Europcar",
+      "distanceKm": 320,
+      "durationHours": 4.8,
+      "carbonKg": 61.44,
+      "description": "Fahrt entlang des Küstenhighways mit Picknick in Playa Choros."
+    },
+    {
+      "id": "panam-seg-05",
+      "from": "bahia-inglesa",
+      "to": "pan-de-azucar",
+      "mode": "drive",
+      "operator": "Europcar",
+      "distanceKm": 110,
+      "durationHours": 2.0,
+      "carbonKg": 21.12,
+      "description": "Scenic Drive Richtung Nationalpark – Sonnenuntergangsdünen."
+    },
+    {
+      "id": "panam-seg-06",
+      "from": "pan-de-azucar",
+      "to": "cpo-airport",
+      "mode": "drive",
+      "operator": "Europcar",
+      "distanceKm": 80,
+      "durationHours": 1.5,
+      "carbonKg": 15.36,
+      "description": "Letzte Etappe zur Fahrzeugabgabe in Copiapó."
+    },
+    {
+      "id": "panam-seg-07",
+      "from": "cpo-airport",
+      "to": "scl-airport",
+      "mode": "flight",
+      "operator": "Sky Airline",
+      "distanceKm": 676,
+      "durationHours": 1.6,
+      "carbonKg": 192.66,
+      "description": "Rückflug am 19. Januar – Ankunft rechtzeitig für das Abschlussdinner."
+    }
+  ],
+  "flights": [
+    {
+      "id": "panam-flight-01",
+      "fromStopId": "cpo-airport",
+      "toStopId": "scl-airport",
+      "airline": "Sky Airline",
+      "flightNumber": "H223",
+      "departure": "2025-01-19T18:40:00-03:00",
+      "arrival": "2025-01-19T20:05:00-03:00",
+      "aircraft": "Airbus A320",
+      "cabinClass": "Economy",
+      "baggage": "23 kg Aufgabe",
+      "price": 190,
+      "currency": "EUR",
+      "carbonKg": 192.66
+    }
+  ],
+  "lodging": [
+    {
+      "id": "casa-higueras",
+      "stopId": "valparaiso-hill",
+      "name": "Casa Higueras Boutique Hotel",
+      "nights": 2,
+      "avgNightlyRateEUR": 180,
+      "amenities": [
+        "Rooftop-Pool",
+        "Spa",
+        "Weinbar"
+      ],
+      "url": "https://www.casahigueras.cl",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=800&auto=format&fit=crop",
+          "caption": "Boutique-Hotel mit Blick auf den Pazifik",
+          "credit": "Daniela Muñoz",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "elqui-dome",
+      "stopId": "vicuna-town",
+      "name": "Elqui Domos",
+      "nights": 3,
+      "avgNightlyRateEUR": 160,
+      "amenities": [
+        "Sternendome",
+        "Teleskop",
+        "Pool"
+      ],
+      "url": "https://www.elquidomos.cl",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1505691723518-36a5ac3be353?w=800&auto=format&fit=crop",
+          "caption": "Glasdom mit Sternenhimmel",
+          "credit": "Paula Ortiz",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "hotel-bahia",
+      "stopId": "bahia-inglesa",
+      "name": "Hotel Bahia Inglesa",
+      "nights": 4,
+      "avgNightlyRateEUR": 150,
+      "amenities": [
+        "Meerblick-Zimmer",
+        "Infinity-Pool",
+        "Stand-up-Paddle"
+      ],
+      "url": "https://www.hotelbahiacesar.cl",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?w=800&auto=format&fit=crop",
+          "caption": "Poolbereich am Strand",
+          "credit": "Laura Espinoza",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "pan-eco-lodge",
+      "stopId": "pan-de-azucar",
+      "name": "Eco-Lodge Pan de Azúcar",
+      "nights": 2,
+      "avgNightlyRateEUR": 130,
+      "amenities": [
+        "Solarduschen",
+        "Guided Wildlife Walks",
+        "Beach Bar"
+      ],
+      "url": "https://www.pandeazucar.eco",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1469799840673-741650e534a4?w=800&auto=format&fit=crop",
+          "caption": "Glamping-Zelte am Pazifik",
+          "credit": "Héctor Márquez",
+          "license": "Unsplash License"
+        }
+      ]
+    }
+  ],
+  "food": [
+    {
+      "name": "Mercado Cardonal",
+      "stopId": "valparaiso-hill",
+      "type": "Markt",
+      "address": "Yungay 849, Valparaíso",
+      "openingHours": "08:00–18:00",
+      "specialties": [
+        "Ceviche",
+        "Empanadas de Mariscos"
+      ],
+      "priceRange": "€",
+      "mustTry": [
+        "Reineta frita",
+        "Sopaipillas"
+      ],
+      "reservation": "Walk-in",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1529257414771-1960ab1f3d30?w=800&auto=format&fit=crop",
+          "caption": "Fischstände im Mercado Cardonal",
+          "credit": "Nicolás Pérez",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "name": "Cavas del Valle",
+      "stopId": "vicuna-town",
+      "type": "Destillerie",
+      "address": "Ruta 41, Km 63, Vicuña",
+      "openingHours": "11:00–19:00",
+      "specialties": [
+        "Pisco",
+        "Liköre"
+      ],
+      "priceRange": "€€",
+      "mustTry": [
+        "Pisco Reservado",
+        "Traubenmarmelade"
+      ],
+      "reservation": "Online",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?w=800&auto=format&fit=crop",
+          "caption": "Degustation im Valle del Elqui",
+          "credit": "Ignacio Rodríguez",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "name": "Restaurant Huasco",
+      "stopId": "bahia-inglesa",
+      "type": "Restaurant",
+      "address": "Av. El Morro 185, Bahía Inglesa",
+      "openingHours": "13:00–23:00",
+      "specialties": [
+        "Locos",
+        "Paella Marina"
+      ],
+      "priceRange": "€€",
+      "mustTry": [
+        "Chupe de Jaiba",
+        "Machas a la Parmesana"
+      ],
+      "reservation": "Telefonisch",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1481930955990-333f99e6e30b?w=800&auto=format&fit=crop",
+          "caption": "Meeresfrüchte direkt am Strand",
+          "credit": "Teresa Moya",
+          "license": "Unsplash License"
+        }
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "title": "Streetart-Walk Valparaíso",
+      "stopId": "valparaiso-hill",
+      "durationHours": 3,
+      "operator": "Tours4Tips",
+      "price": 15,
+      "currency": "EUR",
+      "website": "https://www.tours4tips.com/valparaiso",
+      "meetingPoint": "Plaza Sotomayor 10:00",
+      "gear": [
+        "Bequeme Schuhe",
+        "Kamera"
+      ],
+      "difficulty": "leicht",
+      "groupSize": "max. 14 Personen",
+      "included": [
+        "Guide",
+        "Streetart-Map"
+      ],
+      "notes": "Trinkgeld-basiert – 10.000 CLP einplanen."
+    },
+    {
+      "title": "Observatorio Mamalluca Night Tour",
+      "stopId": "vicuna-town",
+      "durationHours": 4,
+      "operator": "Municipalidad de Vicuña",
+      "price": 30,
+      "currency": "EUR",
+      "website": "https://www.observatoriomamalluca.cl",
+      "meetingPoint": "Tourist Office 19:30",
+      "gear": [
+        "Jacke",
+        "Stativ"
+      ],
+      "difficulty": "leicht",
+      "groupSize": "max. 20 Personen",
+      "included": [
+        "Transport",
+        "Guide",
+        "Teleskop"
+      ],
+      "notes": "Vorab online reservieren – Plätze limitiert."
+    },
+    {
+      "title": "Sandboarding in den Dunas de Atacama",
+      "stopId": "bahia-inglesa",
+      "durationHours": 3,
+      "operator": "Atacama Sand",
+      "price": 55,
+      "currency": "EUR",
+      "website": "https://www.atacamasand.cl",
+      "meetingPoint": "Playa La Virgen 09:30",
+      "gear": [
+        "Sonnenbrille",
+        "Wasser"
+      ],
+      "difficulty": "mittel",
+      "groupSize": "max. 8 Personen",
+      "included": [
+        "Board",
+        "Instruktor",
+        "Fotos"
+      ],
+      "notes": "Beste Bedingungen am Vormittag – Wind ab Mittag möglich."
+    }
+  ],
+  "notes": "Ruhiger Start in Santiago am 3. Januar, Abholung des Mietwagens früh am 4. Januar. Rückgabe in Copiapó spätestens 18:00 Uhr vor dem Rückflug am 19. Januar.",
+  "metrics": {
+    "totalDistanceKm": 1365,
+    "estimatedCarbonKg": 401.31,
+    "segmentCount": 7,
+    "flightCount": 1,
+    "stopCount": 8,
+    "groundTransportCarbonKg": 209.59,
+    "totalNights": 11,
+    "avgNightlyRate": 155,
+    "lodgingCount": 4,
+    "foodCount": 3,
+    "activityCount": 3,
+    "averageDailyBudget": 144
+  },
+  "source": "curated"
+}
