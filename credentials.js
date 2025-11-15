@@ -1,6 +1,7 @@
 (function (global) {
   // Für Einsteiger:innen: Wir speichern nur den Hash und niemals das Klartext-Passwort im Repository.
-  const credentials = { passwordHash: '911bb9317e2ce5b62399efddb2d3abc16e5c047862019054d956416920bc979b' };
+  // Hash für "hinterland2025" – hilft Einsteiger:innen, die Verbindung zur Login-Seite zu verstehen.
+  const credentials = { passwordHash: 'fd83af4d7dad74cc994fcb0551f6c3070967c53731175d2bf6e62d9b7e626447' };
 
   if (typeof module !== 'undefined' && module.exports) {
     module.exports = credentials;

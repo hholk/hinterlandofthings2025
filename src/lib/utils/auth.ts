@@ -2,7 +2,8 @@ import { browser } from '$app/environment';
 
 // Für Einsteiger:innen: Wir speichern nur den Hash, nie das Klartext-Passwort.
 export const AUTH_COOKIE_NAME = 'auth-token';
-export const PASSWORD_HASH = '911bb9317e2ce5b62399efddb2d3abc16e5c047862019054d956416920bc979b';
+// Hash für das Passwort "hinterland2025" – niemals das Klartext-Passwort einchecken.
+export const PASSWORD_HASH = 'fd83af4d7dad74cc994fcb0551f6c3070967c53731175d2bf6e62d9b7e626447';
 
 export async function hashPassword(password: string): Promise<string> {
   if (typeof password !== 'string') {
