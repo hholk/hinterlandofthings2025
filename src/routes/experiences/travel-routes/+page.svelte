@@ -128,6 +128,15 @@
         <span class="travel-panel__badge">{defaultDurationLabel}</span>
       </header>
 
+      <div class="travel-panel__cta">
+        <button id="travel-suggestions-open" class="travel-button travel-button--secondary" type="button">
+          12 Reiseideen anzeigen
+        </button>
+        <p class="travel-panel__cta-hint travel-text-muted">
+          Sechs Roadtrips und sechs Flugabenteuer mit Kosten, Highlights und Vibes als Ausgangspunkt.
+        </p>
+      </div>
+
       <section class="travel-panel__section" aria-labelledby="travel-search-label">
         <label id="travel-search-label" class="travel-label" for="travel-search">Routen durchsuchen</label>
         <input
@@ -234,6 +243,32 @@
     </section>
   </div>
 </section>
+
+<div id="travel-suggestions-backdrop" class="travel-suggestions__backdrop" hidden></div>
+<div
+  id="travel-suggestions"
+  class="travel-suggestions"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="travel-suggestions-title"
+  hidden
+>
+  <header class="travel-suggestions__header">
+    <div>
+      <p class="travel-panel__eyebrow">Inspiration &amp; Mix-and-Match</p>
+      <h2 id="travel-suggestions-title">12 Vorschläge für deinen Chile-Trip</h2>
+      <p class="travel-text-muted">
+        Wähle Bausteine nach Aufwand, Kosten und Highlights, um sie in deine eigene Route zu übernehmen.
+      </p>
+    </div>
+    <button id="travel-suggestions-close" class="travel-button travel-button--secondary" type="button">
+      <span class="sr-only">Overlay schließen</span>
+      Schließen
+    </button>
+  </header>
+
+  <div id="travel-suggestion-list" class="travel-suggestions__grid" aria-live="polite"></div>
+</div>
 
 <template id="tpl-route-card">
   <article class="travel-card" data-route-id="">

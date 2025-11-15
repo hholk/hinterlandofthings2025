@@ -21,6 +21,15 @@ test('meta information is present', () => {
   assert.ok(Array.isArray(data.routeIndex) && data.routeIndex.length === 6, 'expected 6 routes');
 });
 
+test('suggestion library exposes 12 mix-and-match ideas', () => {
+  assert.ok(Array.isArray(data.suggestionLibrary), 'suggestion library missing');
+  assert.equal(data.suggestionLibrary.length, 12, 'expected 12 suggestion entries');
+  const flights = data.suggestionLibrary.filter((entry) => entry.type === 'flight');
+  const roadtrips = data.suggestionLibrary.filter((entry) => entry.type === 'roadtrip');
+  assert.ok(flights.length >= 3, 'expected at least 3 flight-based ideas');
+  assert.ok(roadtrips.length >= 3, 'expected at least 3 roadtrip ideas');
+});
+
 test('route index highlights three flight and three roadtrip options', () => {
   const flights = data.routeIndex.filter((entry) => entry.tags?.includes('flight'));
   const roadtrips = data.routeIndex.filter((entry) => entry.tags?.includes('roadtrip'));
@@ -205,6 +214,32 @@ test('copyActivityToRoute clones activities without duplicates', async () => {
   } finally {
     state.customRoutes = originalCustomRoutes;
     state.routeDetails = originalRouteDetails;
+  }
+});
+
+test('createCustomRouteFromSuggestion seeds a custom draft', async () => {
+  const module = await import('./travel-routes.js');
+  const { state, createCustomRouteFromSuggestion } = module;
+
+  const previousRoutes = state.customRoutes;
+  const previousDetails = state.routeDetails;
+  const previousData = state.data;
+
+  try {
+    state.data = data;
+    state.suggestionIndex = new Map(data.suggestionLibrary.map((item) => [item.id, item]));
+    state.customRoutes = [];
+    state.routeDetails = new Map();
+
+    const route = createCustomRouteFromSuggestion(data.suggestionLibrary[0].id);
+    assert.ok(route, 'expected a route to be created');
+    assert.equal(state.customRoutes.length, 1);
+    assert.equal(state.customRoutes[0].source, 'custom');
+    assert.ok(state.customRoutes[0].meta?.highlights.length >= 1);
+  } finally {
+    state.customRoutes = previousRoutes;
+    state.routeDetails = previousDetails;
+    state.data = previousData;
   }
 });
 

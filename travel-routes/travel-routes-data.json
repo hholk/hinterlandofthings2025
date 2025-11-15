@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Chile – Interaktive Reiserouten",
-    "subtitle": "Modulares Toolkit für 6 kuratierte Varianten – drei Roadtrips und drei Flugabenteuer – plus eigene Entwürfe",
+    "subtitle": "Modulares Toolkit für 6 kuratierte Varianten – drei Roadtrips und drei Flugabenteuer – plus 12 Inspirationsideen und eigene Entwürfe",
     "defaultDurationDays": 19,
     "currency": "EUR",
     "editor": {
@@ -94,14 +94,26 @@
       "id": "photography",
       "label": "Fotografie"
     },
-    {
-      "id": "food",
-      "label": "Food"
-    },
-    {
-      "id": "roadtrip",
-      "label": "Roadtrip"
-    },
+  {
+    "id": "food",
+    "label": "Food"
+  },
+  {
+    "id": "family",
+    "label": "Familienfreundlich"
+  },
+  {
+    "id": "sport",
+    "label": "Sport"
+  },
+  {
+    "id": "luxury",
+    "label": "Luxus"
+  },
+  {
+    "id": "roadtrip",
+    "label": "Roadtrip"
+  },
     {
       "id": "flight",
       "label": "Flugreise"
@@ -216,6 +228,463 @@
       "notes": ""
     }
   },
+  "suggestionLibrary": [
+    {
+      "id": "suggest-road-lakes-andes",
+      "title": "Roadtrip Seen & Andenpässe",
+      "type": "roadtrip",
+      "theme": "Seenregion, aktive Vulkane & Termas",
+      "summary": "10 Tage zwischen Pucón, Villarica und den Thermen von Coñaripe.",
+      "durationDays": 10,
+      "costEstimate": 1850,
+      "effort": "mittel",
+      "vibe": "Natur & Outdoor",
+      "highlights": [
+        "Kayak auf dem Lago Villarrica",
+        "Termas Geométricas",
+        "Vulkanbesteigung bei Sonnenaufgang"
+      ],
+      "mapFocus": {
+        "center": [
+          -39.5,
+          -72.0
+        ],
+        "zoom": 6,
+        "region": "Araucanía & Seenregion"
+      },
+      "special": "Ideal für Mietwagen mit kurzen Fahrdistanzen und täglichen Badestopps.",
+      "tags": [
+        "nature",
+        "adventure",
+        "roadtrip"
+      ],
+      "quickNote": "Starte in Temuco, plane zwei Nächte pro Standort und sichere Thermalpässe vorab.",
+      "metrics": {
+        "totalDistanceKm": 840,
+        "estimatedCarbonKg": 161
+      }
+    },
+    {
+      "id": "suggest-road-pacific-panamericana",
+      "title": "Panamericana & Pazifik",
+      "type": "roadtrip",
+      "theme": "Surfstrände, Küstenstädte & Weingüter",
+      "summary": "Ein entspannter Loop von Valparaíso über La Serena bis nach Bahía Inglesa.",
+      "durationDays": 9,
+      "costEstimate": 1650,
+      "effort": "entspannt",
+      "vibe": "Coastal Chill",
+      "highlights": [
+        "Streetart in Valparaíso",
+        "Sterne im Valle del Elqui",
+        "Wüstenbucht Bahía Inglesa"
+      ],
+      "mapFocus": {
+        "center": [
+          -29.9,
+          -71.2
+        ],
+        "zoom": 5,
+        "region": "Nordküste & Valle del Elqui"
+      },
+      "special": "Perfekt für Selbstfahrer:innen, die Kultur und Weinpausen kombinieren möchten.",
+      "tags": [
+        "culture",
+        "wine",
+        "roadtrip"
+      ],
+      "quickNote": "Übernachte in Boutique-Hotels mit Dachterrasse und buche Sternwarten frühzeitig.",
+      "metrics": {
+        "totalDistanceKm": 1280,
+        "estimatedCarbonKg": 240
+      }
+    },
+    {
+      "id": "suggest-road-wine-coast",
+      "title": "Weintäler & Pazifiksonne",
+      "type": "roadtrip",
+      "theme": "Casablanca, Colchagua & Küstenorte",
+      "summary": "Slow-Travel zwischen Viñas, Surfer-Hotspots und kolonialen Plätzen.",
+      "durationDays": 7,
+      "costEstimate": 1450,
+      "effort": "entspannt",
+      "vibe": "Genuss & Kulinarik",
+      "highlights": [
+        "Verkostung im Valle de Casablanca",
+        "Sonnenuntergang in Pichilemu",
+        "Stadtbummel in Santa Cruz"
+      ],
+      "mapFocus": {
+        "center": [
+          -34.3,
+          -71.5
+        ],
+        "zoom": 6,
+        "region": "Zentraltal & Küste"
+      },
+      "special": "Mit kurzen Fahretappen und vielen kulinarischen Stopps für entspannte Tage.",
+      "tags": [
+        "food",
+        "wine",
+        "roadtrip"
+      ],
+      "quickNote": "Reserviere Degustationen am Wochenende und gönn dir ein Spa in den Colchagua-Hotels.",
+      "metrics": {
+        "totalDistanceKm": 540,
+        "estimatedCarbonKg": 103
+      }
+    },
+    {
+      "id": "suggest-road-atacama-4x4",
+      "title": "Atacama 4x4 Explorer",
+      "type": "roadtrip",
+      "theme": "Wüstenseen, Salzpfannen & Sternenhimmel",
+      "summary": "Selbstfahrer:innen erkunden Lagunen, Geysire und Dünen mit einem robusten SUV.",
+      "durationDays": 6,
+      "costEstimate": 1550,
+      "effort": "aktiv",
+      "vibe": "Abenteuer & Fotografie",
+      "highlights": [
+        "Lagunas Altiplánicas",
+        "El Tatio Geysire",
+        "Sandboarden in Valle de la Muerte"
+      ],
+      "mapFocus": {
+        "center": [
+          -23.1,
+          -68.0
+        ],
+        "zoom": 7,
+        "region": "Atacama & Altiplano"
+      },
+      "special": "Beste Reisezeit zwischen April und Oktober – achte auf Höhenakklimatisierung.",
+      "tags": [
+        "adventure",
+        "nature",
+        "roadtrip"
+      ],
+      "quickNote": "Plane kurze Tage für Höhenanpassung ein und tanke in Calama vollständig auf.",
+      "metrics": {
+        "totalDistanceKm": 620,
+        "estimatedCarbonKg": 119
+      }
+    },
+    {
+      "id": "suggest-road-patagonia-short",
+      "title": "Carretera Austral Light",
+      "type": "roadtrip",
+      "theme": "Gletscher, Fjorde & Hängebrücken",
+      "summary": "Von Coyhaique zu den Marmorkathedralen – mit Fokus auf kurze Tagesetappen.",
+      "durationDays": 8,
+      "costEstimate": 2100,
+      "effort": "aktiv",
+      "vibe": "Patagonien pur",
+      "highlights": [
+        "Wanderung im Cerro Castillo",
+        "Bootstour Cuevas de Mármol",
+        "Hängebrücke Puerto Bertrand"
+      ],
+      "mapFocus": {
+        "center": [
+          -46.6,
+          -72.6
+        ],
+        "zoom": 6,
+        "region": "Aysén & Lago General Carrera"
+      },
+      "special": "Allrad empfehlenswert – Reserviere Fähren und Cabins mindestens zwei Monate vorher.",
+      "tags": [
+        "nature",
+        "adventure",
+        "roadtrip"
+      ],
+      "quickNote": "Nutze Coyhaique als Basecamp, halte Treibstoff in Puerto Río Tranquilo im Blick.",
+      "metrics": {
+        "totalDistanceKm": 780,
+        "estimatedCarbonKg": 150
+      }
+    },
+    {
+      "id": "suggest-road-culture-central",
+      "title": "Kultur & Koloniales Zentraltal",
+      "type": "roadtrip",
+      "theme": "Museen, Märkte & nationale Parks",
+      "summary": "Familienfreundliche Schleife zwischen Santiago, Chillán und Talca.",
+      "durationDays": 7,
+      "costEstimate": 1350,
+      "effort": "leicht",
+      "vibe": "Culture & Comfort",
+      "highlights": [
+        "Museo de la Independencia Rancagua",
+        "Termas de Chillán",
+        "Weißweingüter im Maule Valley"
+      ],
+      "mapFocus": {
+        "center": [
+          -36.2,
+          -71.5
+        ],
+        "zoom": 6,
+        "region": "Región del Maule"
+      },
+      "special": "Viele Stopps mit kurzer Fahrzeit – ideal als Einstieg für Chile-Neulinge.",
+      "tags": [
+        "culture",
+        "family",
+        "roadtrip"
+      ],
+      "quickNote": "Verknüpfe Museen mit lokalen Märkten und probiere Mote con Huesillo unterwegs.",
+      "metrics": {
+        "totalDistanceKm": 520,
+        "estimatedCarbonKg": 97
+      }
+    },
+    {
+      "id": "suggest-flight-andes-stars",
+      "title": "Flugreise Anden & Sternenhimmel",
+      "type": "flight",
+      "theme": "Santiago, La Serena & Atacama",
+      "summary": "Von der Hauptstadt zu den Observatorien des Nordens und weiter nach San Pedro.",
+      "durationDays": 11,
+      "costEstimate": 2450,
+      "effort": "mittel",
+      "vibe": "Science & Adventure",
+      "highlights": [
+        "Observatorium Mamalluca",
+        "Ballooning über dem Valle de la Luna",
+        "Streetfood-Tour in Lastarria"
+      ],
+      "mapFocus": {
+        "center": [
+          -27.3,
+          -70.0
+        ],
+        "zoom": 5,
+        "region": "Coquimbo & Antofagasta"
+      },
+      "special": "Kurze Flugstrecken sparen Zeit – perfekte Kombi für Night-Sky-Fotografie.",
+      "tags": [
+        "flight",
+        "nature",
+        "photography"
+      ],
+      "quickNote": "Plane zwei Nächte im Elqui-Tal ein und buche eine Astro-Session mit Guide.",
+      "metrics": {
+        "totalDistanceKm": 4200,
+        "estimatedCarbonKg": 1050
+      }
+    },
+    {
+      "id": "suggest-flight-rapa-nui-classic",
+      "title": "Rapa Nui & Zentralchile",
+      "type": "flight",
+      "theme": "Moai, Wein & Pazifik",
+      "summary": "Kombiniere Santiago, Osterinsel und ein Food-Weekend in Valparaíso.",
+      "durationDays": 12,
+      "costEstimate": 3100,
+      "effort": "mittel",
+      "vibe": "Heritage & Ocean",
+      "highlights": [
+        "Sunrise Ahu Tongariki",
+        "Cooking Class in Santiago",
+        "Helikopterflug über den Weinbergen"
+      ],
+      "mapFocus": {
+        "center": [
+          -27.1,
+          -109.3
+        ],
+        "zoom": 4,
+        "region": "Santiago & Rapa Nui"
+      },
+      "special": "Perfekt für Paare oder Freundesgruppen, die Kultur und Genuss verbinden wollen.",
+      "tags": [
+        "flight",
+        "culture",
+        "food"
+      ],
+      "quickNote": "Mindestens vier Nächte auf Rapa Nui einplanen und Bikes vorab reservieren.",
+      "metrics": {
+        "totalDistanceKm": 7600,
+        "estimatedCarbonKg": 2080
+      }
+    },
+    {
+      "id": "suggest-flight-patagonia-glaciers",
+      "title": "Patagonias Gletscher aus der Luft",
+      "type": "flight",
+      "theme": "Torres del Paine & Fjorde",
+      "summary": "Fly & Drive nach Punta Arenas, weiter nach Puerto Natales und ins Eisfeld.",
+      "durationDays": 9,
+      "costEstimate": 2700,
+      "effort": "aktiv",
+      "vibe": "Expedition Light",
+      "highlights": [
+        "Gletscherwanderung Grey",
+        "Navigation Fjord Ultima Esperanza",
+        "Puma-Tracking im Nationalpark"
+      ],
+      "mapFocus": {
+        "center": [
+          -51.2,
+          -72.5
+        ],
+        "zoom": 6,
+        "region": "Magallanes"
+      },
+      "special": "Sehr wetterabhängig – flexible Tage und Reiseversicherung einplanen.",
+      "tags": [
+        "flight",
+        "adventure",
+        "nature"
+      ],
+      "quickNote": "Buche Eco-Camps frühzeitig und reserviere Bootstouren gleich nach Flugbestätigung.",
+      "metrics": {
+        "totalDistanceKm": 5200,
+        "estimatedCarbonKg": 1315
+      }
+    },
+    {
+      "id": "suggest-flight-desert-fjords",
+      "title": "Wüste trifft Fjord",
+      "type": "flight",
+      "theme": "Atacama & Puerto Montt",
+      "summary": "Kontrastprogramm: erst Dünen und Salzseen, dann Inselhopping in Chiloé.",
+      "durationDays": 10,
+      "costEstimate": 2550,
+      "effort": "aktiv",
+      "vibe": "Kontraste & Kulinarik",
+      "highlights": [
+        "Ballooning San Pedro",
+        "Curanto in Chonchi",
+        "Kayak in den Reloncaví-Fjorden"
+      ],
+      "mapFocus": {
+        "center": [
+          -30.5,
+          -71.8
+        ],
+        "zoom": 5,
+        "region": "Nord-Süd-Kontrast"
+      },
+      "special": "Perfekt für Vielreisende, die innerhalb von zwei Wochen maximale Vielfalt möchten.",
+      "tags": [
+        "flight",
+        "food",
+        "nature"
+      ],
+      "quickNote": "Nutze Multistop-Tickets von LATAM und packe passende Kleidung für beide Klimazonen.",
+      "metrics": {
+        "totalDistanceKm": 6100,
+        "estimatedCarbonKg": 1580
+      }
+    },
+    {
+      "id": "suggest-flight-island-hopper",
+      "title": "Island Hopper Chile",
+      "type": "flight",
+      "theme": "Chiloé, Robinson Crusoe & La Serena",
+      "summary": "Seltene Inlandsflüge verbinden mystische Inselwelten mit kolonialen Küstenstädten.",
+      "durationDays": 13,
+      "costEstimate": 3250,
+      "effort": "anspruchsvoll",
+      "vibe": "Entdeckergeist",
+      "highlights": [
+        "Holzkirchen auf Chiloé",
+        "Tauchen bei Cumberland Bay",
+        "Pisco-Verkostung im Elqui-Tal"
+      ],
+      "mapFocus": {
+        "center": [
+          -33.0,
+          -74.0
+        ],
+        "zoom": 4,
+        "region": "Pazifische Inseln"
+      },
+      "special": "Limitierte Flugplätze – Tickets und Unterkünfte lange im Voraus sichern.",
+      "tags": [
+        "flight",
+        "culture",
+        "adventure"
+      ],
+      "quickNote": "Packe leicht, da Regionalflugzeuge strenge Gewichtsregeln haben.",
+      "metrics": {
+        "totalDistanceKm": 8400,
+        "estimatedCarbonKg": 2190
+      }
+    },
+    {
+      "id": "suggest-flight-ski-surf",
+      "title": "Ski & Surf Weekender",
+      "type": "flight",
+      "theme": "Cordillera & Pazifik",
+      "summary": "Winter in den Anden, danach Surfkurs in Pichilemu – verbunden durch Kurzflüge.",
+      "durationDays": 7,
+      "costEstimate": 2150,
+      "effort": "sportlich",
+      "vibe": "Adrenalin & Fun",
+      "highlights": [
+        "Heliski in Valle Nevado",
+        "Thermen von Colina",
+        "Surf-Coaching Punta de Lobos"
+      ],
+      "mapFocus": {
+        "center": [
+          -34.4,
+          -70.0
+        ],
+        "zoom": 6,
+        "region": "Anden & O'Higgins"
+      },
+      "special": "Geeignet für Reisende mit Sportfokus – Equipment kann vor Ort gemietet werden.",
+      "tags": [
+        "flight",
+        "adventure",
+        "sport"
+      ],
+      "quickNote": "Buche Heliski-Slots früh und sichere Surf-Guides mind. zwei Wochen vorher.",
+      "metrics": {
+        "totalDistanceKm": 3600,
+        "estimatedCarbonKg": 890
+      }
+    },
+    {
+      "id": "suggest-flight-astronomy-lux",
+      "title": "Astronomie & Luxuslodges",
+      "type": "flight",
+      "theme": "Premium-Sky-Lodges & Observatorien",
+      "summary": "Charterflüge nach San Pedro, dann weiter in die Sterne Camps von Atacama und Uyuni.",
+      "durationDays": 8,
+      "costEstimate": 4450,
+      "effort": "anspruchsvoll",
+      "vibe": "Luxury & Exploration",
+      "highlights": [
+        "Private Stargazing Lodge",
+        "Salar de Tara Exkursion",
+        "Fine Dining im Explora Hotel"
+      ],
+      "mapFocus": {
+        "center": [
+          -22.8,
+          -68.3
+        ],
+        "zoom": 6,
+        "region": "Luxury Atacama"
+      },
+      "special": "High-End-Option mit maßgeschneiderten Guides und 24/7 Butler-Service.",
+      "tags": [
+        "flight",
+        "luxury",
+        "nature"
+      ],
+      "quickNote": "Klare Nächte sind entscheidend – plane eine flexible Abreise für Schlechtwetter.",
+      "metrics": {
+        "totalDistanceKm": 5600,
+        "estimatedCarbonKg": 1420
+      }
+    }
+  ],
   "routeIndex": [
     {
       "id": "var1",
