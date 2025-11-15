@@ -1,19 +1,30 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import type { PageData } from './$types';
-  import '../../../../travel-routes/travel-routes.css';
+  import type { TravelRoute } from '../../../lib/data/chile-travel';
 
   export let data: PageData;
 
+  // Für Einsteiger:innen: Wir speichern nur die ID der aktiven Route, damit das UI
+  // leicht nachvollziehbar bleibt. Über den abgeleiteten Wert greifen wir immer auf
+  // die vollständigen Routeninformationen zu.
+  let selectedRouteId = data.travel.routes[0]?.id ?? '';
+  let selectedRoute: TravelRoute | undefined = data.travel.routes.find((route) => route.id === selectedRouteId);
+
+  let mapContainer: HTMLDivElement | null = null;
+  let mapInstance: any = null;
+  let leaflet: any = null;
+  let markerLayer: any = null;
+  let lineLayer: any = null;
   let loadError: string | null = null;
-  let bootCancelled = false;
-  const defaultDurationLabel = data.travel?.meta?.defaultDurationDays
-    ? `${data.travel.meta.defaultDurationDays} Tage`
-    : 'Mehrtagestour';
 
   const LEAFLET_SCRIPT_URL = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
 
-  function ensureBodyTheme() {
+  function updateSelectedRoute() {
+    selectedRoute = data.travel.routes.find((route) => route.id === selectedRouteId);
+  }
+
+  function addBodyTheme() {
     if (typeof document === 'undefined') return;
     document.body.classList.add('travel-body');
   }
@@ -23,70 +34,123 @@
     document.body.classList.remove('travel-body');
   }
 
-  function loadLeaflet(): Promise<void> {
-    if (typeof window === 'undefined') {
-      return Promise.resolve();
-    }
+  // Für Einsteiger:innen: Diese Hilfsfunktion lädt Leaflet nur im Browser.
+  async function ensureLeaflet(): Promise<any> {
+    if (typeof window === 'undefined') return null;
+    if (leaflet) return leaflet;
+
     if ((window as typeof window & { L?: unknown }).L) {
-      return Promise.resolve();
+      leaflet = (window as typeof window & { L: any }).L;
+      return leaflet;
     }
 
-    const existing = document.querySelector('script[data-leaflet]');
-    if (existing) {
-      return new Promise((resolve, reject) => {
-        existing.addEventListener('load', () => resolve(), { once: true });
-        existing.addEventListener(
-          'error',
-          () => reject(new Error('Leaflet konnte nicht geladen werden.')),
-          { once: true }
-        );
-      });
-    }
+    await new Promise<void>((resolve, reject) => {
+      const existing = document.querySelector('script[data-leaflet]') as HTMLScriptElement | null;
+      const script = existing ?? document.createElement('script');
 
-    return new Promise((resolve, reject) => {
-      const script = document.createElement('script');
       script.src = LEAFLET_SCRIPT_URL;
       script.async = true;
       script.defer = true;
       script.dataset.leaflet = 'true';
-      script.addEventListener('load', () => resolve());
+      script.addEventListener('load', () => resolve(), { once: true });
       script.addEventListener('error', () => reject(new Error('Leaflet konnte nicht geladen werden.')));
-      document.head.appendChild(script);
+
+      if (!existing) {
+        document.head.appendChild(script);
+      }
     });
+
+    leaflet = (window as typeof window & { L: any }).L;
+    return leaflet;
   }
 
-  // Für Einsteiger:innen: Wir laden die Leaflet-Bibliothek erst im Browser,
-  // damit der statische Build klein bleibt und SSR nicht ins Stolpern gerät.
-  onMount(() => {
-    bootCancelled = false;
-    ensureBodyTheme();
+  function renderRoute(route: TravelRoute | undefined) {
+    if (!route || !leaflet || !mapInstance) return;
 
-    if (import.meta.env.MODE === 'test') {
-      return () => {
-        bootCancelled = true;
-        removeBodyTheme();
-      };
+    if (markerLayer) {
+      mapInstance.removeLayer(markerLayer);
+      markerLayer = null;
     }
+    if (lineLayer) {
+      mapInstance.removeLayer(lineLayer);
+      lineLayer = null;
+    }
+
+    lineLayer = leaflet.polyline(route.mapPolyline, {
+      color: route.color,
+      weight: 4,
+      opacity: 0.95
+    }).addTo(mapInstance);
+
+    markerLayer = leaflet.layerGroup(
+      route.stops.map((stop, index) =>
+        leaflet
+          .circleMarker(stop.coordinates, {
+            radius: 6,
+            weight: 2,
+            color: route.color,
+            fillColor: '#ffffff',
+            fillOpacity: 1
+          })
+          .bindTooltip(`${index + 1}. ${stop.dayRange} – ${stop.location}`, { direction: 'top' })
+      )
+    ).addTo(mapInstance);
+
+    try {
+      const bounds = lineLayer.getBounds();
+      mapInstance.fitBounds(bounds, { padding: [32, 32] });
+    } catch (error) {
+      console.warn('Konnte Bounds nicht setzen', error);
+    }
+  }
+
+  onMount(() => {
+    if (!mapContainer) return;
+
+    let cancelled = false;
 
     const boot = async () => {
       try {
-        await loadLeaflet();
-        if (bootCancelled) return;
-        await import('../../../../travel-routes/travel-routes.js');
+        const L = await ensureLeaflet();
+        if (!L || cancelled) return;
+
+        leaflet = L;
+        mapInstance = L.map(mapContainer, {
+          center: data.travel.map.center,
+          zoom: data.travel.map.zoom,
+          scrollWheelZoom: false
+        });
+
+        L.tileLayer(data.travel.map.tileUrl, {
+          attribution: data.travel.map.attribution,
+          maxZoom: 12
+        }).addTo(mapInstance);
+
+        renderRoute(selectedRoute);
       } catch (error) {
-        if (!bootCancelled) {
-          loadError = error instanceof Error ? error.message : 'Unbekannter Fehler';
-        }
+        loadError = error instanceof Error ? error.message : 'Unbekannter Fehler beim Laden der Karte';
       }
     };
 
+    addBodyTheme();
     void boot();
 
     return () => {
-      bootCancelled = true;
+      cancelled = true;
+      if (mapInstance) {
+        mapInstance.remove();
+        mapInstance = null;
+      }
+      markerLayer = null;
+      lineLayer = null;
       removeBodyTheme();
     };
   });
+
+  $: updateSelectedRoute();
+  $: if (mapInstance && selectedRoute) {
+    renderRoute(selectedRoute);
+  }
 </script>
 
 <svelte:head>
@@ -95,7 +159,7 @@
     name="description"
     content={
       data.experience?.description ??
-        'Interaktive Chile-Routen mit editierbaren Etappen, Karten und eigener Notizfunktion.'
+        'Interaktive Chile-Routen mit Karte, detaillierten Stopps und Logistik-Tipps.'
     }
   />
   <link
@@ -106,236 +170,510 @@
   />
 </svelte:head>
 
-<section class="travel-experience" aria-labelledby="travel-experience-title">
-  <header class="travel-experience__intro">
-    <span aria-hidden="true" class="travel-experience__icon">{@html data.experience?.icon ?? ''}</span>
+<section class="travel" aria-labelledby="travel-title">
+  <header class="travel__intro">
     <div>
-      <h1 id="travel-experience-title">{data.experience?.title ?? 'Chile Travel Experience'}</h1>
-      <p>{data.experience?.description ?? 'Modulares Toolkit für Chile-Routen.'}</p>
+      <p class="travel__eyebrow">Chile Toolkit</p>
+      <h1 id="travel-title">{data.experience?.title ?? 'Chile Reiseplaner'}</h1>
+      <p>{data.experience?.description ?? 'Wähle eine Route und entdecke alle Etappen im Detail.'}</p>
     </div>
   </header>
 
-  <div class="travel-app" data-state-ready="false">
-    <aside id="travel-panel" class="travel-panel" data-hidden="false" aria-label="Routenfilter">
-      <header class="travel-panel__header">
+  <div class="travel__layout">
+    <div class="travel__map" aria-live="polite">
+      <div
+        id="travel-map"
+        bind:this={mapContainer}
+        role="application"
+        aria-label="Interaktive Karte von Chile"
+      ></div>
+      {#if loadError}
+        <p class="travel__map-error">{loadError}</p>
+      {/if}
+      <ul class="travel__legend" aria-label="Legende">
+        {#each data.travel.map.legend as legendItem}
+          <li>
+            <span style={`--legend-color: ${legendItem.color}`}></span>
+            {legendItem.label}
+          </li>
+        {/each}
+      </ul>
+    </div>
+
+    <aside class="travel__routes" aria-label="Routen auswählen">
+      <h2>Routenübersicht</h2>
+      <p class="travel__routes-hint">
+        Jede Option enthält Entfernungen, Transport und Unterkünfte für jeden Halt.
+      </p>
+      <ul>
+        {#each data.travel.routes as route}
+          <li>
+            <button
+              type="button"
+              class:selected={route.id === selectedRouteId}
+              style={`--route-color: ${route.color}`}
+              on:click={() => {
+                selectedRouteId = route.id;
+              }}
+            >
+              <span class="travel__route-name">{route.name}</span>
+              <span class="travel__route-meta">{route.totalDays} Tage · {route.totalDistanceKm} km</span>
+              <span class="travel__route-tagline">{route.tagline}</span>
+            </button>
+          </li>
+        {/each}
+      </ul>
+    </aside>
+  </div>
+
+  {#if selectedRoute}
+    <article class="travel__detail" aria-labelledby="route-title">
+      <header class="travel__detail-header">
         <div>
-          <p class="travel-panel__eyebrow">Chile Toolkit</p>
-          <h2 class="travel-panel__headline">Kuratiere deine Reise</h2>
-          <p class="travel-text-muted">
-            Vergleiche Vorschläge, markiere Favoriten und starte eigene Varianten in wenigen Klicks.
-          </p>
+          <h2 id="route-title">{selectedRoute.name}</h2>
+          <p>{selectedRoute.summary}</p>
         </div>
-        <span class="travel-panel__badge">{defaultDurationLabel}</span>
+        <dl class="travel__metrics">
+          <div>
+            <dt>Reisedauer</dt>
+            <dd>{selectedRoute.totalDays} Tage</dd>
+          </div>
+          <div>
+            <dt>Gesamtdistanz</dt>
+            <dd>{selectedRoute.totalDistanceKm.toLocaleString('de-DE')} km</dd>
+          </div>
+          <div>
+            <dt>Tempo</dt>
+            <dd>{selectedRoute.essentials.pace}</dd>
+          </div>
+        </dl>
       </header>
 
-      <div class="travel-panel__cta">
-        <button id="travel-suggestions-open" class="travel-button travel-button--secondary" type="button">
-          12 Reiseideen anzeigen
-        </button>
-        <p class="travel-panel__cta-hint travel-text-muted">
-          Sechs Roadtrips und sechs Flugabenteuer mit Kosten, Highlights und Vibes als Ausgangspunkt.
-        </p>
-      </div>
-
-      <section class="travel-panel__section" aria-labelledby="travel-search-label">
-        <label id="travel-search-label" class="travel-label" for="travel-search">Routen durchsuchen</label>
-        <input
-          id="travel-search"
-          class="travel-input"
-          type="search"
-          placeholder="z. B. Valparaíso, Vulkane, Food"
-        />
+      <section class="travel__chips" aria-label="Fortbewegung">
+        <h3>Fortbewegungsmix</h3>
+        <ul>
+          {#each selectedRoute.transportMix as mode}
+            <li>{mode}</li>
+          {/each}
+        </ul>
       </section>
 
-      <section class="travel-panel__section" aria-labelledby="travel-filter-label">
-        <div class="travel-panel__section-heading">
-          <h3 id="travel-filter-label">Sammlungen</h3>
-          <p class="travel-text-muted">Filtere nach kuratierten Vorschlägen oder deinen eigenen Entwürfen.</p>
-        </div>
-        <div class="travel-filter" role="tablist" aria-label="Routenquellen wählen">
-          <button class="travel-chip" type="button" data-filter="curated" aria-selected="true">
-            Kuratierte Routen
-          </button>
-          <button class="travel-chip" type="button" data-filter="custom" aria-selected="false">
-            Eigene Entwürfe
-          </button>
-        </div>
-        <div id="travel-tag-list" class="travel-tag-list" aria-label="Themen-Tags"></div>
-      </section>
-
-      <section class="travel-panel__section travel-panel__section--secondary" aria-labelledby="travel-route-list-heading">
-        <div class="travel-panel__section-heading">
-          <h3 id="travel-route-list-heading">Vorschläge & Kopiervorlagen</h3>
-          <p class="travel-text-muted">Klicke auf „Details anzeigen“, um Karte und Planung zu aktualisieren.</p>
-        </div>
-        <div id="travel-route-list" class="travel-route-list" aria-live="polite">
-          <div class="travel-empty-state">Routen werden geladen …</div>
-        </div>
-      </section>
-
-      <section class="travel-panel__section travel-panel__section--secondary" aria-labelledby="travel-gallery-heading">
-        <div class="travel-panel__section-heading">
-          <h3 id="travel-gallery-heading">Fotogalerie</h3>
-          <p class="travel-text-muted">Inspiration aus der Atacama, Patagonien und von Rapa Nui.</p>
-        </div>
-        <div id="travel-gallery" class="travel-gallery"></div>
-      </section>
-
-      <section class="travel-panel__section travel-panel__section--secondary" aria-labelledby="travel-events-heading">
-        <div class="travel-panel__section-heading">
-          <h3 id="travel-events-heading">Events & Festivals</h3>
-          <p class="travel-text-muted">Plane besondere Termine direkt ein.</p>
-        </div>
-        <ul id="travel-events" class="travel-event-list"></ul>
-      </section>
-
-      <section class="travel-panel__section travel-panel__section--secondary" aria-labelledby="travel-poi-heading">
-        <div class="travel-poi__header">
+      <section class="travel__essentials" aria-label="Praktische Hinweise">
+        <h3>Reisetipps auf einen Blick</h3>
+        <dl>
           <div>
-            <h3 id="travel-poi-heading">POI-Merkliste</h3>
-            <p class="travel-text-muted">Speichere Spots direkt für deinen Trip.</p>
+            <dt>Beste Reisezeit</dt>
+            <dd>{selectedRoute.essentials.bestSeason}</dd>
           </div>
-        </div>
-        <div id="travel-poi-list" class="travel-poi-list"></div>
+          <div>
+            <dt>Budget (pro Person)</dt>
+            <dd>{selectedRoute.essentials.budgetPerPersonEUR}</dd>
+          </div>
+          <div>
+            <dt>Empfohlen für</dt>
+            <dd>{selectedRoute.essentials.recommendedFor.join(', ')}</dd>
+          </div>
+        </dl>
       </section>
 
-      <section class="travel-panel__section travel-panel__section--secondary" aria-labelledby="travel-notes-heading">
-        <div class="travel-panel__section-heading">
-          <h3 id="travel-notes-heading">Deine Reise-Notizen</h3>
-          <p class="travel-text-muted">Markdown wird live gerendert – ideal für schnelle Ideen.</p>
-        </div>
-        <label class="travel-label" for="travel-md">Markdown-Eingabe</label>
-        <textarea
-          id="travel-md"
-          class="travel-input"
-          rows="5"
-          placeholder="## Ideen für deinen persönlichen Ablauf"
-        ></textarea>
-        <div class="travel-actions">
-          <button id="travel-md-render" class="travel-button" type="button">Notiz aktualisieren</button>
-          <button id="travel-md-clear" class="travel-button travel-button--secondary" type="button">
-            Notiz leeren
-          </button>
-        </div>
-        <div id="travel-md-preview" class="travel-markdown" aria-live="polite"></div>
+      <section class="travel__stops" aria-label="Etappenübersicht">
+        <h3>Etappen & Aufenthalte</h3>
+        <ol>
+          {#each selectedRoute.stops as stop, index}
+            <li>
+              <header>
+                <span class="travel__stop-index">{index + 1}</span>
+                <div>
+                  <p class="travel__stop-day">{stop.dayRange}</p>
+                  <h4>{stop.location}</h4>
+                </div>
+              </header>
+              <p>{stop.description}</p>
+              <dl class="travel__stop-meta">
+                <div>
+                  <dt>Aufenthalt</dt>
+                  <dd>{stop.stayNights} {stop.stayNights === 1 ? 'Nacht' : 'Nächte'}</dd>
+                </div>
+                <div>
+                  <dt>Anreise</dt>
+                  <dd>{stop.transportMode}</dd>
+                </div>
+                <div>
+                  <dt>Strecke</dt>
+                  <dd>{stop.travelDistanceKm.toLocaleString('de-DE')} km · {stop.travelDurationHours.toLocaleString('de-DE', { maximumFractionDigits: 1 })} h</dd>
+                </div>
+                <div>
+                  <dt>Unterkunft</dt>
+                  <dd>{stop.accommodation}</dd>
+                </div>
+              </dl>
+              <div class="travel__stop-highlights">
+                <h5>Highlights</h5>
+                <ul>
+                  {#each stop.highlights as highlight}
+                    <li>{highlight}</li>
+                  {/each}
+                </ul>
+              </div>
+            </li>
+          {/each}
+        </ol>
       </section>
-    </aside>
-
-    <div class="travel-map-shell" aria-label="Chile-Karte">
-      <button
-        class="travel-panel-toggle"
-        type="button"
-        aria-controls="travel-panel"
-        aria-expanded="true"
-      >
-        <span class="sr-only">Routenübersicht umschalten</span>
-        ☰
-      </button>
-      <div id="travel-map" class="travel-map" role="presentation" aria-label="Reiseroutenkarte"></div>
-    </div>
-
-    <section id="travel-detail" class="travel-detail" aria-live="polite">
-      {#if loadError}
-        <div class="travel-empty-state">{loadError}</div>
-      {:else}
-        <div class="travel-empty-state">Wähle eine Route aus der Liste, um Details zu sehen.</div>
-      {/if}
-    </section>
-  </div>
+    </article>
+  {:else}
+    <p class="travel__empty">Wähle eine Route aus, um Details zu sehen.</p>
+  {/if}
 </section>
 
-<div id="travel-suggestions-backdrop" class="travel-suggestions__backdrop" hidden></div>
-<div
-  id="travel-suggestions"
-  class="travel-suggestions"
-  role="dialog"
-  aria-modal="true"
-  aria-labelledby="travel-suggestions-title"
-  hidden
->
-  <header class="travel-suggestions__header">
-    <div>
-      <p class="travel-panel__eyebrow">Inspiration &amp; Mix-and-Match</p>
-      <h2 id="travel-suggestions-title">12 Vorschläge für deinen Chile-Trip</h2>
-      <p class="travel-text-muted">
-        Wähle Bausteine nach Aufwand, Kosten und Highlights, um sie in deine eigene Route zu übernehmen.
-      </p>
-    </div>
-    <button id="travel-suggestions-close" class="travel-button travel-button--secondary" type="button">
-      <span class="sr-only">Overlay schließen</span>
-      Schließen
-    </button>
-  </header>
-
-  <div id="travel-suggestion-list" class="travel-suggestions__grid" aria-live="polite"></div>
-</div>
-
-<template id="tpl-route-card">
-  <article class="travel-card" data-route-id="">
-    <header class="travel-card__header">
-      <div>
-        <h3 class="travel-card__title"></h3>
-        <p class="travel-card__subtitle"></p>
-      </div>
-      <span class="travel-card__badge"></span>
-    </header>
-    <p class="travel-card__description"></p>
-    <dl class="travel-card__meta"></dl>
-    <div class="travel-card__actions"></div>
-  </article>
-</template>
-
-<template id="tpl-flight-row">
-  <li class="travel-flight-item"></li>
-</template>
-
-<template id="tpl-stop-item">
-  <li class="travel-stop-item"></li>
-</template>
-
-<template id="tpl-cost-row">
-  <tr></tr>
-</template>
-
 <style>
-  .travel-experience {
-    display: grid;
-    gap: clamp(2rem, 4vw, 3rem);
+  :global(body.travel-body) {
+    background: #0f172a;
   }
 
-  .travel-experience__intro {
+  .travel {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 3rem;
+    padding: clamp(1.5rem, 2vw + 1rem, 3rem) clamp(1rem, 2vw + 1rem, 3.5rem) 4rem;
+    color: #0f172a;
+    background: linear-gradient(180deg, #eef2ff 0%, #f8fafc 35%, #ffffff 100%);
+  }
+
+  .travel__intro h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .travel__intro p {
+    max-width: 48rem;
+    color: #334155;
+  }
+
+  .travel__eyebrow {
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    color: #6366f1;
+    margin-bottom: 0.5rem;
+  }
+
+  .travel__layout {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: minmax(0, 2fr) minmax(18rem, 1fr);
+    align-items: start;
+  }
+
+  .travel__map {
+    position: relative;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(15, 23, 42, 0.15);
+    background: #fff;
+    min-height: 420px;
+  }
+
+  #travel-map {
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+  }
+
+  .travel__map-error {
+    position: absolute;
+    inset: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    border-radius: 0.75rem;
+    color: #b91c1c;
+    font-weight: 600;
+  }
+
+  .travel__legend {
+    position: absolute;
+    inset: auto 1rem 1rem auto;
+    list-style: none;
+    margin: 0;
+    padding: 0.75rem 1rem;
+    background: rgba(15, 23, 42, 0.85);
+    color: white;
+    border-radius: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  .travel__legend li {
+    display: flex;
     align-items: center;
+    gap: 0.5rem;
   }
 
-  .travel-experience__icon :global(svg) {
-    width: 3rem;
-    height: 3rem;
-    color: #5bd1ff;
+  .travel__legend span {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 999px;
+    background: var(--legend-color);
+    display: inline-flex;
   }
 
-  .travel-experience__intro h1 {
+  .travel__routes {
+    background: white;
+    border-radius: 1.25rem;
+    padding: 1.5rem;
+    box-shadow: 0 20px 60px rgba(15, 23, 42, 0.15);
+  }
+
+  .travel__routes h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.25rem;
+  }
+
+  .travel__routes-hint {
+    margin: 0 0 1.5rem;
+    color: #475569;
+    font-size: 0.95rem;
+  }
+
+  .travel__routes ul {
+    list-style: none;
+    padding: 0;
     margin: 0;
-    font-size: clamp(2rem, 5vw, 3rem);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
   }
 
-  .travel-experience__intro p {
-    margin: 0;
-    color: rgba(226, 232, 240, 0.82);
-    max-width: 60ch;
-  }
-
-  .travel-panel__section-heading {
+  .travel__routes button {
+    width: 100%;
+    text-align: left;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    padding: 1rem 1.25rem;
+    background: #f8fafc;
+    color: inherit;
+    transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
     display: grid;
     gap: 0.35rem;
+  }
+
+  .travel__routes button:hover,
+  .travel__routes button:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(79, 70, 229, 0.18);
+    border-color: var(--route-color);
+    outline: none;
+  }
+
+  .travel__routes button.selected {
+    background: rgba(79, 70, 229, 0.08);
+    border-color: var(--route-color);
+    box-shadow: 0 14px 36px rgba(30, 64, 175, 0.18);
+  }
+
+  .travel__route-name {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  .travel__route-meta {
+    font-size: 0.85rem;
+    color: #475569;
+  }
+
+  .travel__route-tagline {
+    font-size: 0.9rem;
+    color: #1e293b;
+  }
+
+  .travel__detail {
+    background: white;
+    border-radius: 1.5rem;
+    padding: clamp(1.5rem, 2vw + 1rem, 3rem);
+    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .travel__detail-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .travel__detail-header h2 {
+    margin: 0;
+    font-size: clamp(1.5rem, 3vw, 2.4rem);
+  }
+
+  .travel__detail-header p {
+    color: #334155;
+    margin: 0;
+  }
+
+  .travel__metrics {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  }
+
+  .travel__metrics dt {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #64748b;
+  }
+
+  .travel__metrics dd {
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #0f172a;
+  }
+
+  .travel__chips {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .travel__chips h3 {
+    margin: 0;
+  }
+
+  .travel__chips ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .travel__chips li {
+    background: #e0f2fe;
+    color: #0c4a6e;
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+  }
+
+  .travel__essentials dl {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  }
+
+  .travel__essentials dt {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 0.35rem;
+  }
+
+  .travel__essentials dd {
+    margin: 0;
+    font-weight: 600;
+    color: #0f172a;
+  }
+
+  .travel__stops ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .travel__stops li {
+    border: 1px solid #e2e8f0;
+    border-radius: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: linear-gradient(145deg, rgba(248, 250, 252, 0.95), rgba(224, 242, 254, 0.35));
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  }
+
+  .travel__stops header {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
     margin-bottom: 0.75rem;
   }
 
-  .travel-actions {
+  .travel__stop-index {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 999px;
+    background: #2563eb;
+    color: white;
     display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+  }
+
+  .travel__stop-day {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #64748b;
+    margin: 0;
+  }
+
+  .travel__stops h4 {
+    margin: 0;
+  }
+
+  .travel__stop-meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: 1rem;
+    margin: 1rem 0 0;
+  }
+
+  .travel__stop-meta dt {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #475569;
+  }
+
+  .travel__stop-meta dd {
+    margin: 0;
+    color: #0f172a;
+    font-weight: 600;
+  }
+
+  .travel__stop-highlights {
+    margin-top: 1rem;
+  }
+
+  .travel__stop-highlights h5 {
+    margin: 0 0 0.5rem;
+    font-size: 0.95rem;
+  }
+
+  .travel__stop-highlights ul {
+    margin: 0;
+    padding-left: 1.2rem;
+    color: #1e293b;
+  }
+
+  .travel__empty {
+    text-align: center;
+    color: #475569;
+    font-style: italic;
+  }
+
+  @media (max-width: 960px) {
+    .travel__layout {
+      grid-template-columns: 1fr;
+    }
+
+    .travel__map {
+      min-height: 320px;
+    }
   }
 </style>
