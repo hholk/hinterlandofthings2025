@@ -12,6 +12,9 @@
          Damit alle Besucher:innen automatisch die neue SvelteKit-Version sehen,
          leiten wir per Meta Refresh und JavaScript zur build-Ausgabe um. -->
     <meta http-equiv="refresh" content="0; url=../experiences/travel-routes.html" />
+    <!-- Erst Auth-Helfer laden, dann die Weiterleitung zulassen. -->
+    <script src="../auth-utils.js"></script>
+    <script src="../protect.js"></script>
     <style>
       body {
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
