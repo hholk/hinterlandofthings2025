@@ -208,10 +208,12 @@
       <ul>
         {#each data.travel.routes as route}
           <li>
+            <!-- Für Einsteiger:innen: aria-pressed signalisiert Screenreadern, welche Route aktiv ist. -->
             <button
               type="button"
               class:selected={route.id === selectedRouteId}
               style={`--route-color: ${route.color}`}
+              aria-pressed={route.id === selectedRouteId}
               on:click={() => {
                 selectedRouteId = route.id;
               }}
@@ -457,6 +459,7 @@
     transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
     display: grid;
     gap: 0.35rem;
+    min-height: 3.25rem;
   }
 
   .travel__routes button:hover,
@@ -674,6 +677,92 @@
 
     .travel__map {
       min-height: 320px;
+    }
+  }
+
+  /* Für Einsteiger:innen: Die folgenden Media-Queries wenden die Mobile-Guidelines aus agents.md an. */
+  @media (max-width: 720px) {
+    .travel {
+      gap: 2.5rem;
+      padding: clamp(1.25rem, 4vw + 0.75rem, 2.25rem) clamp(0.75rem, 4vw, 1.75rem) 3rem;
+    }
+
+    .travel__intro {
+      text-align: center;
+    }
+
+    .travel__intro > div {
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .travel__routes {
+      padding: 1.25rem;
+    }
+
+    .travel__detail {
+      gap: 1.5rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .travel__map {
+      min-height: 280px;
+    }
+
+    #travel-map {
+      min-height: 280px;
+    }
+
+    .travel__legend {
+      position: static;
+      margin: 0.75rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem 0.75rem;
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .travel__legend li {
+      justify-content: center;
+    }
+
+    .travel__routes ul {
+      gap: 0.85rem;
+    }
+
+    .travel__detail {
+      padding: clamp(1.25rem, 5vw + 0.5rem, 2.1rem);
+    }
+
+    .travel__stops li {
+      padding: 1rem 1.25rem;
+    }
+
+    .travel__stops header {
+      flex-wrap: wrap;
+      row-gap: 0.75rem;
+    }
+
+    .travel__stop-meta {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .travel__stop-index {
+      width: 2.25rem;
+      height: 2.25rem;
+      font-size: 0.9rem;
+    }
+
+    .travel__route-meta {
+      font-size: 0.8rem;
+    }
+
+    .travel__chips li {
+      font-size: 0.85rem;
     }
   }
 </style>

@@ -32,6 +32,14 @@
 - Änderungen an Build- oder Deployment-Logik, am Deployment-Ziel, am Base-Path oder am Core-Stack (SvelteKit/Tailwind/Flowbite) dürfen **nur** zusammen mit einem aktualisierten `agents.md` committed werden.
 - Diese Selbstverpflichtung ist Teil dieser Datei und dokumentiert die Pflicht zur eigenen Aktualisierung (rekursive Dokumentation).
 
+## Mobile-Optimierung (Best Practices)
+- Jede neue oder überarbeitete Seite muss bereits während der Entwicklung im Viewport `360px × 640px` getestet werden (z. B. via DevTools) und darf dort keine horizontale Scroll-Leiste erzeugen.
+- Verwende fluides Spacing & Typografie (`clamp()`, Prozent- oder viewportbasierte Werte), um Sprünge zwischen Breakpoints zu vermeiden.
+- Touch-Flächen (Buttons, interaktive Kartenlegenden etc.) sollen eine Mindesthöhe von `44px` bzw. `2.75rem` aufweisen und klare Fokus-/Aktiv-Stati besitzen (`:focus-visible`, `aria-pressed` oder `aria-current`).
+- Überlappende Overlays (z. B. Legenden) müssen auf sehr kleinen Viewports (≤ 640px Breite) verschoben oder inline dargestellt werden, damit keine Bedienelemente verdeckt werden.
+- Lange Infosektionen benötigen zusätzliche Medienabfragen für ≤ 768px, damit Grid-/Flex-Layouts auf eine Spalte kollabieren und Lesbarkeit/Scrollbarkeit gewahrt bleibt.
+- Karten oder andere eingebettete Module benötigen eine fixe Mindesthöhe auf Mobilgeräten sowie `aria`-Attribute, damit Screenreader den Inhalt ankündigen können.
+
 ## Do & Don't für GitHub Pages
 - **Do**
   - Statischen Output klein halten; unnötige Dateien vermeiden.
