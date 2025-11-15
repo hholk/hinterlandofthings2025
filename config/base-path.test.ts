@@ -11,6 +11,10 @@ describe('resolveBasePath', () => {
     expect(resolveBasePath({ basePath: 'custom-path' })).toBe('/custom-path');
   });
 
+  it('normalizes whitespace and missing leading slash', () => {
+    expect(resolveBasePath({ basePath: '  nested/path/  ' })).toBe('/nested/path');
+  });
+
   it('derives the repo name from GITHUB_REPOSITORY', () => {
     expect(resolveBasePath({ githubRepository: 'owner/hub' })).toBe('/hub');
   });

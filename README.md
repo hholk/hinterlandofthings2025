@@ -17,10 +17,15 @@ npm run test   # Vitest + jsdom
 
 ## GitHub Pages & Stealth Login
 
-- **Statischer Build:** Dank `@sveltejs/adapter-static` rendert `npm run build` alle Seiten als HTML.
+- **Statischer Build:** `npm run build` erstellt die Produktionversion im Ordner `build/`. Der Workflow kopiert ausschließlich
+  diesen Output nach Pages – damit entspricht das Setup den
+  [Empfehlungen von GitHub](https://docs.github.com/de/pages/getting-started-with-github-pages/about-github-pages#statische-sites).
+- **Node 20 in der Pipeline:** `.github/workflows/static.yml` installiert mit `npm ci` reproduzierbar alle Abhängigkeiten und baut
+  anschließend die SvelteKit-App.
 - **Basis-Pfad:** Deployments unter `https://<user>.github.io/<repo>` setzen `BASE_PATH=/hinterlandofthings2025` (oder nutzen das
   automatisch erkannte `GITHUB_REPOSITORY`).
-- **.nojekyll:** Die Datei `static/.nojekyll` stellt sicher, dass GitHub Pages die `_app`-Assets ausliefert.
+- **.nojekyll im Build:** Nach dem Build kopiert der Workflow `static/.nojekyll` nach `build/.nojekyll`, damit GitHub Pages die
+  `_app`-Assets nicht von Jekyll filtern lässt.
 - **Stealth Login im Client:**
   - `PASSWORD_HASH` liegt weiterhin in `src/lib/utils/auth.ts`.
   - `src/lib/stores/auth.ts` prüft Cookies im Browser und steuert die Weiterleitung.
