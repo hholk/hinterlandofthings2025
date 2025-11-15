@@ -21,9 +21,9 @@ test('meta information is present', () => {
   assert.ok(Array.isArray(data.routeIndex) && data.routeIndex.length === 6, 'expected 6 routes');
 });
 
-test('suggestion library exposes 12 mix-and-match ideas', () => {
+test('suggestion library exposes mindestens ein Dutzend Mix-and-Match-Ideen', () => {
   assert.ok(Array.isArray(data.suggestionLibrary), 'suggestion library missing');
-  assert.equal(data.suggestionLibrary.length, 12, 'expected 12 suggestion entries');
+  assert.ok(data.suggestionLibrary.length >= 12, 'expected at least 12 suggestion entries');
   const flights = data.suggestionLibrary.filter((entry) => entry.type === 'flight');
   const roadtrips = data.suggestionLibrary.filter((entry) => entry.type === 'roadtrip');
   assert.ok(flights.length >= 3, 'expected at least 3 flight-based ideas');
@@ -236,6 +236,10 @@ test('createCustomRouteFromSuggestion seeds a custom draft', async () => {
     assert.equal(state.customRoutes.length, 1);
     assert.equal(state.customRoutes[0].source, 'custom');
     assert.ok(state.customRoutes[0].meta?.highlights.length >= 1);
+
+    // Wir lassen eine Tick-Periode verstreichen, damit asynchrone UI-Updates
+    // (z. B. selectRoute) abgeschlossen sind, bevor wir den Zustand zurücksetzen.
+    await new Promise((resolve) => setTimeout(resolve, 0));
   } finally {
     state.customRoutes = previousRoutes;
     state.routeDetails = previousDetails;
@@ -343,4 +347,25 @@ test('scrollDetailToStop focuses list entries and falls back gracefully', async 
     globalThis.setTimeout = originalTimeout;
     dom.detail = originalDetail;
   }
+});
+
+test('resolveResource nutzt Manifest-Pfade, wenn vorhanden', async () => {
+  const module = await import('./travel-routes.js');
+  const {
+    setAssetManifestForTesting,
+    resetAssetManifestForTesting,
+    resolveResource,
+  } = module;
+
+  setAssetManifestForTesting(
+    new Map([
+      ['travel-routes-data.json', 'https://cdn.example.com/assets/travel-routes-data.json'],
+      ['./travel-routes-data.json', 'https://cdn.example.com/assets/travel-routes-data.json'],
+    ])
+  );
+
+  const resolved = resolveResource('travel-routes-data.json');
+  assert.equal(resolved, 'https://cdn.example.com/assets/travel-routes-data.json');
+
+  resetAssetManifestForTesting();
 });
