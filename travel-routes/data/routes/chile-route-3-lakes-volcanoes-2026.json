@@ -1,0 +1,343 @@
+{
+  "id": "chile-route-3-lakes-volcanoes-2026",
+  "name": "Route 3 – Seen & Vulkane (Llanquihue & Chiloé)",
+  "title": "Route 3 – Seen & Vulkane (Llanquihue & Chiloé)",
+  "summary": "Santiago → Puerto Montt → Puerto Varas → Chiloé vom 04. bis 20.01.2026: Natur, Holzarchitektur und gemäßigtes Klima als 7–9-Tage-Block innerhalb der Gesamtperiode.",
+  "color": "#38bdf8",
+  "tags": [
+    "nature",
+    "roadtrip",
+    "flight"
+  ],
+  "meta": {
+    "theme": "Seen & Inselwelt",
+    "pace": "ausgewogen",
+    "durationDays": 17,
+    "costEstimate": 2450,
+    "highlights": [
+      "Fischmarkt Angelmó",
+      "Vulkan Osorno",
+      "Holzkirchen auf Chiloé"
+    ],
+    "scores": {
+      "adventure": 4,
+      "relax": 4,
+      "culture": 3,
+      "nature": 5
+    }
+  },
+  "slider": {
+    "enabled": true,
+    "label": "Tagesübersicht"
+  },
+  "mapLayers": {
+    "dailySegments": [
+      {
+        "dayId": "r3-day-1",
+        "mode": "flight",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [-70.7858, -33.3929],
+            [-72.9424, -41.4693]
+          ]
+        }
+      },
+      {
+        "dayId": "r3-day-2",
+        "mode": "drive",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [-72.9424, -41.4693],
+            [-72.9854, -41.3170]
+          ]
+        }
+      },
+      {
+        "dayId": "r3-day-3",
+        "mode": "drive",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [-72.9854, -41.3170],
+            [-73.7732, -42.4721]
+          ]
+        }
+      }
+    ]
+  },
+  "days": [
+    {
+      "id": "r3-day-1",
+      "date": "2026-01-04",
+      "station": {
+        "name": "Puerto Montt – Tor zum Süden",
+        "timezone": "America/Santiago",
+        "coordinates": { "lat": -41.4693, "lng": -72.9424 },
+        "description": "Ankunft in der Seenregion, kurzer Stadt- und Hafenrundgang.",
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1500534314211-0a24cd38fcff?w=800&auto=format&fit=crop",
+            "caption": "Blick auf die Bucht bei Puerto Montt",
+            "credit": "Pablo Alvarado",
+            "license": "Unsplash License"
+          }
+        ]
+      },
+      "arrival": {
+        "segments": [
+          {
+            "mode": "flight",
+            "from": {
+              "name": "Santiago (SCL)",
+              "coordinates": { "lat": -33.3929, "lng": -70.7858 }
+            },
+            "to": {
+              "name": "Puerto Montt (PMC)",
+              "coordinates": { "lat": -41.4389, "lng": -73.0940 }
+            },
+            "flightNumber": "LA143",
+            "departure": "2026-01-04T09:00:00-03:00",
+            "arrival": "2026-01-04T10:45:00-03:00",
+            "airline": "LATAM / Sky",
+            "aircraft": "A320",
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1472252369995-6d9b2177ed73?w=800&auto=format&fit=crop",
+                "caption": "Flug in den Süden",
+                "credit": "Isidora León",
+                "license": "Unsplash License"
+              }
+            ]
+          }
+        ],
+        "mapPoints": []
+      },
+      "activities": [
+        {
+          "id": "r3-angelmo-market",
+          "type": "market",
+          "name": "Fischmarkt Angelmó",
+          "description": "Lokalmarkt mit Meeresfrüchten, kleinen Garküchen und Blick auf die Bucht.",
+          "recommendedDurationMinutes": 120,
+          "restaurants": [],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?w=800&auto=format&fit=crop",
+              "caption": "Fischstände am Hafen",
+              "credit": "María Paz",
+              "license": "Unsplash License"
+            }
+          ]
+        }
+      ],
+      "hotels": [],
+      "mobilityOptions": {
+        "nextDrive": {
+          "summary": "Mietwagen aufnehmen und nach Puerto Varas fahren (20–30 Minuten).",
+          "rentalPickup": "Puerto Montt Flughafen",
+          "rentalDropoff": "Puerto Montt / Puerto Varas",
+          "distanceKm": 20,
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1500534314211-0a24cd38fcff?w=800&auto=format&fit=crop",
+              "caption": "Straße entlang des Llanquihue-Sees",
+              "credit": "Pablo Alvarado",
+              "license": "Unsplash License"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "r3-day-2",
+      "date": "2026-01-05",
+      "station": {
+        "name": "Puerto Varas – Vulkan & See",
+        "timezone": "America/Santiago",
+        "coordinates": { "lat": -41.3170, "lng": -72.9854 },
+        "description": "Hübscher Ort im deutsch geprägten Seenland mit Blick auf den Vulkan Osorno.",
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1526476148966-98bd039463ea?w=800&auto=format&fit=crop",
+            "caption": "Promenade in Puerto Varas",
+            "credit": "Cristobal Leon",
+            "license": "Unsplash License"
+          }
+        ]
+      },
+      "arrival": {
+        "segments": [
+          {
+            "mode": "car",
+            "from": {
+              "name": "Puerto Montt",
+              "coordinates": { "lat": -41.4693, "lng": -72.9424 }
+            },
+            "to": {
+              "name": "Puerto Varas Zentrum",
+              "coordinates": { "lat": -41.3170, "lng": -72.9854 }
+            },
+            "distanceKm": 20,
+            "durationMinutes": 25,
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1493244040629-496f6d136cc3?w=800&auto=format&fit=crop",
+                "caption": "Küstenstraße zwischen den Städten",
+                "credit": "Carla Henríquez",
+                "license": "Unsplash License"
+              }
+            ]
+          }
+        ],
+        "mapPoints": []
+      },
+      "activities": [
+        {
+          "id": "r3-osorno-drive",
+          "type": "day-trip",
+          "name": "Vulkan Osorno & Petrohué",
+          "description": "Tagesausflug mit Auto oder Tour zum Vulkan Osorno und den Petrohué-Wasserfällen.",
+          "recommendedDurationMinutes": 420,
+          "restaurants": [],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1469796466635-455ede028aca?w=800&auto=format&fit=crop",
+              "caption": "Schneekappe des Osorno über dem See",
+              "credit": "Jorge Molina",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        {
+          "id": "r3-frutillar",
+          "type": "other",
+          "name": "Abend in Frutillar (Variante B)",
+          "description": "Spaziergang an der Seepromenade, Besuch des Teatro del Lago, Kuchen & Kaffee.",
+          "recommendedDurationMinutes": 240,
+          "restaurants": [],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1526481280695-3c4692349813?w=800&auto=format&fit=crop",
+              "caption": "Kuchen und Kaffee mit Seeblick",
+              "credit": "Javiera Larenas",
+              "license": "Unsplash License"
+            }
+          ]
+        }
+      ],
+      "hotels": [
+        {
+          "id": "r3-hotel-cumbres",
+          "name": "Cumbres Puerto Varas",
+          "reviewHighlights": ["Seeblick", "Spa & Pool"],
+          "avgNightlyRateEUR": 190,
+          "url": "https://www.cumbrespuertovaras.com",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&auto=format&fit=crop",
+              "caption": "Hotel mit Blick auf den Llanquihue-See",
+              "credit": "Marcelo Díaz",
+              "license": "Unsplash License"
+            }
+          ]
+        }
+      ],
+      "mobilityOptions": {
+        "nextDrive": {
+          "summary": "Weiterfahrt nach Chiloé oder in Richtung Carretera Austral (Fähre nach Chaitén).",
+          "rentalPickup": "Puerto Varas",
+          "rentalDropoff": "Puerto Montt / Chaitén",
+          "distanceKm": 100,
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1493244040629-496f6d136cc3?w=800&auto=format&fit=crop",
+              "caption": "Straße durch das grüne Seenland",
+              "credit": "Carla Henríquez",
+              "license": "Unsplash License"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "r3-day-3",
+      "date": "2026-01-06",
+      "station": {
+        "name": "Chiloé – Insel der Holzkirchen",
+        "timezone": "America/Santiago",
+        "coordinates": { "lat": -42.4721, "lng": -73.7732 },
+        "description": "Fährfahrt auf die Insel, Holzkirchen (UNESCO) und Fischgerichte.",
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&auto=format&fit=crop",
+            "caption": "Küste von Chiloé",
+            "credit": "Nicolás Astudillo",
+            "license": "Unsplash License"
+          }
+        ]
+      },
+      "arrival": {
+        "segments": [
+          {
+            "mode": "car-ferry",
+            "from": {
+              "name": "Pargua (Festland)",
+              "coordinates": { "lat": -41.7836, "lng": -73.4058 }
+            },
+            "to": {
+              "name": "Chacao (Chiloé)",
+              "coordinates": { "lat": -41.8170, "lng": -73.5030 }
+            },
+            "durationMinutes": 30,
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1521292270410-a8c53642e9d0?w=800&auto=format&fit=crop",
+                "caption": "Fähre nach Chiloé",
+                "credit": "Patricio Lagos",
+                "license": "Unsplash License"
+              }
+            ]
+          }
+        ],
+        "mapPoints": []
+      },
+      "activities": [
+        {
+          "id": "r3-chiloe-churches",
+          "type": "other",
+          "name": "Holzkirchen-Rundtour",
+          "description": "Besuch mehrerer bunter Holzkirchen (UNESCO) rund um Castro & Dalcahue.",
+          "recommendedDurationMinutes": 360,
+          "restaurants": [],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?w=800&auto=format&fit=crop",
+              "caption": "Typische Kirche auf Chiloé",
+              "credit": "Laura Torres",
+              "license": "Unsplash License"
+            }
+          ]
+        }
+      ],
+      "hotels": [],
+      "mobilityOptions": {
+        "nextDrive": {
+          "summary": "Rückfahrt nach Puerto Montt und Rückflug nach Santiago zur Weiterreise oder Heimflug.",
+          "rentalPickup": "Castro",
+          "rentalDropoff": "Puerto Montt",
+          "distanceKm": 200,
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&auto=format&fit=crop",
+              "caption": "Straße mit Blick auf Fjorde und Wald",
+              "credit": "Cristobal Leon",
+              "license": "Unsplash License"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

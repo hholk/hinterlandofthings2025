@@ -1,0 +1,294 @@
+{
+  "id": "chile-route-5-carretera-austral-light-2026",
+  "name": "Route 5 – Carretera Austral Light (Coyhaique & Queulat)",
+  "title": "Route 5 – Carretera Austral Light (Coyhaique & Queulat)",
+  "summary": "Santiago → Balmaceda/Coyhaique → Queulat-Nationalpark vom 04. bis 20.01.2026 als 7–9 Tage Roughness-Block mit Fjorden, Regenwald und Hängegletscher.",
+  "color": "#10b981",
+  "tags": [
+    "adventure",
+    "roadtrip",
+    "nature"
+  ],
+  "meta": {
+    "theme": "Carretera Austral Light",
+    "pace": "explorativ",
+    "durationDays": 17,
+    "costEstimate": 2550,
+    "highlights": [
+      "Coyhaique Aussichtspunkte",
+      "Roadtrip nach Queulat",
+      "Ventisquero Colgante"
+    ],
+    "scores": {
+      "adventure": 4,
+      "relax": 3,
+      "nature": 5,
+      "culture": 2
+    }
+  },
+  "slider": {
+    "enabled": true,
+    "label": "Tagesübersicht"
+  },
+  "mapLayers": {
+    "dailySegments": [
+      {
+        "dayId": "r5-day-1",
+        "mode": "flight",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [-70.7858, -33.3929],
+            [-71.6890, -45.9160]
+          ]
+        }
+      },
+      {
+        "dayId": "r5-day-2",
+        "mode": "drive",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [-71.6890, -45.9160],
+            [-72.0683, -45.5712]
+          ]
+        }
+      },
+      {
+        "dayId": "r5-day-3",
+        "mode": "drive",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [-72.0683, -45.5712],
+            [-72.5660, -44.3460]
+          ]
+        }
+      }
+    ]
+  },
+  "days": [
+    {
+      "id": "r5-day-1",
+      "date": "2026-01-04",
+      "station": {
+        "name": "Coyhaique – Hauptstadt der Aysén-Region",
+        "timezone": "America/Santiago",
+        "coordinates": { "lat": -45.5712, "lng": -72.0683 },
+        "description": "Kleinstadt umgeben von Bergen, Startpunkt für Carretera-Austral-Abenteuer.",
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&auto=format&fit=crop",
+            "caption": "Morgennebel über Bergen und Flüssen",
+            "credit": "Sebastián Pardo",
+            "license": "Unsplash License"
+          }
+        ]
+      },
+      "arrival": {
+        "segments": [
+          {
+            "mode": "flight",
+            "from": {
+              "name": "Santiago (SCL)",
+              "coordinates": { "lat": -33.3929, "lng": -70.7858 }
+            },
+            "to": {
+              "name": "Balmaceda (BBA)",
+              "coordinates": { "lat": -45.9160, "lng": -71.6890 }
+            },
+            "flightNumber": "LA79X",
+            "departure": "2026-01-04T08:30:00-03:00",
+            "arrival": "2026-01-04T10:45:00-03:00",
+            "airline": "LATAM / Sky",
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1472252369995-6d9b2177ed73?w=800&auto=format&fit=crop",
+                "caption": "Flug entlang der Anden",
+                "credit": "Isidora León",
+                "license": "Unsplash License"
+              }
+            ]
+          },
+          {
+            "mode": "car",
+            "from": {
+              "name": "Balmaceda Flughafen",
+              "coordinates": { "lat": -45.9160, "lng": -71.6890 }
+            },
+            "to": {
+              "name": "Coyhaique Zentrum",
+              "coordinates": { "lat": -45.5712, "lng": -72.0683 }
+            },
+            "distanceKm": 55,
+            "durationMinutes": 60,
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&auto=format&fit=crop",
+                "caption": "Straße vom Flughafen nach Coyhaique",
+                "credit": "Sebastián Pardo",
+                "license": "Unsplash License"
+              }
+            ]
+          }
+        ],
+        "mapPoints": []
+      },
+      "activities": [
+        {
+          "id": "r5-coyhaique-town",
+          "type": "neighborhood",
+          "name": "Coyhaique Plaza & Aussichtspunkte",
+          "description": "Runder Plaza, Aussicht auf Flusstäler, kurze Trails direkt von der Stadt.",
+          "recommendedDurationMinutes": 180,
+          "restaurants": [],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&auto=format&fit=crop",
+              "caption": "Blick über die Stadt",
+              "credit": "Pablo Alvarado",
+              "license": "Unsplash License"
+            }
+          ]
+        }
+      ],
+      "hotels": [],
+      "mobilityOptions": {
+        "nextDrive": {
+          "summary": "Mietwagenstart auf der Carretera Austral Richtung Puyuhuapi / Queulat.",
+          "rentalPickup": "Coyhaique",
+          "rentalDropoff": "Coyhaique / Balmaceda",
+          "distanceKm": 200,
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1493244040629-496f6d136cc3?w=800&auto=format&fit=crop",
+              "caption": "Schotter- und Asphaltstraßen durch Regenwald",
+              "credit": "Carla Henríquez",
+              "license": "Unsplash License"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "r5-day-2",
+      "date": "2026-01-05",
+      "station": {
+        "name": "Carretera Austral – Queulat Nationalpark",
+        "timezone": "America/Santiago",
+        "coordinates": { "lat": -44.3460, "lng": -72.5660 },
+        "description": "Dichter Regenwald, Hängegletscher und Fjorde – sehr anders als trockene Atacama.",
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&auto=format&fit=crop",
+            "caption": "Nebelwald an der Carretera Austral",
+            "credit": "Nicolás Astudillo",
+            "license": "Unsplash License"
+          }
+        ]
+      },
+      "arrival": {
+        "segments": [
+          {
+            "mode": "car",
+            "from": {
+              "name": "Coyhaique",
+              "coordinates": { "lat": -45.5712, "lng": -72.0683 }
+            },
+            "to": {
+              "name": "Nähe Queulat-Nationalpark",
+              "coordinates": { "lat": -44.3460, "lng": -72.5660 }
+            },
+            "distanceKm": 200,
+            "durationMinutes": 240,
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1493244040629-496f6d136cc3?w=800&auto=format&fit=crop",
+                "caption": "Straße durch Regenwald und Fjorde",
+                "credit": "Carla Henríquez",
+                "license": "Unsplash License"
+              }
+            ]
+          }
+        ],
+        "mapPoints": []
+      },
+      "activities": [
+        {
+          "id": "r5-queulat-hanging-glacier",
+          "type": "hike",
+          "name": "Mirador Ventisquero Colgante",
+          "description": "Wanderung zum Aussichtspunkt auf den berühmten Hängegletscher.",
+          "recommendedDurationMinutes": 300,
+          "restaurants": [],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=800&auto=format&fit=crop",
+              "caption": "Gletscher über dem Regenwald",
+              "credit": "Leonardo Miranda",
+              "license": "Unsplash License"
+            }
+          ]
+        }
+      ],
+      "hotels": [],
+      "mobilityOptions": {
+        "nextDrive": {
+          "summary": "Optional Weiterfahrt nach Puyuhuapi (Thermen) oder Rückfahrt nach Coyhaique.",
+          "rentalPickup": "Queulat-Region",
+          "rentalDropoff": "Coyhaique",
+          "distanceKm": 80,
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=800&auto=format&fit=crop",
+              "caption": "Fjordlandschaft mit Wolken",
+              "credit": "Camila Varela",
+              "license": "Unsplash License"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "r5-day-3",
+      "date": "2026-01-06",
+      "station": {
+        "name": "Rückkehr Coyhaique & Flug nach Santiago",
+        "timezone": "America/Santiago",
+        "coordinates": { "lat": -45.5712, "lng": -72.0683 },
+        "description": "Rückweg Richtung Hauptstadt, Übergang zu nächster Route (z.B. Wein oder Atacama).",
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&auto=format&fit=crop",
+            "caption": "Flusslandschaft nahe Coyhaique",
+            "credit": "Sebastián Pardo",
+            "license": "Unsplash License"
+          }
+        ]
+      },
+      "arrival": {
+        "segments": [],
+        "mapPoints": []
+      },
+      "activities": [],
+      "hotels": [],
+      "mobilityOptions": {
+        "nextFlight": {
+          "summary": "Balmaceda → Santiago, um im selben Zeitraum z.B. Atacama oder Seenroute anzuschließen.",
+          "operator": "LATAM / Sky",
+          "flightNumber": "LA8XX",
+          "departure": "2026-01-07T11:00:00-03:00",
+          "arrival": "2026-01-07T13:15:00-03:00",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1472252369995-6d9b2177ed73?w=800&auto=format&fit=crop",
+              "caption": "Rückflug entlang der Andenkette",
+              "credit": "Isidora León",
+              "license": "Unsplash License"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,525 @@
+{
+  "id": "chile-route-2-pazifik-wein-2026",
+  "name": "Route 2 – Pazifik & Wein (Valparaíso, Casablanca, Colchagua)",
+  "title": "Route 2 – Pazifik & Wein (Valparaíso, Casablanca, Colchagua)",
+  "summary": "Zentralchile vom 04. bis 20.01.2026 entspannt erkunden: Santiago als Base, Farbkick in Valparaíso, Sauvignon Blanc im Casablanca Valley und Rotwein im Colchagua-Tal.",
+  "color": "#0ea5e9",
+  "tags": [
+    "culture",
+    "wine",
+    "food",
+    "roadtrip"
+  ],
+  "meta": {
+    "theme": "Pazifik & Wein",
+    "pace": "entspannt",
+    "durationDays": 17,
+    "costEstimate": 1850,
+    "highlights": [
+      "Streetart im Cerro Alegre",
+      "Wein & Food Pairing in Casablanca",
+      "Rotwein-Blend im Colchagua-Tal"
+    ],
+    "scores": {
+      "relax": 5,
+      "culture": 4,
+      "food": 5,
+      "adventure": 2
+    }
+  },
+  "slider": {
+    "enabled": true,
+    "label": "Tagesübersicht"
+  },
+  "mapLayers": {
+    "dailySegments": [
+      {
+        "dayId": "r2-day-1",
+        "mode": "drive",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [-70.6693, -33.4489],
+            [-71.6127, -33.0472]
+          ]
+        }
+      },
+      {
+        "dayId": "r2-day-2",
+        "mode": "drive",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [-71.6127, -33.0472],
+            [-71.4070, -33.3200]
+          ]
+        }
+      },
+      {
+        "dayId": "r2-day-3",
+        "mode": "drive",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [-71.4070, -33.3200],
+            [-71.3650, -34.6380]
+          ]
+        }
+      }
+    ]
+  },
+  "days": [
+    {
+      "id": "r2-day-1",
+      "date": "2026-01-04",
+      "station": {
+        "name": "Valparaíso – Bunte Hafenstadt",
+        "timezone": "America/Santiago",
+        "coordinates": { "lat": -33.0472, "lng": -71.6127 },
+        "description": "UNESCO-Hafen, Streetart, steile Aufzüge und Meerblick.",
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1526402462922-1e1d481d87fd?w=800&auto=format&fit=crop",
+            "caption": "Bunte Häuser am Hang von Valparaíso",
+            "credit": "Fabiola Peñailillo",
+            "license": "Unsplash License"
+          },
+          {
+            "url": "https://images.unsplash.com/photo-1529346528741-5e65d6d5bbff?w=800&auto=format&fit=crop",
+            "caption": "Streetart-Treppe im Cerro Alegre",
+            "credit": "Tomás Sánchez",
+            "license": "Unsplash License"
+          }
+        ]
+      },
+      "arrival": {
+        "segments": [
+          {
+            "mode": "bus",
+            "from": {
+              "name": "Terminal Alameda (Santiago)",
+              "coordinates": { "lat": -33.4576, "lng": -70.6621 }
+            },
+            "to": {
+              "name": "Terminal Rodoviario Valparaíso",
+              "coordinates": { "lat": -33.0476, "lng": -71.6049 }
+            },
+            "operator": "TurBus / FlixBus Chile",
+            "durationMinutes": 110,
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1470123808288-1e59739c26da?w=800&auto=format&fit=crop",
+                "caption": "Fernbus auf der Strecke Santiago–Valparaíso",
+                "credit": "Mauricio Rojas",
+                "license": "Unsplash License"
+              }
+            ]
+          }
+        ],
+        "mapPoints": [
+          {
+            "id": "r2-terminal-alameda",
+            "type": "bus-terminal",
+            "name": "Terminal Alameda",
+            "coordinates": { "lat": -33.4576, "lng": -70.6621 },
+            "address": "Av. Libertador Bernardo O'Higgins 3850, Santiago",
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1528989385568-3ac196525f80?w=800&auto=format&fit=crop",
+                "caption": "Busterminal in Santiago",
+                "credit": "Valentina Díaz",
+                "license": "Unsplash License"
+              }
+            ]
+          }
+        ]
+      },
+      "activities": [
+        {
+          "id": "r2-cerro-alegre-walk",
+          "type": "neighborhood",
+          "name": "Cerro Alegre & Cerro Concepción",
+          "description": "Streetart, Cafés und Aussichtsterrassen – ideal als Einstiegsspaziergang.",
+          "recommendedDurationMinutes": 180,
+          "restaurants": [
+            {
+              "name": "Restaurant Fauna",
+              "specialties": ["Brunch", "Cocktails mit Hafenblick"],
+              "priceRange": "€€€",
+              "url": "https://www.hotelfauna.cl",
+              "images": [
+                {
+                  "url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&auto=format&fit=crop",
+                  "caption": "Rooftop-Terrasse über den Dächern von Valparaíso",
+                  "credit": "Marcelo Díaz",
+                  "license": "Unsplash License"
+                }
+              ]
+            }
+          ],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1516131206008-dd041a9764fd?w=800&auto=format&fit=crop",
+              "caption": "Streetart-Fassade am Cerro Alegre",
+              "credit": "Marcela Bravo",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        {
+          "id": "r2-plaza-sotomayor-boat",
+          "type": "historic-quarter",
+          "name": "Plaza Sotomayor & Hafenboot",
+          "description": "Historischer Hauptplatz plus 45-minütige Hafenrundfahrt.",
+          "recommendedDurationMinutes": 150,
+          "restaurants": [],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1470115636492-6d2b56f9146e?w=800&auto=format&fit=crop",
+              "caption": "Boote im Hafen",
+              "credit": "Patricio Lagos",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        {
+          "id": "r2-vina-del-mar",
+          "type": "beach",
+          "name": "Abend in Viña del Mar",
+          "description": "Kurztrip mit Microbus oder Uber nach Viña – Strandspaziergang und Sundowner.",
+          "recommendedDurationMinutes": 210,
+          "restaurants": [],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&auto=format&fit=crop",
+              "caption": "Sonnenuntergang am Pazifikstrand",
+              "credit": "Frank McKenna",
+              "license": "Unsplash License"
+            }
+          ]
+        }
+      ],
+      "hotels": [
+        {
+          "id": "r2-hotel-fauna",
+          "name": "Hotel Fauna",
+          "reviewHighlights": ["Rooftop-Bar", "Top-Lage im Cerro Alegre"],
+          "avgNightlyRateEUR": 140,
+          "url": "https://www.hotelfauna.cl",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&auto=format&fit=crop",
+              "caption": "Zimmer mit Hafenblick",
+              "credit": "Kate Stone",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        {
+          "id": "r2-winebox",
+          "name": "WineBox Valparaíso",
+          "reviewHighlights": ["Container-Hotel", "Sehr instagrammable"],
+          "avgNightlyRateEUR": 95,
+          "url": "https://www.wineboxvalparaiso.com",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1505692794403-34cb5cf055b2?w=800&auto=format&fit=crop",
+              "caption": "Bunte Container-Zimmer",
+              "credit": "Sebastián Araya",
+              "license": "Unsplash License"
+            }
+          ]
+        }
+      ],
+      "mobilityOptions": {
+        "nextDrive": {
+          "summary": "Mietwagenübernahme in Valparaíso, Weiterfahrt Richtung Casablanca",
+          "rentalPickup": "Valparaíso Zentrum",
+          "rentalDropoff": "Santiago oder Santa Cruz",
+          "distanceKm": 80,
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1493244040629-496f6d136cc3?w=800&auto=format&fit=crop",
+              "caption": "Weinberge und Hügel entlang der Route",
+              "credit": "Carla Henríquez",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        "nextBus": {
+          "summary": "Bus zurück nach Santiago (falls ohne Auto).",
+          "operator": "TurBus / FlixBus Chile",
+          "durationMinutes": 110,
+          "frequencyMinutes": 40,
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1470123808288-1e59739c26da?w=800&auto=format&fit=crop",
+              "caption": "Fernbus am Terminal",
+              "credit": "Mauricio Rojas",
+              "license": "Unsplash License"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "r2-day-2",
+      "date": "2026-01-05",
+      "station": {
+        "name": "Casablanca Valley – Weißwein & Pinot",
+        "timezone": "America/Santiago",
+        "coordinates": { "lat": -33.3200, "lng": -71.4070 },
+        "description": "Kühles Küstenwein-Klima mit Sauvignon Blanc, Chardonnay und Pinot Noir.",
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1503249023995-51b0f3778ccf?w=800&auto=format&fit=crop",
+            "caption": "Weinberge im Casablanca Valley",
+            "credit": "Cristobal Leon",
+            "license": "Unsplash License"
+          },
+          {
+            "url": "https://images.unsplash.com/photo-1430163393927-3dab9af7ea38?w=800&auto=format&fit=crop",
+            "caption": "Verkostung mit Blick auf die Reben",
+            "credit": "Camila Varela",
+            "license": "Unsplash License"
+          }
+        ]
+      },
+      "arrival": {
+        "segments": [
+          {
+            "mode": "car",
+            "from": {
+              "name": "Valparaíso",
+              "coordinates": { "lat": -33.0472, "lng": -71.6127 }
+            },
+            "to": {
+              "name": "Weingut im Casablanca-Tal",
+              "coordinates": { "lat": -33.3200, "lng": -71.4070 }
+            },
+            "distanceKm": 50,
+            "durationMinutes": 45,
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1493244040629-496f6d136cc3?w=800&auto=format&fit=crop",
+                "caption": "Grüne Hügel zwischen Küste und Tal",
+                "credit": "Carla Henríquez",
+                "license": "Unsplash License"
+              }
+            ]
+          }
+        ],
+        "mapPoints": []
+      },
+      "activities": [
+        {
+          "id": "r2-winery-kingston",
+          "type": "other",
+          "name": "Weingut-Tour Kingston / Matetic (Variante A)",
+          "description": "Klassische Tour mit Kellerführung und 3–5er Verkostung.",
+          "recommendedDurationMinutes": 180,
+          "restaurants": [],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1514361892635-6cf3482c59fd?w=800&auto=format&fit=crop",
+              "caption": "Weinprobe im Fasskeller",
+              "credit": "Daniel Campos",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        {
+          "id": "r2-winery-lunch",
+          "type": "other",
+          "name": "Wein-& Food-Pairing (Variante B)",
+          "description": "Mehrgängiges Mittagessen auf dem Weingut mit Wine Pairing.",
+          "recommendedDurationMinutes": 150,
+          "restaurants": [],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1536053296545-9ed19fbafaf6?w=800&auto=format&fit=crop",
+              "caption": "Degustationsmenü im Weingut-Restaurant",
+              "credit": "María Paz",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        {
+          "id": "r2-bike-vineyards",
+          "type": "other",
+          "name": "Bike durch die Weinberge (Variante C)",
+          "description": "Geführte Fahrradtour durch mehrere Weingüter mit Verkostungsstopps.",
+          "recommendedDurationMinutes": 210,
+          "restaurants": [],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1526481280695-3c4692349813?w=800&auto=format&fit=crop",
+              "caption": "Radeln zwischen Rebstöcken",
+              "credit": "Javiera Larenas",
+              "license": "Unsplash License"
+            }
+          ]
+        }
+      ],
+      "hotels": [
+        {
+          "id": "r2-matetic-lodge",
+          "name": "La Casona Matetic",
+          "reviewHighlights": ["Kolonialstil", "Ruhig und exklusiv"],
+          "avgNightlyRateEUR": 250,
+          "url": "https://matetic.com",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=800&auto=format&fit=crop",
+              "caption": "Landhaus im Tal",
+              "credit": "Daniela Muñoz",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        {
+          "id": "r2-casablanca-bnb",
+          "name": "Casablanca B&B",
+          "reviewHighlights": ["Familiäre Atmosphäre", "Perfekt als Übernachtungsstopp"],
+          "avgNightlyRateEUR": 90,
+          "url": "https://example.com/casablanca-bnb",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1554995207-c18c203602cb?w=800&auto=format&fit=crop",
+              "caption": "Zimmer mit Gartenblick",
+              "credit": "Felipe Godoy",
+              "license": "Unsplash License"
+            }
+          ]
+        }
+      ],
+      "mobilityOptions": {
+        "nextDrive": {
+          "summary": "Weiterfahrt ins Colchagua-Tal (Rotwein) oder zurück nach Santiago.",
+          "rentalPickup": "Casablanca",
+          "rentalDropoff": "Santa Cruz oder Santiago",
+          "distanceKm": 200,
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1493244040629-496f6d136cc3?w=800&auto=format&fit=crop",
+              "caption": "Landstraße Richtung Süden",
+              "credit": "Carla Henríquez",
+              "license": "Unsplash License"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "r2-day-3",
+      "date": "2026-01-06",
+      "station": {
+        "name": "Colchagua Valley – Rotwein & Estancias",
+        "timezone": "America/Santiago",
+        "coordinates": { "lat": -34.6380, "lng": -71.3650 },
+        "description": "Eine der besten Rotwein-Regionen Chiles, mit Weingütern, Museen und Estancias.",
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1516685304081-de7947d419d1?w=800&auto=format&fit=crop",
+            "caption": "Weinberge im Colchagua-Tal",
+            "credit": "Cristobal Leon",
+            "license": "Unsplash License"
+          }
+        ]
+      },
+      "arrival": {
+        "segments": [
+          {
+            "mode": "car",
+            "from": {
+              "name": "Casablanca",
+              "coordinates": { "lat": -33.3200, "lng": -71.4070 }
+            },
+            "to": {
+              "name": "Santa Cruz",
+              "coordinates": { "lat": -34.6380, "lng": -71.3650 }
+            },
+            "distanceKm": 220,
+            "durationMinutes": 180,
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1493244040629-496f6d136cc3?w=800&auto=format&fit=crop",
+                "caption": "Landstraße durch Zentralchile",
+                "credit": "Carla Henríquez",
+                "license": "Unsplash License"
+              }
+            ]
+          }
+        ],
+        "mapPoints": []
+      },
+      "activities": [
+        {
+          "id": "r2-montes-winery",
+          "type": "other",
+          "name": "Weingut Montes / Viu Manent",
+          "description": "Führung, Kellerbesuch, anschließende Verkostung – Fokus auf Cabernet, Carmenère & Co.",
+          "recommendedDurationMinutes": 210,
+          "restaurants": [],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1514361892635-6cf3482c59fd?w=800&auto=format&fit=crop",
+              "caption": "Fasslager eines Weinguts",
+              "credit": "Daniel Campos",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        {
+          "id": "r2-colchagua-museum",
+          "type": "museum",
+          "name": "Museo de Colchagua",
+          "description": "Privates Museum mit Fokus auf Geschichte, Archäologie und Weinbau.",
+          "recommendedDurationMinutes": 120,
+          "restaurants": [],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1578926287773-80c4f91004ef?w=800&auto=format&fit=crop",
+              "caption": "Museumshof mit Skulpturen",
+              "credit": "Laura Torres",
+              "license": "Unsplash License"
+            }
+          ]
+        }
+      ],
+      "hotels": [
+        {
+          "id": "r2-hotel-santa-cruz-plaza",
+          "name": "Hotel Santa Cruz Plaza",
+          "reviewHighlights": ["Resort-Charakter", "Zentral am Plaza"],
+          "avgNightlyRateEUR": 180,
+          "url": "https://www.hotelsantacruzplaza.cl",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1505692794403-34cb5cf055b2?w=800&auto=format&fit=crop",
+              "caption": "Resort-Pool im Innenhof",
+              "credit": "Sebastián Araya",
+              "license": "Unsplash License"
+            }
+          ]
+        }
+      ],
+      "mobilityOptions": {
+        "nextDrive": {
+          "summary": "Rückfahrt nach Santiago (ca. 3h) und Abgabe des Mietwagens.",
+          "rentalPickup": "Santa Cruz",
+          "rentalDropoff": "Santiago",
+          "distanceKm": 180,
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&auto=format&fit=crop",
+              "caption": "Autobahn zurück Richtung Hauptstadt",
+              "credit": "Cristobal Leon",
+              "license": "Unsplash License"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

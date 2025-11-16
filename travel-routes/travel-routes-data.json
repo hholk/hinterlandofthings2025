@@ -1123,6 +1123,350 @@
         "flight",
         "roadtrip"
       ]
+    },
+    {
+      "id": "chile-route-1-atacama-salare-2026",
+      "file": "data/routes/chile-route-1-atacama-salare-2026.json",
+      "name": "Route 1 – Atacama, Salare & Sterne",
+      "summary": "Fokus Norden vom 04. bis 20.01.2026: Santiago Warm-up, Flug nach Calama und Basecamp San Pedro de Atacama für Lagunen, Salare und Astro-Nächte.",
+      "color": "#f97316",
+      "tags": [
+        "nature",
+        "adventure",
+        "flight",
+        "photography"
+      ],
+      "meta": {
+        "theme": "Atacama, Salare & Sterne",
+        "pace": "intensiv",
+        "durationDays": 17,
+        "costEstimate": 2350,
+        "highlights": [
+          "Valle de la Luna",
+          "Lagunas Miscanti & Miñiques",
+          "Astro-Tour unter dem dunkelsten Himmel"
+        ],
+        "scores": {
+          "adventure": 5,
+          "relax": 3,
+          "culture": 3,
+          "photography": 5
+        }
+      },
+      "metrics": {
+        "totalDistanceKm": 3200,
+        "estimatedCarbonKg": 870,
+        "segmentCount": 3,
+        "flightCount": 1,
+        "stopCount": 3,
+        "totalNights": 17,
+        "avgNightlyRate": 150,
+        "lodgingCount": 3,
+        "foodCount": 3,
+        "activityCount": 9,
+        "averageDailyBudget": 138
+      },
+      "searchTokens": [
+        "Route 1 – Atacama, Salare & Sterne",
+        "Fokus Norden vom 04. bis 20.01.2026: Santiago Warm-up, Flug nach Calama und Basecamp San Pedro de Atacama für Lagunen, Salare und Astro-Nächte.",
+        "Santiago de Chile",
+        "Calama",
+        "San Pedro de Atacama",
+        "Lagunas Miscanti",
+        "Laguna Cejar",
+        "Salar de Atacama",
+        "Valle de la Luna",
+        "Astro-Tour Atacama",
+        "nature",
+        "adventure",
+        "flight",
+        "photography"
+      ]
+    },
+    {
+      "id": "chile-route-2-pazifik-wein-2026",
+      "file": "data/routes/chile-route-2-pazifik-wein-2026.json",
+      "name": "Route 2 – Pazifik & Wein (Valparaíso, Casablanca, Colchagua)",
+      "summary": "Zentralchile vom 04. bis 20.01.2026 entspannt erkunden: Streetart in Valparaíso, Sauvignon Blanc im Casablanca Valley und Rotwein im Colchagua-Tal.",
+      "color": "#0ea5e9",
+      "tags": [
+        "culture",
+        "wine",
+        "food",
+        "roadtrip"
+      ],
+      "meta": {
+        "theme": "Pazifik & Wein",
+        "pace": "entspannt",
+        "durationDays": 17,
+        "costEstimate": 1850,
+        "highlights": [
+          "Streetart am Cerro Alegre",
+          "Wein & Food Pairing Casablanca",
+          "Montes & Viu Manent im Colchagua"
+        ],
+        "scores": {
+          "relax": 5,
+          "culture": 4,
+          "food": 5,
+          "adventure": 2
+        }
+      },
+      "metrics": {
+        "totalDistanceKm": 420,
+        "estimatedCarbonKg": 95,
+        "segmentCount": 3,
+        "flightCount": 0,
+        "stopCount": 3,
+        "totalNights": 12,
+        "avgNightlyRate": 140,
+        "lodgingCount": 3,
+        "foodCount": 4,
+        "activityCount": 9,
+        "averageDailyBudget": 115
+      },
+      "searchTokens": [
+        "Route 2 – Pazifik & Wein",
+        "Zentralchile vom 04. bis 20.01.2026 entspannt erkunden: Streetart in Valparaíso, Sauvignon Blanc im Casablanca Valley und Rotwein im Colchagua-Tal.",
+        "Valparaíso",
+        "Viña del Mar",
+        "Casablanca Valley",
+        "Kingston Family Vineyards",
+        "Matetic",
+        "Santa Cruz",
+        "Montes Winery",
+        "Museo de Colchagua",
+        "culture",
+        "wine",
+        "food",
+        "roadtrip"
+      ]
+    },
+    {
+      "id": "chile-route-3-lakes-volcanoes-2026",
+      "file": "data/routes/chile-route-3-lakes-volcanoes-2026.json",
+      "name": "Route 3 – Seen & Vulkane (Llanquihue & Chiloé)",
+      "summary": "Santiago → Puerto Montt → Puerto Varas → Chiloé vom 04. bis 20.01.2026 mit Fokus auf Natur, Holzarchitektur und kühles Sommerklima.",
+      "color": "#38bdf8",
+      "tags": [
+        "nature",
+        "roadtrip",
+        "flight"
+      ],
+      "meta": {
+        "theme": "Seen & Inselwelt",
+        "pace": "ausgewogen",
+        "durationDays": 17,
+        "costEstimate": 2450,
+        "highlights": [
+          "Fischmarkt Angelmó",
+          "Vulkan Osorno",
+          "Holzkirchen auf Chiloé"
+        ],
+        "scores": {
+          "adventure": 4,
+          "relax": 4,
+          "culture": 3,
+          "nature": 5
+        }
+      },
+      "metrics": {
+        "totalDistanceKm": 2600,
+        "estimatedCarbonKg": 720,
+        "segmentCount": 3,
+        "flightCount": 1,
+        "stopCount": 3,
+        "totalNights": 17,
+        "avgNightlyRate": 175,
+        "lodgingCount": 3,
+        "foodCount": 3,
+        "activityCount": 5,
+        "averageDailyBudget": 165
+      },
+      "searchTokens": [
+        "Route 3 – Seen & Vulkane",
+        "Santiago → Puerto Montt → Puerto Varas → Chiloé vom 04. bis 20.01.2026 mit Fokus auf Natur, Holzarchitektur und kühles Sommerklima.",
+        "Puerto Montt",
+        "Puerto Varas",
+        "Vulkan Osorno",
+        "Petrohué",
+        "Frutillar",
+        "Chiloé",
+        "Holzkirchen",
+        "Car ferry Pargua–Chacao",
+        "nature",
+        "roadtrip",
+        "flight"
+      ]
+    },
+    {
+      "id": "chile-route-4-patagonia-sur-2026",
+      "file": "data/routes/chile-route-4-patagonia-sur-2026.json",
+      "name": "Route 4 – Patagonia Sur & Torres del Paine",
+      "summary": "Südroute zwischen 04. und 20.01.2026: Punta Arenas, Puerto Natales und Trekking im Torres-del-Paine-Nationalpark.",
+      "color": "#0f766e",
+      "tags": [
+        "adventure",
+        "flight",
+        "nature"
+      ],
+      "meta": {
+        "theme": "Patagonia Sur",
+        "pace": "anspruchsvoll",
+        "durationDays": 17,
+        "costEstimate": 3150,
+        "highlights": [
+          "Punta Arenas & Magellan-Sund",
+          "Puerto Natales Fjord",
+          "Base de las Torres Trek"
+        ],
+        "scores": {
+          "adventure": 5,
+          "relax": 2,
+          "nature": 5,
+          "culture": 2
+        }
+      },
+      "metrics": {
+        "totalDistanceKm": 5200,
+        "estimatedCarbonKg": 1320,
+        "segmentCount": 3,
+        "flightCount": 1,
+        "stopCount": 3,
+        "totalNights": 17,
+        "avgNightlyRate": 210,
+        "lodgingCount": 3,
+        "foodCount": 2,
+        "activityCount": 6,
+        "averageDailyBudget": 205
+      },
+      "searchTokens": [
+        "Route 4 – Patagonia Sur",
+        "Südroute zwischen 04. und 20.01.2026: Punta Arenas, Puerto Natales und Trekking im Torres-del-Paine-Nationalpark.",
+        "Punta Arenas",
+        "Puerto Natales",
+        "Torres del Paine",
+        "Magellan Strait",
+        "Isla Magdalena",
+        "Base de las Torres",
+        "Patagonian fjords",
+        "adventure",
+        "flight",
+        "nature"
+      ]
+    },
+    {
+      "id": "chile-route-5-carretera-austral-light-2026",
+      "file": "data/routes/chile-route-5-carretera-austral-light-2026.json",
+      "name": "Route 5 – Carretera Austral Light (Coyhaique & Queulat)",
+      "summary": "Santiago → Balmaceda/Coyhaique → Queulat-Nationalpark vom 04. bis 20.01.2026 – kompakte Carretera-Austral-Variante mit Fjorden und Regenwald.",
+      "color": "#10b981",
+      "tags": [
+        "adventure",
+        "roadtrip",
+        "nature"
+      ],
+      "meta": {
+        "theme": "Carretera Austral Light",
+        "pace": "explorativ",
+        "durationDays": 17,
+        "costEstimate": 2550,
+        "highlights": [
+          "Coyhaique Aussichtspunkte",
+          "Roadtrip nach Queulat",
+          "Mirador Ventisquero Colgante"
+        ],
+        "scores": {
+          "adventure": 4,
+          "relax": 3,
+          "nature": 5,
+          "culture": 2
+        }
+      },
+      "metrics": {
+        "totalDistanceKm": 3100,
+        "estimatedCarbonKg": 840,
+        "segmentCount": 3,
+        "flightCount": 1,
+        "stopCount": 3,
+        "totalNights": 12,
+        "avgNightlyRate": 160,
+        "lodgingCount": 3,
+        "foodCount": 2,
+        "activityCount": 3,
+        "averageDailyBudget": 150
+      },
+      "searchTokens": [
+        "Route 5 – Carretera Austral Light",
+        "Santiago → Balmaceda/Coyhaique → Queulat-Nationalpark vom 04. bis 20.01.2026 – kompakte Carretera-Austral-Variante mit Fjorden und Regenwald.",
+        "Coyhaique",
+        "Balmaceda",
+        "Carretera Austral",
+        "Queulat Nationalpark",
+        "Ventisquero Colgante",
+        "Puyuhuapi",
+        "adventure",
+        "roadtrip",
+        "nature"
+      ]
+    },
+    {
+      "id": "chile-route-6-big-mix-2026",
+      "file": "data/routes/chile-route-6-big-mix-2026.json",
+      "name": "Route 6 – Big Mix (Atacama + Seen + Küste)",
+      "summary": "Greatest Hits vom 04. bis 20.01.2026: Atacama-Salare, Seenregion um Puerto Varas und Valparaíso & Casablanca als Finale.",
+      "color": "#f59e0b",
+      "tags": [
+        "flight",
+        "roadtrip",
+        "nature",
+        "culture"
+      ],
+      "meta": {
+        "theme": "Atacama + Seen + Küste",
+        "pace": "modular",
+        "durationDays": 17,
+        "costEstimate": 3350,
+        "highlights": [
+          "Lagunen & Sterne in San Pedro",
+          "Vulkanblick am Llanquihue",
+          "Streetart & Wein an der Küste"
+        ],
+        "scores": {
+          "adventure": 4,
+          "relax": 3,
+          "culture": 4,
+          "nature": 5
+        }
+      },
+      "metrics": {
+        "totalDistanceKm": 5400,
+        "estimatedCarbonKg": 1480,
+        "segmentCount": 3,
+        "flightCount": 2,
+        "stopCount": 3,
+        "totalNights": 17,
+        "avgNightlyRate": 185,
+        "lodgingCount": 3,
+        "foodCount": 2,
+        "activityCount": 3,
+        "averageDailyBudget": 198
+      },
+      "searchTokens": [
+        "Route 6 – Big Mix",
+        "Greatest Hits vom 04. bis 20.01.2026: Atacama-Salare, Seenregion um Puerto Varas und Valparaíso & Casablanca als Finale.",
+        "San Pedro de Atacama",
+        "Puerto Varas",
+        "Valparaíso",
+        "Casablanca Valley",
+        "Laguna Cejar",
+        "Osorno Vulkan",
+        "Streetart Cerro Alegre",
+        "flight",
+        "roadtrip",
+        "nature",
+        "culture"
+      ]
     }
   ],
   "poiOverview": {
