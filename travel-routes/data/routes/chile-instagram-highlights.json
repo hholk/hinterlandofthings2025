@@ -18,6 +18,29 @@
       "El Tatio Geysire bei Sonnenaufgang",
       "Laguna Amarga mit Torres-Spiegelung"
     ],
+    "highlightImages": [
+      {
+        "title": "Milchstraße über San Pedro de Atacama",
+        "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900&auto=format&fit=crop",
+        "caption": "Klarer Nachthimmel mit sichtbarer Milchstraße in der Atacama.",
+        "source": "Unsplash",
+        "license": "Unsplash License"
+      },
+      {
+        "title": "El Tatio Geysire bei Sonnenaufgang",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d3/El_Tatio_geysers.jpg",
+        "caption": "Sonnendampf über den Geysiren im Morgengrauen.",
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 3.0"
+      },
+      {
+        "title": "Laguna Amarga mit Torres-Spiegelung",
+        "image": "https://images.unsplash.com/photo-1544989164-31dc3c645987?w=900&auto=format&fit=crop",
+        "caption": "Torres del Paine spiegeln sich in der Laguna Amarga.",
+        "source": "Unsplash",
+        "license": "Unsplash License"
+      }
+    ],
     "scores": {
       "budget": 2,
       "adventure": 5,

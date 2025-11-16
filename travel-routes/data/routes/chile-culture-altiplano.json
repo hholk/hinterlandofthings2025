@@ -19,6 +19,29 @@
       "Laguna Chungará im Lauca-Nationalpark",
       "UNESCO-Geisterstadt Humberstone"
     ],
+    "highlightImages": [
+      {
+        "title": "Mumien im Museo de Sitio Colón 10",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Momias_Chinchorro_en_Museo_Col%C3%B3n_10.jpg",
+        "caption": "Chinchorro-Mumien in den Vitrinen des Museums Colón 10.",
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Laguna Chungará im Lauca-Nationalpark",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/3/35/Laguna_Chungar%C3%A1_and_Parinacota_volcano.jpg",
+        "caption": "Schneeberge spiegeln sich im blauen Wasser der Laguna Chungará.",
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 3.0"
+      },
+      {
+        "title": "UNESCO-Geisterstadt Humberstone",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Humberstone_Oficinas_Salitreras.jpg",
+        "caption": "Verlassene Industriehallen in der ehemaligen Salpeter-Stadt Humberstone.",
+        "source": "Wikimedia Commons",
+        "license": "CC BY 2.0"
+      }
+    ],
     "scores": {
       "budget": 3,
       "adventure": 3,

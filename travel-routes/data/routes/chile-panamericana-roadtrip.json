@@ -18,6 +18,29 @@
       "Sternegucken im Valle del Elqui",
       "Türkises Wasser von Bahía Inglesa"
     ],
+    "highlightImages": [
+      {
+        "title": "Streetart & Aufzüge in Valparaíso",
+        "image": "https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+        "caption": "Farbige Fassaden und historische Aufzüge im Cerro Alegre.",
+        "source": "Pexels",
+        "license": "Pexels License"
+      },
+      {
+        "title": "Sternegucken im Valle del Elqui",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/5/55/Observatorio_Del_Pangue.jpg",
+        "caption": "Kuppeln des Observatorio Del Pangue unter dem klaren Wüstenhimmel.",
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 3.0"
+      },
+      {
+        "title": "Türkises Wasser von Bahía Inglesa",
+        "image": "https://images.unsplash.com/photo-1595387631603-71af72de1e21?w=900&auto=format&fit=crop",
+        "caption": "Heller Sandstrand und ruhige Bucht in Bahía Inglesa.",
+        "source": "Unsplash",
+        "license": "Unsplash License"
+      }
+    ],
     "scores": {
       "budget": 3,
       "adventure": 3,

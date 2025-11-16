@@ -18,6 +18,29 @@
       "Bike & Wine Tour in Santa Cruz",
       "Seafood Markt in Concepción"
     ],
+    "highlightImages": [
+      {
+        "title": "Wine Tasting im Valle de Casablanca",
+        "image": "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=900&auto=format&fit=crop",
+        "caption": "Weinreben am Morgennebel im Casablanca Valley.",
+        "source": "Unsplash",
+        "license": "Unsplash License"
+      },
+      {
+        "title": "Bike & Wine Tour in Santa Cruz",
+        "image": "https://images.pexels.com/photos/1058958/pexels-photo-1058958.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+        "caption": "Radfahrerinnen rollen zwischen Rebstöcken Richtung Verkostung.",
+        "source": "Pexels",
+        "license": "Pexels License"
+      },
+      {
+        "title": "Seafood Markt in Concepción",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/5/59/Mercado_Central_de_Concepci%C3%B3n_01.jpg",
+        "caption": "Stände mit frischem Fisch und Muscheln im Mercado Central.",
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 4.0"
+      }
+    ],
     "scores": {
       "budget": 3,
       "adventure": 2,

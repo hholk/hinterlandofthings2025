@@ -2,6 +2,46 @@
   "id": "example-andes-pacific",
   "title": "Beispielroute – Anden & Pazifik Explorer",
   "summary": "Drei Tage durch Zentralchile: Start in Santiago, Küstenflair in Valparaíso und Andenpanorama in Cajón del Maipo.",
+  "meta": {
+    "theme": "Demo – Multi-Modaler Chile-Trip",
+    "pace": "kompakt",
+    "durationDays": 3,
+    "costEstimate": 780,
+    "highlights": [
+      "Santiago de Chile",
+      "Valparaíso Streetart",
+      "Cajón del Maipo"
+    ],
+    "highlightImages": [
+      {
+        "title": "Santiago de Chile",
+        "image": "https://images.unsplash.com/photo-1505761671935-60b3a7427bad?w=900&auto=format&fit=crop",
+        "caption": "Skyline mit Andenblick kurz nach Sonnenaufgang.",
+        "source": "Unsplash",
+        "license": "Unsplash License"
+      },
+      {
+        "title": "Valparaíso Streetart",
+        "image": "https://images.pexels.com/photos/3278210/pexels-photo-3278210.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+        "caption": "Bunte Treppenmurals im Cerro Alegre.",
+        "source": "Pexels",
+        "license": "Pexels License"
+      },
+      {
+        "title": "Cajón del Maipo",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/41/Embalse_El_Yeso_2013.jpg",
+        "caption": "Türkises Wasser des Embalse El Yeso im Andental.",
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 3.0"
+      }
+    ],
+    "scores": {
+      "budget": 3,
+      "adventure": 3,
+      "relax": 3,
+      "culture": 4
+    }
+  },
   "slider": {
     "enabled": true,
     "label": "Tagesübersicht"
