@@ -23,7 +23,7 @@ const allowedModes = new Set(Object.keys(data.transportModes));
 
 test('meta information is present', () => {
   assert.ok(data.meta?.title, 'meta title missing');
-  assert.ok(Array.isArray(data.routeIndex) && data.routeIndex.length === 7, 'expected 7 routes');
+  assert.ok(Array.isArray(data.routeIndex) && data.routeIndex.length >= 13, 'expected at least 13 routes');
 });
 
 const januaryRouteIds = [
@@ -33,6 +33,12 @@ const januaryRouteIds = [
   'chile-carretera-austral',
   'chile-wine-gastronomy',
   'chile-culture-altiplano',
+  'chile-route-1-atacama-salare-2026',
+  'chile-route-2-pazifik-wein-2026',
+  'chile-route-3-lakes-volcanoes-2026',
+  'chile-route-4-patagonia-sur-2026',
+  'chile-route-5-carretera-austral-light-2026',
+  'chile-route-6-big-mix-2026',
 ];
 
 const routesById = new Map(rawRoutes.map((route) => [route.id, route]));

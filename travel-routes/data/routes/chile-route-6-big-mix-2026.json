@@ -1,0 +1,148 @@
+{
+  "id": "chile-route-6-big-mix-2026",
+  "name": "Route 6 – Big Mix (Atacama + Seen + Küste)",
+  "title": "Route 6 – Big Mix (Atacama + Seen + Küste)",
+  "summary": "Greatest Hits vom 04. bis 20.01.2026: erst Atacama (San Pedro), dann Seenregion (Puerto Varas) und zum Abschluss Valparaíso & Casablanca – modular für 17 Tage planbar.",
+  "color": "#f59e0b",
+  "tags": [
+    "flight",
+    "roadtrip",
+    "nature",
+    "culture"
+  ],
+  "meta": {
+    "theme": "Atacama + Seen + Küste",
+    "pace": "modular",
+    "durationDays": 17,
+    "costEstimate": 3350,
+    "highlights": [
+      "Lagunen & Sterne in San Pedro",
+      "Vulkanblick am Llanquihue",
+      "Streetart & Wein an der Küste"
+    ],
+    "scores": {
+      "adventure": 4,
+      "relax": 3,
+      "culture": 4,
+      "nature": 5
+    }
+  },
+  "slider": {
+    "enabled": true,
+    "label": "Tagesübersicht"
+  },
+  "mapLayers": {
+    "dailySegments": [
+      {
+        "dayId": "r6-day-1",
+        "mode": "flight",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [-70.7858, -33.3929],
+            [-68.9036, -22.4989]
+          ]
+        }
+      },
+      {
+        "dayId": "r6-day-2",
+        "mode": "flight",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [-70.7858, -33.3929],
+            [-72.9424, -41.4693]
+          ]
+        }
+      },
+      {
+        "dayId": "r6-day-3",
+        "mode": "drive",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [-70.6693, -33.4489],
+            [-71.6127, -33.0472]
+          ]
+        }
+      }
+    ]
+  },
+  "days": [
+    {
+      "id": "r6-day-1",
+      "date": "2026-01-04",
+      "station": {
+        "name": "San Pedro de Atacama – Wüstenstart",
+        "timezone": "America/Santiago",
+        "coordinates": { "lat": -22.9111, "lng": -68.2011 },
+        "description": "Tag 2–6 der Reise: volle Atacama-Experience (Geysire, Lagunen, Valle de la Luna).",
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1580674684081-7617fbf3dcd0?w=800&auto=format&fit=crop",
+            "caption": "Valle de la Luna",
+            "credit": "Tomás Rivas",
+            "license": "Unsplash License"
+          }
+        ]
+      },
+      "arrival": {
+        "segments": [],
+        "mapPoints": []
+      },
+      "activities": [],
+      "hotels": [],
+      "mobilityOptions": {}
+    },
+    {
+      "id": "r6-day-2",
+      "date": "2026-01-11",
+      "station": {
+        "name": "Puerto Varas – Seen & Vulkan",
+        "timezone": "America/Santiago",
+        "coordinates": { "lat": -41.3170, "lng": -72.9854 },
+        "description": "Tag 7–12: Seenregion mit Osorno, Petrohué und Frutillar.",
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1526476148966-98bd039463ea?w=800&auto=format&fit=crop",
+            "caption": "Promenade von Puerto Varas",
+            "credit": "Cristobal Leon",
+            "license": "Unsplash License"
+          }
+        ]
+      },
+      "arrival": {
+        "segments": [],
+        "mapPoints": []
+      },
+      "activities": [],
+      "hotels": [],
+      "mobilityOptions": {}
+    },
+    {
+      "id": "r6-day-3",
+      "date": "2026-01-16",
+      "station": {
+        "name": "Valparaíso & Casablanca",
+        "timezone": "America/Santiago",
+        "coordinates": { "lat": -33.0472, "lng": -71.6127 },
+        "description": "Tag 13–17: Streetart, Pazifik, Wein im Casablanca Valley und Rückkehr nach Santiago.",
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1526402462922-1e1d481d87fd?w=800&auto=format&fit=crop",
+            "caption": "Häusermeer in Valparaíso",
+            "credit": "Fabiola Peñailillo",
+            "license": "Unsplash License"
+          }
+        ]
+      },
+      "arrival": {
+        "segments": [],
+        "mapPoints": []
+      },
+      "activities": [],
+      "hotels": [],
+      "mobilityOptions": {}
+    }
+  ]
+}

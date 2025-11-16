@@ -1,0 +1,342 @@
+{
+  "id": "chile-route-4-patagonia-sur-2026",
+  "name": "Route 4 – Patagonia Sur & Torres del Paine",
+  "title": "Route 4 – Patagonia Sur & Torres del Paine",
+  "summary": "Klassische Südroute zwischen 04. und 20.01.2026: Santiago → Punta Arenas → Puerto Natales → Torres del Paine mit Fokus auf Trekking, Fjorde und Steppe.",
+  "color": "#0f766e",
+  "tags": [
+    "adventure",
+    "flight",
+    "nature"
+  ],
+  "meta": {
+    "theme": "Patagonia Sur",
+    "pace": "anspruchsvoll",
+    "durationDays": 17,
+    "costEstimate": 3150,
+    "highlights": [
+      "Magellan-Sund & Pinguine",
+      "Puerto Natales Fjordspaziergang",
+      "Base de las Torres Trek"
+    ],
+    "scores": {
+      "adventure": 5,
+      "relax": 2,
+      "nature": 5,
+      "culture": 2
+    }
+  },
+  "slider": {
+    "enabled": true,
+    "label": "Tagesübersicht"
+  },
+  "mapLayers": {
+    "dailySegments": [
+      {
+        "dayId": "r4-day-1",
+        "mode": "flight",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [-70.7858, -33.3929],
+            [-70.9171, -53.1638]
+          ]
+        }
+      },
+      {
+        "dayId": "r4-day-2",
+        "mode": "bus",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [-70.9171, -53.1638],
+            [-72.5069, -51.7296]
+          ]
+        }
+      },
+      {
+        "dayId": "r4-day-3",
+        "mode": "drive",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [-72.5069, -51.7296],
+            [-72.3450, -51.2530]
+          ]
+        }
+      }
+    ]
+  },
+  "days": [
+    {
+      "id": "r4-day-1",
+      "date": "2026-01-04",
+      "station": {
+        "name": "Punta Arenas – Ende der Welt",
+        "timezone": "America/Punta_Arenas",
+        "coordinates": { "lat": -53.1638, "lng": -70.9171 },
+        "description": "Stadt am Magellan-Sund, Ausgangspunkt für Pinguin- und Estancia-Ausflüge.",
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&auto=format&fit=crop",
+            "caption": "Blick auf Punta Arenas und den Sund",
+            "credit": "Lina Morales",
+            "license": "Unsplash License"
+          }
+        ]
+      },
+      "arrival": {
+        "segments": [
+          {
+            "mode": "flight",
+            "from": {
+              "name": "Santiago (SCL)",
+              "coordinates": { "lat": -33.3929, "lng": -70.7858 }
+            },
+            "to": {
+              "name": "Punta Arenas (PUQ)",
+              "coordinates": { "lat": -53.0026, "lng": -70.8545 }
+            },
+            "flightNumber": "LA285",
+            "departure": "2026-01-04T08:00:00-03:00",
+            "arrival": "2026-01-04T11:15:00-03:00",
+            "airline": "LATAM / Sky",
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1472252369995-6d9b2177ed73?w=800&auto=format&fit=crop",
+                "caption": "Flug über die patagonische Steppe",
+                "credit": "Isidora León",
+                "license": "Unsplash License"
+              }
+            ]
+          }
+        ],
+        "mapPoints": []
+      },
+      "activities": [
+        {
+          "id": "r4-plaza-museo",
+          "type": "historic-quarter",
+          "name": "Plaza Muñoz Gamero & Mirador La Cruz",
+          "description": "Spaziergang durch das historische Zentrum mit Blick über die Stadt.",
+          "recommendedDurationMinutes": 120,
+          "restaurants": [],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&auto=format&fit=crop",
+              "caption": "Plaza im Stadtzentrum",
+              "credit": "Lina Morales",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        {
+          "id": "r4-pinguins-isla-marta",
+          "type": "other",
+          "name": "Bootstour Isla Marta / Magdalena (Variante)",
+          "description": "Halbtagestour zu Pinguinkolonien – wetterabhängig.",
+          "recommendedDurationMinutes": 300,
+          "restaurants": [],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=800&auto=format&fit=crop",
+              "caption": "Pinguine auf einer Insel im Sund",
+              "credit": "Ricardo Gutiérrez",
+              "license": "Unsplash License"
+            }
+          ]
+        }
+      ],
+      "hotels": [],
+      "mobilityOptions": {
+        "nextBus": {
+          "summary": "Fernbus Punta Arenas → Puerto Natales (ca. 3h).",
+          "operator": "Bus Sur / Buses Fernández",
+          "durationMinutes": 180,
+          "frequencyMinutes": 180,
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1470123808288-1e59739c26da?w=800&auto=format&fit=crop",
+              "caption": "Bus durch die patagonische Steppe",
+              "credit": "Mauricio Rojas",
+              "license": "Unsplash License"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "r4-day-2",
+      "date": "2026-01-05",
+      "station": {
+        "name": "Puerto Natales – Tor zu Torres del Paine",
+        "timezone": "America/Punta_Arenas",
+        "coordinates": { "lat": -51.7296, "lng": -72.5069 },
+        "description": "Kleine Stadt am Fjord, Basecamp für Paine-Touren.",
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1526403226655-2a0c2bb7e06d?w=800&auto=format&fit=crop",
+            "caption": "Promenade von Puerto Natales",
+            "credit": "Marcelo Díaz",
+            "license": "Unsplash License"
+          }
+        ]
+      },
+      "arrival": {
+        "segments": [
+          {
+            "mode": "bus",
+            "from": {
+              "name": "Punta Arenas",
+              "coordinates": { "lat": -53.1638, "lng": -70.9171 }
+            },
+            "to": {
+              "name": "Puerto Natales",
+              "coordinates": { "lat": -51.7296, "lng": -72.5069 }
+            },
+            "durationMinutes": 180,
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1470123808288-1e59739c26da?w=800&auto=format&fit=crop",
+                "caption": "Überlandbus nach Puerto Natales",
+                "credit": "Mauricio Rojas",
+                "license": "Unsplash License"
+              }
+            ]
+          }
+        ],
+        "mapPoints": []
+      },
+      "activities": [
+        {
+          "id": "r4-natales-town",
+          "type": "neighborhood",
+          "name": "Stadtrundgang & Uferpromenade",
+          "description": "Cafés, Craft Beer, Blick auf die Berge am Fjord.",
+          "recommendedDurationMinutes": 180,
+          "restaurants": [],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1526403226655-2a0c2bb7e06d?w=800&auto=format&fit=crop",
+              "caption": "Fjord vor Puerto Natales",
+              "credit": "Marcelo Díaz",
+              "license": "Unsplash License"
+            }
+          ]
+        }
+      ],
+      "hotels": [],
+      "mobilityOptions": {
+        "nextDrive": {
+          "summary": "Transfer oder Mietwagen nach Torres del Paine (ca. 1,5–2h).",
+          "rentalPickup": "Puerto Natales",
+          "rentalDropoff": "Puerto Natales / Punta Arenas",
+          "distanceKm": 80,
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1549897164-53a02427cbb9?w=800&auto=format&fit=crop",
+              "caption": "Straße Richtung Paine-Massiv",
+              "credit": "Hernán Díaz",
+              "license": "Unsplash License"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "r4-day-3",
+      "date": "2026-01-06",
+      "station": {
+        "name": "Torres del Paine Nationalpark",
+        "timezone": "America/Punta_Arenas",
+        "coordinates": { "lat": -51.2530, "lng": -72.3450 },
+        "description": "Granittürme, Seen in Türkis und Gletscher – einer der ikonischsten Parks der Welt.",
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1549897164-53a02427cbb9?w=800&auto=format&fit=crop",
+            "caption": "Paine-Massiv über türkisfarbenem See",
+            "credit": "Hernán Díaz",
+            "license": "Unsplash License"
+          }
+        ]
+      },
+      "arrival": {
+        "segments": [
+          {
+            "mode": "car",
+            "from": {
+              "name": "Puerto Natales",
+              "coordinates": { "lat": -51.7296, "lng": -72.5069 }
+            },
+            "to": {
+              "name": "Parkeingang Laguna Amarga",
+              "coordinates": { "lat": -51.0764, "lng": -72.7151 }
+            },
+            "distanceKm": 80,
+            "durationMinutes": 120,
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1549897164-53a02427cbb9?w=800&auto=format&fit=crop",
+                "caption": "Zufahrt zum Nationalpark",
+                "credit": "Hernán Díaz",
+                "license": "Unsplash License"
+              }
+            ]
+          }
+        ],
+        "mapPoints": []
+      },
+      "activities": [
+        {
+          "id": "r4-base-trek",
+          "type": "hike",
+          "name": "Base de las Torres (lange Tagestour)",
+          "description": "Anspruchsvolle Tagestour zum klassischen Aussichtspunkt an den Türmen.",
+          "recommendedDurationMinutes": 600,
+          "restaurants": [],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1549897164-53a02427cbb9?w=800&auto=format&fit=crop",
+              "caption": "Lagune an der Basis der Torres",
+              "credit": "Hernán Díaz",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        {
+          "id": "r4-short-hikes",
+          "type": "hike",
+          "name": "Kurztreks & Lookouts (Variante B)",
+          "description": "Mehrere kurze Wanderungen zu Aussichtspunkten und Wasserfällen für leichtere Tage.",
+          "recommendedDurationMinutes": 360,
+          "restaurants": [],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+              "caption": "Holzstege und Trails im Park",
+              "credit": "Alejandro Barba",
+              "license": "Unsplash License"
+            }
+          ]
+        }
+      ],
+      "hotels": [],
+      "mobilityOptions": {
+        "nextBus": {
+          "summary": "Rückkehr nach Puerto Natales und weiter per Bus nach Punta Arenas (für Rückflug nach Santiago).",
+          "operator": "Bus Sur / Buses Fernández",
+          "durationMinutes": 300,
+          "frequencyMinutes": 180,
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1470123808288-1e59739c26da?w=800&auto=format&fit=crop",
+              "caption": "Bus entlang eines Fjords",
+              "credit": "Mauricio Rojas",
+              "license": "Unsplash License"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

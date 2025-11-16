@@ -1,0 +1,747 @@
+{
+  "id": "chile-route-1-atacama-salare-2026",
+  "name": "Route 1 – Atacama, Salare & Sterne",
+  "title": "Route 1 – Atacama, Salare & Sterne",
+  "summary": "Fokus Norden vom 04. bis 20.01.2026: Santiago Warm-up, Weiterflug nach Calama und Basecamp San Pedro de Atacama für Lagunen, Salare, Astro-Events und Puffertage zurück in der Hauptstadt.",
+  "color": "#f97316",
+  "tags": [
+    "nature",
+    "adventure",
+    "flight",
+    "photography"
+  ],
+  "meta": {
+    "theme": "Atacama, Salare & Sterne",
+    "pace": "intensiv",
+    "durationDays": 17,
+    "costEstimate": 2350,
+    "highlights": [
+      "Valle de la Luna Sunset",
+      "Lagunas Miscanti & Miñiques",
+      "Astro-Tour unter dem dunkelsten Himmel"
+    ],
+    "scores": {
+      "adventure": 5,
+      "relax": 3,
+      "culture": 3,
+      "photography": 5
+    }
+  },
+  "slider": {
+    "enabled": true,
+    "label": "Tagesübersicht"
+  },
+  "mapLayers": {
+    "dailySegments": [
+      {
+        "dayId": "r1-day-1",
+        "mode": "flight",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [-70.7858, -33.3929],
+            [-68.9036, -22.4989]
+          ]
+        }
+      },
+      {
+        "dayId": "r1-day-2",
+        "mode": "drive",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [-68.9036, -22.4989],
+            [-68.2011, -22.9111]
+          ]
+        }
+      },
+      {
+        "dayId": "r1-day-3",
+        "mode": "drive",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [-68.2011, -22.9111],
+            [-68.2011, -23.0500]
+          ]
+        }
+      }
+    ]
+  },
+  "days": [
+    {
+      "id": "r1-day-1",
+      "date": "2026-01-04",
+      "station": {
+        "name": "Santiago de Chile → Calama",
+        "timezone": "America/Santiago",
+        "coordinates": { "lat": -33.4489, "lng": -70.6693 },
+        "description": "Ankunft in Santiago, Weiterflug in den Norden nach Calama – Tor zur Atacama-Wüste.",
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1526401485004-46910ecc8e51?w=800&auto=format&fit=crop",
+            "caption": "Skyline von Santiago vor den Anden",
+            "credit": "Diego Marin",
+            "license": "Unsplash License"
+          },
+          {
+            "url": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&auto=format&fit=crop",
+            "caption": "Flug über die Anden nach Norden",
+            "credit": "Juan Santillán",
+            "license": "Unsplash License"
+          }
+        ]
+      },
+      "arrival": {
+        "segments": [
+          {
+            "mode": "flight",
+            "from": {
+              "name": "Aeropuerto Arturo Merino Benítez (SCL)",
+              "coordinates": { "lat": -33.3929, "lng": -70.7858 }
+            },
+            "to": {
+              "name": "Aeropuerto El Loa (CJC), Calama",
+              "coordinates": { "lat": -22.4989, "lng": -68.9036 }
+            },
+            "flightNumber": "LA130",
+            "departure": "2026-01-04T10:30:00-03:00",
+            "arrival": "2026-01-04T12:15:00-03:00",
+            "airline": "LATAM",
+            "aircraft": "Airbus A320",
+            "baggage": {
+              "checked": "23 kg",
+              "carryOn": "8 kg"
+            },
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1518552781800-1fb841be351d?w=800&auto=format&fit=crop",
+                "caption": "LATAM-Maschine am Gate in Santiago",
+                "credit": "Rocío Vega",
+                "license": "Unsplash License"
+              },
+              {
+                "url": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800&auto=format&fit=crop",
+                "caption": "Rollfeld in der Mittagshitze",
+                "credit": "Andrés Vera",
+                "license": "Unsplash License"
+              }
+            ]
+          },
+          {
+            "mode": "car-rental",
+            "from": {
+              "name": "Aeropuerto El Loa (CJC)",
+              "coordinates": { "lat": -22.4989, "lng": -68.9036 }
+            },
+            "to": {
+              "name": "Calama Stadt / Hotelzone",
+              "coordinates": { "lat": -22.4540, "lng": -68.9290 }
+            },
+            "operator": "Mietwagen oder Taxi",
+            "durationMinutes": 20,
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&auto=format&fit=crop",
+                "caption": "Straße vom Flughafen nach Calama",
+                "credit": "Cristobal Leon",
+                "license": "Unsplash License"
+              }
+            ]
+          }
+        ],
+        "mapPoints": [
+          {
+            "id": "r1-scl-airport",
+            "type": "airport",
+            "name": "Aeropuerto Arturo Merino Benítez (SCL)",
+            "coordinates": { "lat": -33.3929, "lng": -70.7858 },
+            "address": "Pudahuel, Región Metropolitana, Chile",
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800&auto=format&fit=crop",
+                "caption": "Terminal in Santiago",
+                "credit": "Andrés Vera",
+                "license": "Unsplash License"
+              }
+            ]
+          },
+          {
+            "id": "r1-cjc-airport",
+            "type": "airport",
+            "name": "Aeropuerto El Loa (CJC)",
+            "coordinates": { "lat": -22.4989, "lng": -68.9036 },
+            "address": "Calama, Región de Antofagasta, Chile",
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1524492449093-4fe20d59d2ed?w=800&auto=format&fit=crop",
+                "caption": "Regionalflughafen in der Atacama",
+                "credit": "Anton Barros",
+                "license": "Unsplash License"
+              }
+            ]
+          }
+        ]
+      },
+      "activities": [
+        {
+          "id": "r1-calama-soft-arrival",
+          "type": "other",
+          "name": "Soft Landing in Calama",
+          "description": "Einchecken, kurzer Spaziergang, Wasser & Snacks für die Wüste besorgen, frühes Abendessen.",
+          "recommendedDurationMinutes": 120,
+          "restaurants": [
+            {
+              "name": "Cafe Mut",
+              "specialties": ["Sandwiches", "Kaffee", "leichte Bowls"],
+              "priceRange": "€€",
+              "url": "https://example.com/cafe-mut",
+              "images": [
+                {
+                  "url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop",
+                  "caption": "Kleines Café mit Wüstenflair",
+                  "credit": "Gabriel Pino",
+                  "license": "Unsplash License"
+                }
+              ]
+            }
+          ],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&auto=format&fit=crop",
+              "caption": "Abendlicht über Calama",
+              "credit": "Lina Morales",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        {
+          "id": "r1-calama-mirador",
+          "type": "viewpoint",
+          "name": "Mirador außerhalb von Calama",
+          "description": "Kurze Fahrt zum Stadtrand für ein erstes Atacama-Panorama.",
+          "recommendedDurationMinutes": 90,
+          "restaurants": [],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1558981285-6f0c94958bb6?w=800&auto=format&fit=crop",
+              "caption": "Weites Hochland um Calama",
+              "credit": "Natalia Rojas",
+              "license": "Unsplash License"
+            }
+          ]
+        }
+      ],
+      "hotels": [
+        {
+          "id": "r1-calama-diego-almagro",
+          "name": "Hotel Diego de Almagro Calama",
+          "reviewHighlights": ["Nahe am Zentrum", "Solider Stopover vor San Pedro"],
+          "avgNightlyRateEUR": 80,
+          "url": "https://www.diegodealmagro.cl",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&auto=format&fit=crop",
+              "caption": "Zimmer im Stadthotel",
+              "credit": "Kate Stone",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        {
+          "id": "r1-calama-park",
+          "name": "Calama Park Hotel",
+          "reviewHighlights": ["Frühstück ab 06:00", "Gute Parkmöglichkeiten"],
+          "avgNightlyRateEUR": 65,
+          "url": "https://www.calamaparkhotel.cl",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1505692794403-34cb5cf055b2?w=800&auto=format&fit=crop",
+              "caption": "Eingangsbereich",
+              "credit": "Sebastián Araya",
+              "license": "Unsplash License"
+            }
+          ]
+        }
+      ],
+      "mobilityOptions": {
+        "nextFlight": {
+          "summary": "Alternative: späterer Flug SCL → CJC, dann direkte Weiterfahrt nach San Pedro",
+          "operator": "Sky Airline",
+          "flightNumber": "H2520",
+          "departure": "2026-01-04T18:00:00-03:00",
+          "arrival": "2026-01-04T19:45:00-03:00",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1472252369995-6d9b2177ed73?w=800&auto=format&fit=crop",
+              "caption": "Regionaljet beim Boarding",
+              "credit": "Isidora León",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        "nextBus": {
+          "summary": "Langstreckenbus Santiago → Calama (23h) als Budget-Variante",
+          "operator": "TurBus",
+          "durationMinutes": 1380,
+          "frequencyMinutes": 120,
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1470123808288-1e59739c26da?w=800&auto=format&fit=crop",
+              "caption": "Nachtbus auf der Ruta 5",
+              "credit": "Mauricio Rojas",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        "nextDrive": {
+          "summary": "Mietwagenübernahme am Flughafen Calama – ideal für die kommenden Tage in der Atacama.",
+          "rentalPickup": "El Loa Airport (CJC)",
+          "rentalDropoff": "El Loa Airport (CJC)",
+          "distanceKm": 100,
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&auto=format&fit=crop",
+              "caption": "Straße Richtung San Pedro",
+              "credit": "Cristobal Leon",
+              "license": "Unsplash License"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "r1-day-2",
+      "date": "2026-01-05",
+      "station": {
+        "name": "San Pedro de Atacama – Basecamp Wüste",
+        "timezone": "America/Santiago",
+        "coordinates": { "lat": -22.9111, "lng": -68.2011 },
+        "description": "Lehmhäuser, staubige Gassen, Vulkansilhouetten – idealer Ausgangspunkt für Lagunen, Geysire und Sterne.",
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1542044801-316b009284e2?w=800&auto=format&fit=crop",
+            "caption": "Plaza von San Pedro de Atacama",
+            "credit": "Mariana Silva",
+            "license": "Unsplash License"
+          },
+          {
+            "url": "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&auto=format&fit=crop",
+            "caption": "Adobe-Architektur und Vulkan im Hintergrund",
+            "credit": "Ricardo Gutiérrez",
+            "license": "Unsplash License"
+          }
+        ]
+      },
+      "arrival": {
+        "segments": [
+          {
+            "mode": "car",
+            "from": {
+              "name": "Calama Zentrum",
+              "coordinates": { "lat": -22.4540, "lng": -68.9290 }
+            },
+            "to": {
+              "name": "San Pedro de Atacama Zentrum",
+              "coordinates": { "lat": -22.9111, "lng": -68.2011 }
+            },
+            "rental": {
+              "provider": "Localiza / Europcar",
+              "pickup": "Calama Flughafen",
+              "dropoff": "Calama Flughafen",
+              "vehicleClass": "SUV / höhergelegter Wagen"
+            },
+            "distanceKm": 100,
+            "durationMinutes": 80,
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1493244040629-496f6d136cc3?w=800&auto=format&fit=crop",
+                "caption": "Route 23 durch die Wüste",
+                "credit": "Carla Henríquez",
+                "license": "Unsplash License"
+              },
+              {
+                "url": "https://images.unsplash.com/photo-1580674280375-c10aeeb185d2?w=800&auto=format&fit=crop",
+                "caption": "Vulkan-Landschaft unterwegs",
+                "credit": "Tomás Rivas",
+                "license": "Unsplash License"
+              }
+            ]
+          }
+        ],
+        "mapPoints": [
+          {
+            "id": "r1-sanpedro-plaza",
+            "type": "village",
+            "name": "Plaza de Armas San Pedro",
+            "coordinates": { "lat": -22.9111, "lng": -68.2011 },
+            "address": "San Pedro de Atacama, Región de Antofagasta",
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&auto=format&fit=crop",
+                "caption": "Platanen und Kirche an der Plaza",
+                "credit": "Lina Morales",
+                "license": "Unsplash License"
+              }
+            ]
+          }
+        ]
+      },
+      "activities": [
+        {
+          "id": "r1-valle-de-la-luna",
+          "type": "viewpoint",
+          "name": "Valle de la Luna – Sonnenuntergangstour",
+          "description": "Nachmittagstour zu Dünen, Felsformationen und Aussichtspunkten im Mondtal.",
+          "recommendedDurationMinutes": 240,
+          "restaurants": [
+            {
+              "name": "Adobe Restaurante",
+              "specialties": ["Lamm aus dem Lehmofen", "Empanadas"],
+              "priceRange": "€€€",
+              "url": "https://www.adoberestaurante.cl",
+              "images": [
+                {
+                  "url": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&auto=format&fit=crop",
+                  "caption": "Abendessen im Innenhof",
+                  "credit": "Anna Tarazevich",
+                  "license": "Unsplash License"
+                }
+              ]
+            }
+          ],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1580674684081-7617fbf3dcd0?w=800&auto=format&fit=crop",
+              "caption": "Sanddünen im Valle de la Luna",
+              "credit": "Tomás Rivas",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1558981285-6f0c94958bb6?w=800&auto=format&fit=crop",
+              "caption": "Abendlicht über den Felsen",
+              "credit": "Natalia Rojas",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        {
+          "id": "r1-laguna-cejar",
+          "type": "other",
+          "name": "Laguna Cejar – Schweben im Salzsee",
+          "description": "Optionaler Ausflug zu einer Lagune, in der du aufgrund des Salzgehalts auf der Wasseroberfläche treibst.",
+          "recommendedDurationMinutes": 210,
+          "restaurants": [],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1482192505345-5655af888cc4?w=800&auto=format&fit=crop",
+              "caption": "Türkise Salzlagune in der Atacama",
+              "credit": "Hernán Díaz",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        {
+          "id": "r1-sanpedro-townwalk",
+          "type": "neighborhood",
+          "name": "Abendlicher Town Walk",
+          "description": "Gassen, kleine Innenhöfe, Pisco Sour und Streetfood.",
+          "recommendedDurationMinutes": 120,
+          "restaurants": [
+            {
+              "name": "La Casona",
+              "specialties": ["Chorrillana", "Craft Beer"],
+              "priceRange": "€€",
+              "url": "https://example.com/la-casona",
+              "images": [
+                {
+                  "url": "https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=800&auto=format&fit=crop",
+                  "caption": "Innenhof mit Lichterketten",
+                  "credit": "Camila Reyes",
+                  "license": "Unsplash License"
+                }
+              ]
+            }
+          ],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1526481280695-3c4692349813?w=800&auto=format&fit=crop",
+              "caption": "Abendstimmung in San Pedro",
+              "credit": "Javiera Larenas",
+              "license": "Unsplash License"
+            }
+          ]
+        }
+      ],
+      "hotels": [
+        {
+          "id": "r1-hotel-kimal",
+          "name": "Hotel Kimal",
+          "reviewHighlights": ["Zentrale Lage", "Pool im Innenhof"],
+          "avgNightlyRateEUR": 150,
+          "url": "https://www.hotelkimal.cl",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1505691723518-36a5ac3be353?w=800&auto=format&fit=crop",
+              "caption": "Zimmer mit Naturmaterialien",
+              "credit": "Sofía Bravo",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        {
+          "id": "r1-hotel-terrar",
+          "name": "Terrantai Lodge",
+          "reviewHighlights": ["Design & Geschichte", "Sehr gute Bewertungen bei Individualreisenden"],
+          "avgNightlyRateEUR": 220,
+          "url": "https://www.terrarai.com",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&auto=format&fit=crop",
+              "caption": "Innenhof mit Pool",
+              "credit": "Marcelo Díaz",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        {
+          "id": "r1-hostal-budget",
+          "name": "Hostal Rural",
+          "reviewHighlights": ["Backpacker-Vibe", "Zentrale Lage"],
+          "avgNightlyRateEUR": 40,
+          "url": "https://example.com/hostal-rural",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&auto=format&fit=crop",
+              "caption": "Gemeinschaftsbereich im Hostel",
+              "credit": "Ignacio Rojas",
+              "license": "Unsplash License"
+            }
+          ]
+        }
+      ],
+      "mobilityOptions": {
+        "nextFlight": {
+          "summary": "Später Weiterflug von Calama nach Antofagasta oder zurück nach Santiago (für Küsten-Extension).",
+          "operator": "LATAM / Sky",
+          "flightNumber": "LA3XX",
+          "departure": "2026-01-07T09:00:00-03:00",
+          "arrival": "2026-01-07T10:00:00-03:00",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1472252369995-6d9b2177ed73?w=800&auto=format&fit=crop",
+              "caption": "Boarding eines Inlandsflugs",
+              "credit": "Isidora León",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        "nextBus": {
+          "summary": "Bus San Pedro → Calama (falls ohne Mietwagen unterwegs).",
+          "operator": "TurBus / lokale Anbieter",
+          "durationMinutes": 90,
+          "frequencyMinutes": 120,
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1524492449093-4fe20d59d2ed?w=800&auto=format&fit=crop",
+              "caption": "Regionalbus im Hochland",
+              "credit": "Anton Barros",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        "nextDrive": {
+          "summary": "Selbstfahrer-Loop zu Lagunen und Geysiren an den Folgetagen.",
+          "rentalPickup": "San Pedro Zentrum",
+          "rentalDropoff": "Calama Flughafen",
+          "distanceKm": 300,
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1493244040629-496f6d136cc3?w=800&auto=format&fit=crop",
+              "caption": "Endlose Roads in der Atacama",
+              "credit": "Carla Henríquez",
+              "license": "Unsplash License"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "r1-day-3",
+      "date": "2026-01-06",
+      "station": {
+        "name": "Altiplano & Salzseen",
+        "timezone": "America/Santiago",
+        "coordinates": { "lat": -23.0500, "lng": -67.9000 },
+        "description": "Hochgelegene Lagunen, Flamingos und weite Salare – klassischer Altiplano-Tag.",
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1601758577436-9f0a0c0f0b36?w=800&auto=format&fit=crop",
+            "caption": "Flamingos in der Morgensonne",
+            "credit": "Elena Núñez",
+            "license": "Unsplash License"
+          },
+          {
+            "url": "https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?w=800&auto=format&fit=crop",
+            "caption": "Lagune mit Vulkankegel",
+            "credit": "Hernán Díaz",
+            "license": "Unsplash License"
+          }
+        ]
+      },
+      "arrival": {
+        "segments": [
+          {
+            "mode": "tour-operator",
+            "from": {
+              "name": "San Pedro de Atacama",
+              "coordinates": { "lat": -22.9111, "lng": -68.2011 }
+            },
+            "to": {
+              "name": "Lagunas Miscanti y Miñiques",
+              "coordinates": { "lat": -23.7833, "lng": -67.7833 }
+            },
+            "operator": "Lokale Agentur (z.B. Cosmo Andino / Flamingo Tours)",
+            "durationMinutes": 540,
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1470770903676-69b98201ea1c?w=800&auto=format&fit=crop",
+                "caption": "Minibus vor Andenkulisse",
+                "credit": "Pablo Núñez",
+                "license": "Unsplash License"
+              }
+            ]
+          }
+        ],
+        "mapPoints": [
+          {
+            "id": "r1-miscanti",
+            "type": "viewpoint",
+            "name": "Laguna Miscanti",
+            "coordinates": { "lat": -23.7833, "lng": -67.7833 },
+            "address": "Altiplano, Región de Antofagasta",
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?w=800&auto=format&fit=crop",
+                "caption": "Blaue Lagune mit Bergen",
+                "credit": "Hernán Díaz",
+                "license": "Unsplash License"
+              }
+            ]
+          }
+        ]
+      },
+      "activities": [
+        {
+          "id": "r1-altiplanic-lagoons",
+          "type": "day-trip",
+          "name": "Lagunas Miscanti & Miñiques",
+          "description": "Klassische Tour zu zwei ikonischen Hochlandlagunen inkl. Fotostopps und kurzer Spaziergänge.",
+          "recommendedDurationMinutes": 300,
+          "restaurants": [
+            {
+              "name": "Lokale Küche in Socaire",
+              "specialties": ["Quinoa-Eintopf", "Cazuela"],
+              "priceRange": "€€",
+              "url": "https://example.com/socaire",
+              "images": [
+                {
+                  "url": "https://images.unsplash.com/photo-1470115636492-6d2b56f9146e?w=800&auto=format&fit=crop",
+                  "caption": "Einfaches Mittagessen im Andendorf",
+                  "credit": "Patricio Lagos",
+                  "license": "Unsplash License"
+                }
+              ]
+            }
+          ],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1601758577436-9f0a0c0f0b36?w=800&auto=format&fit=crop",
+              "caption": "Lagune mit Flamingos",
+              "credit": "Elena Núñez",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        {
+          "id": "r1-salar-de-atacama",
+          "type": "other",
+          "name": "Salar de Atacama & Flamingos",
+          "description": "Besuch eines Flamingo-Reservats im Salzsee, ideale Golden-Hour-Location.",
+          "recommendedDurationMinutes": 180,
+          "restaurants": [],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1558980664-2506fca6bfc2?w=800&auto=format&fit=crop",
+              "caption": "Strukturierter Salzsee im Gegenlicht",
+              "credit": "Carla Henríquez",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        {
+          "id": "r1-stargazing",
+          "type": "other",
+          "name": "Astro-Tour in der Atacama",
+          "description": "Abendliche Sternenbeobachtung mit Teleskop – einer der dunkelsten Himmel der Welt.",
+          "recommendedDurationMinutes": 150,
+          "restaurants": [],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1450849608880-6f787542c88a?w=800&auto=format&fit=crop",
+              "caption": "Milchstraße über der Wüste",
+              "credit": "Nicolás Astudillo",
+              "license": "Unsplash License"
+            }
+          ]
+        }
+      ],
+      "hotels": [],
+      "mobilityOptions": {
+        "nextFlight": {
+          "summary": "Option später in der Reise: Calama → Santiago zur Rückkehr oder Weiterflug nach Süden.",
+          "operator": "LATAM / Sky",
+          "flightNumber": "LA1XX",
+          "departure": "2026-01-09T15:00:00-03:00",
+          "arrival": "2026-01-09T16:45:00-03:00",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1472252369995-6d9b2177ed73?w=800&auto=format&fit=crop",
+              "caption": "Inlandsflug zurück nach Santiago",
+              "credit": "Isidora León",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        "nextBus": {
+          "summary": "Sehr lange Busroute San Pedro → Santiago (nur als Low-Budget-Option sinnvoll).",
+          "operator": "TurBus",
+          "durationMinutes": 1380,
+          "frequencyMinutes": 120,
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1470123808288-1e59739c26da?w=800&auto=format&fit=crop",
+              "caption": "Überlandbus auf der Ruta 5",
+              "credit": "Mauricio Rojas",
+              "license": "Unsplash License"
+            }
+          ]
+        },
+        "nextDrive": {
+          "summary": "Rückfahrt nach Calama und Abgabe des Mietwagens – Übergang zur nächsten Region (z.B. Pazifikküste).",
+          "rentalPickup": "San Pedro",
+          "rentalDropoff": "Calama",
+          "distanceKm": 100,
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&auto=format&fit=crop",
+              "caption": "Straße zurück Richtung Calama",
+              "credit": "Cristobal Leon",
+              "license": "Unsplash License"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
