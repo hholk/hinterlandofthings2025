@@ -19,6 +19,10 @@
   import 'maplibre-gl/dist/maplibre-gl.css';
   import { calculateBoundingBox, type LngLatTuple } from '../../../lib/travel/map-bounds';
   import {
+    resolveMapLibreNamespace,
+    type MapLibreNamespace
+  } from '../../../lib/travel/maplibre-loader';
+  import {
     buildSegmentCollection,
     buildStopCollection,
     collectAllCoordinates,
@@ -31,7 +35,7 @@
   } from '../../../lib/travel/map-data';
   import { getDefaultSliderIndex } from '../../../lib/travel/timeline-helpers';
 
-  type MapLibreModule = typeof import('maplibre-gl');
+  type MapLibreModule = MapLibreNamespace;
   type MapLibreMap = import('maplibre-gl').Map;
   type MapLayerMouseEvent = import('maplibre-gl').MapLayerMouseEvent;
   type Popup = import('maplibre-gl').Popup;
@@ -679,7 +683,9 @@
     if (maplibre) return maplibre;
 
     const module = await import('maplibre-gl');
-    maplibre = module;
+    // Für Einsteiger:innen: Die Bundler liefern MapLibre je nach Ziel als Default-Export.
+    // Damit die Karte zuverlässig lädt, wandeln wir das Modul einmal in den echten Namespace um.
+    maplibre = resolveMapLibreNamespace(module);
     return maplibre;
   }
 
