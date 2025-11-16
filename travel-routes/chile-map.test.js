@@ -5,7 +5,9 @@ import {
   buildSegmentFeatures,
   buildPoiFeatures,
   calculateBounds,
-  normalizeCoordinate
+  normalizeCoordinate,
+  resolveTileTemplates,
+  createMapStyle
 } from './chile-map.js';
 
 const transportModes = {
@@ -144,4 +146,22 @@ test('calculateBounds covers all supplied geometries', () => {
   assert.ok(bounds);
   assert.deepEqual(bounds[0], [-72, -34]);
   assert.deepEqual(bounds[1], [-70, -30]);
+});
+
+test('resolveTileTemplates handles arrays, subdomains and fallbacks', () => {
+  const arrayTiles = resolveTileTemplates({ tileLayer: ['https://a.tile/{z}/{x}/{y}.png'] });
+  assert.deepEqual(arrayTiles, ['https://a.tile/{z}/{x}/{y}.png']);
+
+  const subdomains = resolveTileTemplates({ tileLayer: 'https://{s}.tile/{z}/{x}/{y}.png', tileSubdomains: ['x', 'y'] });
+  assert.deepEqual(subdomains, ['https://x.tile/{z}/{x}/{y}.png', 'https://y.tile/{z}/{x}/{y}.png']);
+
+  const fallback = resolveTileTemplates(null);
+  assert.deepEqual(fallback, ['https://tile.openstreetmap.org/{z}/{x}/{y}.png']);
+});
+
+test('createMapStyle always returns the raster style used by the UI theme', () => {
+  const style = createMapStyle({ tileLayer: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png', styleUrl: 'https://legacy/style.json' });
+  assert.equal(style.layers?.[0]?.id, 'osm-base');
+  assert.equal(style.sources?.osm?.type, 'raster');
+  assert.ok(Array.isArray(style.sources?.osm?.tiles));
 });
