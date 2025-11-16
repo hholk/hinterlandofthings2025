@@ -54,8 +54,14 @@
         "geometry": {
           "type": "LineString",
           "coordinates": [
-            [-58.5358, -34.8222],
-            [-70.792, -33.3929]
+            [
+              -58.5358,
+              -34.8222
+            ],
+            [
+              -70.792,
+              -33.3929
+            ]
           ]
         }
       },
@@ -65,8 +71,14 @@
         "geometry": {
           "type": "LineString",
           "coordinates": [
-            [-70.6629, -33.4513],
-            [-71.6127, -33.0461]
+            [
+              -70.6629,
+              -33.4513
+            ],
+            [
+              -71.6127,
+              -33.0461
+            ]
           ]
         }
       },
@@ -76,8 +88,14 @@
         "geometry": {
           "type": "LineString",
           "coordinates": [
-            [-70.6629, -33.4513],
-            [-70.3653, -33.6511]
+            [
+              -70.6629,
+              -33.4513
+            ],
+            [
+              -70.3653,
+              -33.6511
+            ]
           ]
         }
       }
@@ -90,7 +108,10 @@
       "station": {
         "name": "Santiago de Chile",
         "timezone": "America/Santiago",
-        "coordinates": { "lat": -33.4489, "lng": -70.6693 },
+        "coordinates": {
+          "lat": -33.4489,
+          "lng": -70.6693
+        },
         "description": "Metropole in den Anden mit lebendigen Vierteln, Rooftop-Bars und Museen.",
         "images": [
           {
@@ -113,11 +134,17 @@
             "mode": "flight",
             "from": {
               "name": "Buenos Aires Ministro Pistarini International (EZE)",
-              "coordinates": { "lat": -34.8222, "lng": -58.5358 }
+              "coordinates": {
+                "lat": -34.8222,
+                "lng": -58.5358
+              }
             },
             "to": {
               "name": "Santiago International Airport (SCL)",
-              "coordinates": { "lat": -33.3929, "lng": -70.7858 }
+              "coordinates": {
+                "lat": -33.3929,
+                "lng": -70.7858
+              }
             },
             "flightNumber": "LA780",
             "departure": "2025-02-10T07:35:00-03:00",
@@ -147,11 +174,17 @@
             "mode": "airport-shuttle",
             "from": {
               "name": "Santiago International Airport",
-              "coordinates": { "lat": -33.3929, "lng": -70.7858 }
+              "coordinates": {
+                "lat": -33.3929,
+                "lng": -70.7858
+              }
             },
             "to": {
               "name": "Downtown Shuttle Hub – Bellavista",
-              "coordinates": { "lat": -33.4301, "lng": -70.6347 }
+              "coordinates": {
+                "lat": -33.4301,
+                "lng": -70.6347
+              }
             },
             "operator": "Centropuerto",
             "frequencyMinutes": 20,
@@ -177,7 +210,10 @@
             "id": "scl-airport",
             "type": "airport",
             "name": "Aeropuerto Arturo Merino Benítez (SCL)",
-            "coordinates": { "lat": -33.3929, "lng": -70.7858 },
+            "coordinates": {
+              "lat": -33.3929,
+              "lng": -70.7858
+            },
             "address": "Pudahuel, Región Metropolitana, Chile",
             "images": [
               {
@@ -198,7 +234,10 @@
             "id": "bellavista-shuttle",
             "type": "bus-station",
             "name": "Centropuerto Bellavista Stop",
-            "coordinates": { "lat": -33.4301, "lng": -70.6347 },
+            "coordinates": {
+              "lat": -33.4301,
+              "lng": -70.6347
+            },
             "address": "Avenida Bellavista 160, Recoleta",
             "images": [
               {
@@ -219,7 +258,10 @@
             "id": "providencia-car-rental",
             "type": "car-rental",
             "name": "Localiza Rent a Car – Providencia",
-            "coordinates": { "lat": -33.4233, "lng": -70.6097 },
+            "coordinates": {
+              "lat": -33.4233,
+              "lng": -70.6097
+            },
             "address": "Av. Nueva Providencia 1881, Santiago",
             "images": [
               {
@@ -248,7 +290,10 @@
           "restaurants": [
             {
               "name": "Bocanáriz",
-              "specialties": ["Chilenische Weine", "Empanadas"],
+              "specialties": [
+                "Chilenische Weine",
+                "Empanadas"
+              ],
               "priceRange": "€€€",
               "url": "https://www.bocanariz.cl",
               "images": [
@@ -291,7 +336,10 @@
           "restaurants": [
             {
               "name": "Divertimento Chileno",
-              "specialties": ["Pastel de Choclo", "Pisco Sour"],
+              "specialties": [
+                "Pastel de Choclo",
+                "Pisco Sour"
+              ],
               "priceRange": "€€",
               "url": "https://www.divertimento.cl",
               "images": [
@@ -334,7 +382,10 @@
           "restaurants": [
             {
               "name": "Cafe del Museo",
-              "specialties": ["Kaffee aus dem Altiplano", "Süßgebäck"],
+              "specialties": [
+                "Kaffee aus dem Altiplano",
+                "Süßgebäck"
+              ],
               "priceRange": "€€",
               "url": "https://www.precolombino.cl",
               "images": [
@@ -373,7 +424,10 @@
         {
           "id": "hotel-magnolia",
           "name": "Hotel Magnolia",
-          "reviewHighlights": ["Design trifft Heritage", "Rooftop-Bar mit Blick auf den Cerro Santa Lucía"],
+          "reviewHighlights": [
+            "Design trifft Heritage",
+            "Rooftop-Bar mit Blick auf den Cerro Santa Lucía"
+          ],
           "avgNightlyRateEUR": 185,
           "url": "https://www.hotelmagnolia.cl",
           "images": [
@@ -394,7 +448,10 @@
         {
           "id": "casa-bellas-artes",
           "name": "Casa Bellas Artes",
-          "reviewHighlights": ["Künstlerische Einrichtung", "Familiengeführte Atmosphäre"],
+          "reviewHighlights": [
+            "Künstlerische Einrichtung",
+            "Familiengeführte Atmosphäre"
+          ],
           "avgNightlyRateEUR": 95,
           "url": "https://www.casabellasartes.cl",
           "images": [
@@ -415,7 +472,10 @@
         {
           "id": "hotel-soleil",
           "name": "Hotel Soleil",
-          "reviewHighlights": ["Gutes Preis-Leistungs-Verhältnis", "Großes Frühstücksbuffet"],
+          "reviewHighlights": [
+            "Gutes Preis-Leistungs-Verhältnis",
+            "Großes Frühstücksbuffet"
+          ],
           "avgNightlyRateEUR": 70,
           "url": "https://www.hotelsoleil.cl",
           "images": [
@@ -436,7 +496,10 @@
         {
           "id": "w-santiago",
           "name": "W Santiago",
-          "reviewHighlights": ["Infinity-Pool auf dem Dach", "Panorama über die Anden"],
+          "reviewHighlights": [
+            "Infinity-Pool auf dem Dach",
+            "Panorama über die Anden"
+          ],
           "avgNightlyRateEUR": 240,
           "url": "https://www.marriott.com/en-us/hotels/sclwh-w-santiago",
           "images": [
@@ -457,7 +520,10 @@
         {
           "id": "hostal-forestal",
           "name": "Hostal Forestal",
-          "reviewHighlights": ["Budgetfreundlich", "Community-Events und Stadtführungen"],
+          "reviewHighlights": [
+            "Budgetfreundlich",
+            "Community-Events und Stadtführungen"
+          ],
           "avgNightlyRateEUR": 35,
           "url": "https://www.hostalforestal.cl",
           "images": [
@@ -506,9 +572,9 @@
           "images": [
             {
               "url": "https://images.unsplash.com/photo-1470123808288-1e59739c26da?w=800&auto=format&fit=crop",
-                "caption": "Fernbus am Terminal Alameda",
-                "credit": "Mauricio Rojas",
-                "license": "Unsplash License"
+              "caption": "Fernbus am Terminal Alameda",
+              "credit": "Mauricio Rojas",
+              "license": "Unsplash License"
             },
             {
               "url": "https://images.unsplash.com/photo-1524492449093-4fe20d59d2ed?w=800&auto=format&fit=crop",
@@ -546,7 +612,10 @@
       "station": {
         "name": "Valparaíso",
         "timezone": "America/Santiago",
-        "coordinates": { "lat": -33.0472, "lng": -71.6127 },
+        "coordinates": {
+          "lat": -33.0472,
+          "lng": -71.6127
+        },
         "description": "UNESCO-Welterbe-Hafenstadt mit funkelnder Streetart und historischen Aufzügen.",
         "images": [
           {
@@ -569,11 +638,17 @@
             "mode": "bus",
             "from": {
               "name": "Terminal Alameda (Santiago)",
-              "coordinates": { "lat": -33.4576, "lng": -70.6621 }
+              "coordinates": {
+                "lat": -33.4576,
+                "lng": -70.6621
+              }
             },
             "to": {
               "name": "Terminal Rodoviario Valparaíso",
-              "coordinates": { "lat": -33.0476, "lng": -71.6049 }
+              "coordinates": {
+                "lat": -33.0476,
+                "lng": -71.6049
+              }
             },
             "operator": "TurBus",
             "durationMinutes": 110,
@@ -599,7 +674,10 @@
             "id": "terminal-alameda",
             "type": "bus-terminal",
             "name": "Terminal Alameda",
-            "coordinates": { "lat": -33.4576, "lng": -70.6621 },
+            "coordinates": {
+              "lat": -33.4576,
+              "lng": -70.6621
+            },
             "address": "Av. Libertador Bernardo O'Higgins 3850, Estación Central",
             "images": [
               {
@@ -620,7 +698,10 @@
             "id": "terminal-valparaiso",
             "type": "bus-terminal",
             "name": "Terminal Rodoviario de Valparaíso",
-            "coordinates": { "lat": -33.0476, "lng": -71.6049 },
+            "coordinates": {
+              "lat": -33.0476,
+              "lng": -71.6049
+            },
             "address": "Pedro Montt 2860, Valparaíso",
             "images": [
               {
@@ -641,7 +722,10 @@
             "id": "valparaiso-funicular",
             "type": "transport",
             "name": "Ascensor El Peral",
-            "coordinates": { "lat": -33.0408, "lng": -71.6281 },
+            "coordinates": {
+              "lat": -33.0408,
+              "lng": -71.6281
+            },
             "address": "Pasaje Miramar 145, Valparaíso",
             "images": [
               {
@@ -670,7 +754,10 @@
           "restaurants": [
             {
               "name": "Café del Poeta",
-              "specialties": ["Kuchen mit Chirimoya", "Cold Brew"],
+              "specialties": [
+                "Kuchen mit Chirimoya",
+                "Cold Brew"
+              ],
               "priceRange": "€€",
               "url": "https://www.cafedelpoeta.cl",
               "images": [
@@ -713,7 +800,10 @@
           "restaurants": [
             {
               "name": "Restaurant Oda Pacifico",
-              "specialties": ["Ceviche", "Tagesfang aus dem Pazifik"],
+              "specialties": [
+                "Ceviche",
+                "Tagesfang aus dem Pazifik"
+              ],
               "priceRange": "€€€",
               "url": "https://www.odapacifico.cl",
               "images": [
@@ -756,7 +846,10 @@
           "restaurants": [
             {
               "name": "Tía Carlina",
-              "specialties": ["Mariscada", "Chupe de Jaiba"],
+              "specialties": [
+                "Mariscada",
+                "Chupe de Jaiba"
+              ],
               "priceRange": "€€",
               "url": "https://www.tiacarlina.cl",
               "images": [
@@ -795,7 +888,10 @@
         {
           "id": "hotel-fauna",
           "name": "Hotel Fauna",
-          "reviewHighlights": ["Rooftop-Bar mit Hafenblick", "Design inspiriert von Streetart"],
+          "reviewHighlights": [
+            "Rooftop-Bar mit Hafenblick",
+            "Design inspiriert von Streetart"
+          ],
           "avgNightlyRateEUR": 140,
           "url": "https://www.hotelfauna.cl",
           "images": [
@@ -816,7 +912,10 @@
         {
           "id": "verso-hotel",
           "name": "Verso Hotel",
-          "reviewHighlights": ["Literatur-Themenzimmer", "Frühstück im Dachgarten"],
+          "reviewHighlights": [
+            "Literatur-Themenzimmer",
+            "Frühstück im Dachgarten"
+          ],
           "avgNightlyRateEUR": 110,
           "url": "https://www.versohotel.cl",
           "images": [
@@ -837,7 +936,10 @@
         {
           "id": "winebox-valparaiso",
           "name": "WineBox Valparaíso",
-          "reviewHighlights": ["Container-Design", "Eigene Rooftop-Weinbar"],
+          "reviewHighlights": [
+            "Container-Design",
+            "Eigene Rooftop-Weinbar"
+          ],
           "avgNightlyRateEUR": 95,
           "url": "https://www.wineboxvalparaiso.com",
           "images": [
@@ -858,7 +960,10 @@
         {
           "id": "ibis-valparaiso",
           "name": "ibis Valparaíso",
-          "reviewHighlights": ["Direkt am Hafen", "Stabile WLAN-Verbindung"],
+          "reviewHighlights": [
+            "Direkt am Hafen",
+            "Stabile WLAN-Verbindung"
+          ],
           "avgNightlyRateEUR": 75,
           "url": "https://all.accor.com/hotel/7572/index.de.shtml",
           "images": [
@@ -879,7 +984,10 @@
         {
           "id": "hostal-jacob",
           "name": "Hostal Jacob",
-          "reviewHighlights": ["Gemeinschaftsküche", "Kurze Wege zum Hafen"],
+          "reviewHighlights": [
+            "Gemeinschaftsküche",
+            "Kurze Wege zum Hafen"
+          ],
           "avgNightlyRateEUR": 40,
           "url": "https://www.hostaljacob.cl",
           "images": [
@@ -968,7 +1076,10 @@
       "station": {
         "name": "Cajón del Maipo",
         "timezone": "America/Santiago",
-        "coordinates": { "lat": -33.6532, "lng": -70.3346 },
+        "coordinates": {
+          "lat": -33.6532,
+          "lng": -70.3346
+        },
         "description": "Andenschlucht südöstlich von Santiago mit heißen Quellen und Trekkingrouten.",
         "images": [
           {
@@ -991,11 +1102,17 @@
             "mode": "car",
             "from": {
               "name": "Santiago – Providencia",
-              "coordinates": { "lat": -33.4233, "lng": -70.6097 }
+              "coordinates": {
+                "lat": -33.4233,
+                "lng": -70.6097
+              }
             },
             "to": {
               "name": "Baños Colina",
-              "coordinates": { "lat": -33.7839, "lng": -70.3602 }
+              "coordinates": {
+                "lat": -33.7839,
+                "lng": -70.3602
+              }
             },
             "rental": {
               "provider": "Localiza",
@@ -1026,7 +1143,10 @@
             "id": "banos-colina",
             "type": "hot-springs",
             "name": "Termas Baños Colina",
-            "coordinates": { "lat": -33.7839, "lng": -70.3602 },
+            "coordinates": {
+              "lat": -33.7839,
+              "lng": -70.3602
+            },
             "address": "Camino Embalse El Yeso km 60",
             "images": [
               {
@@ -1047,7 +1167,10 @@
             "id": "embalse-el-yeso",
             "type": "viewpoint",
             "name": "Mirador Embalse El Yeso",
-            "coordinates": { "lat": -33.6593, "lng": -70.0942 },
+            "coordinates": {
+              "lat": -33.6593,
+              "lng": -70.0942
+            },
             "address": "Embalse El Yeso",
             "images": [
               {
@@ -1068,7 +1191,10 @@
             "id": "san-jose-gas",
             "type": "service",
             "name": "Tankstelle Copec San José de Maipo",
-            "coordinates": { "lat": -33.6163, "lng": -70.3514 },
+            "coordinates": {
+              "lat": -33.6163,
+              "lng": -70.3514
+            },
             "address": "Av. Miguel Varas 315, San José de Maipo",
             "images": [
               {
@@ -1097,7 +1223,10 @@
           "restaurants": [
             {
               "name": "La Calchona",
-              "specialties": ["Lamm aus dem Ofen", "Hausgemachte Sopaipillas"],
+              "specialties": [
+                "Lamm aus dem Ofen",
+                "Hausgemachte Sopaipillas"
+              ],
               "priceRange": "€€",
               "url": "https://www.lacalchona.cl",
               "images": [
@@ -1140,7 +1269,10 @@
           "restaurants": [
             {
               "name": "Refugio del Maipo",
-              "specialties": ["Cazuela", "Kräutertee aus den Anden"],
+              "specialties": [
+                "Cazuela",
+                "Kräutertee aus den Anden"
+              ],
               "priceRange": "€€",
               "url": "https://www.refugiodelmaipo.cl",
               "images": [
@@ -1183,7 +1315,10 @@
           "restaurants": [
             {
               "name": "Café del Observatorio",
-              "specialties": ["Heißer Kakao", "Empanadas de Queso"],
+              "specialties": [
+                "Heißer Kakao",
+                "Empanadas de Queso"
+              ],
               "priceRange": "€",
               "url": "https://www.cielosdemaipo.cl",
               "images": [
@@ -1222,7 +1357,10 @@
         {
           "id": "cabanas-del-maipo",
           "name": "Cabañas del Maipo",
-          "reviewHighlights": ["Private Holz-Hütten", "Feuerstellen unter dem Sternenhimmel"],
+          "reviewHighlights": [
+            "Private Holz-Hütten",
+            "Feuerstellen unter dem Sternenhimmel"
+          ],
           "avgNightlyRateEUR": 130,
           "url": "https://www.cabanasdelmaipo.cl",
           "images": [
@@ -1243,7 +1381,10 @@
         {
           "id": "hotel-cascada",
           "name": "Hotel Boutique La Cascada",
-          "reviewHighlights": ["Infinity-Pool mit Bergsicht", "Lokale Gourmetküche"],
+          "reviewHighlights": [
+            "Infinity-Pool mit Bergsicht",
+            "Lokale Gourmetküche"
+          ],
           "avgNightlyRateEUR": 210,
           "url": "https://www.lacascadamaipo.cl",
           "images": [
@@ -1264,7 +1405,10 @@
         {
           "id": "refugio-lo-valdes",
           "name": "Refugio Lo Valdés",
-          "reviewHighlights": ["Bergsteiger-Community", "Geführte Touren ab Haustür"],
+          "reviewHighlights": [
+            "Bergsteiger-Community",
+            "Geführte Touren ab Haustür"
+          ],
           "avgNightlyRateEUR": 90,
           "url": "https://www.refugiolovaldes.cl",
           "images": [
@@ -1285,7 +1429,10 @@
         {
           "id": "glamping-andino",
           "name": "Glamping Andino",
-          "reviewHighlights": ["Kuppelzelte mit Ofen", "Sternenhimmel inklusive"],
+          "reviewHighlights": [
+            "Kuppelzelte mit Ofen",
+            "Sternenhimmel inklusive"
+          ],
           "avgNightlyRateEUR": 160,
           "url": "https://www.glampingandino.cl",
           "images": [
@@ -1306,7 +1453,10 @@
         {
           "id": "hostal-el-morado",
           "name": "Hostal El Morado",
-          "reviewHighlights": ["Budgetfreundlich", "Gemeinsame Küche für Selbstversorger"],
+          "reviewHighlights": [
+            "Budgetfreundlich",
+            "Gemeinsame Küche für Selbstversorger"
+          ],
           "avgNightlyRateEUR": 55,
           "url": "https://www.hostalelmorado.cl",
           "images": [

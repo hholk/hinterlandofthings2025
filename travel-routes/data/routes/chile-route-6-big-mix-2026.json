@@ -62,8 +62,14 @@
         "geometry": {
           "type": "LineString",
           "coordinates": [
-            [-70.7858, -33.3929],
-            [-68.9036, -22.4989]
+            [
+              -70.7858,
+              -33.3929
+            ],
+            [
+              -68.9036,
+              -22.4989
+            ]
           ]
         }
       },
@@ -73,8 +79,14 @@
         "geometry": {
           "type": "LineString",
           "coordinates": [
-            [-70.7858, -33.3929],
-            [-72.9424, -41.4693]
+            [
+              -70.7858,
+              -33.3929
+            ],
+            [
+              -72.9424,
+              -41.4693
+            ]
           ]
         }
       },
@@ -84,8 +96,14 @@
         "geometry": {
           "type": "LineString",
           "coordinates": [
-            [-70.6693, -33.4489],
-            [-71.6127, -33.0472]
+            [
+              -70.6693,
+              -33.4489
+            ],
+            [
+              -71.6127,
+              -33.0472
+            ]
           ]
         }
       }
@@ -98,13 +116,22 @@
       "station": {
         "name": "San Pedro de Atacama – Wüstenstart",
         "timezone": "America/Santiago",
-        "coordinates": { "lat": -22.9111, "lng": -68.2011 },
+        "coordinates": {
+          "lat": -22.9111,
+          "lng": -68.2011
+        },
         "description": "Tag 2–6 der Reise: volle Atacama-Experience (Geysire, Lagunen, Valle de la Luna).",
         "images": [
           {
             "url": "https://images.unsplash.com/photo-1580674684081-7617fbf3dcd0?w=800&auto=format&fit=crop",
             "caption": "Valle de la Luna",
             "credit": "Tomás Rivas",
+            "license": "Unsplash License"
+          },
+          {
+            "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+            "caption": "Stimmungsbild aus Chile für die Travel Experience",
+            "credit": "Unsplash",
             "license": "Unsplash License"
           }
         ]
@@ -123,13 +150,22 @@
       "station": {
         "name": "Puerto Varas – Seen & Vulkan",
         "timezone": "America/Santiago",
-        "coordinates": { "lat": -41.3170, "lng": -72.9854 },
+        "coordinates": {
+          "lat": -41.317,
+          "lng": -72.9854
+        },
         "description": "Tag 7–12: Seenregion mit Osorno, Petrohué und Frutillar.",
         "images": [
           {
             "url": "https://images.unsplash.com/photo-1526476148966-98bd039463ea?w=800&auto=format&fit=crop",
             "caption": "Promenade von Puerto Varas",
             "credit": "Cristobal Leon",
+            "license": "Unsplash License"
+          },
+          {
+            "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+            "caption": "Stimmungsbild aus Chile für die Travel Experience",
+            "credit": "Unsplash",
             "license": "Unsplash License"
           }
         ]
@@ -148,13 +184,22 @@
       "station": {
         "name": "Valparaíso & Casablanca",
         "timezone": "America/Santiago",
-        "coordinates": { "lat": -33.0472, "lng": -71.6127 },
+        "coordinates": {
+          "lat": -33.0472,
+          "lng": -71.6127
+        },
         "description": "Tag 13–17: Streetart, Pazifik, Wein im Casablanca Valley und Rückkehr nach Santiago.",
         "images": [
           {
             "url": "https://images.unsplash.com/photo-1526402462922-1e1d481d87fd?w=800&auto=format&fit=crop",
             "caption": "Häusermeer in Valparaíso",
             "credit": "Fabiola Peñailillo",
+            "license": "Unsplash License"
+          },
+          {
+            "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+            "caption": "Stimmungsbild aus Chile für die Travel Experience",
+            "credit": "Unsplash",
             "license": "Unsplash License"
           }
         ]

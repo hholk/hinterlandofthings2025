@@ -62,8 +62,14 @@
         "geometry": {
           "type": "LineString",
           "coordinates": [
-            [-70.6693, -33.4489],
-            [-71.6127, -33.0472]
+            [
+              -70.6693,
+              -33.4489
+            ],
+            [
+              -71.6127,
+              -33.0472
+            ]
           ]
         }
       },
@@ -73,8 +79,14 @@
         "geometry": {
           "type": "LineString",
           "coordinates": [
-            [-71.6127, -33.0472],
-            [-71.4070, -33.3200]
+            [
+              -71.6127,
+              -33.0472
+            ],
+            [
+              -71.407,
+              -33.32
+            ]
           ]
         }
       },
@@ -84,8 +96,14 @@
         "geometry": {
           "type": "LineString",
           "coordinates": [
-            [-71.4070, -33.3200],
-            [-71.3650, -34.6380]
+            [
+              -71.407,
+              -33.32
+            ],
+            [
+              -71.365,
+              -34.638
+            ]
           ]
         }
       }
@@ -98,7 +116,10 @@
       "station": {
         "name": "Valparaíso – Bunte Hafenstadt",
         "timezone": "America/Santiago",
-        "coordinates": { "lat": -33.0472, "lng": -71.6127 },
+        "coordinates": {
+          "lat": -33.0472,
+          "lng": -71.6127
+        },
         "description": "UNESCO-Hafen, Streetart, steile Aufzüge und Meerblick.",
         "images": [
           {
@@ -121,11 +142,17 @@
             "mode": "bus",
             "from": {
               "name": "Terminal Alameda (Santiago)",
-              "coordinates": { "lat": -33.4576, "lng": -70.6621 }
+              "coordinates": {
+                "lat": -33.4576,
+                "lng": -70.6621
+              }
             },
             "to": {
               "name": "Terminal Rodoviario Valparaíso",
-              "coordinates": { "lat": -33.0476, "lng": -71.6049 }
+              "coordinates": {
+                "lat": -33.0476,
+                "lng": -71.6049
+              }
             },
             "operator": "TurBus / FlixBus Chile",
             "durationMinutes": 110,
@@ -134,6 +161,12 @@
                 "url": "https://images.unsplash.com/photo-1470123808288-1e59739c26da?w=800&auto=format&fit=crop",
                 "caption": "Fernbus auf der Strecke Santiago–Valparaíso",
                 "credit": "Mauricio Rojas",
+                "license": "Unsplash License"
+              },
+              {
+                "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+                "caption": "Stimmungsbild aus Chile für die Travel Experience",
+                "credit": "Unsplash",
                 "license": "Unsplash License"
               }
             ]
@@ -144,13 +177,22 @@
             "id": "r2-terminal-alameda",
             "type": "bus-terminal",
             "name": "Terminal Alameda",
-            "coordinates": { "lat": -33.4576, "lng": -70.6621 },
+            "coordinates": {
+              "lat": -33.4576,
+              "lng": -70.6621
+            },
             "address": "Av. Libertador Bernardo O'Higgins 3850, Santiago",
             "images": [
               {
                 "url": "https://images.unsplash.com/photo-1528989385568-3ac196525f80?w=800&auto=format&fit=crop",
                 "caption": "Busterminal in Santiago",
                 "credit": "Valentina Díaz",
+                "license": "Unsplash License"
+              },
+              {
+                "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+                "caption": "Stimmungsbild aus Chile für die Travel Experience",
+                "credit": "Unsplash",
                 "license": "Unsplash License"
               }
             ]
@@ -167,7 +209,10 @@
           "restaurants": [
             {
               "name": "Restaurant Fauna",
-              "specialties": ["Brunch", "Cocktails mit Hafenblick"],
+              "specialties": [
+                "Brunch",
+                "Cocktails mit Hafenblick"
+              ],
               "priceRange": "€€€",
               "url": "https://www.hotelfauna.cl",
               "images": [
@@ -175,6 +220,12 @@
                   "url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&auto=format&fit=crop",
                   "caption": "Rooftop-Terrasse über den Dächern von Valparaíso",
                   "credit": "Marcelo Díaz",
+                  "license": "Unsplash License"
+                },
+                {
+                  "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+                  "caption": "Stimmungsbild aus Chile für die Travel Experience",
+                  "credit": "Unsplash",
                   "license": "Unsplash License"
                 }
               ]
@@ -185,6 +236,12 @@
               "url": "https://images.unsplash.com/photo-1516131206008-dd041a9764fd?w=800&auto=format&fit=crop",
               "caption": "Streetart-Fassade am Cerro Alegre",
               "credit": "Marcela Bravo",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+              "caption": "Stimmungsbild aus Chile für die Travel Experience",
+              "credit": "Unsplash",
               "license": "Unsplash License"
             }
           ]
@@ -202,6 +259,12 @@
               "caption": "Boote im Hafen",
               "credit": "Patricio Lagos",
               "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+              "caption": "Stimmungsbild aus Chile für die Travel Experience",
+              "credit": "Unsplash",
+              "license": "Unsplash License"
             }
           ]
         },
@@ -218,6 +281,12 @@
               "caption": "Sonnenuntergang am Pazifikstrand",
               "credit": "Frank McKenna",
               "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+              "caption": "Stimmungsbild aus Chile für die Travel Experience",
+              "credit": "Unsplash",
+              "license": "Unsplash License"
             }
           ]
         }
@@ -226,7 +295,10 @@
         {
           "id": "r2-hotel-fauna",
           "name": "Hotel Fauna",
-          "reviewHighlights": ["Rooftop-Bar", "Top-Lage im Cerro Alegre"],
+          "reviewHighlights": [
+            "Rooftop-Bar",
+            "Top-Lage im Cerro Alegre"
+          ],
           "avgNightlyRateEUR": 140,
           "url": "https://www.hotelfauna.cl",
           "images": [
@@ -235,13 +307,22 @@
               "caption": "Zimmer mit Hafenblick",
               "credit": "Kate Stone",
               "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+              "caption": "Stimmungsbild aus Chile für die Travel Experience",
+              "credit": "Unsplash",
+              "license": "Unsplash License"
             }
           ]
         },
         {
           "id": "r2-winebox",
           "name": "WineBox Valparaíso",
-          "reviewHighlights": ["Container-Hotel", "Sehr instagrammable"],
+          "reviewHighlights": [
+            "Container-Hotel",
+            "Sehr instagrammable"
+          ],
           "avgNightlyRateEUR": 95,
           "url": "https://www.wineboxvalparaiso.com",
           "images": [
@@ -249,6 +330,12 @@
               "url": "https://images.unsplash.com/photo-1505692794403-34cb5cf055b2?w=800&auto=format&fit=crop",
               "caption": "Bunte Container-Zimmer",
               "credit": "Sebastián Araya",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+              "caption": "Stimmungsbild aus Chile für die Travel Experience",
+              "credit": "Unsplash",
               "license": "Unsplash License"
             }
           ]
@@ -266,6 +353,12 @@
               "caption": "Weinberge und Hügel entlang der Route",
               "credit": "Carla Henríquez",
               "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+              "caption": "Stimmungsbild aus Chile für die Travel Experience",
+              "credit": "Unsplash",
+              "license": "Unsplash License"
             }
           ]
         },
@@ -280,6 +373,12 @@
               "caption": "Fernbus am Terminal",
               "credit": "Mauricio Rojas",
               "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+              "caption": "Stimmungsbild aus Chile für die Travel Experience",
+              "credit": "Unsplash",
+              "license": "Unsplash License"
             }
           ]
         }
@@ -291,7 +390,10 @@
       "station": {
         "name": "Casablanca Valley – Weißwein & Pinot",
         "timezone": "America/Santiago",
-        "coordinates": { "lat": -33.3200, "lng": -71.4070 },
+        "coordinates": {
+          "lat": -33.32,
+          "lng": -71.407
+        },
         "description": "Kühles Küstenwein-Klima mit Sauvignon Blanc, Chardonnay und Pinot Noir.",
         "images": [
           {
@@ -314,11 +416,17 @@
             "mode": "car",
             "from": {
               "name": "Valparaíso",
-              "coordinates": { "lat": -33.0472, "lng": -71.6127 }
+              "coordinates": {
+                "lat": -33.0472,
+                "lng": -71.6127
+              }
             },
             "to": {
               "name": "Weingut im Casablanca-Tal",
-              "coordinates": { "lat": -33.3200, "lng": -71.4070 }
+              "coordinates": {
+                "lat": -33.32,
+                "lng": -71.407
+              }
             },
             "distanceKm": 50,
             "durationMinutes": 45,
@@ -327,6 +435,12 @@
                 "url": "https://images.unsplash.com/photo-1493244040629-496f6d136cc3?w=800&auto=format&fit=crop",
                 "caption": "Grüne Hügel zwischen Küste und Tal",
                 "credit": "Carla Henríquez",
+                "license": "Unsplash License"
+              },
+              {
+                "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+                "caption": "Stimmungsbild aus Chile für die Travel Experience",
+                "credit": "Unsplash",
                 "license": "Unsplash License"
               }
             ]
@@ -348,6 +462,12 @@
               "caption": "Weinprobe im Fasskeller",
               "credit": "Daniel Campos",
               "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+              "caption": "Stimmungsbild aus Chile für die Travel Experience",
+              "credit": "Unsplash",
+              "license": "Unsplash License"
             }
           ]
         },
@@ -363,6 +483,12 @@
               "url": "https://images.unsplash.com/photo-1536053296545-9ed19fbafaf6?w=800&auto=format&fit=crop",
               "caption": "Degustationsmenü im Weingut-Restaurant",
               "credit": "María Paz",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+              "caption": "Stimmungsbild aus Chile für die Travel Experience",
+              "credit": "Unsplash",
               "license": "Unsplash License"
             }
           ]
@@ -380,6 +506,12 @@
               "caption": "Radeln zwischen Rebstöcken",
               "credit": "Javiera Larenas",
               "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+              "caption": "Stimmungsbild aus Chile für die Travel Experience",
+              "credit": "Unsplash",
+              "license": "Unsplash License"
             }
           ]
         }
@@ -388,7 +520,10 @@
         {
           "id": "r2-matetic-lodge",
           "name": "La Casona Matetic",
-          "reviewHighlights": ["Kolonialstil", "Ruhig und exklusiv"],
+          "reviewHighlights": [
+            "Kolonialstil",
+            "Ruhig und exklusiv"
+          ],
           "avgNightlyRateEUR": 250,
           "url": "https://matetic.com",
           "images": [
@@ -397,13 +532,22 @@
               "caption": "Landhaus im Tal",
               "credit": "Daniela Muñoz",
               "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+              "caption": "Stimmungsbild aus Chile für die Travel Experience",
+              "credit": "Unsplash",
+              "license": "Unsplash License"
             }
           ]
         },
         {
           "id": "r2-casablanca-bnb",
           "name": "Casablanca B&B",
-          "reviewHighlights": ["Familiäre Atmosphäre", "Perfekt als Übernachtungsstopp"],
+          "reviewHighlights": [
+            "Familiäre Atmosphäre",
+            "Perfekt als Übernachtungsstopp"
+          ],
           "avgNightlyRateEUR": 90,
           "url": "https://example.com/casablanca-bnb",
           "images": [
@@ -411,6 +555,12 @@
               "url": "https://images.unsplash.com/photo-1554995207-c18c203602cb?w=800&auto=format&fit=crop",
               "caption": "Zimmer mit Gartenblick",
               "credit": "Felipe Godoy",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+              "caption": "Stimmungsbild aus Chile für die Travel Experience",
+              "credit": "Unsplash",
               "license": "Unsplash License"
             }
           ]
@@ -428,6 +578,12 @@
               "caption": "Landstraße Richtung Süden",
               "credit": "Carla Henríquez",
               "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+              "caption": "Stimmungsbild aus Chile für die Travel Experience",
+              "credit": "Unsplash",
+              "license": "Unsplash License"
             }
           ]
         }
@@ -439,13 +595,22 @@
       "station": {
         "name": "Colchagua Valley – Rotwein & Estancias",
         "timezone": "America/Santiago",
-        "coordinates": { "lat": -34.6380, "lng": -71.3650 },
+        "coordinates": {
+          "lat": -34.638,
+          "lng": -71.365
+        },
         "description": "Eine der besten Rotwein-Regionen Chiles, mit Weingütern, Museen und Estancias.",
         "images": [
           {
             "url": "https://images.unsplash.com/photo-1516685304081-de7947d419d1?w=800&auto=format&fit=crop",
             "caption": "Weinberge im Colchagua-Tal",
             "credit": "Cristobal Leon",
+            "license": "Unsplash License"
+          },
+          {
+            "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+            "caption": "Stimmungsbild aus Chile für die Travel Experience",
+            "credit": "Unsplash",
             "license": "Unsplash License"
           }
         ]
@@ -456,11 +621,17 @@
             "mode": "car",
             "from": {
               "name": "Casablanca",
-              "coordinates": { "lat": -33.3200, "lng": -71.4070 }
+              "coordinates": {
+                "lat": -33.32,
+                "lng": -71.407
+              }
             },
             "to": {
               "name": "Santa Cruz",
-              "coordinates": { "lat": -34.6380, "lng": -71.3650 }
+              "coordinates": {
+                "lat": -34.638,
+                "lng": -71.365
+              }
             },
             "distanceKm": 220,
             "durationMinutes": 180,
@@ -469,6 +640,12 @@
                 "url": "https://images.unsplash.com/photo-1493244040629-496f6d136cc3?w=800&auto=format&fit=crop",
                 "caption": "Landstraße durch Zentralchile",
                 "credit": "Carla Henríquez",
+                "license": "Unsplash License"
+              },
+              {
+                "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+                "caption": "Stimmungsbild aus Chile für die Travel Experience",
+                "credit": "Unsplash",
                 "license": "Unsplash License"
               }
             ]
@@ -490,6 +667,12 @@
               "caption": "Fasslager eines Weinguts",
               "credit": "Daniel Campos",
               "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+              "caption": "Stimmungsbild aus Chile für die Travel Experience",
+              "credit": "Unsplash",
+              "license": "Unsplash License"
             }
           ]
         },
@@ -506,6 +689,12 @@
               "caption": "Museumshof mit Skulpturen",
               "credit": "Laura Torres",
               "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+              "caption": "Stimmungsbild aus Chile für die Travel Experience",
+              "credit": "Unsplash",
+              "license": "Unsplash License"
             }
           ]
         }
@@ -514,7 +703,10 @@
         {
           "id": "r2-hotel-santa-cruz-plaza",
           "name": "Hotel Santa Cruz Plaza",
-          "reviewHighlights": ["Resort-Charakter", "Zentral am Plaza"],
+          "reviewHighlights": [
+            "Resort-Charakter",
+            "Zentral am Plaza"
+          ],
           "avgNightlyRateEUR": 180,
           "url": "https://www.hotelsantacruzplaza.cl",
           "images": [
@@ -522,6 +714,12 @@
               "url": "https://images.unsplash.com/photo-1505692794403-34cb5cf055b2?w=800&auto=format&fit=crop",
               "caption": "Resort-Pool im Innenhof",
               "credit": "Sebastián Araya",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+              "caption": "Stimmungsbild aus Chile für die Travel Experience",
+              "credit": "Unsplash",
               "license": "Unsplash License"
             }
           ]
@@ -538,6 +736,12 @@
               "url": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&auto=format&fit=crop",
               "caption": "Autobahn zurück Richtung Hauptstadt",
               "credit": "Cristobal Leon",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+              "caption": "Stimmungsbild aus Chile für die Travel Experience",
+              "credit": "Unsplash",
               "license": "Unsplash License"
             }
           ]
