@@ -31,3 +31,15 @@ test('travel routes fullscreen panel is positioned as overlay in fullscreen mode
     'Fullscreen overlay should clamp its height for scrollability'
   );
 });
+
+test('travel routes expose a coarse pointer overlay fallback', () => {
+  assert.ok(
+    travelPage.includes('travel__map--panel-open'),
+    'Map markup should expose the conditional touch overlay class'
+  );
+  assert.match(
+    travelPage,
+    /\.travel__map--panel-open:not\(\.travel__map--fullscreen\)[\s\S]*max-height:\s*min\(55vh, 360px\);/,
+    'Non-fullscreen touch overlay should clamp its height via CSS'
+  );
+});
