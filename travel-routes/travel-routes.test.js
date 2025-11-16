@@ -6,7 +6,9 @@ import assert from 'node:assert/strict';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const jsonPath = join(__dirname, 'travel-routes-data.json');
+const travelPagePath = join(__dirname, '../src/routes/experiences/travel-routes/+page.svelte');
 const data = JSON.parse(readFileSync(jsonPath, 'utf8'));
+const travelPageSource = readFileSync(travelPagePath, 'utf8');
 const rawRoutes = (data.routeIndex ?? []).map((entry) => {
   const routePath = join(__dirname, entry.file);
   return JSON.parse(readFileSync(routePath, 'utf8'));
@@ -23,6 +25,14 @@ const allowedModes = new Set(Object.keys(data.transportModes));
 test('meta information is present', () => {
   assert.ok(data.meta?.title, 'meta title missing');
   assert.ok(Array.isArray(data.routeIndex) && data.routeIndex.length >= 13, 'expected at least 13 routes');
+});
+
+test('travel routes page no longer renders the deprecated map shell', () => {
+  // Für Einsteiger:innen: Ein einfacher String-Test reicht, weil das HTML der Svelte-Datei
+  // serverseitig vorliegt. So schlägt der Test direkt fehl, falls jemand versehentlich wieder
+  // eine Map-Komponente einbindet.
+  assert.ok(!/travel__map-section/.test(travelPageSource), 'map container class should be removed');
+  assert.ok(!/Kartenausschnitt/.test(travelPageSource), 'map headline copy should be removed');
 });
 
 const januaryRouteIds = [
