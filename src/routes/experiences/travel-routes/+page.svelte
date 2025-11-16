@@ -29,7 +29,6 @@
     type StopCollection,
     type StopProperties
   } from '../../../lib/travel/map-data';
-  import { buildRouteSegmentLibrary } from '../../../lib/travel/route-library';
   import { getDefaultSliderIndex } from '../../../lib/travel/timeline-helpers';
 
   type MapLibreModule = typeof import('maplibre-gl');
@@ -163,11 +162,9 @@
     return index;
   }
 
-  const ROUTE_LIBRARY_SOURCE = 'travel-route-library';
-  const ROUTE_LIBRARY_LAYER = 'travel-route-library-layer';
-  const ROUTE_LIBRARY_LAYER_DASHED = 'travel-route-library-layer-dashed';
-  const ROUTE_LIBRARY_ACTIVE_LAYER = 'travel-route-active-layer';
-  const ROUTE_LIBRARY_ACTIVE_LAYER_DASHED = 'travel-route-active-layer-dashed';
+  const ROUTE_SEGMENT_SOURCE = 'travel-route-segments';
+  const ROUTE_SEGMENT_LAYER = 'travel-route-segments-layer';
+  const ROUTE_SEGMENT_LAYER_DASHED = 'travel-route-segments-layer-dashed';
   const ROUTE_STOP_SOURCE = 'travel-route-stops';
   const ROUTE_STOP_LAYER = 'travel-route-stops-layer';
   const ROUTE_STOP_LABEL_LAYER = 'travel-route-stop-label-layer';
@@ -212,11 +209,6 @@
     currency: data.travel.meta.currency ?? 'EUR'
   });
   const coordinateFormatter = new Intl.NumberFormat('de-DE', { maximumFractionDigits: 2 });
-
-  // Für Einsteiger:innen: Statt bei jeder Auswahl die Linien erneut zu zeichnen,
-  // erzeugen wir ein einziges GeoJSON mit allen Routen. Die Karte blendet daraus
-  // die aktive Route hervor – so bleiben Layer-Updates stabil.
-  const routeSegmentLibrary = buildRouteSegmentLibrary(data.travel);
 
   // Für Einsteiger:innen: MapLibre möchte eine Liste konkreter Tile-URLs.
   // Unser Datensatz nutzt teilweise das Platzhalter-Format "https://{s}.tile...",
@@ -425,74 +417,64 @@
     }
   }
 
-  function setupSources(stops: StopCollection = EMPTY_STOPS) {
+  function setupSources(
+    segments: SegmentCollection = EMPTY_SEGMENTS,
+    stops: StopCollection = EMPTY_STOPS
+  ) {
     if (!mapInstance) return;
-
-    if (!mapInstance.getSource(ROUTE_LIBRARY_SOURCE)) {
-      mapInstance.addSource(ROUTE_LIBRARY_SOURCE, {
+    if (!mapInstance.getSource(ROUTE_SEGMENT_SOURCE)) {
+      mapInstance.addSource(ROUTE_SEGMENT_SOURCE, {
         type: 'geojson',
-        data: routeSegmentLibrary
+        data: segments
       });
+    }
+
+    if (!mapInstance.getLayer(ROUTE_SEGMENT_LAYER)) {
       mapInstance.addLayer({
-        id: ROUTE_LIBRARY_LAYER,
+        id: ROUTE_SEGMENT_LAYER,
         type: 'line',
-        source: ROUTE_LIBRARY_SOURCE,
+        source: ROUTE_SEGMENT_SOURCE,
         filter: ['!', ['has', 'dashArray']],
         layout: {
           'line-cap': 'round',
           'line-join': 'round'
         },
         paint: {
-          'line-color': '#475569',
-          'line-width': 2.2,
-          'line-opacity': 0.28
+          'line-color': ['coalesce', ['get', 'color'], '#2563eb'],
+          'line-width': [
+            'case',
+            ['==', ['get', 'mode'], 'flight'],
+            3.2,
+            4.2
+          ],
+          'line-opacity': 0.9
         }
       });
+    }
+
+    if (!mapInstance.getLayer(ROUTE_SEGMENT_LAYER_DASHED)) {
       mapInstance.addLayer({
-        id: ROUTE_LIBRARY_LAYER_DASHED,
+        id: ROUTE_SEGMENT_LAYER_DASHED,
         type: 'line',
-        source: ROUTE_LIBRARY_SOURCE,
+        source: ROUTE_SEGMENT_SOURCE,
         filter: ['has', 'dashArray'],
         layout: {
           'line-cap': 'round',
           'line-join': 'round'
         },
         paint: {
-          'line-color': '#475569',
-          'line-width': 2.2,
-          'line-opacity': 0.28,
-          'line-dasharray': ['coalesce', ['get', 'dashArray'], ['literal', [4, 3]]]
-        }
-      });
-      mapInstance.addLayer({
-        id: ROUTE_LIBRARY_ACTIVE_LAYER,
-        type: 'line',
-        source: ROUTE_LIBRARY_SOURCE,
-        filter: ['all', ['!', ['has', 'dashArray']], ['==', ['get', 'routeId'], selectedRouteId]],
-        layout: {
-          'line-cap': 'round',
-          'line-join': 'round'
-        },
-        paint: {
           'line-color': ['coalesce', ['get', 'color'], '#2563eb'],
-          'line-width': 4.5,
-          'line-opacity': createOpacityExpression(sliderValue)
-        }
-      });
-      mapInstance.addLayer({
-        id: ROUTE_LIBRARY_ACTIVE_LAYER_DASHED,
-        type: 'line',
-        source: ROUTE_LIBRARY_SOURCE,
-        filter: ['all', ['has', 'dashArray'], ['==', ['get', 'routeId'], selectedRouteId]],
-        layout: {
-          'line-cap': 'round',
-          'line-join': 'round'
-        },
-        paint: {
-          'line-color': ['coalesce', ['get', 'color'], '#2563eb'],
-          'line-width': 4.5,
-          'line-opacity': createOpacityExpression(sliderValue),
-          'line-dasharray': ['get', 'dashArray']
+          'line-width': [
+            'case',
+            ['==', ['get', 'mode'], 'flight'],
+            3.2,
+            4.2
+          ],
+          // Für Einsteiger:innen: MapLibre erlaubt für `line-dasharray` nur
+          // numerische Listen. Wir geben die Werte direkt weiter, damit
+          // unterschiedliche Verkehrsmittel ihr Muster zeigen können.
+          'line-dasharray': ['get', 'dashArray'],
+          'line-opacity': 0.9
         }
       });
     }
@@ -533,37 +515,22 @@
     }
   }
 
-  function updateActiveRouteLayers(routeId: string) {
+  function updateMapData(
+    segments: SegmentCollection,
+    stops: StopCollection,
+    coordinates: LngLatTuple[]
+  ) {
     if (!mapInstance) return;
-
-    const targetId = routeId || selectedRouteId;
-    if (mapInstance.getLayer(ROUTE_LIBRARY_ACTIVE_LAYER)) {
-      mapInstance.setFilter(ROUTE_LIBRARY_ACTIVE_LAYER, [
-        'all',
-        ['!', ['has', 'dashArray']],
-        ['==', ['get', 'routeId'], targetId]
-      ]);
-    }
-    if (mapInstance.getLayer(ROUTE_LIBRARY_ACTIVE_LAYER_DASHED)) {
-      mapInstance.setFilter(ROUTE_LIBRARY_ACTIVE_LAYER_DASHED, [
-        'all',
-        ['has', 'dashArray'],
-        ['==', ['get', 'routeId'], targetId]
-      ]);
-    }
-  }
-
-  function updateMapData(stops: StopCollection, coordinates: LngLatTuple[], routeId = selectedRouteId) {
-    if (!mapInstance) return;
+    const segmentSource = mapInstance.getSource(ROUTE_SEGMENT_SOURCE) as GeoJSONSource | undefined;
     const stopSource = mapInstance.getSource(ROUTE_STOP_SOURCE) as GeoJSONSource | undefined;
 
-    if (!stopSource) {
-      setupSources(stops);
-      return updateMapData(stops, coordinates, routeId);
+    if (!segmentSource || !stopSource) {
+      setupSources(segments, stops);
+      return updateMapData(segments, stops, coordinates);
     }
 
+    segmentSource.setData(segments);
     stopSource.setData(stops);
-    updateActiveRouteLayers(routeId);
     ensureMapBounds(coordinates);
     updateMapVisibility(sliderValue);
   }
@@ -578,40 +545,23 @@
 
   function updateMapVisibility(threshold: number) {
     if (!mapInstance) return;
+    if (!mapInstance.getLayer(ROUTE_SEGMENT_LAYER)) return;
 
-    if (mapInstance.getLayer(ROUTE_LIBRARY_ACTIVE_LAYER)) {
+    mapInstance.setPaintProperty(ROUTE_SEGMENT_LAYER, 'line-opacity', createOpacityExpression(threshold));
+    if (mapInstance.getLayer(ROUTE_SEGMENT_LAYER_DASHED)) {
       mapInstance.setPaintProperty(
-        ROUTE_LIBRARY_ACTIVE_LAYER,
+        ROUTE_SEGMENT_LAYER_DASHED,
         'line-opacity',
         createOpacityExpression(threshold)
       );
     }
-    if (mapInstance.getLayer(ROUTE_LIBRARY_ACTIVE_LAYER_DASHED)) {
-      mapInstance.setPaintProperty(
-        ROUTE_LIBRARY_ACTIVE_LAYER_DASHED,
-        'line-opacity',
-        createOpacityExpression(threshold)
-      );
-    }
-    if (mapInstance.getLayer(ROUTE_STOP_LAYER)) {
-      mapInstance.setPaintProperty(
-        ROUTE_STOP_LAYER,
-        'circle-opacity',
-        createStopOpacityExpression(threshold)
-      );
-      mapInstance.setPaintProperty(
-        ROUTE_STOP_LAYER,
-        'circle-stroke-opacity',
-        createStopOpacityExpression(threshold)
-      );
-    }
-    if (mapInstance.getLayer(ROUTE_STOP_LABEL_LAYER)) {
-      mapInstance.setPaintProperty(
-        ROUTE_STOP_LABEL_LAYER,
-        'text-opacity',
-        ['case', ['<=', ['get', 'order'], threshold], 0.94, 0]
-      );
-    }
+    mapInstance.setPaintProperty(ROUTE_STOP_LAYER, 'circle-opacity', createStopOpacityExpression(threshold));
+    mapInstance.setPaintProperty(ROUTE_STOP_LAYER, 'circle-stroke-opacity', createStopOpacityExpression(threshold));
+    mapInstance.setPaintProperty(
+      ROUTE_STOP_LABEL_LAYER,
+      'text-opacity',
+      ['case', ['<=', ['get', 'order'], threshold], 0.94, 0]
+    );
   }
 
   function formatMapCenter(center: [number, number] | undefined | null) {
@@ -767,9 +717,9 @@
           if (cancelled) return;
           // Für Einsteiger:innen: Die Map braucht sofort gültige GeoJSON-Daten,
           // sonst schlägt `addSource` fehl und die Karte bleibt leer.
-          setupSources(stopCollection);
+          setupSources(segmentCollection, stopCollection);
           mapLoaded = true;
-          updateMapData(stopCollection, allCoordinates);
+          updateMapData(segmentCollection, stopCollection, allCoordinates);
         });
 
         map.on('click', ROUTE_STOP_LAYER, handleStopClick);
@@ -945,7 +895,7 @@
     sliderValue = sliderMax;
   }
   $: if (mapLoaded) {
-    updateMapData(stopCollection, allCoordinates, selectedRouteId);
+    updateMapData(segmentCollection, stopCollection, allCoordinates);
   }
   $: if (mapLoaded) {
     updateMapVisibility(sliderValue);
