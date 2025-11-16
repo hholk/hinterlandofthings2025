@@ -276,6 +276,49 @@ test('custom route loader returns array even without localStorage', async () => 
   assert.ok(Array.isArray(routes));
 });
 
+test('default route selection prefers curated options and respects filters', async () => {
+  const module = await import('./travel-routes.js');
+  const { getDefaultRouteSelection } = module;
+
+  const curatedRoutes = [
+    { id: 'curated-1', source: 'curated' },
+    { id: 'curated-2', source: 'curated' },
+  ];
+  const customRoutes = [{ id: 'custom-1', source: 'custom' }];
+
+  const curatedPick = getDefaultRouteSelection({
+    curatedRoutes,
+    customRoutes,
+    filter: 'curated',
+    selectedRouteId: null,
+  });
+  assert.deepEqual(curatedPick, { id: 'curated-1', source: 'curated' });
+
+  const customPick = getDefaultRouteSelection({
+    curatedRoutes,
+    customRoutes,
+    filter: 'custom',
+    selectedRouteId: null,
+  });
+  assert.deepEqual(customPick, { id: 'custom-1', source: 'custom' });
+
+  const fallbackPick = getDefaultRouteSelection({
+    curatedRoutes: [],
+    customRoutes,
+    filter: 'curated',
+    selectedRouteId: null,
+  });
+  assert.deepEqual(fallbackPick, { id: 'custom-1', source: 'custom' });
+
+  const alreadySelected = getDefaultRouteSelection({
+    curatedRoutes,
+    customRoutes,
+    filter: 'curated',
+    selectedRouteId: 'curated-1',
+  });
+  assert.equal(alreadySelected, null);
+});
+
 test('copyActivityToRoute clones activities without duplicates', async () => {
   const module = await import('./travel-routes.js');
   const { state, copyActivityToRoute } = module;

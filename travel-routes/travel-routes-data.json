@@ -1191,7 +1191,7 @@
       "id": "chile-route-1-atacama-salare-2026",
       "file": "data/routes/chile-route-1-atacama-salare-2026.json",
       "name": "Route 1 – Atacama, Salare & Sterne",
-      "summary": "Fokus Norden vom 04. bis 20.01.2026: Santiago Warm-up, Flug nach Calama und Basecamp San Pedro de Atacama für Lagunen, Salare und Astro-Nächte.",
+      "summary": "Fokus Norden vom 04. bis 20. Januar 2026: Santiago Warm-up, Flug nach Calama und Basecamp San Pedro de Atacama für Lagunen, Salare und Astro-Nächte.",
       "color": "#f97316",
       "tags": [
         "nature",
@@ -1231,7 +1231,7 @@
       },
       "searchTokens": [
         "Route 1 – Atacama, Salare & Sterne",
-        "Fokus Norden vom 04. bis 20.01.2026: Santiago Warm-up, Flug nach Calama und Basecamp San Pedro de Atacama für Lagunen, Salare und Astro-Nächte.",
+        "Fokus Norden vom 04. bis 20. Januar 2026: Santiago Warm-up, Flug nach Calama und Basecamp San Pedro de Atacama für Lagunen, Salare und Astro-Nächte.",
         "Santiago de Chile",
         "Calama",
         "San Pedro de Atacama",
@@ -1259,7 +1259,7 @@
       "id": "chile-route-2-pazifik-wein-2026",
       "file": "data/routes/chile-route-2-pazifik-wein-2026.json",
       "name": "Route 2 – Pazifik & Wein (Valparaíso, Casablanca, Colchagua)",
-      "summary": "Zentralchile vom 04. bis 20.01.2026 entspannt erkunden: Streetart in Valparaíso, Sauvignon Blanc im Casablanca Valley und Rotwein im Colchagua-Tal.",
+      "summary": "Zentralchile vom 04. bis 20. Januar 2026 entspannt erkunden: Streetart in Valparaíso, Sauvignon Blanc im Casablanca Valley und Rotwein im Colchagua-Tal.",
       "color": "#0ea5e9",
       "tags": [
         "culture",
@@ -1299,7 +1299,7 @@
       },
       "searchTokens": [
         "Route 2 – Pazifik & Wein",
-        "Zentralchile vom 04. bis 20.01.2026 entspannt erkunden: Streetart in Valparaíso, Sauvignon Blanc im Casablanca Valley und Rotwein im Colchagua-Tal.",
+        "Zentralchile vom 04. bis 20. Januar 2026 entspannt erkunden: Streetart in Valparaíso, Sauvignon Blanc im Casablanca Valley und Rotwein im Colchagua-Tal.",
         "Valparaíso",
         "Viña del Mar",
         "Casablanca Valley",
@@ -1327,7 +1327,7 @@
       "id": "chile-route-3-lakes-volcanoes-2026",
       "file": "data/routes/chile-route-3-lakes-volcanoes-2026.json",
       "name": "Route 3 – Seen & Vulkane (Llanquihue & Chiloé)",
-      "summary": "Santiago → Puerto Montt → Puerto Varas → Chiloé vom 04. bis 20.01.2026 mit Fokus auf Natur, Holzarchitektur und kühles Sommerklima.",
+      "summary": "Santiago → Puerto Montt → Puerto Varas → Chiloé vom 04. bis 20. Januar 2026 mit Fokus auf Natur, Holzarchitektur und kühles Sommerklima.",
       "color": "#38bdf8",
       "tags": [
         "nature",
@@ -1366,7 +1366,7 @@
       },
       "searchTokens": [
         "Route 3 – Seen & Vulkane",
-        "Santiago → Puerto Montt → Puerto Varas → Chiloé vom 04. bis 20.01.2026 mit Fokus auf Natur, Holzarchitektur und kühles Sommerklima.",
+        "Santiago → Puerto Montt → Puerto Varas → Chiloé vom 04. bis 20. Januar 2026 mit Fokus auf Natur, Holzarchitektur und kühles Sommerklima.",
         "Puerto Montt",
         "Puerto Varas",
         "Vulkan Osorno",
@@ -1393,7 +1393,7 @@
       "id": "chile-route-4-patagonia-sur-2026",
       "file": "data/routes/chile-route-4-patagonia-sur-2026.json",
       "name": "Route 4 – Patagonia Sur & Torres del Paine",
-      "summary": "Südroute zwischen 04. und 20.01.2026: Punta Arenas, Puerto Natales und Trekking im Torres-del-Paine-Nationalpark.",
+      "summary": "Südroute zwischen 04. und 20. Januar 2026: Punta Arenas, Puerto Natales und Trekking im Torres-del-Paine-Nationalpark.",
       "color": "#0f766e",
       "tags": [
         "adventure",
@@ -1432,7 +1432,7 @@
       },
       "searchTokens": [
         "Route 4 – Patagonia Sur",
-        "Südroute zwischen 04. und 20.01.2026: Punta Arenas, Puerto Natales und Trekking im Torres-del-Paine-Nationalpark.",
+        "Südroute zwischen 04. und 20. Januar 2026: Punta Arenas, Puerto Natales und Trekking im Torres-del-Paine-Nationalpark.",
         "Punta Arenas",
         "Puerto Natales",
         "Torres del Paine",
@@ -1458,7 +1458,7 @@
       "id": "chile-route-5-carretera-austral-light-2026",
       "file": "data/routes/chile-route-5-carretera-austral-light-2026.json",
       "name": "Route 5 – Carretera Austral Light (Coyhaique & Queulat)",
-      "summary": "Santiago → Balmaceda/Coyhaique → Queulat-Nationalpark vom 04. bis 20.01.2026 – kompakte Carretera-Austral-Variante mit Fjorden und Regenwald.",
+      "summary": "Santiago → Balmaceda/Coyhaique → Queulat-Nationalpark vom 04. bis 20. Januar 2026 – kompakte Carretera-Austral-Variante mit Fjorden und Regenwald.",
       "color": "#10b981",
       "tags": [
         "adventure",
@@ -1497,7 +1497,7 @@
       },
       "searchTokens": [
         "Route 5 – Carretera Austral Light",
-        "Santiago → Balmaceda/Coyhaique → Queulat-Nationalpark vom 04. bis 20.01.2026 – kompakte Carretera-Austral-Variante mit Fjorden und Regenwald.",
+        "Santiago → Balmaceda/Coyhaique → Queulat-Nationalpark vom 04. bis 20. Januar 2026 – kompakte Carretera-Austral-Variante mit Fjorden und Regenwald.",
         "Coyhaique",
         "Balmaceda",
         "Carretera Austral",
@@ -1522,7 +1522,7 @@
       "id": "chile-route-6-big-mix-2026",
       "file": "data/routes/chile-route-6-big-mix-2026.json",
       "name": "Route 6 – Big Mix (Atacama + Seen + Küste)",
-      "summary": "Greatest Hits vom 04. bis 20.01.2026: Atacama-Salare, Seenregion um Puerto Varas und Valparaíso & Casablanca als Finale.",
+      "summary": "Greatest Hits vom 04. bis 20. Januar 2026: Atacama-Salare, Seenregion um Puerto Varas und Valparaíso & Casablanca als Finale.",
       "color": "#f59e0b",
       "tags": [
         "flight",
@@ -1562,7 +1562,7 @@
       },
       "searchTokens": [
         "Route 6 – Big Mix",
-        "Greatest Hits vom 04. bis 20.01.2026: Atacama-Salare, Seenregion um Puerto Varas und Valparaíso & Casablanca als Finale.",
+        "Greatest Hits vom 04. bis 20. Januar 2026: Atacama-Salare, Seenregion um Puerto Varas und Valparaíso & Casablanca als Finale.",
         "San Pedro de Atacama",
         "Puerto Varas",
         "Valparaíso",
