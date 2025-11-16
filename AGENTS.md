@@ -53,12 +53,11 @@
 - Die abgefragten Werte intern merken und konsequent in allen Konfigurationen (Base-Path, Actions-Workflow, `CNAME` etc.) nutzen.
 - Die Antworten der Nutzer:innen bestimmen die Konfiguration des Deployments.
 
-## MapLibre-Referenzseite für die Chile-Reiseplanung
-- Die statische Referenz lebt in `travel-routes/chile-map.html` und zieht ihre Logik aus `travel-routes/chile-map.js`. Die Seite
-  ist ohne Build-Tooling lauffähig, nutzt MapLibre per CDN und lädt die Daten über `travel-routes/travel-routes-data.json`.
-- Die Funktionen `initMap`, `addGeoJsonSource`, `addRouteLayer`, `addPoiLayer` und `fitMapToData` sind dort bewusst modular
-  implementiert, damit weitere Features sie leicht übernehmen können.
-- Anpassungen am GeoJSON-Aufbau oder der MapLibre-Konfiguration müssen von Tests begleitet werden (`travel-routes/chile-map.test.js` via `node --test travel-routes/chile-map.test.js`).
-- Die Svelte-basierte Experience setzt den Karten-Slider nun immer automatisch ans Ende jeder Route. Die Logik steckt in
-  `src/lib/travel/timeline-helpers.ts` und ist mit `timeline-helpers.test.ts` abgesichert – bei Anpassungen unbedingt die Tests
-  anpassen und ausführen (`npm test`).
+## Karten-Datenbestand
+- Die MapLibre-Demos (`travel-routes/chile-map.*`) und der Svelte-Kartenslider wurden entfernt. Die Experience zeigt ausschließlich
+  Route-Auswahl und Textbausteine.
+- `travel-routes/travel-routes-data.json` und die einzelnen Routen-Dateien enthalten weiterhin sämtliche GeoJSON-, Stop- und
+  Map-Fokus-Daten. `travel-routes/travel-routes.test.js` (per `node --test`) prüft diesen Datenbestand.
+- In `src/routes/experiences/travel-routes/+page.svelte` dürfen keine MapLibre- oder Slider-Module mehr eingebunden werden.
+  Neue Features sollen den bestehenden Textaufbau nutzen und – falls nötig – eigene Visualisierungen außerhalb dieser Seite
+  implementieren.
