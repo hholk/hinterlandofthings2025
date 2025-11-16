@@ -19,6 +19,29 @@
       "Roadtrip nach Queulat",
       "Ventisquero Colgante"
     ],
+    "highlightImages": [
+      {
+        "title": "Coyhaique Aussichtspunkte",
+        "image": "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=900&auto=format&fit=crop",
+        "caption": "Blick auf Coyhaique und die umliegenden Täler der Aysén-Region.",
+        "source": "Unsplash",
+        "license": "Unsplash License"
+      },
+      {
+        "title": "Roadtrip nach Queulat",
+        "image": "https://lp-cms-production.imgix.net/2023-02/chile-queulat-road.jpg?auto=format&fit=crop&w=900&q=80",
+        "caption": "Dichte Regenwälder und Fjorde entlang der Carretera Austral Richtung Queulat.",
+        "source": "Lonely Planet / Shutterstock",
+        "license": "Editorial use"
+      },
+      {
+        "title": "Ventisquero Colgante",
+        "image": "https://images.unsplash.com/photo-1526392060635-9d6019884377?w=900&auto=format&fit=crop",
+        "caption": "Der hängende Gletscher des Queulat-Nationalparks mit Wasserfall.",
+        "source": "Unsplash",
+        "license": "Unsplash License"
+      }
+    ],
     "scores": {
       "adventure": 4,
       "relax": 3,
@@ -290,5 +313,6 @@
         }
       }
     }
-  ]
+  ],
+  "source": "curated"
 }

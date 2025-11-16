@@ -20,6 +20,29 @@
       "Lagunas Miscanti & Miñiques",
       "Astro-Tour unter dem dunkelsten Himmel"
     ],
+    "highlightImages": [
+      {
+        "title": "Valle de la Luna Sunset",
+        "image": "https://images.unsplash.com/photo-1582719478151-2f6e0c0c8f0a?w=900&auto=format&fit=crop",
+        "caption": "Goldenes Licht über den Dünen und Felsformationen des Valle de la Luna.",
+        "source": "Unsplash",
+        "license": "Unsplash License"
+      },
+      {
+        "title": "Lagunas Miscanti & Miñiques",
+        "image": "https://lp-cms-production.imgix.net/2021-12/shutterstockRF_1215639942.jpg?auto=format&fit=crop&w=900&q=80",
+        "caption": "Türkisfarbene Hochlandlagunen mit Vicuñas vor den Andengipfeln.",
+        "source": "Lonely Planet / Shutterstock",
+        "license": "Editorial use"
+      },
+      {
+        "title": "Astro-Tour unter dem dunkelsten Himmel",
+        "image": "https://images.unsplash.com/photo-1470229538611-16ba8c7ffbd7?w=900&auto=format&fit=crop",
+        "caption": "Sternenbeobachtung bei absolut klarer Atacama-Luft.",
+        "source": "Unsplash",
+        "license": "Unsplash License"
+      }
+    ],
     "scores": {
       "adventure": 5,
       "relax": 3,
@@ -743,5 +766,6 @@
         }
       }
     }
-  ]
+  ],
+  "source": "curated"
 }

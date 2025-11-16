@@ -19,6 +19,29 @@
       "Puerto Natales Fjordspaziergang",
       "Base de las Torres Trek"
     ],
+    "highlightImages": [
+      {
+        "title": "Magellan-Sund & Pinguine",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/9/92/Spheniscus_magellanicus_-Magellanic_Penguin_on_Martillo_Island.jpg",
+        "caption": "Magellan-Pinguine auf den Inseln vor Punta Arenas.",
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 3.0"
+      },
+      {
+        "title": "Puerto Natales Fjordspaziergang",
+        "image": "https://images.unsplash.com/photo-1543877087-ebf71f017192?w=900&auto=format&fit=crop",
+        "caption": "Stege und Andenpanorama am Última Esperanza Fjord.",
+        "source": "Unsplash",
+        "license": "Unsplash License"
+      },
+      {
+        "title": "Base de las Torres Trek",
+        "image": "https://images.unsplash.com/photo-1544989164-31dc3c645987?w=900&auto=format&fit=crop",
+        "caption": "Blick auf die ikonischen Granittürme im Nationalpark.",
+        "source": "Unsplash",
+        "license": "Unsplash License"
+      }
+    ],
     "scores": {
       "adventure": 5,
       "relax": 2,
@@ -338,5 +361,6 @@
         }
       }
     }
-  ]
+  ],
+  "source": "curated"
 }
