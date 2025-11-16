@@ -49,6 +49,12 @@
     type OverlayProjector
   } from '../../../lib/travel/overlay-projection';
 
+  declare global {
+    interface Window {
+      debugTravelOpenStop?: (stopId?: string) => void;
+    }
+  }
+
   type MapLibreModule = MapLibreNamespace & { workerClass?: typeof Worker };
   type MapLibreMap = import('maplibre-gl').Map;
   type MapLayerMouseEvent = import('maplibre-gl').MapLayerMouseEvent;
@@ -211,7 +217,9 @@
   let overlayContext: CanvasRenderingContext2D | null = null;
   let overlayCleanup: (() => void) | null = null;
   let stopDataIndex: StopDataIndex = createEmptyStopDataIndex();
-  let fullscreenStopDetail: StopProperties | null = null;
+  let stopDetailPanel: StopProperties | null = null;
+  let prefersDetailPanel = false;
+  let pointerPreferenceCleanup: (() => void) | null = null;
 
   let mapContainer: HTMLDivElement | null = null;
   let mapInstance: MapLibreMap | null = null;
@@ -223,6 +231,8 @@
   let activePopup: Popup | null = null;
   let isMapFullscreen = false;
   let isLegendVisible = true;
+  let showStopDetailPanel = false;
+  let isTouchOverlayActive = false;
 
   const hasDocument = typeof document !== 'undefined';
 
@@ -233,6 +243,20 @@
     currency: data.travel.meta.currency ?? 'EUR'
   });
   const coordinateFormatter = new Intl.NumberFormat('de-DE', { maximumFractionDigits: 2 });
+
+  if (typeof window !== 'undefined' && import.meta.env.DEV) {
+    // Für Einsteiger:innen: Der Debug-Helfer erlaubt es, auf Touch-Geräten oder in Tests
+    // gezielt einen Stopp zu öffnen, ohne auf MapLibre warten zu müssen.
+    window.debugTravelOpenStop = (stopId?: string) => {
+      const stops = stopCollection?.features ?? [];
+      const target = stopId
+        ? stops.find((feature) => (feature.properties as StopProperties | undefined)?.id === stopId)
+        : stops[0];
+      if (target?.properties) {
+        stopDetailPanel = target.properties as StopProperties;
+      }
+    };
+  }
 
   // Für Einsteiger:innen: MapLibre möchte eine Liste konkreter Tile-URLs.
   // Unser Datensatz nutzt teilweise das Platzhalter-Format "https://{s}.tile...",
@@ -288,9 +312,9 @@
     void toggleMapFullscreen();
   }
 
-  function closeFullscreenStopDetail() {
-    // Für Einsteiger:innen: Damit Fullscreen auch auf Touch-Geräten funktioniert,
-    // schließen wir Popup & Panel gemeinsam – so bleibt der Zustand konsistent.
+  function closeStopDetailPanel() {
+    // Für Einsteiger:innen: Touch-Geräte nutzen das gleiche Panel wie der Vollbildmodus,
+    // daher schließen wir Popup & Panel weiterhin gemeinsam.
     removeMapPopup();
   }
 
@@ -398,7 +422,7 @@
       activePopup.remove();
       activePopup = null;
     }
-    fullscreenStopDetail = null;
+    stopDetailPanel = null;
   }
 
   function setupSources(
@@ -815,7 +839,15 @@
     const properties = feature.properties as StopProperties | undefined;
     if (!properties) return;
 
+    const shouldUsePanel = isMapFullscreen || prefersDetailPanel;
     removeMapPopup();
+
+    if (shouldUsePanel) {
+      // Für Einsteiger:innen: Touch-Geräte bekommen dasselbe Panel wie der Vollbildmodus,
+      // damit keine MapLibre-Popups angeklickt werden müssen.
+      stopDetailPanel = properties;
+      return;
+    }
 
     activePopup = new maplibre.Popup({
       closeButton: false,
@@ -827,10 +859,6 @@
       .setLngLat(coordinates)
       .setHTML(renderStopPopupContent(properties))
       .addTo(mapInstance);
-
-    if (isMapFullscreen) {
-      fullscreenStopDetail = properties;
-    }
   }
 
   async function ensureMapLibre(): Promise<MapLibreModule | null> {
@@ -856,6 +884,23 @@
     renderOverlay(segmentCollection, stopCollection, mapVisibilityThreshold);
 
     let cancelled = false;
+
+    const applyPointerPreference = (matches: boolean) => {
+      prefersDetailPanel = matches;
+      if (!matches && !isMapFullscreen) {
+        stopDetailPanel = null;
+      }
+    };
+
+    if (typeof window !== 'undefined' && typeof window.matchMedia === 'function') {
+      const pointerQuery = window.matchMedia('(pointer: coarse)');
+      applyPointerPreference(pointerQuery.matches);
+      const handlePointerChange = (event: MediaQueryListEvent) => applyPointerPreference(event.matches);
+      pointerQuery.addEventListener('change', handlePointerChange);
+      pointerPreferenceCleanup = () => {
+        pointerQuery.removeEventListener('change', handlePointerChange);
+      };
+    }
 
     if (typeof window !== 'undefined') {
       const handleWindowResize = () => {
@@ -943,6 +988,8 @@
       cancelled = true;
       fallbackResizeCleanup?.();
       fallbackResizeCleanup = null;
+      pointerPreferenceCleanup?.();
+      pointerPreferenceCleanup = null;
       resizeCleanup?.();
       resizeCleanup = null;
       overlayCleanup?.();
@@ -1084,8 +1131,10 @@
   $: if (sliderValue > sliderMax) {
     sliderValue = sliderMax;
   }
-  $: if (!isMapFullscreen) {
-    fullscreenStopDetail = null;
+  $: showStopDetailPanel = Boolean(stopDetailPanel) && (isMapFullscreen || prefersDetailPanel);
+  $: isTouchOverlayActive = Boolean(stopDetailPanel) && prefersDetailPanel && !isMapFullscreen;
+  $: if (!isMapFullscreen && !prefersDetailPanel) {
+    stopDetailPanel = null;
   }
   $: mapVisibilityThreshold = resolveMapVisibilityThreshold(sliderSteps.length, sliderValue);
   $: if (mapLoaded) {
@@ -1126,7 +1175,12 @@
       <div class="travel__map-backdrop" role="presentation" aria-hidden="true" on:click={closeMapFullscreen}></div>
     {/if}
     <div class="travel__map-shell">
-      <div class={`travel__map${isMapFullscreen ? ' travel__map--fullscreen' : ''}`} aria-live="polite">
+      <div
+        class={`travel__map${isMapFullscreen ? ' travel__map--fullscreen' : ''}${
+          isTouchOverlayActive ? ' travel__map--panel-open' : ''
+        }`}
+        aria-live="polite"
+      >
         <div class="travel__map-controls" role="toolbar" aria-label="Karteneinstellungen">
           <button
             type="button"
@@ -1215,28 +1269,27 @@
             </div>
           </div>
         {/if}
-        {#if isMapFullscreen && fullscreenStopDetail}
-          <!-- Für Einsteiger:innen: Im Vollbild verzichten wir auf MapLibre-Popups
-               und zeigen die Infos als Panel, damit Touch-Geräte zuverlässig
-               lesen können. -->
+        {#if showStopDetailPanel && stopDetailPanel}
+          <!-- Für Einsteiger:innen: Im Vollbild und auf Touch-Geräten verzichten wir auf MapLibre-Popups
+               und zeigen die Infos als Panel, damit Taps zuverlässig Details öffnen. -->
           <article
             class="travel__map-fullscreen-panel"
             role="dialog"
             aria-live="polite"
             aria-modal="true"
-            aria-label={`Details zu ${fullscreenStopDetail.title ?? fullscreenStopDetail.name ?? 'Highlight'}`}
+            aria-label={`Details zu ${stopDetailPanel.title ?? stopDetailPanel.name ?? 'Highlight'}`}
           >
             <div class="travel__map-fullscreen-panel__header">
               <div>
-                {#if resolveStopMeta(fullscreenStopDetail)}
-                  <p class="travel__map-fullscreen-panel__eyebrow">{resolveStopMeta(fullscreenStopDetail)}</p>
+                {#if resolveStopMeta(stopDetailPanel)}
+                  <p class="travel__map-fullscreen-panel__eyebrow">{resolveStopMeta(stopDetailPanel)}</p>
                 {/if}
-                <h3>{fullscreenStopDetail.title ?? fullscreenStopDetail.name ?? 'Highlight'}</h3>
+                <h3>{stopDetailPanel.title ?? stopDetailPanel.name ?? 'Highlight'}</h3>
               </div>
               <button
                 type="button"
                 class="travel__map-fullscreen-panel__close"
-                on:click={closeFullscreenStopDetail}
+                on:click={closeStopDetailPanel}
               >
                 <span class="travel__sr-only">Detail schließen</span>
                 <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -1244,25 +1297,25 @@
                 </svg>
               </button>
             </div>
-            {#if fullscreenStopDetail.photoUrl}
+            {#if stopDetailPanel.photoUrl}
               <figure class="travel__map-fullscreen-panel__media">
                 <img
-                  src={fullscreenStopDetail.photoUrl}
-                  alt={fullscreenStopDetail.photoCaption ?? fullscreenStopDetail.title ?? fullscreenStopDetail.name ?? 'POI Bild'}
+                  src={stopDetailPanel.photoUrl}
+                  alt={stopDetailPanel.photoCaption ?? stopDetailPanel.title ?? stopDetailPanel.name ?? 'POI Bild'}
                   loading="lazy"
                   decoding="async"
                 />
-                {#if fullscreenStopDetail.photoCaption || fullscreenStopDetail.photoCredit}
+                {#if stopDetailPanel.photoCaption || stopDetailPanel.photoCredit}
                   <figcaption>
-                    {[fullscreenStopDetail.photoCaption, fullscreenStopDetail.photoCredit]
+                    {[stopDetailPanel.photoCaption, stopDetailPanel.photoCredit]
                       .filter((value): value is string => Boolean(value))
                       .join(' • ')}
                   </figcaption>
                 {/if}
               </figure>
             {/if}
-            {#if fullscreenStopDetail.description}
-              <p>{fullscreenStopDetail.description}</p>
+            {#if stopDetailPanel.description}
+              <p>{stopDetailPanel.description}</p>
             {:else}
               <p>Mehr Impressionen folgen direkt in der Route – Tipp: Slider bewegen, um weitere Highlights aufzudecken.</p>
             {/if}
@@ -2113,6 +2166,29 @@
     border-radius: 1.25rem 1.25rem 0 0;
     box-shadow: 0 24px 64px rgba(2, 6, 23, 0.55);
     pointer-events: auto;
+  }
+
+  .travel__map--panel-open:not(.travel__map--fullscreen) {
+    padding-bottom: clamp(180px, 42vh, 320px);
+  }
+
+  .travel__map--panel-open:not(.travel__map--fullscreen) .travel__map-fullscreen-panel {
+    position: absolute;
+    left: clamp(0.75rem, 4vw, 1.5rem);
+    right: clamp(0.75rem, 4vw, 1.5rem);
+    bottom: clamp(0.75rem, 3vh, 1.5rem);
+    width: auto;
+    max-height: min(55vh, 360px);
+    overflow: auto;
+    border-radius: 1rem;
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    backdrop-filter: blur(12px);
+    z-index: 6;
+  }
+
+  .travel__map--panel-open:not(.travel__map--fullscreen) .travel__map-slider {
+    position: relative;
+    z-index: 2;
   }
 
   /* Für Einsteiger:innen: Per absolute Position sitzt das Panel direkt über der Karte,
