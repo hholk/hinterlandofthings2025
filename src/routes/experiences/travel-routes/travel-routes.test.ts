@@ -110,7 +110,7 @@ describe('travel routes shell', () => {
     expect(source).toContain('travel__map-slider');
     expect(source).toContain('Stationen & Stopps');
     expect(source).toContain('Kostenübersicht');
-    expect(source).toContain('travel__map-section');
+    expect(source).not.toContain('travel__map-section');
   });
 
   it('nutzt das Stack-Layout für die ausgewählte Route', () => {
