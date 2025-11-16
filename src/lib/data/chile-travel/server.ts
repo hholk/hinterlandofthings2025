@@ -36,6 +36,9 @@ function normalizeRoute(raw: RouteDetail, entry?: RouteIndexEntry): RouteDetail 
     } else if (route.meta && entry?.meta?.durationDays && !route.meta.durationDays) {
       route.meta.durationDays = entry.meta.durationDays;
     }
+    if (!route.mapFocus && entry?.mapFocus) {
+      route.mapFocus = { ...entry.mapFocus };
+    }
     return route;
   } catch (error) {
     console.warn('Route konnte nicht normalisiert werden', error);

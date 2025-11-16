@@ -752,7 +752,16 @@
         "flight",
         "bus",
         "roadtrip"
-      ]
+      ],
+      "mapFocus": {
+        "center": [
+          -70.65,
+          -33.55
+        ],
+        "zoom": 7.2,
+        "region": "Santiago, Valparaíso & Cajón del Maipo",
+        "description": "Konzentriert die Hauptstadt, die bunte Hafenstadt und den Andencanyon in einem Blick."
+      }
     },
     {
       "id": "chile-lakes-loop",
@@ -813,7 +822,16 @@
         "nature",
         "roadtrip",
         "flight"
-      ]
+      ],
+      "mapFocus": {
+        "center": [
+          -72.6,
+          -40.5
+        ],
+        "zoom": 5.6,
+        "region": "Seenregion & Chiloé",
+        "description": "Temuco, Pucón, Huilo Huilo, Puerto Varas und die Insel Chiloé liegen in diesem Fokus."
+      }
     },
     {
       "id": "chile-panamericana-roadtrip",
@@ -874,7 +892,16 @@
         "roadtrip",
         "nature",
         "culture"
-      ]
+      ],
+      "mapFocus": {
+        "center": [
+          -70.7,
+          -29.5
+        ],
+        "zoom": 5.3,
+        "region": "Nordküste & Panamericana",
+        "description": "Valparaíso, La Serena, Valle del Elqui und Bahía Inglesa entlang der Ruta 5."
+      }
     },
     {
       "id": "chile-instagram-highlights",
@@ -937,7 +964,16 @@
         "photography",
         "adventure",
         "flight"
-      ]
+      ],
+      "mapFocus": {
+        "center": [
+          -70.3,
+          -31.5
+        ],
+        "zoom": 4.2,
+        "region": "Atacama bis Patagonien",
+        "description": "Verbindet Astro-Hotspots im Norden mit Gletschern rund um Torres del Paine."
+      }
     },
     {
       "id": "chile-carretera-austral",
@@ -999,7 +1035,16 @@
         "nature",
         "roadtrip",
         "flight"
-      ]
+      ],
+      "mapFocus": {
+        "center": [
+          -72.4,
+          -45.0
+        ],
+        "zoom": 5.0,
+        "region": "Carretera Austral & Fjorde",
+        "description": "Umfasst Coyhaique, Puyuhuapi, Puerto Natales und Torres del Paine."
+      }
     },
     {
       "id": "chile-wine-gastronomy",
@@ -1058,7 +1103,16 @@
         "food",
         "wine",
         "roadtrip"
-      ]
+      ],
+      "mapFocus": {
+        "center": [
+          -71.4,
+          -34.6
+        ],
+        "zoom": 6.7,
+        "region": "Weintäler & Pazifik",
+        "description": "Casablanca, Colchagua, Santa Cruz und Pazifikorte wie Pichilemu."
+      }
     },
     {
       "id": "chile-culture-altiplano",
@@ -1122,7 +1176,16 @@
         "history",
         "flight",
         "roadtrip"
-      ]
+      ],
+      "mapFocus": {
+        "center": [
+          -69.5,
+          -23.5
+        ],
+        "zoom": 5.2,
+        "region": "Altiplano & Kulturroute",
+        "description": "San Pedro, Geysire, Salzseen und koloniale Zentren im Norden."
+      }
     },
     {
       "id": "chile-route-1-atacama-salare-2026",
@@ -1181,7 +1244,16 @@
         "adventure",
         "flight",
         "photography"
-      ]
+      ],
+      "mapFocus": {
+        "center": [
+          -69.2,
+          -24.7
+        ],
+        "zoom": 5.5,
+        "region": "Atacama & Salzseen",
+        "description": "Calama, San Pedro, Lagunas Altiplánicas und El Tatio im Fokus."
+      }
     },
     {
       "id": "chile-route-2-pazifik-wein-2026",
@@ -1240,7 +1312,16 @@
         "wine",
         "food",
         "roadtrip"
-      ]
+      ],
+      "mapFocus": {
+        "center": [
+          -71.3,
+          -33.4
+        ],
+        "zoom": 6.8,
+        "region": "Pazifik & Wein",
+        "description": "Santiago, Küstenorte um Valparaíso und Weinlagen in Casablanca & Colchagua."
+      }
     },
     {
       "id": "chile-route-3-lakes-volcanoes-2026",
@@ -1297,7 +1378,16 @@
         "nature",
         "roadtrip",
         "flight"
-      ]
+      ],
+      "mapFocus": {
+        "center": [
+          -72.9,
+          -40.6
+        ],
+        "zoom": 5.7,
+        "region": "Seen & Vulkane",
+        "description": "Temuco, Pucón, Villarica, Huilo Huilo und Puerto Varas."
+      }
     },
     {
       "id": "chile-route-4-patagonia-sur-2026",
@@ -1353,7 +1443,16 @@
         "adventure",
         "flight",
         "nature"
-      ]
+      ],
+      "mapFocus": {
+        "center": [
+          -72.9,
+          -50.2
+        ],
+        "zoom": 4.9,
+        "region": "Patagonien Süd",
+        "description": "Puerto Natales, Ultima Esperanza und Torres del Paine."
+      }
     },
     {
       "id": "chile-route-5-carretera-austral-light-2026",
@@ -1408,7 +1507,16 @@
         "adventure",
         "roadtrip",
         "nature"
-      ]
+      ],
+      "mapFocus": {
+        "center": [
+          -72.3,
+          -44.8
+        ],
+        "zoom": 5.5,
+        "region": "Aysén & Queulat",
+        "description": "Coyhaique, Puyuhuapi und Ventisquero Colgante samt Fjorden."
+      }
     },
     {
       "id": "chile-route-6-big-mix-2026",
@@ -1466,7 +1574,16 @@
         "roadtrip",
         "nature",
         "culture"
-      ]
+      ],
+      "mapFocus": {
+        "center": [
+          -70.5,
+          -30.8
+        ],
+        "zoom": 4.6,
+        "region": "Atacama · Seen · Küste",
+        "description": "Norden rund um San Pedro, Seenregion bei Puerto Varas und Küste bei Valparaíso."
+      }
     }
   ],
   "poiOverview": {
