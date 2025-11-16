@@ -35,6 +35,7 @@
     type StopProperties
   } from '../../../lib/travel/map-data';
   import { getDefaultSliderIndex } from '../../../lib/travel/timeline-helpers';
+  import { resolveMapVisibilityThreshold } from '../../../lib/travel/map-visibility';
 
   type MapLibreModule = MapLibreNamespace;
   type MapLibreMap = import('maplibre-gl').Map;
@@ -192,6 +193,7 @@
   let sliderMax = 0;
   let sliderLabel = '';
   let sliderResetPending = true;
+  let mapVisibilityThreshold = Number.MAX_SAFE_INTEGER;
   let stopDataIndex: StopDataIndex = createEmptyStopDataIndex();
 
   let mapContainer: HTMLDivElement | null = null;
@@ -400,7 +402,7 @@
         paint: {
           'line-color': ['coalesce', ['get', 'color'], '#2563eb'],
           'line-width': 4.5,
-          'line-opacity': createOpacityExpression(sliderValue)
+          'line-opacity': createOpacityExpression(mapVisibilityThreshold)
         }
       });
       mapInstance.addLayer({
@@ -415,7 +417,7 @@
         paint: {
           'line-color': ['coalesce', ['get', 'color'], '#2563eb'],
           'line-width': 4.5,
-          'line-opacity': createOpacityExpression(sliderValue),
+          'line-opacity': createOpacityExpression(mapVisibilityThreshold),
           'line-dasharray': ['get', 'dashArray']
         }
       });
@@ -474,7 +476,7 @@
     segmentSource.setData(segments);
     stopSource.setData(stops);
     ensureMapBounds(coordinates);
-    updateMapVisibility(sliderValue);
+    updateMapVisibility(mapVisibilityThreshold);
   }
 
   function createOpacityExpression(threshold: number) {
@@ -855,11 +857,12 @@
   $: if (sliderValue > sliderMax) {
     sliderValue = sliderMax;
   }
+  $: mapVisibilityThreshold = resolveMapVisibilityThreshold(sliderSteps.length, sliderValue);
   $: if (mapLoaded) {
     updateMapData(segmentCollection, stopCollection, allCoordinates);
   }
   $: if (mapLoaded) {
-    updateMapVisibility(sliderValue);
+    updateMapVisibility(mapVisibilityThreshold);
   }
 </script>
 
