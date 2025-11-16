@@ -29,6 +29,7 @@
     type StopCollection,
     type StopProperties
   } from '../../../lib/travel/map-data';
+  import { getDefaultSliderIndex } from '../../../lib/travel/timeline-helpers';
 
   type MapLibreModule = typeof import('maplibre-gl');
   type MapLibreMap = import('maplibre-gl').Map;
@@ -182,6 +183,7 @@
   let sliderValue = 0;
   let sliderMax = 0;
   let sliderLabel = '';
+  let sliderResetPending = true;
   let stopDataIndex: StopDataIndex = createEmptyStopDataIndex();
 
   let mapContainer: HTMLDivElement | null = null;
@@ -246,7 +248,10 @@
   function selectRoute(id: string) {
     if (id === selectedRouteId) return;
     selectedRouteId = id;
-    sliderValue = 0;
+    // Für Einsteiger:innen: Sobald eine neue Route aktiv wird, setzen wir
+    // ein Flag. Die eigentliche Aktualisierung übernimmt ein reaktiver Block,
+    // damit der Slider immer auf die finale Schrittlänge zugreifen kann.
+    sliderResetPending = true;
     removeMapPopup();
   }
 
@@ -850,6 +855,10 @@
   $: sliderSteps = buildTimeline(selectedRoute, selectedIndexEntry);
   $: sliderMax = sliderSteps.length > 0 ? sliderSteps.length - 1 : 0;
   $: sliderLabel = sliderSteps[sliderValue]?.label ?? 'Start';
+  $: if (sliderResetPending) {
+    sliderValue = getDefaultSliderIndex(sliderSteps);
+    sliderResetPending = false;
+  }
   $: if (sliderValue > sliderMax) {
     sliderValue = sliderMax;
   }

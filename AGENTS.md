@@ -59,3 +59,6 @@
 - Die Funktionen `initMap`, `addGeoJsonSource`, `addRouteLayer`, `addPoiLayer` und `fitMapToData` sind dort bewusst modular
   implementiert, damit weitere Features sie leicht übernehmen können.
 - Anpassungen am GeoJSON-Aufbau oder der MapLibre-Konfiguration müssen von Tests begleitet werden (`travel-routes/chile-map.test.js` via `node --test travel-routes/chile-map.test.js`).
+- Die Svelte-basierte Experience setzt den Karten-Slider nun immer automatisch ans Ende jeder Route. Die Logik steckt in
+  `src/lib/travel/timeline-helpers.ts` und ist mit `timeline-helpers.test.ts` abgesichert – bei Anpassungen unbedingt die Tests
+  anpassen und ausführen (`npm test`).
