@@ -193,15 +193,10 @@
   const ROUTE_STOP_LABEL_LAYER = 'travel-route-stop-label-layer';
   const STOP_POPUP_CLASS = 'travel-map-popup';
   const FULLSCREEN_BODY_CLASS = 'travel-map-fullscreen-open';
-  const MAP_FOCUS_MIN_ZOOM = 3;
-  const MAP_FOCUS_MAX_ZOOM = 12;
-  const MAP_FOCUS_DEFAULT_ZOOM = 5.5;
-
   let selectedRouteId = data.travel.routeIndex[0]?.id ?? '';
   let selectedRoute: RouteDetail | null = data.travel.routes[selectedRouteId] ?? null;
   let selectedIndexEntry: RouteIndexEntry | null =
     data.travel.routeIndex.find((entry) => entry.id === selectedRouteId) ?? null;
-  let selectedMapFocus: RouteIndexEntry['mapFocus'] | null = selectedIndexEntry?.mapFocus ?? null;
 
   let segmentCollection: SegmentCollection = EMPTY_SEGMENTS;
   let stopCollection: StopCollection = EMPTY_STOPS;
@@ -242,7 +237,6 @@
     style: 'currency',
     currency: data.travel.meta.currency ?? 'EUR'
   });
-  const coordinateFormatter = new Intl.NumberFormat('de-DE', { maximumFractionDigits: 2 });
 
   if (typeof window !== 'undefined' && import.meta.env.DEV) {
     // Für Einsteiger:innen: Der Debug-Helfer erlaubt es, auf Touch-Geräten oder in Tests
@@ -754,15 +748,6 @@
     renderOverlay(segmentCollection, stopCollection, threshold);
   }
 
-  function formatMapCenter(center: [number, number] | undefined | null) {
-    if (!Array.isArray(center) || center.length !== 2) return null;
-    const [lng, lat] = center;
-    if (!Number.isFinite(lng) || !Number.isFinite(lat)) return null;
-    const lngLabel = `${coordinateFormatter.format(Math.abs(lng))}° ${lng >= 0 ? 'O' : 'W'}`;
-    const latLabel = `${coordinateFormatter.format(Math.abs(lat))}° ${lat >= 0 ? 'N' : 'S'}`;
-    return `${lngLabel} · ${latLabel}`;
-  }
-
   function escapeHtml(value: string | undefined | null) {
     if (!value) return '';
     const map: Record<string, string> = {
@@ -1115,7 +1100,6 @@
 
   $: selectedIndexEntry = data.travel.routeIndex.find((entry) => entry.id === selectedRouteId) ?? null;
   $: selectedRoute = data.travel.routes[selectedRouteId] ?? null;
-  $: selectedMapFocus = selectedIndexEntry?.mapFocus ?? null;
   $: stopDataIndex = buildStopDataIndex(selectedRoute);
   $: segmentCollection = buildSegmentCollection(selectedRoute, data.travel.transportModes);
   $: stopCollection = buildStopCollection(selectedRoute);
@@ -1378,40 +1362,6 @@
           {/each}
         </ul>
       </nav>
-      {#if selectedMapFocus}
-        <section
-          class={`travel__map-section${isMapFullscreen ? ' travel__map-section--hidden' : ''}`}
-          aria-labelledby="travel-map-focus-title"
-        >
-          <div class="travel__map-section-head">
-            <p class="travel__map-section-label">Kartenausschnitt</p>
-            <h2 id="travel-map-focus-title">{selectedMapFocus.region ?? 'Karte'}</h2>
-            {#if selectedMapFocus.description}
-              <p>{selectedMapFocus.description}</p>
-            {/if}
-          </div>
-          <dl class="travel__map-section-meta">
-            <div>
-              <dt>Region</dt>
-              <dd>{selectedMapFocus.region ?? 'Chile'}</dd>
-            </div>
-            {#if formatMapCenter(selectedMapFocus.center)}
-              <div>
-                <dt>Mitte</dt>
-                <dd>{formatMapCenter(selectedMapFocus.center)}</dd>
-              </div>
-            {/if}
-            <div>
-              <dt>Zoom</dt>
-              <dd>
-                {selectedMapFocus.zoom !== undefined
-                  ? decimalFormatter.format(selectedMapFocus.zoom)
-                  : 'Auto'}
-              </dd>
-            </div>
-          </dl>
-        </section>
-      {/if}
     </div>
   </div>
 
@@ -2057,57 +2007,6 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-  }
-
-  .travel__map-section {
-    border-radius: 1.25rem;
-    background: rgba(15, 23, 42, 0.03);
-    border: 1px solid rgba(15, 23, 42, 0.08);
-    padding: 1.25rem 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-
-  .travel__map-section--hidden {
-    display: none;
-  }
-
-  .travel__map-section-head h2 {
-    font-size: 1.35rem;
-    margin: 0.15rem 0 0;
-  }
-
-  .travel__map-section-head p {
-    color: #475569;
-    margin: 0.25rem 0 0;
-  }
-
-  .travel__map-section-label {
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    font-size: 0.75rem;
-    color: #6366f1;
-    margin: 0;
-  }
-
-  .travel__map-section-meta {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 0.75rem;
-  }
-
-  .travel__map-section-meta dt {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: #64748b;
-  }
-
-  .travel__map-section-meta dd {
-    margin: 0.1rem 0 0;
-    font-weight: 600;
-    color: #0f172a;
   }
 
   .travel__map {
