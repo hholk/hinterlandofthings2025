@@ -45,8 +45,8 @@ describe('travel route data access', () => {
         ...(route.lodging ?? []).map((stay) => stay.stopId)
       ].filter((value): value is string => typeof value === 'string' && value.trim().length > 0);
 
-      // Für Einsteiger:innen: Jeder Detailblock verweist über stopId auf die Karte –
-      // so bleibt klar, zu welchem Ort Aktivitäten, Food & Lodging gehören.
+      // Für Einsteiger:innen: Jeder Detailblock verweist über stopId auf denselben Ort.
+      // So bleibt klar, zu welchem Stopp Aktivitäten, Food & Lodging gehören.
       for (const stopId of referencedStopIds) {
         if (!stopIds.has(stopId)) {
           throw new Error(`Route ${route.id} referenziert unbekannten Stop ${stopId}`);
@@ -73,8 +73,8 @@ describe('travel route data access', () => {
       return hasSegment || hasDailyGeometry;
     });
 
-    // Für Einsteiger:innen: Ohne diese Geometriedaten bleibt die Map leer – der Test stellt sicher,
-    // dass wir die JSON-Dokumentation korrekt befüllt und verstanden haben.
+    // Für Einsteiger:innen: Auch ohne eingebettete Karte bleiben die Geometriedaten wichtig,
+    // damit künftige Visualisierungen oder Exporte sofort funktionieren.
     expect(hasRenderableRoute).toBe(true);
   });
 
@@ -89,14 +89,15 @@ describe('travel route data access', () => {
 });
 
 describe('travel routes shell', () => {
-  it('enthält Karte, Zeitverlauf und Detail-Spoiler', () => {
+  it('stellt Route-Auswahl und Textmodule ohne Karte bereit', () => {
     const currentDir = dirname(fileURLToPath(import.meta.url));
     const source = readFileSync(join(currentDir, '+page.svelte'), 'utf8');
 
-    expect(source).toContain('id="travel-map"');
-    expect(source).toContain('travel__map-slider');
+    expect(source).toContain('class="travel__routes"');
+    expect(source).toContain('travel__map-section');
     expect(source).toContain('Stationen & Stopps');
     expect(source).toContain('Kostenübersicht');
-    expect(source).toContain('travel__map-section');
+    expect(source).not.toContain('id="travel-map"');
+    expect(source).not.toContain('travel__map-slider');
   });
 });
