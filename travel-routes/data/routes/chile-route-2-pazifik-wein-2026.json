@@ -20,6 +20,29 @@
       "Wein & Food Pairing in Casablanca",
       "Rotwein-Blend im Colchagua-Tal"
     ],
+    "highlightImages": [
+      {
+        "title": "Streetart im Cerro Alegre",
+        "image": "https://images.unsplash.com/photo-1549049931-107c59ed2b37?w=900&auto=format&fit=crop",
+        "caption": "Bunte Murals und Treppen in Valparaísos Cerro Alegre.",
+        "source": "Unsplash",
+        "license": "Unsplash License"
+      },
+      {
+        "title": "Wein & Food Pairing in Casablanca",
+        "image": "https://lp-cms-production.imgix.net/2021-06/casablanca-valley-chile.jpg?auto=format&fit=crop&w=900&q=80",
+        "caption": "Weingüter zwischen Nebelbänken und Pazifikbrise im Casablanca Valley.",
+        "source": "Lonely Planet / Shutterstock",
+        "license": "Editorial use"
+      },
+      {
+        "title": "Rotwein-Blend im Colchagua-Tal",
+        "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=900&auto=format&fit=crop",
+        "caption": "Fässerkeller für Cabernet- und Carmenère-Blends im Colchagua Valley.",
+        "source": "Unsplash",
+        "license": "Unsplash License"
+      }
+    ],
     "scores": {
       "relax": 5,
       "culture": 4,
@@ -521,5 +544,6 @@
         }
       }
     }
-  ]
+  ],
+  "source": "curated"
 }

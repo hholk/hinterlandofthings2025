@@ -20,6 +20,29 @@
       "Vulkanblick am Llanquihue",
       "Streetart & Wein an der Küste"
     ],
+    "highlightImages": [
+      {
+        "title": "Lagunen & Sterne in San Pedro",
+        "image": "https://images.unsplash.com/photo-1526481280695-3c4692349813?w=900&auto=format&fit=crop",
+        "caption": "Sternklare Nacht über den Salaren und Lagunen der Atacama.",
+        "source": "Unsplash",
+        "license": "Unsplash License"
+      },
+      {
+        "title": "Vulkanblick am Llanquihue",
+        "image": "https://lp-cms-production.imgix.net/2024-01/chile-llanquihue-lake-osorno.jpg?auto=format&fit=crop&w=900&q=80",
+        "caption": "Osorno-Spitze über dem ruhigen Llanquihue-See bei Puerto Varas.",
+        "source": "Lonely Planet / Shutterstock",
+        "license": "Editorial use"
+      },
+      {
+        "title": "Streetart & Wein an der Küste",
+        "image": "https://www.valparaiso.travel/wp-content/uploads/2021/07/cerro-alegre-grafitis.jpg",
+        "caption": "Küstenflair mit Murals in Valparaíso und nahegelegenen Weingärten.",
+        "source": "Valparaiso Travel",
+        "license": "All rights reserved"
+      }
+    ],
     "scores": {
       "adventure": 4,
       "relax": 3,
@@ -144,5 +167,6 @@
       "hotels": [],
       "mobilityOptions": {}
     }
-  ]
+  ],
+  "source": "curated"
 }

@@ -18,6 +18,29 @@
       "Thermalbad in den Termas Geométricas",
       "Sonnenuntergang über dem Lago Llanquihue"
     ],
+    "highlightImages": [
+      {
+        "title": "Kayak auf dem Lago Villarrica",
+        "image": "https://images.unsplash.com/photo-1500534314211-0a24cd38fcff?w=800&auto=format&fit=crop",
+        "caption": "Morgendliche Kayaktour mit Blick auf den Vulkan Villarrica.",
+        "source": "Unsplash",
+        "license": "Unsplash License"
+      },
+      {
+        "title": "Termas Geométricas",
+        "image": "https://www.chile.travel/wp-content/uploads/2020/02/termas-geometricas.jpg",
+        "caption": "Rote Stege und dampfende Pools mitten im Nebelwald.",
+        "source": "Chile.travel Mediengalerie",
+        "license": "All rights reserved"
+      },
+      {
+        "title": "Sonnenuntergang über dem Lago Llanquihue",
+        "image": "https://lp-cms-production.imgix.net/2024-01/chile-llanquihue-lake-osorno.jpg?auto=format&fit=crop&w=900&q=80",
+        "caption": "Goldene Stunde am Llanquihue-See mit Osorno-Silhouette.",
+        "source": "Lonely Planet / Shutterstock",
+        "license": "Editorial use"
+      }
+    ],
     "scores": {
       "budget": 3,
       "adventure": 4,

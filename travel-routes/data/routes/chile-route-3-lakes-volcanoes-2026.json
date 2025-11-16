@@ -19,6 +19,29 @@
       "Vulkan Osorno",
       "Holzkirchen auf Chiloé"
     ],
+    "highlightImages": [
+      {
+        "title": "Fischmarkt Angelmó",
+        "image": "https://www.chile.travel/wp-content/uploads/2020/04/mercado-angelmo-puerto-montt.jpg",
+        "caption": "Stände mit frischem Fang und Lokalküchen direkt am Hafen von Puerto Montt.",
+        "source": "Chile.travel Mediengalerie",
+        "license": "All rights reserved"
+      },
+      {
+        "title": "Vulkan Osorno",
+        "image": "https://images.unsplash.com/photo-1526401485004-46910ecc8e51?w=900&auto=format&fit=crop",
+        "caption": "Schneebedeckter Osorno über dem Lago Llanquihue.",
+        "source": "Unsplash",
+        "license": "Unsplash License"
+      },
+      {
+        "title": "Holzkirchen auf Chiloé",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Iglesia_de_Castro_Chile.jpg",
+        "caption": "UNESCO-Holzkirchen mit farbigen Fassaden in Castro.",
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 3.0"
+      }
+    ],
     "scores": {
       "adventure": 4,
       "relax": 4,
@@ -339,5 +362,6 @@
         }
       }
     }
-  ]
+  ],
+  "source": "curated"
 }
