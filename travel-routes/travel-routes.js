@@ -63,6 +63,51 @@ const state = {
   suggestionIndex: new Map(),
 };
 
+// Für Einsteiger:innen: Wir kapseln die Logik für die Startauswahl einer Route,
+// damit klar ist, welche Prioritäten gelten. Standardmäßig zeigen wir die erste
+// kuratierte Route, Nutzer:innen, die bereits den Custom-Filter aktiv haben,
+// landen dagegen direkt bei ihrer eigenen Vorlage.
+function getDefaultRouteSelection({
+  curatedRoutes = [],
+  customRoutes = [],
+  filter = 'curated',
+  selectedRouteId = null,
+} = {}) {
+  if (selectedRouteId) {
+    return null;
+  }
+
+  const findFirstRoute = (routes = []) => routes.find((route) => route && typeof route.id === 'string');
+
+  if (filter === 'custom') {
+    const customCandidate = findFirstRoute(customRoutes);
+    if (customCandidate) {
+      return {
+        id: customCandidate.id,
+        source: customCandidate.source ?? 'custom',
+      };
+    }
+  }
+
+  const curatedCandidate = findFirstRoute(curatedRoutes);
+  if (curatedCandidate) {
+    return {
+      id: curatedCandidate.id,
+      source: curatedCandidate.source ?? 'curated',
+    };
+  }
+
+  const fallbackCustom = findFirstRoute(customRoutes);
+  if (fallbackCustom) {
+    return {
+      id: fallbackCustom.id,
+      source: fallbackCustom.source ?? 'custom',
+    };
+  }
+
+  return null;
+}
+
 const mapState = {
   map: null,
   layers: new Map(),
@@ -233,14 +278,14 @@ async function init() {
     renderPoiOverview();
   }
 
-  dom.app?.setAttribute('data-state-ready', 'true');
-
-  // Für Einsteiger:innen: Wir starten ohne vorausgewählte Route.
-  // So bleibt die Liste sichtbar und Besucher:innen entscheiden selbst,
-  // wann das Detail-Overlay geladen wird.
-  if (!state.curatedRoutes.length && !state.customRoutes.length) {
+  const hasAnyRoutes = state.curatedRoutes.length > 0 || state.customRoutes.length > 0;
+  if (hasAnyRoutes) {
+    await ensureDefaultRouteSelected();
+  } else {
     dom.detail.innerHTML = '<div class="travel-empty-state">Noch keine Routen vorhanden.</div>';
   }
+
+  dom.app?.setAttribute('data-state-ready', 'true');
 }
 
 function initMap(data) {
@@ -389,6 +434,18 @@ async function selectRoute(routeId, source = state.filter) {
   highlightActiveRouteCard();
   activateMapLayer(route);
   renderRouteDetail(route);
+}
+
+// Diese Helferfunktion nutzt die vorher definierte Auswahl-Logik und ruft
+// anschliessend die reguläre selectRoute-Routine auf. Dadurch wird beim Laden
+// der Seite immer mindestens eine Route aktiviert.
+async function ensureDefaultRouteSelected() {
+  const candidate = getDefaultRouteSelection(state);
+  if (!candidate) {
+    return false;
+  }
+  await selectRoute(candidate.id, candidate.source);
+  return true;
 }
 
 function renderRouteDetail(route) {
@@ -1823,4 +1880,5 @@ export {
   setAssetManifestForTesting,
   resetAssetManifestForTesting,
   resolveResource,
+  getDefaultRouteSelection,
 };
