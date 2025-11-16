@@ -26,7 +26,10 @@ let activePopup = null;
 let activeRouteId = null;
 
 const DEFAULT_TILE = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
-const DEFAULT_STYLE = 'https://demotiles.maplibre.org/style.json';
+const DEFAULT_GLYPHS = 'https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf';
+const DEFAULT_ATTRIBUTION = '© OpenStreetMap-Mitwirkende';
+const DEFAULT_CENTER = [-70.5, -30];
+const DEFAULT_ZOOM = 4.2;
 
 function getMapLibre() {
   const lib = globalThis.maplibregl;
@@ -392,15 +395,22 @@ async function ensureRouteDetail(id) {
   return detail;
 }
 
-function resolveTileTemplates(mapConfig) {
+// Für Einsteiger:innen: Beide Kartenvarianten nutzen jetzt exakt die gleichen
+// Raster-Tiles. So verschwindet die alte CARTO-Style-URL und nur noch eine
+// MapLibre-Konfiguration bleibt übrig.
+export function resolveTileTemplates(mapConfig) {
   const source = mapConfig?.tileLayer;
-  if (!source) return [DEFAULT_TILE];
   if (Array.isArray(source) && source.length > 0) {
-    return source;
+    const valid = source.filter((entry) => typeof entry === 'string' && entry.trim().length > 0);
+    if (valid.length > 0) {
+      return valid;
+    }
   }
-  if (typeof source === 'string') {
+  if (typeof source === 'string' && source.trim().length > 0) {
     if (source.includes('{s}')) {
-      const subdomains = mapConfig.tileSubdomains ?? ['a', 'b', 'c'];
+      const subdomains = Array.isArray(mapConfig?.tileSubdomains) && mapConfig.tileSubdomains.length > 0
+        ? mapConfig.tileSubdomains
+        : ['a', 'b', 'c'];
       return subdomains.map((domain) => source.replace('{s}', domain));
     }
     return [source];
@@ -408,19 +418,16 @@ function resolveTileTemplates(mapConfig) {
   return [DEFAULT_TILE];
 }
 
-function createMapStyle(mapConfig) {
-  if (mapConfig?.styleUrl) {
-    return mapConfig.styleUrl;
-  }
-  return {
+export function createMapStyle(mapConfig) {
+  const style = {
     version: 8,
-    glyphs: mapConfig?.glyphsUrl ?? 'https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf',
+    glyphs: mapConfig?.glyphsUrl ?? DEFAULT_GLYPHS,
     sources: {
       osm: {
         type: 'raster',
         tiles: resolveTileTemplates(mapConfig),
         tileSize: 256,
-        attribution: mapConfig?.attribution ?? '© OpenStreetMap',
+        attribution: mapConfig?.attribution ?? DEFAULT_ATTRIBUTION,
         maxzoom: 14
       }
     },
@@ -428,15 +435,21 @@ function createMapStyle(mapConfig) {
       { id: 'osm-base', type: 'raster', source: 'osm' }
     ]
   };
+
+  if (mapConfig?.spriteUrl) {
+    style.sprite = mapConfig.spriteUrl;
+  }
+
+  return style;
 }
 
 function initMap(mapConfig) {
   const maplibre = getMapLibre();
   const map = new maplibre.Map({
     container: 'map',
-    style: mapConfig ? createMapStyle(mapConfig) : DEFAULT_STYLE,
-    center: mapConfig?.center ?? [-70.5, -30],
-    zoom: mapConfig?.zoom ?? 4.2,
+    style: createMapStyle(mapConfig),
+    center: mapConfig?.center ?? DEFAULT_CENTER,
+    zoom: mapConfig?.zoom ?? DEFAULT_ZOOM,
     attributionControl: false,
     maxZoom: 10
   });

@@ -22,6 +22,7 @@
     resolveMapLibreNamespace,
     type MapLibreNamespace
   } from '../../../lib/travel/maplibre-loader';
+  import { createRasterStyle } from '../../../lib/travel/map-style';
   import {
     buildSegmentCollection,
     buildStopCollection,
@@ -40,7 +41,6 @@
   type MapLayerMouseEvent = import('maplibre-gl').MapLayerMouseEvent;
   type Popup = import('maplibre-gl').Popup;
   type GeoJSONSource = import('maplibre-gl').GeoJSONSource;
-  type StyleSpecification = import('maplibre-gl').StyleSpecification;
 
   export let data: PageData & { travel: LoadedTravelRoutesDataset };
 
@@ -217,29 +217,6 @@
   // Für Einsteiger:innen: MapLibre möchte eine Liste konkreter Tile-URLs.
   // Unser Datensatz nutzt teilweise das Platzhalter-Format "https://{s}.tile...",
   // deshalb erzeugen wir hier eine bereinigte Variante ohne Überraschungen.
-  function resolveTileUrls(mapConfig: typeof data.travel.meta.map): string[] {
-    const fallback = ['https://tile.openstreetmap.org/{z}/{x}/{y}.png'];
-    const rawSource = mapConfig.tileLayer as unknown;
-
-    if (Array.isArray(rawSource)) {
-      const valid = rawSource.filter(
-        (entry): entry is string => typeof entry === 'string' && entry.trim().length > 0
-      );
-      return valid.length > 0 ? valid : fallback;
-    }
-
-    if (typeof rawSource === 'string') {
-      if (rawSource.includes('{s}')) {
-        const mapWithSubdomains = mapConfig as typeof mapConfig & { tileSubdomains?: string[] };
-        const subdomains = mapWithSubdomains.tileSubdomains ?? ['a', 'b', 'c'];
-        return subdomains.map((subdomain) => rawSource.replace('{s}', subdomain));
-      }
-      return [rawSource];
-    }
-
-    return fallback;
-  }
-
   function setBodyScrollLock(shouldLock: boolean) {
     if (!hasDocument) return;
     document.body.classList.toggle(FULLSCREEN_BODY_CLASS, shouldLock);
@@ -364,36 +341,12 @@
     return steps;
   }
 
-  function createMapStyle(): StyleSpecification | string {
-    const map = data.travel.meta.map;
-    if (map.styleUrl) {
-      return map.styleUrl;
-    }
-    const tiles = resolveTileUrls(map);
-    const style: StyleSpecification = {
-      version: 8,
-      glyphs: map.glyphsUrl ?? 'https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf',
-      sources: {
-        osm: {
-          type: 'raster',
-          tiles,
-          tileSize: 256,
-          attribution: map.attribution ?? '© OpenStreetMap',
-          maxzoom: 14
-        }
-      },
-      layers: [
-        {
-          id: 'osm-base',
-          type: 'raster',
-          source: 'osm'
-        }
-      ]
-    };
-    if (map.spriteUrl) {
-      style.sprite = map.spriteUrl;
-    }
-    return style;
+  function createMapStyle() {
+    // Für Einsteiger:innen: Damit wirklich nur **eine** Kartenlösung sichtbar ist,
+    // erzwingen wir hier stets den gleichen Raster-Style aus unseren JSON-Daten.
+    // Selbst wenn in der Konfiguration noch eine alte styleUrl steht, ignorieren
+    // wir sie bewusst und erzeugen die MapLibre-Layer selbst.
+    return createRasterStyle(data.travel.meta.map);
   }
 
   function ensureMapBounds(coordinates: LngLatTuple[]) {
