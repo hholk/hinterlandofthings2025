@@ -1,28 +1,39 @@
 import { describe, expect, it } from 'vitest';
 import {
-  resolveMapVisibilityThreshold,
+  ACTIVE_SEGMENT_OPACITY,
+  ACTIVE_STOP_OPACITY,
+  INACTIVE_SEGMENT_OPACITY,
+  INACTIVE_STOP_OPACITY,
   createSegmentOpacityExpression,
-  createStopOpacityExpression
+  createStopOpacityExpression,
+  resolveMapVisibilityThreshold
 } from './map-visibility';
 
-describe('resolveMapVisibilityThreshold', () => {
-  it('liefert den Sliderwert, wenn Schritte vorhanden sind', () => {
-    expect(resolveMapVisibilityThreshold(5, 3)).toBe(3);
+describe('map-visibility helpers', () => {
+  it('keeps slider threshold safe for invalid input', () => {
+    expect(resolveMapVisibilityThreshold(0, 3)).toBe(Number.MAX_SAFE_INTEGER);
+    expect(resolveMapVisibilityThreshold(4, Number.NaN)).toBe(Number.MAX_SAFE_INTEGER);
   });
 
-  it('zeigt die komplette Route, wenn keine Schritte existieren', () => {
-    expect(resolveMapVisibilityThreshold(0, 0)).toBe(Number.MAX_SAFE_INTEGER);
+  it('returns slider value when steps exist', () => {
+    expect(resolveMapVisibilityThreshold(5, 2)).toBe(2);
   });
 
-  it('fängt ungültige Sliderwerte ab', () => {
-    expect(resolveMapVisibilityThreshold(2, Number.NaN)).toBe(Number.MAX_SAFE_INTEGER);
+  it('generates segment opacity expression with updated values', () => {
+    expect(createSegmentOpacityExpression(2)).toEqual([
+      'case',
+      ['<=', ['get', 'order'], 2],
+      ACTIVE_SEGMENT_OPACITY,
+      INACTIVE_SEGMENT_OPACITY
+    ]);
   });
 
-  it('hält zukünftige Segmente leicht sichtbar', () => {
-    expect(createSegmentOpacityExpression(2)).toEqual(['case', ['<=', ['get', 'order'], 2], 1, 0.7]);
-  });
-
-  it('blendet Stopps nur minimal aus', () => {
-    expect(createStopOpacityExpression(1)).toEqual(['case', ['<=', ['get', 'order'], 1], 1, 0.7]);
+  it('generates stop opacity expression with updated values', () => {
+    expect(createStopOpacityExpression(1)).toEqual([
+      'case',
+      ['<=', ['get', 'order'], 1],
+      ACTIVE_STOP_OPACITY,
+      INACTIVE_STOP_OPACITY
+    ]);
   });
 });

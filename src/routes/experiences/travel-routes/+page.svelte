@@ -38,7 +38,11 @@
   import {
     resolveMapVisibilityThreshold,
     createSegmentOpacityExpression,
-    createStopOpacityExpression
+    createStopOpacityExpression,
+    ACTIVE_SEGMENT_OPACITY,
+    INACTIVE_SEGMENT_OPACITY,
+    ACTIVE_STOP_OPACITY,
+    INACTIVE_STOP_OPACITY
   } from '../../../lib/travel/map-visibility';
   import {
     createFallbackProjector,
@@ -207,6 +211,7 @@
   let overlayContext: CanvasRenderingContext2D | null = null;
   let overlayCleanup: (() => void) | null = null;
   let stopDataIndex: StopDataIndex = createEmptyStopDataIndex();
+  let fullscreenStopDetail: StopProperties | null = null;
 
   let mapContainer: HTMLDivElement | null = null;
   let mapInstance: MapLibreMap | null = null;
@@ -281,6 +286,12 @@
   function closeMapFullscreen() {
     if (!isMapFullscreen) return;
     void toggleMapFullscreen();
+  }
+
+  function closeFullscreenStopDetail() {
+    // Für Einsteiger:innen: Damit Fullscreen auch auf Touch-Geräten funktioniert,
+    // schließen wir Popup & Panel gemeinsam – so bleibt der Zustand konsistent.
+    removeMapPopup();
   }
 
   function toggleLegendVisibility() {
@@ -387,6 +398,7 @@
       activePopup.remove();
       activePopup = null;
     }
+    fullscreenStopDetail = null;
   }
 
   function setupSources(
@@ -554,9 +566,9 @@
     const value = Number.isFinite(order) ? (order as number) : Number.MAX_SAFE_INTEGER;
     const isActive = value <= threshold;
     if (type === 'segment') {
-      return isActive ? 1 : 0.7;
+      return isActive ? ACTIVE_SEGMENT_OPACITY : INACTIVE_SEGMENT_OPACITY;
     }
-    return isActive ? 1 : 0.7;
+    return isActive ? ACTIVE_STOP_OPACITY : INACTIVE_STOP_OPACITY;
   }
 
   function drawOverlaySegments(
@@ -786,6 +798,14 @@
     `;
   }
 
+  function resolveStopMeta(stop: StopProperties | null): string | null {
+    if (!stop) return null;
+    const parts = [stop.city ?? stop.subtitle, stop.type]
+      .map((value) => (value ? String(value) : ''))
+      .filter((value) => value.length > 0);
+    return parts.length ? parts.join(' • ') : null;
+  }
+
   function handleStopClick(event: MapLayerMouseEvent) {
     if (!mapInstance || !maplibre) return;
     const feature = event.features?.[0];
@@ -807,6 +827,10 @@
       .setLngLat(coordinates)
       .setHTML(renderStopPopupContent(properties))
       .addTo(mapInstance);
+
+    if (isMapFullscreen) {
+      fullscreenStopDetail = properties;
+    }
   }
 
   async function ensureMapLibre(): Promise<MapLibreModule | null> {
@@ -1060,6 +1084,9 @@
   $: if (sliderValue > sliderMax) {
     sliderValue = sliderMax;
   }
+  $: if (!isMapFullscreen) {
+    fullscreenStopDetail = null;
+  }
   $: mapVisibilityThreshold = resolveMapVisibilityThreshold(sliderSteps.length, sliderValue);
   $: if (mapLoaded) {
     updateMapData(segmentCollection, stopCollection, allCoordinates);
@@ -1187,6 +1214,55 @@
               {/if}
             </div>
           </div>
+        {/if}
+        {#if isMapFullscreen && fullscreenStopDetail}
+          <article
+            class="travel__map-fullscreen-panel"
+            role="dialog"
+            aria-live="polite"
+            aria-label={`Details zu ${fullscreenStopDetail.title ?? fullscreenStopDetail.name ?? 'Highlight'}`}
+          >
+            <div class="travel__map-fullscreen-panel__header">
+              <div>
+                {#if resolveStopMeta(fullscreenStopDetail)}
+                  <p class="travel__map-fullscreen-panel__eyebrow">{resolveStopMeta(fullscreenStopDetail)}</p>
+                {/if}
+                <h3>{fullscreenStopDetail.title ?? fullscreenStopDetail.name ?? 'Highlight'}</h3>
+              </div>
+              <button
+                type="button"
+                class="travel__map-fullscreen-panel__close"
+                on:click={closeFullscreenStopDetail}
+              >
+                <span class="travel__sr-only">Detail schließen</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M6 6l12 12M6 18L18 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </button>
+            </div>
+            {#if fullscreenStopDetail.photoUrl}
+              <figure class="travel__map-fullscreen-panel__media">
+                <img
+                  src={fullscreenStopDetail.photoUrl}
+                  alt={fullscreenStopDetail.photoCaption ?? fullscreenStopDetail.title ?? fullscreenStopDetail.name ?? 'POI Bild'}
+                  loading="lazy"
+                  decoding="async"
+                />
+                {#if fullscreenStopDetail.photoCaption || fullscreenStopDetail.photoCredit}
+                  <figcaption>
+                    {[fullscreenStopDetail.photoCaption, fullscreenStopDetail.photoCredit]
+                      .filter((value): value is string => Boolean(value))
+                      .join(' • ')}
+                  </figcaption>
+                {/if}
+              </figure>
+            {/if}
+            {#if fullscreenStopDetail.description}
+              <p>{fullscreenStopDetail.description}</p>
+            {:else}
+              <p>Mehr Impressionen folgen direkt in der Route – Tipp: Slider bewegen, um weitere Highlights aufzudecken.</p>
+            {/if}
+          </article>
         {/if}
         {#if isLegendVisible}
           <ul class="travel__legend" aria-label="Legende">
@@ -2020,6 +2096,82 @@
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
+  }
+
+  .travel__map-fullscreen-panel {
+    background: rgba(15, 23, 42, 0.92);
+    color: #f8fafc;
+    padding: 1rem 1.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-top: 1px solid rgba(148, 163, 184, 0.35);
+  }
+
+  .travel__map-fullscreen-panel__header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+
+  .travel__map-fullscreen-panel__header h3 {
+    margin: 0;
+    font-size: 1.15rem;
+  }
+
+  .travel__map-fullscreen-panel__eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.7rem;
+    color: #c7d2fe;
+    margin-bottom: 0.2rem;
+  }
+
+  .travel__map-fullscreen-panel__close {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(15, 23, 42, 0.45);
+    color: #f8fafc;
+    border-radius: 999px;
+    width: 2.25rem;
+    height: 2.25rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 160ms ease, border-color 160ms ease;
+  }
+
+  .travel__map-fullscreen-panel__close:hover,
+  .travel__map-fullscreen-panel__close:focus-visible {
+    background: rgba(99, 102, 241, 0.35);
+    border-color: rgba(99, 102, 241, 0.85);
+    outline: none;
+  }
+
+  .travel__map-fullscreen-panel__close svg {
+    width: 1.15rem;
+    height: 1.15rem;
+  }
+
+  .travel__map-fullscreen-panel__media {
+    border-radius: 0.75rem;
+    overflow: hidden;
+    margin: 0;
+    background: rgba(15, 23, 42, 0.35);
+  }
+
+  .travel__map-fullscreen-panel__media img {
+    width: 100%;
+    display: block;
+    max-height: 280px;
+    object-fit: cover;
+  }
+
+  .travel__map-fullscreen-panel__media figcaption {
+    font-size: 0.75rem;
+    color: rgba(226, 232, 240, 0.9);
+    padding: 0.5rem 0.75rem;
   }
 
   .travel__map-slider input[type='range'] {
