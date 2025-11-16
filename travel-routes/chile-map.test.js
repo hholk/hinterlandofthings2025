@@ -86,6 +86,23 @@ test('buildSegmentFeatures falls back to stops and arrival segments', () => {
   assert.equal(features[0].properties.mode, 'drive');
 });
 
+test('buildSegmentFeatures annotates fallback segments with stop metadata', () => {
+  const route = {
+    stops: [
+      { id: 'a', coordinates: { lng: -71.6, lat: -33 }, name: 'Santiago' },
+      { id: 'b', coordinates: { lng: -70.8, lat: -33.4 }, name: 'Valparaíso' }
+    ],
+    segments: [
+      { id: 'seg-a', mode: 'drive', from: 'a', to: 'b', distanceKm: 120, durationHours: 2.5 }
+    ]
+  };
+  const features = buildSegmentFeatures(route, transportModes);
+  assert.equal(features.length, 1);
+  assert.equal(features[0].properties.from, 'Santiago');
+  assert.equal(features[0].properties.to, 'Valparaíso');
+  assert.equal(features[0].properties.distanceKm, 120);
+});
+
 test('buildPoiFeatures uses stops or day map points', () => {
   const stopRoute = {
     stops: [

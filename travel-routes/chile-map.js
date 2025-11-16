@@ -21,9 +21,6 @@ const MAX_POI_LIST_ITEMS = 6;
 
 const routeCache = new Map();
 let travelDataset = null;
-let mapInstance = null;
-let activePopup = null;
-let activeRouteId = null;
 
 const DEFAULT_TILE = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
 const DEFAULT_GLYPHS = 'https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf';
@@ -555,13 +552,6 @@ function fitMapToCollections(map, segments, pois) {
   });
 }
 
-function removePopup() {
-  if (activePopup) {
-    activePopup.remove();
-    activePopup = null;
-  }
-}
-
 function renderSegmentPopup(feature) {
   const mode = feature.properties?.label ?? feature.properties?.mode ?? 'Segment';
   const from = feature.properties?.from;
@@ -600,42 +590,6 @@ function renderPoiPopup(feature) {
     );
   }
   return lines.join('');
-}
-
-function bindInteractions(map) {
-  map.on('click', SEGMENT_LAYER_ID, (event) => {
-    const feature = event.features?.[0];
-    if (!feature || feature.geometry?.type !== 'LineString') return;
-    removePopup();
-    const coords = event.lngLat ?? feature.geometry.coordinates[0];
-    activePopup = new getMapLibre().Popup({ closeButton: false, offset: 18, className: MAP_POPUP_CLASS })
-      .setLngLat([coords.lng ?? coords[0], coords.lat ?? coords[1]])
-      .setHTML(renderSegmentPopup(feature))
-      .addTo(map);
-  });
-
-  map.on('click', POI_LAYER_ID, (event) => {
-    const feature = event.features?.[0];
-    if (!feature || feature.geometry?.type !== 'Point') return;
-    removePopup();
-    activePopup = new getMapLibre().Popup({ closeButton: false, offset: 18, className: MAP_POPUP_CLASS })
-      .setLngLat(feature.geometry.coordinates)
-      .setHTML(renderPoiPopup(feature))
-      .addTo(map);
-  });
-
-  map.on('mouseenter', SEGMENT_LAYER_ID, () => {
-    map.getCanvas().style.cursor = 'pointer';
-  });
-  map.on('mouseleave', SEGMENT_LAYER_ID, () => {
-    map.getCanvas().style.cursor = '';
-  });
-  map.on('mouseenter', POI_LAYER_ID, () => {
-    map.getCanvas().style.cursor = 'pointer';
-  });
-  map.on('mouseleave', POI_LAYER_ID, () => {
-    map.getCanvas().style.cursor = '';
-  });
 }
 
 function renderLegend(transportModes, legendEl) {
@@ -726,77 +680,184 @@ function populateRouteSelect(selectEl, routeIndex) {
   });
 }
 
-async function handleRouteSelection(routeId, dom) {
-  if (!routeId || !travelDataset || !mapInstance) return;
-  dom.status.textContent = 'Lade Route …';
-  try {
-    const entry = travelDataset.routeIndex.find((item) => item.id === routeId);
-    if (!entry) {
-      throw new Error('Route nicht gefunden');
-    }
-    const detail = await ensureRouteDetail(routeId);
-    const segments = { type: 'FeatureCollection', features: buildSegmentFeatures(detail, travelDataset.transportModes) };
-    const pois = { type: 'FeatureCollection', features: buildPoiFeatures(detail) };
-    updateMapCollections(mapInstance, segments, pois);
-    fitMapToCollections(mapInstance, segments, pois);
-    renderRouteInfo(entry, detail, dom);
-    renderModeList(segments.features, travelDataset.transportModes, dom);
-    renderPoiList(pois.features, dom);
-    dom.status.textContent = `Aktive Route: ${entry.name ?? routeId}`;
-    activeRouteId = routeId;
-  } catch (error) {
-    console.error('Route konnte nicht geladen werden', error);
-    dom.status.textContent = `Fehler: ${error instanceof Error ? error.message : 'Unbekannt'}`;
-  }
-}
-
-/**
- * Einstiegspunkt: HTML-Elemente referenzieren, Daten laden, MapLibre starten.
- */
-async function bootstrap() {
-  const dom = {
-    select: document.getElementById('route-select'),
-    status: document.getElementById('map-status'),
-    legend: document.getElementById('map-legend'),
-    routeTitle: document.getElementById('route-title'),
-    routeSummary: document.getElementById('route-summary'),
-    routeMeta: document.getElementById('route-meta'),
-    modeList: document.getElementById('mode-list'),
-    poiList: document.getElementById('poi-list')
-  };
-
-  try {
-    await loadDataset();
-  } catch (error) {
-    console.error('Dataset konnte nicht geladen werden', error);
-    if (dom.status) {
-      dom.status.textContent = `Fehler beim Laden der Basisdaten: ${error instanceof Error ? error.message : 'Unbekannt'}`;
-    }
-    return;
+class ChileRouteExplorer {
+  constructor() {
+    this.map = null;
+    this.dataset = null;
+    this.activeRouteId = null;
+    this.activePopup = null;
+    this.dom = typeof document === 'undefined'
+      ? {
+          select: null,
+          status: null,
+          legend: null,
+          routeTitle: null,
+          routeSummary: null,
+          routeMeta: null,
+          modeList: null,
+          poiList: null
+        }
+      : {
+          select: document.getElementById('route-select'),
+          status: document.getElementById('map-status'),
+          legend: document.getElementById('map-legend'),
+          routeTitle: document.getElementById('route-title'),
+          routeSummary: document.getElementById('route-summary'),
+          routeMeta: document.getElementById('route-meta'),
+          modeList: document.getElementById('mode-list'),
+          poiList: document.getElementById('poi-list')
+        };
   }
 
-  populateRouteSelect(dom.select, travelDataset.routeIndex);
-  renderLegend(travelDataset.transportModes, dom.legend);
-
-  mapInstance = initMap(travelDataset.meta?.map ?? null);
-  mapInstance.on('load', () => {
-    setupSources(mapInstance);
-    bindInteractions(mapInstance);
-    const defaultRoute = dom.select?.value || travelDataset.routeIndex[0]?.id;
-    if (defaultRoute) {
-      void handleRouteSelection(defaultRoute, dom);
+  setStatus(message) {
+    if (this.dom.status) {
+      this.dom.status.textContent = message;
     }
-  });
+  }
 
-  dom.select?.addEventListener('change', () => {
-    if (dom.select) {
-      void handleRouteSelection(dom.select.value, dom);
+  async init() {
+    if (typeof document === 'undefined') return;
+    this.setStatus('Lade Datensatz …');
+    try {
+      this.dataset = await loadDataset();
+    } catch (error) {
+      console.error('Dataset konnte nicht geladen werden', error);
+      this.setStatus(`Fehler beim Laden der Basisdaten: ${error instanceof Error ? error.message : 'Unbekannt'}`);
+      return;
     }
-  });
+
+    populateRouteSelect(this.dom.select, this.dataset.routeIndex);
+    renderLegend(this.dataset.transportModes, this.dom.legend);
+
+    try {
+      this.map = initMap(this.dataset.meta?.map ?? null);
+    } catch (error) {
+      console.error('Karte konnte nicht initialisiert werden', error);
+      this.setStatus(`Karte konnte nicht initialisiert werden: ${error instanceof Error ? error.message : 'Unbekannt'}`);
+      return;
+    }
+
+    this.map.on('load', () => {
+      setupSources(this.map);
+      this.bindInteractions();
+      const defaultRoute = this.dom.select?.value || this.dataset?.routeIndex?.[0]?.id;
+      if (defaultRoute) {
+        void this.selectRoute(defaultRoute);
+      } else {
+        this.setStatus('Keine Route im Datensatz gefunden.');
+      }
+    });
+
+    this.dom.select?.addEventListener('change', () => {
+      const nextRoute = this.dom.select?.value ?? '';
+      if (nextRoute) {
+        void this.selectRoute(nextRoute);
+      }
+    });
+
+    this.setStatus('Karte wird initialisiert …');
+  }
+
+  removePopup() {
+    if (this.activePopup) {
+      this.activePopup.remove();
+      this.activePopup = null;
+    }
+  }
+
+  showPopup(lngLat, html) {
+    if (!this.map) return;
+    this.removePopup();
+    this.activePopup = new getMapLibre().Popup({ closeButton: false, offset: 18, className: MAP_POPUP_CLASS })
+      .setLngLat(lngLat)
+      .setHTML(html)
+      .addTo(this.map);
+  }
+
+  bindInteractions() {
+    if (!this.map) return;
+    this.map.on('click', SEGMENT_LAYER_ID, (event) => {
+      const feature = event.features?.[0];
+      if (!feature || feature.geometry?.type !== 'LineString') return;
+      const coords = event.lngLat ?? feature.geometry.coordinates[0];
+      const lng = typeof coords.lng === 'number' ? coords.lng : coords[0];
+      const lat = typeof coords.lat === 'number' ? coords.lat : coords[1];
+      this.showPopup([lng, lat], renderSegmentPopup(feature));
+    });
+
+    this.map.on('click', POI_LAYER_ID, (event) => {
+      const feature = event.features?.[0];
+      if (!feature || feature.geometry?.type !== 'Point') return;
+      const [lng, lat] = feature.geometry.coordinates;
+      this.showPopup([lng, lat], renderPoiPopup(feature));
+    });
+
+    this.map.on('mouseenter', SEGMENT_LAYER_ID, () => {
+      this.map?.getCanvas().style.setProperty('cursor', 'pointer');
+    });
+    this.map.on('mouseleave', SEGMENT_LAYER_ID, () => {
+      this.map?.getCanvas().style.setProperty('cursor', '');
+    });
+    this.map.on('mouseenter', POI_LAYER_ID, () => {
+      this.map?.getCanvas().style.setProperty('cursor', 'pointer');
+    });
+    this.map.on('mouseleave', POI_LAYER_ID, () => {
+      this.map?.getCanvas().style.setProperty('cursor', '');
+    });
+
+    this.map.on('click', (event) => {
+      const features = this.map?.queryRenderedFeatures(event.point, { layers: [SEGMENT_LAYER_ID, POI_LAYER_ID] }) ?? [];
+      if (features.length === 0) {
+        this.removePopup();
+      }
+    });
+
+    ['dragstart', 'zoomstart', 'pitchstart'].forEach((eventName) => {
+      this.map?.on(eventName, () => this.removePopup());
+    });
+  }
+
+  async selectRoute(routeId) {
+    if (!routeId || !this.dataset) return;
+    if (this.dom.select && this.dom.select.value !== routeId) {
+      this.dom.select.value = routeId;
+    }
+    this.setStatus('Lade Route …');
+    this.removePopup();
+    try {
+      const entry = this.dataset.routeIndex.find((item) => item.id === routeId);
+      if (!entry) {
+        throw new Error('Route nicht gefunden');
+      }
+      if (this.activeRouteId === routeId) {
+        this.setStatus(`Aktive Route: ${entry.name ?? routeId}`);
+        return;
+      }
+      const detail = await ensureRouteDetail(routeId);
+      const segments = { type: 'FeatureCollection', features: buildSegmentFeatures(detail, this.dataset.transportModes) };
+      const pois = { type: 'FeatureCollection', features: buildPoiFeatures(detail) };
+
+      if (this.map) {
+        updateMapCollections(this.map, segments, pois);
+        fitMapToCollections(this.map, segments, pois);
+      }
+
+      renderRouteInfo(entry, detail, this.dom);
+      renderModeList(segments.features, this.dataset.transportModes, this.dom);
+      renderPoiList(pois.features, this.dom);
+
+      this.activeRouteId = routeId;
+      this.setStatus(`Aktive Route: ${entry.name ?? routeId}`);
+    } catch (error) {
+      console.error('Route konnte nicht geladen werden', error);
+      this.setStatus(`Fehler: ${error instanceof Error ? error.message : 'Unbekannt'}`);
+    }
+  }
 }
 
 if (typeof document !== 'undefined') {
   window.addEventListener('DOMContentLoaded', () => {
-    void bootstrap();
+    const explorer = new ChileRouteExplorer();
+    void explorer.init();
   });
 }
