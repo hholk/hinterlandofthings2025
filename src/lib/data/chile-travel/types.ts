@@ -15,6 +15,15 @@ export interface ResourceImage {
   license?: string;
 }
 
+export interface HighlightImage {
+  title: string;
+  image: string;
+  caption?: string;
+  source?: string;
+  sourceUrl?: string;
+  license?: string;
+}
+
 export interface RouteStop {
   id: string;
   name: string;
@@ -56,6 +65,7 @@ export interface RouteMeta {
   durationDays?: number;
   costEstimate?: number;
   highlights?: string[];
+  highlightImages?: HighlightImage[];
   scores?: Record<string, number>;
 }
 

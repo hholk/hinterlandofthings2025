@@ -1426,6 +1426,33 @@
           {#if selectedRoute.summary}
             <p>{selectedRoute.summary}</p>
           {/if}
+          {#if selectedRoute.meta?.highlightImages?.length}
+            <!-- Für Einsteiger:innen: Die Highlight-Fotos kommen zuerst und nutzen Scroll-Snap,
+                 damit die Motive schnell erfassbar sind und die Texte darunter nur ergänzen. -->
+            <div class="travel__highlight-gallery">
+              <h3>Foto-Highlights</h3>
+              <div class="travel__highlight-track">
+                {#each selectedRoute.meta.highlightImages as highlightImage}
+                  <figure class="travel__highlight-card">
+                    <img
+                      src={highlightImage.image}
+                      alt={highlightImage.caption ?? highlightImage.title}
+                      loading="lazy"
+                    />
+                    <figcaption>
+                      <strong>{highlightImage.title}</strong>
+                      {#if highlightImage.caption}
+                        <span>{highlightImage.caption}</span>
+                      {/if}
+                      {#if highlightImage.source}
+                        <small>{highlightImage.source}</small>
+                      {/if}
+                    </figcaption>
+                  </figure>
+                {/each}
+              </div>
+            </div>
+          {/if}
           {#if selectedRoute.meta?.highlights?.length}
             <div class="travel__stack-pill-group">
               <h3>Highlights</h3>
@@ -2618,6 +2645,74 @@
   .travel__stack-card-head p {
     margin: 0;
     color: #475569;
+  }
+
+  .travel__highlight-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .travel__highlight-gallery h3 {
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  .travel__highlight-track {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(14rem, 1fr);
+    gap: 0.75rem;
+    overflow-x: auto;
+    padding: 0.25rem 0 0.35rem;
+    scroll-snap-type: x mandatory;
+  }
+
+  .travel__highlight-track::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .travel__highlight-track::-webkit-scrollbar-thumb {
+    background: rgba(15, 23, 42, 0.2);
+    border-radius: 999px;
+  }
+
+  .travel__highlight-card {
+    background: white;
+    border-radius: 0.9rem;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+    overflow: hidden;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: start;
+  }
+
+  .travel__highlight-card img {
+    width: 100%;
+    height: 10.5rem;
+    object-fit: cover;
+  }
+
+  .travel__highlight-card figcaption {
+    padding: 0.7rem 0.9rem 0.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .travel__highlight-card strong {
+    font-size: 0.95rem;
+    color: #0f172a;
+  }
+
+  .travel__highlight-card span {
+    color: #475569;
+    line-height: 1.4;
+  }
+
+  .travel__highlight-card small {
+    color: #64748b;
   }
 
   .travel__stack-pill-group h3 {

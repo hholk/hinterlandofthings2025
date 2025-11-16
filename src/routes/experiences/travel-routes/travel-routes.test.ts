@@ -86,6 +86,19 @@ describe('travel route data access', () => {
       expect(entry.mapFocus?.center?.length).toBe(2);
     }
   });
+
+  it('liefert bebilderte Highlights für jede Route', () => {
+    for (const route of Object.values(chileTravelData.routes)) {
+      expect(route.meta?.highlights?.length ?? 0).toBeGreaterThan(0);
+      const images = route.meta?.highlightImages ?? [];
+      expect(images.length).toBeGreaterThan(0);
+
+      for (const image of images) {
+        expect(image.title.length).toBeGreaterThan(0);
+        expect(image.image.startsWith('http')).toBe(true);
+      }
+    }
+  });
 });
 
 describe('travel routes shell', () => {
