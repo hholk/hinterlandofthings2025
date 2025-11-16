@@ -99,4 +99,20 @@ describe('travel routes shell', () => {
     expect(source).toContain('Kostenübersicht');
     expect(source).toContain('travel__map-section');
   });
+
+  it('nutzt das Stack-Layout für die ausgewählte Route', () => {
+    const currentDir = dirname(fileURLToPath(import.meta.url));
+    const source = readFileSync(join(currentDir, '+page.svelte'), 'utf8');
+
+    expect(source).toContain('travel__stack-card');
+    expect(source).not.toContain('travel__spoiler');
+  });
+
+  it('zeichnet die Route über ein Canvas-Overlay als Fallback', () => {
+    const currentDir = dirname(fileURLToPath(import.meta.url));
+    const source = readFileSync(join(currentDir, '+page.svelte'), 'utf8');
+
+    expect(source).toContain('travel__map-overlay');
+    expect(source).toContain('setupOverlay');
+  });
 });
