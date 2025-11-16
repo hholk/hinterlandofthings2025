@@ -61,8 +61,14 @@
         "geometry": {
           "type": "LineString",
           "coordinates": [
-            [-70.7858, -33.3929],
-            [-72.9424, -41.4693]
+            [
+              -70.7858,
+              -33.3929
+            ],
+            [
+              -72.9424,
+              -41.4693
+            ]
           ]
         }
       },
@@ -72,8 +78,14 @@
         "geometry": {
           "type": "LineString",
           "coordinates": [
-            [-72.9424, -41.4693],
-            [-72.9854, -41.3170]
+            [
+              -72.9424,
+              -41.4693
+            ],
+            [
+              -72.9854,
+              -41.317
+            ]
           ]
         }
       },
@@ -83,8 +95,14 @@
         "geometry": {
           "type": "LineString",
           "coordinates": [
-            [-72.9854, -41.3170],
-            [-73.7732, -42.4721]
+            [
+              -72.9854,
+              -41.317
+            ],
+            [
+              -73.7732,
+              -42.4721
+            ]
           ]
         }
       }
@@ -97,13 +115,22 @@
       "station": {
         "name": "Puerto Montt – Tor zum Süden",
         "timezone": "America/Santiago",
-        "coordinates": { "lat": -41.4693, "lng": -72.9424 },
+        "coordinates": {
+          "lat": -41.4693,
+          "lng": -72.9424
+        },
         "description": "Ankunft in der Seenregion, kurzer Stadt- und Hafenrundgang.",
         "images": [
           {
             "url": "https://images.unsplash.com/photo-1500534314211-0a24cd38fcff?w=800&auto=format&fit=crop",
             "caption": "Blick auf die Bucht bei Puerto Montt",
             "credit": "Pablo Alvarado",
+            "license": "Unsplash License"
+          },
+          {
+            "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+            "caption": "Stimmungsbild aus Chile für die Travel Experience",
+            "credit": "Unsplash",
             "license": "Unsplash License"
           }
         ]
@@ -114,11 +141,17 @@
             "mode": "flight",
             "from": {
               "name": "Santiago (SCL)",
-              "coordinates": { "lat": -33.3929, "lng": -70.7858 }
+              "coordinates": {
+                "lat": -33.3929,
+                "lng": -70.7858
+              }
             },
             "to": {
               "name": "Puerto Montt (PMC)",
-              "coordinates": { "lat": -41.4389, "lng": -73.0940 }
+              "coordinates": {
+                "lat": -41.4389,
+                "lng": -73.094
+              }
             },
             "flightNumber": "LA143",
             "departure": "2026-01-04T09:00:00-03:00",
@@ -130,6 +163,12 @@
                 "url": "https://images.unsplash.com/photo-1472252369995-6d9b2177ed73?w=800&auto=format&fit=crop",
                 "caption": "Flug in den Süden",
                 "credit": "Isidora León",
+                "license": "Unsplash License"
+              },
+              {
+                "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+                "caption": "Stimmungsbild aus Chile für die Travel Experience",
+                "credit": "Unsplash",
                 "license": "Unsplash License"
               }
             ]
@@ -151,6 +190,12 @@
               "caption": "Fischstände am Hafen",
               "credit": "María Paz",
               "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+              "caption": "Stimmungsbild aus Chile für die Travel Experience",
+              "credit": "Unsplash",
+              "license": "Unsplash License"
             }
           ]
         }
@@ -168,6 +213,12 @@
               "caption": "Straße entlang des Llanquihue-Sees",
               "credit": "Pablo Alvarado",
               "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+              "caption": "Stimmungsbild aus Chile für die Travel Experience",
+              "credit": "Unsplash",
+              "license": "Unsplash License"
             }
           ]
         }
@@ -179,13 +230,22 @@
       "station": {
         "name": "Puerto Varas – Vulkan & See",
         "timezone": "America/Santiago",
-        "coordinates": { "lat": -41.3170, "lng": -72.9854 },
+        "coordinates": {
+          "lat": -41.317,
+          "lng": -72.9854
+        },
         "description": "Hübscher Ort im deutsch geprägten Seenland mit Blick auf den Vulkan Osorno.",
         "images": [
           {
             "url": "https://images.unsplash.com/photo-1526476148966-98bd039463ea?w=800&auto=format&fit=crop",
             "caption": "Promenade in Puerto Varas",
             "credit": "Cristobal Leon",
+            "license": "Unsplash License"
+          },
+          {
+            "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+            "caption": "Stimmungsbild aus Chile für die Travel Experience",
+            "credit": "Unsplash",
             "license": "Unsplash License"
           }
         ]
@@ -196,11 +256,17 @@
             "mode": "car",
             "from": {
               "name": "Puerto Montt",
-              "coordinates": { "lat": -41.4693, "lng": -72.9424 }
+              "coordinates": {
+                "lat": -41.4693,
+                "lng": -72.9424
+              }
             },
             "to": {
               "name": "Puerto Varas Zentrum",
-              "coordinates": { "lat": -41.3170, "lng": -72.9854 }
+              "coordinates": {
+                "lat": -41.317,
+                "lng": -72.9854
+              }
             },
             "distanceKm": 20,
             "durationMinutes": 25,
@@ -209,6 +275,12 @@
                 "url": "https://images.unsplash.com/photo-1493244040629-496f6d136cc3?w=800&auto=format&fit=crop",
                 "caption": "Küstenstraße zwischen den Städten",
                 "credit": "Carla Henríquez",
+                "license": "Unsplash License"
+              },
+              {
+                "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+                "caption": "Stimmungsbild aus Chile für die Travel Experience",
+                "credit": "Unsplash",
                 "license": "Unsplash License"
               }
             ]
@@ -230,6 +302,12 @@
               "caption": "Schneekappe des Osorno über dem See",
               "credit": "Jorge Molina",
               "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+              "caption": "Stimmungsbild aus Chile für die Travel Experience",
+              "credit": "Unsplash",
+              "license": "Unsplash License"
             }
           ]
         },
@@ -246,6 +324,12 @@
               "caption": "Kuchen und Kaffee mit Seeblick",
               "credit": "Javiera Larenas",
               "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+              "caption": "Stimmungsbild aus Chile für die Travel Experience",
+              "credit": "Unsplash",
+              "license": "Unsplash License"
             }
           ]
         }
@@ -254,7 +338,10 @@
         {
           "id": "r3-hotel-cumbres",
           "name": "Cumbres Puerto Varas",
-          "reviewHighlights": ["Seeblick", "Spa & Pool"],
+          "reviewHighlights": [
+            "Seeblick",
+            "Spa & Pool"
+          ],
           "avgNightlyRateEUR": 190,
           "url": "https://www.cumbrespuertovaras.com",
           "images": [
@@ -262,6 +349,12 @@
               "url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&auto=format&fit=crop",
               "caption": "Hotel mit Blick auf den Llanquihue-See",
               "credit": "Marcelo Díaz",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+              "caption": "Stimmungsbild aus Chile für die Travel Experience",
+              "credit": "Unsplash",
               "license": "Unsplash License"
             }
           ]
@@ -279,6 +372,12 @@
               "caption": "Straße durch das grüne Seenland",
               "credit": "Carla Henríquez",
               "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+              "caption": "Stimmungsbild aus Chile für die Travel Experience",
+              "credit": "Unsplash",
+              "license": "Unsplash License"
             }
           ]
         }
@@ -290,13 +389,22 @@
       "station": {
         "name": "Chiloé – Insel der Holzkirchen",
         "timezone": "America/Santiago",
-        "coordinates": { "lat": -42.4721, "lng": -73.7732 },
+        "coordinates": {
+          "lat": -42.4721,
+          "lng": -73.7732
+        },
         "description": "Fährfahrt auf die Insel, Holzkirchen (UNESCO) und Fischgerichte.",
         "images": [
           {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&auto=format&fit=crop",
             "caption": "Küste von Chiloé",
             "credit": "Nicolás Astudillo",
+            "license": "Unsplash License"
+          },
+          {
+            "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+            "caption": "Stimmungsbild aus Chile für die Travel Experience",
+            "credit": "Unsplash",
             "license": "Unsplash License"
           }
         ]
@@ -307,11 +415,17 @@
             "mode": "car-ferry",
             "from": {
               "name": "Pargua (Festland)",
-              "coordinates": { "lat": -41.7836, "lng": -73.4058 }
+              "coordinates": {
+                "lat": -41.7836,
+                "lng": -73.4058
+              }
             },
             "to": {
               "name": "Chacao (Chiloé)",
-              "coordinates": { "lat": -41.8170, "lng": -73.5030 }
+              "coordinates": {
+                "lat": -41.817,
+                "lng": -73.503
+              }
             },
             "durationMinutes": 30,
             "images": [
@@ -319,6 +433,12 @@
                 "url": "https://images.unsplash.com/photo-1521292270410-a8c53642e9d0?w=800&auto=format&fit=crop",
                 "caption": "Fähre nach Chiloé",
                 "credit": "Patricio Lagos",
+                "license": "Unsplash License"
+              },
+              {
+                "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+                "caption": "Stimmungsbild aus Chile für die Travel Experience",
+                "credit": "Unsplash",
                 "license": "Unsplash License"
               }
             ]
@@ -340,6 +460,12 @@
               "caption": "Typische Kirche auf Chiloé",
               "credit": "Laura Torres",
               "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+              "caption": "Stimmungsbild aus Chile für die Travel Experience",
+              "credit": "Unsplash",
+              "license": "Unsplash License"
             }
           ]
         }
@@ -356,6 +482,12 @@
               "url": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&auto=format&fit=crop",
               "caption": "Straße mit Blick auf Fjorde und Wald",
               "credit": "Cristobal Leon",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+              "caption": "Stimmungsbild aus Chile für die Travel Experience",
+              "credit": "Unsplash",
               "license": "Unsplash License"
             }
           ]

@@ -61,8 +61,14 @@
         "geometry": {
           "type": "LineString",
           "coordinates": [
-            [-70.7858, -33.3929],
-            [-71.6890, -45.9160]
+            [
+              -70.7858,
+              -33.3929
+            ],
+            [
+              -71.689,
+              -45.916
+            ]
           ]
         }
       },
@@ -72,8 +78,14 @@
         "geometry": {
           "type": "LineString",
           "coordinates": [
-            [-71.6890, -45.9160],
-            [-72.0683, -45.5712]
+            [
+              -71.689,
+              -45.916
+            ],
+            [
+              -72.0683,
+              -45.5712
+            ]
           ]
         }
       },
@@ -83,8 +95,14 @@
         "geometry": {
           "type": "LineString",
           "coordinates": [
-            [-72.0683, -45.5712],
-            [-72.5660, -44.3460]
+            [
+              -72.0683,
+              -45.5712
+            ],
+            [
+              -72.566,
+              -44.346
+            ]
           ]
         }
       }
@@ -97,13 +115,22 @@
       "station": {
         "name": "Coyhaique – Hauptstadt der Aysén-Region",
         "timezone": "America/Santiago",
-        "coordinates": { "lat": -45.5712, "lng": -72.0683 },
+        "coordinates": {
+          "lat": -45.5712,
+          "lng": -72.0683
+        },
         "description": "Kleinstadt umgeben von Bergen, Startpunkt für Carretera-Austral-Abenteuer.",
         "images": [
           {
             "url": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&auto=format&fit=crop",
             "caption": "Morgennebel über Bergen und Flüssen",
             "credit": "Sebastián Pardo",
+            "license": "Unsplash License"
+          },
+          {
+            "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+            "caption": "Stimmungsbild aus Chile für die Travel Experience",
+            "credit": "Unsplash",
             "license": "Unsplash License"
           }
         ]
@@ -114,11 +141,17 @@
             "mode": "flight",
             "from": {
               "name": "Santiago (SCL)",
-              "coordinates": { "lat": -33.3929, "lng": -70.7858 }
+              "coordinates": {
+                "lat": -33.3929,
+                "lng": -70.7858
+              }
             },
             "to": {
               "name": "Balmaceda (BBA)",
-              "coordinates": { "lat": -45.9160, "lng": -71.6890 }
+              "coordinates": {
+                "lat": -45.916,
+                "lng": -71.689
+              }
             },
             "flightNumber": "LA79X",
             "departure": "2026-01-04T08:30:00-03:00",
@@ -130,6 +163,12 @@
                 "caption": "Flug entlang der Anden",
                 "credit": "Isidora León",
                 "license": "Unsplash License"
+              },
+              {
+                "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+                "caption": "Stimmungsbild aus Chile für die Travel Experience",
+                "credit": "Unsplash",
+                "license": "Unsplash License"
               }
             ]
           },
@@ -137,11 +176,17 @@
             "mode": "car",
             "from": {
               "name": "Balmaceda Flughafen",
-              "coordinates": { "lat": -45.9160, "lng": -71.6890 }
+              "coordinates": {
+                "lat": -45.916,
+                "lng": -71.689
+              }
             },
             "to": {
               "name": "Coyhaique Zentrum",
-              "coordinates": { "lat": -45.5712, "lng": -72.0683 }
+              "coordinates": {
+                "lat": -45.5712,
+                "lng": -72.0683
+              }
             },
             "distanceKm": 55,
             "durationMinutes": 60,
@@ -150,6 +195,12 @@
                 "url": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&auto=format&fit=crop",
                 "caption": "Straße vom Flughafen nach Coyhaique",
                 "credit": "Sebastián Pardo",
+                "license": "Unsplash License"
+              },
+              {
+                "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+                "caption": "Stimmungsbild aus Chile für die Travel Experience",
+                "credit": "Unsplash",
                 "license": "Unsplash License"
               }
             ]
@@ -171,6 +222,12 @@
               "caption": "Blick über die Stadt",
               "credit": "Pablo Alvarado",
               "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+              "caption": "Stimmungsbild aus Chile für die Travel Experience",
+              "credit": "Unsplash",
+              "license": "Unsplash License"
             }
           ]
         }
@@ -188,6 +245,12 @@
               "caption": "Schotter- und Asphaltstraßen durch Regenwald",
               "credit": "Carla Henríquez",
               "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+              "caption": "Stimmungsbild aus Chile für die Travel Experience",
+              "credit": "Unsplash",
+              "license": "Unsplash License"
             }
           ]
         }
@@ -199,13 +262,22 @@
       "station": {
         "name": "Carretera Austral – Queulat Nationalpark",
         "timezone": "America/Santiago",
-        "coordinates": { "lat": -44.3460, "lng": -72.5660 },
+        "coordinates": {
+          "lat": -44.346,
+          "lng": -72.566
+        },
         "description": "Dichter Regenwald, Hängegletscher und Fjorde – sehr anders als trockene Atacama.",
         "images": [
           {
             "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&auto=format&fit=crop",
             "caption": "Nebelwald an der Carretera Austral",
             "credit": "Nicolás Astudillo",
+            "license": "Unsplash License"
+          },
+          {
+            "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+            "caption": "Stimmungsbild aus Chile für die Travel Experience",
+            "credit": "Unsplash",
             "license": "Unsplash License"
           }
         ]
@@ -216,11 +288,17 @@
             "mode": "car",
             "from": {
               "name": "Coyhaique",
-              "coordinates": { "lat": -45.5712, "lng": -72.0683 }
+              "coordinates": {
+                "lat": -45.5712,
+                "lng": -72.0683
+              }
             },
             "to": {
               "name": "Nähe Queulat-Nationalpark",
-              "coordinates": { "lat": -44.3460, "lng": -72.5660 }
+              "coordinates": {
+                "lat": -44.346,
+                "lng": -72.566
+              }
             },
             "distanceKm": 200,
             "durationMinutes": 240,
@@ -229,6 +307,12 @@
                 "url": "https://images.unsplash.com/photo-1493244040629-496f6d136cc3?w=800&auto=format&fit=crop",
                 "caption": "Straße durch Regenwald und Fjorde",
                 "credit": "Carla Henríquez",
+                "license": "Unsplash License"
+              },
+              {
+                "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+                "caption": "Stimmungsbild aus Chile für die Travel Experience",
+                "credit": "Unsplash",
                 "license": "Unsplash License"
               }
             ]
@@ -250,6 +334,12 @@
               "caption": "Gletscher über dem Regenwald",
               "credit": "Leonardo Miranda",
               "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+              "caption": "Stimmungsbild aus Chile für die Travel Experience",
+              "credit": "Unsplash",
+              "license": "Unsplash License"
             }
           ]
         }
@@ -267,6 +357,12 @@
               "caption": "Fjordlandschaft mit Wolken",
               "credit": "Camila Varela",
               "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+              "caption": "Stimmungsbild aus Chile für die Travel Experience",
+              "credit": "Unsplash",
+              "license": "Unsplash License"
             }
           ]
         }
@@ -278,13 +374,22 @@
       "station": {
         "name": "Rückkehr Coyhaique & Flug nach Santiago",
         "timezone": "America/Santiago",
-        "coordinates": { "lat": -45.5712, "lng": -72.0683 },
+        "coordinates": {
+          "lat": -45.5712,
+          "lng": -72.0683
+        },
         "description": "Rückweg Richtung Hauptstadt, Übergang zu nächster Route (z.B. Wein oder Atacama).",
         "images": [
           {
             "url": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&auto=format&fit=crop",
             "caption": "Flusslandschaft nahe Coyhaique",
             "credit": "Sebastián Pardo",
+            "license": "Unsplash License"
+          },
+          {
+            "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+            "caption": "Stimmungsbild aus Chile für die Travel Experience",
+            "credit": "Unsplash",
             "license": "Unsplash License"
           }
         ]
@@ -307,6 +412,12 @@
               "url": "https://images.unsplash.com/photo-1472252369995-6d9b2177ed73?w=800&auto=format&fit=crop",
               "caption": "Rückflug entlang der Andenkette",
               "credit": "Isidora León",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+              "caption": "Stimmungsbild aus Chile für die Travel Experience",
+              "credit": "Unsplash",
               "license": "Unsplash License"
             }
           ]

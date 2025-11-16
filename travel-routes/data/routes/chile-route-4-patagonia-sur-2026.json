@@ -61,8 +61,14 @@
         "geometry": {
           "type": "LineString",
           "coordinates": [
-            [-70.7858, -33.3929],
-            [-70.9171, -53.1638]
+            [
+              -70.7858,
+              -33.3929
+            ],
+            [
+              -70.9171,
+              -53.1638
+            ]
           ]
         }
       },
@@ -72,8 +78,14 @@
         "geometry": {
           "type": "LineString",
           "coordinates": [
-            [-70.9171, -53.1638],
-            [-72.5069, -51.7296]
+            [
+              -70.9171,
+              -53.1638
+            ],
+            [
+              -72.5069,
+              -51.7296
+            ]
           ]
         }
       },
@@ -83,8 +95,14 @@
         "geometry": {
           "type": "LineString",
           "coordinates": [
-            [-72.5069, -51.7296],
-            [-72.3450, -51.2530]
+            [
+              -72.5069,
+              -51.7296
+            ],
+            [
+              -72.345,
+              -51.253
+            ]
           ]
         }
       }
@@ -97,13 +115,22 @@
       "station": {
         "name": "Punta Arenas – Ende der Welt",
         "timezone": "America/Punta_Arenas",
-        "coordinates": { "lat": -53.1638, "lng": -70.9171 },
+        "coordinates": {
+          "lat": -53.1638,
+          "lng": -70.9171
+        },
         "description": "Stadt am Magellan-Sund, Ausgangspunkt für Pinguin- und Estancia-Ausflüge.",
         "images": [
           {
             "url": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&auto=format&fit=crop",
             "caption": "Blick auf Punta Arenas und den Sund",
             "credit": "Lina Morales",
+            "license": "Unsplash License"
+          },
+          {
+            "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+            "caption": "Stimmungsbild aus Chile für die Travel Experience",
+            "credit": "Unsplash",
             "license": "Unsplash License"
           }
         ]
@@ -114,11 +141,17 @@
             "mode": "flight",
             "from": {
               "name": "Santiago (SCL)",
-              "coordinates": { "lat": -33.3929, "lng": -70.7858 }
+              "coordinates": {
+                "lat": -33.3929,
+                "lng": -70.7858
+              }
             },
             "to": {
               "name": "Punta Arenas (PUQ)",
-              "coordinates": { "lat": -53.0026, "lng": -70.8545 }
+              "coordinates": {
+                "lat": -53.0026,
+                "lng": -70.8545
+              }
             },
             "flightNumber": "LA285",
             "departure": "2026-01-04T08:00:00-03:00",
@@ -129,6 +162,12 @@
                 "url": "https://images.unsplash.com/photo-1472252369995-6d9b2177ed73?w=800&auto=format&fit=crop",
                 "caption": "Flug über die patagonische Steppe",
                 "credit": "Isidora León",
+                "license": "Unsplash License"
+              },
+              {
+                "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+                "caption": "Stimmungsbild aus Chile für die Travel Experience",
+                "credit": "Unsplash",
                 "license": "Unsplash License"
               }
             ]
@@ -150,6 +189,12 @@
               "caption": "Plaza im Stadtzentrum",
               "credit": "Lina Morales",
               "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+              "caption": "Stimmungsbild aus Chile für die Travel Experience",
+              "credit": "Unsplash",
+              "license": "Unsplash License"
             }
           ]
         },
@@ -165,6 +210,12 @@
               "url": "https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=800&auto=format&fit=crop",
               "caption": "Pinguine auf einer Insel im Sund",
               "credit": "Ricardo Gutiérrez",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+              "caption": "Stimmungsbild aus Chile für die Travel Experience",
+              "credit": "Unsplash",
               "license": "Unsplash License"
             }
           ]
@@ -183,6 +234,12 @@
               "caption": "Bus durch die patagonische Steppe",
               "credit": "Mauricio Rojas",
               "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+              "caption": "Stimmungsbild aus Chile für die Travel Experience",
+              "credit": "Unsplash",
+              "license": "Unsplash License"
             }
           ]
         }
@@ -194,13 +251,22 @@
       "station": {
         "name": "Puerto Natales – Tor zu Torres del Paine",
         "timezone": "America/Punta_Arenas",
-        "coordinates": { "lat": -51.7296, "lng": -72.5069 },
+        "coordinates": {
+          "lat": -51.7296,
+          "lng": -72.5069
+        },
         "description": "Kleine Stadt am Fjord, Basecamp für Paine-Touren.",
         "images": [
           {
             "url": "https://images.unsplash.com/photo-1526403226655-2a0c2bb7e06d?w=800&auto=format&fit=crop",
             "caption": "Promenade von Puerto Natales",
             "credit": "Marcelo Díaz",
+            "license": "Unsplash License"
+          },
+          {
+            "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+            "caption": "Stimmungsbild aus Chile für die Travel Experience",
+            "credit": "Unsplash",
             "license": "Unsplash License"
           }
         ]
@@ -211,11 +277,17 @@
             "mode": "bus",
             "from": {
               "name": "Punta Arenas",
-              "coordinates": { "lat": -53.1638, "lng": -70.9171 }
+              "coordinates": {
+                "lat": -53.1638,
+                "lng": -70.9171
+              }
             },
             "to": {
               "name": "Puerto Natales",
-              "coordinates": { "lat": -51.7296, "lng": -72.5069 }
+              "coordinates": {
+                "lat": -51.7296,
+                "lng": -72.5069
+              }
             },
             "durationMinutes": 180,
             "images": [
@@ -223,6 +295,12 @@
                 "url": "https://images.unsplash.com/photo-1470123808288-1e59739c26da?w=800&auto=format&fit=crop",
                 "caption": "Überlandbus nach Puerto Natales",
                 "credit": "Mauricio Rojas",
+                "license": "Unsplash License"
+              },
+              {
+                "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+                "caption": "Stimmungsbild aus Chile für die Travel Experience",
+                "credit": "Unsplash",
                 "license": "Unsplash License"
               }
             ]
@@ -244,6 +322,12 @@
               "caption": "Fjord vor Puerto Natales",
               "credit": "Marcelo Díaz",
               "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+              "caption": "Stimmungsbild aus Chile für die Travel Experience",
+              "credit": "Unsplash",
+              "license": "Unsplash License"
             }
           ]
         }
@@ -261,6 +345,12 @@
               "caption": "Straße Richtung Paine-Massiv",
               "credit": "Hernán Díaz",
               "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+              "caption": "Stimmungsbild aus Chile für die Travel Experience",
+              "credit": "Unsplash",
+              "license": "Unsplash License"
             }
           ]
         }
@@ -272,13 +362,22 @@
       "station": {
         "name": "Torres del Paine Nationalpark",
         "timezone": "America/Punta_Arenas",
-        "coordinates": { "lat": -51.2530, "lng": -72.3450 },
+        "coordinates": {
+          "lat": -51.253,
+          "lng": -72.345
+        },
         "description": "Granittürme, Seen in Türkis und Gletscher – einer der ikonischsten Parks der Welt.",
         "images": [
           {
             "url": "https://images.unsplash.com/photo-1549897164-53a02427cbb9?w=800&auto=format&fit=crop",
             "caption": "Paine-Massiv über türkisfarbenem See",
             "credit": "Hernán Díaz",
+            "license": "Unsplash License"
+          },
+          {
+            "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+            "caption": "Stimmungsbild aus Chile für die Travel Experience",
+            "credit": "Unsplash",
             "license": "Unsplash License"
           }
         ]
@@ -289,11 +388,17 @@
             "mode": "car",
             "from": {
               "name": "Puerto Natales",
-              "coordinates": { "lat": -51.7296, "lng": -72.5069 }
+              "coordinates": {
+                "lat": -51.7296,
+                "lng": -72.5069
+              }
             },
             "to": {
               "name": "Parkeingang Laguna Amarga",
-              "coordinates": { "lat": -51.0764, "lng": -72.7151 }
+              "coordinates": {
+                "lat": -51.0764,
+                "lng": -72.7151
+              }
             },
             "distanceKm": 80,
             "durationMinutes": 120,
@@ -302,6 +407,12 @@
                 "url": "https://images.unsplash.com/photo-1549897164-53a02427cbb9?w=800&auto=format&fit=crop",
                 "caption": "Zufahrt zum Nationalpark",
                 "credit": "Hernán Díaz",
+                "license": "Unsplash License"
+              },
+              {
+                "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+                "caption": "Stimmungsbild aus Chile für die Travel Experience",
+                "credit": "Unsplash",
                 "license": "Unsplash License"
               }
             ]
@@ -323,6 +434,12 @@
               "caption": "Lagune an der Basis der Torres",
               "credit": "Hernán Díaz",
               "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+              "caption": "Stimmungsbild aus Chile für die Travel Experience",
+              "credit": "Unsplash",
+              "license": "Unsplash License"
             }
           ]
         },
@@ -338,6 +455,12 @@
               "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
               "caption": "Holzstege und Trails im Park",
               "credit": "Alejandro Barba",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+              "caption": "Stimmungsbild aus Chile für die Travel Experience",
+              "credit": "Unsplash",
               "license": "Unsplash License"
             }
           ]
@@ -355,6 +478,12 @@
               "url": "https://images.unsplash.com/photo-1470123808288-1e59739c26da?w=800&auto=format&fit=crop",
               "caption": "Bus entlang eines Fjords",
               "credit": "Mauricio Rojas",
+              "license": "Unsplash License"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
+              "caption": "Stimmungsbild aus Chile für die Travel Experience",
+              "credit": "Unsplash",
               "license": "Unsplash License"
             }
           ]
