@@ -1216,10 +1216,14 @@
           </div>
         {/if}
         {#if isMapFullscreen && fullscreenStopDetail}
+          <!-- Für Einsteiger:innen: Im Vollbild verzichten wir auf MapLibre-Popups
+               und zeigen die Infos als Panel, damit Touch-Geräte zuverlässig
+               lesen können. -->
           <article
             class="travel__map-fullscreen-panel"
             role="dialog"
             aria-live="polite"
+            aria-modal="true"
             aria-label={`Details zu ${fullscreenStopDetail.title ?? fullscreenStopDetail.name ?? 'Highlight'}`}
           >
             <div class="travel__map-fullscreen-panel__header">
@@ -2106,6 +2110,30 @@
     flex-direction: column;
     gap: 1rem;
     border-top: 1px solid rgba(148, 163, 184, 0.35);
+    border-radius: 1.25rem 1.25rem 0 0;
+    box-shadow: 0 24px 64px rgba(2, 6, 23, 0.55);
+    pointer-events: auto;
+  }
+
+  /* Für Einsteiger:innen: Per absolute Position sitzt das Panel direkt über der Karte,
+     sodass im Vollbild keine Scrollsprünge nötig sind. */
+  .travel__map--fullscreen .travel__map-fullscreen-panel {
+    position: absolute;
+    left: max(1rem, env(safe-area-inset-left));
+    right: auto;
+    bottom: max(1rem, env(safe-area-inset-bottom));
+    width: min(
+      420px,
+      calc(
+        100% - max(1rem, env(safe-area-inset-left)) - max(1rem, env(safe-area-inset-right))
+      )
+    );
+    max-height: min(70vh, 520px);
+    overflow: auto;
+    border-radius: 1rem;
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    backdrop-filter: blur(12px);
+    z-index: 8;
   }
 
   .travel__map-fullscreen-panel__header {
