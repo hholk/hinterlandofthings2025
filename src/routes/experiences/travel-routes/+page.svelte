@@ -151,7 +151,9 @@
   let selectedRoute: RouteDetail | null = data.travel.routes[selectedRouteId] ?? null;
   let selectedIndexEntry: RouteIndexEntry | null =
     data.travel.routeIndex.find((entry) => entry.id === selectedRouteId) ?? null;
-  let selectedMapFocus: RouteIndexEntry['mapFocus'] | null = selectedIndexEntry?.mapFocus ?? null;
+  // Für Einsteiger:innen: Der Index-Eintrag liefert uns weiterhin Dauer & Tags, obwohl
+  // die frühere Kartenansicht entfernt wurde. So bleiben alle Texte aktuell,
+  // ohne auf die MapLibre-UI angewiesen zu sein.
   let sliderSteps: TimelineStep[] = [];
   let stopDataIndex: StopDataIndex = createEmptyStopDataIndex();
 
@@ -259,20 +261,6 @@
     };
   });
 
-  function formatMapCenter(center: [number, number] | undefined | null) {
-    if (!Array.isArray(center) || center.length !== 2) return null;
-    const [lng, lat] = center;
-    if (!Number.isFinite(lng) || !Number.isFinite(lat)) return null;
-    const lngLabel = `${coordinateFormatter.format(Math.abs(lng))}° ${lng >= 0 ? 'O' : 'W'}`;
-    const latLabel = `${coordinateFormatter.format(Math.abs(lat))}° ${lat >= 0 ? 'N' : 'S'}`;
-    return `${lngLabel} · ${latLabel}`;
-  }
-
-  function formatNumber(value: number | undefined, options?: Intl.NumberFormatOptions) {
-    if (value === undefined || Number.isNaN(value)) return null;
-    return new Intl.NumberFormat('de-DE', options).format(value);
-  }
-
   function formatCurrency(value: number | undefined) {
     if (value === undefined || Number.isNaN(value)) return null;
     return currencyFormatter.format(value);
@@ -373,7 +361,6 @@
 
   $: selectedIndexEntry = data.travel.routeIndex.find((entry) => entry.id === selectedRouteId) ?? null;
   $: selectedRoute = data.travel.routes[selectedRouteId] ?? null;
-  $: selectedMapFocus = selectedIndexEntry?.mapFocus ?? null;
   $: stopDataIndex = buildStopDataIndex(selectedRoute);
   $: sliderSteps = buildTimeline(selectedRoute, selectedIndexEntry);
 </script>
@@ -438,40 +425,8 @@
         {/each}
       </ul>
     </nav>
-    {#if selectedMapFocus}
-      <section
-        class="travel__map-section"
-        aria-labelledby="travel-map-focus-title"
-      >
-        <div class="travel__map-section-head">
-          <p class="travel__map-section-label">Kartenausschnitt</p>
-          <h2 id="travel-map-focus-title">{selectedMapFocus.region ?? 'Karte'}</h2>
-          {#if selectedMapFocus.description}
-            <p>{selectedMapFocus.description}</p>
-          {/if}
-        </div>
-        <dl class="travel__map-section-meta">
-          <div>
-            <dt>Region</dt>
-            <dd>{selectedMapFocus.region ?? 'Chile'}</dd>
-          </div>
-          {#if formatMapCenter(selectedMapFocus.center)}
-            <div>
-              <dt>Koordinaten</dt>
-              <dd>{formatMapCenter(selectedMapFocus.center)}</dd>
-            </div>
-          {/if}
-          {#if selectedMapFocus.zoom !== undefined}
-            <div>
-              <dt>Empfohlener Zoom</dt>
-              <dd>{decimalFormatter.format(selectedMapFocus.zoom)}</dd>
-            </div>
-          {/if}
-        </dl>
-      </section>
-    {/if}
-
-    <article class="travel__detail" aria-labelledby="route-title">
+    {#if selectedRoute}
+      <article class="travel__detail" aria-labelledby="route-title">
       <header class="travel__detail-header">
         <div>
           <h2 id="route-title">{selectedRoute.name}</h2>
@@ -1021,10 +976,11 @@
         {/if}
 
       </div>
-    </article>
-  {:else}
-    <p class="travel__empty">Wähle eine Route aus, um Details zu sehen.</p>
-  {/if}
+      </article>
+    {:else}
+      <p class="travel__empty">Wähle eine Route aus, um Details zu sehen.</p>
+    {/if}
+  </div>
 </section>
 
 <style>
@@ -1065,53 +1021,6 @@
     display: flex;
     flex-direction: column;
     gap: 1.75rem;
-  }
-
-  .travel__map-section {
-    border-radius: 1.25rem;
-    background: rgba(15, 23, 42, 0.03);
-    border: 1px solid rgba(15, 23, 42, 0.08);
-    padding: 1.25rem 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-
-  .travel__map-section-head h2 {
-    font-size: 1.35rem;
-    margin: 0.15rem 0 0;
-  }
-
-  .travel__map-section-head p {
-    color: #475569;
-    margin: 0.25rem 0 0;
-  }
-
-  .travel__map-section-label {
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    font-size: 0.75rem;
-    color: #6366f1;
-    margin: 0;
-  }
-
-  .travel__map-section-meta {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 0.75rem;
-  }
-
-  .travel__map-section-meta dt {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: #64748b;
-  }
-
-  .travel__map-section-meta dd {
-    margin: 0.1rem 0 0;
-    font-weight: 600;
-    color: #0f172a;
   }
 
   .travel__routes {
