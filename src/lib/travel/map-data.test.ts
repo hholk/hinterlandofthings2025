@@ -32,4 +32,13 @@ describe('map-data collections', () => {
       segments.features.length + stops.features.length
     );
   });
+
+  it('ordnet Segmente der aktiven Route stabil nach der Reihenfolge', () => {
+    expect(route, 'Route fehlt für die Segment-Prüfung').not.toBeNull();
+    const segments: SegmentCollection = buildSegmentCollection(route, transportModes);
+    const orders = segments.features.map((feature) => feature.properties.order);
+
+    const sorted = [...orders].sort((a, b) => a - b);
+    expect(orders).toEqual(sorted);
+  });
 });
