@@ -35,7 +35,11 @@
     type StopProperties
   } from '../../../lib/travel/map-data';
   import { getDefaultSliderIndex } from '../../../lib/travel/timeline-helpers';
-  import { resolveMapVisibilityThreshold } from '../../../lib/travel/map-visibility';
+  import {
+    resolveMapVisibilityThreshold,
+    createSegmentOpacityExpression,
+    createStopOpacityExpression
+  } from '../../../lib/travel/map-visibility';
 
   type MapLibreModule = MapLibreNamespace;
   type MapLibreMap = import('maplibre-gl').Map;
@@ -402,7 +406,7 @@
         paint: {
           'line-color': ['coalesce', ['get', 'color'], '#2563eb'],
           'line-width': 4.5,
-          'line-opacity': createOpacityExpression(mapVisibilityThreshold)
+          'line-opacity': createSegmentOpacityExpression(mapVisibilityThreshold)
         }
       });
       mapInstance.addLayer({
@@ -417,7 +421,7 @@
         paint: {
           'line-color': ['coalesce', ['get', 'color'], '#2563eb'],
           'line-width': 4.5,
-          'line-opacity': createOpacityExpression(mapVisibilityThreshold),
+          'line-opacity': createSegmentOpacityExpression(mapVisibilityThreshold),
           'line-dasharray': ['get', 'dashArray']
         }
       });
@@ -437,7 +441,8 @@
           'circle-color': '#1e293b',
           'circle-stroke-color': '#ffffff',
           'circle-stroke-width': 2,
-          'circle-opacity': 0.95
+          'circle-opacity': createStopOpacityExpression(mapVisibilityThreshold),
+          'circle-stroke-opacity': createStopOpacityExpression(mapVisibilityThreshold)
         }
       });
       mapInstance.addLayer({
@@ -479,14 +484,6 @@
     updateMapVisibility(mapVisibilityThreshold);
   }
 
-  function createOpacityExpression(threshold: number) {
-    return ['case', ['<=', ['get', 'order'], threshold], 0.94, 0.18];
-  }
-
-  function createStopOpacityExpression(threshold: number) {
-    return ['case', ['<=', ['get', 'order'], threshold], 1, 0.3];
-  }
-
   function updateMapVisibility(threshold: number) {
     if (!mapInstance) return;
 
@@ -494,14 +491,14 @@
       mapInstance.setPaintProperty(
         ROUTE_SEGMENT_LAYER,
         'line-opacity',
-        createOpacityExpression(threshold)
+        createSegmentOpacityExpression(threshold)
       );
     }
     if (mapInstance.getLayer(ROUTE_SEGMENT_LAYER_DASHED)) {
       mapInstance.setPaintProperty(
         ROUTE_SEGMENT_LAYER_DASHED,
         'line-opacity',
-        createOpacityExpression(threshold)
+        createSegmentOpacityExpression(threshold)
       );
     }
     if (mapInstance.getLayer(ROUTE_STOP_LAYER)) {
