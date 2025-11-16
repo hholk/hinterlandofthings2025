@@ -40,6 +40,10 @@
     createSegmentOpacityExpression,
     createStopOpacityExpression
   } from '../../../lib/travel/map-visibility';
+  import {
+    createFallbackProjector,
+    type OverlayProjector
+  } from '../../../lib/travel/overlay-projection';
 
   type MapLibreModule = MapLibreNamespace & { workerClass?: typeof Worker };
   type MapLibreMap = import('maplibre-gl').Map;
@@ -192,6 +196,7 @@
   let segmentCollection: SegmentCollection = EMPTY_SEGMENTS;
   let stopCollection: StopCollection = EMPTY_STOPS;
   let allCoordinates: LngLatTuple[] = [];
+  let overlayBounds: [LngLatTuple, LngLatTuple] | null = null;
   let sliderSteps: TimelineStep[] = [];
   let sliderValue = 0;
   let sliderMax = 0;
@@ -209,6 +214,7 @@
   let mapLoaded = false;
   let loadError: string | null = null;
   let resizeCleanup: (() => void) | null = null;
+  let fallbackResizeCleanup: (() => void) | null = null;
   let activePopup: Popup | null = null;
   let isMapFullscreen = false;
   let isLegendVisible = true;
@@ -474,22 +480,47 @@
     return window.devicePixelRatio || 1;
   }
 
-  function projectCoordinate(coordinate: LngLatTuple | number[]): { x: number; y: number } | null {
-    if (!mapInstance) return null;
-    if (!Array.isArray(coordinate) || coordinate.length < 2) return null;
-    const [lng, lat] = coordinate;
-    if (!Number.isFinite(lng) || !Number.isFinite(lat)) return null;
-    const point = mapInstance.project({ lng, lat });
-    if (!point) return null;
-    return { x: point.x, y: point.y };
+  function initializeOverlayCanvas() {
+    if (!mapOverlayCanvas || overlayContext) return;
+    const context = mapOverlayCanvas.getContext('2d');
+    if (!context) return;
+    overlayContext = context;
+  }
+
+  function resolveOverlaySize() {
+    if (mapInstance) {
+      const mapCanvas = mapInstance.getCanvas();
+      return { width: mapCanvas.clientWidth, height: mapCanvas.clientHeight };
+    }
+    if (mapContainer) {
+      return { width: mapContainer.clientWidth, height: mapContainer.clientHeight };
+    }
+    if (mapOverlayCanvas) {
+      return { width: mapOverlayCanvas.clientWidth, height: mapOverlayCanvas.clientHeight };
+    }
+    return null;
+  }
+
+  function getOverlayProjector(width: number, height: number): OverlayProjector | null {
+    if (mapInstance && mapLoaded) {
+      return (coordinate) => {
+        if (!Array.isArray(coordinate) || coordinate.length < 2) return null;
+        const [lng, lat] = coordinate;
+        if (!Number.isFinite(lng) || !Number.isFinite(lat)) return null;
+        const point = mapInstance.project({ lng, lat });
+        if (!point) return null;
+        return { x: point.x, y: point.y };
+      };
+    }
+    // Für Einsteiger:innen: Wenn MapLibre streikt, zeichnen wir trotzdem, indem wir die Bounding-Box
+    // der Route linear auf das Canvas projizieren.
+    return createFallbackProjector(overlayBounds, width, height);
   }
 
   function setupOverlay() {
     if (!mapInstance || !mapOverlayCanvas) return;
-    const context = mapOverlayCanvas.getContext('2d');
-    if (!context) return;
-
-    overlayContext = context;
+    initializeOverlayCanvas();
+    if (!overlayContext) return;
 
     const handleRender = () => renderOverlay();
     const handleResize = () => {
@@ -530,14 +561,15 @@
 
   function drawOverlaySegments(
     segments: SegmentCollection = segmentCollection,
-    threshold: number = mapVisibilityThreshold
+    threshold: number = mapVisibilityThreshold,
+    projector: OverlayProjector | null
   ) {
-    if (!overlayContext) return;
+    if (!overlayContext || !projector) return;
     for (const feature of segments.features) {
       if (feature.geometry.type !== 'LineString') continue;
       const coordinates = feature.geometry.coordinates as LngLatTuple[];
       const points = coordinates
-        .map((coordinate) => projectCoordinate(coordinate))
+        .map((coordinate) => projector(coordinate))
         .filter((point): point is { x: number; y: number } => Boolean(point));
       if (points.length < 2) continue;
 
@@ -559,13 +591,14 @@
 
   function drawOverlayStops(
     stops: StopCollection = stopCollection,
-    threshold: number = mapVisibilityThreshold
+    threshold: number = mapVisibilityThreshold,
+    projector: OverlayProjector | null
   ) {
-    if (!overlayContext) return;
+    if (!overlayContext || !projector) return;
     for (const feature of stops.features) {
       if (feature.geometry.type !== 'Point') continue;
       const coordinate = feature.geometry.coordinates as LngLatTuple;
-      const point = projectCoordinate(coordinate);
+      const point = projector(coordinate);
       if (!point) continue;
       const opacity = resolveOverlayOpacity(feature.properties?.order, threshold, 'stop');
 
@@ -596,10 +629,11 @@
     stops: StopCollection = stopCollection,
     threshold: number = mapVisibilityThreshold
   ) {
-    if (!mapInstance || !mapOverlayCanvas || !overlayContext) return;
-    const mapCanvas = mapInstance.getCanvas();
-    const width = mapCanvas.clientWidth;
-    const height = mapCanvas.clientHeight;
+    if (!mapOverlayCanvas) return;
+    initializeOverlayCanvas();
+    const size = resolveOverlaySize();
+    if (!size || !overlayContext) return;
+    const { width, height } = size;
     if (!width || !height) return;
     const devicePixelRatio = getDevicePixelRatio();
     const pixelWidth = Math.round(width * devicePixelRatio);
@@ -614,8 +648,13 @@
     overlayContext.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
     overlayContext.clearRect(0, 0, width, height);
 
-    drawOverlaySegments(segments, threshold);
-    drawOverlayStops(stops, threshold);
+    const projector = getOverlayProjector(width, height);
+    if (!projector) {
+      return;
+    }
+
+    drawOverlaySegments(segments, threshold, projector);
+    drawOverlayStops(stops, threshold, projector);
   }
 
   function updateMapData(
@@ -789,7 +828,22 @@
   onMount(() => {
     if (!mapContainer) return;
 
+    initializeOverlayCanvas();
+    renderOverlay(segmentCollection, stopCollection, mapVisibilityThreshold);
+
     let cancelled = false;
+
+    if (typeof window !== 'undefined') {
+      const handleWindowResize = () => {
+        if (!mapLoaded && overlayContext) {
+          renderOverlay(segmentCollection, stopCollection, mapVisibilityThreshold);
+        }
+      };
+      window.addEventListener('resize', handleWindowResize, { passive: true });
+      fallbackResizeCleanup = () => {
+        window.removeEventListener('resize', handleWindowResize);
+      };
+    }
 
     const boot = async () => {
       try {
@@ -863,6 +917,8 @@
 
     return () => {
       cancelled = true;
+      fallbackResizeCleanup?.();
+      fallbackResizeCleanup = null;
       resizeCleanup?.();
       resizeCleanup = null;
       overlayCleanup?.();
@@ -993,6 +1049,7 @@
   $: segmentCollection = buildSegmentCollection(selectedRoute, data.travel.transportModes);
   $: stopCollection = buildStopCollection(selectedRoute);
   $: allCoordinates = collectAllCoordinates(segmentCollection, stopCollection);
+  $: overlayBounds = calculateBoundingBox(allCoordinates);
   $: sliderSteps = buildTimeline(selectedRoute, selectedIndexEntry);
   $: sliderMax = sliderSteps.length > 0 ? sliderSteps.length - 1 : 0;
   $: sliderLabel = sliderSteps[sliderValue]?.label ?? 'Start';
@@ -1009,6 +1066,9 @@
   }
   $: if (mapLoaded) {
     updateMapVisibility(mapVisibilityThreshold);
+  }
+  $: if (overlayContext && !mapLoaded) {
+    renderOverlay(segmentCollection, stopCollection, mapVisibilityThreshold);
   }
 </script>
 
