@@ -7,10 +7,10 @@
  * niemals etwas ausgeblendet werden – daher liefern wir in diesem
  * Fall bewusst einen sehr hohen Grenzwert.
  */
-const ACTIVE_SEGMENT_OPACITY = 1;
-const INACTIVE_SEGMENT_OPACITY = 0.7; // 30 % transparent, damit die ganze Route sichtbar bleibt.
-const ACTIVE_STOP_OPACITY = 1;
-const INACTIVE_STOP_OPACITY = 0.7;
+export const ACTIVE_SEGMENT_OPACITY = 1;
+export const INACTIVE_SEGMENT_OPACITY = 0.4; // 60 % transparent, doppelt so stark wie zuvor.
+export const ACTIVE_STOP_OPACITY = 1;
+export const INACTIVE_STOP_OPACITY = 0.4;
 
 export function resolveMapVisibilityThreshold(stepCount: number, sliderValue: number): number {
   if (!Number.isFinite(sliderValue)) {

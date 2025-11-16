@@ -20,7 +20,9 @@ describe('createFallbackProjector', () => {
   it('clamped Koordinaten bleiben im Canvas', () => {
     const projector = createFallbackProjector(bounds, 100, 50, { paddingRatio: 0 });
     const outside = projector?.([-90, -10]);
-    expect(outside).toEqual({ x: 0, y: 50 });
+    // Für Einsteiger:innen: Canvas misst Y von oben nach unten. Punkte nördlich der Bounding-Box
+    // werden deshalb am oberen Rand festgehalten (y = 0) und nicht nach unten gespiegelt.
+    expect(outside).toEqual({ x: 0, y: 0 });
   });
 
   it('liefert null bei ungültigen Eingaben', () => {
