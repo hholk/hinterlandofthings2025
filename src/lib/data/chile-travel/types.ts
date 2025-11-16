@@ -59,6 +59,13 @@ export interface RouteMeta {
   scores?: Record<string, number>;
 }
 
+export interface RouteMapFocus {
+  center: [number, number];
+  zoom?: number;
+  region?: string;
+  description?: string;
+}
+
 export interface RouteMetrics {
   totalDistanceKm?: number;
   estimatedCarbonKg?: number;
@@ -251,6 +258,7 @@ export interface RouteDetail {
   mapLayers?: {
     dailySegments?: DailySegmentDefinition[];
   };
+  mapFocus?: RouteMapFocus;
   source?: string;
   [key: string]: unknown;
 }
@@ -265,6 +273,7 @@ export interface RouteIndexEntry {
   meta?: RouteMeta;
   metrics?: RouteMetrics;
   searchTokens?: string[];
+  mapFocus?: RouteMapFocus;
 }
 
 export interface TransportMode {

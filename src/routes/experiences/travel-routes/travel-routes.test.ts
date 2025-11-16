@@ -77,6 +77,15 @@ describe('travel route data access', () => {
     // dass wir die JSON-Dokumentation korrekt befüllt und verstanden haben.
     expect(hasRenderableRoute).toBe(true);
   });
+
+  it('liefert pro Route einen Map-Fokus mit Koordinaten', () => {
+    for (const entry of chileTravelData.routeIndex) {
+      expect(entry.mapFocus).toBeTruthy();
+      expect(entry.mapFocus?.center).toBeDefined();
+      expect(Array.isArray(entry.mapFocus?.center)).toBe(true);
+      expect(entry.mapFocus?.center?.length).toBe(2);
+    }
+  });
 });
 
 describe('travel routes shell', () => {
@@ -88,5 +97,6 @@ describe('travel routes shell', () => {
     expect(source).toContain('travel__map-slider');
     expect(source).toContain('Stationen & Stopps');
     expect(source).toContain('Kostenübersicht');
+    expect(source).toContain('travel__map-section');
   });
 });
