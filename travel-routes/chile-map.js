@@ -25,6 +25,8 @@ let travelDataset = null;
 const DEFAULT_TILE = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
 const DEFAULT_GLYPHS = 'https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf';
 const DEFAULT_ATTRIBUTION = '© OpenStreetMap-Mitwirkende';
+const GEOGRAPHIC_TILE = 'https://tile.opentopomap.org/{z}/{x}/{y}.png';
+const GEOGRAPHIC_ATTRIBUTION = 'Höhenlinien: SRTM | Kartendaten © OpenStreetMap-Mitwirkende | Style: OpenTopoMap (CC-BY-SA)';
 const DEFAULT_CENTER = [-70.5, -30];
 const DEFAULT_ZOOM = 4.2;
 
@@ -415,16 +417,34 @@ export function resolveTileTemplates(mapConfig) {
   return [DEFAULT_TILE];
 }
 
+export function getBasemapOptions(mapConfig) {
+  const standardTiles = resolveTileTemplates(mapConfig);
+  return {
+    standard: {
+      tiles: standardTiles,
+      attribution: mapConfig?.attribution ?? DEFAULT_ATTRIBUTION
+    },
+    geographic: {
+      tiles: [GEOGRAPHIC_TILE],
+      attribution: GEOGRAPHIC_ATTRIBUTION
+    }
+  };
+}
+
 export function createMapStyle(mapConfig) {
+  // Für Einsteiger:innen: Die Karte startet immer mit einer Raster-Basiskarte.
+  // Über das UI lässt sie sich später per Toggle auf die geografische Variante
+  // umstellen, ohne dass die restlichen Layer angepasst werden müssen.
+  const basemap = getBasemapOptions(mapConfig).standard;
   const style = {
     version: 8,
     glyphs: mapConfig?.glyphsUrl ?? DEFAULT_GLYPHS,
     sources: {
       osm: {
         type: 'raster',
-        tiles: resolveTileTemplates(mapConfig),
+        tiles: basemap.tiles,
         tileSize: 256,
-        attribution: mapConfig?.attribution ?? DEFAULT_ATTRIBUTION,
+        attribution: basemap.attribution,
         maxzoom: 14
       }
     },
@@ -453,6 +473,32 @@ function initMap(mapConfig) {
   map.addControl(new maplibre.NavigationControl({ showCompass: false }), 'top-right');
   map.addControl(new maplibre.AttributionControl({ compact: true }));
   return map;
+}
+
+function ensureGeographicBasemap(map, mapConfig) {
+  if (map.getSource('geographic')) return;
+  const basemap = getBasemapOptions(mapConfig).geographic;
+  map.addSource('geographic', {
+    type: 'raster',
+    tiles: basemap.tiles,
+    tileSize: 256,
+    attribution: basemap.attribution,
+    maxzoom: 15
+  });
+  const beforeId = map.getStyle()?.layers?.[0]?.id ?? undefined;
+  map.addLayer(
+    { id: 'geographic-base', type: 'raster', source: 'geographic', layout: { visibility: 'none' } },
+    beforeId
+  );
+}
+
+function setBasemapVisibility(map, active) {
+  if (map.getLayer('osm-base')) {
+    map.setLayoutProperty('osm-base', 'visibility', active === 'standard' ? 'visible' : 'none');
+  }
+  if (map.getLayer('geographic-base')) {
+    map.setLayoutProperty('geographic-base', 'visibility', active === 'geographic' ? 'visible' : 'none');
+  }
 }
 
 function setupSources(map) {
@@ -684,28 +730,38 @@ class ChileRouteExplorer {
   constructor() {
     this.map = null;
     this.dataset = null;
+    this.mapConfig = null;
     this.activeRouteId = null;
     this.activePopup = null;
+    this.activeBasemap = 'standard';
     this.dom = typeof document === 'undefined'
       ? {
           select: null,
           status: null,
           legend: null,
+          legendToggle: null,
+          fullscreenToggle: null,
+          basemapToggle: null,
           routeTitle: null,
           routeSummary: null,
           routeMeta: null,
           modeList: null,
-          poiList: null
+          poiList: null,
+          mapContainer: null
         }
       : {
           select: document.getElementById('route-select'),
           status: document.getElementById('map-status'),
           legend: document.getElementById('map-legend'),
+          legendToggle: document.getElementById('legend-toggle'),
+          fullscreenToggle: document.getElementById('fullscreen-toggle'),
+          basemapToggle: document.getElementById('basemap-toggle'),
           routeTitle: document.getElementById('route-title'),
           routeSummary: document.getElementById('route-summary'),
           routeMeta: document.getElementById('route-meta'),
           modeList: document.getElementById('mode-list'),
-          poiList: document.getElementById('poi-list')
+          poiList: document.getElementById('poi-list'),
+          mapContainer: document.querySelector('.map-canvas')
         };
   }
 
@@ -715,11 +771,86 @@ class ChileRouteExplorer {
     }
   }
 
+  bindUiControls() {
+    // Für Einsteiger:innen: Diese Buttons sind rein für die UI gedacht und
+    // beeinflussen die Karte erst, nachdem MapLibre fertig geladen wurde.
+    this.dom.legendToggle?.addEventListener('click', () => this.toggleLegend());
+    this.dom.basemapToggle?.addEventListener('click', () => this.toggleBasemap());
+    this.dom.fullscreenToggle?.addEventListener('click', () => this.toggleFullscreen());
+
+    if (typeof document !== 'undefined') {
+      document.addEventListener('fullscreenchange', () => this.syncFullscreenButton());
+    }
+
+    this.syncFullscreenButton();
+    this.syncBasemapButton();
+  }
+
+  toggleLegend() {
+    if (!this.dom.legend) return;
+    const willHide = !this.dom.legend.classList.contains('is-hidden');
+    this.dom.legend.classList.toggle('is-hidden');
+    const isHidden = this.dom.legend.classList.contains('is-hidden');
+    this.dom.legend.setAttribute('aria-hidden', String(isHidden));
+    if (this.dom.legendToggle) {
+      this.dom.legendToggle.setAttribute('aria-pressed', String(!isHidden));
+      this.dom.legendToggle.querySelector('.map-button__label').textContent = isHidden
+        ? 'Legende anzeigen'
+        : 'Legende ausblenden';
+    }
+    if (!willHide) {
+      this.dom.legend?.focus?.();
+    }
+  }
+
+  toggleFullscreen() {
+    const container = this.dom.mapContainer ?? document.documentElement;
+    const isFullscreen = document.fullscreenElement === container;
+    if (!isFullscreen) {
+      void container.requestFullscreen?.();
+    } else {
+      void document.exitFullscreen?.();
+    }
+    this.syncFullscreenButton();
+  }
+
+  syncFullscreenButton() {
+    const button = this.dom.fullscreenToggle;
+    if (!button) return;
+    const icon = button.querySelector('.map-button__icon');
+    const isFullscreen = document.fullscreenElement === (this.dom.mapContainer ?? document.documentElement);
+    button.setAttribute('aria-pressed', String(isFullscreen));
+    button.querySelector('.map-button__label').textContent = isFullscreen ? 'Vollbild beenden' : 'Vollbild';
+    if (icon) {
+      icon.classList.toggle('icon-fullscreen', !isFullscreen);
+      icon.classList.toggle('icon-fullscreen-exit', isFullscreen);
+    }
+  }
+
+  toggleBasemap() {
+    if (!this.map) return;
+    ensureGeographicBasemap(this.map, this.mapConfig);
+    this.activeBasemap = this.activeBasemap === 'standard' ? 'geographic' : 'standard';
+    setBasemapVisibility(this.map, this.activeBasemap);
+    this.syncBasemapButton();
+  }
+
+  syncBasemapButton() {
+    const button = this.dom.basemapToggle;
+    if (!button) return;
+    const isGeographic = this.activeBasemap === 'geographic';
+    button.setAttribute('aria-pressed', String(isGeographic));
+    button.querySelector('.map-button__label').textContent = isGeographic
+      ? 'Standardkarte'
+      : 'Geografische Karte';
+  }
+
   async init() {
     if (typeof document === 'undefined') return;
     this.setStatus('Lade Datensatz …');
     try {
       this.dataset = await loadDataset();
+      this.mapConfig = this.dataset.meta?.map ?? null;
     } catch (error) {
       console.error('Dataset konnte nicht geladen werden', error);
       this.setStatus(`Fehler beim Laden der Basisdaten: ${error instanceof Error ? error.message : 'Unbekannt'}`);
@@ -730,14 +861,18 @@ class ChileRouteExplorer {
     renderLegend(this.dataset.transportModes, this.dom.legend);
 
     try {
-      this.map = initMap(this.dataset.meta?.map ?? null);
+      this.map = initMap(this.mapConfig);
     } catch (error) {
       console.error('Karte konnte nicht initialisiert werden', error);
       this.setStatus(`Karte konnte nicht initialisiert werden: ${error instanceof Error ? error.message : 'Unbekannt'}`);
       return;
     }
 
+    this.bindUiControls();
+
     this.map.on('load', () => {
+      ensureGeographicBasemap(this.map, this.mapConfig);
+      setBasemapVisibility(this.map, this.activeBasemap);
       setupSources(this.map);
       this.bindInteractions();
       const defaultRoute = this.dom.select?.value || this.dataset?.routeIndex?.[0]?.id;

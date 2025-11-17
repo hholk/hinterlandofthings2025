@@ -7,6 +7,7 @@ import {
   calculateBounds,
   normalizeCoordinate,
   resolveTileTemplates,
+  getBasemapOptions,
   createMapStyle
 } from './chile-map.js';
 
@@ -181,4 +182,12 @@ test('createMapStyle always returns the raster style used by the UI theme', () =
   assert.equal(style.layers?.[0]?.id, 'osm-base');
   assert.equal(style.sources?.osm?.type, 'raster');
   assert.ok(Array.isArray(style.sources?.osm?.tiles));
+});
+
+test('getBasemapOptions exposes both standard and geographic tiles', () => {
+  const basemaps = getBasemapOptions({ tileLayer: 'https://tile.custom/{z}/{x}/{y}.png', attribution: 'Custom' });
+  assert.equal(basemaps.standard.attribution, 'Custom');
+  assert.deepEqual(basemaps.standard.tiles, ['https://tile.custom/{z}/{x}/{y}.png']);
+  assert.ok(Array.isArray(basemaps.geographic.tiles));
+  assert.equal(basemaps.geographic.tiles[0], 'https://tile.opentopomap.org/{z}/{x}/{y}.png');
 });

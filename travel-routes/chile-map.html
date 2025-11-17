@@ -98,6 +98,7 @@
         flex-wrap: wrap;
         gap: 0.75rem;
         align-items: center;
+        justify-content: space-between;
       }
 
       .map-toolbar label {
@@ -113,6 +114,110 @@
         border: 1px solid rgba(148, 163, 184, 0.4);
         padding: 0.6rem 0.85rem;
         font-size: 1rem;
+      }
+
+      .map-actions {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+      }
+
+      .map-button {
+        display: inline-flex;
+        gap: 0.4rem;
+        align-items: center;
+        padding: 0.55rem 0.9rem;
+        border-radius: 0.65rem;
+        border: 1px solid rgba(148, 163, 184, 0.3);
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--text);
+        cursor: pointer;
+        font-weight: 600;
+        transition: background 150ms ease, border-color 150ms ease, transform 150ms ease;
+      }
+
+      .map-button:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 2px;
+      }
+
+      .map-button:hover {
+        background: rgba(255, 255, 255, 0.08);
+        border-color: rgba(59, 130, 246, 0.5);
+        transform: translateY(-1px);
+      }
+
+      .map-button[aria-pressed='true'] {
+        background: rgba(59, 130, 246, 0.12);
+        border-color: rgba(59, 130, 246, 0.6);
+      }
+
+      .map-button__icon {
+        width: 1rem;
+        height: 1rem;
+        position: relative;
+      }
+
+      .icon-fullscreen,
+      .icon-fullscreen-exit {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+
+      .icon-fullscreen::before,
+      .icon-fullscreen::after,
+      .icon-fullscreen-exit::before,
+      .icon-fullscreen-exit::after {
+        content: '';
+        position: absolute;
+        width: 40%;
+        height: 40%;
+        border: 2px solid currentColor;
+      }
+
+      .icon-fullscreen::before {
+        top: 0;
+        left: 0;
+        border-right: none;
+        border-bottom: none;
+        border-radius: 4px 0 0 0;
+      }
+
+      .icon-fullscreen::after {
+        bottom: 0;
+        right: 0;
+        border-left: none;
+        border-top: none;
+        border-radius: 0 0 4px 0;
+      }
+
+      .icon-fullscreen-exit::before {
+        top: 0;
+        right: 0;
+        border-left: none;
+        border-bottom: none;
+        border-radius: 0 4px 0 0;
+      }
+
+      .icon-fullscreen-exit::after {
+        bottom: 0;
+        left: 0;
+        border-right: none;
+        border-top: none;
+        border-radius: 0 0 0 4px;
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
       }
 
       #map {
@@ -136,6 +241,10 @@
         background: rgba(15, 23, 42, 0.7);
         border-radius: 0.85rem;
         border: 1px solid rgba(148, 163, 184, 0.2);
+      }
+
+      .map-legend.is-hidden {
+        display: none;
       }
 
       .map-legend__item {
@@ -298,6 +407,19 @@
             <div class="map-toolbar">
               <label for="route-select">Route auswählen</label>
               <select id="route-select" aria-label="Route auswählen"></select>
+              <div class="map-actions" role="group" aria-label="Kartenaktionen">
+                <button type="button" class="map-button" id="fullscreen-toggle" aria-pressed="false">
+                  <span class="map-button__icon icon-fullscreen" aria-hidden="true"></span>
+                  <span class="map-button__label">Vollbild</span>
+                </button>
+                <button type="button" class="map-button" id="basemap-toggle" aria-pressed="false">
+                  <span class="map-button__label">Geografische Karte</span>
+                </button>
+                <button type="button" class="map-button" id="legend-toggle" aria-pressed="true">
+                  <span class="map-button__label">Legende ausblenden</span>
+                  <span class="sr-only">für Sehenswürdigkeiten und Mobilität</span>
+                </button>
+              </div>
             </div>
             <div id="map" role="application" aria-label="Interaktive Chile-Karte"></div>
             <p id="map-status" role="status">Lade Reisedaten …</p>
