@@ -1571,8 +1571,8 @@
                   {/if}
                   <div class="travel__stop-extras travel__stop-extras--stack">
                     {#if getStopSegments(stop.id).length}
-                      <div class="travel__stack-subsection">
-                        <h5>Transporte &amp; Segmente</h5>
+                      <details class="travel__stack-subsection travel__spoiler">
+                        <summary><h5>Transporte &amp; Segmente</h5></summary>
                         <ul class="travel__data-list">
                           {#each getStopSegments(stop.id) as item}
                             <li>
@@ -1602,7 +1602,7 @@
                             </li>
                           {/each}
                         </ul>
-                      </div>
+                      </details>
                     {/if}
 
                     {#if getStopFlights(stop.id).length}
@@ -1642,8 +1642,8 @@
                     {/if}
 
                     {#if getStopLodging(stop.id).length}
-                      <div class="travel__stack-subsection">
-                        <h5>Unterkünfte</h5>
+                      <details class="travel__stack-subsection travel__spoiler">
+                        <summary><h5>Unterkünfte</h5></summary>
                         <ul class="travel__lodging-list">
                           {#each getStopLodging(stop.id) as stay}
                             <li>
@@ -1680,12 +1680,12 @@
                             </li>
                           {/each}
                         </ul>
-                      </div>
+                      </details>
                     {/if}
 
                     {#if getStopFood(stop.id).length}
-                      <div class="travel__stack-subsection">
-                        <h5>Kulinarik</h5>
+                      <details class="travel__stack-subsection travel__spoiler">
+                        <summary><h5>Kulinarik</h5></summary>
                         <ul class="travel__food-list">
                           {#each getStopFood(stop.id) as spot}
                             <li>
@@ -1718,12 +1718,12 @@
                             </li>
                           {/each}
                         </ul>
-                      </div>
+                      </details>
                     {/if}
 
                     {#if getStopActivities(stop.id).length}
-                      <div class="travel__stack-subsection">
-                        <h5>Aktivitäten</h5>
+                      <details class="travel__stack-subsection travel__spoiler">
+                        <summary><h5>Aktivitäten</h5></summary>
                         <ul class="travel__activity-list">
                           {#each getStopActivities(stop.id) as activity}
                             <li>
@@ -1757,18 +1757,18 @@
                             </li>
                           {/each}
                         </ul>
-                      </div>
+                      </details>
                     {/if}
 
                     {#if getStopNotes(stop.id).length}
-                      <div class="travel__stack-subsection">
-                        <h5>Hinweise</h5>
+                      <details class="travel__stack-subsection travel__spoiler">
+                        <summary><h5>Hinweise</h5></summary>
                         <ul class="travel__data-list">
                           {#each getStopNotes(stop.id) as note}
                             <li>{note}</li>
                           {/each}
                         </ul>
-                      </div>
+                      </details>
                     {/if}
                   </div>
                 </li>
@@ -1797,8 +1797,8 @@
                   </header>
                   <div class="travel__stop-extras travel__stop-extras--stack">
                     {#if getDaySegments(day).length}
-                      <div class="travel__stack-subsection">
-                        <h5>Transporte &amp; Segmente</h5>
+                      <details class="travel__stack-subsection travel__spoiler">
+                        <summary><h5>Transporte &amp; Segmente</h5></summary>
                         <ul class="travel__data-list">
                           {#each getDaySegments(day) as segment}
                             <li>
@@ -1814,7 +1814,7 @@
                             </li>
                           {/each}
                         </ul>
-                      </div>
+                      </details>
                     {/if}
                     {#if getDayFlights(day).length}
                       <div class="travel__stack-subsection">
@@ -1845,23 +1845,23 @@
                       </div>
                     {/if}
                     {#if day.hotels?.length}
-                      <div class="travel__stack-subsection">
-                        <h5>Unterkünfte</h5>
-                        <ul class="travel__data-list">
-                          {#each day.hotels as hotel}
-                            <li>
-                              <strong>{hotel.name}</strong>
-                              <div>
-                                {hotel.city ?? ''} · {hotel.pricePerNight ? `${formatCurrency(hotel.pricePerNight)} pro Nacht` : 'Preis auf Anfrage'}
-                              </div>
-                            </li>
-                          {/each}
-                        </ul>
-                      </div>
+                      <details class="travel__stack-subsection travel__spoiler">
+                        <summary><h5>Unterkünfte</h5></summary>
+                          <ul class="travel__data-list">
+                            {#each day.hotels as hotel}
+                              <li>
+                                <strong>{hotel.name}</strong>
+                                <div>
+                                  {hotel.city ?? ''} · {hotel.pricePerNight ? `${formatCurrency(hotel.pricePerNight)} pro Nacht` : 'Preis auf Anfrage'}
+                                </div>
+                              </li>
+                            {/each}
+                          </ul>
+                        </details>
                     {/if}
                     {#if getDayRestaurants(day).length}
-                      <div class="travel__stack-subsection">
-                        <h5>Kulinarik</h5>
+                      <details class="travel__stack-subsection travel__spoiler">
+                        <summary><h5>Kulinarik</h5></summary>
                         <ul class="travel__data-list">
                           {#each getDayRestaurants(day) as restaurant}
                             <li>
@@ -1871,12 +1871,12 @@
                               {/if}
                             </li>
                           {/each}
-                        </ul>
-                      </div>
+                          </ul>
+                      </details>
                     {/if}
                     {#if day.activities?.length}
-                      <div class="travel__stack-subsection">
-                        <h5>Aktivitäten</h5>
+                      <details class="travel__stack-subsection travel__spoiler">
+                        <summary><h5>Aktivitäten</h5></summary>
                         <ul class="travel__data-list">
                           {#each day.activities as activity}
                             <li>
@@ -1887,17 +1887,17 @@
                             </li>
                           {/each}
                         </ul>
-                      </div>
+                      </details>
                     {/if}
                     {#if getDayNotes(day).length}
-                      <div class="travel__stack-subsection">
-                        <h5>Hinweise</h5>
+                      <details class="travel__stack-subsection travel__spoiler">
+                        <summary><h5>Hinweise</h5></summary>
                         <ul class="travel__data-list">
                           {#each getDayNotes(day) as note}
                             <li>{note}</li>
                           {/each}
                         </ul>
-                      </div>
+                      </details>
                     {/if}
                     {#if day.mobilityOptions}
                       <div class="travel__stack-subsection">
@@ -1959,6 +1959,12 @@
 </section>
 
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+
+  :global(body) {
+    font-family: 'IBM Plex Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
   :global(body.travel-body) {
     background: #0f172a;
   }
@@ -2680,6 +2686,33 @@
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: #475569;
+  }
+
+  /* Für Einsteiger:innen: Die Spoiler nutzen native <details>-Elemente, damit Tastatur und Screenreader
+     automatisch unterstützt werden. Zusammengeklappt bleibt der Abschnitt kompakt, ein Klick öffnet die Inhalte. */
+  .travel__spoiler {
+    padding: 0.75rem 0.9rem;
+  }
+
+  .travel__spoiler summary {
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+
+  .travel__spoiler summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .travel__spoiler[open] {
+    padding-bottom: 1rem;
+  }
+
+  .travel__spoiler[open] > ul,
+  .travel__spoiler[open] > div,
+  .travel__spoiler[open] > summary + * {
+    margin-top: 0.5rem;
   }
 
   .travel__stack-subsection ul {
