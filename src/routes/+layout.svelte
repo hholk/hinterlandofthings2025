@@ -56,6 +56,11 @@
 
     (async () => {
       const { default: LocomotiveScroll } = await import('locomotive-scroll');
+      // Für Einsteiger:innen: Standardmäßig erlauben wir jetzt natives Scrolling,
+      // damit Safari/macOS nicht festsitzt, falls LocomotiveScroll ausfällt. Sobald
+      // die Bibliothek sauber initialisiert, aktivieren wir die bekannte Smooth-Scroll-
+      // Variante per CSS-Klasse.
+      container.classList.add('has-smooth-scroll');
       loco = new LocomotiveScroll({
         el: container,
         smooth: true,
@@ -78,6 +83,7 @@
       unsubscribePage();
       ctx?.revert();
       loco?.destroy();
+      container?.classList.remove('has-smooth-scroll');
     };
   });
 </script>
@@ -107,6 +113,10 @@
   .app-shell {
     min-height: 100vh;
     position: relative;
+    overflow: auto;
+  }
+
+  .app-shell.has-smooth-scroll {
     overflow: hidden;
   }
 

@@ -36,3 +36,17 @@ test('global styles guard iOS safe areas on mobile', () => {
   assert.ok(/@media \(max-width: 600px\) \{\s+\.site-wrapper/.test(css), 'Mobile breakpoint keeps cards in a single column');
 });
 
+test('app shell falls back auf natives Scrolling, wenn Smooth-Scroll fehlt', () => {
+  const layout = read('./src/routes/+layout.svelte');
+
+  assert.ok(/\.app-shell\s*\{[^}]*overflow:\s*auto;/.test(layout), 'Default overflow should permit native scroll');
+  assert.ok(
+    /\.app-shell\.has-smooth-scroll\s*\{[^}]*overflow:\s*hidden;/.test(layout),
+    'Smooth-scroll mode should explicitly hide overflow'
+  );
+  assert.ok(
+    layout.includes("classList.add('has-smooth-scroll')"),
+    'Layout should toggle the CSS hook when LocomotiveScroll initialises'
+  );
+});
+
