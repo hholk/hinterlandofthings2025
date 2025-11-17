@@ -62,3 +62,15 @@
 - Die Svelte-basierte Experience setzt den Karten-Slider nun immer automatisch ans Ende jeder Route. Die Logik steckt in
   `src/lib/travel/timeline-helpers.ts` und ist mit `timeline-helpers.test.ts` abgesichert – bei Anpassungen unbedingt die Tests
   anpassen und ausführen (`npm test`).
+- **Chile Travel Experience – Daten und Validierung**
+  - Die komplette Reisedatenbasis liegt in `travel-routes/travel-routes-data.json`. Meta-Informationen wie Kartenstil, Zoom und
+    Glyphs werden im `meta.map`-Block gepflegt; neue Provider müssen stil- und glyphs-sicher konfiguriert werden, damit
+    MapLibre im Offline-ähnlichen Pages-Setup läuft.【F:travel-routes/travel-routes-data.json†L2-L21】
+  - Transportmodi, Tags, Galerie-Assets und Events sind modular definiert. Neue Einträge sollen die bestehende Struktur mit
+    Label, Farben/Symbolen und – falls vorhanden – Emissionswerten spiegeln, damit UI-Legende und Tooltips weiterhin konsistent
+    sind.【F:travel-routes/travel-routes-data.json†L23-L160】
+  - Segment-Rendering folgt der Prioritätenkette aus `travel-routes/chile-map.js`: (1) `mapLayers.dailySegments` mit
+    GeoJSON-Geometrien, (2) klassische `segments` plus `stops`, (3) `days[].arrival.segments` als Fallback. Bei Änderungen
+    daran immer die Unit-Tests (`travel-routes/chile-map.test.js`) ausführen, weil sie die Fallunterscheidung abdecken.【F:travel-routes/chile-map.js†L115-L197】【F:travel-routes/chile-map.test.js†L1-L87】
+  - Für Einsteiger:innen: Nutze `node --test travel-routes/chile-map.test.js`, um die Map-Helper zu prüfen, bevor Daten live
+    gehen. Die Tests decken u. a. Koordinatennormalisierung, Segmentketten und Tile-Fallbacks ab.【F:travel-routes/chile-map.test.js†L1-L88】
