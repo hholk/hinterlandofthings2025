@@ -237,7 +237,6 @@
   let isMapFullscreen = false;
   let isLegendVisible = true;
   let showStopDetailPanel = false;
-  let showStopDetailPanel = false;
   let isTouchOverlayActive = false;
   let selectedVariants: Record<string, string> = {};
 

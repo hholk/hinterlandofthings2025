@@ -391,23 +391,47 @@
   },
   {
     "id": "fjorde-pinguine-feuerland-2025-north",
-    "title": "Route 4 – Fjorde & Pinguine (Nord)",
-    "summary": "Nordgehende Variante: Start in Punta Arenas, Pinguine, Torres del Paine und dann mit der Navimag von Puerto Natales nach Puerto Montt. Abfahrt Navimag ca. 11. November 2025.",
+    "title": "Route 4 – Fjorde, Pinguine & Feuerland (Nord)",
+    "summary": "14 Tage Patagonien rückwärts: Start in Santiago, Flug nach Punta Arenas, Pinguinkolonien, Torres del Paine, dann Navimag-Fjordpassage Puerto Natales → Puerto Montt (Nordroute) und Abschluss in der Seenregion. Abfahrt Navimag ca. 11. November 2025. 🐧🚢🌋",
     "meta": {
-      "theme": "Patagonien Nordwärts",
+      "theme": "Patagonien Nordwärts mit Navimag",
       "pace": "ausgewogen",
       "durationDays": 14,
       "costEstimate": 3700,
       "highlights": [
-        "Punta Arenas & Pinguine",
-        "Torres del Paine",
-        "Navimag-Fähre: Puerto Natales → Puerto Montt"
+        "Punta Arenas & Magellan-Pinguine",
+        "Königspinguine Bahía Inútil (Feuerland)",
+        "Torres del Paine Nationalpark",
+        "Navimag-Fähre: Puerto Natales → Puerto Montt",
+        "Puerto Varas & Seendistrikt",
+        "Chiloé-Insel"
       ],
       "highlightImages": [
         {
-          "title": "Pinguine",
+          "title": "Magellan-Pinguine",
           "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1200&auto=format&fit=crop",
-          "caption": "Pinguine in Patagonien.",
+          "caption": "Pinguinkolonie auf Isla Magdalena.",
+          "source": "Unsplash",
+          "license": "Unsplash License"
+        },
+        {
+          "title": "Navimag durch Fjorde",
+          "image": "https://images.unsplash.com/photo-1471115853179-bb1d604434e0?w=1200&auto=format&fit=crop",
+          "caption": "Nordwärts durch die patagonischen Kanäle.",
+          "source": "Unsplash",
+          "license": "Unsplash License"
+        },
+        {
+          "title": "Puerto Varas am Llanquihue-See",
+          "image": "https://images.unsplash.com/photo-1493244040629-496f6d136cc3?w=1200&auto=format&fit=crop",
+          "caption": "Vulkan Osorno über dem See.",
+          "source": "Unsplash",
+          "license": "Unsplash License"
+        },
+        {
+          "title": "Chiloé Palafitos",
+          "image": "https://images.unsplash.com/photo-1542317854-0d6d02aca827?w=1200&auto=format&fit=crop",
+          "caption": "Bunte Pfahlbauten in Castro.",
           "source": "Unsplash",
           "license": "Unsplash License"
         }
@@ -421,7 +445,7 @@
     },
     "slider": {
       "enabled": true,
-      "label": "Tagesübersicht"
+      "label": "Tagesübersicht (14 Tage – Nordroute mit Navimag)"
     },
     "mapLayers": {
       "dailySegments": [
@@ -444,7 +468,7 @@
         },
         {
           "dayId": "day-5",
-          "mode": "drive",
+          "mode": "bus",
           "geometry": {
             "type": "LineString",
             "coordinates": [
@@ -501,63 +525,199 @@
         "date": "2025-11-06",
         "station": {
           "name": "Santiago de Chile",
+          "timezone": "America/Santiago",
           "coordinates": {
             "lat": -33.4489,
             "lng": -70.6693
-          }
+          },
+          "description": "Ankunft in Chile, kurzer Aufenthalt vor dem Weiterflug in den tiefen Süden.",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1526401485004-46910ecc8e51?w=800&auto=format&fit=crop",
+              "caption": "Santiago vor der Andenkulisse."
+            }
+          ]
         },
         "arrival": {
           "segments": []
-        }
+        },
+        "activities": [
+          {
+            "id": "scl-transit",
+            "type": "city-walk",
+            "name": "Kurzer Stadtspaziergang (Optional)",
+            "description": "Falls Zeit bleibt: Plaza de Armas, Mercado Central oder Cerro Santa Lucía.",
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1526481280695-3c4692349813?w=800&auto=format&fit=crop",
+                "caption": "Straßen im Zentrum von Santiago."
+              }
+            ]
+          }
+        ]
       },
       {
         "id": "day-2",
         "date": "2025-11-07",
         "station": {
           "name": "Punta Arenas",
+          "timezone": "America/Punta_Arenas",
           "coordinates": {
             "lat": -53.1638,
             "lng": -70.9171
-          }
+          },
+          "description": "Flug nach Punta Arenas, der südlichsten Großstadt des Kontinents. Nachmittags Stadtbummel und Vorbereitung für die Pinguintour.",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1528989385568-3ac196525f80?w=800&auto=format&fit=crop",
+              "caption": "Bunte Dächer von Punta Arenas."
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&auto=format&fit=crop",
+              "caption": "Blick vom Mirador Cerro de la Cruz."
+            }
+          ]
         },
         "arrival": {
           "segments": [
             {
               "mode": "flight",
               "from": {
-                "name": "Santiago (SCL)"
+                "name": "Santiago (SCL)",
+                "coordinates": {
+                  "lat": -33.3929,
+                  "lng": -70.7858
+                }
               },
               "to": {
-                "name": "Punta Arenas (PUQ)"
+                "name": "Punta Arenas (PUQ)",
+                "coordinates": {
+                  "lat": -53.0024,
+                  "lng": -70.8546
+                }
               },
               "durationMinutes": 210
             }
           ]
-        }
+        },
+        "activities": [
+          {
+            "id": "punta-arenas-city",
+            "type": "city-walk",
+            "name": "Plaza Muñoz Gamero & Mirador",
+            "description": "Spaziergang zur Hauptplaza mit Magellan-Denkmal, danach zum Aussichtspunkt über der Stadt.",
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=800&auto=format&fit=crop",
+                "caption": "Historische Gebäude an der Plaza."
+              }
+            ]
+          }
+        ]
       },
       {
         "id": "day-3",
         "date": "2025-11-08",
         "station": {
-          "name": "Punta Arenas - Pinguine"
-        }
+          "name": "Punta Arenas – Isla Magdalena (Pinguine)",
+          "timezone": "America/Punta_Arenas",
+          "coordinates": {
+            "lat": -53.1638,
+            "lng": -70.9171
+          },
+          "description": "Bootsausflug zur Isla Magdalena: Tausende Magellan-Pinguine in ihrer Brutkolonie (November = Hauptsaison).",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&auto=format&fit=crop",
+              "caption": "Magellan-Pinguine auf der Insel."
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1470115636492-6d2b56f9146e?w=800&auto=format&fit=crop",
+              "caption": "Boot legt an der Insel an."
+            }
+          ]
+        },
+        "activities": [
+          {
+            "id": "isla-magdalena-tour",
+            "type": "boat-tour",
+            "name": "Pinguinkolonie Isla Magdalena",
+            "description": "Halbtägige Bootstour (wetterabhängig), ca. 1 Stunde auf der Insel zwischen den Pinguinen.",
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&auto=format&fit=crop",
+                "caption": "Pinguine watscheln über Pfade."
+              },
+              {
+                "url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=800&auto=format&fit=crop",
+                "caption": "Leuchtturm auf der Insel."
+              }
+            ]
+          }
+        ]
       },
       {
         "id": "day-4",
         "date": "2025-11-09",
         "station": {
-          "name": "Punta Arenas - Feuerland"
-        }
+          "name": "Punta Arenas – Porvenir & Königspinguine",
+          "timezone": "America/Punta_Arenas",
+          "coordinates": {
+            "lat": -53.1638,
+            "lng": -70.9171
+          },
+          "description": "Tagesausflug nach Feuerland: Fähre über die Magellanstraße, Fahrt zur Bahía Inútil und Besuch der Königspinguinkolonie (eine der wenigen weltweit außerhalb der Antarktis).",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1505761671935-60b3a7427bad?w=800&auto=format&fit=crop",
+              "caption": "Königspinguine in Bahía Inútil."
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1474302729578-afab1a117fc1?w=800&auto=format&fit=crop",
+              "caption": "Fähre über die Magellanstraße."
+            }
+          ]
+        },
+        "activities": [
+          {
+            "id": "king-penguins-tour",
+            "type": "day-tour",
+            "name": "Königspinguine Feuerland",
+            "description": "Ganztagstour mit Fährüberfahrt und Fahrt zur Königspinguinkolonie (ca. 3-4 Stunden Fahrt one-way).",
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1500534314211-0a24cd03f2c0?w=800&auto=format&fit=crop",
+                "caption": "Weite Landschaft auf Feuerland."
+              },
+              {
+                "url": "https://images.unsplash.com/photo-1545235617-9465c4b8ba06?w=800&auto=format&fit=crop",
+                "caption": "Königspinguine am Strand."
+              }
+            ]
+          }
+        ]
       },
       {
         "id": "day-5",
         "date": "2025-11-10",
         "station": {
           "name": "Puerto Natales",
+          "timezone": "America/Punta_Arenas",
           "coordinates": {
             "lat": -51.7298,
             "lng": -72.5060
-          }
+          },
+          "description": "Transfer nach Puerto Natales (3h Busfahrt), Ankunft am Fjord und erster Spaziergang durchs Städtchen.",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1526402462922-1e1d481d87fd?w=800&auto=format&fit=crop",
+              "caption": "Uferpromenade von Puerto Natales."
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800&auto=format&fit=crop",
+              "caption": "Holzpfähle im Wasser."
+            }
+          ]
         },
         "arrival": {
           "segments": [
@@ -570,6 +730,7 @@
                 "name": "Puerto Natales"
               },
               "durationMinutes": 180,
+              "distanceKm": 247,
               "variants": [
                 {
                   "id": "bus-sur",
@@ -616,89 +777,380 @@
               ]
             }
           ]
-        }
+        },
+        "activities": [
+          {
+            "id": "puerto-natales-waterfront",
+            "type": "city-walk",
+            "name": "Uferpromenade & Aussichtspunkte",
+            "description": "Relaxter Spaziergang und Vorbereitung auf Torres del Paine.",
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=800&auto=format&fit=crop",
+                "caption": "Bunte Häuser am Fjord."
+              }
+            ]
+          }
+        ]
       },
       {
         "id": "day-6",
         "date": "2025-11-11",
         "station": {
-          "name": "Puerto Natales (Einschiffung)",
-          "description": "Einschiffung Navimag 'Esperanza'. Abfahrt Dienstags."
-        }
+          "name": "Torres del Paine – Mirador Base Torres",
+          "timezone": "America/Punta_Arenas",
+          "coordinates": {
+            "lat": -51.2530,
+            "lng": -72.9980
+          },
+          "description": "Tagesausflug: Wanderung zum Mirador Base Torres (falls Kondition passt) oder alternative leichtere Trails.",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1546539782-6fc531453083?w=800&auto=format&fit=crop",
+              "caption": "Die Türme über der Lagune."
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&auto=format&fit=crop",
+              "caption": "Wanderpfad zum Mirador."
+            }
+          ]
+        },
+        "activities": [
+          {
+            "id": "torres-base-hike",
+            "type": "hike",
+            "name": "Wanderung Base Torres",
+            "description": "Anspruchsvolle Ganztageswanderung (~8h, 20km). Alternativ: Mirador Cuernos oder Lago Grey.",
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1471189641895-16c58a695bcb?w=800&auto=format&fit=crop",
+                "caption": "Geröllfelder im oberen Abschnitt."
+              }
+            ]
+          }
+        ]
       },
       {
         "id": "day-7",
         "date": "2025-11-12",
         "station": {
-          "name": "Navimag - Auf See"
-        }
+          "name": "Torres del Paine – Lago Grey",
+          "timezone": "America/Punta_Arenas",
+          "coordinates": {
+            "lat": -51.1067,
+            "lng": -73.1575
+          },
+          "description": "Entspannterer Tag: Bootstour auf dem Lago Grey zwischen Eisbergen oder Miradores mit Gletscherblick.",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1545235617-9465c4b8ba06?w=800&auto=format&fit=crop",
+              "caption": "Eisberge im Lago Grey."
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1451976426598-a7593bd6d0b2?w=800&auto=format&fit=crop",
+              "caption": "Gletscherfront in der Ferne."
+            }
+          ]
+        },
+        "activities": [
+          {
+            "id": "lago-grey-boat",
+            "type": "boat-tour",
+            "name": "Bootstour Lago Grey",
+            "description": "Halbtags-Bootstour nahe am Grey-Gletscher.",
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=800&auto=format&fit=crop",
+                "caption": "Boot vor der Eisfront."
+              }
+            ]
+          }
+        ]
       },
       {
         "id": "day-8",
         "date": "2025-11-13",
         "station": {
-          "name": "Navimag - Auf See"
-        }
+          "name": "Puerto Natales – Einschiffung Navimag",
+          "timezone": "America/Punta_Arenas",
+          "coordinates": {
+            "lat": -51.7298,
+            "lng": -72.5060
+          },
+          "description": "Rückfahrt nach Puerto Natales, Check-in am Navimag-Terminal und Boarding auf die 'Esperanza'. Abfahrt Richtung Puerto Montt (Dienstag, 11. Nov 2025).",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1470115636492-6d2b56f9146e?w=800&auto=format&fit=crop",
+              "caption": "Navimag-Schiff im Hafen."
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1474302729578-afab1a117fc1?w=800&auto=format&fit=crop",
+              "caption": "Passagiere beim Boarding."
+            }
+          ]
+        },
+        "activities": [
+          {
+            "id": "navimag-boarding-north",
+            "type": "ferry-boarding",
+            "name": "Navimag Check-in & Boarding",
+            "description": "Einschiffung, Kabine beziehen, erste Eindrücke vom Schiff.",
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1471115853179-bb1d604434e0?w=800&auto=format&fit=crop",
+                "caption": "Abfahrt durch die Kanäle."
+              }
+            ]
+          }
+        ]
       },
       {
         "id": "day-9",
         "date": "2025-11-14",
         "station": {
-          "name": "Puerto Montt (Ankunft)"
-        }
+          "name": "Navimag – Südliche Fjorde",
+          "timezone": "America/Santiago",
+          "coordinates": {
+            "lat": -50.0000,
+            "lng": -73.0000
+          },
+          "description": "Erster voller Tag an Bord: Fjorde, Inseln, ggf. offene See (Golfo de Penas).",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1500534314211-0a24cd03f2c0?w=800&auto=format&fit=crop",
+              "caption": "Fjordlandschaft vom Deck."
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1524492449093-4fe20d59d2ed?w=800&auto=format&fit=crop",
+              "caption": "Innenbereich mit Panoramafenstern."
+            }
+          ]
+        },
+        "activities": [
+          {
+            "id": "navimag-onboard-day1-north",
+            "type": "onboard",
+            "name": "Deck-Viewing & Info-Sessions",
+            "description": "Vorträge, Ausschau nach Walen und Delfinen, Bordaktivitäten.",
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=800&auto=format&fit=crop",
+                "caption": "Enge Kanäle mit Bergen."
+              }
+            ]
+          }
+        ]
       },
       {
         "id": "day-10",
         "date": "2025-11-15",
         "station": {
-          "name": "Puerto Varas"
-        }
+          "name": "Navimag – Patagonische Kanäle",
+          "timezone": "America/Santiago",
+          "coordinates": {
+            "lat": -45.0000,
+            "lng": -73.5000
+          },
+          "description": "Weiterfahrt nordwärts durch die Inselwelt, Gletscherblicke.",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1451976426598-a7593bd6d0b2?w=800&auto=format&fit=crop",
+              "caption": "Gletscherzunge im Fjord."
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1505761671935-60b3a7427bad?w=800&auto=format&fit=crop",
+              "caption": "Lichtstimmung über Wasser."
+            }
+          ]
+        },
+        "activities": [
+          {
+            "id": "navimag-onboard-day2-north",
+            "type": "onboard",
+            "name": "Fotostops & Bordtag",
+            "description": "Bilder machen, lesen, Filmabend an Bord.",
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1545235617-9465c4b8ba06?w=800&auto=format&fit=crop",
+                "caption": "Eisblöcke schwimmen vorbei."
+              }
+            ]
+          }
+        ]
       },
       {
         "id": "day-11",
         "date": "2025-11-16",
         "station": {
-          "name": "Puerto Varas - Osorno"
-        }
+          "name": "Puerto Montt – Ankunft & Puerto Varas",
+          "timezone": "America/Santiago",
+          "coordinates": {
+            "lat": -41.3184,
+            "lng": -72.9854
+          },
+          "description": "Ausschiffung in Puerto Montt, kurzer Transfer nach Puerto Varas am Llanquihue-See.",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1493244040629-496f6d136cc3?w=800&auto=format&fit=crop",
+              "caption": "Grünes Ufer mit Vulkanblick."
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1526402462922-1e1d481d87fd?w=800&auto=format&fit=crop",
+              "caption": "Bunte Häuser in Puerto Varas."
+            }
+          ]
+        },
+        "activities": [
+          {
+            "id": "puerto-varas-arrival",
+            "type": "lakeside-walk",
+            "name": "Uferpromenade Puerto Varas",
+            "description": "Relaxter Spaziergang nach der Schiffsreise.",
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1542317854-0d6d02aca827?w=800&auto=format&fit=crop",
+                "caption": "Steg in den See bei Sonnenuntergang."
+              }
+            ]
+          }
+        ]
       },
       {
         "id": "day-12",
         "date": "2025-11-17",
         "station": {
-          "name": "Puerto Varas - Chiloé"
-        }
+          "name": "Puerto Varas – Vulkan Osorno & Petrohué",
+          "timezone": "America/Santiago",
+          "coordinates": {
+            "lat": -41.3184,
+            "lng": -72.9854
+          },
+          "description": "Tagesausflug: Vulkan Osorno, Petrohué-Wasserfälle und Seepanorama.",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&auto=format&fit=crop",
+              "caption": "Vulkan Osorno über grünen Hügeln."
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&auto=format&fit=crop",
+              "caption": "Petrohué-Wasserfälle."
+            }
+          ]
+        },
+        "activities": [
+          {
+            "id": "osorno-petro hue-tour",
+            "type": "scenic-drive",
+            "name": "Vulkan Osorno & Petrohué",
+            "description": "Halbtages- oder Ganztagestour mit Wasserfällen und Vulkanblick.",
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1500534314211-0a24cd03f2c0?w=800&auto=format&fit=crop",
+                "caption": "Türkisfarbenes Wasser an den Fällen."
+              }
+            ]
+          }
+        ]
       },
       {
         "id": "day-13",
         "date": "2025-11-18",
         "station": {
-          "name": "Santiago de Chile",
+          "name": "Puerto Varas – Chiloé-Insel",
+          "timezone": "America/Santiago",
+          "coordinates": {
+            "lat": -42.4811,
+            "lng": -73.7622
+          },
+          "description": "Tagesausflug nach Chiloé: Palafitos in Castro, Holzkirchen (UNESCO) und lokale Küche.",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1542317854-0d6d02aca827?w=800&auto=format&fit=crop",
+              "caption": "Bunte Pfahlbauten (Palafitos) in Castro."
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=800&auto=format&fit=crop",
+              "caption": "Holzkirche auf Chiloé."
+            }
+          ]
+        },
+        "activities": [
+          {
+            "id": "chiloe-day-tour",
+            "type": "day-tour",
+            "name": "Chiloé – Castro & Kirchen",
+            "description": "Ganztagestour über die Insel mit Palafitos, Kirchen und ggf. Pinguinkolonie Puñihuil.",
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1524492449093-4fe20d59d2ed?w=800&auto=format&fit=crop",
+                "caption": "Straße auf Chiloé mit Holzhäusern."
+              },
+              {
+                "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&auto=format&fit=crop",
+                "caption": "Pinguine auf Chiloé (Puñihuil)."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "day-14",
+        "date": "2025-11-19",
+        "station": {
+          "name": "Flug Puerto Montt → Santiago & Abreise",
+          "timezone": "America/Santiago",
           "coordinates": {
             "lat": -33.4489,
             "lng": -70.6693
-          }
+          },
+          "description": "Rückflug nach Santiago (oder Anschlussflug nach Hause), ggf. Puffer für Verspätungen.",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1472252369995-6d9b2177ed73?w=800&auto=format&fit=crop",
+              "caption": "Flugzeug über Seenlandschaft."
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&auto=format&fit=crop",
+              "caption": "Landeanflug auf Santiago."
+            }
+          ]
         },
         "arrival": {
           "segments": [
             {
               "mode": "flight",
               "from": {
-                "name": "Puerto Montt (PMC)"
+                "name": "Puerto Montt (PMC)",
+                "coordinates": {
+                  "lat": -41.4391,
+                  "lng": -73.0940
+                }
               },
               "to": {
-                "name": "Santiago (SCL)"
+                "name": "Santiago (SCL)",
+                "coordinates": {
+                  "lat": -33.3929,
+                  "lng": -70.7858
+                }
               },
               "durationMinutes": 100
             }
           ]
-        }
-      },
-      {
-        "id": "day-14",
-        "date": "2025-11-19",
-        "station": {
-          "name": "Abreise"
-        }
+        },
+        "activities": [
+          {
+            "id": "flight-back-scl-north",
+            "type": "flight",
+            "name": "Rückflug & Pufferzeit",
+            "description": "Check-in, Flug, ggf. letzte Nacht in Santiago oder direkter Weiterflug.",
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1518552781800-1fb841be351d?w=800&auto=format&fit=crop",
+                "caption": "Maschine am Gate."
+              }
+            ]
+          }
+        ]
       }
     ]
   }
