@@ -5,8 +5,6 @@
   import { page } from '$app/stores';
   import { onMount } from 'svelte';
   import { gsap } from 'gsap';
-  import type LocomotiveScroll from 'locomotive-scroll';
-  import 'locomotive-scroll/dist/locomotive-scroll.css';
   import '../app.css';
   import { initializeAuth, isAuthenticated } from '$stores/auth';
   import { isPublicRoute } from '$utils/public-routes';
@@ -51,39 +49,25 @@
       };
     }
 
-    let loco: LocomotiveScroll | undefined;
     let ctx: gsap.Context | undefined;
 
-    (async () => {
-      const { default: LocomotiveScroll } = await import('locomotive-scroll');
-      // Für Einsteiger:innen: Standardmäßig erlauben wir jetzt natives Scrolling,
-      // damit Safari/macOS nicht festsitzt, falls LocomotiveScroll ausfällt. Sobald
-      // die Bibliothek sauber initialisiert, aktivieren wir die bekannte Smooth-Scroll-
-      // Variante per CSS-Klasse.
-      container.classList.add('has-smooth-scroll');
-      loco = new LocomotiveScroll({
-        el: container,
-        smooth: true,
-        multiplier: 0.9
+    // Für Einsteiger:innen: GSAP-Animationen für sanfte Fade-in-Effekte beim Seitenaufbau.
+    // Natives Browser-Scrolling bleibt aktiv, LocomotiveScroll wurde entfernt, um
+    // Scroll-Blockierungen auf Desktop-Geräten zu vermeiden.
+    ctx = gsap.context(() => {
+      gsap.from('[data-animate="fade-in"]', {
+        opacity: 0,
+        y: 24,
+        duration: 0.9,
+        ease: 'power3.out',
+        stagger: 0.12
       });
-
-      ctx = gsap.context(() => {
-        gsap.from('[data-animate="fade-in"]', {
-          opacity: 0,
-          y: 24,
-          duration: 0.9,
-          ease: 'power3.out',
-          stagger: 0.12
-        });
-      }, container);
-    })();
+    }, container);
 
     return () => {
       unsubscribeAuth();
       unsubscribePage();
       ctx?.revert();
-      loco?.destroy();
-      container?.classList.remove('has-smooth-scroll');
     };
   });
 </script>
@@ -114,10 +98,6 @@
     min-height: 100vh;
     position: relative;
     overflow: auto;
-  }
-
-  .app-shell.has-smooth-scroll {
-    overflow: hidden;
   }
 
   .background-gradient {

@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { onMount, tick } from 'svelte';
-  import type { PageData } from './$types';
+  import { onMount, tick } from "svelte";
+  import type { PageData } from "./$types";
   import type {
     RouteDetail,
     RouteIndexEntry,
@@ -14,15 +14,18 @@
     FoodInfo,
     ActivityInfo,
     LoadedTravelRoutesDataset,
-    MobilityOption
-  } from '../../../lib/data/chile-travel';
-  import 'maplibre-gl/dist/maplibre-gl.css';
-  import { calculateBoundingBox, type LngLatTuple } from '../../../lib/travel/map-bounds';
+    MobilityOption,
+  } from "../../../lib/data/chile-travel";
+  import "maplibre-gl/dist/maplibre-gl.css";
+  import {
+    calculateBoundingBox,
+    type LngLatTuple,
+  } from "../../../lib/travel/map-bounds";
   import {
     resolveMapLibreNamespace,
-    type MapLibreNamespace
-  } from '../../../lib/travel/maplibre-loader';
-  import { createRasterStyle } from '../../../lib/travel/map-style';
+    type MapLibreNamespace,
+  } from "../../../lib/travel/maplibre-loader";
+  import { createRasterStyle } from "../../../lib/travel/map-style";
   import {
     buildSegmentCollection,
     buildStopCollection,
@@ -32,9 +35,9 @@
     resolveModeAppearance as resolveModeAppearanceBase,
     type SegmentCollection,
     type StopCollection,
-    type StopProperties
-  } from '../../../lib/travel/map-data';
-  import { getDefaultSliderIndex } from '../../../lib/travel/timeline-helpers';
+    type StopProperties,
+  } from "../../../lib/travel/map-data";
+  import { getDefaultSliderIndex } from "../../../lib/travel/timeline-helpers";
   import {
     resolveMapVisibilityThreshold,
     createSegmentOpacityExpression,
@@ -42,12 +45,12 @@
     ACTIVE_SEGMENT_OPACITY,
     INACTIVE_SEGMENT_OPACITY,
     ACTIVE_STOP_OPACITY,
-    INACTIVE_STOP_OPACITY
-  } from '../../../lib/travel/map-visibility';
+    INACTIVE_STOP_OPACITY,
+  } from "../../../lib/travel/map-visibility";
   import {
     createFallbackProjector,
-    type OverlayProjector
-  } from '../../../lib/travel/overlay-projection';
+    type OverlayProjector,
+  } from "../../../lib/travel/overlay-projection";
 
   declare global {
     interface Window {
@@ -56,10 +59,10 @@
   }
 
   type MapLibreModule = MapLibreNamespace & { workerClass?: typeof Worker };
-  type MapLibreMap = import('maplibre-gl').Map;
-  type MapLayerMouseEvent = import('maplibre-gl').MapLayerMouseEvent;
-  type Popup = import('maplibre-gl').Popup;
-  type GeoJSONSource = import('maplibre-gl').GeoJSONSource;
+  type MapLibreMap = import("maplibre-gl").Map;
+  type MapLayerMouseEvent = import("maplibre-gl").MapLayerMouseEvent;
+  type Popup = import("maplibre-gl").Popup;
+  type GeoJSONSource = import("maplibre-gl").GeoJSONSource;
 
   export let data: PageData & { travel: LoadedTravelRoutesDataset };
 
@@ -79,14 +82,14 @@
 
   interface StopSegmentEntry {
     segment: RouteSegment;
-    direction: 'arrival' | 'departure';
+    direction: "arrival" | "departure";
     fromStop?: RouteStop;
     toStop?: RouteStop;
   }
 
   interface StopFlightEntry {
     flight: FlightInfo;
-    direction: 'arrival' | 'departure';
+    direction: "arrival" | "departure";
     fromStop?: RouteStop;
     toStop?: RouteStop;
   }
@@ -107,11 +110,15 @@
       lodging: {},
       food: {},
       activities: {},
-      notes: {}
+      notes: {},
     };
   }
 
-  function pushValue<T>(collection: Record<string, T[]>, key: string | undefined, value: T | undefined) {
+  function pushValue<T>(
+    collection: Record<string, T[]>,
+    key: string | undefined,
+    value: T | undefined,
+  ) {
     if (!key || value === undefined) return;
     if (!collection[key]) {
       collection[key] = [];
@@ -137,15 +144,15 @@
       const toStop = segment.to ? stopMap.get(segment.to) : undefined;
       pushValue(index.segments, segment.from, {
         segment,
-        direction: 'departure',
+        direction: "departure",
         fromStop,
-        toStop
+        toStop,
       });
       pushValue(index.segments, segment.to, {
         segment,
-        direction: 'arrival',
+        direction: "arrival",
         fromStop,
-        toStop
+        toStop,
       });
     });
 
@@ -154,15 +161,15 @@
       const toStop = stopMap.get(flight.toStopId);
       pushValue(index.flights, flight.fromStopId, {
         flight,
-        direction: 'departure',
+        direction: "departure",
         fromStop,
-        toStop
+        toStop,
       });
       pushValue(index.flights, flight.toStopId, {
         flight,
-        direction: 'arrival',
+        direction: "arrival",
         fromStop,
-        toStop
+        toStop,
       });
     });
 
@@ -185,18 +192,20 @@
     return index;
   }
 
-  const ROUTE_SEGMENT_SOURCE = 'travel-route-segments';
-  const ROUTE_SEGMENT_LAYER = 'travel-route-segments-layer';
-  const ROUTE_SEGMENT_LAYER_DASHED = 'travel-route-segments-layer-dashed';
-  const ROUTE_STOP_SOURCE = 'travel-route-stops';
-  const ROUTE_STOP_LAYER = 'travel-route-stops-layer';
-  const ROUTE_STOP_LABEL_LAYER = 'travel-route-stop-label-layer';
-  const STOP_POPUP_CLASS = 'travel-map-popup';
-  const FULLSCREEN_BODY_CLASS = 'travel-map-fullscreen-open';
-  let selectedRouteId = data.travel.routeIndex[0]?.id ?? '';
-  let selectedRoute: RouteDetail | null = data.travel.routes[selectedRouteId] ?? null;
+  const ROUTE_SEGMENT_SOURCE = "travel-route-segments";
+  const ROUTE_SEGMENT_LAYER = "travel-route-segments-layer";
+  const ROUTE_SEGMENT_LAYER_DASHED = "travel-route-segments-layer-dashed";
+  const ROUTE_STOP_SOURCE = "travel-route-stops";
+  const ROUTE_STOP_LAYER = "travel-route-stops-layer";
+  const ROUTE_STOP_LABEL_LAYER = "travel-route-stop-label-layer";
+  const STOP_POPUP_CLASS = "travel-map-popup";
+  const FULLSCREEN_BODY_CLASS = "travel-map-fullscreen-open";
+  let selectedRouteId = data.travel.routeIndex[0]?.id ?? "";
+  let selectedRoute: RouteDetail | null =
+    data.travel.routes[selectedRouteId] ?? null;
   let selectedIndexEntry: RouteIndexEntry | null =
-    data.travel.routeIndex.find((entry) => entry.id === selectedRouteId) ?? null;
+    data.travel.routeIndex.find((entry) => entry.id === selectedRouteId) ??
+    null;
 
   let segmentCollection: SegmentCollection = EMPTY_SEGMENTS;
   let stopCollection: StopCollection = EMPTY_STOPS;
@@ -205,7 +214,7 @@
   let sliderSteps: TimelineStep[] = [];
   let sliderValue = 0;
   let sliderMax = 0;
-  let sliderLabel = '';
+  let sliderLabel = "";
   let sliderResetPending = true;
   let mapVisibilityThreshold = Number.MAX_SAFE_INTEGER;
   let mapOverlayCanvas: HTMLCanvasElement | null = null;
@@ -229,22 +238,27 @@
   let showStopDetailPanel = false;
   let isTouchOverlayActive = false;
 
-  const hasDocument = typeof document !== 'undefined';
+  const hasDocument = typeof document !== "undefined";
 
-  const numberFormatter = new Intl.NumberFormat('de-DE');
-  const decimalFormatter = new Intl.NumberFormat('de-DE', { maximumFractionDigits: 1 });
-  const currencyFormatter = new Intl.NumberFormat('de-DE', {
-    style: 'currency',
-    currency: data.travel.meta.currency ?? 'EUR'
+  const numberFormatter = new Intl.NumberFormat("de-DE");
+  const decimalFormatter = new Intl.NumberFormat("de-DE", {
+    maximumFractionDigits: 1,
+  });
+  const currencyFormatter = new Intl.NumberFormat("de-DE", {
+    style: "currency",
+    currency: data.travel.meta.currency ?? "EUR",
   });
 
-  if (typeof window !== 'undefined' && import.meta.env.DEV) {
+  if (typeof window !== "undefined" && import.meta.env.DEV) {
     // Für Einsteiger:innen: Der Debug-Helfer erlaubt es, auf Touch-Geräten oder in Tests
     // gezielt einen Stopp zu öffnen, ohne auf MapLibre warten zu müssen.
     window.debugTravelOpenStop = (stopId?: string) => {
       const stops = stopCollection?.features ?? [];
       const target = stopId
-        ? stops.find((feature) => (feature.properties as StopProperties | undefined)?.id === stopId)
+        ? stops.find(
+            (feature) =>
+              (feature.properties as StopProperties | undefined)?.id === stopId,
+          )
         : stops[0];
       if (target?.properties) {
         stopDetailPanel = target.properties as StopProperties;
@@ -281,12 +295,12 @@
 
   function addBodyTheme() {
     if (!hasDocument) return;
-    document.body.classList.add('travel-body');
+    document.body.classList.add("travel-body");
   }
 
   function removeBodyTheme() {
     if (!hasDocument) return;
-    document.body.classList.remove('travel-body');
+    document.body.classList.remove("travel-body");
   }
 
   async function toggleMapFullscreen() {
@@ -316,32 +330,41 @@
     isLegendVisible = !isLegendVisible;
   }
 
-  function buildTimeline(route: RouteDetail | null, entry: RouteIndexEntry | null): TimelineStep[] {
+  function buildTimeline(
+    route: RouteDetail | null,
+    entry: RouteIndexEntry | null,
+  ): TimelineStep[] {
     if (!route) return [];
     const steps: TimelineStep[] = [];
 
     if (Array.isArray(route.days) && route.days.length > 0) {
       route.days.forEach((day: DayDefinition, index) => {
-        const label = `Tag ${index + 1}: ${day.station?.name ?? 'Etappe'}`;
+        const label = `Tag ${index + 1}: ${day.station?.name ?? "Etappe"}`;
         const descriptionParts: string[] = [];
         if (day.date) descriptionParts.push(formatDate(day.date));
         if (day.arrival?.segments?.length) {
           const firstSegment = day.arrival.segments[0];
-          const appearance = getModeAppearance(firstSegment.mode ?? 'segment');
+          const appearance = getModeAppearance(firstSegment.mode ?? "segment");
           descriptionParts.push(appearance.label);
         }
         steps.push({
           order: index,
           label,
-          description: descriptionParts.join(' • ') || undefined,
-          dayId: day.id
+          description: descriptionParts.join(" • ") || undefined,
+          dayId: day.id,
         });
       });
       return steps;
     }
 
-    if (Array.isArray(route.segments) && route.segments.length > 0 && Array.isArray(route.stops)) {
-      const stopMap = new Map(route.stops.map((stop) => [stop.id, stop] as const));
+    if (
+      Array.isArray(route.segments) &&
+      route.segments.length > 0 &&
+      Array.isArray(route.stops)
+    ) {
+      const stopMap = new Map(
+        route.stops.map((stop) => [stop.id, stop] as const),
+      );
       route.segments.forEach((segment, index) => {
         const from = stopMap.get(segment.from);
         const to = stopMap.get(segment.to);
@@ -352,15 +375,19 @@
         }
         const descriptionParts: string[] = [];
         if (segment.distanceKm) {
-          descriptionParts.push(`${numberFormatter.format(segment.distanceKm)} km`);
+          descriptionParts.push(
+            `${numberFormatter.format(segment.distanceKm)} km`,
+          );
         }
         if (segment.durationHours) {
-          descriptionParts.push(`${decimalFormatter.format(segment.durationHours)} h`);
+          descriptionParts.push(
+            `${decimalFormatter.format(segment.durationHours)} h`,
+          );
         }
         steps.push({
           order: index,
-          label: labelParts.join(' – '),
-          description: descriptionParts.join(' • ') || undefined
+          label: labelParts.join(" – "),
+          description: descriptionParts.join(" • ") || undefined,
         });
       });
       return steps;
@@ -371,7 +398,7 @@
         steps.push({
           order: index,
           label: `Stop ${index + 1}: ${stop.name ?? stop.city ?? stop.id}`,
-          description: stop.city ?? stop.type
+          description: stop.city ?? stop.type,
         });
       });
       return steps;
@@ -400,14 +427,20 @@
 
     const bounds = new maplibre.LngLatBounds(boundingBox[0], boundingBox[1]);
     const prefersReducedMotion =
-      typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const isNarrow = typeof window !== 'undefined' && window.innerWidth <= 720;
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const isNarrow = typeof window !== "undefined" && window.innerWidth <= 720;
     const paddingValue = isNarrow ? 140 : 80;
 
     mapInstance.fitBounds(bounds, {
-      padding: { top: 48, right: paddingValue, bottom: paddingValue + 32, left: paddingValue },
+      padding: {
+        top: 48,
+        right: paddingValue,
+        bottom: paddingValue + 32,
+        left: paddingValue,
+      },
       duration: prefersReducedMotion ? 0 : 800,
-      maxZoom: 12
+      maxZoom: 12,
     });
   }
 
@@ -421,81 +454,81 @@
 
   function setupSources(
     segments: SegmentCollection = EMPTY_SEGMENTS,
-    stops: StopCollection = EMPTY_STOPS
+    stops: StopCollection = EMPTY_STOPS,
   ) {
     if (!mapInstance) return;
 
     if (!mapInstance.getSource(ROUTE_SEGMENT_SOURCE)) {
       mapInstance.addSource(ROUTE_SEGMENT_SOURCE, {
-        type: 'geojson',
-        data: segments
+        type: "geojson",
+        data: segments,
       });
       mapInstance.addLayer({
         id: ROUTE_SEGMENT_LAYER,
-        type: 'line',
+        type: "line",
         source: ROUTE_SEGMENT_SOURCE,
-        filter: ['!', ['has', 'dashArray']],
+        filter: ["!", ["has", "dashArray"]],
         layout: {
-          'line-cap': 'round',
-          'line-join': 'round'
+          "line-cap": "round",
+          "line-join": "round",
         },
         paint: {
-          'line-color': ['coalesce', ['get', 'color'], '#2563eb'],
-          'line-width': 4.5,
-          'line-opacity': 1
-        }
+          "line-color": ["coalesce", ["get", "color"], "#2563eb"],
+          "line-width": 4.5,
+          "line-opacity": 1,
+        },
       });
       mapInstance.addLayer({
         id: ROUTE_SEGMENT_LAYER_DASHED,
-        type: 'line',
+        type: "line",
         source: ROUTE_SEGMENT_SOURCE,
-        filter: ['has', 'dashArray'],
+        filter: ["has", "dashArray"],
         layout: {
-          'line-cap': 'round',
-          'line-join': 'round'
+          "line-cap": "round",
+          "line-join": "round",
         },
         paint: {
-          'line-color': ['coalesce', ['get', 'color'], '#2563eb'],
-          'line-width': 4.5,
-          'line-opacity': 1,
-          'line-dasharray': ['get', 'dashArray']
-        }
+          "line-color": ["coalesce", ["get", "color"], "#2563eb"],
+          "line-width": 4.5,
+          "line-opacity": 1,
+          "line-dasharray": ["get", "dashArray"],
+        },
       });
     }
 
     if (!mapInstance.getSource(ROUTE_STOP_SOURCE)) {
       mapInstance.addSource(ROUTE_STOP_SOURCE, {
-        type: 'geojson',
-        data: stops
+        type: "geojson",
+        data: stops,
       });
       mapInstance.addLayer({
         id: ROUTE_STOP_LAYER,
-        type: 'circle',
+        type: "circle",
         source: ROUTE_STOP_SOURCE,
         paint: {
-          'circle-radius': 6.5,
-          'circle-color': '#1e293b',
-          'circle-stroke-color': '#ffffff',
-          'circle-stroke-width': 2,
-          'circle-opacity': 1,
-          'circle-stroke-opacity': 1
-        }
+          "circle-radius": 6.5,
+          "circle-color": "#1e293b",
+          "circle-stroke-color": "#ffffff",
+          "circle-stroke-width": 2,
+          "circle-opacity": 1,
+          "circle-stroke-opacity": 1,
+        },
       });
       mapInstance.addLayer({
         id: ROUTE_STOP_LABEL_LAYER,
-        type: 'symbol',
+        type: "symbol",
         source: ROUTE_STOP_SOURCE,
         layout: {
-          'text-field': ['get', 'label'],
-          'text-size': 11,
-          'text-offset': [0, 1.2],
-          'text-font': ['Open Sans Bold', 'Arial Unicode MS Bold']
+          "text-field": ["get", "label"],
+          "text-size": 11,
+          "text-offset": [0, 1.2],
+          "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
         },
         paint: {
-          'text-color': '#0f172a',
-          'text-halo-color': '#ffffff',
-          'text-halo-width': 1
-        }
+          "text-color": "#0f172a",
+          "text-halo-color": "#ffffff",
+          "text-halo-width": 1,
+        },
       });
     }
   }
@@ -504,7 +537,7 @@
   // MapLibre-Layern. So bleibt die Linie sichtbar, falls ein Browser die
   // WebGL-Layer blockiert oder nicht korrekt rendert.
   function getDevicePixelRatio() {
-    if (typeof window === 'undefined') {
+    if (typeof window === "undefined") {
       return 1;
     }
     return window.devicePixelRatio || 1;
@@ -512,7 +545,7 @@
 
   function initializeOverlayCanvas() {
     if (!mapOverlayCanvas || overlayContext) return;
-    const context = mapOverlayCanvas.getContext('2d');
+    const context = mapOverlayCanvas.getContext("2d");
     if (!context) return;
     overlayContext = context;
   }
@@ -523,15 +556,24 @@
       return { width: mapCanvas.clientWidth, height: mapCanvas.clientHeight };
     }
     if (mapContainer) {
-      return { width: mapContainer.clientWidth, height: mapContainer.clientHeight };
+      return {
+        width: mapContainer.clientWidth,
+        height: mapContainer.clientHeight,
+      };
     }
     if (mapOverlayCanvas) {
-      return { width: mapOverlayCanvas.clientWidth, height: mapOverlayCanvas.clientHeight };
+      return {
+        width: mapOverlayCanvas.clientWidth,
+        height: mapOverlayCanvas.clientHeight,
+      };
     }
     return null;
   }
 
-  function getOverlayProjector(width: number, height: number): OverlayProjector | null {
+  function getOverlayProjector(
+    width: number,
+    height: number,
+  ): OverlayProjector | null {
     if (mapInstance && mapLoaded) {
       return (coordinate) => {
         if (!Array.isArray(coordinate) || coordinate.length < 2) return null;
@@ -557,33 +599,34 @@
       renderOverlay();
     };
 
-    const overlayEvents: Array<'move' | 'zoom' | 'pitch' | 'rotate' | 'drag' | 'resize'> = [
-      'move',
-      'zoom',
-      'pitch',
-      'rotate',
-      'drag',
-      'resize'
-    ];
+    const overlayEvents: Array<
+      "move" | "zoom" | "pitch" | "rotate" | "drag" | "resize"
+    > = ["move", "zoom", "pitch", "rotate", "drag", "resize"];
 
     overlayEvents.forEach((event) => mapInstance.on(event, handleRender));
-    mapInstance.on('moveend', handleResize);
-    mapInstance.on('zoomend', handleResize);
+    mapInstance.on("moveend", handleResize);
+    mapInstance.on("zoomend", handleResize);
 
     overlayCleanup = () => {
       overlayEvents.forEach((event) => mapInstance?.off(event, handleRender));
-      mapInstance?.off('moveend', handleResize);
-      mapInstance?.off('zoomend', handleResize);
+      mapInstance?.off("moveend", handleResize);
+      mapInstance?.off("zoomend", handleResize);
       overlayContext = null;
     };
 
     renderOverlay();
   }
 
-  function resolveOverlayOpacity(order: number | undefined, threshold: number, type: 'segment' | 'stop') {
-    const value = Number.isFinite(order) ? (order as number) : Number.MAX_SAFE_INTEGER;
+  function resolveOverlayOpacity(
+    order: number | undefined,
+    threshold: number,
+    type: "segment" | "stop",
+  ) {
+    const value = Number.isFinite(order)
+      ? (order as number)
+      : Number.MAX_SAFE_INTEGER;
     const isActive = value <= threshold;
-    if (type === 'segment') {
+    if (type === "segment") {
       return isActive ? ACTIVE_SEGMENT_OPACITY : INACTIVE_SEGMENT_OPACITY;
     }
     return isActive ? ACTIVE_STOP_OPACITY : INACTIVE_STOP_OPACITY;
@@ -592,22 +635,26 @@
   function drawOverlaySegments(
     segments: SegmentCollection = segmentCollection,
     threshold: number = mapVisibilityThreshold,
-    projector: OverlayProjector | null
+    projector: OverlayProjector | null,
   ) {
     if (!overlayContext || !projector) return;
     for (const feature of segments.features) {
-      if (feature.geometry.type !== 'LineString') continue;
+      if (feature.geometry.type !== "LineString") continue;
       const coordinates = feature.geometry.coordinates as LngLatTuple[];
       const points = coordinates
         .map((coordinate) => projector(coordinate))
         .filter((point): point is { x: number; y: number } => Boolean(point));
       if (points.length < 2) continue;
 
-      const opacity = resolveOverlayOpacity(feature.properties?.order, threshold, 'segment');
+      const opacity = resolveOverlayOpacity(
+        feature.properties?.order,
+        threshold,
+        "segment",
+      );
       overlayContext.save();
       overlayContext.beginPath();
       overlayContext.lineWidth = 4.5;
-      overlayContext.strokeStyle = feature.properties?.color ?? '#2563eb';
+      overlayContext.strokeStyle = feature.properties?.color ?? "#2563eb";
       overlayContext.setLineDash(feature.properties?.dashArray ?? []);
       overlayContext.moveTo(points[0].x, points[0].y);
       for (let index = 1; index < points.length; index += 1) {
@@ -622,21 +669,25 @@
   function drawOverlayStops(
     stops: StopCollection = stopCollection,
     threshold: number = mapVisibilityThreshold,
-    projector: OverlayProjector | null
+    projector: OverlayProjector | null,
   ) {
     if (!overlayContext || !projector) return;
     for (const feature of stops.features) {
-      if (feature.geometry.type !== 'Point') continue;
+      if (feature.geometry.type !== "Point") continue;
       const coordinate = feature.geometry.coordinates as LngLatTuple;
       const point = projector(coordinate);
       if (!point) continue;
-      const opacity = resolveOverlayOpacity(feature.properties?.order, threshold, 'stop');
+      const opacity = resolveOverlayOpacity(
+        feature.properties?.order,
+        threshold,
+        "stop",
+      );
 
       overlayContext.save();
       overlayContext.beginPath();
       overlayContext.globalAlpha = opacity;
-      overlayContext.fillStyle = '#1e293b';
-      overlayContext.strokeStyle = '#ffffff';
+      overlayContext.fillStyle = "#1e293b";
+      overlayContext.strokeStyle = "#ffffff";
       overlayContext.lineWidth = 2;
       overlayContext.arc(point.x, point.y, 6.5, 0, Math.PI * 2);
       overlayContext.fill();
@@ -644,9 +695,9 @@
 
       if (feature.properties?.label) {
         overlayContext.font = '600 11px "Inter", "Open Sans", system-ui';
-        overlayContext.textAlign = 'center';
-        overlayContext.textBaseline = 'top';
-        overlayContext.fillStyle = '#0f172a';
+        overlayContext.textAlign = "center";
+        overlayContext.textBaseline = "top";
+        overlayContext.fillStyle = "#0f172a";
         overlayContext.fillText(feature.properties.label, point.x, point.y + 8);
       }
 
@@ -657,7 +708,7 @@
   function renderOverlay(
     segments: SegmentCollection = segmentCollection,
     stops: StopCollection = stopCollection,
-    threshold: number = mapVisibilityThreshold
+    threshold: number = mapVisibilityThreshold,
   ) {
     if (!mapOverlayCanvas) return;
     initializeOverlayCanvas();
@@ -668,7 +719,10 @@
     const devicePixelRatio = getDevicePixelRatio();
     const pixelWidth = Math.round(width * devicePixelRatio);
     const pixelHeight = Math.round(height * devicePixelRatio);
-    if (mapOverlayCanvas.width !== pixelWidth || mapOverlayCanvas.height !== pixelHeight) {
+    if (
+      mapOverlayCanvas.width !== pixelWidth ||
+      mapOverlayCanvas.height !== pixelHeight
+    ) {
       mapOverlayCanvas.width = pixelWidth;
       mapOverlayCanvas.height = pixelHeight;
       mapOverlayCanvas.style.width = `${width}px`;
@@ -690,11 +744,15 @@
   function updateMapData(
     segments: SegmentCollection,
     stops: StopCollection,
-    coordinates: LngLatTuple[] = allCoordinates
+    coordinates: LngLatTuple[] = allCoordinates,
   ) {
     if (!mapInstance) return;
-    const stopSource = mapInstance.getSource(ROUTE_STOP_SOURCE) as GeoJSONSource | undefined;
-    const segmentSource = mapInstance.getSource(ROUTE_SEGMENT_SOURCE) as GeoJSONSource | undefined;
+    const stopSource = mapInstance.getSource(ROUTE_STOP_SOURCE) as
+      | GeoJSONSource
+      | undefined;
+    const segmentSource = mapInstance.getSource(ROUTE_SEGMENT_SOURCE) as
+      | GeoJSONSource
+      | undefined;
 
     if (!stopSource || !segmentSource) {
       setupSources(segments, stops);
@@ -715,47 +773,48 @@
     if (mapInstance.getLayer(ROUTE_SEGMENT_LAYER)) {
       mapInstance.setPaintProperty(
         ROUTE_SEGMENT_LAYER,
-        'line-opacity',
-        createSegmentOpacityExpression(threshold)
+        "line-opacity",
+        createSegmentOpacityExpression(threshold),
       );
     }
     if (mapInstance.getLayer(ROUTE_SEGMENT_LAYER_DASHED)) {
       mapInstance.setPaintProperty(
         ROUTE_SEGMENT_LAYER_DASHED,
-        'line-opacity',
-        createSegmentOpacityExpression(threshold)
+        "line-opacity",
+        createSegmentOpacityExpression(threshold),
       );
     }
     if (mapInstance.getLayer(ROUTE_STOP_LAYER)) {
       mapInstance.setPaintProperty(
         ROUTE_STOP_LAYER,
-        'circle-opacity',
-        createStopOpacityExpression(threshold)
+        "circle-opacity",
+        createStopOpacityExpression(threshold),
       );
       mapInstance.setPaintProperty(
         ROUTE_STOP_LAYER,
-        'circle-stroke-opacity',
-        createStopOpacityExpression(threshold)
+        "circle-stroke-opacity",
+        createStopOpacityExpression(threshold),
       );
     }
     if (mapInstance.getLayer(ROUTE_STOP_LABEL_LAYER)) {
-      mapInstance.setPaintProperty(
-        ROUTE_STOP_LABEL_LAYER,
-        'text-opacity',
-        ['case', ['<=', ['get', 'order'], threshold], 0.94, 0]
-      );
+      mapInstance.setPaintProperty(ROUTE_STOP_LABEL_LAYER, "text-opacity", [
+        "case",
+        ["<=", ["get", "order"], threshold],
+        0.94,
+        0,
+      ]);
     }
     renderOverlay(segmentCollection, stopCollection, threshold);
   }
 
   function escapeHtml(value: string | undefined | null) {
-    if (!value) return '';
+    if (!value) return "";
     const map: Record<string, string> = {
-      '&': '&amp;',
-      '<': '&lt;',
-      '>': '&gt;',
-      '"': '&quot;',
-      "'": '&#39;'
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#39;",
     };
     return value.replace(/[&<>"']/g, (char) => map[char] ?? char);
   }
@@ -765,29 +824,35 @@
   }
 
   function renderStopPopupContent(properties: StopProperties) {
-    const title = escapeHtml(properties.title ?? properties.name ?? 'Highlight');
+    const title = escapeHtml(
+      properties.title ?? properties.name ?? "Highlight",
+    );
     const subtitle = properties.subtitle
       ? `<span class="travel-map-popup__subtitle">${escapeHtml(properties.subtitle)}</span>`
-      : '';
+      : "";
     const description = properties.description
       ? `<p class="travel-map-popup__description">${escapeHtml(properties.description)}</p>`
-      : '';
+      : "";
     const metaParts = [properties.city, properties.type]
-      .map((value) => (value ? escapeHtml(String(value)) : ''))
+      .map((value) => (value ? escapeHtml(String(value)) : ""))
       .filter((value) => value.length > 0);
     const meta = metaParts.length
-      ? `<p class="travel-map-popup__meta">${metaParts.join(' • ')}</p>`
-      : '';
+      ? `<p class="travel-map-popup__meta">${metaParts.join(" • ")}</p>`
+      : "";
 
-    let media = '';
+    let media = "";
     if (properties.photoUrl) {
-      const altText = properties.photoCaption ?? properties.title ?? properties.name ?? 'POI Bild';
+      const altText =
+        properties.photoCaption ??
+        properties.title ??
+        properties.name ??
+        "POI Bild";
       const captionParts = [properties.photoCaption, properties.photoCredit]
-        .map((value) => (value ? escapeHtml(value) : ''))
+        .map((value) => (value ? escapeHtml(value) : ""))
         .filter((value) => value.length > 0);
       const caption = captionParts.length
-        ? `<figcaption>${captionParts.join(' • ')}</figcaption>`
-        : '';
+        ? `<figcaption>${captionParts.join(" • ")}</figcaption>`
+        : "";
       media = `
         <figure class="travel-map-popup__media">
           <img src="${escapeAttribute(properties.photoUrl)}" alt="${escapeAttribute(altText)}" loading="lazy" decoding="async" />
@@ -810,15 +875,15 @@
   function resolveStopMeta(stop: StopProperties | null): string | null {
     if (!stop) return null;
     const parts = [stop.city ?? stop.subtitle, stop.type]
-      .map((value) => (value ? String(value) : ''))
+      .map((value) => (value ? String(value) : ""))
       .filter((value) => value.length > 0);
-    return parts.length ? parts.join(' • ') : null;
+    return parts.length ? parts.join(" • ") : null;
   }
 
   function handleStopClick(event: MapLayerMouseEvent) {
     if (!mapInstance || !maplibre) return;
     const feature = event.features?.[0];
-    if (!feature || feature.geometry.type !== 'Point') return;
+    if (!feature || feature.geometry.type !== "Point") return;
 
     const coordinates = feature.geometry.coordinates as [number, number];
     const properties = feature.properties as StopProperties | undefined;
@@ -838,8 +903,8 @@
       closeButton: false,
       closeOnClick: false,
       offset: [0, 12],
-      maxWidth: '320px',
-      className: STOP_POPUP_CLASS
+      maxWidth: "320px",
+      className: STOP_POPUP_CLASS,
     })
       .setLngLat(coordinates)
       .setHTML(renderStopPopupContent(properties))
@@ -847,16 +912,19 @@
   }
 
   async function ensureMapLibre(): Promise<MapLibreModule | null> {
-    if (typeof window === 'undefined') return null;
+    if (typeof window === "undefined") return null;
     if (maplibre) return maplibre;
 
-    const module = await import('maplibre-gl');
+    const module = await import("maplibre-gl");
     // Für Einsteiger:innen: Die Bundler liefern MapLibre je nach Ziel als Default-Export.
     // Damit die Karte zuverlässig lädt, wandeln wir das Modul einmal in den echten Namespace um.
     maplibre = resolveMapLibreNamespace(module);
-    if (!maplibre.workerClass && typeof window !== 'undefined') {
-      const workerModule = await import('maplibre-gl/dist/maplibre-gl-csp-worker');
-      const workerClass = (workerModule.default ?? workerModule) as typeof Worker;
+    if (!maplibre.workerClass && typeof window !== "undefined") {
+      const workerModule = await import(
+        "maplibre-gl/dist/maplibre-gl-csp-worker"
+      );
+      const workerClass = (workerModule.default ??
+        workerModule) as typeof Worker;
       maplibre.workerClass = workerClass;
     }
     return maplibre;
@@ -877,25 +945,33 @@
       }
     };
 
-    if (typeof window !== 'undefined' && typeof window.matchMedia === 'function') {
-      const pointerQuery = window.matchMedia('(pointer: coarse)');
+    if (
+      typeof window !== "undefined" &&
+      typeof window.matchMedia === "function"
+    ) {
+      const pointerQuery = window.matchMedia("(pointer: coarse)");
       applyPointerPreference(pointerQuery.matches);
-      const handlePointerChange = (event: MediaQueryListEvent) => applyPointerPreference(event.matches);
-      pointerQuery.addEventListener('change', handlePointerChange);
+      const handlePointerChange = (event: MediaQueryListEvent) =>
+        applyPointerPreference(event.matches);
+      pointerQuery.addEventListener("change", handlePointerChange);
       pointerPreferenceCleanup = () => {
-        pointerQuery.removeEventListener('change', handlePointerChange);
+        pointerQuery.removeEventListener("change", handlePointerChange);
       };
     }
 
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       const handleWindowResize = () => {
         if (!mapLoaded && overlayContext) {
-          renderOverlay(segmentCollection, stopCollection, mapVisibilityThreshold);
+          renderOverlay(
+            segmentCollection,
+            stopCollection,
+            mapVisibilityThreshold,
+          );
         }
       };
-      window.addEventListener('resize', handleWindowResize, { passive: true });
+      window.addEventListener("resize", handleWindowResize, { passive: true });
       fallbackResizeCleanup = () => {
-        window.removeEventListener('resize', handleWindowResize);
+        window.removeEventListener("resize", handleWindowResize);
       };
     }
 
@@ -914,7 +990,7 @@
           zoom: data.travel.meta.map.zoom,
           maxZoom: 12,
           attributionControl: false,
-          scrollZoom: false
+          scrollZoom: false,
         });
 
         mapInstance = map;
@@ -923,7 +999,10 @@
         map.touchZoomRotate.enable();
         map.touchZoomRotate.enableRotation();
 
-        map.addControl(new module.NavigationControl({ showCompass: false }), 'top-right');
+        map.addControl(
+          new module.NavigationControl({ showCompass: false }),
+          "top-right",
+        );
         map.addControl(new module.AttributionControl({ compact: true }));
 
         const handleMapLoad = () => {
@@ -934,22 +1013,22 @@
           updateMapData(segmentCollection, stopCollection, allCoordinates);
         };
 
-        map.on('load', handleMapLoad);
+        map.on("load", handleMapLoad);
 
-        map.on('click', ROUTE_STOP_LAYER, handleStopClick);
-        map.on('mouseenter', ROUTE_STOP_LAYER, () => {
+        map.on("click", ROUTE_STOP_LAYER, handleStopClick);
+        map.on("mouseenter", ROUTE_STOP_LAYER, () => {
           if (mapInstance) {
-            mapInstance.getCanvas().style.cursor = 'pointer';
+            mapInstance.getCanvas().style.cursor = "pointer";
           }
         });
-        map.on('mouseleave', ROUTE_STOP_LAYER, () => {
+        map.on("mouseleave", ROUTE_STOP_LAYER, () => {
           if (mapInstance) {
-            mapInstance.getCanvas().style.cursor = '';
+            mapInstance.getCanvas().style.cursor = "";
           }
         });
 
-        if (typeof window !== 'undefined') {
-          if ('ResizeObserver' in window && mapContainer) {
+        if (typeof window !== "undefined") {
+          if ("ResizeObserver" in window && mapContainer) {
             const observer = new ResizeObserver(() => {
               mapInstance?.resize();
             });
@@ -957,12 +1036,16 @@
             resizeCleanup = () => observer.disconnect();
           } else {
             const resizeHandler = () => mapInstance?.resize();
-            window.addEventListener('resize', resizeHandler, { passive: true });
-            resizeCleanup = () => window.removeEventListener('resize', resizeHandler);
+            window.addEventListener("resize", resizeHandler, { passive: true });
+            resizeCleanup = () =>
+              window.removeEventListener("resize", resizeHandler);
           }
         }
       } catch (error) {
-        loadError = error instanceof Error ? error.message : 'Unbekannter Fehler beim Laden der Karte';
+        loadError =
+          error instanceof Error
+            ? error.message
+            : "Unbekannter Fehler beim Laden der Karte";
       }
     };
 
@@ -985,7 +1068,7 @@
       updateScrollZoom(false);
 
       if (mapInstance) {
-        mapInstance.off('click', ROUTE_STOP_LAYER, handleStopClick);
+        mapInstance.off("click", ROUTE_STOP_LAYER, handleStopClick);
         mapInstance.remove();
         mapInstance = null;
       }
@@ -995,9 +1078,12 @@
     };
   });
 
-  function formatNumber(value: number | undefined, options?: Intl.NumberFormatOptions) {
+  function formatNumber(
+    value: number | undefined,
+    options?: Intl.NumberFormatOptions,
+  ) {
     if (value === undefined || Number.isNaN(value)) return null;
-    return new Intl.NumberFormat('de-DE', options).format(value);
+    return new Intl.NumberFormat("de-DE", options).format(value);
   }
 
   function formatCurrency(value: number | undefined) {
@@ -1009,9 +1095,9 @@
     if (!value) return null;
     const date = new Date(value);
     if (Number.isNaN(date.getTime())) return value;
-    return new Intl.DateTimeFormat('de-DE', {
-      day: '2-digit',
-      month: 'long'
+    return new Intl.DateTimeFormat("de-DE", {
+      day: "2-digit",
+      month: "long",
     }).format(date);
   }
 
@@ -1019,9 +1105,9 @@
     if (!value) return null;
     const date = new Date(value);
     if (Number.isNaN(date.getTime())) return value;
-    return new Intl.DateTimeFormat('de-DE', {
-      hour: '2-digit',
-      minute: '2-digit'
+    return new Intl.DateTimeFormat("de-DE", {
+      hour: "2-digit",
+      minute: "2-digit",
     }).format(date);
   }
 
@@ -1029,10 +1115,10 @@
     if (!option) return null;
     const parts: string[] = [];
     if (option.summary) parts.push(option.summary);
-    if (option.price) parts.push(formatCurrency(option.price) ?? '');
+    if (option.price) parts.push(formatCurrency(option.price) ?? "");
     if (option.durationMinutes) parts.push(`${option.durationMinutes} min`);
     if (option.distanceKm) parts.push(`${option.distanceKm} km`);
-    return parts.filter(Boolean).join(' • ');
+    return parts.filter(Boolean).join(" • ");
   }
 
   function getDayFlights(day: DayDefinition | undefined): DayArrivalSegment[] {
@@ -1042,15 +1128,23 @@
         flightNumber?: string;
         airline?: string;
       };
-      return candidate.mode === 'flight' || Boolean(candidate.flightNumber) || Boolean(candidate.airline);
+      return (
+        candidate.mode === "flight" ||
+        Boolean(candidate.flightNumber) ||
+        Boolean(candidate.airline)
+      );
     });
   }
 
-  function getDayRestaurants(day: DayDefinition | undefined): ActivityRestaurant[] {
+  function getDayRestaurants(
+    day: DayDefinition | undefined,
+  ): ActivityRestaurant[] {
     if (!day?.activities?.length) return [];
     return day.activities
       .flatMap((activity) => activity.restaurants ?? [])
-      .filter((restaurant): restaurant is ActivityRestaurant => Boolean(restaurant));
+      .filter((restaurant): restaurant is ActivityRestaurant =>
+        Boolean(restaurant),
+      );
   }
 
   function getDayNotes(day: DayDefinition | undefined): string[] {
@@ -1098,16 +1192,21 @@
     return stopDataIndex.notes[stopId] ?? [];
   }
 
-  $: selectedIndexEntry = data.travel.routeIndex.find((entry) => entry.id === selectedRouteId) ?? null;
+  $: selectedIndexEntry =
+    data.travel.routeIndex.find((entry) => entry.id === selectedRouteId) ??
+    null;
   $: selectedRoute = data.travel.routes[selectedRouteId] ?? null;
   $: stopDataIndex = buildStopDataIndex(selectedRoute);
-  $: segmentCollection = buildSegmentCollection(selectedRoute, data.travel.transportModes);
+  $: segmentCollection = buildSegmentCollection(
+    selectedRoute,
+    data.travel.transportModes,
+  );
   $: stopCollection = buildStopCollection(selectedRoute);
   $: allCoordinates = collectAllCoordinates(segmentCollection, stopCollection);
   $: overlayBounds = calculateBoundingBox(allCoordinates);
   $: sliderSteps = buildTimeline(selectedRoute, selectedIndexEntry);
   $: sliderMax = sliderSteps.length > 0 ? sliderSteps.length - 1 : 0;
-  $: sliderLabel = sliderSteps[sliderValue]?.label ?? 'Start';
+  $: sliderLabel = sliderSteps[sliderValue]?.label ?? "Start";
   $: if (sliderResetPending) {
     sliderValue = getDefaultSliderIndex(sliderSteps);
     sliderResetPending = false;
@@ -1115,12 +1214,17 @@
   $: if (sliderValue > sliderMax) {
     sliderValue = sliderMax;
   }
-  $: showStopDetailPanel = Boolean(stopDetailPanel) && (isMapFullscreen || prefersDetailPanel);
-  $: isTouchOverlayActive = Boolean(stopDetailPanel) && prefersDetailPanel && !isMapFullscreen;
+  $: showStopDetailPanel =
+    Boolean(stopDetailPanel) && (isMapFullscreen || prefersDetailPanel);
+  $: isTouchOverlayActive =
+    Boolean(stopDetailPanel) && prefersDetailPanel && !isMapFullscreen;
   $: if (!isMapFullscreen && !prefersDetailPanel) {
     stopDetailPanel = null;
   }
-  $: mapVisibilityThreshold = resolveMapVisibilityThreshold(sliderSteps.length, sliderValue);
+  $: mapVisibilityThreshold = resolveMapVisibilityThreshold(
+    sliderSteps.length,
+    sliderValue,
+  );
   $: if (mapLoaded) {
     updateMapData(segmentCollection, stopCollection, allCoordinates);
   }
@@ -1133,13 +1237,11 @@
 </script>
 
 <svelte:head>
-  <title>{data.experience?.title ?? 'Chile Travel Experience'}</title>
+  <title>{data.experience?.title ?? "Chile Travel Experience"}</title>
   <meta
     name="description"
-    content={
-      data.experience?.description ??
-        'Interaktive Chile-Routen mit Karte, detaillierten Stopps und Logistik-Tipps.'
-    }
+    content={data.experience?.description ??
+      "Interaktive Chile-Routen mit Karte, detaillierten Stopps und Logistik-Tipps."}
   />
   <!-- Für Einsteiger:innen: Die MapLibre-Styles werden über den JS-Import gebündelt, daher braucht es hier keinen separaten
        CDN-Link mehr. -->
@@ -1149,27 +1251,39 @@
   <header class="travel__intro">
     <div>
       <p class="travel__eyebrow">Chile Toolkit</p>
-      <h1 id="travel-title">{data.experience?.title ?? 'Chile Reiseplaner'}</h1>
-      <p>{data.experience?.description ?? 'Wähle eine Route und entdecke alle Etappen im Detail.'}</p>
+      <h1 id="travel-title">{data.experience?.title ?? "Chile Reiseplaner"}</h1>
+      <p>
+        {data.experience?.description ??
+          "Wähle eine Route und entdecke alle Etappen im Detail."}
+      </p>
     </div>
   </header>
 
   <div class="travel__layout">
     {#if isMapFullscreen}
-      <div class="travel__map-backdrop" role="presentation" aria-hidden="true" on:click={closeMapFullscreen}></div>
+      <div
+        class="travel__map-backdrop"
+        role="presentation"
+        aria-hidden="true"
+        on:click={closeMapFullscreen}
+      ></div>
     {/if}
     <div class="travel__map-shell">
       <div
-        class={`travel__map${isMapFullscreen ? ' travel__map--fullscreen' : ''}${
-          isTouchOverlayActive ? ' travel__map--panel-open' : ''
+        class={`travel__map${isMapFullscreen ? " travel__map--fullscreen" : ""}${
+          isTouchOverlayActive ? " travel__map--panel-open" : ""
         }`}
         aria-live="polite"
       >
-        <div class="travel__map-controls" role="toolbar" aria-label="Karteneinstellungen">
+        <div
+          class="travel__map-controls"
+          role="toolbar"
+          aria-label="Karteneinstellungen"
+        >
           <button
             type="button"
             class="travel__map-control"
-            title={isLegendVisible ? 'Legende ausblenden' : 'Legende anzeigen'}
+            title={isLegendVisible ? "Legende ausblenden" : "Legende anzeigen"}
             aria-pressed={isLegendVisible}
             on:click={toggleLegendVisibility}
           >
@@ -1181,12 +1295,18 @@
                 stroke-linecap="round"
               />
             </svg>
-            <span class="travel__sr-only">{isLegendVisible ? 'Legende ausblenden' : 'Legende anzeigen'}</span>
+            <span class="travel__sr-only"
+              >{isLegendVisible
+                ? "Legende ausblenden"
+                : "Legende anzeigen"}</span
+            >
           </button>
           <button
             type="button"
             class="travel__map-control"
-            title={isMapFullscreen ? 'Vollbild verlassen' : 'Karte im Vollbild anzeigen'}
+            title={isMapFullscreen
+              ? "Vollbild verlassen"
+              : "Karte im Vollbild anzeigen"}
             aria-pressed={isMapFullscreen}
             on:click={toggleMapFullscreen}
           >
@@ -1211,7 +1331,11 @@
                 />
               </svg>
             {/if}
-            <span class="travel__sr-only">{isMapFullscreen ? 'Vollbild schließen' : 'Karte im Vollbild anzeigen'}</span>
+            <span class="travel__sr-only"
+              >{isMapFullscreen
+                ? "Vollbild schließen"
+                : "Karte im Vollbild anzeigen"}</span
+            >
           </button>
         </div>
         <div
@@ -1261,14 +1385,18 @@
             role="dialog"
             aria-live="polite"
             aria-modal="true"
-            aria-label={`Details zu ${stopDetailPanel.title ?? stopDetailPanel.name ?? 'Highlight'}`}
+            aria-label={`Details zu ${stopDetailPanel.title ?? stopDetailPanel.name ?? "Highlight"}`}
           >
             <div class="travel__map-fullscreen-panel__header">
               <div>
                 {#if resolveStopMeta(stopDetailPanel)}
-                  <p class="travel__map-fullscreen-panel__eyebrow">{resolveStopMeta(stopDetailPanel)}</p>
+                  <p class="travel__map-fullscreen-panel__eyebrow">
+                    {resolveStopMeta(stopDetailPanel)}
+                  </p>
                 {/if}
-                <h3>{stopDetailPanel.title ?? stopDetailPanel.name ?? 'Highlight'}</h3>
+                <h3>
+                  {stopDetailPanel.title ?? stopDetailPanel.name ?? "Highlight"}
+                </h3>
               </div>
               <button
                 type="button"
@@ -1277,7 +1405,12 @@
               >
                 <span class="travel__sr-only">Detail schließen</span>
                 <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                  <path d="M6 6l12 12M6 18L18 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  <path
+                    d="M6 6l12 12M6 18L18 6"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
                 </svg>
               </button>
             </div>
@@ -1285,7 +1418,10 @@
               <figure class="travel__map-fullscreen-panel__media">
                 <img
                   src={stopDetailPanel.photoUrl}
-                  alt={stopDetailPanel.photoCaption ?? stopDetailPanel.title ?? stopDetailPanel.name ?? 'POI Bild'}
+                  alt={stopDetailPanel.photoCaption ??
+                    stopDetailPanel.title ??
+                    stopDetailPanel.name ??
+                    "POI Bild"}
                   loading="lazy"
                   decoding="async"
                 />
@@ -1293,7 +1429,7 @@
                   <figcaption>
                     {[stopDetailPanel.photoCaption, stopDetailPanel.photoCredit]
                       .filter((value): value is string => Boolean(value))
-                      .join(' • ')}
+                      .join(" • ")}
                   </figcaption>
                 {/if}
               </figure>
@@ -1301,7 +1437,10 @@
             {#if stopDetailPanel.description}
               <p>{stopDetailPanel.description}</p>
             {:else}
-              <p>Mehr Impressionen folgen direkt in der Route – Tipp: Slider bewegen, um weitere Highlights aufzudecken.</p>
+              <p>
+                Mehr Impressionen folgen direkt in der Route – Tipp: Slider
+                bewegen, um weitere Highlights aufzudecken.
+              </p>
             {/if}
           </article>
         {/if}
@@ -1309,7 +1448,9 @@
           <ul class="travel__legend" aria-label="Legende">
             {#each Object.entries(data.travel.transportModes) as [modeKey, mode]}
               <li>
-                <span style={`--legend-color: ${mode.color}`}>{mode.icon ?? ''}</span>
+                <span style={`--legend-color: ${mode.color}`}
+                  >{mode.icon ?? ""}</span
+                >
                 <div>
                   <strong>{mode.label}</strong>
                   {#if mode.description}
@@ -1324,13 +1465,14 @@
 
       <!-- Für Einsteiger:innen: Direkt unter der Karte sitzt die horizontale Routenauswahl als Nav. -->
       <nav
-        class={`travel__routes${isMapFullscreen ? ' travel__routes--hidden' : ''}`}
+        class={`travel__routes${isMapFullscreen ? " travel__routes--hidden" : ""}`}
         aria-label="Routen auswählen"
       >
         <div class="travel__routes-header">
           <h2>Routenübersicht</h2>
           <p class="travel__routes-hint">
-            Jede Option enthält Entfernungen, Transport und Unterkünfte für jeden Halt.
+            Jede Option enthält Entfernungen, Transport und Unterkünfte für
+            jeden Halt.
           </p>
         </div>
         <!-- Für Einsteiger:innen: Die Liste verwendet Scroll-Snap, damit wirklich nur eine horizontale Reihe sichtbar ist
@@ -1341,13 +1483,17 @@
               <button
                 type="button"
                 class:selected={entry.id === selectedRouteId}
-                style={`--route-color: ${entry.color ?? '#2563eb'}`}
+                style={`--route-color: ${entry.color ?? "#2563eb"}`}
                 on:click={() => selectRoute(entry.id)}
               >
                 <span class="travel__route-name">{entry.name}</span>
                 <span class="travel__route-meta">
-                  {entry.meta?.durationDays ?? selectedRoute?.meta?.durationDays ?? data.travel.meta.defaultDurationDays} Tage ·
-                  {entry.metrics?.totalDistanceKm ? `${numberFormatter.format(entry.metrics.totalDistanceKm)} km` : 'flexibel'}
+                  {entry.meta?.durationDays ??
+                    selectedRoute?.meta?.durationDays ??
+                    data.travel.meta.defaultDurationDays} Tage ·
+                  {entry.metrics?.totalDistanceKm
+                    ? `${numberFormatter.format(entry.metrics.totalDistanceKm)} km`
+                    : "flexibel"}
                 </span>
                 <span class="travel__route-tagline">{entry.summary}</span>
                 {#if entry.tags?.length}
@@ -1370,7 +1516,10 @@
       <!-- Für Einsteiger:innen: Der Detailbereich nutzt jetzt das Stack-Layout von https://every-layout.dev/layouts/stack/.
            Ein gemeinsamer Container reicht aus, um vertikale Abstände für alle Abschnitte zu steuern. -->
       <div class="travel__stack" role="list" aria-live="polite">
-        <section class="travel__stack-card travel__stack-card--intro" role="listitem">
+        <section
+          class="travel__stack-card travel__stack-card--intro"
+          role="listitem"
+        >
           <p class="travel__stack-label">Ausgewählte Route</p>
           <h2 id="route-title">{selectedRoute.name}</h2>
           {#if selectedRoute.summary}
@@ -1418,7 +1567,10 @@
         <section class="travel__stack-card" role="listitem">
           <div class="travel__stack-card-head">
             <h3>Kernmetriken</h3>
-            <p>Die Kennzahlen gelten für die aktuelle Route und helfen bei Budget und Tempo.</p>
+            <p>
+              Die Kennzahlen gelten für die aktuelle Route und helfen bei Budget
+              und Tempo.
+            </p>
           </div>
           <dl class="travel__stack-meta-grid">
             {#if selectedRoute.meta?.durationDays}
@@ -1430,7 +1582,11 @@
             {#if selectedRoute.metrics?.totalDistanceKm}
               <div>
                 <dt>Gesamtdistanz</dt>
-                <dd>{numberFormatter.format(selectedRoute.metrics.totalDistanceKm)} km</dd>
+                <dd>
+                  {numberFormatter.format(
+                    selectedRoute.metrics.totalDistanceKm,
+                  )} km
+                </dd>
               </div>
             {/if}
             {#if selectedRoute.meta?.pace}
@@ -1450,37 +1606,51 @@
             <div class="travel__metric-grid">
               {#if selectedRoute.metrics.segmentCount}
                 <div>
-                  <span class="travel__metric-value">{selectedRoute.metrics.segmentCount}</span>
+                  <span class="travel__metric-value"
+                    >{selectedRoute.metrics.segmentCount}</span
+                  >
                   <span class="travel__metric-label">Segmente</span>
                 </div>
               {/if}
               {#if selectedRoute.metrics.flightCount}
                 <div>
-                  <span class="travel__metric-value">{selectedRoute.metrics.flightCount}</span>
+                  <span class="travel__metric-value"
+                    >{selectedRoute.metrics.flightCount}</span
+                  >
                   <span class="travel__metric-label">Flüge</span>
                 </div>
               {/if}
               {#if selectedRoute.metrics.lodgingCount}
                 <div>
-                  <span class="travel__metric-value">{selectedRoute.metrics.lodgingCount}</span>
+                  <span class="travel__metric-value"
+                    >{selectedRoute.metrics.lodgingCount}</span
+                  >
                   <span class="travel__metric-label">Unterkünfte</span>
                 </div>
               {/if}
               {#if selectedRoute.metrics.foodCount}
                 <div>
-                  <span class="travel__metric-value">{selectedRoute.metrics.foodCount}</span>
+                  <span class="travel__metric-value"
+                    >{selectedRoute.metrics.foodCount}</span
+                  >
                   <span class="travel__metric-label">Kulinarische Tipps</span>
                 </div>
               {/if}
               {#if selectedRoute.metrics.activityCount}
                 <div>
-                  <span class="travel__metric-value">{selectedRoute.metrics.activityCount}</span>
+                  <span class="travel__metric-value"
+                    >{selectedRoute.metrics.activityCount}</span
+                  >
                   <span class="travel__metric-label">Aktivitäten</span>
                 </div>
               {/if}
               {#if selectedRoute.metrics.estimatedCarbonKg}
                 <div>
-                  <span class="travel__metric-value">{numberFormatter.format(selectedRoute.metrics.estimatedCarbonKg)} kg</span>
+                  <span class="travel__metric-value"
+                    >{numberFormatter.format(
+                      selectedRoute.metrics.estimatedCarbonKg,
+                    )} kg</span
+                  >
                   <span class="travel__metric-label">CO₂ gesamt</span>
                 </div>
               {/if}
@@ -1493,7 +1663,8 @@
             <div class="travel__stack-card-head">
               <h3>Zeitverlauf &amp; Slider</h3>
               <p>
-                Aktueller Marker: <strong>{sliderLabel}</strong>. Die Liste spiegelt die Reihenfolge der Map-Segmente wider.
+                Aktueller Marker: <strong>{sliderLabel}</strong>. Die Liste
+                spiegelt die Reihenfolge der Map-Segmente wider.
               </p>
             </div>
             <ol class="travel__timeline">
@@ -1516,7 +1687,10 @@
           <section class="travel__stack-card" role="listitem">
             <div class="travel__stack-card-head">
               <h3>Stationen & Stopps</h3>
-              <p>Alle Orte mit Logistik, Food, Aktivitäten und Bildern auf einen Blick.</p>
+              <p>
+                Alle Orte mit Logistik, Food, Aktivitäten und Bildern auf einen
+                Blick.
+              </p>
             </div>
             <ol class="travel__stops-list">
               {#each selectedRoute.stops as stop, index}
@@ -1524,7 +1698,9 @@
                   <header>
                     <span class="travel__stop-index">{index + 1}</span>
                     <div>
-                      <p class="travel__stop-day">{stop.city ?? stop.type ?? 'Station'}</p>
+                      <p class="travel__stop-day">
+                        {stop.city ?? stop.type ?? "Station"}
+                      </p>
                       <h4>{stop.name}</h4>
                     </div>
                   </header>
@@ -1541,19 +1717,29 @@
                     {#if stop.rating}
                       <div>
                         <dt>Bewertung</dt>
-                        <dd>{decimalFormatter.format(stop.rating)} · {stop.reviewCount ?? 0} Stimmen</dd>
+                        <dd>
+                          {decimalFormatter.format(stop.rating)} · {stop.reviewCount ??
+                            0} Stimmen
+                        </dd>
                       </div>
                     {/if}
                     {#if stop.address?.city}
                       <div>
                         <dt>Adresse</dt>
-                        <dd>{stop.address.street ?? ''} {stop.address.city ?? ''}</dd>
+                        <dd>
+                          {stop.address.street ?? ""}
+                          {stop.address.city ?? ""}
+                        </dd>
                       </div>
                     {/if}
                     {#if stop.website}
                       <div>
                         <dt>Website</dt>
-                        <dd><a href={stop.website} target="_blank" rel="noopener">{stop.website}</a></dd>
+                        <dd>
+                          <a href={stop.website} target="_blank" rel="noopener"
+                            >{stop.website}</a
+                          >
+                        </dd>
                       </div>
                     {/if}
                   </dl>
@@ -1561,7 +1747,11 @@
                     <div class="travel__image-grid">
                       {#each stop.photos as photo}
                         <figure>
-                          <img src={photo.url} alt={photo.caption ?? stop.name} loading="lazy" />
+                          <img
+                            src={photo.url}
+                            alt={photo.caption ?? stop.name}
+                            loading="lazy"
+                          />
                           {#if photo.caption}
                             <figcaption>{photo.caption}</figcaption>
                           {/if}
@@ -1577,20 +1767,30 @@
                           {#each getStopSegments(stop.id) as item}
                             <li>
                               <strong>
-                                {item.direction === 'arrival' ? 'Ankunft' : 'Weiterreise'} ·
+                                {item.direction === "arrival"
+                                  ? "Ankunft"
+                                  : "Weiterreise"} ·
                                 {getModeAppearance(item.segment.mode).label}
                               </strong>
                               <div>
-                                {item.fromStop?.name ?? item.segment.from ?? 'Start'} →
-                                {item.toStop?.name ?? item.segment.to ?? 'Ziel'}
+                                {item.fromStop?.name ??
+                                  item.segment.from ??
+                                  "Start"} →
+                                {item.toStop?.name ?? item.segment.to ?? "Ziel"}
                                 {#if item.segment.distanceKm}
-                                  · {numberFormatter.format(item.segment.distanceKm)} km
+                                  · {numberFormatter.format(
+                                    item.segment.distanceKm,
+                                  )} km
                                 {/if}
                                 {#if item.segment.durationHours}
-                                  · {decimalFormatter.format(item.segment.durationHours)} h
+                                  · {decimalFormatter.format(
+                                    item.segment.durationHours,
+                                  )} h
                                 {/if}
                                 {#if item.segment.carbonKg}
-                                  · {numberFormatter.format(item.segment.carbonKg)} kg CO₂
+                                  · {numberFormatter.format(
+                                    item.segment.carbonKg,
+                                  )} kg CO₂
                                 {/if}
                               </div>
                               {#if item.segment.operator}
@@ -1612,24 +1812,31 @@
                           {#each getStopFlights(stop.id) as entry}
                             <li>
                               <strong>
-                                {entry.fromStop?.name ?? entry.flight.fromStopId} →
+                                {entry.fromStop?.name ??
+                                  entry.flight.fromStopId} →
                                 {entry.toStop?.name ?? entry.flight.toStopId}
                               </strong>
                               <div>
-                                {entry.direction === 'arrival' ? 'Ankunft' : 'Abflug'} an diesem Stopp ·
+                                {entry.direction === "arrival"
+                                  ? "Ankunft"
+                                  : "Abflug"} an diesem Stopp ·
                                 {entry.flight.airline
-                                  ? `${entry.flight.airline}${entry.flight.flightNumber ? ` • ${entry.flight.flightNumber}` : ''}`
-                                  : entry.flight.flightNumber ?? 'Flug'}
+                                  ? `${entry.flight.airline}${entry.flight.flightNumber ? ` • ${entry.flight.flightNumber}` : ""}`
+                                  : (entry.flight.flightNumber ?? "Flug")}
                               </div>
                               <div>
                                 {#if entry.flight.durationHours}
-                                  {decimalFormatter.format(entry.flight.durationHours)} h
+                                  {decimalFormatter.format(
+                                    entry.flight.durationHours,
+                                  )} h
                                 {/if}
                                 {#if entry.flight.carbonKg}
-                                  · {numberFormatter.format(entry.flight.carbonKg)} kg CO₂
+                                  · {numberFormatter.format(
+                                    entry.flight.carbonKg,
+                                  )} kg CO₂
                                 {/if}
                                 {#if entry.flight.price !== undefined}
-                                  · {formatCurrency(entry.flight.price) ?? ''}
+                                  · {formatCurrency(entry.flight.price) ?? ""}
                                 {/if}
                               </div>
                               {#if entry.flight.baggage}
@@ -1649,8 +1856,11 @@
                             <li>
                               <h4>{stay.name}</h4>
                               <p class="travel__lodging-meta">
-                                {stay.city ?? stop.city ?? 'Chile'} · {stay.nights ?? 0} Nächte ·
-                                {stay.pricePerNight ? `${formatCurrency(stay.pricePerNight)} pro Nacht` : 'Preis auf Anfrage'}
+                                {stay.city ?? stop.city ?? "Chile"} · {stay.nights ??
+                                  0} Nächte ·
+                                {stay.pricePerNight
+                                  ? `${formatCurrency(stay.pricePerNight)} pro Nacht`
+                                  : "Preis auf Anfrage"}
                               </p>
                               {#if stay.description}
                                 <p>{stay.description}</p>
@@ -1663,13 +1873,23 @@
                                 </ul>
                               {/if}
                               {#if stay.url}
-                                <p><a href={stay.url} target="_blank" rel="noopener">Zur Unterkunft</a></p>
+                                <p>
+                                  <a
+                                    href={stay.url}
+                                    target="_blank"
+                                    rel="noopener">Zur Unterkunft</a
+                                  >
+                                </p>
                               {/if}
                               {#if stay.images?.length}
                                 <div class="travel__image-grid">
                                   {#each stay.images as image}
                                     <figure>
-                                      <img src={image.url} alt={image.caption ?? stay.name} loading="lazy" />
+                                      <img
+                                        src={image.url}
+                                        alt={image.caption ?? stay.name}
+                                        loading="lazy"
+                                      />
                                       {#if image.caption}
                                         <figcaption>{image.caption}</figcaption>
                                       {/if}
@@ -1691,7 +1911,8 @@
                             <li>
                               <h4>{spot.name}</h4>
                               <p class="travel__food-meta">
-                                {spot.city ?? stop.city ?? 'Chile'} · {spot.priceRange ?? 'Preis variiert'}
+                                {spot.city ?? stop.city ?? "Chile"} · {spot.priceRange ??
+                                  "Preis variiert"}
                               </p>
                               {#if spot.description}
                                 <p>{spot.description}</p>
@@ -1707,7 +1928,11 @@
                                 <div class="travel__image-grid">
                                   {#each spot.images as image}
                                     <figure>
-                                      <img src={image.url} alt={image.caption ?? spot.name} loading="lazy" />
+                                      <img
+                                        src={image.url}
+                                        alt={image.caption ?? spot.name}
+                                        loading="lazy"
+                                      />
                                       {#if image.caption}
                                         <figcaption>{image.caption}</figcaption>
                                       {/if}
@@ -1729,9 +1954,14 @@
                             <li>
                               <h4>{activity.title ?? activity.name}</h4>
                               <p class="travel__activity-meta">
-                                {activity.location ?? activity.stopId ?? stop.city ?? 'Unterwegs'} ·
-                                {activity.durationHours ? `${decimalFormatter.format(activity.durationHours)} h` : 'flexibel'} ·
-                                {activity.difficulty ?? 'alle Levels'}
+                                {activity.location ??
+                                  activity.stopId ??
+                                  stop.city ??
+                                  "Unterwegs"} ·
+                                {activity.durationHours
+                                  ? `${decimalFormatter.format(activity.durationHours)} h`
+                                  : "flexibel"} ·
+                                {activity.difficulty ?? "alle Levels"}
                               </p>
                               {#if activity.description}
                                 <p>{activity.description}</p>
@@ -1740,13 +1970,25 @@
                                 <p>Kosten: {formatCurrency(activity.price)}</p>
                               {/if}
                               {#if activity.website}
-                                <p><a href={activity.website} target="_blank" rel="noopener">Zur Aktivität</a></p>
+                                <p>
+                                  <a
+                                    href={activity.website}
+                                    target="_blank"
+                                    rel="noopener">Zur Aktivität</a
+                                  >
+                                </p>
                               {/if}
                               {#if activity.images?.length}
                                 <div class="travel__image-grid">
                                   {#each activity.images as image}
                                     <figure>
-                                      <img src={image.url} alt={image.caption ?? activity.title ?? activity.name} loading="lazy" />
+                                      <img
+                                        src={image.url}
+                                        alt={image.caption ??
+                                          activity.title ??
+                                          activity.name}
+                                        loading="lazy"
+                                      />
                                       {#if image.caption}
                                         <figcaption>{image.caption}</figcaption>
                                       {/if}
@@ -1802,11 +2044,19 @@
                         <ul class="travel__data-list">
                           {#each getDaySegments(day) as segment}
                             <li>
-                              <strong>{getModeAppearance(segment.mode ?? '').label}</strong>
+                              <strong
+                                >{getModeAppearance(segment.mode ?? "")
+                                  .label}</strong
+                              >
                               <div>
-                                {segment.from?.name ?? 'Start'} → {segment.to?.name ?? 'Ziel'} ·
-                                {segment.distanceKm ? `${numberFormatter.format(segment.distanceKm)} km` : 'Distanz offen'} ·
-                                {segment.durationMinutes ? `${segment.durationMinutes} Minuten` : 'Zeit flexibel'}
+                                {segment.from?.name ?? "Start"} → {segment.to
+                                  ?.name ?? "Ziel"} ·
+                                {segment.distanceKm
+                                  ? `${numberFormatter.format(segment.distanceKm)} km`
+                                  : "Distanz offen"} ·
+                                {segment.durationMinutes
+                                  ? `${segment.durationMinutes} Minuten`
+                                  : "Zeit flexibel"}
                               </div>
                               {#if segment.description}
                                 <p>{segment.description}</p>
@@ -1822,10 +2072,14 @@
                         <ul class="travel__data-list">
                           {#each getDayFlights(day) as flight}
                             <li>
-                              <strong>{flight.from?.name ?? 'Start'} → {flight.to?.name ?? 'Ziel'}</strong>
+                              <strong
+                                >{flight.from?.name ?? "Start"} → {flight.to
+                                  ?.name ?? "Ziel"}</strong
+                              >
                               <div>
-                                {flight.airline ? `${flight.airline}${flight.flightNumber ? ` • ${flight.flightNumber}` : ''}` :
-                                  flight.flightNumber ?? 'Verbindung'}
+                                {flight.airline
+                                  ? `${flight.airline}${flight.flightNumber ? ` • ${flight.flightNumber}` : ""}`
+                                  : (flight.flightNumber ?? "Verbindung")}
                               </div>
                               <div>
                                 {formatDate(flight.departure)}
@@ -1847,17 +2101,19 @@
                     {#if day.hotels?.length}
                       <details class="travel__stack-subsection travel__spoiler">
                         <summary><h5>Unterkünfte</h5></summary>
-                          <ul class="travel__data-list">
-                            {#each day.hotels as hotel}
-                              <li>
-                                <strong>{hotel.name}</strong>
-                                <div>
-                                  {hotel.city ?? ''} · {hotel.pricePerNight ? `${formatCurrency(hotel.pricePerNight)} pro Nacht` : 'Preis auf Anfrage'}
-                                </div>
-                              </li>
-                            {/each}
-                          </ul>
-                        </details>
+                        <ul class="travel__data-list">
+                          {#each day.hotels as hotel}
+                            <li>
+                              <strong>{hotel.name}</strong>
+                              <div>
+                                {hotel.city ?? ""} · {hotel.pricePerNight
+                                  ? `${formatCurrency(hotel.pricePerNight)} pro Nacht`
+                                  : "Preis auf Anfrage"}
+                              </div>
+                            </li>
+                          {/each}
+                        </ul>
+                      </details>
                     {/if}
                     {#if getDayRestaurants(day).length}
                       <details class="travel__stack-subsection travel__spoiler">
@@ -1871,7 +2127,7 @@
                               {/if}
                             </li>
                           {/each}
-                          </ul>
+                        </ul>
                       </details>
                     {/if}
                     {#if day.activities?.length}
@@ -1906,19 +2162,27 @@
                           {#if day.mobilityOptions.nextFlight}
                             <li>
                               <strong>Nächster Flug</strong>
-                              <div>{mobilitySummary(day.mobilityOptions.nextFlight)}</div>
+                              <div>
+                                {mobilitySummary(
+                                  day.mobilityOptions.nextFlight,
+                                )}
+                              </div>
                             </li>
                           {/if}
                           {#if day.mobilityOptions.nextBus}
                             <li>
                               <strong>Nächster Bus</strong>
-                              <div>{mobilitySummary(day.mobilityOptions.nextBus)}</div>
+                              <div>
+                                {mobilitySummary(day.mobilityOptions.nextBus)}
+                              </div>
                             </li>
                           {/if}
                           {#if day.mobilityOptions.nextDrive}
                             <li>
                               <strong>Nächster Roadtrip</strong>
-                              <div>{mobilitySummary(day.mobilityOptions.nextDrive)}</div>
+                              <div>
+                                {mobilitySummary(day.mobilityOptions.nextDrive)}
+                              </div>
                             </li>
                           {/if}
                         </ul>
@@ -1935,13 +2199,18 @@
           <section class="travel__stack-card" role="listitem">
             <div class="travel__stack-card-head">
               <h3>Kostenübersicht</h3>
-              <p>Die Summen berücksichtigen das Standardbudget des Manifests.</p>
+              <p>
+                Die Summen berücksichtigen das Standardbudget des Manifests.
+              </p>
             </div>
             <ul class="travel__cost-list">
               {#each selectedRoute.costBreakdown as entry}
                 <li>
                   <strong>{entry.category}</strong>
-                  <span>{formatCurrency(entry.amount)} {entry.currency ?? data.travel.meta.currency ?? 'EUR'}</span>
+                  <span
+                    >{formatCurrency(entry.amount)}
+                    {entry.currency ?? data.travel.meta.currency ?? "EUR"}</span
+                  >
                   {#if entry.description}
                     <p>{entry.description}</p>
                   {/if}
@@ -1955,14 +2224,19 @@
   {:else}
     <p class="travel__empty">Wähle eine Route aus, um Details zu sehen.</p>
   {/if}
-
 </section>
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+  @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap");
 
   :global(body) {
-    font-family: 'IBM Plex Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family:
+      "IBM Plex Sans",
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      sans-serif;
   }
 
   :global(body.travel-body) {
@@ -1971,13 +2245,17 @@
 
   :global(body.travel-map-fullscreen-open) {
     overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
   }
 
   .travel {
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    padding: clamp(1.5rem, 2vw + 1rem, 3rem) clamp(1rem, 2vw + 1rem, 3.5rem) 4rem;
+    padding: clamp(1.5rem, 2vw + 1rem, 3rem) clamp(1rem, 2vw + 1rem, 3.5rem)
+      4rem;
     color: #0f172a;
     background: linear-gradient(180deg, #eef2ff 0%, #f8fafc 35%, #ffffff 100%);
   }
@@ -2049,7 +2327,10 @@
     justify-content: center;
     box-shadow: 0 14px 32px rgba(15, 23, 42, 0.25);
     cursor: pointer;
-    transition: transform 160ms ease, background 160ms ease, box-shadow 160ms ease;
+    transition:
+      transform 160ms ease,
+      background 160ms ease,
+      box-shadow 160ms ease;
   }
 
   .travel__map-control:hover,
@@ -2104,7 +2385,8 @@
     padding-bottom: clamp(180px, 42vh, 320px);
   }
 
-  .travel__map--panel-open:not(.travel__map--fullscreen) .travel__map-fullscreen-panel {
+  .travel__map--panel-open:not(.travel__map--fullscreen)
+    .travel__map-fullscreen-panel {
     position: absolute;
     left: clamp(0.75rem, 4vw, 1.5rem);
     right: clamp(0.75rem, 4vw, 1.5rem);
@@ -2133,7 +2415,8 @@
     width: min(
       420px,
       calc(
-        100% - max(1rem, env(safe-area-inset-left)) - max(1rem, env(safe-area-inset-right))
+        100% - max(1rem, env(safe-area-inset-left)) -
+          max(1rem, env(safe-area-inset-right))
       )
     );
     max-height: min(70vh, 520px);
@@ -2175,7 +2458,9 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: background 160ms ease, border-color 160ms ease;
+    transition:
+      background 160ms ease,
+      border-color 160ms ease;
   }
 
   .travel__map-fullscreen-panel__close:hover,
@@ -2210,7 +2495,7 @@
     padding: 0.5rem 0.75rem;
   }
 
-  .travel__map-slider input[type='range'] {
+  .travel__map-slider input[type="range"] {
     width: 100%;
     accent-color: #6366f1;
   }
@@ -2236,7 +2521,11 @@
 
   .travel__map--fullscreen {
     position: fixed;
-    inset: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
     border-radius: 0;
     width: 100vw;
     height: 100dvh;
@@ -2348,7 +2637,8 @@
 
   .travel__legend {
     position: absolute;
-    inset: auto max(1rem, env(safe-area-inset-right)) max(1rem, env(safe-area-inset-bottom)) auto;
+    inset: auto max(1rem, env(safe-area-inset-right))
+      max(1rem, env(safe-area-inset-bottom)) auto;
     list-style: none;
     margin: 0;
     padding: 0.9rem 1.1rem;
@@ -2445,7 +2735,10 @@
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
-    transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+    transition:
+      border-color 160ms ease,
+      box-shadow 160ms ease,
+      transform 160ms ease;
   }
 
   .travel__route-track button:hover,
@@ -2519,7 +2812,11 @@
   }
 
   .travel__stack-card--intro {
-    background: linear-gradient(135deg, rgba(79, 70, 229, 0.12), rgba(14, 165, 233, 0.08));
+    background: linear-gradient(
+      135deg,
+      rgba(79, 70, 229, 0.12),
+      rgba(14, 165, 233, 0.08)
+    );
     border-color: rgba(79, 70, 229, 0.25);
   }
 

@@ -74,3 +74,12 @@
     daran immer die Unit-Tests (`travel-routes/chile-map.test.js`) ausführen, weil sie die Fallunterscheidung abdecken.【F:travel-routes/chile-map.js†L115-L197】【F:travel-routes/chile-map.test.js†L1-L87】
   - Für Einsteiger:innen: Nutze `node --test travel-routes/chile-map.test.js`, um die Map-Helper zu prüfen, bevor Daten live
     gehen. Die Tests decken u. a. Koordinatennormalisierung, Segmentketten und Tile-Fallbacks ab.【F:travel-routes/chile-map.test.js†L1-L88】
+
+## JSON-Daten-Workflow für Travel Routes
+- Die Reiserouten-JSONs liegen in `travel-routes/data/routes/` und werden über `src/lib/data/chile-travel/server.ts` geladen.
+- **Entwicklung:** `npm run dev` überwacht JSON-Änderungen automatisch. Änderungen an Route-Dateien werden sofort im Browser sichtbar (Hot Module Replacement).
+- **Produktion (GitHub Pages):** JSON-Daten werden zur Build-Zeit in die statische Site eingebettet. Nach JSON-Änderungen ist ein neuer Build erforderlich:
+  1. `npm run build` – Statischen Output erzeugen
+  2. Commit & Push – GitHub Actions deployen automatisch
+  3. Oder lokal testen: `npm run preview` zeigt den Production-Build lokal
+- Das ist normales Verhalten für Static Site Generation (SSG). Die JSONs sind keine Client-seitigen API-Aufrufe, sondern werden zur Build-Zeit in die JavaScript-Bundles „gebacken".

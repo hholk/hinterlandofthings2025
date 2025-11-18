@@ -6,6 +6,12 @@ import type { LoadedTravelRoutesDataset, RouteDetail, RouteIndexEntry, TravelRou
 // sowohl vom statischen HTML-Demo als auch von SvelteKit genutzt werden können.
 // Wir lesen sie hier direkt von der Festplatte ein – so entfällt die Abhängigkeit
 // vom Vite-Importer, der Dateien innerhalb von /static blockiert.
+//
+// WICHTIG: Workflow für JSON-Änderungen:
+// - Entwicklung: `npm run dev` überwacht JSON-Dateien automatisch und lädt bei Änderungen neu
+// - Produktion (GitHub Pages): JSON-Änderungen erfordern `npm run build`, da alle Daten
+//   zur Build-Zeit in die statische Site eingebettet werden. Das ist normal für
+//   Static Site Generation (SSG). Nach dem Build müssen die Änderungen deployed werden.
 const TRAVEL_ROUTES_ROOT = resolve(process.cwd(), 'travel-routes');
 
 function sanitizeRelativePath(path: string): string {
