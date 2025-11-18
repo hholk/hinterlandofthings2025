@@ -1,52 +1,53 @@
 {
-  "id": "chile-route-4-patagonia-sur-2026",
-  "name": "Route 4 – Patagonia Sur & Torres del Paine",
-  "title": "Route 4 – Patagonia Sur & Torres del Paine",
-  "summary": "Klassische Südroute zwischen 04. und 20.01.2026: Santiago → Punta Arenas → Puerto Natales → Torres del Paine mit Fokus auf Trekking, Fjorde und Steppe.",
-  "color": "#0f766e",
+  "id": "chile-route-patagonia-atacama-2026",
+  "name": "Route Patagonia & Atacama Mix",
+  "title": "Route Patagonia & Atacama Mix",
+  "summary": "Abenteuerliche Route vom 04. bis 20.01.2026: Atacama-Wüste (San Pedro), Navimag-Ferry durch Patagonien und Torres del Paine – mit Flügen für Effizienz, passend zu 17 Tagen.",
+  "color": "#f59e0b",
   "tags": [
-    "adventure",
     "flight",
-    "nature"
+    "ferry",
+    "nature",
+    "adventure"
   ],
   "meta": {
-    "theme": "Patagonia Sur",
-    "pace": "anspruchsvoll",
+    "theme": "Wüste + Fjorde + Berge",
+    "pace": "modular",
     "durationDays": 17,
-    "costEstimate": 3150,
+    "costEstimate": 1750,
     "highlights": [
-      "Magellan-Sund & Pinguine",
-      "Puerto Natales Fjordspaziergang",
-      "Base de las Torres Trek"
+      "Lagunen & Sterne in Atacama",
+      "Fjorde per Navimag-Ferry",
+      "Torres del Paine Berge & Seen"
     ],
     "highlightImages": [
       {
-        "title": "Magellan-Sund & Pinguine",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/9/92/Spheniscus_magellanicus_-Magellanic_Penguin_on_Martillo_Island.jpg",
-        "caption": "Magellan-Pinguine auf den Inseln vor Punta Arenas.",
-        "source": "Wikimedia Commons",
-        "license": "CC BY-SA 3.0"
+        "title": "Lagunen & Sterne in Atacama",
+        "image": "https://www.travelandleisure.com/thmb/iFKAeI4oG43bldEvKG0-1tBxSnw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/02-flamingos-atacama-chile-ATACAMA1217-5bc318fa7676474db0bc4d0d4f188346.jpg",
+        "caption": "Flamingos in den Lagunen der Atacama-Wüste.",
+        "source": "Travel + Leisure",
+        "license": "Editorial use"
       },
       {
-        "title": "Puerto Natales Fjordspaziergang",
-        "image": "https://images.unsplash.com/photo-1543877087-ebf71f017192?w=900&auto=format&fit=crop",
-        "caption": "Stege und Andenpanorama am Última Esperanza Fjord.",
-        "source": "Unsplash",
-        "license": "Unsplash License"
+        "title": "Fjorde per Navimag-Ferry",
+        "image": "https://i0.wp.com/worldlynomads.com/wp-content/uploads/navimag.jpg?fit=2048%2C1365&ssl=1",
+        "caption": "Navimag-Ferry durch patagonische Fjorde.",
+        "source": "Worldly Nomads",
+        "license": "All rights reserved"
       },
       {
-        "title": "Base de las Torres Trek",
-        "image": "https://images.unsplash.com/photo-1544989164-31dc3c645987?w=900&auto=format&fit=crop",
-        "caption": "Blick auf die ikonischen Granittürme im Nationalpark.",
-        "source": "Unsplash",
-        "license": "Unsplash License"
+        "title": "Torres del Paine Berge & Seen",
+        "image": "https://i.natgeofe.com/n/528dc615-a30a-496f-b005-154995111cb3/torres-del-paine-national-park-patagonia.jpg",
+        "caption": "Berge und türkise Seen in Torres del Paine.",
+        "source": "National Geographic",
+        "license": "Editorial use"
       }
     ],
     "scores": {
       "adventure": 5,
       "relax": 2,
-      "nature": 5,
-      "culture": 2
+      "culture": 3,
+      "nature": 5
     }
   },
   "slider": {
@@ -56,52 +57,69 @@
   "mapLayers": {
     "dailySegments": [
       {
-        "dayId": "r4-day-1",
+        "dayId": "day-1",
         "mode": "flight",
         "geometry": {
           "type": "LineString",
           "coordinates": [
             [
-              -70.7858,
-              -33.3929
+              -70.6693,
+              -33.4489
             ],
             [
-              -70.9171,
-              -53.1638
+              -68.9036,
+              -22.4989
             ]
           ]
         }
       },
       {
-        "dayId": "r4-day-2",
-        "mode": "bus",
+        "dayId": "day-2",
+        "mode": "flight",
         "geometry": {
           "type": "LineString",
           "coordinates": [
             [
-              -70.9171,
-              -53.1638
+              -68.9036,
+              -22.4989
             ],
             [
-              -72.5069,
-              -51.7296
+              -72.9424,
+              -41.4693
             ]
           ]
         }
       },
       {
-        "dayId": "r4-day-3",
-        "mode": "drive",
+        "dayId": "day-3",
+        "mode": "ferry",
         "geometry": {
           "type": "LineString",
           "coordinates": [
             [
-              -72.5069,
-              -51.7296
+              -72.9424,
+              -41.4693
             ],
             [
-              -72.345,
-              -51.253
+              -72.6121,
+              -51.7236
+            ]
+          ]
+        }
+      },
+      {
+        "dayId": "day-4",
+        "mode": "flight",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -72.6121,
+              -51.7236
+            ],
+            [
+              -70.6693,
+              -33.4489
             ]
           ]
         }
@@ -110,385 +128,140 @@
   },
   "days": [
     {
-      "id": "r4-day-1",
+      "id": "day-1",
       "date": "2026-01-04",
       "station": {
-        "name": "Punta Arenas – Ende der Welt",
-        "timezone": "America/Punta_Arenas",
+        "name": "San Pedro de Atacama – Wüstenabenteuer",
+        "timezone": "America/Santiago",
         "coordinates": {
-          "lat": -53.1638,
-          "lng": -70.9171
+          "lat": -22.9111,
+          "lng": -68.2011
         },
-        "description": "Stadt am Magellan-Sund, Ausgangspunkt für Pinguin- und Estancia-Ausflüge.",
+        "description": "Tage 1–5: Flug nach Calama, Erkundung von Lagunen, Geysire und Sternenhimmel in der Atacama-Wüste.",
         "images": [
           {
-            "url": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&auto=format&fit=crop",
-            "caption": "Blick auf Punta Arenas und den Sund",
-            "credit": "Lina Morales",
-            "license": "Unsplash License"
+            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/07/3b/fa/47.jpg",
+            "caption": "Sternenhimmel in Atacama",
+            "credit": "Tripadvisor",
+            "license": "Editorial use"
           },
           {
-            "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-            "caption": "Stimmungsbild aus Chile für die Travel Experience",
-            "credit": "Unsplash",
-            "license": "Unsplash License"
+            "url": "https://cdn.getyourguide.com/image/format=auto,fit=contain,gravity=auto,quality=60,width=1440,height=650,dpr=1/tour_img/9952fa58ec7a90c160db4b89cba69ea2dcb663647b6a4a465a979fb4080af03a.jpg",
+            "caption": "Lagunen in Atacama",
+            "credit": "GetYourGuide",
+            "license": "Editorial use"
           }
         ]
       },
       "arrival": {
-        "segments": [
-          {
-            "mode": "flight",
-            "from": {
-              "name": "Santiago (SCL)",
-              "coordinates": {
-                "lat": -33.3929,
-                "lng": -70.7858
-              }
-            },
-            "to": {
-              "name": "Punta Arenas (PUQ)",
-              "coordinates": {
-                "lat": -53.0026,
-                "lng": -70.8545
-              }
-            },
-            "flightNumber": "LA285",
-            "departure": "2026-01-04T08:00:00-03:00",
-            "arrival": "2026-01-04T11:15:00-03:00",
-            "airline": "LATAM / Sky",
-            "images": [
-              {
-                "url": "https://images.unsplash.com/photo-1472252369995-6d9b2177ed73?w=800&auto=format&fit=crop",
-                "caption": "Flug über die patagonische Steppe",
-                "credit": "Isidora León",
-                "license": "Unsplash License"
-              },
-              {
-                "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-                "caption": "Stimmungsbild aus Chile für die Travel Experience",
-                "credit": "Unsplash",
-                "license": "Unsplash License"
-              }
-            ]
-          }
-        ],
+        "segments": [],
         "mapPoints": []
       },
-      "activities": [
-        {
-          "id": "r4-plaza-museo",
-          "type": "historic-quarter",
-          "name": "Plaza Muñoz Gamero & Mirador La Cruz",
-          "description": "Spaziergang durch das historische Zentrum mit Blick über die Stadt.",
-          "recommendedDurationMinutes": 120,
-          "restaurants": [],
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&auto=format&fit=crop",
-              "caption": "Plaza im Stadtzentrum",
-              "credit": "Lina Morales",
-              "license": "Unsplash License"
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-              "caption": "Stimmungsbild aus Chile für die Travel Experience",
-              "credit": "Unsplash",
-              "license": "Unsplash License"
-            }
-          ]
-        },
-        {
-          "id": "r4-pinguins-isla-marta",
-          "type": "other",
-          "name": "Bootstour Isla Marta / Magdalena (Variante)",
-          "description": "Halbtagestour zu Pinguinkolonien – wetterabhängig.",
-          "recommendedDurationMinutes": 300,
-          "restaurants": [],
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=800&auto=format&fit=crop",
-              "caption": "Pinguine auf einer Insel im Sund",
-              "credit": "Ricardo Gutiérrez",
-              "license": "Unsplash License"
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-              "caption": "Stimmungsbild aus Chile für die Travel Experience",
-              "credit": "Unsplash",
-              "license": "Unsplash License"
-            }
-          ]
-        }
-      ],
+      "activities": [],
       "hotels": [],
-      "mobilityOptions": {
-        "nextBus": {
-          "summary": "Fernbus Punta Arenas → Puerto Natales (ca. 3h).",
-          "operator": "Bus Sur / Buses Fernández",
-          "durationMinutes": 180,
-          "frequencyMinutes": 180,
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1470123808288-1e59739c26da?w=800&auto=format&fit=crop",
-              "caption": "Bus durch die patagonische Steppe",
-              "credit": "Mauricio Rojas",
-              "license": "Unsplash License"
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-              "caption": "Stimmungsbild aus Chile für die Travel Experience",
-              "credit": "Unsplash",
-              "license": "Unsplash License"
-            }
-          ]
-        }
-      }
+      "mobilityOptions": {}
     },
     {
-      "id": "r4-day-2",
-      "date": "2026-01-05",
+      "id": "day-2",
+      "date": "2026-01-08",
       "station": {
-        "name": "Puerto Natales – Tor zu Torres del Paine",
-        "timezone": "America/Punta_Arenas",
+        "name": "Puerto Montt – Vorbereitung Ferry",
+        "timezone": "America/Santiago",
         "coordinates": {
-          "lat": -51.7296,
-          "lng": -72.5069
+          "lat": -41.4693,
+          "lng": -72.9424
         },
-        "description": "Kleine Stadt am Fjord, Basecamp für Paine-Touren.",
+        "description": "Tag 6–8: Flug nach Puerto Montt, Erkundung der Seenregion und Einstieg in Navimag-Ferry am 9.1.",
         "images": [
           {
-            "url": "https://images.unsplash.com/photo-1526403226655-2a0c2bb7e06d?w=800&auto=format&fit=crop",
-            "caption": "Promenade von Puerto Natales",
-            "credit": "Marcelo Díaz",
-            "license": "Unsplash License"
+            "url": "https://torres-del-paine.org/wp-content/uploads/2024/07/Navimag-Ferry-Esperanza-Experience-Chile-scaled.jpg",
+            "caption": "Navimag-Ferry in Puerto Montt",
+            "credit": "Torres del Paine Org",
+            "license": "Editorial use"
           },
           {
-            "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-            "caption": "Stimmungsbild aus Chile für die Travel Experience",
-            "credit": "Unsplash",
-            "license": "Unsplash License"
+            "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/49/72/c6/getlstd-property-photo.jpg?w=1200&h=-1&s=1",
+            "caption": "Ferry in Patagonien",
+            "credit": "Tripadvisor",
+            "license": "Editorial use"
           }
         ]
       },
       "arrival": {
-        "segments": [
-          {
-            "mode": "bus",
-            "from": {
-              "name": "Punta Arenas",
-              "coordinates": {
-                "lat": -53.1638,
-                "lng": -70.9171
-              }
-            },
-            "to": {
-              "name": "Puerto Natales",
-              "coordinates": {
-                "lat": -51.7296,
-                "lng": -72.5069
-              }
-            },
-            "durationMinutes": 180,
-            "images": [
-              {
-                "url": "https://images.unsplash.com/photo-1470123808288-1e59739c26da?w=800&auto=format&fit=crop",
-                "caption": "Überlandbus nach Puerto Natales",
-                "credit": "Mauricio Rojas",
-                "license": "Unsplash License"
-              },
-              {
-                "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-                "caption": "Stimmungsbild aus Chile für die Travel Experience",
-                "credit": "Unsplash",
-                "license": "Unsplash License"
-              }
-            ]
-          }
-        ],
+        "segments": [],
         "mapPoints": []
       },
-      "activities": [
-        {
-          "id": "r4-natales-town",
-          "type": "neighborhood",
-          "name": "Stadtrundgang & Uferpromenade",
-          "description": "Cafés, Craft Beer, Blick auf die Berge am Fjord.",
-          "recommendedDurationMinutes": 180,
-          "restaurants": [],
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1526403226655-2a0c2bb7e06d?w=800&auto=format&fit=crop",
-              "caption": "Fjord vor Puerto Natales",
-              "credit": "Marcelo Díaz",
-              "license": "Unsplash License"
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-              "caption": "Stimmungsbild aus Chile für die Travel Experience",
-              "credit": "Unsplash",
-              "license": "Unsplash License"
-            }
-          ]
-        }
-      ],
+      "activities": [],
       "hotels": [],
-      "mobilityOptions": {
-        "nextDrive": {
-          "summary": "Transfer oder Mietwagen nach Torres del Paine (ca. 1,5–2h).",
-          "rentalPickup": "Puerto Natales",
-          "rentalDropoff": "Puerto Natales / Punta Arenas",
-          "distanceKm": 80,
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1549897164-53a02427cbb9?w=800&auto=format&fit=crop",
-              "caption": "Straße Richtung Paine-Massiv",
-              "credit": "Hernán Díaz",
-              "license": "Unsplash License"
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-              "caption": "Stimmungsbild aus Chile für die Travel Experience",
-              "credit": "Unsplash",
-              "license": "Unsplash License"
-            }
-          ]
-        }
-      }
+      "mobilityOptions": {}
     },
     {
-      "id": "r4-day-3",
-      "date": "2026-01-06",
+      "id": "day-3",
+      "date": "2026-01-09",
       "station": {
-        "name": "Torres del Paine Nationalpark",
-        "timezone": "America/Punta_Arenas",
+        "name": "Navimag-Ferry durch Patagonien",
+        "timezone": "America/Santiago",
         "coordinates": {
-          "lat": -51.253,
-          "lng": -72.345
+          "lat": -51.7236,
+          "lng": -72.6121
         },
-        "description": "Granittürme, Seen in Türkis und Gletscher – einer der ikonischsten Parks der Welt.",
+        "description": "Tage 9–12: Ferry von Puerto Montt nach Puerto Natales durch Fjorde, mit Wildlife-Sichtungen.",
         "images": [
           {
-            "url": "https://images.unsplash.com/photo-1549897164-53a02427cbb9?w=800&auto=format&fit=crop",
-            "caption": "Paine-Massiv über türkisfarbenem See",
-            "credit": "Hernán Díaz",
-            "license": "Unsplash License"
+            "url": "https://i0.wp.com/worldlynomads.com/wp-content/uploads/navimag.jpg?fit=2048%2C1365&ssl=1",
+            "caption": "Fjorde auf der Ferry",
+            "credit": "Worldly Nomads",
+            "license": "All rights reserved"
           },
           {
-            "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-            "caption": "Stimmungsbild aus Chile für die Travel Experience",
-            "credit": "Unsplash",
-            "license": "Unsplash License"
+            "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/49/72/c6/getlstd-property-photo.jpg?w=1200&h=-1&s=1",
+            "caption": "Navimag-Schiff",
+            "credit": "Tripadvisor",
+            "license": "Editorial use"
           }
         ]
       },
       "arrival": {
-        "segments": [
-          {
-            "mode": "car",
-            "from": {
-              "name": "Puerto Natales",
-              "coordinates": {
-                "lat": -51.7296,
-                "lng": -72.5069
-              }
-            },
-            "to": {
-              "name": "Parkeingang Laguna Amarga",
-              "coordinates": {
-                "lat": -51.0764,
-                "lng": -72.7151
-              }
-            },
-            "distanceKm": 80,
-            "durationMinutes": 120,
-            "images": [
-              {
-                "url": "https://images.unsplash.com/photo-1549897164-53a02427cbb9?w=800&auto=format&fit=crop",
-                "caption": "Zufahrt zum Nationalpark",
-                "credit": "Hernán Díaz",
-                "license": "Unsplash License"
-              },
-              {
-                "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-                "caption": "Stimmungsbild aus Chile für die Travel Experience",
-                "credit": "Unsplash",
-                "license": "Unsplash License"
-              }
-            ]
-          }
-        ],
+        "segments": [],
         "mapPoints": []
       },
-      "activities": [
-        {
-          "id": "r4-base-trek",
-          "type": "hike",
-          "name": "Base de las Torres (lange Tagestour)",
-          "description": "Anspruchsvolle Tagestour zum klassischen Aussichtspunkt an den Türmen.",
-          "recommendedDurationMinutes": 600,
-          "restaurants": [],
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1549897164-53a02427cbb9?w=800&auto=format&fit=crop",
-              "caption": "Lagune an der Basis der Torres",
-              "credit": "Hernán Díaz",
-              "license": "Unsplash License"
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-              "caption": "Stimmungsbild aus Chile für die Travel Experience",
-              "credit": "Unsplash",
-              "license": "Unsplash License"
-            }
-          ]
-        },
-        {
-          "id": "r4-short-hikes",
-          "type": "hike",
-          "name": "Kurztreks & Lookouts (Variante B)",
-          "description": "Mehrere kurze Wanderungen zu Aussichtspunkten und Wasserfällen für leichtere Tage.",
-          "recommendedDurationMinutes": 360,
-          "restaurants": [],
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-              "caption": "Holzstege und Trails im Park",
-              "credit": "Alejandro Barba",
-              "license": "Unsplash License"
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-              "caption": "Stimmungsbild aus Chile für die Travel Experience",
-              "credit": "Unsplash",
-              "license": "Unsplash License"
-            }
-          ]
-        }
-      ],
+      "activities": [],
       "hotels": [],
-      "mobilityOptions": {
-        "nextBus": {
-          "summary": "Rückkehr nach Puerto Natales und weiter per Bus nach Punta Arenas (für Rückflug nach Santiago).",
-          "operator": "Bus Sur / Buses Fernández",
-          "durationMinutes": 300,
-          "frequencyMinutes": 180,
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1470123808288-1e59739c26da?w=800&auto=format&fit=crop",
-              "caption": "Bus entlang eines Fjords",
-              "credit": "Mauricio Rojas",
-              "license": "Unsplash License"
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-              "caption": "Stimmungsbild aus Chile für die Travel Experience",
-              "credit": "Unsplash",
-              "license": "Unsplash License"
-            }
-          ]
-        }
-      }
+      "mobilityOptions": {}
+    },
+    {
+      "id": "day-4",
+      "date": "2026-01-13",
+      "station": {
+        "name": "Puerto Natales & Torres del Paine",
+        "timezone": "America/Santiago",
+        "coordinates": {
+          "lat": -51.7236,
+          "lng": -72.4875
+        },
+        "description": "Tage 13–20: Erkundung von Torres del Paine (Wanderungen, Seen, Berge) und Rückflug nach Santiago.",
+        "images": [
+          {
+            "url": "https://i.natgeofe.com/n/528dc615-a30a-496f-b005-154995111cb3/torres-del-paine-national-park-patagonia.jpg",
+            "caption": "Torres del Paine",
+            "credit": "National Geographic",
+            "license": "Editorial use"
+          },
+          {
+            "url": "https://www.travelandleisure.com/thmb/z5NsMfX_yf1B3Yajyrt1Koeq0tk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/ice-capped-mountains-patagonia-chile-TORRESTREK0318-44fa05d486f54fa98ffeac7853dd3369.jpg",
+            "caption": "Seen in Patagonien",
+            "credit": "Travel + Leisure",
+            "license": "Editorial use"
+          }
+        ]
+      },
+      "arrival": {
+        "segments": [],
+        "mapPoints": []
+      },
+      "activities": [],
+      "hotels": [],
+      "mobilityOptions": {}
     }
   ],
   "source": "curated"
