@@ -178,6 +178,17 @@ export interface MobilityOption {
   [key: string]: unknown;
 }
 
+export interface MobilityVariant {
+  id: string;
+  mode: string;
+  cost?: number;
+  durationMinutes?: number;
+  co2?: number;
+  description?: string;
+  geometry?: DailySegmentGeometry;
+  [key: string]: unknown;
+}
+
 export interface DayArrivalSegment {
   mode?: string;
   description?: string;
@@ -192,6 +203,7 @@ export interface DayArrivalSegment {
     coordinates?: Coordinates;
   };
   images?: ResourceImage[];
+  variants?: MobilityVariant[];
   [key: string]: unknown;
 }
 

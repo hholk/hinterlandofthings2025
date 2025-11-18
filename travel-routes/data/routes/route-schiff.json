@@ -1,8 +1,8 @@
 [
   {
-    "id": "atacama-navimag-torres-2026",
-    "title": "Route 1 – Atacama, Fjorde & Torres del Paine",
-    "summary": "14 Tage Chile-Highlights: Start in Santiago, dann San Pedro de Atacama, Navimag-Fjordpassage Puerto Montt → Puerto Natales und mehrere Tagesausflüge in den Torres-del-Paine-Nationalpark. Fokus: Landschaft, moderates Wandern und ein ikonischer Schiffstransfer. 🌵🚢🏔️",
+    "id": "atacama-navimag-torres-2025",
+    "title": "Route 1 – Atacama, Fjorde & Torres del Paine (Süd)",
+    "summary": "14 Tage Chile-Highlights: Start in Santiago, dann San Pedro de Atacama, Navimag-Fjordpassage Puerto Montt → Puerto Natales (Südroute) und Torres del Paine. Abfahrt Navimag ca. 7. November 2025.",
     "meta": {
       "theme": "Chile-Klassiker Nord + Süd mit Navimag",
       "pace": "aktiv",
@@ -10,46 +10,15 @@
       "costEstimate": 3800,
       "highlights": [
         "Santiago de Chile",
-        "San Pedro de Atacama & Valle de la Luna",
-        "Altiplano-Lagunen & Geysirfeld El Tatio",
+        "San Pedro de Atacama",
         "Navimag-Fähre: Puerto Montt → Puerto Natales",
-        "Puerto Natales",
-        "Torres del Paine Nationalpark",
-        "Punta Arenas"
+        "Torres del Paine Nationalpark"
       ],
       "highlightImages": [
-        {
-          "title": "Santiago de Chile – Skyline & Anden",
-          "image": "https://images.unsplash.com/photo-1505761671935-60b3a7427bad?w=1200&auto=format&fit=crop",
-          "caption": "Santiago vor der Andenkulisse im Abendlicht.",
-          "source": "Unsplash",
-          "license": "Unsplash License"
-        },
-        {
-          "title": "San Pedro de Atacama – Wüstenlandschaft",
-          "image": "https://images.unsplash.com/photo-1471189641895-16c58a695bcb?w=1200&auto=format&fit=crop",
-          "caption": "Trockene Täler und gezackte Felsformationen der Atacama.",
-          "source": "Unsplash",
-          "license": "Unsplash License"
-        },
         {
           "title": "Navimag durch die Fjorde",
           "image": "https://images.unsplash.com/photo-1471115853179-bb1d604434e0?w=1200&auto=format&fit=crop",
           "caption": "Schiffspassage zwischen patagonischen Inseln und Bergen.",
-          "source": "Unsplash",
-          "license": "Unsplash License"
-        },
-        {
-          "title": "Puerto Natales Uferpromenade",
-          "image": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1200&auto=format&fit=crop",
-          "caption": "Stege, alte Pfähle und Berge im Hintergrund.",
-          "source": "Unsplash",
-          "license": "Unsplash License"
-        },
-        {
-          "title": "Torres del Paine – Granitnadeln",
-          "image": "https://images.unsplash.com/photo-1546539782-6fc531453083?w=1200&auto=format&fit=crop",
-          "caption": "Die ikonischen Türme über türkisfarbenen Seen.",
           "source": "Unsplash",
           "license": "Unsplash License"
         }
@@ -63,7 +32,7 @@
     },
     "slider": {
       "enabled": true,
-      "label": "Tagesübersicht (14 Tage – teils in Blöcken zusammengefasst)"
+      "label": "Tagesübersicht"
     },
     "mapLayers": {
       "dailySegments": [
@@ -74,12 +43,12 @@
             "type": "LineString",
             "coordinates": [
               [
-                -33.4489,
-                -70.6693
+                -70.6693,
+                -33.4489
               ],
               [
-                -22.4544,
-                -68.9294
+                -68.9294,
+                -22.4544
               ]
             ]
           }
@@ -91,12 +60,12 @@
             "type": "LineString",
             "coordinates": [
               [
-                -22.4544,
-                -68.9294
+                -68.9294,
+                -22.4544
               ],
               [
-                -41.4717,
-                -72.9369
+                -72.9369,
+                -41.4717
               ]
             ]
           }
@@ -108,12 +77,12 @@
             "type": "LineString",
             "coordinates": [
               [
-                -41.4717,
-                -72.9369
+                -72.9369,
+                -41.4717
               ],
               [
-                -51.7298,
-                -72.5060
+                -72.5060,
+                -51.7298
               ]
             ]
           }
@@ -125,12 +94,12 @@
             "type": "LineString",
             "coordinates": [
               [
-                -51.7298,
-                -72.5060
+                -72.5060,
+                -51.7298
               ],
               [
-                -53.1638,
-                -70.9171
+                -70.9171,
+                -53.1638
               ]
             ]
           }
@@ -142,12 +111,12 @@
             "type": "LineString",
             "coordinates": [
               [
-                -53.1638,
-                -70.9171
+                -70.9171,
+                -53.1638
               ],
               [
-                -33.4489,
-                -70.6693
+                -70.6693,
+                -33.4489
               ]
             ]
           }
@@ -157,1673 +126,369 @@
     "days": [
       {
         "id": "day-1",
-        "date": "2026-01-04",
+        "date": "2025-11-03",
         "station": {
           "name": "Santiago de Chile",
-          "timezone": "America/Santiago",
           "coordinates": {
             "lat": -33.4489,
             "lng": -70.6693
           },
-          "description": "Ankommen in Chile, erstes Eintauchen in die Stadt: historische Mitte, Barrio Lastarria und Aussicht vom Cerro San Cristóbal.",
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1526401485004-46910ecc8e51?w=800&auto=format&fit=crop",
-              "caption": "Skyline von Santiago mit den Anden im Hintergrund."
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1526481280695-3c4692349813?w=800&auto=format&fit=crop",
-              "caption": "Straßenszene im Viertel Lastarria."
-            }
-          ]
+          "description": "Ankunft in Santiago."
         },
-        "activities": [
-          {
-            "id": "scl-lastarria-san-cristobal",
-            "type": "city-walk",
-            "name": "Altstadt, Barrio Lastarria & Cerro San Cristóbal",
-            "description": "Lockerer Stadtspaziergang, ggf. Standseilbahn auf den Cerro San Cristóbal zum Sonnenuntergang.",
-            "images": [
-              {
-                "url": "https://images.unsplash.com/photo-1478117710974-3f8443a7b1b5?w=800&auto=format&fit=crop",
-                "caption": "Seilbahn zum Cerro San Cristóbal."
-              },
-              {
-                "url": "https://images.unsplash.com/photo-1529338296731-c4280a00d6cd?w=800&auto=format&fit=crop",
-                "caption": "Blick über die Stadt in der Dämmerung."
-              }
-            ]
-          }
-        ]
+        "arrival": {
+          "segments": []
+        }
       },
       {
         "id": "day-2",
-        "date": "2026-01-05",
+        "date": "2025-11-04",
         "station": {
-          "name": "San Pedro de Atacama (Anreise)",
-          "timezone": "America/Santiago",
+          "name": "San Pedro de Atacama",
           "coordinates": {
             "lat": -22.9111,
             "lng": -68.2030
           },
-          "description": "Flug Santiago → Calama, Transfer nach San Pedro de Atacama, abends kurzer Spaziergang durchs Dorf.",
-          "images": [
+          "description": "Flug in den Norden."
+        },
+        "arrival": {
+          "segments": [
             {
-              "url": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&auto=format&fit=crop",
-              "caption": "Klarer Himmel über der Atacama-Wüste."
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1500534314211-0a24cd03f2c0?w=800&auto=format&fit=crop",
-              "caption": "Lehmhäuser und Staubstraßen in einem Wüstendorf."
+              "mode": "flight",
+              "from": {
+                "name": "Santiago (SCL)",
+                "coordinates": {
+                  "lat": -33.3929,
+                  "lng": -70.7858
+                }
+              },
+              "to": {
+                "name": "Calama (CJC)",
+                "coordinates": {
+                  "lat": -22.4956,
+                  "lng": -68.9064
+                }
+              },
+              "durationMinutes": 120,
+              "variants": [
+                {
+                  "id": "flight-latam",
+                  "mode": "flight",
+                  "cost": 80,
+                  "durationMinutes": 120,
+                  "co2": 110,
+                  "description": "Direktflug LATAM",
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [
+                        -70.7858,
+                        -33.3929
+                      ],
+                      [
+                        -68.9064,
+                        -22.4956
+                      ]
+                    ]
+                  }
+                },
+                {
+                  "id": "flight-sky",
+                  "mode": "flight",
+                  "cost": 65,
+                  "durationMinutes": 120,
+                  "co2": 110,
+                  "description": "Direktflug SKY Airline (Low Cost)",
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [
+                        -70.7858,
+                        -33.3929
+                      ],
+                      [
+                        -68.9064,
+                        -22.4956
+                      ]
+                    ]
+                  }
+                }
+              ]
             }
           ]
-        },
-        "activities": [
-          {
-            "id": "atacama-arrival-village",
-            "type": "village-walk",
-            "name": "Dorfspaziergang San Pedro & Sternenhimmel",
-            "description": "Einchecken, Wasser besorgen, kurze Dorf-Runde und ggf. erste Sterne beobachten – extrem dunkler Himmel.",
-            "images": [
-              {
-                "url": "https://images.unsplash.com/photo-1458640904116-093b74971de9?w=800&auto=format&fit=crop",
-                "caption": "Milchstraße über der Wüste."
-              },
-              {
-                "url": "https://images.unsplash.com/photo-1589308078055-44e511e7d303?w=800&auto=format&fit=crop",
-                "caption": "Nachttour mit Teleskopen."
-              }
-            ]
-          }
-        ]
+        }
       },
       {
         "id": "day-3",
-        "date": "2026-01-06",
+        "date": "2025-11-05",
         "station": {
-          "name": "San Pedro de Atacama – Valle de la Luna",
-          "timezone": "America/Santiago",
-          "coordinates": {
-            "lat": -22.9111,
-            "lng": -68.2030
-          },
-          "description": "Wüstentag mit Fokus auf Valle de la Luna und umliegende Formationen.",
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1471189641895-16c58a695bcb?w=800&auto=format&fit=crop",
-              "caption": "Felsformationen im Valle de la Luna."
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1451976426598-a7593bd6d0b2?w=800&auto=format&fit=crop",
-              "caption": "Späte Sonne über Sanddünen."
-            }
-          ]
-        },
-        "activities": [
-          {
-            "id": "valle-de-la-luna",
-            "type": "viewpoints",
-            "name": "Valle de la Luna & Miradores",
-            "description": "Geführte Tour ins Valle de la Luna mit mehreren Aussichtspunkten und Sonnenuntergang.",
-            "images": [
-              {
-                "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&auto=format&fit=crop",
-                "caption": "Weite Blicke über wüstenartige Täler."
-              },
-              {
-                "url": "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=800&auto=format&fit=crop",
-                "caption": "Abendlicht auf Felsen und Dünen."
-              }
-            ]
-          }
-        ]
+          "name": "San Pedro - Valle de la Luna"
+        }
       },
       {
         "id": "day-4",
-        "date": "2026-01-07",
+        "date": "2025-11-06",
         "station": {
-          "name": "San Pedro de Atacama – Lagunen & Geysire",
-          "timezone": "America/Santiago",
-          "coordinates": {
-            "lat": -22.9111,
-            "lng": -68.2030
-          },
-          "description": "Früher Start zu den Geysiren von El Tatio oder Altiplano-Lagunen, nachmittags Ruhe oder kurzer Hike.",
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=800&auto=format&fit=crop",
-              "caption": "Rauchende Geysire im Morgenlicht."
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1545235617-9465c4b8ba06?w=800&auto=format&fit=crop",
-              "caption": "Lagune mit Flamingos im Altiplano."
-            }
-          ]
-        },
-        "activities": [
-          {
-            "id": "el-tatio-or-lagoons",
-            "type": "day-tour",
-            "name": "Geysirfeld El Tatio ODER Altiplano-Lagunen",
-            "description": "Ganztagstour mit Fokus Thermalaktivität oder Hochland-Lagunen – je nach Vorliebe.",
-            "images": [
-              {
-                "url": "https://images.unsplash.com/photo-1500534314211-0a24cd03f2c0?w=800&auto=format&fit=crop",
-                "caption": "Dampfende Quellen in karger Landschaft."
-              },
-              {
-                "url": "https://images.unsplash.com/photo-1524492449093-4fe20d59d2ed?w=800&auto=format&fit=crop",
-                "caption": "Kleine Gruppe an einer Lagune mit Bergblick."
-              }
-            ]
-          }
-        ]
+          "name": "San Pedro - Tatio Geysire"
+        }
       },
       {
         "id": "day-5",
-        "date": "2026-01-08",
+        "date": "2025-11-07",
         "station": {
-          "name": "Puerto Varas (Seen-Distrikt)",
-          "timezone": "America/Santiago",
-          "coordinates": {
-            "lat": -41.3184,
-            "lng": -72.9854
-          },
-          "description": "Flug Calama → Puerto Montt (ggf. via Santiago), kurzer Transfer nach Puerto Varas am Llanquihue-See.",
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1493244040629-496f6d136cc3?w=800&auto=format&fit=crop",
-              "caption": "Grünes Ufer mit Blick auf Vulkane."
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&auto=format&fit=crop",
-              "caption": "Landstraße mit Vulkan im Hintergrund."
-            }
-          ]
-        },
-        "activities": [
-          {
-            "id": "puerto-varas-lakeside",
-            "type": "lakeside-walk",
-            "name": "Abendspaziergang in Puerto Varas",
-            "description": "Relaxter Spaziergang an der Uferpromenade, erste Eindrücke vom Süden Chiles.",
-            "images": [
-              {
-                "url": "https://images.unsplash.com/photo-1526402462922-1e1d481d87fd?w=800&auto=format&fit=crop",
-                "caption": "Bunte Häuser am Wasser mit Vulkanblick."
-              },
-              {
-                "url": "https://images.unsplash.com/photo-1542317854-0d6d02aca827?w=800&auto=format&fit=crop",
-                "caption": "Steg in den See bei Sonnenuntergang."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "day-6",
-        "date": "2026-01-09",
-        "station": {
-          "name": "Puerto Montt – Einschiffung Navimag",
-          "timezone": "America/Santiago",
+          "name": "Puerto Montt (Einschiffung)",
           "coordinates": {
             "lat": -41.4717,
             "lng": -72.9369
           },
-          "description": "Transfer nach Puerto Montt, Check-in am Navimag-Terminal und Abfahrt Richtung Puerto Natales (geplanter Termin z.B. 9. Januar 2026, abhängig vom realen Fahrplan).",
-          "images": [
+          "description": "Flug in den Süden und Einschiffung auf die Navimag 'Esperanza'. Abfahrt Freitags."
+        },
+        "arrival": {
+          "segments": [
             {
-              "url": "https://images.unsplash.com/photo-1470115636492-6d2b56f9146e?w=800&auto=format&fit=crop",
-              "caption": "Schiff im Hafen, bereit zur Abfahrt."
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1474302729578-afab1a117fc1?w=800&auto=format&fit=crop",
-              "caption": "Passagiere an Deck beim Auslaufen."
+              "mode": "flight",
+              "from": {
+                "name": "Calama (CJC)"
+              },
+              "to": {
+                "name": "Puerto Montt (PMC)"
+              },
+              "durationMinutes": 240,
+              "description": "Via Santiago"
             }
           ]
-        },
-        "activities": [
-          {
-            "id": "navimag-checkin",
-            "type": "ferry-boarding",
-            "name": "Navimag Check-in & Boarding",
-            "description": "Einschiffung, Kabine beziehen, Sicherheitseinweisung und erstes Auslaufen durch die Kanäle.",
-            "images": [
-              {
-                "url": "https://images.unsplash.com/photo-1471115853179-bb1d604434e0?w=800&auto=format&fit=crop",
-                "caption": "Schiff in engen Kanälen zwischen Inseln."
-              },
-              {
-                "url": "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=800&auto=format&fit=crop",
-                "caption": "Blick vom Deck auf Berge und Meer."
-              }
-            ]
-          }
-        ]
+        }
+      },
+      {
+        "id": "day-6",
+        "date": "2025-11-08",
+        "station": {
+          "name": "Navimag - Auf See"
+        }
       },
       {
         "id": "day-7",
-        "date": "2026-01-10",
+        "date": "2025-11-09",
         "station": {
-          "name": "Navimag – Patagonische Kanäle",
-          "timezone": "America/Santiago",
-          "coordinates": {
-            "lat": -45.0000,
-            "lng": -73.5000
-          },
-          "description": "Zweiter Tag an Bord: Inselwelten, Fjorde, ggf. kurzer Abschnitt offene See (Golfo de Penas).",
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1500534314211-0a24cd03f2c0?w=800&auto=format&fit=crop",
-              "caption": "Fjordlandschaft mit tiefem Wasser und steilen Hängen."
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1524492449093-4fe20d59d2ed?w=800&auto=format&fit=crop",
-              "caption": "Innenbereich des Schiffs mit Panoramafenstern."
-            }
-          ]
-        },
-        "activities": [
-          {
-            "id": "navimag-onboard-day1",
-            "type": "onboard",
-            "name": "Deck-Viewing & Info-Sessions",
-            "description": "Vorträge zur Region, an Deck nach Walen, Delfinen und Seevögeln Ausschau halten.",
-            "images": [
-              {
-                "url": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800&auto=format&fit=crop",
-                "caption": "Passagiere mit Kameras am Schiffsdeck."
-              },
-              {
-                "url": "https://images.unsplash.com/photo-1493244040629-496f6d136cc3?w=800&auto=format&fit=crop",
-                "caption": "Sonnenstrahlen über einer Fjordlandschaft."
-              }
-            ]
-          }
-        ]
+          "name": "Navimag - Patagonische Kanäle"
+        }
       },
       {
         "id": "day-8",
-        "date": "2026-01-11",
+        "date": "2025-11-10",
         "station": {
-          "name": "Navimag – Südliche Fjorde",
-          "timezone": "America/Santiago",
-          "coordinates": {
-            "lat": -50.0000,
-            "lng": -73.0000
-          },
-          "description": "Weiterfahrt durch enge Kanäle, Gletscherblicke und abgelegene Inseln.",
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=800&auto=format&fit=crop",
-              "caption": "Enger Kanal mit Bergen und tief hängenden Wolken."
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1451976426598-a7593bd6d0b2?w=800&auto=format&fit=crop",
-              "caption": "Gletscherzunge, die in einen Fjord kalbt."
-            }
-          ]
-        },
-        "activities": [
-          {
-            "id": "navimag-onboard-day2",
-            "type": "onboard",
-            "name": "Fotostops & ruhiger Bordtag",
-            "description": "Bilder machen, lesen, ggf. Yoga- oder Filmabend an Bord.",
-            "images": [
-              {
-                "url": "https://images.unsplash.com/photo-1505761671935-60b3a7427bad?w=800&auto=format&fit=crop",
-                "caption": "Lichtstimmung über Wasser und Bergen."
-              },
-              {
-                "url": "https://images.unsplash.com/photo-1545235617-9465c4b8ba06?w=800&auto=format&fit=crop",
-                "caption": "Eisblöcke auf dem Wasser."
-              }
-            ]
-          }
-        ]
+          "name": "Navimag - Ankunft Puerto Natales"
+        }
       },
       {
         "id": "day-9",
-        "date": "2026-01-12",
+        "date": "2025-11-11",
         "station": {
-          "name": "Puerto Natales – Ankunft",
-          "timezone": "America/Punta_Arenas",
+          "name": "Puerto Natales",
           "coordinates": {
             "lat": -51.7298,
             "lng": -72.5060
-          },
-          "description": "Ausschiffung in Puerto Natales, erster Spaziergang am Fjord und durchs kleine Zentrum.",
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1526402462922-1e1d481d87fd?w=800&auto=format&fit=crop",
-              "caption": "Promenade in einer patagonischen Kleinstadt."
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=800&auto=format&fit=crop",
-              "caption": "Bunte Häuserzeile mit Berge im Hintergrund."
-            }
-          ]
-        },
-        "activities": [
-          {
-            "id": "puerto-natales-waterfront",
-            "type": "city-walk",
-            "name": "Uferpromenade & Aussichtspunkte",
-            "description": "Relaxter Tag, um sich nach der Schiffspassage einzugewöhnen und Touren nach Torres del Paine zu organisieren.",
-            "images": [
-              {
-                "url": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800&auto=format&fit=crop",
-                "caption": "Holzpfähle im Wasser vor Bergen."
-              },
-              {
-                "url": "https://images.unsplash.com/photo-1542317854-0d6d02aca827?w=800&auto=format&fit=crop",
-                "caption": "Bank mit Blick auf den Fjord."
-              }
-            ]
           }
-        ]
+        }
       },
       {
         "id": "day-10",
-        "date": "2026-01-13",
+        "date": "2025-11-12",
         "station": {
-          "name": "Torres del Paine – Mirador Base Torres",
-          "timezone": "America/Punta_Arenas",
-          "coordinates": {
-            "lat": -51.2530,
-            "lng": -72.9980
-          },
-          "description": "Klassischer Tagesausflug von Puerto Natales zur Wanderung zum Mirador Base Torres (falls Kondition, Wetter und Logistik passen).",
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1546539782-6fc531453083?w=800&auto=format&fit=crop",
-              "caption": "Die Türme von Torres del Paine über einem Lagunenbecken."
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&auto=format&fit=crop",
-              "caption": "Wanderer auf einem steinigen Pfad."
-            }
-          ]
-        },
-        "activities": [
-          {
-            "id": "torres-base-hike",
-            "type": "hike",
-            "name": "Wanderung zum Base-Torres-Mirador",
-            "description": "Ganztägige, anspruchsvolle Wanderung mit ikonischem Blick auf die Granitnadeln und die türkise Lagune.",
-            "images": [
-              {
-                "url": "https://images.unsplash.com/photo-1546539782-6fc531453083?w=800&auto=format&fit=crop",
-                "caption": "Blick vom Mirador auf die Torres."
-              },
-              {
-                "url": "https://images.unsplash.com/photo-1471189641895-16c58a695bcb?w=800&auto=format&fit=crop",
-                "caption": "Geröllfelder und Pfad im oberen Abschnitt."
-              }
-            ]
-          }
-        ]
+          "name": "Torres del Paine"
+        }
       },
       {
         "id": "day-11",
-        "date": "2026-01-14",
+        "date": "2025-11-13",
         "station": {
-          "name": "Torres del Paine – Lago Grey & Gletscherblicke",
-          "timezone": "America/Punta_Arenas",
-          "coordinates": {
-            "lat": -51.1067,
-            "lng": -73.1575
-          },
-          "description": "Weniger anstrengender Tag mit Fokus auf Lago Grey, Gletscher-Bootstour und Aussichtspunkte.",
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1545235617-9465c4b8ba06?w=800&auto=format&fit=crop",
-              "caption": "Eisberge im Lago Grey."
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1451976426598-a7593bd6d0b2?w=800&auto=format&fit=crop",
-              "caption": "Gletscherfront in der Ferne."
-            }
-          ]
-        },
-        "activities": [
-          {
-            "id": "lago-grey-boat",
-            "type": "boat-tour",
-            "name": "Bootstour Lago Grey",
-            "description": "Halbtags-Bootstour zwischen Eisbergen bis nahe an den Grey-Gletscher (abhängig von Saison & Wetter).",
-            "images": [
-              {
-                "url": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=800&auto=format&fit=crop",
-                "caption": "Boot vor der Gletscherfront."
-              },
-              {
-                "url": "https://images.unsplash.com/photo-1471115853179-bb1d604434e0?w=800&auto=format&fit=crop",
-                "caption": "Eisbrocken schwimmen im grauen Wasser."
-              }
-            ]
-          }
-        ]
+          "name": "Torres del Paine"
+        }
       },
       {
         "id": "day-12",
-        "date": "2026-01-15",
+        "date": "2025-11-14",
         "station": {
-          "name": "Torres del Paine – Seen & Wildlife",
-          "timezone": "America/Punta_Arenas",
-          "coordinates": {
-            "lat": -51.2540,
-            "lng": -72.9000
-          },
-          "description": "Flexibler Tag für kürzere Hikes, Miradores (z.B. Lago Nordenskjöld) und Tierbeobachtungen.",
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1500534314211-0a24cd03f2c0?w=800&auto=format&fit=crop",
-              "caption": "Türkisfarbene Seen und Berge."
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1542317854-0d6d02aca827?w=800&auto=format&fit=crop",
-              "caption": "Guanako vor patagonischer Kulisse."
-            }
-          ]
-        },
-        "activities": [
-          {
-            "id": "torres-scenic-day",
-            "type": "scenic-drive",
-            "name": "Scenic Drive & kurze Trails",
-            "description": "Rundfahrt im Park mit Fotostops und 1–2 kurzen Trails.",
-            "images": [
-              {
-                "url": "https://images.unsplash.com/photo-1493244040629-496f6d136cc3?w=800&auto=format&fit=crop",
-                "caption": "Weite Steppe, See und Berge."
-              },
-              {
-                "url": "https://images.unsplash.com/photo-1471189641895-16c58a695bcb?w=800&auto=format&fit=crop",
-                "caption": "Sonne bricht durch Wolken über dem Park."
-              }
-            ]
-          }
-        ]
+          "name": "Torres del Paine"
+        }
       },
       {
         "id": "day-13",
-        "date": "2026-01-16",
+        "date": "2025-11-15",
         "station": {
           "name": "Punta Arenas",
-          "timezone": "America/Punta_Arenas",
           "coordinates": {
             "lat": -53.1638,
             "lng": -70.9171
-          },
-          "description": "Busfahrt Puerto Natales → Punta Arenas, kurzer Stadtbummel (Plaza Muñoz Gamero, Aussichtspunkt Mirador Cerro de la Cruz).",
-          "images": [
+          }
+        },
+        "arrival": {
+          "segments": [
             {
-              "url": "https://images.unsplash.com/photo-1528989385568-3ac196525f80?w=800&auto=format&fit=crop",
-              "caption": "Stadtviertel mit bunten Dächern."
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&auto=format&fit=crop",
-              "caption": "Blick von einem Hügel über Punta Arenas."
+              "mode": "bus",
+              "from": {
+                "name": "Puerto Natales"
+              },
+              "to": {
+                "name": "Punta Arenas"
+              },
+              "durationMinutes": 180,
+              "variants": [
+                {
+                  "id": "bus-regular",
+                  "mode": "bus",
+                  "cost": 12,
+                  "durationMinutes": 180,
+                  "co2": 15,
+                  "description": "Linienbus (Bus-Sur)",
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [
+                        -72.5060,
+                        -51.7298
+                      ],
+                      [
+                        -70.9171,
+                        -53.1638
+                      ]
+                    ]
+                  }
+                },
+                {
+                  "id": "car-rental",
+                  "mode": "drive",
+                  "cost": 85,
+                  "durationMinutes": 180,
+                  "co2": 45,
+                  "description": "Mietwagen (One-Way)",
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [
+                        -72.5060,
+                        -51.7298
+                      ],
+                      [
+                        -70.9171,
+                        -53.1638
+                      ]
+                    ]
+                  }
+                }
+              ]
             }
           ]
-        },
-        "activities": [
-          {
-            "id": "punta-arenas-city",
-            "type": "city-walk",
-            "name": "Plaza, Mirador & ggf. Friedhof",
-            "description": "Ruhiger Stadttag mit klassischer Runde über die Hauptsehenswürdigkeiten.",
-            "images": [
-              {
-                "url": "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=800&auto=format&fit=crop",
-                "caption": "Historische Gebäude an einer Plaza."
-              },
-              {
-                "url": "https://images.unsplash.com/photo-1524492449093-4fe20d59d2ed?w=800&auto=format&fit=crop",
-                "caption": "Allee auf einem Friedhof mit Zypressen."
-              }
-            ]
-          }
-        ]
+        }
       },
       {
         "id": "day-14",
-        "date": "2026-01-17",
+        "date": "2025-11-16",
         "station": {
-          "name": "Flug Punta Arenas → Santiago",
-          "timezone": "America/Santiago",
-          "coordinates": {
-            "lat": -33.4489,
-            "lng": -70.6693
-          },
-          "description": "Rückflug nach Santiago (oder Anschlussflug nach Hause), ggf. Puffer für Verspätungen.",
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1472252369995-6d9b2177ed73?w=800&auto=format&fit=crop",
-              "caption": "Flugzeug über patagonischer Landschaft."
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1474302729578-afab1a117fc1?w=800&auto=format&fit=crop",
-              "caption": "Blick aus dem Flugzeugfenster auf Gebirge."
-            }
-          ]
-        },
-        "activities": [
-          {
-            "id": "flight-back-scl",
-            "type": "flight",
-            "name": "Rückflug & Pufferzeit",
-            "description": "Check-in, Flug, ggf. letzte Nacht in Santiago oder direkter Weiterflug.",
-            "images": [
-              {
-                "url": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&auto=format&fit=crop",
-                "caption": "Flugzeug im Landeanflug."
-              },
-              {
-                "url": "https://images.unsplash.com/photo-1518552781800-1fb841be351d?w=800&auto=format&fit=crop",
-                "caption": "Maschine am Gate bei Sonnenaufgang."
-              }
-            ]
-          }
-        ]
+          "name": "Rückflug Santiago"
+        }
       }
     ]
   },
   {
-    "id": "fjorde-pinguine-feuerland-2026",
-    "title": "Route 4 – Fjorde, Pinguine & Feuerland",
-    "summary": "Kombinierter See- und Landtrip: Start in Santiago, Flug nach Puerto Montt, Einschiffung Navimag bis Puerto Natales, dann Torres-del-Paine-Highlights und Pinguin- bzw. Feuerland-Ausflüge ab Punta Arenas. Mischung aus Natur, Tierbeobachtung und ruhigeren Wandertagen. 🐧🚢❄️",
+    "id": "fjorde-pinguine-feuerland-2025-north",
+    "title": "Route 4 – Fjorde & Pinguine (Nord)",
+    "summary": "Nordgehende Variante: Start in Punta Arenas, Pinguine, Torres del Paine und dann mit der Navimag von Puerto Natales nach Puerto Montt. Abfahrt Navimag ca. 11. November 2025.",
     "meta": {
-      "theme": "Patagonische Fjorde & Magellanstraße",
+      "theme": "Patagonien Nordwärts",
       "pace": "ausgewogen",
       "durationDays": 14,
       "costEstimate": 3700,
       "highlights": [
-        "Navimag-Fähre: Puerto Montt → Puerto Natales",
-        "Torres del Paine – kurze Hikes & Miradores",
-        "Gletscherblick bei Lago Grey",
-        "Magellan-Pinguine Isla Magdalena",
-        "Königspinguine in Bahía Inútil"
-      ],
-      "highlightImages": [
-        {
-          "title": "Puerto Montt Hafen",
-          "image": "https://images.unsplash.com/photo-1470115636492-6d2b56f9146e?w=1200&auto=format&fit=crop",
-          "caption": "Schiffe im Hafenbecken von Puerto Montt.",
-          "source": "Unsplash",
-          "license": "Unsplash License"
-        },
-        {
-          "title": "Chiloé-Palafitos",
-          "image": "https://images.unsplash.com/photo-1542317854-0d6d02aca827?w=1200&auto=format&fit=crop",
-          "caption": "Bunte Pfahlbauten bei Castro.",
-          "source": "Unsplash",
-          "license": "Unsplash License"
-        },
-        {
-          "title": "Navimag durch Fjorde",
-          "image": "https://images.unsplash.com/photo-1471115853179-bb1d604434e0?w=1200&auto=format&fit=crop",
-          "caption": "Neblige Inseln und enge Kanäle auf der Route nach Patagonien.",
-          "source": "Unsplash",
-          "license": "Unsplash License"
-        },
-        {
-          "title": "Magellan-Pinguine",
-          "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1200&auto=format&fit=crop",
-          "caption": "Pinguinkolonie auf Isla Magdalena.",
-          "source": "Unsplash",
-          "license": "Unsplash License"
-        },
-        {
-          "title": "Königspinguine Feuerland",
-          "image": "https://images.unsplash.com/photo-1505761671935-60b3a7427bad?w=1200&auto=format&fit=crop",
-          "caption": "Königspinguine an einer flachen Bucht in Bahía Inútil.",
-          "source": "Unsplash",
-          "license": "Unsplash License"
-        }
-      ],
-      "scores": {
-        "budget": 3,
-        "adventure": 4,
-        "relax": 3,
-        "culture": 3
-      }
-    },
-    "slider": {
-      "enabled": true,
-      "label": "Tagesübersicht (14 Tage – Fjorde, Pinguine & Feuerland)"
-    },
-    "mapLayers": {
-      "dailySegments": [
-        {
-          "dayId": "day-2",
-          "mode": "flight",
-          "geometry": {
-            "type": "LineString",
-            "coordinates": [
-              [
-                -33.4489,
-                -70.6693
-              ],
-              [
-                -41.4717,
-                -72.9369
-              ]
-            ]
-          }
-        },
-        {
-          "dayId": "day-4",
-          "mode": "ship",
-          "geometry": {
-            "type": "LineString",
-            "coordinates": [
-              [
-                -41.4717,
-                -72.9369
-              ],
-              [
-                -51.7298,
-                -72.5060
-              ]
-            ]
-          }
-        },
-        {
-          "dayId": "day-10",
-          "mode": "bus",
-          "geometry": {
-            "type": "LineString",
-            "coordinates": [
-              [
-                -51.7298,
-                -72.5060
-              ],
-              [
-                -53.1638,
-                -70.9171
-              ]
-            ]
-          }
-        },
-        {
-          "dayId": "day-14",
-          "mode": "flight",
-          "geometry": {
-            "type": "LineString",
-            "coordinates": [
-              [
-                -53.1638,
-                -70.9171
-              ],
-              [
-                -33.4489,
-                -70.6693
-              ]
-            ]
-          }
-        }
-      ]
-    },
-    "days": [
-      {
-        "id": "day-1",
-        "date": "2026-01-04",
-        "station": {
-          "name": "Santiago – Ankunft & Rooftop-Sundowner",
-          "timezone": "America/Santiago",
-          "coordinates": {
-            "lat": -33.4489,
-            "lng": -70.6693
-          },
-          "description": "Anreise und erster Abendblick auf die Anden von einer Rooftop-Bar, kurzer Bummel durchs Centro.",
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1526401485004-46910ecc8e51?w=800&auto=format&fit=crop",
-              "caption": "Abendlicht über Santiago."
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1526481280695-3c4692349813?w=800&auto=format&fit=crop",
-              "caption": "Bars und Cafés im Barrio Lastarria."
-            }
-          ]
-        },
-        "activities": [
-          {
-            "id": "santiago-arrival-rooftop",
-            "type": "city-walk",
-            "name": "Centro-Runde & Rooftop-Bar",
-            "description": "Leichter Spaziergang zur Orientierung und ein Sundowner mit Blick auf den Gran Torre Santiago.",
-            "images": [
-              {
-                "url": "https://images.unsplash.com/photo-1478117710974-3f8443a7b1b5?w=800&auto=format&fit=crop",
-                "caption": "Blick auf die Stadt bei Dämmerung."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "day-2",
-        "date": "2026-01-05",
-        "station": {
-          "name": "Puerto Montt – Anreise",
-          "timezone": "America/Santiago",
-          "coordinates": {
-            "lat": -41.4717,
-            "lng": -72.9369
-          },
-          "description": "Flug nach Puerto Montt, kurzer Walk an der Costanera und Marktbesuch zum Lunch.",
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1470115636492-6d2b56f9146e?w=800&auto=format&fit=crop",
-              "caption": "Fischerboote am Ufer."
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1493244040629-496f6d136cc3?w=800&auto=format&fit=crop",
-              "caption": "Blick über den Llanquihue-See."
-            }
-          ]
-        },
-        "activities": [
-          {
-            "id": "angelmo-market",
-            "type": "food",
-            "name": "Fischmarkt Angelmó",
-            "description": "Austern, Curanto und Räucherfisch probieren; Mitbringsel aus Holz und Wolle stöbern.",
-            "images": [
-              {
-                "url": "https://images.unsplash.com/photo-1542317854-0d6d02aca827?w=800&auto=format&fit=crop",
-                "caption": "Stände mit Meeresfrüchten und Hafenblick."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "day-3",
-        "date": "2026-01-06",
-        "station": {
-          "name": "Chiloé – Palafitos & Holzkirchen",
-          "timezone": "America/Santiago",
-          "coordinates": {
-            "lat": -42.4794,
-            "lng": -73.7580
-          },
-          "description": "Tagesausflug nach Castro und Dalcahue: UNESCO-Holzkirchen, Pfahlbauten und Märkte.",
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop",
-              "caption": "Holzkirche mit bunten Fassaden."
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1542317854-0d6d02aca827?w=800&auto=format&fit=crop",
-              "caption": "Palafitos entlang der Küste."
-            }
-          ]
-        },
-        "activities": [
-          {
-            "id": "chiloe-palafitos-tour",
-            "type": "culture",
-            "name": "Palafitos & Kirche San Francisco",
-            "description": "Geführter Rundgang zu Pfahlbauten, Besuch der gelben Holzkirche und Markt von Dalcahue.",
-            "images": [
-              {
-                "url": "https://images.unsplash.com/photo-1529346528741-5e65d6d5bbff?w=800&auto=format&fit=crop",
-                "caption": "Streetart und Holzfassaden in Castro."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "day-4",
-        "date": "2026-01-07",
-        "station": {
-          "name": "Navimag Boarding – Puerto Montt",
-          "timezone": "America/Santiago",
-          "coordinates": {
-            "lat": -41.4717,
-            "lng": -72.9369
-          },
-          "description": "Check-in am Navimag-Terminal und Auslaufen Richtung patagonische Kanäle.",
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1471115853179-bb1d604434e0?w=800&auto=format&fit=crop",
-              "caption": "Schiff zwischen grünen Inseln."
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=800&auto=format&fit=crop",
-              "caption": "Abfahrt bei Abendlicht."
-            }
-          ]
-        },
-        "activities": [
-          {
-            "id": "navimag-boarding-pmontt",
-            "type": "ferry-boarding",
-            "name": "Einschiffung & Sicherheitseinweisung",
-            "description": "Kabine beziehen, Orientierung an Bord und Auslaufen mit Blick auf Vulkan Silhouette.",
-            "images": [
-              {
-                "url": "https://images.unsplash.com/photo-1474302729578-afab1a117fc1?w=800&auto=format&fit=crop",
-                "caption": "Deck mit Passagieren bei der Abfahrt."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "day-5",
-        "date": "2026-01-08",
-        "station": {
-          "name": "Navimag – Fjorde & Inselwelten",
-          "timezone": "America/Santiago",
-          "coordinates": {
-            "lat": -45.0000,
-            "lng": -73.5000
-          },
-          "description": "Erster voller Schiffstag: Fotostopps an Fjorden, Info-Session zur Kawésqar-Kultur, Delfine sichten.",
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1500534314211-0a24cd03f2c0?w=800&auto=format&fit=crop",
-              "caption": "Dunstige Berge über ruhigem Wasser."
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1524492449093-4fe20d59d2ed?w=800&auto=format&fit=crop",
-              "caption": "Panoramafenster im Aufenthaltsraum."
-            }
-          ]
-        },
-        "activities": [
-          {
-            "id": "navimag-fjords-day",
-            "type": "onboard",
-            "name": "Deck-Viewing & Kawésqar-Talk",
-            "description": "Vortrag der Crew, gemeinsame Wildlife-Spots und heißer Mate-Tee an Deck.",
-            "images": [
-              {
-                "url": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800&auto=format&fit=crop",
-                "caption": "Passagiere mit Ferngläsern am Geländer."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "day-6",
-        "date": "2026-01-09",
-        "station": {
-          "name": "Navimag – Golfo de Penas",
-          "timezone": "America/Santiago",
-          "coordinates": {
-            "lat": -48.5000,
-            "lng": -75.0000
-          },
-          "description": "Offener See-Abschnitt: Golfo de Penas. Viel Zeit zum Lesen, Filmeabend oder ruhiges Deck-Sitzen.",
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=800&auto=format&fit=crop",
-              "caption": "Weite Wasserfläche mit dramatischen Wolken."
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1505761671935-60b3a7427bad?w=800&auto=format&fit=crop",
-              "caption": "Sonnenstrahlen durch Wolken über dem Meer."
-            }
-          ]
-        },
-        "activities": [
-          {
-            "id": "navimag-open-sea",
-            "type": "onboard",
-            "name": "Open-Sea Ruhetag",
-            "description": "Optional Yoga- oder Stretch-Session, nachmittags Filmabend im Salon.",
-            "images": []
-          }
-        ]
-      },
-      {
-        "id": "day-7",
-        "date": "2026-01-10",
-        "station": {
-          "name": "Puerto Natales – Ankunft",
-          "timezone": "America/Punta_Arenas",
-          "coordinates": {
-            "lat": -51.7298,
-            "lng": -72.5060
-          },
-          "description": "Ausschiffung, Spaziergang an der Costanera und Planung der Torres-del-Paine-Tage.",
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1526402462922-1e1d481d87fd?w=800&auto=format&fit=crop",
-              "caption": "Promenade mit Bergen im Hintergrund."
-            }
-          ]
-        },
-        "activities": [
-          {
-            "id": "natales-waterfront-walk",
-            "type": "city-walk",
-            "name": "Uferpromenade & Mate-Stop",
-            "description": "Locker entlang der Holzpfähle schlendern, Café-Stop mit Blick auf den Fjord.",
-            "images": []
-          }
-        ]
-      },
-      {
-        "id": "day-8",
-        "date": "2026-01-11",
-        "station": {
-          "name": "Torres del Paine – Miradores leicht",
-          "timezone": "America/Punta_Arenas",
-          "coordinates": {
-            "lat": -51.2530,
-            "lng": -72.9980
-          },
-          "description": "Scenic Drive im Nationalpark mit kurzen Hikes (Salto Grande, Mirador Cuernos).",
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1500534314211-0a24cd03f2c0?w=800&auto=format&fit=crop",
-              "caption": "Türkisfarbener See vor Granitnadeln."
-            }
-          ]
-        },
-        "activities": [
-          {
-            "id": "paine-miradores",
-            "type": "hike",
-            "name": "Salto Grande & Mirador Cuernos",
-            "description": "Kurze, familienfreundliche Trails mit großen Aussichten und leichter Steigung.",
-            "images": []
-          }
-        ]
-      },
-      {
-        "id": "day-9",
-        "date": "2026-01-12",
-        "station": {
-          "name": "Torres del Paine – Lago Grey",
-          "timezone": "America/Punta_Arenas",
-          "coordinates": {
-            "lat": -51.1067,
-            "lng": -73.1575
-          },
-          "description": "Bootstour zu Eisbergen am Lago Grey, kurze Strandwanderung.",
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1545235617-9465c4b8ba06?w=800&auto=format&fit=crop",
-              "caption": "Eisbrocken im grauen Wasser."
-            }
-          ]
-        },
-        "activities": [
-          {
-            "id": "grey-boat",
-            "type": "boat-tour",
-            "name": "Lago-Grey-Bootstour",
-            "description": "Halbtags-Tour bis vor die Gletscherfront, warme Kleidung empfohlen.",
-            "images": []
-          }
-        ]
-      },
-      {
-        "id": "day-10",
-        "date": "2026-01-13",
-        "station": {
-          "name": "Punta Arenas – Anreise",
-          "timezone": "America/Punta_Arenas",
-          "coordinates": {
-            "lat": -53.1638,
-            "lng": -70.9171
-          },
-          "description": "Bus von Puerto Natales nach Punta Arenas, kurzer Stadtrundgang und Aussichtspunkt Cerro de la Cruz.",
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1528989385568-3ac196525f80?w=800&auto=format&fit=crop",
-              "caption": "Bunte Dächer von Punta Arenas."
-            }
-          ]
-        },
-        "activities": [
-          {
-            "id": "punta-arenas-walk",
-            "type": "city-walk",
-            "name": "Plaza Muñoz Gamero & Mirador",
-            "description": "Klassische Stadtrunde mit Stop an der Plaza und Blick über die Magellanstraße.",
-            "images": []
-          }
-        ]
-      },
-      {
-        "id": "day-11",
-        "date": "2026-01-14",
-        "station": {
-          "name": "Isla Magdalena – Magellan-Pinguine",
-          "timezone": "America/Punta_Arenas",
-          "coordinates": {
-            "lat": -52.9150,
-            "lng": -70.2200
-          },
-          "description": "Bootstour zur Pinguinkolonie auf Isla Magdalena; kurzer Landgang und Ranger-Briefing.",
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&auto=format&fit=crop",
-              "caption": "Neugierige Pinguine am Strand."
-            }
-          ]
-        },
-        "activities": [
-          {
-            "id": "magdalena-penguins",
-            "type": "wildlife",
-            "name": "Bootstour Isla Magdalena",
-            "description": "Frühe Abfahrt, Landgang mit klaren Regeln zum Abstandhalten, danach Rückfahrt nach Punta Arenas.",
-            "images": []
-          }
-        ]
-      },
-      {
-        "id": "day-12",
-        "date": "2026-01-15",
-        "station": {
-          "name": "Bahía Inútil – Königspinguine",
-          "timezone": "America/Punta_Arenas",
-          "coordinates": {
-            "lat": -53.3000,
-            "lng": -69.6000
-          },
-          "description": "Tagesausflug per 4x4 oder geführter Tour nach Tierra del Fuego zur Königspinguin-Kolonie.",
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1505761671935-60b3a7427bad?w=800&auto=format&fit=crop",
-              "caption": "Pinguine in weiter Buchtlandschaft."
-            }
-          ]
-        },
-        "activities": [
-          {
-            "id": "king-penguins-tierra-del-fuego",
-            "type": "wildlife",
-            "name": "Königspinguin-Reserve",
-            "description": "Geführter Besuch im Reserva Pingüino Rey, Zeit für Fotos und Info über Schutzmaßnahmen.",
-            "images": []
-          }
-        ]
-      },
-      {
-        "id": "day-13",
-        "date": "2026-01-16",
-        "station": {
-          "name": "Punta Arenas – Museen & Kaffeehäuser",
-          "timezone": "America/Punta_Arenas",
-          "coordinates": {
-            "lat": -53.1638,
-            "lng": -70.9171
-          },
-          "description": "Puffertag für Wetter: Museo Regional de Magallanes, Cafés und Shopping entlang der Bories-Straße.",
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&auto=format&fit=crop",
-              "caption": "Stadtblick über Punta Arenas."
-            }
-          ]
-        },
-        "activities": [
-          {
-            "id": "magallanes-museum",
-            "type": "culture",
-            "name": "Museo Regional de Magallanes",
-            "description": "Kurzbesuch im ehemaligen Palacio Braun-Menéndez und Kaffeepause im Zentrum.",
-            "images": []
-          }
-        ]
-      },
-      {
-        "id": "day-14",
-        "date": "2026-01-17",
-        "station": {
-          "name": "Rückflug Punta Arenas → Santiago",
-          "timezone": "America/Santiago",
-          "coordinates": {
-            "lat": -33.4489,
-            "lng": -70.6693
-          },
-          "description": "Flug zurück nach Santiago, abends optional letzter Spaziergang im Barrio Italia.",
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1472252369995-6d9b2177ed73?w=800&auto=format&fit=crop",
-              "caption": "Flugzeug über Bergen."
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1518552781800-1fb841be351d?w=800&auto=format&fit=crop",
-              "caption": "Maschine am Gate bei Sonnenuntergang."
-            }
-          ]
-        },
-        "activities": [
-          {
-            "id": "return-flight-scl",
-            "type": "flight",
-            "name": "Rückflug & Chill-Abend",
-            "description": "Check-in, Flug und entspannter Abschluss in Santiago (falls Overnight nötig).",
-            "images": []
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "navimag-northbound-lakes-pacific-2026",
-    "title": "Route 2 – Navimag Nordwärts, Seen & Pazifikküste",
-    "summary": "Variante mit frühem Flug nach Puerto Natales, Navimag-Fähre Puerto Natales → Puerto Montt (z.B. Abfahrt um den 6. Januar herum), dann Seen-Distrikt, Chiloé-Insel und Valparaíso/Casablanca-Weintal. Fokus: viel Meer & Küstenstimmung. 🚢🌊🍷",
-    "meta": {
-      "theme": "Patagonische Fjorde & Zentralküste",
-      "pace": "gemischt",
-      "durationDays": 14,
-      "costEstimate": 3600,
-      "highlights": [
-        "Santiago de Chile",
-        "Puerto Natales & Vorprogramm Torres del Paine (1 Tag Light)",
-        "Navimag-Fähre: Puerto Natales → Puerto Montt",
-        "Puerto Varas & Llanquihue-See",
-        "Chiloé-Insel (Castro & Dalcahue)",
-        "Valparaíso & Viña del Mar",
-        "Weintal Casablanca"
-      ],
-      "highlightImages": [
-        {
-          "title": "Puerto Natales",
-          "image": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1200&auto=format&fit=crop",
-          "caption": "Pfahlreihe im Fjord von Puerto Natales.",
-          "source": "Unsplash",
-          "license": "Unsplash License"
-        },
-        {
-          "title": "Navimag Nordwärts",
-          "image": "https://images.unsplash.com/photo-1471115853179-bb1d604434e0?w=1200&auto=format&fit=crop",
-          "caption": "Fähre zwischen grünen Inseln und Nebelstimmungen.",
-          "source": "Unsplash",
-          "license": "Unsplash License"
-        },
-        {
-          "title": "Puerto Varas & Seen-Distrikt",
-          "image": "https://images.unsplash.com/photo-1493244040629-496f6d136cc3?w=1200&auto=format&fit=crop",
-          "caption": "Vulkanblick über Wiesen und See.",
-          "source": "Unsplash",
-          "license": "Unsplash License"
-        },
-        {
-          "title": "Chiloé-Insel – Holzkirchen",
-          "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&auto=format&fit=crop",
-          "caption": "Holzkirche und einfache Häuser im Nieselregen.",
-          "source": "Unsplash",
-          "license": "Unsplash License"
-        },
-        {
-          "title": "Valparaíso Streetart",
-          "image": "https://images.unsplash.com/photo-1526402462922-1e1d481d87fd?w=1200&auto=format&fit=crop",
-          "caption": "Bunte Häuser und Murals am Cerro Alegre.",
-          "source": "Unsplash",
-          "license": "Unsplash License"
-        }
-      ],
-      "scores": {
-        "budget": 4,
-        "adventure": 4,
-        "relax": 3,
-        "culture": 4
-      }
-    },
-    "slider": {
-      "enabled": true,
-      "label": "Tagesübersicht (14 Tage – in 8 Blöcke aggregiert)"
-    },
-    "mapLayers": {
-      "dailySegments": [
-        {
-          "dayId": "day-2",
-          "mode": "flight",
-          "geometry": {
-            "type": "LineString",
-            "coordinates": [
-              [
-                -33.4489,
-                -70.6693
-              ],
-              [
-                -53.1638,
-                -70.9171
-              ]
-            ]
-          }
-        },
-        {
-          "dayId": "day-3",
-          "mode": "bus",
-          "geometry": {
-            "type": "LineString",
-            "coordinates": [
-              [
-                -53.1638,
-                -70.9171
-              ],
-              [
-                -51.7298,
-                -72.5060
-              ]
-            ]
-          }
-        },
-        {
-          "dayId": "day-4",
-          "mode": "ship",
-          "geometry": {
-            "type": "LineString",
-            "coordinates": [
-              [
-                -51.7298,
-                -72.5060
-              ],
-              [
-                -41.4717,
-                -72.9369
-              ]
-            ]
-          }
-        },
-        {
-          "dayId": "day-6",
-          "mode": "drive",
-          "geometry": {
-            "type": "LineString",
-            "coordinates": [
-              [
-                -41.3184,
-                -72.9854
-              ],
-              [
-                -42.4794,
-                -73.7580
-              ]
-            ]
-          }
-        },
-        {
-          "dayId": "day-7",
-          "mode": "flight",
-          "geometry": {
-            "type": "LineString",
-            "coordinates": [
-              [
-                -41.4717,
-                -72.9369
-              ],
-              [
-                -33.0472,
-                -71.6127
-              ]
-            ]
-          }
-        },
-        {
-          "dayId": "day-8",
-          "mode": "drive",
-          "geometry": {
-            "type": "LineString",
-            "coordinates": [
-              [
-                -33.0472,
-                -71.6127
-              ],
-              [
-                -33.4489,
-                -70.6693
-              ]
-            ]
-          }
-        }
-      ]
-    },
-    "days": [
-      {
-        "id": "day-1",
-        "date": "2026-01-04",
-        "station": {
-          "name": "Santiago de Chile – Ankunft & Altstadt",
-          "timezone": "America/Santiago",
-          "coordinates": {
-            "lat": -33.4489,
-            "lng": -70.6693
-          },
-          "description": "Ankommen, kurzer Stadtspaziergang, Vorbereitung auf den Südflug am nächsten Tag.",
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1526401485004-46910ecc8e51?w=800&auto=format&fit=crop",
-              "caption": "Centro von Santiago mit Hochhäusern."
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1526481280695-3c4692349813?w=800&auto=format&fit=crop",
-              "caption": "Bars und Cafés im Barrio Lastarria."
-            }
-          ]
-        },
-        "activities": []
-      },
-      {
-        "id": "day-2",
-        "date": "2026-01-05",
-        "station": {
-          "name": "Punta Arenas – Tor zu Patagonien",
-          "timezone": "America/Punta_Arenas",
-          "coordinates": {
-            "lat": -53.1638,
-            "lng": -70.9171
-          },
-          "description": "Flug Santiago → Punta Arenas, kurzer Stadtbummel und Blick auf die Magellanstraße.",
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1528989385568-3ac196525f80?w=800&auto=format&fit=crop",
-              "caption": "Stadtviertel von Punta Arenas."
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&auto=format&fit=crop",
-              "caption": "Blick auf Meer und Stadt."
-            }
-          ]
-        },
-        "activities": []
-      },
-      {
-        "id": "day-3",
-        "date": "2026-01-06",
-        "station": {
-          "name": "Puerto Natales & Torres del Paine Light",
-          "timezone": "America/Punta_Arenas",
-          "coordinates": {
-            "lat": -51.7298,
-            "lng": -72.5060
-          },
-          "description": "Bus nach Puerto Natales, halber Tag für kurzen Ausflug Richtung Torres del Paine (z.B. Miradoren und einfache Trails).",
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800&auto=format&fit=crop",
-              "caption": "Holzpfähle im Wasser vor Bergen."
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1546539782-6fc531453083?w=800&auto=format&fit=crop",
-              "caption": "Torres del Paine im Hintergrund."
-            }
-          ]
-        },
-        "activities": []
-      },
-      {
-        "id": "day-4",
-        "date": "2026-01-07",
-        "station": {
-          "name": "Navimag Puerto Natales → Puerto Montt",
-          "timezone": "America/Santiago",
-          "coordinates": {
-            "lat": -51.7298,
-            "lng": -72.5060
-          },
-          "description": "Einschiffung Navimag. Für die Saison 2025/26 wird z.B. eine Abfahrt um den 6. Januar 2026 ab Puerto Natales erwartet (konkretes Datum auf tickets.navimag.com prüfen).",
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1471115853179-bb1d604434e0?w=800&auto=format&fit=crop",
-              "caption": "Schiff in einem patagonischen Fjord."
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=800&auto=format&fit=crop",
-              "caption": "Blick vom Deck zwischen Inseln."
-            }
-          ]
-        },
-        "activities": []
-      },
-      {
-        "id": "day-5",
-        "date": "2026-01-08",
-        "station": {
-          "name": "Navimag – Unterwegs durch Kanäle & Golfo de Penas",
-          "timezone": "America/Santiago",
-          "coordinates": {
-            "lat": -47.0000,
-            "lng": -74.0000
-          },
-          "description": "Aufenthalt an Bord, Fjordszenen, ggf. ein Abschnitt offene See im Golfo de Penas, Wildlife-Spotting.",
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1500534314211-0a24cd03f2c0?w=800&auto=format&fit=crop",
-              "caption": "Fjordlandschaft."
-
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=800&auto=format&fit=crop",
-              "caption": "Dramatische Wolken über Wasser."
-            }
-          ]
-        },
-        "activities": []
-      },
-      {
-        "id": "day-6",
-        "date": "2026-01-10",
-        "station": {
-          "name": "Puerto Montt & Puerto Varas – Seen-Distrikt",
-          "timezone": "America/Santiago",
-          "coordinates": {
-            "lat": -41.4717,
-            "lng": -72.9369
-          },
-          "description": "Ausschiffung, dann 2 Tage im Seen-Distrikt mit Basis Puerto Varas (Llanquihue-See, Wasserfälle Petrohué, Vulkan Osorno).",
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1493244040629-496f6d136cc3?w=800&auto=format&fit=crop",
-              "caption": "Grüne Wiesen und See mit Vulkanblick."
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&auto=format&fit=crop",
-              "caption": "Landstraße mit schneebedecktem Vulkan."
-            }
-          ]
-        },
-        "activities": []
-      },
-      {
-        "id": "day-7",
-        "date": "2026-01-12",
-        "station": {
-          "name": "Chiloé-Insel – Castro & Palafitos",
-          "timezone": "America/Santiago",
-          "coordinates": {
-            "lat": -42.4794,
-            "lng": -73.7580
-          },
-          "description": "2 Tage Chiloé: Holzkirchen, Palafitos (Pfahlbauten), Märkte und Küstenlandschaft.",
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop",
-              "caption": "Holzkirche und bunte Häuser."
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1542317854-0d6d02aca827?w=800&auto=format&fit=crop",
-              "caption": "Pfahlbauten an der Küste."
-            }
-          ]
-        },
-        "activities": []
-      },
-      {
-        "id": "day-8",
-        "date": "2026-01-15",
-        "station": {
-          "name": "Valparaíso, Viña del Mar & Rückkehr nach Santiago",
-          "timezone": "America/Santiago",
-          "coordinates": {
-            "lat": -33.0472,
-            "lng": -71.6127
-          },
-          "description": "Flug Puerto Montt → Santiago, weiter per Bus/Auto nach Valparaíso & Viña del Mar (2–3 Tage). Rückkehr nach Santiago am 17.1.",
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1526402462922-1e1d481d87fd?w=800&auto=format&fit=crop",
-              "caption": "Bunte Hügelhäuser in Valparaíso."
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1529346528741-5e65d6d5bbff?w=800&auto=format&fit=crop",
-              "caption": "Treppen mit Streetart."
-            }
-          ]
-        },
-        "activities": []
-      }
-    ]
-  },
-  {
-    "id": "araucania-navimag-loop-2026",
-    "title": "Route 3 – Araukanien, Vulkane & Navimag Südwärts",
-    "summary": "Start mit Vulkanregion Pucón/Araukanien, dann Flug nach Puerto Natales und intensivere Torres-del-Paine-Tage, abschließend Navimag Puerto Natales → Puerto Montt (z.B. Abfahrt um den 13. Januar herum). Fokus: Wandern, Thermalbäder und ein „Rückweg per Schiff“. 🌋🏕️🚢",
-    "meta": {
-      "theme": "Vulkanregion & Patagonien mit Schiffsrückweg",
-      "pace": "sportlich",
-      "durationDays": 14,
-      "costEstimate": 3900,
-      "highlights": [
-        "Santiago de Chile",
-        "Pucón & Vulkan Villarrica",
-        "Araukanien-Seen & Thermalbäder",
-        "Puerto Natales",
-        "Torres del Paine (2–3 volle Tage)",
+        "Punta Arenas & Pinguine",
+        "Torres del Paine",
         "Navimag-Fähre: Puerto Natales → Puerto Montt"
       ],
       "highlightImages": [
         {
-          "title": "Pucón & Vulkan Villarrica",
-          "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1200&auto=format&fit=crop",
-          "caption": "Schneebedeckter Vulkan über grüner Landschaft.",
-          "source": "Unsplash",
-          "license": "Unsplash License"
-        },
-        {
-          "title": "Araukanien-Seen",
-          "image": "https://images.unsplash.com/photo-1493244040629-496f6d136cc3?w=1200&auto=format&fit=crop",
-          "caption": "Seen, Wälder und Berge im Süden Chiles.",
-          "source": "Unsplash",
-          "license": "Unsplash License"
-        },
-        {
-          "title": "Torres del Paine",
-          "image": "https://images.unsplash.com/photo-1546539782-6fc531453083?w=1200&auto=format&fit=crop",
-          "caption": "Die ikonischen Granitspitzen über einer Lagune.",
-          "source": "Unsplash",
-          "license": "Unsplash License"
-        },
-        {
-          "title": "Navimag – Rückweg nach Puerto Montt",
-          "image": "https://images.unsplash.com/photo-1471115853179-bb1d604434e0?w=1200&auto=format&fit=crop",
-          "caption": "Schiff in engen Kanälen.",
+          "title": "Pinguine",
+          "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1200&auto=format&fit=crop",
+          "caption": "Pinguine in Patagonien.",
           "source": "Unsplash",
           "license": "Unsplash License"
         }
       ],
       "scores": {
         "budget": 3,
-        "adventure": 5,
-        "relax": 2,
+        "adventure": 4,
+        "relax": 3,
         "culture": 3
       }
     },
     "slider": {
       "enabled": true,
-      "label": "Tagesübersicht (14 Tage – in 7 Blöcke aggregiert)"
+      "label": "Tagesübersicht"
     },
     "mapLayers": {
       "dailySegments": [
         {
           "dayId": "day-2",
-          "mode": "drive",
-          "geometry": {
-            "type": "LineString",
-            "coordinates": [
-              [
-                -33.4489,
-                -70.6693
-              ],
-              [
-                -39.2825,
-                -71.9770
-              ]
-            ]
-          }
-        },
-        {
-          "dayId": "day-3",
-          "mode": "drive",
-          "geometry": {
-            "type": "LineString",
-            "coordinates": [
-              [
-                -39.2825,
-                -71.9770
-              ],
-              [
-                -39.9089,
-                -72.0037
-              ]
-            ]
-          }
-        },
-        {
-          "dayId": "day-4",
           "mode": "flight",
           "geometry": {
             "type": "LineString",
             "coordinates": [
               [
-                -39.9089,
-                -72.0037
+                -70.6693,
+                -33.4489
               ],
               [
-                -51.7298,
-                -72.5060
+                -70.9171,
+                -53.1638
               ]
             ]
           }
         },
         {
-          "dayId": "day-6",
+          "dayId": "day-5",
+          "mode": "drive",
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -70.9171,
+                -53.1638
+              ],
+              [
+                -72.5060,
+                -51.7298
+              ]
+            ]
+          }
+        },
+        {
+          "dayId": "day-9",
           "mode": "ship",
           "geometry": {
             "type": "LineString",
             "coordinates": [
               [
-                -51.7298,
-                -72.5060
+                -72.5060,
+                -51.7298
               ],
               [
-                -41.4717,
-                -72.9369
+                -72.9369,
+                -41.4717
               ]
             ]
           }
         },
         {
-          "dayId": "day-7",
+          "dayId": "day-13",
           "mode": "flight",
           "geometry": {
             "type": "LineString",
             "coordinates": [
               [
-                -41.4717,
-                -72.9369
+                -72.9369,
+                -41.4717
               ],
               [
-                -33.4489,
-                -70.6693
+                -70.6693,
+                -33.4489
               ]
             ]
           }
@@ -1833,171 +498,207 @@
     "days": [
       {
         "id": "day-1",
-        "date": "2026-01-04",
+        "date": "2025-11-06",
         "station": {
-          "name": "Santiago – Ankommen & kurzer City-Check",
-          "timezone": "America/Santiago",
+          "name": "Santiago de Chile",
           "coordinates": {
             "lat": -33.4489,
             "lng": -70.6693
-          },
-          "description": "Wie bei Route 1: leichter Einstieg in die Stadt, ggf. Cerro Santa Lucía oder Lastarria.",
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1526401485004-46910ecc8e51?w=800&auto=format&fit=crop",
-              "caption": "Centro von Santiago."
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1526481280695-3c4692349813?w=800&auto=format&fit=crop",
-              "caption": "Cafés und Bars in einem Kreativviertel."
-            }
-          ]
+          }
         },
-        "activities": []
+        "arrival": {
+          "segments": []
+        }
       },
       {
         "id": "day-2",
-        "date": "2026-01-05",
+        "date": "2025-11-07",
         "station": {
-          "name": "Pucón – Vulkan Villarrica",
-          "timezone": "America/Santiago",
+          "name": "Punta Arenas",
           "coordinates": {
-            "lat": -39.2825,
-            "lng": -71.9770
-          },
-          "description": "Bus oder Mietwagen nach Pucón, erster Blick auf den Villarrica-Vulkan, Abend am Seeufer.",
-          "images": [
+            "lat": -53.1638,
+            "lng": -70.9171
+          }
+        },
+        "arrival": {
+          "segments": [
             {
-              "url": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&auto=format&fit=crop",
-              "caption": "Vulkan über grüner Landschaft."
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1493244040629-496f6d136cc3?w=800&auto=format&fit=crop",
-              "caption": "Seenlandschaft in Araukanien."
+              "mode": "flight",
+              "from": {
+                "name": "Santiago (SCL)"
+              },
+              "to": {
+                "name": "Punta Arenas (PUQ)"
+              },
+              "durationMinutes": 210
             }
           ]
-        },
-        "activities": []
+        }
       },
       {
         "id": "day-3",
-        "date": "2026-01-06",
+        "date": "2025-11-08",
         "station": {
-          "name": "Araukanien – Seen & Thermalbäder",
-          "timezone": "America/Santiago",
-          "coordinates": {
-            "lat": -39.9089,
-            "lng": -72.0037
-          },
-          "description": "2–3 Tage in der Region: einfache Wanderungen, Mapuche-Kultur, Thermen (z.B. Termas Geométricas) und Seen.",
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=800&auto=format&fit=crop",
-              "caption": "Thermalbecken im Wald."
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1493244040629-496f6d136cc3?w=800&auto=format&fit=crop",
-              "caption": "Fluss und Wald im Süden Chiles."
-            }
-          ]
-        },
-        "activities": []
+          "name": "Punta Arenas - Pinguine"
+        }
       },
       {
         "id": "day-4",
-        "date": "2026-01-09",
+        "date": "2025-11-09",
         "station": {
-          "name": "Flug in den Süden – Puerto Natales",
-          "timezone": "America/Punta_Arenas",
-          "coordinates": {
-            "lat": -51.7298,
-            "lng": -72.5060
-          },
-          "description": "Morgens Rückfahrt nach Temuco oder Valdivia, Flug in Richtung Puerto Natales (ggf. via Santiago/Punta Arenas), abends kurze Runde durch den Ort.",
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800&auto=format&fit=crop",
-              "caption": "Pfahlreihe im Fjord von Puerto Natales."
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=800&auto=format&fit=crop",
-              "caption": "Häuserfront mit Bergen im Hintergrund."
-            }
-          ]
-        },
-        "activities": []
+          "name": "Punta Arenas - Feuerland"
+        }
       },
       {
         "id": "day-5",
-        "date": "2026-01-10",
+        "date": "2025-11-10",
         "station": {
-          "name": "Torres del Paine – 2–3 Tage intensiv",
-          "timezone": "America/Punta_Arenas",
-          "coordinates": {
-            "lat": -51.2530,
-            "lng": -72.9980
-          },
-          "description": "2–3 volle Tage für Base-Torres-Wanderung, Lago Grey und weitere Viewpoints (ähnlich Route 1, aber kompakter).",
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1546539782-6fc531453083?w=800&auto=format&fit=crop",
-              "caption": "Torres del Paine über einer Lagune."
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1500534314211-0a24cd03f2c0?w=800&auto=format&fit=crop",
-              "caption": "Türkisfarbene Seen und Steppe."
-            }
-          ]
-        },
-        "activities": []
-      },
-      {
-        "id": "day-6",
-        "date": "2026-01-13",
-        "station": {
-          "name": "Navimag – Puerto Natales → Puerto Montt",
-          "timezone": "America/Santiago",
+          "name": "Puerto Natales",
           "coordinates": {
             "lat": -51.7298,
             "lng": -72.5060
-          },
-          "description": "Einschiffung, z.B. Abfahrt um den 13. Januar 2026 (gemäß Saisonkalender; exaktes Datum vor Buchung prüfen). 4 Nächte / ca. 5 Tage Schiffspassage zurück nach Puerto Montt.",
-          "images": [
+          }
+        },
+        "arrival": {
+          "segments": [
             {
-              "url": "https://images.unsplash.com/photo-1471115853179-bb1d604434e0?w=800&auto=format&fit=crop",
-              "caption": "Schiff in schmalem Kanal."
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=800&auto=format&fit=crop",
-              "caption": "Abendstimmung an Deck."
+              "mode": "bus",
+              "from": {
+                "name": "Punta Arenas"
+              },
+              "to": {
+                "name": "Puerto Natales"
+              },
+              "durationMinutes": 180,
+              "variants": [
+                {
+                  "id": "bus-sur",
+                  "mode": "bus",
+                  "cost": 12,
+                  "durationMinutes": 180,
+                  "co2": 15,
+                  "description": "Bus Sur (Standard)",
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [
+                        -70.9171,
+                        -53.1638
+                      ],
+                      [
+                        -72.5060,
+                        -51.7298
+                      ]
+                    ]
+                  }
+                },
+                {
+                  "id": "private-transfer",
+                  "mode": "drive",
+                  "cost": 200,
+                  "durationMinutes": 160,
+                  "co2": 50,
+                  "description": "Privater Transfer",
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [
+                        -70.9171,
+                        -53.1638
+                      ],
+                      [
+                        -72.5060,
+                        -51.7298
+                      ]
+                    ]
+                  }
+                }
+              ]
             }
           ]
-        },
-        "activities": []
+        }
+      },
+      {
+        "id": "day-6",
+        "date": "2025-11-11",
+        "station": {
+          "name": "Puerto Natales (Einschiffung)",
+          "description": "Einschiffung Navimag 'Esperanza'. Abfahrt Dienstags."
+        }
       },
       {
         "id": "day-7",
-        "date": "2026-01-16",
+        "date": "2025-11-12",
         "station": {
-          "name": "Puerto Montt & Weiterreise nach Santiago",
-          "timezone": "America/Santiago",
+          "name": "Navimag - Auf See"
+        }
+      },
+      {
+        "id": "day-8",
+        "date": "2025-11-13",
+        "station": {
+          "name": "Navimag - Auf See"
+        }
+      },
+      {
+        "id": "day-9",
+        "date": "2025-11-14",
+        "station": {
+          "name": "Puerto Montt (Ankunft)"
+        }
+      },
+      {
+        "id": "day-10",
+        "date": "2025-11-15",
+        "station": {
+          "name": "Puerto Varas"
+        }
+      },
+      {
+        "id": "day-11",
+        "date": "2025-11-16",
+        "station": {
+          "name": "Puerto Varas - Osorno"
+        }
+      },
+      {
+        "id": "day-12",
+        "date": "2025-11-17",
+        "station": {
+          "name": "Puerto Varas - Chiloé"
+        }
+      },
+      {
+        "id": "day-13",
+        "date": "2025-11-18",
+        "station": {
+          "name": "Santiago de Chile",
           "coordinates": {
-            "lat": -41.4717,
-            "lng": -72.9369
-          },
-          "description": "Ankunft in Puerto Montt voraussichtlich um den 16./17. Januar herum, Rückflug nach Santiago und ggf. letzte Nacht in der Hauptstadt.",
-          "images": [
+            "lat": -33.4489,
+            "lng": -70.6693
+          }
+        },
+        "arrival": {
+          "segments": [
             {
-              "url": "https://images.unsplash.com/photo-1493244040629-496f6d136cc3?w=800&auto=format&fit=crop",
-              "caption": "Seenlandschaft in der Nähe von Puerto Montt."
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1472252369995-6d9b2177ed73?w=800&auto=format&fit=crop",
-              "caption": "Flugzeug über Wolken."
+              "mode": "flight",
+              "from": {
+                "name": "Puerto Montt (PMC)"
+              },
+              "to": {
+                "name": "Santiago (SCL)"
+              },
+              "durationMinutes": 100
             }
           ]
-        },
-        "activities": []
+        }
+      },
+      {
+        "id": "day-14",
+        "date": "2025-11-19",
+        "station": {
+          "name": "Abreise"
+        }
       }
     ]
   }

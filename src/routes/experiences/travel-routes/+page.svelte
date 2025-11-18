@@ -51,6 +51,7 @@
     createFallbackProjector,
     type OverlayProjector,
   } from "../../../lib/travel/overlay-projection";
+  import MobilityComparison from "../../../lib/travel/MobilityComparison.svelte";
 
   declare global {
     interface Window {
@@ -236,7 +237,56 @@
   let isMapFullscreen = false;
   let isLegendVisible = true;
   let showStopDetailPanel = false;
+  let showStopDetailPanel = false;
   let isTouchOverlayActive = false;
+  let selectedVariants: Record<string, string> = {};
+
+  function handleVariantSelect(segmentKey: string, variantId: string) {
+    selectedVariants = { ...selectedVariants, [segmentKey]: variantId };
+  }
+
+  function getEffectiveRoute(
+    route: RouteDetail | null,
+    variants: Record<string, string>,
+  ): RouteDetail | null {
+    if (!route) return null;
+    // Deep clone to avoid mutating the original data
+    const effective = JSON.parse(JSON.stringify(route)) as RouteDetail;
+
+    if (effective.days) {
+      effective.days.forEach((day, dayIndex) => {
+        if (!day.arrival?.segments) return;
+        day.arrival.segments.forEach((segment, segmentIndex) => {
+          const key = `${day.id}-seg-${segmentIndex}`;
+          const variantId = variants[key];
+          if (variantId && segment.variants) {
+            const selected = segment.variants.find((v) => v.id === variantId);
+            if (selected) {
+              // Apply variant properties to the segment
+              if (selected.mode) segment.mode = selected.mode;
+              if (selected.cost) (segment as any).costEstimate = selected.cost; // Store cost for display if needed
+              if (selected.durationMinutes)
+                segment.durationMinutes = selected.durationMinutes;
+              if (selected.description)
+                segment.description = selected.description;
+
+              // Update map layer if it exists and matches
+              if (effective.mapLayers?.dailySegments && selected.geometry) {
+                const mapSegment = effective.mapLayers.dailySegments.find(
+                  (ds) => ds.dayId === day.id,
+                );
+                if (mapSegment) {
+                  mapSegment.geometry = selected.geometry;
+                  mapSegment.mode = selected.mode;
+                }
+              }
+            }
+          }
+        });
+      });
+    }
+    return effective;
+  }
 
   const hasDocument = typeof document !== "undefined";
 
@@ -1195,7 +1245,11 @@
   $: selectedIndexEntry =
     data.travel.routeIndex.find((entry) => entry.id === selectedRouteId) ??
     null;
-  $: selectedRoute = data.travel.routes[selectedRouteId] ?? null;
+  $: selectedIndexEntry =
+    data.travel.routeIndex.find((entry) => entry.id === selectedRouteId) ??
+    null;
+  $: baseRoute = data.travel.routes[selectedRouteId] ?? null;
+  $: selectedRoute = getEffectiveRoute(baseRoute, selectedVariants);
   $: stopDataIndex = buildStopDataIndex(selectedRoute);
   $: segmentCollection = buildSegmentCollection(
     selectedRoute,
@@ -2042,7 +2096,8 @@
                       <details class="travel__stack-subsection travel__spoiler">
                         <summary><h5>Transporte &amp; Segmente</h5></summary>
                         <ul class="travel__data-list">
-                          {#each getDaySegments(day) as segment}
+                          {#each getDaySegments(day) as segment, segmentIndex}
+                            {@const segmentKey = `${day.id}-seg-${segmentIndex}`}
                             <li>
                               <strong
                                 >{getModeAppearance(segment.mode ?? "")
@@ -2060,6 +2115,19 @@
                               </div>
                               {#if segment.description}
                                 <p>{segment.description}</p>
+                              {/if}
+
+                              {#if segment.variants && segment.variants.length > 0}
+                                <div class="mt-4">
+                                  <MobilityComparison
+                                    variants={segment.variants}
+                                    selectedVariantId={selectedVariants[
+                                      segmentKey
+                                    ]}
+                                    on:select={(e) =>
+                                      handleVariantSelect(segmentKey, e.detail)}
+                                  />
+                                </div>
                               {/if}
                             </li>
                           {/each}
