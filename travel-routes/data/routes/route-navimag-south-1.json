@@ -1,0 +1,207 @@
+[
+    {
+        "id": "navimag-south-standard-2025",
+        "title": "Route 5 – Fjorde & Gletscher (Navimag Süd)",
+        "summary": "Die klassische Patagonien-Reise: Von Puerto Montt mit der Navimag-Fähre durch die chilenischen Fjorde nach Puerto Natales. Anschließend Torres del Paine und Gletscher. Abfahrt 10. Januar 2025.",
+        "meta": {
+            "theme": "Fjord-Kreuzfahrt & Nationalparks",
+            "pace": "entspannt",
+            "durationDays": 10,
+            "costEstimate": 1800,
+            "highlights": [
+                "Navimag-Fähre: Puerto Montt → Puerto Natales",
+                "Patagonische Kanäle & Fjorde",
+                "Puerto Natales",
+                "Torres del Paine Nationalpark",
+                "Balmaceda & Serrano Gletscher"
+            ],
+            "highlightImages": [
+                {
+                    "title": "Navimag Esperanza",
+                    "image": "https://images.unsplash.com/photo-1559563362-c667ba5f5480?w=1200&auto=format&fit=crop",
+                    "caption": "Unterwegs in den Fjorden.",
+                    "source": "Unsplash",
+                    "license": "Unsplash License"
+                },
+                {
+                    "title": "Torres del Paine",
+                    "image": "https://images.unsplash.com/photo-1533654887086-76965c2e523b?w=1200&auto=format&fit=crop",
+                    "caption": "Die berühmten Türme.",
+                    "source": "Unsplash",
+                    "license": "Unsplash License"
+                }
+            ],
+            "scores": {
+                "budget": 4,
+                "adventure": 3,
+                "relax": 4,
+                "culture": 2
+            }
+        },
+        "slider": {
+            "enabled": true,
+            "label": "Reiseverlauf"
+        },
+        "mapLayers": {
+            "dailySegments": [
+                {
+                    "dayId": "day-1",
+                    "mode": "ship",
+                    "geometry": {
+                        "type": "LineString",
+                        "coordinates": [
+                            [
+                                -72.9369,
+                                -41.4717
+                            ],
+                            [
+                                -72.5060,
+                                -51.7298
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "dayId": "day-5",
+                    "mode": "bus",
+                    "geometry": {
+                        "type": "LineString",
+                        "coordinates": [
+                            [
+                                -72.5060,
+                                -51.7298
+                            ],
+                            [
+                                -72.9,
+                                -51.0
+                            ]
+                        ]
+                    }
+                }
+            ]
+        },
+        "days": [
+            {
+                "id": "day-1",
+                "date": "2025-01-10",
+                "station": {
+                    "name": "Puerto Montt (Einschiffung)",
+                    "coordinates": {
+                        "lat": -41.4717,
+                        "lng": -72.9369
+                    },
+                    "description": "Einschiffung auf die Navimag-Fähre 'Esperanza'. Abfahrt am Freitag.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1562164206-e7632887c69e?w=800&auto=format&fit=crop",
+                            "caption": "Hafen von Puerto Montt"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": []
+                }
+            },
+            {
+                "id": "day-2",
+                "date": "2025-01-11",
+                "station": {
+                    "name": "Auf See - Patagonische Kanäle",
+                    "description": "Fahrt durch den Moraleda-Kanal und Golfo de Penas.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop",
+                            "caption": "Blick auf die Anden vom Schiff"
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "day-3",
+                "date": "2025-01-12",
+                "station": {
+                    "name": "Auf See - Fjorde",
+                    "description": "Vorbei am Wrack der Captain Leonidas und durch die engste Stelle, die Angostura White.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&auto=format&fit=crop",
+                            "caption": "Nebel in den Fjorden"
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "day-4",
+                "date": "2025-01-13",
+                "station": {
+                    "name": "Ankunft Puerto Natales",
+                    "coordinates": {
+                        "lat": -51.7298,
+                        "lng": -72.5060
+                    },
+                    "description": "Ankunft in Puerto Natales am Morgen. Transfer zum Hotel.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1526402462922-1e1d481d87fd?w=800&auto=format&fit=crop",
+                            "caption": "Puerto Natales Waterfront"
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "day-5",
+                "date": "2025-01-14",
+                "station": {
+                    "name": "Torres del Paine (Tagesausflug)",
+                    "coordinates": {
+                        "lat": -51.0,
+                        "lng": -72.9
+                    },
+                    "description": "Ganztagesausflug in den Nationalpark zu den Highlights: Nordenskjöld See, Salto Grande, Grauer Gletscher.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&auto=format&fit=crop",
+                            "caption": "Guanakos im Park"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": [
+                        {
+                            "mode": "bus",
+                            "from": {
+                                "name": "Puerto Natales"
+                            },
+                            "to": {
+                                "name": "Torres del Paine"
+                            },
+                            "durationMinutes": 120
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "day-6",
+                "date": "2025-01-15",
+                "station": {
+                    "name": "Balmaceda & Serrano Gletscher",
+                    "description": "Bootsfahrt durch den Fjord der letzten Hoffnung zu den Gletschern.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Gletscherfront"
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "day-7",
+                "date": "2025-01-16",
+                "station": {
+                    "name": "Abreise / Weiterreise",
+                    "description": "Transfer zum Flughafen oder Busbahnhof."
+                }
+            }
+        ]
+    }
+]

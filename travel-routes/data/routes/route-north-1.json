@@ -1,0 +1,161 @@
+[
+    {
+        "id": "north-atacama-classics",
+        "title": "Route 7 – Atacama Wüste Highlights",
+        "summary": "4 Tage in der trockensten Wüste der Welt: Mondtal, Geysire, Salzseen und Sternenhimmel. Der perfekte Kurztrip in den Norden.",
+        "meta": {
+            "theme": "Wüste & Sterne",
+            "pace": "aktiv",
+            "durationDays": 4,
+            "costEstimate": 800,
+            "highlights": [
+                "Valle de la Luna (Mondtal)",
+                "El Tatio Geysire",
+                "Lagunas Altiplanicas",
+                "Sternenbeobachtung"
+            ],
+            "highlightImages": [
+                {
+                    "title": "Valle de la Luna",
+                    "image": "https://images.unsplash.com/photo-1490782300182-697b80ad4293?w=1200&auto=format&fit=crop",
+                    "caption": "Sonnenuntergang im Mondtal.",
+                    "source": "Unsplash",
+                    "license": "Unsplash License"
+                },
+                {
+                    "title": "El Tatio Geysire",
+                    "image": "https://images.unsplash.com/photo-1518182383220-72973f536a65?w=1200&auto=format&fit=crop",
+                    "caption": "Dampfende Geysire im Morgengrauen.",
+                    "source": "Unsplash",
+                    "license": "Unsplash License"
+                }
+            ],
+            "scores": {
+                "budget": 3,
+                "adventure": 4,
+                "relax": 2,
+                "culture": 3
+            }
+        },
+        "slider": {
+            "enabled": true,
+            "label": "Tagesprogramm"
+        },
+        "mapLayers": {
+            "dailySegments": [
+                {
+                    "dayId": "day-1",
+                    "mode": "flight",
+                    "geometry": {
+                        "type": "LineString",
+                        "coordinates": [
+                            [
+                                -70.7858,
+                                -33.3929
+                            ],
+                            [
+                                -68.9064,
+                                -22.4956
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "dayId": "day-3",
+                    "mode": "drive",
+                    "geometry": {
+                        "type": "LineString",
+                        "coordinates": [
+                            [
+                                -68.2030,
+                                -22.9111
+                            ],
+                            [
+                                -68.01,
+                                -22.33
+                            ]
+                        ]
+                    }
+                }
+            ]
+        },
+        "days": [
+            {
+                "id": "day-1",
+                "date": "2025-03-10",
+                "station": {
+                    "name": "Ankunft & Valle de la Luna",
+                    "coordinates": {
+                        "lat": -22.9111,
+                        "lng": -68.2030
+                    },
+                    "description": "Flug nach Calama, Transfer nach San Pedro. Nachmittags Tour ins Valle de la Luna zum Sonnenuntergang.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1532339142463-fd0a8979791a?w=800&auto=format&fit=crop",
+                            "caption": "Sanddünen im Valle de la Luna"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": [
+                        {
+                            "mode": "flight",
+                            "from": {
+                                "name": "Santiago"
+                            },
+                            "to": {
+                                "name": "Calama"
+                            },
+                            "durationMinutes": 120
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "day-2",
+                "date": "2025-03-11",
+                "station": {
+                    "name": "Lagunas Altiplanicas & Salar",
+                    "coordinates": {
+                        "lat": -23.6,
+                        "lng": -67.8
+                    },
+                    "description": "Tagesausflug zu den Hochlandlagunen Miscanti und Miñiques sowie zum Salar de Atacama (Flamingos!).",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1510525009512-ad7fc13eefab?w=800&auto=format&fit=crop",
+                            "caption": "Laguna Miscanti"
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "day-3",
+                "date": "2025-03-12",
+                "station": {
+                    "name": "El Tatio Geysire",
+                    "coordinates": {
+                        "lat": -22.33,
+                        "lng": -68.01
+                    },
+                    "description": "Früher Start (4 Uhr morgens) zu den Geysiren auf 4300m Höhe.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&auto=format&fit=crop",
+                            "caption": "El Tatio Geysirfeld"
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "day-4",
+                "date": "2025-03-13",
+                "station": {
+                    "name": "Abreise",
+                    "description": "Transfer zum Flughafen Calama und Rückflug."
+                }
+            }
+        ]
+    }
+]

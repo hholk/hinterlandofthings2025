@@ -15,7 +15,6 @@
     "flowbite": "^2.4.1",
     "flowbite-svelte": "^1.28.0",
     "gsap": "^3.12.5",
-    "locomotive-scroll": "^4.1.4",
     "maplibre-gl": "^5.13.0"
   },
   "devDependencies": {

@@ -238,7 +238,10 @@ export function buildStopCollection(route: RouteDetail | null): StopCollection {
             subtitle: day.date,
             type: 'station',
             city: day.station?.name,
-            description: day.station?.description
+            description: day.station?.description,
+            photoUrl: pickPrimaryImage(day.station?.images ?? null)?.url,
+            photoCaption: pickPrimaryImage(day.station?.images ?? null)?.caption,
+            photoCredit: pickPrimaryImage(day.station?.images ?? null)?.credit
           }
         });
       }

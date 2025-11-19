@@ -1,0 +1,221 @@
+[
+    {
+        "id": "north-coast-altiplano",
+        "title": "Route 8 – Küste & Altiplano (Iquique - Arica)",
+        "summary": "Roadtrip entlang der Pazifikküste von Iquique nach Arica, mit Abstechern zu Geoglyphen, Geisterstädten und dem spektakulären Lauca Nationalpark.",
+        "meta": {
+            "theme": "Kultur & Landschaft",
+            "pace": "ausgewogen",
+            "durationDays": 6,
+            "costEstimate": 1200,
+            "highlights": [
+                "Iquique Strände & Geschichte",
+                "Humberstone Salpeterwerke",
+                "Riesen von Atacama (Geoglyphen)",
+                "Arica & Chinchorro Mumien",
+                "Lauca Nationalpark & Chungará See"
+            ],
+            "highlightImages": [
+                {
+                    "title": "Iquique Küste",
+                    "image": "https://images.unsplash.com/photo-1562788602-9636b762d683?w=1200&auto=format&fit=crop",
+                    "caption": "Skyline von Iquique am Pazifik.",
+                    "source": "Unsplash",
+                    "license": "Unsplash License"
+                },
+                {
+                    "title": "Lauca Nationalpark",
+                    "image": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=1200&auto=format&fit=crop",
+                    "caption": "Vulkan Parinacota und Chungará See.",
+                    "source": "Unsplash",
+                    "license": "Unsplash License"
+                }
+            ],
+            "scores": {
+                "budget": 3,
+                "adventure": 4,
+                "relax": 3,
+                "culture": 5
+            }
+        },
+        "slider": {
+            "enabled": true,
+            "label": "Reiseverlauf"
+        },
+        "mapLayers": {
+            "dailySegments": [
+                {
+                    "dayId": "day-1",
+                    "mode": "flight",
+                    "geometry": {
+                        "type": "LineString",
+                        "coordinates": [
+                            [
+                                -70.7858,
+                                -33.3929
+                            ],
+                            [
+                                -70.14,
+                                -20.22
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "dayId": "day-3",
+                    "mode": "drive",
+                    "geometry": {
+                        "type": "LineString",
+                        "coordinates": [
+                            [
+                                -70.14,
+                                -20.22
+                            ],
+                            [
+                                -70.31,
+                                -18.47
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "dayId": "day-5",
+                    "mode": "drive",
+                    "geometry": {
+                        "type": "LineString",
+                        "coordinates": [
+                            [
+                                -70.31,
+                                -18.47
+                            ],
+                            [
+                                -69.16,
+                                -18.25
+                            ]
+                        ]
+                    }
+                }
+            ]
+        },
+        "days": [
+            {
+                "id": "day-1",
+                "date": "2025-04-01",
+                "station": {
+                    "name": "Ankunft Iquique",
+                    "coordinates": {
+                        "lat": -20.22,
+                        "lng": -70.14
+                    },
+                    "description": "Flug nach Iquique. Entspannung am Cavancha Strand.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1562788602-9636b762d683?w=800&auto=format&fit=crop",
+                            "caption": "Strand von Iquique"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": [
+                        {
+                            "mode": "flight",
+                            "from": {
+                                "name": "Santiago"
+                            },
+                            "to": {
+                                "name": "Iquique"
+                            },
+                            "durationMinutes": 150
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "day-2",
+                "date": "2025-04-02",
+                "station": {
+                    "name": "Humberstone & Pica",
+                    "description": "Besuch der UNESCO-Weltkulturerbe Salpeterwerke Humberstone und der Oase Pica.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1569388330292-7a6a8417698b?w=800&auto=format&fit=crop",
+                            "caption": "Humberstone Ruinen"
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "day-3",
+                "date": "2025-04-03",
+                "station": {
+                    "name": "Fahrt nach Arica",
+                    "coordinates": {
+                        "lat": -18.47,
+                        "lng": -70.31
+                    },
+                    "description": "Fahrt durch die Wüste, vorbei am Riesen von Atacama (Geoglyphe). Ankunft in Arica.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1596423736798-23d5c6a0a5b8?w=800&auto=format&fit=crop",
+                            "caption": "Wüstenstraße"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": [
+                        {
+                            "mode": "drive",
+                            "from": {
+                                "name": "Iquique"
+                            },
+                            "to": {
+                                "name": "Arica"
+                            },
+                            "durationMinutes": 300
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "day-4",
+                "date": "2025-04-04",
+                "station": {
+                    "name": "Arica & Azapa Tal",
+                    "description": "Besuch des Morro de Arica und des Archäologischen Museums (Chinchorro Mumien).",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1597908673768-97546d746441?w=800&auto=format&fit=crop",
+                            "caption": "Morro de Arica"
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "day-5",
+                "date": "2025-04-05",
+                "station": {
+                    "name": "Lauca Nationalpark",
+                    "coordinates": {
+                        "lat": -18.25,
+                        "lng": -69.16
+                    },
+                    "description": "Tagesausflug in die Anden zum Chungará See und Vulkan Parinacota (4500m).",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Chungará See"
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "day-6",
+                "date": "2025-04-06",
+                "station": {
+                    "name": "Abreise",
+                    "description": "Rückflug ab Arica."
+                }
+            }
+        ]
+    }
+]

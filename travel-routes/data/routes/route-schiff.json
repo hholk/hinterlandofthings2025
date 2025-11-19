@@ -133,7 +133,15 @@
             "lat": -33.4489,
             "lng": -70.6693
           },
-          "description": "Ankunft in Santiago."
+          "description": "Ankunft in Santiago.",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1526401485004-46910ecc8e51?w=800&auto=format&fit=crop",
+              "caption": "Santiago de Chile mit Anden im Hintergrund.",
+              "credit": "Unsplash",
+              "license": "Unsplash License"
+            }
+          ]
         },
         "arrival": {
           "segments": []
@@ -148,7 +156,15 @@
             "lat": -22.9111,
             "lng": -68.2030
           },
-          "description": "Flug in den Norden."
+          "description": "Flug in den Norden.",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1518182170546-0766de6f6a56?w=800&auto=format&fit=crop",
+              "caption": "San Pedro de Atacama.",
+              "credit": "Unsplash",
+              "license": "Unsplash License"
+            }
+          ]
         },
         "arrival": {
           "segments": [
@@ -221,14 +237,32 @@
         "id": "day-3",
         "date": "2025-11-05",
         "station": {
-          "name": "San Pedro - Valle de la Luna"
+          "name": "San Pedro - Valle de la Luna",
+          "description": "Erkundung der Mondlandschaft.",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1533052606626-c537b49d062b?w=800&auto=format&fit=crop",
+              "caption": "Valle de la Luna.",
+              "credit": "Unsplash",
+              "license": "Unsplash License"
+            }
+          ]
         }
       },
       {
         "id": "day-4",
         "date": "2025-11-06",
         "station": {
-          "name": "San Pedro - Tatio Geysire"
+          "name": "San Pedro - Tatio Geysire",
+          "description": "Besuch der Geysire im Morgengrauen.",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1518182170546-0766de6f6a56?w=800&auto=format&fit=crop",
+              "caption": "El Tatio Geysire.",
+              "credit": "Unsplash",
+              "license": "Unsplash License"
+            }
+          ]
         }
       },
       {
@@ -240,7 +274,15 @@
             "lat": -41.4717,
             "lng": -72.9369
           },
-          "description": "Flug in den Süden und Einschiffung auf die Navimag 'Esperanza'. Abfahrt Freitags."
+          "description": "Flug in den Süden und Einschiffung auf die Navimag 'Esperanza'. Abfahrt Freitags.",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1562163968-74b31581754b?w=800&auto=format&fit=crop",
+              "caption": "Hafen von Puerto Montt.",
+              "credit": "Unsplash",
+              "license": "Unsplash License"
+            }
+          ]
         },
         "arrival": {
           "segments": [
@@ -262,21 +304,48 @@
         "id": "day-6",
         "date": "2025-11-08",
         "station": {
-          "name": "Navimag - Auf See"
+          "name": "Navimag - Auf See",
+          "description": "Fahrt durch die Fjorde.",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1471115853179-bb1d604434e0?w=800&auto=format&fit=crop",
+              "caption": "Unterwegs in den Fjorden.",
+              "credit": "Unsplash",
+              "license": "Unsplash License"
+            }
+          ]
         }
       },
       {
         "id": "day-7",
         "date": "2025-11-09",
         "station": {
-          "name": "Navimag - Patagonische Kanäle"
+          "name": "Navimag - Patagonische Kanäle",
+          "description": "Landschaft genießen.",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&auto=format&fit=crop",
+              "caption": "Patagonische Kanäle.",
+              "credit": "Unsplash",
+              "license": "Unsplash License"
+            }
+          ]
         }
       },
       {
         "id": "day-8",
         "date": "2025-11-10",
         "station": {
-          "name": "Navimag - Ankunft Puerto Natales"
+          "name": "Navimag - Ankunft Puerto Natales",
+          "description": "Ankunft im Hafen.",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1526402462922-1e1d481d87fd?w=800&auto=format&fit=crop",
+              "caption": "Ankunft in Puerto Natales.",
+              "credit": "Unsplash",
+              "license": "Unsplash License"
+            }
+          ]
         }
       },
       {
@@ -287,28 +356,63 @@
           "coordinates": {
             "lat": -51.7298,
             "lng": -72.5060
-          }
+          },
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1526402462922-1e1d481d87fd?w=800&auto=format&fit=crop",
+              "caption": "Puerto Natales Uferpromenade.",
+              "credit": "Unsplash",
+              "license": "Unsplash License"
+            }
+          ]
         }
       },
       {
         "id": "day-10",
         "date": "2025-11-12",
         "station": {
-          "name": "Torres del Paine"
+          "name": "Torres del Paine",
+          "description": "Nationalpark erkunden.",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1533424827976-87873664c438?w=800&auto=format&fit=crop",
+              "caption": "Torres del Paine.",
+              "credit": "Unsplash",
+              "license": "Unsplash License"
+            }
+          ]
         }
       },
       {
         "id": "day-11",
         "date": "2025-11-13",
         "station": {
-          "name": "Torres del Paine"
+          "name": "Torres del Paine",
+          "description": "Wanderungen im Park.",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&auto=format&fit=crop",
+              "caption": "Landschaft im Nationalpark.",
+              "credit": "Unsplash",
+              "license": "Unsplash License"
+            }
+          ]
         }
       },
       {
         "id": "day-12",
         "date": "2025-11-14",
         "station": {
-          "name": "Torres del Paine"
+          "name": "Torres del Paine",
+          "description": "Abschied vom Park.",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1513415564515-763d99881138?w=800&auto=format&fit=crop",
+              "caption": "Guanacos im Park.",
+              "credit": "Unsplash",
+              "license": "Unsplash License"
+            }
+          ]
         }
       },
       {
@@ -319,7 +423,15 @@
           "coordinates": {
             "lat": -53.1638,
             "lng": -70.9171
-          }
+          },
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1528989385568-3ac196525f80?w=800&auto=format&fit=crop",
+              "caption": "Punta Arenas.",
+              "credit": "Unsplash",
+              "license": "Unsplash License"
+            }
+          ]
         },
         "arrival": {
           "segments": [
@@ -384,7 +496,16 @@
         "id": "day-14",
         "date": "2025-11-16",
         "station": {
-          "name": "Rückflug Santiago"
+          "name": "Rückflug Santiago",
+          "description": "Heimreise.",
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1526401485004-46910ecc8e51?w=800&auto=format&fit=crop",
+              "caption": "Abschied von Chile.",
+              "credit": "Unsplash",
+              "license": "Unsplash License"
+            }
+          ]
         }
       }
     ]
