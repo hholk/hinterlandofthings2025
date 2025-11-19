@@ -1,0 +1,888 @@
+{
+  "id": "var2",
+  "name": "Variante 2 – Flug zu Patagonien & Atacama",
+  "color": "#8affc1",
+  "tags": [
+    "nature",
+    "adventure",
+    "photography",
+    "flight"
+  ],
+  "summary": "Flüge verbinden Patagonien, Atacama und Santiago für die ultimative Chile-Highlight-Tour.",
+  "meta": {
+    "theme": "Flugreise Patagonien • Atacama",
+    "pace": "zügig",
+    "durationDays": 19,
+    "costEstimate": 3400,
+    "highlights": [
+      "Base Torres",
+      "El Tatio",
+      "Lago Grey"
+    ],
+    "scores": {
+      "budget": 2,
+      "adventure": 4,
+      "relax": 2,
+      "culture": 3
+    }
+  },
+  "costBreakdown": {
+    "currency": "EUR",
+    "items": [
+      {
+        "category": "Flüge",
+        "estimate": 1650,
+        "notes": "SCL→PUQ→CJC→SCL"
+      },
+      {
+        "category": "Unterkünfte",
+        "estimate": 980,
+        "notes": "Refugio + Boutique"
+      },
+      {
+        "category": "Guides",
+        "estimate": 280,
+        "notes": "Base Torres Trek, Geysire"
+      },
+      {
+        "category": "Transport",
+        "estimate": 220,
+        "notes": "Busse & Transfers"
+      },
+      {
+        "category": "Essen",
+        "estimate": 220,
+        "notes": "Patagonische Küche"
+      }
+    ]
+  },
+  "stops": [
+    {
+      "id": "scl-airport",
+      "name": "Santiago International Airport (SCL)",
+      "type": "airport",
+      "coordinates": {
+        "lat": -33.3929,
+        "lng": -70.7858
+      },
+      "city": "Santiago",
+      "address": {
+        "street": "Armando Cortínez Norte 1701",
+        "city": "Pudahuel",
+        "country": "Chile"
+      },
+      "website": "https://www.nuevopudahuel.cl",
+      "contact": {
+        "phone": "+56 2 2690 1707",
+        "email": "info@nuevopudahuel.cl",
+        "instagram": "https://www.instagram.com/aeropuertodesantiago/"
+      },
+      "openingHours": "24/7",
+      "popularFor": [
+        "Internationaler Hub",
+        "Duty-free Einkauf"
+      ],
+      "tips": [
+        "Online-Check-in spart Wartezeit.",
+        "TurBus und Centropuerto fahren alle 20 Minuten ins Zentrum."
+      ],
+      "description": "Hauptdrehscheibe Chiles mit direkter Metro-Busanbindung und modernem Terminal 2.",
+      "timezone": "America/Santiago",
+      "category": [
+        "Airport",
+        "Transport"
+      ],
+      "rating": 4.3,
+      "reviewCount": 18942,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1505843513577-22bb7d21e455?w=600&auto=format&fit=crop",
+          "caption": "Check-in Halle des SCL Flughafens",
+          "credit": "Daniel Vargas",
+          "license": "Unsplash License"
+        }
+      ],
+      "services": {
+        "transport": [
+          "Centropuerto Shuttle",
+          "TurBus",
+          "Cabify Pick-up"
+        ],
+        "amenities": [
+          "Kostenloses WLAN",
+          "VIP-Lounges",
+          "Duschen"
+        ]
+      },
+      "knowledge": {
+        "bestTime": "Check-in spätestens 2 Stunden vor Abflug, internationale Flüge 3 Stunden.",
+        "security": "Sicherheitskontrollen liegen im zweiten Stock, Flüssigkeiten max. 100 ml."
+      }
+    },
+    {
+      "id": "valparaiso-center",
+      "name": "Valparaíso – Cerro Alegre",
+      "type": "poi",
+      "coordinates": {
+        "lat": -33.0458,
+        "lng": -71.6197
+      },
+      "city": "Valparaíso",
+      "address": {
+        "street": "Pasaje Gálvez",
+        "city": "Valparaíso",
+        "country": "Chile"
+      },
+      "openingHours": "Immer offen",
+      "popularFor": [
+        "Streetart",
+        "Aufzüge",
+        "Cafés"
+      ],
+      "tips": [
+        "Free-Walking-Tour um 10:00 Uhr am Plaza Sotomayor."
+      ],
+      "description": "Historische Hügel mit Straßenkunst, Boutiquen und Aussicht auf die Bucht.",
+      "timezone": "America/Santiago",
+      "category": [
+        "Historic Quarter",
+        "Viewpoint"
+      ],
+      "rating": 4.7,
+      "reviewCount": 25678,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1526402462922-1e1d481d87fd?w=600&auto=format&fit=crop",
+          "caption": "Bunte Häuser im Cerro Alegre",
+          "credit": "Fabiola Peñailillo",
+          "license": "Unsplash License"
+        }
+      ],
+      "contact": {
+        "instagram": "https://www.instagram.com/visitvalparaiso/"
+      },
+      "services": {
+        "transport": [
+          "Ascensor El Peral",
+          "Trolebus"
+        ],
+        "amenities": [
+          "Galerien",
+          "Cafés",
+          "Aussichtsplattformen"
+        ]
+      },
+      "knowledge": {
+        "bestTime": "Frühmorgens für Fotos ohne Menschenmengen.",
+        "safety": "Nachts in Gruppen unterwegs sein, da Kopfsteinpflaster rutschig werden kann."
+      }
+    },
+    {
+      "id": "punta-arenas-airport",
+      "name": "Punta Arenas Airport (PUQ)",
+      "type": "airport",
+      "coordinates": {
+        "lat": -53.1351,
+        "lng": -70.8786
+      },
+      "description": "Flughafen von Patagonien mit eigenem Pinguin-Souvenirshop und Mietwagenzentrum.",
+      "timezone": "America/Punta_Arenas",
+      "category": [
+        "Airport",
+        "Patagonia"
+      ],
+      "rating": 4.2,
+      "reviewCount": 5630,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=600&auto=format&fit=crop",
+          "caption": "Ankunft in Punta Arenas",
+          "credit": "Rodrigo Gomez",
+          "license": "Unsplash License"
+        }
+      ],
+      "services": {
+        "transport": [
+          "Bus Sur",
+          "Transfer Australis"
+        ],
+        "amenities": [
+          "Duty Free",
+          "Snack Bars"
+        ]
+      }
+    },
+    {
+      "id": "puerto-natales",
+      "name": "Puerto Natales",
+      "type": "town",
+      "coordinates": {
+        "lat": -51.7245,
+        "lng": -72.5079
+      },
+      "description": "Kleines Hafenstädtchen mit Fjordblick, Ausgangspunkt für Torres del Paine.",
+      "timezone": "America/Punta_Arenas",
+      "category": [
+        "Town",
+        "Gateway"
+      ],
+      "rating": 4.6,
+      "reviewCount": 11200,
+      "address": {
+        "street": "Pedro Montt 189",
+        "city": "Puerto Natales",
+        "country": "Chile"
+      },
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1526403222653-0e2d61b4a427?w=600&auto=format&fit=crop",
+          "caption": "Uferpromenade Puerto Natales",
+          "credit": "Marcos Beresovsky",
+          "license": "Unsplash License"
+        }
+      ],
+      "services": {
+        "amenities": [
+          "Outdoor Gear Shops",
+          "Craft Beer Bars"
+        ]
+      }
+    },
+    {
+      "id": "torres-base",
+      "name": "Torres del Paine – Base Torres",
+      "type": "trail",
+      "coordinates": {
+        "lat": -50.9741,
+        "lng": -72.8472
+      },
+      "openingHours": "06:00–20:00",
+      "description": "Legendärer Aussichtspunkt in Torres del Paine nach steilem Tagesmarsch.",
+      "timezone": "America/Punta_Arenas",
+      "category": [
+        "Trail",
+        "National Park"
+      ],
+      "rating": 5.0,
+      "reviewCount": 15420,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1528892952291-009c663ce843?w=600&auto=format&fit=crop",
+          "caption": "Laguna am Base de las Torres",
+          "credit": "Diego Jimenez",
+          "license": "Unsplash License"
+        }
+      ],
+      "knowledge": {
+        "gear": "Trekkingstöcke und Regenjacke obligatorisch – Wetterumschwünge häufig.",
+        "permits": "Parkeintritt vorab online bezahlen, Ticket bei Laguna Amarga vorzeigen."
+      }
+    },
+    {
+      "id": "cjc-airport",
+      "name": "Calama Airport (CJC)",
+      "type": "airport",
+      "coordinates": {
+        "lat": -22.4989,
+        "lng": -68.903
+      },
+      "openingHours": "05:00–23:00",
+      "description": "Tor zur Atacama – kompakter Flughafen mit schnellen Shuttle-Verbindungen nach San Pedro.",
+      "timezone": "America/Santiago",
+      "category": [
+        "Airport"
+      ],
+      "rating": 4.1,
+      "reviewCount": 8230,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1502920917128-1aa500764b43?w=600&auto=format&fit=crop",
+          "caption": "Terminalgebäude in Calama",
+          "credit": "Rafael Lopez",
+          "license": "Unsplash License"
+        }
+      ],
+      "contact": {
+        "phone": "+56 55 273 1400"
+      },
+      "services": {
+        "transport": [
+          "Shuttle Transvip",
+          "Car-Rental"
+        ],
+        "amenities": [
+          "Cafés",
+          "ATM"
+        ]
+      }
+    },
+    {
+      "id": "san-pedro",
+      "name": "San Pedro de Atacama",
+      "type": "town",
+      "coordinates": {
+        "lat": -22.911,
+        "lng": -68.203
+      },
+      "popularFor": [
+        "Touren ins Valle de la Luna",
+        "Geysire del Tatio"
+      ],
+      "tips": [
+        "Tourtickets mindestens einen Tag vorher sichern."
+      ],
+      "description": "Wüstenoase mit Adobe-Häusern, Observatorien und Ausgangspunkt für Atacama-Exkursionen.",
+      "timezone": "America/Santiago",
+      "category": [
+        "Town",
+        "Gateway"
+      ],
+      "rating": 4.6,
+      "reviewCount": 17890,
+      "address": {
+        "street": "Caracoles 360",
+        "city": "San Pedro de Atacama",
+        "country": "Chile"
+      },
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600&auto=format&fit=crop",
+          "caption": "Adobe-Gassen in San Pedro",
+          "credit": "Felipe Pizarro",
+          "license": "Unsplash License"
+        }
+      ],
+      "contact": {
+        "instagram": "https://www.instagram.com/sanpedrochile/"
+      },
+      "services": {
+        "amenities": [
+          "Tourbüros",
+          "Bike-Verleih",
+          "Apotheken"
+        ]
+      }
+    },
+    {
+      "id": "valle-luna",
+      "name": "Valle de la Luna",
+      "type": "trail",
+      "coordinates": {
+        "lat": -23.071,
+        "lng": -68.308
+      },
+      "openingHours": "09:00–17:00",
+      "description": "Mondlandschaft im Reserva Nacional Los Flamencos mit Dünen und Salzformationen.",
+      "timezone": "America/Santiago",
+      "category": [
+        "Nature Reserve"
+      ],
+      "rating": 4.8,
+      "reviewCount": 20110,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=600&auto=format&fit=crop",
+          "caption": "Sanddünen im Valle de la Luna",
+          "credit": "Pablo Garcia",
+          "license": "Unsplash License"
+        }
+      ],
+      "knowledge": {
+        "bestTime": "Sunset Slots begrenzt – Ticket vorab sichern.",
+        "gear": "Windjacke und Stirnlampe für späten Rückweg einpacken."
+      }
+    },
+    {
+      "id": "santiago-center",
+      "name": "Santiago – Barrio Lastarria",
+      "type": "poi",
+      "coordinates": {
+        "lat": -33.439,
+        "lng": -70.644
+      },
+      "popularFor": [
+        "Museen",
+        "Food Market"
+      ],
+      "description": "Kulturviertel Lastarria mit Museen, Bars und dem GAM Kulturzentrum.",
+      "timezone": "America/Santiago",
+      "category": [
+        "Neighborhood",
+        "Culture"
+      ],
+      "rating": 4.7,
+      "reviewCount": 30100,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1544984243-ec57ea16fe25?w=600&auto=format&fit=crop",
+          "caption": "Abendstimmung im Barrio Lastarria",
+          "credit": "Sebastian Sarria",
+          "license": "Unsplash License"
+        }
+      ],
+      "contact": {
+        "instagram": "https://www.instagram.com/lastarria_santiago/"
+      },
+      "services": {
+        "amenities": [
+          "Museo de Bellas Artes",
+          "Mercado Lastarria",
+          "E-Bike Sharing"
+        ]
+      }
+    }
+  ],
+  "segments": [
+    {
+      "from": "scl-airport",
+      "to": "valparaiso-center",
+      "mode": "bus",
+      "distanceKm": 120,
+      "durationMinutes": 110,
+      "price": 9,
+      "id": "var2-seg-01",
+      "operator": "Fernbus",
+      "frequency": "stündlich",
+      "bookingUrl": "https://www.recorrido.cl",
+      "luggagePolicy": "2 x 23 kg im Gepäckraum + Handgepäck",
+      "seatInfo": "Semi-Cama Sitze mit USB und Heizung",
+      "carbonKg": 6.0
+    },
+    {
+      "from": "scl-airport",
+      "to": "punta-arenas-airport",
+      "mode": "flight",
+      "distanceKm": 2180,
+      "durationMinutes": 195,
+      "price": 320,
+      "id": "var2-seg-02",
+      "operator": "Inlandsflug",
+      "frequency": "täglich",
+      "bookingUrl": "https://www.latamairlines.com/",
+      "seatInfo": "Fensterplätze für Landschaftsblick empfohlen",
+      "carbonKg": 621.3
+    },
+    {
+      "from": "punta-arenas-airport",
+      "to": "puerto-natales",
+      "mode": "bus",
+      "distanceKm": 250,
+      "durationMinutes": 190,
+      "price": 12,
+      "id": "var2-seg-03",
+      "operator": "Bus Sur",
+      "frequency": "3 x täglich",
+      "bookingUrl": "https://www.recorrido.cl",
+      "luggagePolicy": "2 x 23 kg im Gepäckraum + Handgepäck",
+      "seatInfo": "Semi-Cama Sitze mit USB und Heizung",
+      "notes": "Zwischenstopp in Villa Tehuelches.",
+      "carbonKg": 12.5
+    },
+    {
+      "from": "puerto-natales",
+      "to": "torres-base",
+      "mode": "bus",
+      "distanceKm": 146,
+      "durationMinutes": 150,
+      "price": 18,
+      "id": "var2-seg-04",
+      "operator": "Vans Torres",
+      "frequency": "täglich 07:00 & 14:00",
+      "bookingUrl": "https://www.recorrido.cl",
+      "luggagePolicy": "2 x 23 kg im Gepäckraum + Handgepäck",
+      "seatInfo": "Semi-Cama Sitze mit USB und Heizung",
+      "notes": "Ticket enthält Parkeintritt Laguna Amarga nicht – separat kaufen.",
+      "carbonKg": 7.3
+    },
+    {
+      "from": "punta-arenas-airport",
+      "to": "cjc-airport",
+      "mode": "flight",
+      "distanceKm": 3620,
+      "durationMinutes": 320,
+      "price": 480,
+      "id": "var2-seg-05",
+      "operator": "Sky Airline",
+      "frequency": "täglich",
+      "bookingUrl": "https://www.latamairlines.com/",
+      "seatInfo": "Fensterplätze für Landschaftsblick empfohlen",
+      "notes": "Sitzplätze mittig mit bester Beinfreiheit (Exit Row).",
+      "carbonKg": 1031.7
+    },
+    {
+      "from": "cjc-airport",
+      "to": "san-pedro",
+      "mode": "bus",
+      "distanceKm": 105,
+      "durationMinutes": 90,
+      "price": 12,
+      "id": "var2-seg-06",
+      "operator": "Transvip Shuttle",
+      "frequency": "alle 30 Minuten",
+      "bookingUrl": "https://www.recorrido.cl",
+      "luggagePolicy": "2 x 23 kg im Gepäckraum + Handgepäck",
+      "seatInfo": "Semi-Cama Sitze mit USB und Heizung",
+      "notes": "Stopps in allen Hotels möglich, Klimaanlage kräftig.",
+      "carbonKg": 5.25
+    },
+    {
+      "from": "san-pedro",
+      "to": "valle-luna",
+      "mode": "drive",
+      "distanceKm": 13,
+      "durationMinutes": 25,
+      "price": 18,
+      "id": "var2-seg-07",
+      "operator": "Geführter Tourvan",
+      "frequency": "flexibel",
+      "bookingUrl": "https://www.kayak.com/cars",
+      "recommendedVehicle": "SUV oder Mittelklasse",
+      "tollInfo": "Maut via TAG-Pass oder Barzahlung, Tankstellen alle 80 km",
+      "notes": "Eintrittstickets werden vom Guide organisiert.",
+      "carbonKg": 2.5
+    },
+    {
+      "from": "cjc-airport",
+      "to": "santiago-center",
+      "mode": "flight",
+      "distanceKm": 1220,
+      "durationMinutes": 120,
+      "price": 160,
+      "id": "var2-seg-08",
+      "operator": "Inlandsflug",
+      "frequency": "täglich",
+      "bookingUrl": "https://www.latamairlines.com/",
+      "seatInfo": "Fensterplätze für Landschaftsblick empfohlen",
+      "carbonKg": 347.7
+    }
+  ],
+  "flights": [
+    {
+      "id": "flight-scl-puq",
+      "fromStopId": "scl-airport",
+      "toStopId": "punta-arenas-airport",
+      "airline": "LATAM",
+      "flightNumber": "LA285",
+      "departure": "2025-01-05T07:20:00-03:00",
+      "arrival": "2025-01-05T10:35:00-03:00",
+      "durationMinutes": 195,
+      "price": 320,
+      "currency": "EUR",
+      "aircraft": "Airbus A321",
+      "cabinClass": "Economy",
+      "baggage": {
+        "carryOn": "8 kg",
+        "checked": "1 x 23 kg"
+      },
+      "checkIn": "Sicherheitskontrolle Terminal 1, Boarding startet 35 Minuten vor Abflug.",
+      "fromTerminal": "SCL T1",
+      "toTerminal": "PUQ",
+      "notes": "Sitz links für Torres-del-Paine-Blicke beim Landeanflug wählen.",
+      "fareClasses": [
+        "Promo",
+        "Plus",
+        "Premium"
+      ],
+      "onTimePerformance": "83%",
+      "seatInfo": "Fensterplätze für Landschaftsblick empfohlen",
+      "distanceKm": 2180.0,
+      "carbonKg": 621.3
+    },
+    {
+      "id": "flight-puq-cjc",
+      "fromStopId": "punta-arenas-airport",
+      "toStopId": "cjc-airport",
+      "airline": "Sky Airline",
+      "flightNumber": "H520",
+      "departure": "2025-01-11T12:00:00-03:00",
+      "arrival": "2025-01-11T17:20:00-03:00",
+      "durationMinutes": 320,
+      "price": 480,
+      "currency": "EUR",
+      "aircraft": "Airbus A320neo",
+      "cabinClass": "Economy",
+      "baggage": {
+        "carryOn": "10 kg",
+        "checked": "1 x 23 kg"
+      },
+      "checkIn": "Check-in öffnet 2 h vor Abflug, Transfer zwischen Terminals in SCL beachten.",
+      "fromTerminal": "PUQ",
+      "toTerminal": "CJC",
+      "notes": "Snacks an Bord optional kaufbar, Klimaanlage an Bord kräftig.",
+      "fareClasses": [
+        "Zero",
+        "Plus"
+      ],
+      "onTimePerformance": "78%",
+      "seatInfo": "Fensterplätze für Landschaftsblick empfohlen",
+      "distanceKm": 3620.0,
+      "carbonKg": 1031.7
+    },
+    {
+      "id": "flight-cjc-scl-final",
+      "fromStopId": "cjc-airport",
+      "toStopId": "scl-airport",
+      "airline": "LATAM",
+      "flightNumber": "LA329",
+      "departure": "2025-01-17T18:40:00-03:00",
+      "arrival": "2025-01-17T20:45:00-03:00",
+      "durationMinutes": 125,
+      "price": 160,
+      "currency": "EUR",
+      "aircraft": "Airbus A320",
+      "cabinClass": "Economy",
+      "baggage": {
+        "carryOn": "8 kg",
+        "checked": "1 x 23 kg"
+      },
+      "checkIn": "Self-Bag-Drop verfügbar, Boarding nach Gruppen.",
+      "fromTerminal": "CJC",
+      "toTerminal": "SCL T1",
+      "notes": "Kurzer Flug – Snacks in der Lounge vorher einplanen.",
+      "fareClasses": [
+        "Light",
+        "Plus"
+      ],
+      "onTimePerformance": "88%",
+      "seatInfo": "Fensterplätze für Landschaftsblick empfohlen",
+      "distanceKm": 1225.3,
+      "carbonKg": 349.22
+    }
+  ],
+  "lodging": [
+    {
+      "name": "Hotel Cabo de Hornos",
+      "stopId": "punta-arenas-airport",
+      "checkIn": "2025-01-05",
+      "checkOut": "2025-01-06",
+      "website": "https://www.hotelcabodehornos.com",
+      "pricePerNight": 140,
+      "currency": "EUR",
+      "address": "Plaza Muñoz Gamero 1025, Punta Arenas",
+      "contact": {
+        "phone": "+56 61 271 5000",
+        "email": "reservas@cabodehornos.cl"
+      },
+      "amenities": [
+        "Patagonische Küche",
+        "Fitnessstudio",
+        "Bibliothek"
+      ],
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1551888419-7f0c0f5fbac1?w=600&auto=format&fit=crop",
+          "caption": "Lobby im Hotel Cabo de Hornos",
+          "credit": "Roberto Nickson",
+          "license": "Unsplash License"
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 1540,
+      "checkInWindow": "15:00–23:30",
+      "checkOutWindow": "bis 12:00",
+      "roomHighlights": [
+        "Blick auf die Magellanstraße"
+      ],
+      "nights": 1
+    },
+    {
+      "name": "Hotel Lago Grey",
+      "stopId": "torres-base",
+      "checkIn": "2025-01-06",
+      "checkOut": "2025-01-09",
+      "website": "https://www.lagogrey.com",
+      "pricePerNight": 260,
+      "currency": "EUR",
+      "address": "Sector Lago Grey, Torres del Paine",
+      "contact": {
+        "phone": "+56 61 241 0541",
+        "email": "reservas@lagogrey.com"
+      },
+      "amenities": [
+        "Katamaran-Tour",
+        "Aussichtslounge",
+        "Trails ab Haustür"
+      ],
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=600&auto=format&fit=crop",
+          "caption": "Lodge am Lago Grey",
+          "credit": "Fabrizio Conti",
+          "license": "Unsplash License"
+        }
+      ],
+      "rating": 4.6,
+      "reviewCount": 620,
+      "checkInWindow": "15:00–21:00",
+      "checkOutWindow": "bis 11:00",
+      "roomHighlights": [
+        "Panoramafenster",
+        "Heißwasserflaschen"
+      ],
+      "nights": 3
+    },
+    {
+      "name": "Hotel Noi Casa Atacama",
+      "stopId": "san-pedro",
+      "checkIn": "2025-01-11",
+      "checkOut": "2025-01-15",
+      "website": "https://www.noihotels.com",
+      "pricePerNight": 230,
+      "currency": "EUR",
+      "address": "Tocopilla E-8, San Pedro de Atacama",
+      "contact": {
+        "phone": "+56 55 285 1120",
+        "email": "reservas@noihotels.com"
+      },
+      "amenities": [
+        "Solarbeheizter Pool",
+        "Wellness",
+        "Bike-Verleih"
+      ],
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1470246973918-29a93221c455?w=600&auto=format&fit=crop",
+          "caption": "Poolbereich Hotel Noi",
+          "credit": "Alexandre Pellaes",
+          "license": "Unsplash License"
+        }
+      ],
+      "rating": 4.7,
+      "reviewCount": 980,
+      "checkInWindow": "15:00–22:00",
+      "checkOutWindow": "bis 11:00",
+      "roomHighlights": [
+        "Feuerstellen",
+        "Nachthimmel Deck"
+      ],
+      "nights": 4
+    }
+  ],
+  "food": [
+    {
+      "name": "Damiana Elena",
+      "stopId": "puerto-natales",
+      "type": "Restaurant",
+      "address": "Hermann Eberhard 385, Puerto Natales",
+      "openingHours": "19:00–23:00",
+      "specialties": [
+        "Patagonisches Lamm",
+        "Königskrabbe"
+      ],
+      "priceRange": "€€€",
+      "contact": {
+        "phone": "+56 61 241 3757",
+        "website": "https://www.damianaelena.cl"
+      },
+      "mustTry": [
+        "Centolla",
+        "Patagonisches Lamm"
+      ],
+      "reservation": "Empfohlen 1 Woche im Voraus",
+      "googlePlaceId": "ChIJv4oJLN9b0JUR3gH-6Q4Dzg0",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&auto=format&fit=crop",
+          "caption": "Patagonisches Fine Dining",
+          "credit": "Jay Wennington",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "name": "El Huerto",
+      "stopId": "san-pedro",
+      "type": "Vegetarisch",
+      "address": "Gustavo Le Paige 419, San Pedro",
+      "openingHours": "13:00–22:00",
+      "specialties": [
+        "Quinoa-Burger",
+        "Kaktus-Salat"
+      ],
+      "priceRange": "€€",
+      "contact": {
+        "phone": "+56 55 285 1000",
+        "instagram": "https://www.instagram.com/elhuertospa/"
+      },
+      "mustTry": [
+        "Quinoa Burger",
+        "Atacama Craft Beer"
+      ],
+      "reservation": "Empfohlen für Abendservice",
+      "googlePlaceId": "ChIJq0WX7C02YpYRQ4BP8M0YfQc",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?w=600&auto=format&fit=crop",
+          "caption": "Veggie Bowls im El Huerto",
+          "credit": "Anna Pelzer",
+          "license": "Unsplash License"
+        }
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "title": "Base Torres Trek",
+      "stopId": "torres-base",
+      "durationHours": 9,
+      "operator": "Chile Nativo",
+      "price": 120,
+      "currency": "EUR",
+      "website": "https://chilenativo.com",
+      "meetingPoint": "Puerto Natales 06:30 Uhr",
+      "gear": [
+        "Trekkingstöcke",
+        "Regenschutz",
+        "Lunchpaket"
+      ],
+      "difficulty": "anspruchsvoll",
+      "groupSize": "max. 8 Personen",
+      "included": [
+        "Transport",
+        "Guide",
+        "Erste-Hilfe Set"
+      ],
+      "notes": "700 m Höhenmeter, starke Winde – Handschuhe einpacken."
+    },
+    {
+      "title": "Geysire del Tatio",
+      "stopId": "san-pedro",
+      "durationHours": 7,
+      "operator": "Desert Adventures",
+      "price": 60,
+      "currency": "EUR",
+      "website": "https://www.desertadventure.cl",
+      "meetingPoint": "Hotel Pick-up 04:30 Uhr",
+      "gear": [
+        "Warme Layer",
+        "Mütze",
+        "Badesachen"
+      ],
+      "difficulty": "mittel",
+      "groupSize": "max. 15 Personen",
+      "included": [
+        "Frühstück",
+        "Guide",
+        "Oxygen-Kit"
+      ],
+      "notes": "Höhe 4.300 m – langsame Bewegungen, viel trinken."
+    }
+  ],
+  "notes": "Warme Layer für Patagonien und Höhenanpassung für San Pedro einplanen.",
+  "metrics": {
+    "totalDistanceKm": 7654.0,
+    "estimatedCarbonKg": 2034.2,
+    "segmentCount": 8,
+    "flightCount": 3,
+    "stopCount": 9,
+    "flightCarbonKg": 2002.2,
+    "groundTransportCarbonKg": 32.0,
+    "totalNights": 8,
+    "avgNightlyRate": 230.0,
+    "lodgingCount": 3,
+    "foodCount": 2,
+    "activityCount": 2,
+    "averageDailyBudget": 178.95
+  },
+  "source": "curated"
+}

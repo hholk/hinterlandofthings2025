@@ -1,0 +1,555 @@
+{
+  "id": "var6",
+  "name": "Variante 6 – Kulinarik & Weintäler",
+  "color": "#52fa7c",
+  "tags": [
+    "food",
+    "wine",
+    "culture",
+    "roadtrip"
+  ],
+  "summary": "Genussvoller Roadtrip im Mietwagen zwischen Santiago, den Weintälern und Concepción.",
+  "meta": {
+    "theme": "Roadtrip Wein & Küche",
+    "pace": "gemütlich",
+    "durationDays": 19,
+    "costEstimate": 2500,
+    "highlights": [
+      "Casablanca",
+      "Colchagua",
+      "Concepción"
+    ],
+    "scores": {
+      "budget": 4,
+      "adventure": 2,
+      "relax": 4,
+      "culture": 4
+    }
+  },
+  "costBreakdown": {
+    "currency": "EUR",
+    "items": [
+      {
+        "category": "Degustationen",
+        "estimate": 420,
+        "notes": "Geführte Touren"
+      },
+      {
+        "category": "Unterkünfte",
+        "estimate": 820,
+        "notes": "Boutique Lodges"
+      },
+      {
+        "category": "Transport",
+        "estimate": 310,
+        "notes": "Mietwagen & Fahrer"
+      },
+      {
+        "category": "Food",
+        "estimate": 320,
+        "notes": "Verkostungen & Fine Dining"
+      },
+      {
+        "category": "Workshops",
+        "estimate": 150,
+        "notes": "Cooking Class & Käse"
+      }
+    ]
+  },
+  "stops": [
+    {
+      "id": "santiago-center",
+      "name": "Santiago – Barrio Lastarria",
+      "type": "poi",
+      "coordinates": {
+        "lat": -33.439,
+        "lng": -70.644
+      },
+      "popularFor": [
+        "Museen",
+        "Food Market"
+      ],
+      "description": "Kulturviertel Lastarria mit Museen, Bars und dem GAM Kulturzentrum.",
+      "timezone": "America/Santiago",
+      "category": [
+        "Neighborhood",
+        "Culture"
+      ],
+      "rating": 4.7,
+      "reviewCount": 30100,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1544984243-ec57ea16fe25?w=600&auto=format&fit=crop",
+          "caption": "Abendstimmung im Barrio Lastarria",
+          "credit": "Sebastian Sarria",
+          "license": "Unsplash License"
+        }
+      ],
+      "contact": {
+        "instagram": "https://www.instagram.com/lastarria_santiago/"
+      },
+      "services": {
+        "amenities": [
+          "Museo de Bellas Artes",
+          "Mercado Lastarria",
+          "E-Bike Sharing"
+        ]
+      }
+    },
+    {
+      "id": "valparaiso-center",
+      "name": "Valparaíso – Cerro Alegre",
+      "type": "poi",
+      "coordinates": {
+        "lat": -33.0458,
+        "lng": -71.6197
+      },
+      "city": "Valparaíso",
+      "address": {
+        "street": "Pasaje Gálvez",
+        "city": "Valparaíso",
+        "country": "Chile"
+      },
+      "openingHours": "Immer offen",
+      "popularFor": [
+        "Streetart",
+        "Aufzüge",
+        "Cafés"
+      ],
+      "tips": [
+        "Free-Walking-Tour um 10:00 Uhr am Plaza Sotomayor."
+      ],
+      "description": "Historische Hügel mit Straßenkunst, Boutiquen und Aussicht auf die Bucht.",
+      "timezone": "America/Santiago",
+      "category": [
+        "Historic Quarter",
+        "Viewpoint"
+      ],
+      "rating": 4.7,
+      "reviewCount": 25678,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1526402462922-1e1d481d87fd?w=600&auto=format&fit=crop",
+          "caption": "Bunte Häuser im Cerro Alegre",
+          "credit": "Fabiola Peñailillo",
+          "license": "Unsplash License"
+        }
+      ],
+      "contact": {
+        "instagram": "https://www.instagram.com/visitvalparaiso/"
+      },
+      "services": {
+        "transport": [
+          "Ascensor El Peral",
+          "Trolebus"
+        ],
+        "amenities": [
+          "Galerien",
+          "Cafés",
+          "Aussichtsplattformen"
+        ]
+      },
+      "knowledge": {
+        "bestTime": "Frühmorgens für Fotos ohne Menschenmengen.",
+        "safety": "Nachts in Gruppen unterwegs sein, da Kopfsteinpflaster rutschig werden kann."
+      }
+    },
+    {
+      "id": "santa-cruz",
+      "name": "Santa Cruz – Colchagua",
+      "type": "town",
+      "coordinates": {
+        "lat": -34.6394,
+        "lng": -71.3657
+      },
+      "description": "Weinstadt im Colchagua-Tal mit Museen, Seilbahn und Spitzenweingütern.",
+      "timezone": "America/Santiago",
+      "category": [
+        "Wine",
+        "Town"
+      ],
+      "rating": 4.5,
+      "reviewCount": 7450,
+      "address": {
+        "street": "Plaza de Armas",
+        "city": "Santa Cruz",
+        "country": "Chile"
+      },
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&auto=format&fit=crop",
+          "caption": "Weinberge in Colchagua",
+          "credit": "Thomas Schaefer",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "talca",
+      "name": "Talca – Altos de Lircay",
+      "type": "trail",
+      "coordinates": {
+        "lat": -35.596,
+        "lng": -71.043
+      },
+      "description": "Tor zum Reserva Nacional Altos de Lircay – Wanderparadies mit Araukarien.",
+      "timezone": "America/Santiago",
+      "category": [
+        "Trail",
+        "Nature"
+      ],
+      "rating": 4.6,
+      "reviewCount": 5210,
+      "address": {
+        "street": "Camino Pehuenche km 37",
+        "city": "Talca",
+        "country": "Chile"
+      },
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1458224755287-281747167c72?w=600&auto=format&fit=crop",
+          "caption": "Wälder Altos de Lircay",
+          "credit": "Constanza Hevia",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "concepcion",
+      "name": "Concepción – Mercado Central",
+      "type": "food",
+      "coordinates": {
+        "lat": -36.828,
+        "lng": -73.051
+      },
+      "description": "Universitätsstadt mit Streetfood-Markt, Jazzszene und nächtlichem Leben.",
+      "timezone": "America/Santiago",
+      "category": [
+        "City",
+        "Food"
+      ],
+      "rating": 4.3,
+      "reviewCount": 11800,
+      "address": {
+        "street": "Aníbal Pinto 65",
+        "city": "Concepción",
+        "country": "Chile"
+      },
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1512058564366-c9e1d31714af?w=600&auto=format&fit=crop",
+          "caption": "Mercado in Concepción",
+          "credit": "Eduardo Casajús",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "id": "santiago-center",
+      "name": "Santiago – Barrio Lastarria",
+      "type": "poi",
+      "coordinates": {
+        "lat": -33.439,
+        "lng": -70.644
+      },
+      "popularFor": [
+        "Museen",
+        "Food Market"
+      ],
+      "description": "Kulturviertel Lastarria mit Museen, Bars und dem GAM Kulturzentrum.",
+      "timezone": "America/Santiago",
+      "category": [
+        "Neighborhood",
+        "Culture"
+      ],
+      "rating": 4.7,
+      "reviewCount": 30100,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1544984243-ec57ea16fe25?w=600&auto=format&fit=crop",
+          "caption": "Abendstimmung im Barrio Lastarria",
+          "credit": "Sebastian Sarria",
+          "license": "Unsplash License"
+        }
+      ],
+      "contact": {
+        "instagram": "https://www.instagram.com/lastarria_santiago/"
+      },
+      "services": {
+        "amenities": [
+          "Museo de Bellas Artes",
+          "Mercado Lastarria",
+          "E-Bike Sharing"
+        ]
+      }
+    }
+  ],
+  "segments": [
+    {
+      "from": "santiago-center",
+      "to": "valparaiso-center",
+      "mode": "drive",
+      "distanceKm": 120,
+      "durationMinutes": 110,
+      "price": 20,
+      "id": "var6-seg-01",
+      "operator": "Selbstfahrer",
+      "frequency": "flexibel",
+      "bookingUrl": "https://www.kayak.com/cars",
+      "recommendedVehicle": "SUV oder Mittelklasse",
+      "tollInfo": "Maut via TAG-Pass oder Barzahlung, Tankstellen alle 80 km",
+      "carbonKg": 23.04
+    },
+    {
+      "from": "valparaiso-center",
+      "to": "santa-cruz",
+      "mode": "drive",
+      "distanceKm": 190,
+      "durationMinutes": 180,
+      "price": 32,
+      "id": "var6-seg-02",
+      "operator": "Selbstfahrer",
+      "frequency": "flexibel",
+      "bookingUrl": "https://www.kayak.com/cars",
+      "recommendedVehicle": "SUV oder Mittelklasse",
+      "tollInfo": "Maut via TAG-Pass oder Barzahlung, Tankstellen alle 80 km",
+      "carbonKg": 36.48
+    },
+    {
+      "from": "santa-cruz",
+      "to": "talca",
+      "mode": "drive",
+      "distanceKm": 120,
+      "durationMinutes": 110,
+      "price": 18,
+      "id": "var6-seg-03",
+      "operator": "Selbstfahrer",
+      "frequency": "flexibel",
+      "bookingUrl": "https://www.kayak.com/cars",
+      "recommendedVehicle": "SUV oder Mittelklasse",
+      "tollInfo": "Maut via TAG-Pass oder Barzahlung, Tankstellen alle 80 km",
+      "carbonKg": 23.04
+    },
+    {
+      "from": "talca",
+      "to": "concepcion",
+      "mode": "drive",
+      "distanceKm": 210,
+      "durationMinutes": 180,
+      "price": 28,
+      "id": "var6-seg-04",
+      "operator": "Selbstfahrer",
+      "frequency": "flexibel",
+      "bookingUrl": "https://www.kayak.com/cars",
+      "recommendedVehicle": "SUV oder Mittelklasse",
+      "tollInfo": "Maut via TAG-Pass oder Barzahlung, Tankstellen alle 80 km",
+      "carbonKg": 40.32
+    },
+    {
+      "from": "concepcion",
+      "to": "santiago-center",
+      "mode": "bus",
+      "distanceKm": 500,
+      "durationMinutes": 320,
+      "price": 17,
+      "id": "var6-seg-05",
+      "operator": "Fernbus",
+      "frequency": "stündlich",
+      "bookingUrl": "https://www.recorrido.cl",
+      "luggagePolicy": "2 x 23 kg im Gepäckraum + Handgepäck",
+      "seatInfo": "Semi-Cama Sitze mit USB und Heizung",
+      "carbonKg": 25.0
+    }
+  ],
+  "flights": [],
+  "lodging": [
+    {
+      "name": "La Casona Matetic",
+      "stopId": "valparaiso-center",
+      "checkIn": "2025-01-04",
+      "checkOut": "2025-01-06",
+      "website": "https://www.matetic.com",
+      "pricePerNight": 210,
+      "currency": "EUR",
+      "address": "Fundo El Rosario km 18, San Antonio",
+      "contact": {
+        "phone": "+56 2 2964 7800",
+        "email": "reservas@matetic.com"
+      },
+      "amenities": [
+        "Kolonialvilla",
+        "Weinverkostungen",
+        "Pool"
+      ],
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1542318428-29f26af1ff86?w=600&auto=format&fit=crop",
+          "caption": "Herrenhaus La Casona",
+          "credit": "William Moreland",
+          "license": "Unsplash License"
+        }
+      ],
+      "rating": 4.8,
+      "reviewCount": 350,
+      "checkInWindow": "14:00–20:00",
+      "checkOutWindow": "bis 12:00",
+      "roomHighlights": [
+        "Veranda",
+        "Antike Möbel"
+      ],
+      "nights": 2
+    },
+    {
+      "name": "Clos Apalta Residence",
+      "stopId": "santa-cruz",
+      "checkIn": "2025-01-06",
+      "checkOut": "2025-01-09",
+      "website": "https://www.closapalta.cl",
+      "pricePerNight": 260,
+      "currency": "EUR",
+      "address": "Camino Apalta km 4.5, Santa Cruz",
+      "contact": {
+        "phone": "+56 72 295 9000",
+        "email": "reservas@lapostolle.com"
+      },
+      "amenities": [
+        "Infinity Pool",
+        "Private Butler",
+        "Degustationsmenüs"
+      ],
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&auto=format&fit=crop",
+          "caption": "Villa in den Weinbergen",
+          "credit": "Tanya Pro",
+          "license": "Unsplash License"
+        }
+      ],
+      "rating": 4.9,
+      "reviewCount": 220,
+      "checkInWindow": "15:00–19:00",
+      "checkOutWindow": "bis 12:00",
+      "roomHighlights": [
+        "Panoramablick",
+        "Privater Whirlpool"
+      ],
+      "nights": 3
+    }
+  ],
+  "food": [
+    {
+      "name": "Bocanáriz Wine Bar",
+      "stopId": "santiago-center",
+      "type": "Wine Bar",
+      "address": "Lastarria 276, Santiago",
+      "openingHours": "12:00–00:00",
+      "specialties": [
+        "Flight Degustationen",
+        "Tapas"
+      ],
+      "priceRange": "€€€",
+      "contact": {
+        "phone": "+56 2 2638 9893",
+        "instagram": "https://www.instagram.com/bocanariz/"
+      },
+      "mustTry": [
+        "Wine Flight Tierra de Chile",
+        "Merquén Crostini"
+      ],
+      "reservation": "Empfohlen für Abendservice",
+      "googlePlaceId": "ChIJ8Qj4b2VZYpYR7mxzXIv2qx4",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&auto=format&fit=crop",
+          "caption": "Wine Pairing bei Bocanáriz",
+          "credit": "Thomas Schaefer",
+          "license": "Unsplash License"
+        }
+      ]
+    },
+    {
+      "name": "Fabrica de Cecinas Fischer",
+      "stopId": "concepcion",
+      "type": "Delikatessen",
+      "openingHours": "09:00–19:00",
+      "specialties": [
+        "Charcuterie",
+        "Käse"
+      ],
+      "priceRange": "€€",
+      "mustTry": [
+        "Fischer Wurstplatte",
+        "Kräuter-Käse"
+      ],
+      "reservation": "Nicht nötig",
+      "googlePlaceId": "ChIJyUR2uM7CYpYR7bHimoMuquI",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1484981184820-2e84ea0b2700?w=600&auto=format&fit=crop",
+          "caption": "Delikatessenladen",
+          "credit": "Jakub Kapusnak",
+          "license": "Unsplash License"
+        }
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "title": "Weinverkostung Casa del Bosque",
+      "stopId": "valparaiso-center",
+      "durationHours": 4,
+      "operator": "Casa del Bosque",
+      "price": 65,
+      "currency": "EUR",
+      "website": "https://www.casadelbosque.cl",
+      "meetingPoint": "Weingut Empfang 11:00 Uhr",
+      "gear": [
+        "Bequeme Kleidung"
+      ],
+      "difficulty": "leicht",
+      "groupSize": "max. 12 Personen",
+      "included": [
+        "Kellerführung",
+        "4 Weine",
+        "Käseplatte"
+      ],
+      "notes": "Fahrer:in sollte verzichten – Shuttle buchbar."
+    },
+    {
+      "title": "Chilenischer Kochkurs",
+      "stopId": "santa-cruz",
+      "durationHours": 3,
+      "operator": "Rayuela Wine & Grill",
+      "price": 85,
+      "currency": "EUR",
+      "website": "https://www.culinariachile.cl",
+      "meetingPoint": "La Serena Markt 10:00 Uhr",
+      "gear": [
+        "Schürze"
+      ],
+      "difficulty": "leicht",
+      "groupSize": "max. 8 Personen",
+      "included": [
+        "Einkauf am Markt",
+        "Kochkurs",
+        "Rezepte"
+      ],
+      "notes": "Vegetarische Optionen verfügbar."
+    }
+  ],
+  "notes": "Fahrerwechsel einplanen, damit Verkostungen entspannt bleiben.",
+  "metrics": {
+    "totalDistanceKm": 1140.0,
+    "estimatedCarbonKg": 147.9,
+    "segmentCount": 5,
+    "flightCount": 0,
+    "stopCount": 6,
+    "totalNights": 5,
+    "avgNightlyRate": 240.0,
+    "lodgingCount": 2,
+    "foodCount": 2,
+    "activityCount": 2,
+    "averageDailyBudget": 131.58
+  },
+  "source": "curated"
+}

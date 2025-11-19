@@ -1,0 +1,710 @@
+{
+  "id": "var4",
+  "name": "Variante 4 – Flugreise Instagram-Hotspots",
+  "color": "#c792ea",
+  "tags": [
+    "photography",
+    "adventure",
+    "culture",
+    "flight"
+  ],
+  "summary": "Flüge verbinden die fotogensten Orte Chiles für Sunrise-Shoots von Rapa Nui bis Patagonien.",
+  "meta": {
+    "theme": "Flugreise IG-Hotspots",
+    "pace": "zügig",
+    "durationDays": 19,
+    "costEstimate": 3600,
+    "highlights": [
+      "Ahu Tongariki",
+      "Base Torres",
+      "Valle de la Luna"
+    ],
+    "scores": {
+      "budget": 2,
+      "adventure": 3,
+      "relax": 2,
+      "culture": 3
+    }
+  },
+  "costBreakdown": {
+    "currency": "EUR",
+    "items": [
+      {
+        "category": "Flüge",
+        "estimate": 1900,
+        "notes": "Mehrere Inlandsflüge"
+      },
+      {
+        "category": "Unterkünfte",
+        "estimate": 900,
+        "notes": "Fotofreundliche Hotels"
+      },
+      {
+        "category": "Guides",
+        "estimate": 320,
+        "notes": "Foto-Guides & Permits"
+      },
+      {
+        "category": "Transport",
+        "estimate": 220,
+        "notes": "Private Transfers"
+      },
+      {
+        "category": "Food",
+        "estimate": 180,
+        "notes": "Snacks & Cafés"
+      }
+    ]
+  },
+  "stops": [
+    {
+      "id": "santiago-center",
+      "name": "Santiago – Barrio Lastarria",
+      "type": "poi",
+      "coordinates": {
+        "lat": -33.439,
+        "lng": -70.644
+      },
+      "popularFor": [
+        "Museen",
+        "Food Market"
+      ],
+      "description": "Kulturviertel Lastarria mit Museen, Bars und dem GAM Kulturzentrum.",
+      "timezone": "America/Santiago",
+      "category": [
+        "Neighborhood",
+        "Culture"
+      ],
+      "rating": 4.7,
+      "reviewCount": 30100,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1544984243-ec57ea16fe25?w=600&auto=format&fit=crop",
+          "caption": "Abendstimmung im Barrio Lastarria",
+          "credit": "Sebastian Sarria",
+          "license": "Unsplash License"
+        }
+      ],
+      "contact": {
+        "instagram": "https://www.instagram.com/lastarria_santiago/"
+      },
+      "services": {
+        "amenities": [
+          "Museo de Bellas Artes",
+          "Mercado Lastarria",
+          "E-Bike Sharing"
+        ]
+      }
+    },
+    {
+      "id": "valparaiso-center",
+      "name": "Valparaíso – Cerro Alegre",
+      "type": "poi",
+      "coordinates": {
+        "lat": -33.0458,
+        "lng": -71.6197
+      },
+      "city": "Valparaíso",
+      "address": {
+        "street": "Pasaje Gálvez",
+        "city": "Valparaíso",
+        "country": "Chile"
+      },
+      "openingHours": "Immer offen",
+      "popularFor": [
+        "Streetart",
+        "Aufzüge",
+        "Cafés"
+      ],
+      "tips": [
+        "Free-Walking-Tour um 10:00 Uhr am Plaza Sotomayor."
+      ],
+      "description": "Historische Hügel mit Straßenkunst, Boutiquen und Aussicht auf die Bucht.",
+      "timezone": "America/Santiago",
+      "category": [
+        "Historic Quarter",
+        "Viewpoint"
+      ],
+      "rating": 4.7,
+      "reviewCount": 25678,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1526402462922-1e1d481d87fd?w=600&auto=format&fit=crop",
+          "caption": "Bunte Häuser im Cerro Alegre",
+          "credit": "Fabiola Peñailillo",
+          "license": "Unsplash License"
+        }
+      ],
+      "contact": {
+        "instagram": "https://www.instagram.com/visitvalparaiso/"
+      },
+      "services": {
+        "transport": [
+          "Ascensor El Peral",
+          "Trolebus"
+        ],
+        "amenities": [
+          "Galerien",
+          "Cafés",
+          "Aussichtsplattformen"
+        ]
+      },
+      "knowledge": {
+        "bestTime": "Frühmorgens für Fotos ohne Menschenmengen.",
+        "safety": "Nachts in Gruppen unterwegs sein, da Kopfsteinpflaster rutschig werden kann."
+      }
+    },
+    {
+      "id": "valle-luna",
+      "name": "Valle de la Luna",
+      "type": "trail",
+      "coordinates": {
+        "lat": -23.071,
+        "lng": -68.308
+      },
+      "openingHours": "09:00–17:00",
+      "description": "Mondlandschaft im Reserva Nacional Los Flamencos mit Dünen und Salzformationen.",
+      "timezone": "America/Santiago",
+      "category": [
+        "Nature Reserve"
+      ],
+      "rating": 4.8,
+      "reviewCount": 20110,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=600&auto=format&fit=crop",
+          "caption": "Sanddünen im Valle de la Luna",
+          "credit": "Pablo Garcia",
+          "license": "Unsplash License"
+        }
+      ],
+      "knowledge": {
+        "bestTime": "Sunset Slots begrenzt – Ticket vorab sichern.",
+        "gear": "Windjacke und Stirnlampe für späten Rückweg einpacken."
+      }
+    },
+    {
+      "id": "torres-base",
+      "name": "Torres del Paine – Base Torres",
+      "type": "trail",
+      "coordinates": {
+        "lat": -50.9741,
+        "lng": -72.8472
+      },
+      "openingHours": "06:00–20:00",
+      "description": "Legendärer Aussichtspunkt in Torres del Paine nach steilem Tagesmarsch.",
+      "timezone": "America/Punta_Arenas",
+      "category": [
+        "Trail",
+        "National Park"
+      ],
+      "rating": 5.0,
+      "reviewCount": 15420,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1528892952291-009c663ce843?w=600&auto=format&fit=crop",
+          "caption": "Laguna am Base de las Torres",
+          "credit": "Diego Jimenez",
+          "license": "Unsplash License"
+        }
+      ],
+      "knowledge": {
+        "gear": "Trekkingstöcke und Regenjacke obligatorisch – Wetterumschwünge häufig.",
+        "permits": "Parkeintritt vorab online bezahlen, Ticket bei Laguna Amarga vorzeigen."
+      }
+    },
+    {
+      "id": "ipc-airport",
+      "name": "Mataveri International Airport (IPC)",
+      "type": "airport",
+      "coordinates": {
+        "lat": -27.1648,
+        "lng": -109.4216
+      },
+      "city": "Hanga Roa",
+      "openingHours": "06:00–22:00",
+      "website": "https://www.deachile.cl/aeropuerto-rapa-nui",
+      "description": "Abgeschiedener Insel-Airport auf Rapa Nui mit einer der längsten Pisten im Pazifik.",
+      "timezone": "Pacific/Easter",
+      "category": [
+        "Airport",
+        "Island"
+      ],
+      "rating": 4.4,
+      "reviewCount": 4120,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1533929736458-ca588d08c8be?w=600&auto=format&fit=crop",
+          "caption": "Anflug auf Rapa Nui",
+          "credit": "Colton Jones",
+          "license": "Unsplash License"
+        }
+      ],
+      "contact": {
+        "phone": "+56 32 210 0255",
+        "instagram": "https://www.instagram.com/rapanuitravel/"
+      },
+      "services": {
+        "transport": [
+          "Taxi Collectivo",
+          "Hotel-Shuttle"
+        ],
+        "amenities": [
+          "Souvenirshops",
+          "Tourdesk"
+        ]
+      }
+    },
+    {
+      "id": "rano-raraku",
+      "name": "Rano Raraku Vulkan",
+      "type": "trail",
+      "coordinates": {
+        "lat": -27.1251,
+        "lng": -109.2798
+      },
+      "openingHours": "09:00–18:00",
+      "website": "https://www.gob.cl/rapanui",
+      "tips": [
+        "Sonnenhut & Wasser mitnehmen."
+      ],
+      "description": "Vulkanischer Steinbruch, aus dem die Moai gefertigt wurden – UNESCO-Weltkulturerbe.",
+      "timezone": "Pacific/Easter",
+      "category": [
+        "Archaeological Site"
+      ],
+      "rating": 4.9,
+      "reviewCount": 12650,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1516959512124-903c2e1f4f99?w=600&auto=format&fit=crop",
+          "caption": "Moai am Rano Raraku",
+          "credit": "Marcelo Cidrack",
+          "license": "Unsplash License"
+        }
+      ],
+      "knowledge": {
+        "bestTime": "Kurz vor Schließung für warmes Licht und weniger Besucher.",
+        "tickets": "Nationalparkpass online kaufen und Personalausweis mitführen."
+      }
+    },
+    {
+      "id": "pichilemu",
+      "name": "Pichilemu Zentrum",
+      "type": "town",
+      "coordinates": {
+        "lat": -34.3866,
+        "lng": -72.0062
+      },
+      "popularFor": [
+        "Surfen",
+        "Strandcafés"
+      ],
+      "description": "Chiles Surf-Hauptstadt mit entspannter Atmosphäre, Hostels und Craft-Coffee.",
+      "timezone": "America/Santiago",
+      "category": [
+        "Surf Town"
+      ],
+      "rating": 4.6,
+      "reviewCount": 13620,
+      "address": {
+        "street": "Avenida Ortúzar 151",
+        "city": "Pichilemu",
+        "country": "Chile"
+      },
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1526481280695-3c469928b67b?w=600&auto=format&fit=crop",
+          "caption": "Boardwalk in Pichilemu",
+          "credit": "Matías Silva",
+          "license": "Unsplash License"
+        }
+      ],
+      "services": {
+        "amenities": [
+          "Surfshops",
+          "Yoga Studios",
+          "Coworking"
+        ]
+      }
+    },
+    {
+      "id": "punta-lobos",
+      "name": "Punta de Lobos",
+      "type": "trail",
+      "coordinates": {
+        "lat": -34.4028,
+        "lng": -72.0279
+      },
+      "popularFor": [
+        "Wellenreiten",
+        "Aussichtspunkt"
+      ],
+      "description": "Legendärer Point Break südlich von Pichilemu mit Aussichtsklippen.",
+      "timezone": "America/Santiago",
+      "category": [
+        "Surf Spot",
+        "Viewpoint"
+      ],
+      "rating": 4.9,
+      "reviewCount": 8450,
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1470246973918-29a93221c455?w=600&auto=format&fit=crop",
+          "caption": "Wellen am Punta de Lobos",
+          "credit": "Alexandre Pellaes",
+          "license": "Unsplash License"
+        }
+      ],
+      "knowledge": {
+        "bestTime": "Beste Sets im südlichen Winter; im Januar morgens wenig Wind.",
+        "safety": "Abstieg zu den Felsen nur mit festen Schuhen."
+      }
+    }
+  ],
+  "segments": [
+    {
+      "from": "santiago-center",
+      "to": "valparaiso-center",
+      "mode": "bus",
+      "distanceKm": 120,
+      "durationMinutes": 110,
+      "price": 9,
+      "id": "var4-seg-01",
+      "operator": "Fernbus",
+      "frequency": "stündlich",
+      "bookingUrl": "https://www.recorrido.cl",
+      "luggagePolicy": "2 x 23 kg im Gepäckraum + Handgepäck",
+      "seatInfo": "Semi-Cama Sitze mit USB und Heizung",
+      "carbonKg": 6.0
+    },
+    {
+      "from": "santiago-center",
+      "to": "valle-luna",
+      "mode": "flight",
+      "distanceKm": 1220,
+      "durationMinutes": 120,
+      "price": 160,
+      "id": "var4-seg-02",
+      "operator": "Inlandsflug",
+      "frequency": "täglich",
+      "bookingUrl": "https://www.latamairlines.com/",
+      "seatInfo": "Fensterplätze für Landschaftsblick empfohlen",
+      "carbonKg": 347.7
+    },
+    {
+      "from": "valle-luna",
+      "to": "torres-base",
+      "mode": "flight",
+      "distanceKm": 2180,
+      "durationMinutes": 190,
+      "price": 320,
+      "id": "var4-seg-03",
+      "operator": "Inlandsflug",
+      "frequency": "täglich",
+      "bookingUrl": "https://www.latamairlines.com/",
+      "seatInfo": "Fensterplätze für Landschaftsblick empfohlen",
+      "carbonKg": 621.3
+    },
+    {
+      "from": "santiago-center",
+      "to": "ipc-airport",
+      "mode": "flight",
+      "distanceKm": 3750,
+      "durationMinutes": 330,
+      "price": 500,
+      "id": "var4-seg-04",
+      "operator": "Inlandsflug",
+      "frequency": "täglich",
+      "bookingUrl": "https://www.latamairlines.com/",
+      "seatInfo": "Fensterplätze für Landschaftsblick empfohlen",
+      "carbonKg": 1068.75
+    },
+    {
+      "from": "ipc-airport",
+      "to": "rano-raraku",
+      "mode": "drive",
+      "distanceKm": 17,
+      "durationMinutes": 30,
+      "price": 35,
+      "id": "var4-seg-05",
+      "operator": "Hotel Shuttle",
+      "frequency": "flexibel",
+      "bookingUrl": "https://www.kayak.com/cars",
+      "recommendedVehicle": "SUV oder Mittelklasse",
+      "tollInfo": "Maut via TAG-Pass oder Barzahlung, Tankstellen alle 80 km",
+      "notes": "Unbefestigte Straßen – 4x4 empfohlen.",
+      "carbonKg": 3.26
+    },
+    {
+      "from": "santiago-center",
+      "to": "pichilemu",
+      "mode": "bus",
+      "distanceKm": 215,
+      "durationMinutes": 210,
+      "price": 14,
+      "id": "var4-seg-06",
+      "operator": "Fernbus",
+      "frequency": "stündlich",
+      "bookingUrl": "https://www.recorrido.cl",
+      "luggagePolicy": "2 x 23 kg im Gepäckraum + Handgepäck",
+      "seatInfo": "Semi-Cama Sitze mit USB und Heizung",
+      "carbonKg": 10.75
+    },
+    {
+      "from": "pichilemu",
+      "to": "punta-lobos",
+      "mode": "walk",
+      "distanceKm": 4,
+      "durationMinutes": 50,
+      "price": 0,
+      "id": "var4-seg-07",
+      "operator": "Zu Fuß",
+      "frequency": "frei planbar",
+      "bookingUrl": null,
+      "recommendedGear": "Bequeme Wanderschuhe, Sonnen- und Windschutz",
+      "notes": "Küstenweg mit wenig Schatten – Wasser einpacken."
+    }
+  ],
+  "flights": [
+    {
+      "id": "flight-scl-calama",
+      "fromStopId": "santiago-center",
+      "toStopId": "valle-luna",
+      "airline": "LATAM",
+      "flightNumber": "LA330",
+      "departure": "2025-01-05T06:30:00-03:00",
+      "arrival": "2025-01-05T08:35:00-03:00",
+      "durationMinutes": 125,
+      "price": 160,
+      "currency": "EUR",
+      "aircraft": "Airbus A321",
+      "cabinClass": "Economy",
+      "baggage": {
+        "carryOn": "8 kg",
+        "checked": "1 x 23 kg"
+      },
+      "checkIn": "Express-Sicherheitslinie mit Premium-Economy verfügbar.",
+      "fromTerminal": "SCL T1",
+      "toTerminal": "CJC",
+      "notes": "Fensterplätze rechts für Aussicht auf den Atacama-Salar.",
+      "fareClasses": [
+        "Basic",
+        "Plus",
+        "Full"
+      ],
+      "onTimePerformance": "85%",
+      "seatInfo": "Fensterplätze für Landschaftsblick empfohlen",
+      "distanceKm": 1220.0,
+      "carbonKg": 347.7
+    },
+    {
+      "id": "flight-scl-puq",
+      "fromStopId": "santiago-center",
+      "toStopId": "torres-base",
+      "airline": "JetSMART",
+      "flightNumber": "JA117",
+      "departure": "2025-01-10T05:45:00-03:00",
+      "arrival": "2025-01-10T09:20:00-03:00",
+      "durationMinutes": 215,
+      "price": 210,
+      "currency": "EUR",
+      "aircraft": "Airbus A321",
+      "cabinClass": "Economy",
+      "baggage": {
+        "carryOn": "8 kg",
+        "checked": "1 x 23 kg"
+      },
+      "checkIn": "Sicherheitskontrolle Terminal 1, Boarding startet 35 Minuten vor Abflug.",
+      "fromTerminal": "SCL T1",
+      "toTerminal": "PUQ",
+      "notes": "Sitz links für Torres-del-Paine-Blicke beim Landeanflug wählen.",
+      "fareClasses": [
+        "Promo",
+        "Plus",
+        "Premium"
+      ],
+      "onTimePerformance": "83%",
+      "seatInfo": "Fensterplätze für Landschaftsblick empfohlen",
+      "distanceKm": 1958.0,
+      "carbonKg": 558.03
+    },
+    {
+      "id": "flight-scl-rapa",
+      "fromStopId": "santiago-center",
+      "toStopId": "ipc-airport",
+      "airline": "LATAM",
+      "flightNumber": "LA841",
+      "departure": "2025-01-14T08:40:00-03:00",
+      "arrival": "2025-01-14T12:35:00-06:00",
+      "durationMinutes": 295,
+      "price": 500,
+      "currency": "EUR",
+      "aircraft": "Boeing 787-9",
+      "cabinClass": "Economy Plus",
+      "baggage": {
+        "carryOn": "8 kg",
+        "checked": "2 x 23 kg"
+      },
+      "checkIn": "Langstreckenbereich Terminal 2, Boarding ab 60 Minuten vor Abflug.",
+      "fromTerminal": "SCL T2",
+      "toTerminal": "IPC",
+      "notes": "Spezielles Rapa-Nui-Menü an Bord, zwei Mahlzeiten inklusive.",
+      "fareClasses": [
+        "Economy",
+        "Premium Business"
+      ],
+      "onTimePerformance": "82%",
+      "seatInfo": "Fensterplätze für Landschaftsblick empfohlen",
+      "distanceKm": 3750.0,
+      "carbonKg": 1068.75
+    }
+  ],
+  "lodging": [
+    {
+      "name": "Hotel Magnolia",
+      "stopId": "santiago-center",
+      "checkIn": "2025-01-03",
+      "checkOut": "2025-01-05",
+      "website": "https://www.hotelmagnolia.cl",
+      "pricePerNight": 160,
+      "currency": "EUR",
+      "address": "Huérfanos 539, Santiago",
+      "contact": {
+        "phone": "+56 2 2470 7000",
+        "email": "reservas@hotelmagnolia.cl"
+      },
+      "amenities": [
+        "Rooftop Bar",
+        "Bibliothek",
+        "Design Suites"
+      ],
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&auto=format&fit=crop",
+          "caption": "Rooftop des Hotel Magnolia",
+          "credit": "Tanya Pro",
+          "license": "Unsplash License"
+        }
+      ],
+      "rating": 4.7,
+      "reviewCount": 980,
+      "checkInWindow": "15:00–00:00",
+      "checkOutWindow": "bis 12:00",
+      "roomHighlights": [
+        "Designerbad",
+        "Nespresso"
+      ],
+      "nights": 2
+    },
+    {
+      "name": "Explora Atacama",
+      "stopId": "valle-luna",
+      "checkIn": "2025-01-05",
+      "checkOut": "2025-01-08",
+      "website": "https://www.explora.com",
+      "pricePerNight": 520,
+      "currency": "EUR",
+      "address": "Ayllu de Larache s/n, San Pedro",
+      "contact": {
+        "phone": "+56 2 2395 2800",
+        "email": "reservas@explora.com"
+      },
+      "amenities": [
+        "Vollpension",
+        "Observatorium",
+        "Reitställe"
+      ],
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&auto=format&fit=crop",
+          "caption": "Pool der Explora Atacama",
+          "credit": "Thomas Schaefer",
+          "license": "Unsplash License"
+        }
+      ],
+      "rating": 4.9,
+      "reviewCount": 430,
+      "checkInWindow": "15:00–22:00",
+      "checkOutWindow": "bis 12:00",
+      "roomHighlights": [
+        "All-inclusive Guides",
+        "Whirlpools"
+      ],
+      "nights": 3
+    }
+  ],
+  "food": [
+    {
+      "name": "Café Matilde",
+      "stopId": "santiago-center",
+      "type": "Café",
+      "address": "Jose Victorino Lastarria 43, Santiago",
+      "openingHours": "09:00–20:00",
+      "specialties": [
+        "Flat White",
+        "Torta Tres Leches"
+      ],
+      "priceRange": "€€",
+      "contact": {
+        "phone": "+56 2 2632 4456",
+        "instagram": "https://www.instagram.com/cafematilde/"
+      },
+      "mustTry": [
+        "Torta Tres Leches",
+        "Flat White"
+      ],
+      "reservation": "Nicht nötig",
+      "googlePlaceId": "ChIJn8J72VlZYpYR1pRkNvztNF4",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=600&auto=format&fit=crop",
+          "caption": "Kaffee und Kuchen",
+          "credit": "Nathan Dumlao",
+          "license": "Unsplash License"
+        }
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "title": "Sunrise Moai Shooting",
+      "stopId": "rano-raraku",
+      "durationHours": 4,
+      "operator": "Mahinatur",
+      "price": 95,
+      "currency": "EUR",
+      "website": "https://www.mahinatur.cl",
+      "meetingPoint": "Hotel Pick-up 05:00 Uhr",
+      "gear": [
+        "Stativ",
+        "Graufilter"
+      ],
+      "difficulty": "leicht",
+      "groupSize": "max. 6 Personen",
+      "included": [
+        "Privater Guide",
+        "Transfer",
+        "Permit"
+      ],
+      "notes": "Golden Hour am Ahu Tongariki – respektvolle Distanz einhalten."
+    }
+  ],
+  "notes": "Filtersets und Akkus einpacken – viele Sonnenaufgänge.",
+  "metrics": {
+    "totalDistanceKm": 7506.0,
+    "estimatedCarbonKg": 2057.8,
+    "segmentCount": 7,
+    "flightCount": 3,
+    "stopCount": 8,
+    "flightCarbonKg": 1974.5,
+    "groundTransportCarbonKg": 83.3,
+    "totalNights": 5,
+    "avgNightlyRate": 376.0,
+    "lodgingCount": 2,
+    "foodCount": 1,
+    "activityCount": 1,
+    "averageDailyBudget": 189.47
+  },
+  "source": "curated"
+}

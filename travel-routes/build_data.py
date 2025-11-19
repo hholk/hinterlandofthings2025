@@ -2907,6 +2907,53 @@ def main() -> None:
                 "searchTokens": clean_tokens,
             }
         )
+    
+    existing_ids = {item["id"] for item in route_index}
+
+    # Scan for additional JSON files in the routes directory
+    for route_file in route_dir.glob("*.json"):
+        try:
+            content = route_file.read_text(encoding="utf-8")
+            json_data = json.loads(content)
+            
+            # Normalize to list of routes
+            routes_in_file = json_data if isinstance(json_data, list) else [json_data]
+            
+            for route_data in routes_in_file:
+                # Skip if already in index (from hardcoded routes)
+                if route_data.get("id") in existing_ids:
+                    continue
+                    
+                # Add to index
+                tokens = {
+                    route_data.get("name", ""),
+                    route_data.get("summary", ""),
+                }
+                tokens.update(route_data.get("tags", []))
+                tokens.update(stop.get("name", "") for stop in route_data.get("stops", []))
+                tokens.update(food.get("name", "") for food in route_data.get("food", []))
+                tokens.update(activity.get("title", "") for activity in route_data.get("activities", []))
+                tokens.update(flight.get("flightNumber", "") for flight in route_data.get("flights", []))
+                clean_tokens = sorted({token for token in tokens if token})
+                
+                route_index.append(
+                    {
+                        "id": route_data.get("id", route_file.stem),
+                        "file": f"data/routes/{route_file.name}",
+                        "name": route_data.get("name", "Unbenannte Route"),
+                        "summary": route_data.get("summary", ""),
+                        "color": route_data.get("color", "#cccccc"),
+                        "tags": route_data.get("tags", []),
+                        "meta": route_data.get("meta", {}),
+                        "metrics": route_data.get("metrics", {}),
+                        "searchTokens": clean_tokens,
+                    }
+                )
+                existing_ids.add(route_data.get("id"))
+                print(f"Added additional route: {route_data.get('id', route_file.name)}")
+            
+        except Exception as e:
+            print(f"Skipping {route_file.name}: {e}")
 
     poi_candidates = []
     skip_types = {"airport", "bus"}
