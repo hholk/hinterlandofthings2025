@@ -232,7 +232,46 @@
           ]
         }
       ],
-      "hotels": [],
+      "hotels": [
+        {
+          "id": "r5-patagon-backpackers",
+          "name": "Patagon Backpackers",
+          "reviewHighlights": [
+            "Zentral",
+            "Gute Küche",
+            "Sozial"
+          ],
+          "avgNightlyRateEUR": 20,
+          "url": "https://patagonbackpackers.cl",
+          "images": [
+            {
+              "url": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/78901234.jpg?k=0a80570991770704888090909090909090909090909090909090909090909090&o=&hp=1",
+              "caption": "Gemeinschaftsbereich",
+              "credit": "Patagon Backpackers",
+              "license": "All Rights Reserved"
+            }
+          ]
+        },
+        {
+          "id": "r5-alma-patagona",
+          "name": "Alma Patagona Hostel",
+          "reviewHighlights": [
+            "Günstig",
+            "Freundlich",
+            "Sauber"
+          ],
+          "avgNightlyRateEUR": 18,
+          "url": "https://almapatagona.cl",
+          "images": [
+            {
+              "url": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/89012345.jpg?k=0a80570991770704888090909090909090909090909090909090909090909090&o=&hp=1",
+              "caption": "Zimmer",
+              "credit": "Alma Patagona",
+              "license": "All Rights Reserved"
+            }
+          ]
+        }
+      ],
       "mobilityOptions": {
         "nextDrive": {
           "summary": "Mietwagenstart auf der Carretera Austral Richtung Puyuhuapi / Queulat.",
@@ -344,7 +383,46 @@
           ]
         }
       ],
-      "hotels": [],
+      "hotels": [
+        {
+          "id": "r5-hostal-robinson",
+          "name": "Hostal Robinson",
+          "reviewHighlights": [
+            "Familiär",
+            "Gutes Frühstück",
+            "Zentral"
+          ],
+          "avgNightlyRateEUR": 30,
+          "url": "https://hostalrobinson.cl",
+          "images": [
+            {
+              "url": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/90123456.jpg?k=0a80570991770704888090909090909090909090909090909090909090909090&o=&hp=1",
+              "caption": "Außenansicht",
+              "credit": "Hostal Robinson",
+              "license": "All Rights Reserved"
+            }
+          ]
+        },
+        {
+          "id": "r5-eco-wanderlust",
+          "name": "Eco Cabañas Wanderlust",
+          "reviewHighlights": [
+            "Natur pur",
+            "Gemütliche Cabañas",
+            "Ruhe"
+          ],
+          "avgNightlyRateEUR": 40,
+          "url": "https://ecowanderlust.cl",
+          "images": [
+            {
+              "url": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/01234567.jpg?k=0a80570991770704888090909090909090909090909090909090909090909090&o=&hp=1",
+              "caption": "Cabaña im Grünen",
+              "credit": "Eco Wanderlust",
+              "license": "All Rights Reserved"
+            }
+          ]
+        }
+      ],
       "mobilityOptions": {
         "nextDrive": {
           "summary": "Optional Weiterfahrt nach Puyuhuapi (Thermen) oder Rückfahrt nach Coyhaique.",

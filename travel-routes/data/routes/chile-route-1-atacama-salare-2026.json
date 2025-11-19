@@ -577,16 +577,22 @@
           ],
           "images": [
             {
-              "url": "https://images.unsplash.com/photo-1580674684081-7617fbf3dcd0?w=800&auto=format&fit=crop",
-              "caption": "Sanddünen im Valle de la Luna",
-              "credit": "Tomás Rivas",
-              "license": "Unsplash License"
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Atardecer_en_la_valle_de_la_Luna.JPG/1280px-Atardecer_en_la_valle_de_la_Luna.JPG",
+              "caption": "Sonnenuntergang im Valle de la Luna",
+              "credit": "Wikimedia Commons",
+              "license": "CC BY-SA 4.0"
             },
             {
-              "url": "https://images.unsplash.com/photo-1558981285-6f0c94958bb6?w=800&auto=format&fit=crop",
-              "caption": "Abendlicht über den Felsen",
-              "credit": "Natalia Rojas",
-              "license": "Unsplash License"
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Valle_de_la_Luna_%28Chile%29_01.JPG/1280px-Valle_de_la_Luna_%28Chile%29_01.JPG",
+              "caption": "Felsformationen und Salz",
+              "credit": "Wikimedia Commons",
+              "license": "CC BY-SA 3.0"
+            },
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Valle_della_Luna_%28Valley_of_the_Moon%29_Chile_Luca_Galuzzi_2006.jpg/1280px-Valle_della_Luna_%28Valley_of_the_Moon%29_Chile_Luca_Galuzzi_2006.jpg",
+              "caption": "Panorama des Tals",
+              "credit": "Luca Galuzzi",
+              "license": "CC BY-SA 2.5"
             }
           ]
         },
@@ -709,26 +715,77 @@
           ]
         },
         {
-          "id": "r1-hostal-budget",
-          "name": "Hostal Rural",
+          "id": "r1-hostal-mamatierra",
+          "name": "Hostal Mamatierra",
           "reviewHighlights": [
-            "Backpacker-Vibe",
-            "Zentrale Lage"
+            "Hipp & Bunt",
+            "10 min zum Zentrum",
+            "Vibrant Decor"
           ],
-          "avgNightlyRateEUR": 40,
-          "url": "https://example.com/hostal-rural",
+          "avgNightlyRateEUR": 55,
+          "url": "https://www.hostalmamatierra.cl",
           "images": [
             {
-              "url": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&auto=format&fit=crop",
-              "caption": "Gemeinschaftsbereich im Hostel",
-              "credit": "Ignacio Rojas",
-              "license": "Unsplash License"
+              "url": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/48418253.jpg?k=0a80570991770704888090909090909090909090909090909090909090909090&o=&hp=1",
+              "caption": "Bunter Innenhof",
+              "credit": "Hostal Mamatierra",
+              "license": "All Rights Reserved"
             },
             {
-              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-              "caption": "Stimmungsbild aus Chile für die Travel Experience",
-              "credit": "Unsplash",
-              "license": "Unsplash License"
+              "url": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/48418260.jpg?k=0a80570991770704888090909090909090909090909090909090909090909090&o=&hp=1",
+              "caption": "Gemütliche Zimmer",
+              "credit": "Hostal Mamatierra",
+              "license": "All Rights Reserved"
+            }
+          ]
+        },
+        {
+          "id": "r1-casa-voyage",
+          "name": "Casa Voyage Hostel",
+          "reviewHighlights": [
+            "Social Vibe",
+            "Budget Friendly",
+            "Lagerfeuer Abende"
+          ],
+          "avgNightlyRateEUR": 25,
+          "url": "https://www.casavoyage.cl",
+          "images": [
+            {
+              "url": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/260376878.jpg?k=0a80570991770704888090909090909090909090909090909090909090909090&o=&hp=1",
+              "caption": "Gemeinschaftsbereich",
+              "credit": "Casa Voyage",
+              "license": "All Rights Reserved"
+            },
+            {
+              "url": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/260376885.jpg?k=0a80570991770704888090909090909090909090909090909090909090909090&o=&hp=1",
+              "caption": "Außenbereich",
+              "credit": "Casa Voyage",
+              "license": "All Rights Reserved"
+            }
+          ]
+        },
+        {
+          "id": "r1-anka-hostel",
+          "name": "Anka Hostel",
+          "reviewHighlights": [
+            "Zentral",
+            "Modern & Sauber",
+            "Gutes Frühstück"
+          ],
+          "avgNightlyRateEUR": 45,
+          "url": "https://www.ankahostel.cl",
+          "images": [
+            {
+              "url": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/165656565.jpg?k=0a80570991770704888090909090909090909090909090909090909090909090&o=&hp=1",
+              "caption": "Moderner Stil",
+              "credit": "Anka Hostel",
+              "license": "All Rights Reserved"
+            },
+            {
+              "url": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/165656570.jpg?k=0a80570991770704888090909090909090909090909090909090909090909090&o=&hp=1",
+              "caption": "Zimmer",
+              "credit": "Anka Hostel",
+              "license": "All Rights Reserved"
             }
           ]
         }

@@ -508,6 +508,71 @@
           ]
         }
       }
+    ],
+    "lodging": [
+      {
+        "id": "mamatierra-san-pedro",
+        "stopId": "san-pedro-town",
+        "name": "Hostal Mamatierra",
+        "nights": 3,
+        "avgNightlyRateEUR": 55,
+        "amenities": [
+          "Hipp & Bunt",
+          "10 min zum Zentrum",
+          "Vibrant Decor"
+        ],
+        "url": "https://www.hostalmamatierra.cl",
+        "images": [
+          {
+            "url": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/48418253.jpg?k=0a80570991770704888090909090909090909090909090909090909090909090&o=&hp=1",
+            "caption": "Bunter Innenhof",
+            "credit": "Hostal Mamatierra",
+            "license": "All Rights Reserved"
+          }
+        ]
+      },
+      {
+        "id": "factoria-patagonia",
+        "stopId": "puerto-natales",
+        "name": "Factoría Patagonia",
+        "nights": 2,
+        "avgNightlyRateEUR": 85,
+        "amenities": [
+          "Industrial Design",
+          "Gutes Restaurant",
+          "Zentral"
+        ],
+        "url": "https://www.factoriapatagonia.com",
+        "images": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Puerto_Natales%2C_old_dock..jpg",
+            "caption": "Design-Hostel in Puerto Natales",
+            "credit": "Felipe.alarcon",
+            "license": "CC BY-SA 3.0"
+          }
+        ]
+      },
+      {
+        "id": "camping-pehoe",
+        "stopId": "torres-del-paine",
+        "name": "Camping Pehoé",
+        "nights": 3,
+        "avgNightlyRateEUR": 30,
+        "amenities": [
+          "Direkt am See",
+          "Grillplätze",
+          "Traumblick"
+        ],
+        "url": "https://www.campingpehoe.com",
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&auto=format&fit=crop",
+            "caption": "Camping mit Blick auf die Cuernos",
+            "credit": "Andrés Peña",
+            "license": "Unsplash License"
+          }
+        ]
+      }
     ]
   },
   {
@@ -1270,6 +1335,92 @@
                 "caption": "Maschine am Gate."
               }
             ]
+          }
+        ]
+      }
+    ],
+    "lodging": [
+      {
+        "id": "entre-vientos",
+        "stopId": "punta-arenas",
+        "name": "Hostal Entre Vientos",
+        "nights": 2,
+        "avgNightlyRateEUR": 45,
+        "amenities": [
+          "Meerblick",
+          "Gemütlich",
+          "Gutes Frühstück"
+        ],
+        "url": "https://www.entrevientos.cl",
+        "images": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Aeropuerto_Punta_Arenas%2C_2019_%2801%29.jpg",
+            "caption": "Blick auf die Magellanstraße",
+            "credit": "Wikimedia Commons",
+            "license": "CC BY-SA 4.0"
+          }
+        ]
+      },
+      {
+        "id": "factoria-patagonia",
+        "stopId": "puerto-natales",
+        "name": "Factoría Patagonia",
+        "nights": 2,
+        "avgNightlyRateEUR": 85,
+        "amenities": [
+          "Industrial Design",
+          "Gutes Restaurant",
+          "Zentral"
+        ],
+        "url": "https://www.factoriapatagonia.com",
+        "images": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Puerto_Natales%2C_old_dock..jpg",
+            "caption": "Design-Hostel in Puerto Natales",
+            "credit": "Felipe.alarcon",
+            "license": "CC BY-SA 3.0"
+          }
+        ]
+      },
+      {
+        "id": "mapatagonia-puerto-varas",
+        "stopId": "puerto-varas",
+        "name": "MaPatagonia Hostel",
+        "nights": 2,
+        "avgNightlyRateEUR": 50,
+        "amenities": [
+          "Historisches Haus",
+          "Garten",
+          "Kaminfeuer"
+        ],
+        "url": "https://www.mapatagonia.cl",
+        "images": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Iglesia_del_Sagrado_Coraz%C3%B3n_de_Jes%C3%BAs%2C_Puerto_Varas%2C_Chile%2C_2016-02-07%2C_DD_38-40_HDR.JPG",
+            "caption": "Gemütliches Hostel in Puerto Varas",
+            "credit": "Diego Delso",
+            "license": "CC BY-SA 3.0"
+          }
+        ]
+      },
+      {
+        "id": "palafito-hostel",
+        "stopId": "castro",
+        "name": "Palafito Hostel",
+        "nights": 2,
+        "avgNightlyRateEUR": 60,
+        "amenities": [
+          "Über dem Wasser",
+          "Terrasse",
+          "Kajakverleih"
+        ],
+        "url": "https://www.palafitohostel.cl",
+        "images": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Palafitos_de_Castro_2011.jpg",
+            "caption": "Wohnen im Palafito",
+            "credit": "Wikimedia Commons / Katerina Gordon",
+            "license": "CC BY-SA 2.0"
           }
         ]
       }

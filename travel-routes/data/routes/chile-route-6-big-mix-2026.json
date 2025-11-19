@@ -141,7 +141,46 @@
         "mapPoints": []
       },
       "activities": [],
-      "hotels": [],
+      "hotels": [
+        {
+          "id": "r6-hostal-mamatierra",
+          "name": "Hostal Mamatierra",
+          "reviewHighlights": [
+            "Hipp & Bunt",
+            "10 min zum Zentrum",
+            "Vibrant Decor"
+          ],
+          "avgNightlyRateEUR": 55,
+          "url": "https://www.hostalmamatierra.cl",
+          "images": [
+            {
+              "url": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/48418253.jpg?k=0a80570991770704888090909090909090909090909090909090909090909090&o=&hp=1",
+              "caption": "Bunter Innenhof",
+              "credit": "Hostal Mamatierra",
+              "license": "All Rights Reserved"
+            }
+          ]
+        },
+        {
+          "id": "r6-casa-voyage",
+          "name": "Casa Voyage Hostel",
+          "reviewHighlights": [
+            "Social Vibe",
+            "Budget Friendly",
+            "Lagerfeuer Abende"
+          ],
+          "avgNightlyRateEUR": 25,
+          "url": "https://www.casavoyage.cl",
+          "images": [
+            {
+              "url": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/260376878.jpg?k=0a80570991770704888090909090909090909090909090909090909090909090&o=&hp=1",
+              "caption": "Gemeinschaftsbereich",
+              "credit": "Casa Voyage",
+              "license": "All Rights Reserved"
+            }
+          ]
+        }
+      ],
       "mobilityOptions": {}
     },
     {
@@ -175,7 +214,52 @@
         "mapPoints": []
       },
       "activities": [],
-      "hotels": [],
+      "hotels": [
+        {
+          "id": "r6-mapatagonia",
+          "name": "MaPatagonia Hostel",
+          "reviewHighlights": [
+            "Historisches Haus",
+            "Garten & BBQ",
+            "Top Bewertung"
+          ],
+          "avgNightlyRateEUR": 35,
+          "url": "https://mapatagonia.cl",
+          "images": [
+            {
+              "url": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/49786845.jpg?k=0a80570991770704888090909090909090909090909090909090909090909090&o=&hp=1",
+              "caption": "Historische Fassade",
+              "credit": "MaPatagonia",
+              "license": "All Rights Reserved"
+            },
+            {
+              "url": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/49786850.jpg?k=0a80570991770704888090909090909090909090909090909090909090909090&o=&hp=1",
+              "caption": "Gemütlicher Garten",
+              "credit": "MaPatagonia",
+              "license": "All Rights Reserved"
+            }
+          ]
+        },
+        {
+          "id": "r6-casa-apel",
+          "name": "Casa Apel Hostel",
+          "reviewHighlights": [
+            "Laid-back",
+            "Nahe Museum",
+            "Gute Küche"
+          ],
+          "avgNightlyRateEUR": 30,
+          "url": "https://www.casaapel.cl",
+          "images": [
+            {
+              "url": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/123456789.jpg?k=0a80570991770704888090909090909090909090909090909090909090909090&o=&hp=1",
+              "caption": "Gemeinschaftsküche",
+              "credit": "Casa Apel",
+              "license": "All Rights Reserved"
+            }
+          ]
+        }
+      ],
       "mobilityOptions": {}
     },
     {
@@ -209,7 +293,46 @@
         "mapPoints": []
       },
       "activities": [],
-      "hotels": [],
+      "hotels": [
+        {
+          "id": "r6-hostal-po",
+          "name": "Hostal Po",
+          "reviewHighlights": [
+            "Bunt & Künstlerisch",
+            "Zentral",
+            "Rooftop"
+          ],
+          "avgNightlyRateEUR": 20,
+          "url": "https://hostalpo.cl",
+          "images": [
+            {
+              "url": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/56789012.jpg?k=0a80570991770704888090909090909090909090909090909090909090909090&o=&hp=1",
+              "caption": "Kunterbuntes Design",
+              "credit": "Hostal Po",
+              "license": "All Rights Reserved"
+            }
+          ]
+        },
+        {
+          "id": "r6-fauna-hotel",
+          "name": "Fauna Hotel",
+          "reviewHighlights": [
+            "Design-Highlight",
+            "Top Aussicht",
+            "Restaurant & Bar"
+          ],
+          "avgNightlyRateEUR": 110,
+          "url": "https://faunahotel.cl",
+          "images": [
+            {
+              "url": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/98765432.jpg?k=0a80570991770704888090909090909090909090909090909090909090909090&o=&hp=1",
+              "caption": "Terrasse mit Blick",
+              "credit": "Fauna Hotel",
+              "license": "All Rights Reserved"
+            }
+          ]
+        }
+      ],
       "mobilityOptions": {}
     }
   ],

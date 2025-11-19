@@ -441,42 +441,42 @@
   ],
   "lodging": [
     {
-      "id": "pampas-lodge",
+      "id": "el-puesto-coyhaique",
       "stopId": "coyhaique",
-      "name": "Pampas Lodge Coyhaique",
+      "name": "El Puesto Hostel",
       "nights": 2,
-      "avgNightlyRateEUR": 160,
+      "avgNightlyRateEUR": 60,
       "amenities": [
-        "Holzsauna",
-        "Aussichtsterrasse",
-        "Breakfast Buffet"
+        "Boutique-Hostel",
+        "Gemeinschaftsküche",
+        "Zentral gelegen"
       ],
-      "url": "https://www.pampaslodge.cl",
+      "url": "https://www.elpuesto.cl",
       "images": [
         {
           "url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Coyhaique10.jpg",
-          "caption": "Blick auf Coyhaique",
+          "caption": "Gemütliche Basis in Coyhaique",
           "credit": "Wikimedia Commons",
           "license": "CC BY-SA 3.0"
         }
       ]
     },
     {
-      "id": "mallin-colorado",
+      "id": "hostal-el-puesto-tranquilo",
       "stopId": "rio-tranquilo",
-      "name": "Mallín Colorado Eco-Lodge",
+      "name": "Hostal El Puesto",
       "nights": 4,
-      "avgNightlyRateEUR": 210,
+      "avgNightlyRateEUR": 70,
       "amenities": [
-        "Holzkabinen",
-        "Guide-Service",
-        "Restaurant"
+        "Familiär geführt",
+        "Hausgemachtes Brot",
+        "Touren-Infos"
       ],
-      "url": "https://www.mallincolorado.com",
+      "url": "https://www.elpuestotranquilo.cl",
       "images": [
         {
           "url": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Catedral_de_M%C3%A1rmol_en_Lago_General_Carrera.jpg",
-          "caption": "Lodge am Lago General Carrera",
+          "caption": "Hostel am Lago General Carrera",
           "credit": "Wikimedia Commons / Nicolás Lara",
           "license": "CC BY-SA 3.0"
         }
@@ -504,21 +504,21 @@
       ]
     },
     {
-      "id": "tortel-lodge",
+      "id": "refugio-tortel",
       "stopId": "caleta-tortel",
-      "name": "Entre Hielos Lodge",
+      "name": "Refugio Tortel",
       "nights": 3,
-      "avgNightlyRateEUR": 180,
+      "avgNightlyRateEUR": 50,
       "amenities": [
-        "Holzterrasse",
-        "Kayak-Verleih",
-        "Frühstück inkl."
+        "Einfach & Authentisch",
+        "Direkt am Steg",
+        "Fjordblick"
       ],
-      "url": "https://www.entrehielos.cl",
+      "url": "https://www.refugiotortel.cl",
       "images": [
         {
           "url": "https://upload.wikimedia.org/wikipedia/commons/8/80/Caleta_Tortel_02.jpg",
-          "caption": "Lodge in Caleta Tortel",
+          "caption": "Einfaches Refugio am Wasser",
           "credit": "Wikimedia Commons / Pato Novoa",
           "license": "CC BY 2.0"
         }

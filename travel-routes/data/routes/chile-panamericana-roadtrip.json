@@ -479,6 +479,27 @@
       ]
     },
     {
+      "id": "aji-verde-serena",
+      "stopId": "la-serena-city",
+      "name": "Aji Verde Hostel",
+      "nights": 2,
+      "avgNightlyRateEUR": 40,
+      "amenities": [
+        "Kolonialstil-Haus",
+        "Großer Garten",
+        "Fahrradverleih"
+      ],
+      "url": "https://www.ajiverdehostel.cl",
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Nocturna_mamalluca_obs.jpg",
+          "caption": "Basis für Sternentouren",
+          "credit": "Wikimedia Commons",
+          "license": "CC BY-SA 3.0"
+        }
+      ]
+    },
+    {
       "id": "elqui-dome",
       "stopId": "vicuna-town",
       "name": "Elqui Domos",
@@ -495,6 +516,27 @@
           "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Nocturna_mamalluca_obs.jpg",
           "caption": "Übernachten unter dem Sternenhimmel",
           "credit": "A. Tudor",
+          "license": "CC BY-SA 3.0"
+        }
+      ]
+    },
+    {
+      "id": "el-punto-bahia",
+      "stopId": "bahia-inglesa-beach",
+      "name": "Hostal El Punto",
+      "nights": 3,
+      "avgNightlyRateEUR": 65,
+      "amenities": [
+        "Nur 200m zum Strand",
+        "Hängematten",
+        "BBQ-Area"
+      ],
+      "url": "https://www.elpuntohostel.cl",
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Playa%2C_Bahia_Inglesa.JPG",
+          "caption": "Entspannung pur in Bahía Inglesa",
+          "credit": "Mariangeles",
           "license": "CC BY-SA 3.0"
         }
       ]

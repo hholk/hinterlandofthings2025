@@ -539,21 +539,21 @@
   ],
   "lodging": [
     {
-      "id": "hotel-san-marcos",
+      "id": "sunny-days-arica",
       "stopId": "arica-town",
-      "name": "Antay Hotel Arica",
+      "name": "Hostal Sunny Days",
       "nights": 3,
-      "avgNightlyRateEUR": 130,
+      "avgNightlyRateEUR": 45,
       "amenities": [
-        "Rooftop-Pool",
-        "Spa",
-        "Pisco Bar"
+        "Familiäre Atmosphäre",
+        "Legendäres Frühstück",
+        "Nahe am Strand"
       ],
-      "url": "https://www.antay.cl",
+      "url": "https://www.sunny-days-arica.cl",
       "images": [
         {
           "url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Morro_de_Arica_%2849557003417%29.jpg",
-          "caption": "Hotel in Arica mit Blick auf den Morro",
+          "caption": "Gemütliches Hostel nahe dem Morro",
           "credit": "Wikimedia Commons / Ministerio de Bienes Nacionales",
           "license": "CC BY 2.0"
         }
@@ -581,21 +581,21 @@
       ]
     },
     {
-      "id": "iquique-hotel",
+      "id": "backpacker-iquique",
       "stopId": "iquique-town",
-      "name": "Hotel Gavina Sens",
+      "name": "Backpacker's Hostel Iquique",
       "nights": 4,
-      "avgNightlyRateEUR": 150,
+      "avgNightlyRateEUR": 35,
       "amenities": [
-        "Infinity-Pool",
-        "Beach Access",
-        "Sunset Bar"
+        "Surf-Vibe",
+        "Dachterrasse",
+        "BBQ-Abende"
       ],
-      "url": "https://www.hotelgavina.cl",
+      "url": "https://www.backpackersiquique.cl",
       "images": [
         {
           "url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Paseo_Baquedano.JPG",
-          "caption": "Hotel nahe Paseo Baquedano",
+          "caption": "Treffpunkt für Surfer und Traveller",
           "credit": "Wikimedia Commons / A. Duarte",
           "license": "CC BY-SA 3.0"
         }

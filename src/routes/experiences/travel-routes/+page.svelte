@@ -52,12 +52,7 @@
     type OverlayProjector,
   } from "../../../lib/travel/overlay-projection";
   import MobilityComparison from "../../../lib/travel/MobilityComparison.svelte";
-
-  declare global {
-    interface Window {
-      debugTravelOpenStop?: (stopId?: string) => void;
-    }
-  }
+  import ImageCarousel from "../../../lib/travel/ImageCarousel.svelte";
 
   type MapLibreModule = MapLibreNamespace & { workerClass?: typeof Worker };
   type MapLibreMap = import("maplibre-gl").Map;
@@ -1170,7 +1165,12 @@
     return parts.filter(Boolean).join(" • ");
   }
 
-  function getDayFlights(day: DayDefinition | undefined): DayArrivalSegment[] {
+  function getDayFlights(day: DayDefinition | undefined): (DayArrivalSegment & {
+    departure?: string;
+    arrival?: string;
+    airline?: string;
+    flightNumber?: string;
+  })[] {
     if (!day?.arrival?.segments) return [];
     return day.arrival.segments.filter((segment) => {
       const candidate = segment as DayArrivalSegment & {
@@ -1182,7 +1182,12 @@
         Boolean(candidate.flightNumber) ||
         Boolean(candidate.airline)
       );
-    });
+    }) as (DayArrivalSegment & {
+      departure?: string;
+      arrival?: string;
+      airline?: string;
+      flightNumber?: string;
+    })[];
   }
 
   function getDayRestaurants(
@@ -1469,14 +1474,16 @@
             </div>
             {#if stopDetailPanel.photoUrl}
               <figure class="travel__map-fullscreen-panel__media">
-                <img
-                  src={stopDetailPanel.photoUrl}
-                  alt={stopDetailPanel.photoCaption ??
-                    stopDetailPanel.title ??
-                    stopDetailPanel.name ??
-                    "POI Bild"}
-                  loading="lazy"
-                  decoding="async"
+                <ImageCarousel
+                  images={stopDetailPanel.photoUrl
+                    ? [
+                        {
+                          url: stopDetailPanel.photoUrl,
+                          caption: stopDetailPanel.photoCaption,
+                        },
+                      ]
+                    : []}
+                  className="mb-4 h-48 w-full object-cover sm:h-64"
                 />
                 {#if stopDetailPanel.photoCaption || stopDetailPanel.photoCredit}
                   <figcaption>
@@ -1586,10 +1593,15 @@
               <div class="travel__highlight-track">
                 {#each selectedRoute.meta.highlightImages as highlightImage}
                   <figure class="travel__highlight-card">
-                    <img
-                      src={highlightImage.image}
-                      alt={highlightImage.caption ?? highlightImage.title}
-                      referrerpolicy="no-referrer"
+                    <ImageCarousel
+                      images={[
+                        {
+                          url: highlightImage.image,
+                          caption: highlightImage.caption,
+                          credit: highlightImage.source,
+                        },
+                      ]}
+                      className="mb-3 h-40 w-full object-cover"
                     />
                     <figcaption>
                       <strong>{highlightImage.title}</strong>
@@ -1800,10 +1812,9 @@
                     <div class="travel__image-grid">
                       {#each stop.photos as photo}
                         <figure>
-                          <img
-                            src={photo.url}
-                            alt={photo.caption ?? stop.name}
-                            loading="lazy"
+                          <ImageCarousel
+                            images={[photo]}
+                            className="mb-3 h-40 w-full object-cover"
                           />
                           {#if photo.caption}
                             <figcaption>{photo.caption}</figcaption>
@@ -1938,10 +1949,9 @@
                                 <div class="travel__image-grid">
                                   {#each stay.images as image}
                                     <figure>
-                                      <img
-                                        src={image.url}
-                                        alt={image.caption ?? stay.name}
-                                        loading="lazy"
+                                      <ImageCarousel
+                                        images={[image]}
+                                        className="mb-3 h-40 w-full object-cover"
                                       />
                                       {#if image.caption}
                                         <figcaption>{image.caption}</figcaption>
@@ -1981,10 +1991,9 @@
                                 <div class="travel__image-grid">
                                   {#each spot.images as image}
                                     <figure>
-                                      <img
-                                        src={image.url}
-                                        alt={image.caption ?? spot.name}
-                                        loading="lazy"
+                                      <ImageCarousel
+                                        images={[image]}
+                                        className="mb-3 h-40 w-full object-cover"
                                       />
                                       {#if image.caption}
                                         <figcaption>{image.caption}</figcaption>
@@ -2035,12 +2044,9 @@
                                 <div class="travel__image-grid">
                                   {#each activity.images as image}
                                     <figure>
-                                      <img
-                                        src={image.url}
-                                        alt={image.caption ??
-                                          activity.title ??
-                                          activity.name}
-                                        loading="lazy"
+                                      <ImageCarousel
+                                        images={[image]}
+                                        className="mb-3 h-32 w-full object-cover"
                                       />
                                       {#if image.caption}
                                         <figcaption>{image.caption}</figcaption>
@@ -2549,13 +2555,6 @@
     background: rgba(15, 23, 42, 0.35);
   }
 
-  .travel__map-fullscreen-panel__media img {
-    width: 100%;
-    display: block;
-    max-height: 280px;
-    object-fit: cover;
-  }
-
   .travel__map-fullscreen-panel__media figcaption {
     font-size: 0.75rem;
     color: rgba(226, 232, 240, 0.9);
@@ -2957,12 +2956,6 @@
     scroll-snap-align: start;
   }
 
-  .travel__highlight-card img {
-    width: 100%;
-    height: 10.5rem;
-    object-fit: cover;
-  }
-
   .travel__highlight-card figcaption {
     padding: 0.7rem 0.9rem 0.9rem;
     display: flex;
@@ -3074,7 +3067,6 @@
   }
 
   .travel__spoiler[open] > ul,
-  .travel__spoiler[open] > div,
   .travel__spoiler[open] > summary + * {
     margin-top: 0.5rem;
   }
@@ -3227,15 +3219,9 @@
 
   .travel__image-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
     gap: 0.75rem;
-  }
-
-  .travel__image-grid img {
-    width: 100%;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 0.75rem;
+    margin-top: 0.5rem;
   }
 
   .travel__image-grid figcaption {

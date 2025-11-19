@@ -156,6 +156,65 @@
                     "description": "Transfer zum Flughafen Calama und Rückflug."
                 }
             }
+        ],
+        "lodging": [
+            {
+                "id": "r1-hostal-mamatierra",
+                "name": "Hostal Mamatierra",
+                "reviewHighlights": [
+                    "Hipp & Bunt",
+                    "10 min zum Zentrum",
+                    "Vibrant Decor"
+                ],
+                "avgNightlyRateEUR": 55,
+                "url": "https://www.hostalmamatierra.cl",
+                "images": [
+                    {
+                        "url": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/48418253.jpg?k=0a80570991770704888090909090909090909090909090909090909090909090&o=&hp=1",
+                        "caption": "Bunter Innenhof",
+                        "credit": "Hostal Mamatierra",
+                        "license": "All Rights Reserved"
+                    }
+                ]
+            },
+            {
+                "id": "r1-casa-voyage",
+                "name": "Casa Voyage Hostel",
+                "reviewHighlights": [
+                    "Social Vibe",
+                    "Budget Friendly",
+                    "Lagerfeuer Abende"
+                ],
+                "avgNightlyRateEUR": 25,
+                "url": "https://www.casavoyagehostel.cl",
+                "images": [
+                    {
+                        "url": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/253634788.jpg?k=7b18801880808080808080808080808080808080808080808080808080808080&o=&hp=1",
+                        "caption": "Gemeinschaftsbereich",
+                        "credit": "Casa Voyage",
+                        "license": "All Rights Reserved"
+                    }
+                ]
+            },
+            {
+                "id": "r1-anka-hostel",
+                "name": "Anka Hostel",
+                "reviewHighlights": [
+                    "Modern & Sauber",
+                    "Ruhige Lage",
+                    "Gutes Frühstück"
+                ],
+                "avgNightlyRateEUR": 45,
+                "url": "https://www.ankahostel.cl",
+                "images": [
+                    {
+                        "url": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/165656565.jpg?k=8080808080808080808080808080808080808080808080808080808080808080&o=&hp=1",
+                        "caption": "Moderner Stil",
+                        "credit": "Anka Hostel",
+                        "license": "All Rights Reserved"
+                    }
+                ]
+            }
         ]
     }
 ]

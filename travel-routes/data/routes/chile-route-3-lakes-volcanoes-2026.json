@@ -336,6 +336,50 @@
       ],
       "hotels": [
         {
+          "id": "r3-mapatagonia",
+          "name": "MaPatagonia Hostel",
+          "reviewHighlights": [
+            "Historisches Haus",
+            "Garten & BBQ",
+            "Top Bewertung"
+          ],
+          "avgNightlyRateEUR": 35,
+          "url": "https://mapatagonia.cl",
+          "images": [
+            {
+              "url": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/49786845.jpg?k=0a80570991770704888090909090909090909090909090909090909090909090&o=&hp=1",
+              "caption": "Historische Fassade",
+              "credit": "MaPatagonia",
+              "license": "All Rights Reserved"
+            },
+            {
+              "url": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/49786850.jpg?k=0a80570991770704888090909090909090909090909090909090909090909090&o=&hp=1",
+              "caption": "Gemütlicher Garten",
+              "credit": "MaPatagonia",
+              "license": "All Rights Reserved"
+            }
+          ]
+        },
+        {
+          "id": "r3-casa-apel",
+          "name": "Casa Apel Hostel",
+          "reviewHighlights": [
+            "Laid-back",
+            "Nahe Museum",
+            "Gute Küche"
+          ],
+          "avgNightlyRateEUR": 30,
+          "url": "https://www.casaapel.cl",
+          "images": [
+            {
+              "url": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/123456789.jpg?k=0a80570991770704888090909090909090909090909090909090909090909090&o=&hp=1",
+              "caption": "Gemeinschaftsküche",
+              "credit": "Casa Apel",
+              "license": "All Rights Reserved"
+            }
+          ]
+        },
+        {
           "id": "r3-hotel-cumbres",
           "name": "Cumbres Puerto Varas",
           "reviewHighlights": [

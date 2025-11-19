@@ -342,84 +342,84 @@
   ],
   "lodging": [
     {
-      "id": "matetic-la-casona",
+      "id": "bcw-casablanca",
       "stopId": "casablanca-valley",
-      "name": "La Casona at Matetic Vineyards",
+      "name": "Hotel Boutique BCW",
       "nights": 3,
-      "avgNightlyRateEUR": 180,
+      "avgNightlyRateEUR": 120,
       "amenities": [
-        "Bike-Trails",
+        "Weinbar",
         "Pool",
-        "Farm-to-Table Restaurant"
+        "Design-Zimmer"
       ],
-      "url": "https://www.matetic.com",
+      "url": "https://www.bcw.cl",
       "images": [
         {
           "url": "https://upload.wikimedia.org/wikipedia/commons/7/75/Vi%C3%B1aSantaCruz.jpg",
-          "caption": "Weinberge im Valle de Casablanca",
+          "caption": "Boutique Hotel im Weintal",
           "credit": "Wikimedia Commons / Elemaki",
           "license": "CC BY 3.0"
         }
       ]
     },
     {
-      "id": "lapostolle-residence",
+      "id": "vino-bello-santacruz",
       "stopId": "santa-cruz",
-      "name": "Lapostolle Residence",
+      "name": "Hostal Vino Bello",
       "nights": 4,
-      "avgNightlyRateEUR": 260,
+      "avgNightlyRateEUR": 60,
       "amenities": [
-        "Private Wine Cellar",
-        "Infinity-Pool",
-        "Degustationsmenü"
+        "Familiär",
+        "Garten",
+        "Frühstück"
       ],
-      "url": "https://www.lapostolle.com",
+      "url": "https://www.vinobello.cl",
       "images": [
         {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Vi%C3%B1a_Lapostolle_%2814528196695%29.jpg",
-          "caption": "Viña Lapostolle",
-          "credit": "Wikimedia Commons / Sergio-Olivier",
-          "license": "CC BY-SA 2.0"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Vi%C3%B1edo_Colchagua%2C_Chile.jpg",
+          "caption": "Gemütliches Hostal in Santa Cruz",
+          "credit": "Wikimedia Commons / Rojavnegon",
+          "license": "CC BY-SA 3.0"
         }
       ]
     },
     {
-      "id": "talca-cooking-loft",
+      "id": "ecohostal-talca",
       "stopId": "talca-city",
-      "name": "Chef's Loft Talca",
+      "name": "EcoHostal Talca",
       "nights": 3,
-      "avgNightlyRateEUR": 140,
+      "avgNightlyRateEUR": 40,
       "amenities": [
-        "Showküche",
-        "Kräutergarten",
-        "Weinkeller"
+        "Nachhaltig",
+        "Zentral",
+        "Kunstvoll"
       ],
-      "url": "https://www.chefslofttalca.cl",
+      "url": "https://www.ecohostaltalca.cl",
       "images": [
         {
           "url": "https://upload.wikimedia.org/wikipedia/commons/5/54/Interior_Mercado_Central_de_Talca.jpg",
-          "caption": "Marktatmosphäre in Talca",
+          "caption": "Eco-Hostal in Talca",
           "credit": "Wikimedia Commons / Penquista",
           "license": "CC BY-SA 3.0"
         }
       ]
     },
     {
-      "id": "concepcion-boutique",
+      "id": "hostal-bb-concepcion",
       "stopId": "concepcion-coast",
-      "name": "Hotel Mercure Concepción",
+      "name": "Hostal B&B Concepción",
       "nights": 3,
-      "avgNightlyRateEUR": 120,
+      "avgNightlyRateEUR": 45,
       "amenities": [
-        "Rooftop-Bar",
-        "Fitness",
-        "Late Checkout"
+        "Frühstück",
+        "WLAN",
+        "Parkplatz"
       ],
-      "url": "https://all.accor.com",
+      "url": "https://www.hostalbbconcepcion.cl",
       "images": [
         {
           "url": "https://upload.wikimedia.org/wikipedia/commons/1/13/Pescados_Mercado_Central.JPG",
-          "caption": "Zentral in Concepción",
+          "caption": "B&B im Zentrum",
           "credit": "Wikimedia Commons / Nd0806",
           "license": "CC BY-SA 3.0"
         }

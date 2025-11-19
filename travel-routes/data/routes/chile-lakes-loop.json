@@ -462,41 +462,41 @@
   ],
   "lodging": [
     {
-      "id": "hotel-antumalal",
+      "id": "chili-kiwi-pucon",
       "stopId": "pucon-town",
-      "name": "Hotel Antumalal",
-      "nights": 4,
-      "avgNightlyRateEUR": 190,
+      "name": "Chili Kiwi Lakefront",
+      "nights": 3,
+      "avgNightlyRateEUR": 45,
       "amenities": [
-        "Seeblick-Suiten",
-        "Privater Steg",
-        "Spa mit Infinity-Pool"
+        "Direkt am Seeufer",
+        "Baumhaus-Zimmer",
+        "Social Vibe"
       ],
-      "url": "https://www.antumalal.com",
+      "url": "https://www.chilikiwihostel.com",
       "images": [
         {
           "url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Volc%C3%A1n_Villarrica_-_view_from_Pucon.jpg",
-          "caption": "Blick auf den See und Vulkan vom Hotelgarten",
+          "caption": "Blick vom Hostel auf den See",
           "credit": "Thomas Fuhrmann",
           "license": "CC BY-SA 4.0"
         }
       ]
     },
     {
-      "id": "huilo-huilo-nothofagus",
+      "id": "nothofagus-hotel",
       "stopId": "huilo-huilo-reserve",
       "name": "Nothofagus Hotel & Spa",
-      "nights": 3,
-      "avgNightlyRateEUR": 220,
+      "nights": 2,
+      "avgNightlyRateEUR": 320,
       "amenities": [
-        "Baumhaus-Architektur",
-        "Thermalbecken",
-        "Guided Reserve Walks"
+        "Architektur-Ikone",
+        "Mitten im Urwald",
+        "Spa & Wellness"
       ],
-      "url": "https://www.huilohuilo.com/nothofagus",
+      "url": "https://huilohuilo.com",
       "images": [
         {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Huilo_Huilo.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Hotel_Nothofagus%2C_Huilo_Huilo.jpg",
           "caption": "Architektur inmitten des Regenwaldes",
           "credit": "Wikimedia Commons",
           "license": "CC BY-SA"
@@ -504,42 +504,42 @@
       ]
     },
     {
-      "id": "hotel-aubrey",
+      "id": "mapatagonia-hostel",
       "stopId": "puerto-varas-town",
-      "name": "Hotel AWA",
+      "name": "MaPatagonia Hostel",
       "nights": 4,
-      "avgNightlyRateEUR": 210,
+      "avgNightlyRateEUR": 55,
       "amenities": [
-        "Designkubus am Lago Llanquihue",
-        "Indoor-Pool",
-        "Kayak-Verleih"
+        "Historisches Gebäude",
+        "Garten mit Grill",
+        "Gemütliche Atmosphäre"
       ],
-      "url": "https://www.hotelawa.cl",
+      "url": "https://mapatagonia.cl",
       "images": [
         {
           "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/Volc%C3%A1n_Osorno%2C_Puerto_Varas%2C_Chile.jpg",
-          "caption": "Moderne Architektur mit Vulkanblick",
+          "caption": "Basis für Abenteuer in Puerto Varas",
           "credit": "Gabriela Arriagada Bruneau",
           "license": "CC BY-SA 4.0"
         }
       ]
     },
     {
-      "id": "palafito-1326",
+      "id": "palafito-hostel",
       "stopId": "castro-town",
-      "name": "Palafito 1326 Hotel Boutique",
+      "name": "Palafito Hostel",
       "nights": 3,
-      "avgNightlyRateEUR": 160,
+      "avgNightlyRateEUR": 60,
       "amenities": [
-        "Zimmer über dem Wasser",
-        "Frühstück mit lokalem Honig",
-        "Kamin-Lounge"
+        "Direkt über dem Wasser",
+        "Bunte Holzarchitektur",
+        "Terrasse mit Meerblick"
       ],
-      "url": "https://www.palafito1326.cl",
+      "url": "https://www.palafitohostel.com",
       "images": [
         {
           "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/Palafitos.JPG",
-          "caption": "Wohnen über dem Wasser in Castro",
+          "caption": "Typische Palafitos in Castro",
           "credit": "Javivi moaxaja",
           "license": "CC BY-SA 3.0"
         }

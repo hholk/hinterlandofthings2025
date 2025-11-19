@@ -598,23 +598,23 @@
   ],
   "lodging": [
     {
-      "id": "noi-san-pedro",
+      "id": "mamatierra-san-pedro",
       "stopId": "san-pedro-town",
-      "name": "NOI Casa Atacama",
+      "name": "Hostal Mamatierra",
       "nights": 5,
-      "avgNightlyRateEUR": 240,
+      "avgNightlyRateEUR": 55,
       "amenities": [
-        "Adobe-Suites",
-        "Solar Pool",
-        "Photo Concierge"
+        "Hipp & Bunt",
+        "10 min zum Zentrum",
+        "Vibrant Decor"
       ],
-      "url": "https://www.noihotels.com",
+      "url": "https://www.hostalmamatierra.cl",
       "images": [
         {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/San_Pedro_de_Atacama_%28street_view%29.jpg",
-          "caption": "Zentral gelegen in San Pedro de Atacama",
-          "credit": "Wikimedia Commons",
-          "license": "CC BY-SA 3.0"
+          "url": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/48418253.jpg?k=0a80570991770704888090909090909090909090909090909090909090909090&o=&hp=1",
+          "caption": "Bunter Innenhof",
+          "credit": "Hostal Mamatierra",
+          "license": "All Rights Reserved"
         }
       ]
     },
@@ -640,49 +640,43 @@
       ]
     },
     {
-      "id": "singular-patagonia",
+      "id": "factoria-patagonia",
       "stopId": "puerto-natales",
-      "name": "The Singular Patagonia",
+      "name": "Factoría Patagonia",
       "nights": 4,
-      "avgNightlyRateEUR": 380,
+      "avgNightlyRateEUR": 85,
       "amenities": [
-        "Industrie-Design",
-        "Spa",
-        "Bootsanleger"
+        "Industrial Design",
+        "Gutes Restaurant",
+        "Zentral"
       ],
-      "url": "https://www.thesingular.com",
+      "url": "https://www.factoriapatagonia.com",
       "images": [
         {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/3/35/The_Singular_Patagonia_demo.jpg",
-          "caption": "The Singular Patagonia",
-          "credit": "Thesingularhotels",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Puerto_Natales%2C_old_dock..jpg",
+          "caption": "Design-Hostel in Puerto Natales",
+          "credit": "Felipe.alarcon",
           "license": "CC BY-SA 3.0"
         }
       ]
     },
     {
-      "id": "patagonia-camp",
+      "id": "camping-pehoe",
       "stopId": "torres-del-paine",
-      "name": "Patagonia Camp",
+      "name": "Camping Pehoé",
       "nights": 3,
-      "avgNightlyRateEUR": 410,
+      "avgNightlyRateEUR": 30,
       "amenities": [
-        "Yurten mit Glasdach",
-        "All-Inclusive Transfers",
-        "Guide-Team"
+        "Direkt am See",
+        "Grillplätze",
+        "Traumblick"
       ],
-      "url": "https://www.patagoniacamp.com",
+      "url": "https://www.campingpehoe.com",
       "images": [
         {
           "url": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&auto=format&fit=crop",
-          "caption": "Yurte mit Blick auf den See",
+          "caption": "Camping mit Blick auf die Cuernos",
           "credit": "Andrés Peña",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-          "caption": "Stimmungsbild aus Chile für die Travel Experience",
-          "credit": "Unsplash",
           "license": "Unsplash License"
         }
       ]

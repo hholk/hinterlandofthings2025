@@ -216,6 +216,71 @@
                     "description": "Rückflug ab Arica."
                 }
             }
+        ],
+        "lodging": [
+            {
+                "id": "sunny-days-arica",
+                "stopId": "arica-town",
+                "name": "Hostal Sunny Days",
+                "nights": 2,
+                "avgNightlyRateEUR": 45,
+                "amenities": [
+                    "Familiäre Atmosphäre",
+                    "Legendäres Frühstück",
+                    "Nahe am Strand"
+                ],
+                "url": "https://www.sunny-days-arica.cl",
+                "images": [
+                    {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Morro_de_Arica_%2849557003417%29.jpg",
+                        "caption": "Gemütliches Hostel nahe dem Morro",
+                        "credit": "Wikimedia Commons / Ministerio de Bienes Nacionales",
+                        "license": "CC BY 2.0"
+                    }
+                ]
+            },
+            {
+                "id": "backpacker-iquique",
+                "stopId": "iquique-town",
+                "name": "Backpacker's Hostel Iquique",
+                "nights": 2,
+                "avgNightlyRateEUR": 35,
+                "amenities": [
+                    "Surf-Vibe",
+                    "Dachterrasse",
+                    "BBQ-Abende"
+                ],
+                "url": "https://www.backpackersiquique.cl",
+                "images": [
+                    {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Paseo_Baquedano.JPG",
+                        "caption": "Treffpunkt für Surfer und Traveller",
+                        "credit": "Wikimedia Commons / A. Duarte",
+                        "license": "CC BY-SA 3.0"
+                    }
+                ]
+            },
+            {
+                "id": "putre-lodge",
+                "stopId": "putre-town",
+                "name": "Terrace Lodge Putre",
+                "nights": 1,
+                "avgNightlyRateEUR": 110,
+                "amenities": [
+                    "Oxygen Bar",
+                    "Gemeinschaftsküche",
+                    "Andean Tea"
+                ],
+                "url": "https://www.terracelodge.com",
+                "images": [
+                    {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/5/57/Comuna_de_Putre%2C_vista_parcial_con_la_iglesia%2C_Provincia_de_Parinacota%2C_norte_de_Chile.jpg",
+                        "caption": "Lodge in Putre",
+                        "credit": "Wikimedia Commons / Carlos Teixidor Cadenas",
+                        "license": "CC BY-SA 4.0"
+                    }
+                ]
+            }
         ]
     }
 ]

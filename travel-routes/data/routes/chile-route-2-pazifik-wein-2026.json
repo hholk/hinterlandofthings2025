@@ -293,6 +293,43 @@
       ],
       "hotels": [
         {
+          "id": "r2-hostal-po",
+          "name": "Hostal Po",
+          "reviewHighlights": [
+            "Bunt & Künstlerisch",
+            "Zentral",
+            "Rooftop"
+          ],
+          "avgNightlyRateEUR": 20,
+          "url": "https://hostalpo.cl",
+          "images": [
+            {
+              "url": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/56789012.jpg?k=0a80570991770704888090909090909090909090909090909090909090909090&o=&hp=1",
+              "caption": "Kunterbuntes Design",
+              "credit": "Hostal Po",
+              "license": "All Rights Reserved"
+            }
+          ]
+        },
+        {
+          "id": "r2-la-joya",
+          "name": "La Joya Hostel",
+          "reviewHighlights": [
+            "Gutes Frühstück",
+            "Top Preis-Leistung"
+          ],
+          "avgNightlyRateEUR": 25,
+          "url": "https://lajoyahostel.cl",
+          "images": [
+            {
+              "url": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/67890123.jpg?k=0a80570991770704888090909090909090909090909090909090909090909090&o=&hp=1",
+              "caption": "Gemeinschaftsbereich",
+              "credit": "La Joya Hostel",
+              "license": "All Rights Reserved"
+            }
+          ]
+        },
+        {
           "id": "r2-hotel-fauna",
           "name": "Hotel Fauna",
           "reviewHighlights": [
@@ -306,30 +343,6 @@
               "url": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&auto=format&fit=crop",
               "caption": "Zimmer mit Hafenblick",
               "credit": "Kate Stone",
-              "license": "Unsplash License"
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-              "caption": "Stimmungsbild aus Chile für die Travel Experience",
-              "credit": "Unsplash",
-              "license": "Unsplash License"
-            }
-          ]
-        },
-        {
-          "id": "r2-winebox",
-          "name": "WineBox Valparaíso",
-          "reviewHighlights": [
-            "Container-Hotel",
-            "Sehr instagrammable"
-          ],
-          "avgNightlyRateEUR": 95,
-          "url": "https://www.wineboxvalparaiso.com",
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1505692794403-34cb5cf055b2?w=800&auto=format&fit=crop",
-              "caption": "Bunte Container-Zimmer",
-              "credit": "Sebastián Araya",
               "license": "Unsplash License"
             },
             {
@@ -518,6 +531,42 @@
       ],
       "hotels": [
         {
+          "id": "r2-la-casa-vinilla",
+          "name": "La Casa Vinilla",
+          "reviewHighlights": [
+            "Ruhig & Gemütlich",
+            "Gutes Preis-Leistungs-Verhältnis"
+          ],
+          "avgNightlyRateEUR": 60,
+          "url": "https://lacasavinilla.cl",
+          "images": [
+            {
+              "url": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/78901234.jpg?k=0a80570991770704888090909090909090909090909090909090909090909090&o=&hp=1",
+              "caption": "Gartenansicht",
+              "credit": "La Casa Vinilla",
+              "license": "All Rights Reserved"
+            }
+          ]
+        },
+        {
+          "id": "r2-tiny-houses",
+          "name": "Tiny Houses Casablanca",
+          "reviewHighlights": [
+            "Unique Stay",
+            "Mitten in der Natur"
+          ],
+          "avgNightlyRateEUR": 70,
+          "url": "https://tinyhousescasablanca.cl",
+          "images": [
+            {
+              "url": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/89012345.jpg?k=0a80570991770704888090909090909090909090909090909090909090909090&o=&hp=1",
+              "caption": "Tiny House im Grünen",
+              "credit": "Tiny Houses Casablanca",
+              "license": "All Rights Reserved"
+            }
+          ]
+        },
+        {
           "id": "r2-matetic-lodge",
           "name": "La Casona Matetic",
           "reviewHighlights": [
@@ -531,30 +580,6 @@
               "url": "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=800&auto=format&fit=crop",
               "caption": "Landhaus im Tal",
               "credit": "Daniela Muñoz",
-              "license": "Unsplash License"
-            },
-            {
-              "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-              "caption": "Stimmungsbild aus Chile für die Travel Experience",
-              "credit": "Unsplash",
-              "license": "Unsplash License"
-            }
-          ]
-        },
-        {
-          "id": "r2-casablanca-bnb",
-          "name": "Casablanca B&B",
-          "reviewHighlights": [
-            "Familiäre Atmosphäre",
-            "Perfekt als Übernachtungsstopp"
-          ],
-          "avgNightlyRateEUR": 90,
-          "url": "https://example.com/casablanca-bnb",
-          "images": [
-            {
-              "url": "https://images.unsplash.com/photo-1554995207-c18c203602cb?w=800&auto=format&fit=crop",
-              "caption": "Zimmer mit Gartenblick",
-              "credit": "Felipe Godoy",
               "license": "Unsplash License"
             },
             {

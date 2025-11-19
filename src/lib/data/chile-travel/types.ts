@@ -111,6 +111,8 @@ export interface FlightInfo {
   baggage?: string;
   carbonKg?: number;
   durationHours?: number;
+  departure?: string;
+  arrival?: string;
   notes?: string;
   [key: string]: unknown;
 }

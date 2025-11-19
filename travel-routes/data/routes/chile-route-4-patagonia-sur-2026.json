@@ -192,7 +192,46 @@
         "mapPoints": []
       },
       "activities": [],
-      "hotels": [],
+      "hotels": [
+        {
+          "id": "r4-islanet",
+          "name": "Islanet Hostel & Bar",
+          "reviewHighlights": [
+            "Sozial & Freundlich",
+            "Gute Bar",
+            "Sauber"
+          ],
+          "avgNightlyRateEUR": 20,
+          "url": "https://islanethostel.cl",
+          "images": [
+            {
+              "url": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/23456789.jpg?k=0a80570991770704888090909090909090909090909090909090909090909090&o=&hp=1",
+              "caption": "Bar Bereich",
+              "credit": "Islanet Hostel",
+              "license": "All Rights Reserved"
+            }
+          ]
+        },
+        {
+          "id": "r4-casa-perla",
+          "name": "Casa Perla",
+          "reviewHighlights": [
+            "Familiär",
+            "Günstig",
+            "Gemütlich"
+          ],
+          "avgNightlyRateEUR": 18,
+          "url": "https://casaperla.cl",
+          "images": [
+            {
+              "url": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/34567890.jpg?k=0a80570991770704888090909090909090909090909090909090909090909090&o=&hp=1",
+              "caption": "Zimmer",
+              "credit": "Casa Perla",
+              "license": "All Rights Reserved"
+            }
+          ]
+        }
+      ],
       "mobilityOptions": {}
     },
     {
@@ -260,7 +299,46 @@
         "mapPoints": []
       },
       "activities": [],
-      "hotels": [],
+      "hotels": [
+        {
+          "id": "r4-puma-house",
+          "name": "Puma House",
+          "reviewHighlights": [
+            "Recycelte Materialien",
+            "Trekking Infos",
+            "Frühes Frühstück"
+          ],
+          "avgNightlyRateEUR": 25,
+          "url": "https://pumahouse.cl",
+          "images": [
+            {
+              "url": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/56789012.jpg?k=0a80570991770704888090909090909090909090909090909090909090909090&o=&hp=1",
+              "caption": "Rustikaler Charme",
+              "credit": "Puma House",
+              "license": "All Rights Reserved"
+            }
+          ]
+        },
+        {
+          "id": "r4-el-patagonico",
+          "name": "El Patagónico Hostel",
+          "reviewHighlights": [
+            "Bunt & Lebendig",
+            "Dachterrasse",
+            "Gute Küche"
+          ],
+          "avgNightlyRateEUR": 22,
+          "url": "https://elpatagonicohostel.cl",
+          "images": [
+            {
+              "url": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/67890123.jpg?k=0a80570991770704888090909090909090909090909090909090909090909090&o=&hp=1",
+              "caption": "Gemeinschaftsbereich",
+              "credit": "El Patagónico",
+              "license": "All Rights Reserved"
+            }
+          ]
+        }
+      ],
       "mobilityOptions": {}
     }
   ],
