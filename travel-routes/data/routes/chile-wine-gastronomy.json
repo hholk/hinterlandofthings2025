@@ -28,17 +28,17 @@
       },
       {
         "title": "Bike & Wine Tour in Santa Cruz",
-        "image": "https://images.pexels.com/photos/1058958/pexels-photo-1058958.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+        "image": "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=900&auto=format&fit=crop",
         "caption": "Radfahrerinnen rollen zwischen Rebstöcken Richtung Verkostung.",
-        "source": "Pexels",
-        "license": "Pexels License"
+        "source": "Unsplash",
+        "license": "Unsplash License"
       },
       {
         "title": "Seafood Markt in Concepción",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/5/59/Mercado_Central_de_Concepci%C3%B3n_01.jpg",
+        "image": "https://images.unsplash.com/photo-1529257414771-1960ab1f3d30?w=900&auto=format&fit=crop",
         "caption": "Stände mit frischem Fisch und Muscheln im Mercado Central.",
-        "source": "Wikimedia Commons",
-        "license": "CC BY-SA 4.0"
+        "source": "Unsplash",
+        "license": "Unsplash License"
       }
     ],
     "scores": {

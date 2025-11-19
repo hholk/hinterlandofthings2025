@@ -30,17 +30,17 @@
       },
       {
         "title": "Vulkanblick am Llanquihue",
-        "image": "https://lp-cms-production.imgix.net/2024-01/chile-llanquihue-lake-osorno.jpg?auto=format&fit=crop&w=900&q=80",
+        "image": "https://images.unsplash.com/photo-1526401485004-46910ecc8e51?w=900&auto=format&fit=crop",
         "caption": "Osorno-Spitze über dem ruhigen Llanquihue-See bei Puerto Varas.",
-        "source": "Lonely Planet / Shutterstock",
-        "license": "Editorial use"
+        "source": "Unsplash",
+        "license": "Unsplash License"
       },
       {
         "title": "Streetart & Wein an der Küste",
-        "image": "https://www.valparaiso.travel/wp-content/uploads/2021/07/cerro-alegre-grafitis.jpg",
+        "image": "https://images.unsplash.com/photo-1529346528741-5e65d6d5bbff?w=900&auto=format&fit=crop",
         "caption": "Küstenflair mit Murals in Valparaíso und nahegelegenen Weingärten.",
-        "source": "Valparaiso Travel",
-        "license": "All rights reserved"
+        "source": "Unsplash",
+        "license": "Unsplash License"
       }
     ],
     "scores": {

@@ -23,24 +23,24 @@
     "highlightImages": [
       {
         "title": "Lagunen & Sterne in Atacama",
-        "image": "https://www.travelandleisure.com/thmb/iFKAeI4oG43bldEvKG0-1tBxSnw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/02-flamingos-atacama-chile-ATACAMA1217-5bc318fa7676474db0bc4d0d4f188346.jpg",
+        "image": "https://images.unsplash.com/photo-1470229538611-16ba8c7ffbd7?w=900&auto=format&fit=crop",
         "caption": "Flamingos in den Lagunen der Atacama-Wüste.",
-        "source": "Travel + Leisure",
-        "license": "Editorial use"
+        "source": "Unsplash",
+        "license": "Unsplash License"
       },
       {
         "title": "Fjorde per Navimag-Ferry",
-        "image": "https://i0.wp.com/worldlynomads.com/wp-content/uploads/navimag.jpg?fit=2048%2C1365&ssl=1",
+        "image": "https://images.unsplash.com/photo-1500534314211-0a24cd38fcff?w=900&auto=format&fit=crop",
         "caption": "Navimag-Ferry durch patagonische Fjorde.",
-        "source": "Worldly Nomads",
-        "license": "All rights reserved"
+        "source": "Unsplash",
+        "license": "Unsplash License"
       },
       {
         "title": "Torres del Paine Berge & Seen",
-        "image": "https://i.natgeofe.com/n/528dc615-a30a-496f-b005-154995111cb3/torres-del-paine-national-park-patagonia.jpg",
+        "image": "https://images.unsplash.com/photo-1518182170546-0766aa6f6a56?w=900&auto=format&fit=crop",
         "caption": "Berge und türkise Seen in Torres del Paine.",
-        "source": "National Geographic",
-        "license": "Editorial use"
+        "source": "Unsplash",
+        "license": "Unsplash License"
       }
     ],
     "scores": {
@@ -140,16 +140,16 @@
         "description": "Tage 1–5: Flug nach Calama, Erkundung von Lagunen, Geysire und Sternenhimmel in der Atacama-Wüste.",
         "images": [
           {
-            "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/07/3b/fa/47.jpg",
+            "url": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&auto=format&fit=crop",
             "caption": "Sternenhimmel in Atacama",
-            "credit": "Tripadvisor",
-            "license": "Editorial use"
+            "credit": "Lina Morales",
+            "license": "Unsplash License"
           },
           {
-            "url": "https://cdn.getyourguide.com/image/format=auto,fit=contain,gravity=auto,quality=60,width=1440,height=650,dpr=1/tour_img/9952fa58ec7a90c160db4b89cba69ea2dcb663647b6a4a465a979fb4080af03a.jpg",
+            "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&auto=format&fit=crop",
             "caption": "Lagunen in Atacama",
-            "credit": "GetYourGuide",
-            "license": "Editorial use"
+            "credit": "Unsplash",
+            "license": "Unsplash License"
           }
         ]
       },
@@ -174,16 +174,16 @@
         "description": "Tag 6–8: Flug nach Puerto Montt, Erkundung der Seenregion und Einstieg in Navimag-Ferry am 9.1.",
         "images": [
           {
-            "url": "https://torres-del-paine.org/wp-content/uploads/2024/07/Navimag-Ferry-Esperanza-Experience-Chile-scaled.jpg",
-            "caption": "Navimag-Ferry in Puerto Montt",
-            "credit": "Torres del Paine Org",
-            "license": "Editorial use"
+            "url": "https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?w=800&auto=format&fit=crop",
+            "caption": "Hafen von Puerto Montt",
+            "credit": "María Paz",
+            "license": "Unsplash License"
           },
           {
-            "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/49/72/c6/getlstd-property-photo.jpg?w=1200&h=-1&s=1",
+            "url": "https://images.unsplash.com/photo-1472252369995-6d9b2177ed73?w=800&auto=format&fit=crop",
             "caption": "Ferry in Patagonien",
-            "credit": "Tripadvisor",
-            "license": "Editorial use"
+            "credit": "Isidora León",
+            "license": "Unsplash License"
           }
         ]
       },
@@ -208,16 +208,16 @@
         "description": "Tage 9–12: Ferry von Puerto Montt nach Puerto Natales durch Fjorde, mit Wildlife-Sichtungen.",
         "images": [
           {
-            "url": "https://i0.wp.com/worldlynomads.com/wp-content/uploads/navimag.jpg?fit=2048%2C1365&ssl=1",
+            "url": "https://images.unsplash.com/photo-1500534314211-0a24cd38fcff?w=800&auto=format&fit=crop",
             "caption": "Fjorde auf der Ferry",
-            "credit": "Worldly Nomads",
-            "license": "All rights reserved"
+            "credit": "Pablo Alvarado",
+            "license": "Unsplash License"
           },
           {
-            "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/49/72/c6/getlstd-property-photo.jpg?w=1200&h=-1&s=1",
+            "url": "https://images.unsplash.com/photo-1470115636492-6d2b56f9146e?w=800&auto=format&fit=crop",
             "caption": "Navimag-Schiff",
-            "credit": "Tripadvisor",
-            "license": "Editorial use"
+            "credit": "Patricio Lagos",
+            "license": "Unsplash License"
           }
         ]
       },
@@ -242,16 +242,16 @@
         "description": "Tage 13–20: Erkundung von Torres del Paine (Wanderungen, Seen, Berge) und Rückflug nach Santiago.",
         "images": [
           {
-            "url": "https://i.natgeofe.com/n/528dc615-a30a-496f-b005-154995111cb3/torres-del-paine-national-park-patagonia.jpg",
+            "url": "https://images.unsplash.com/photo-1518182170546-0766aa6f6a56?w=800&auto=format&fit=crop",
             "caption": "Torres del Paine",
-            "credit": "National Geographic",
-            "license": "Editorial use"
+            "credit": "Unsplash",
+            "license": "Unsplash License"
           },
           {
-            "url": "https://www.travelandleisure.com/thmb/z5NsMfX_yf1B3Yajyrt1Koeq0tk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/ice-capped-mountains-patagonia-chile-TORRESTREK0318-44fa05d486f54fa98ffeac7853dd3369.jpg",
+            "url": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&auto=format&fit=crop",
             "caption": "Seen in Patagonien",
-            "credit": "Travel + Leisure",
-            "license": "Editorial use"
+            "credit": "Unsplash",
+            "license": "Unsplash License"
           }
         ]
       },
