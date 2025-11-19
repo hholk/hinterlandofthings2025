@@ -1480,18 +1480,12 @@
                         {
                           url: stopDetailPanel.photoUrl,
                           caption: stopDetailPanel.photoCaption,
+                          credit: stopDetailPanel.photoCredit,
                         },
                       ]
                     : []}
                   className="mb-4 h-48 w-full object-cover sm:h-64"
                 />
-                {#if stopDetailPanel.photoCaption || stopDetailPanel.photoCredit}
-                  <figcaption>
-                    {[stopDetailPanel.photoCaption, stopDetailPanel.photoCredit]
-                      .filter((value): value is string => Boolean(value))
-                      .join(" • ")}
-                  </figcaption>
-                {/if}
               </figure>
             {/if}
             {#if stopDetailPanel.description}
@@ -1810,17 +1804,12 @@
                   </dl>
                   {#if stop.photos?.length}
                     <div class="travel__image-grid">
-                      {#each stop.photos as photo}
-                        <figure>
-                          <ImageCarousel
-                            images={[photo]}
-                            className="mb-3 h-40 w-full object-cover"
-                          />
-                          {#if photo.caption}
-                            <figcaption>{photo.caption}</figcaption>
-                          {/if}
-                        </figure>
-                      {/each}
+                      <figure class="col-span-full">
+                        <ImageCarousel
+                          images={stop.photos}
+                          className="mb-3 h-64 w-full object-cover"
+                        />
+                      </figure>
                     </div>
                   {/if}
                   <div class="travel__stop-extras travel__stop-extras--stack">
@@ -1946,18 +1935,11 @@
                                 </p>
                               {/if}
                               {#if stay.images?.length}
-                                <div class="travel__image-grid">
-                                  {#each stay.images as image}
-                                    <figure>
-                                      <ImageCarousel
-                                        images={[image]}
-                                        className="mb-3 h-40 w-full object-cover"
-                                      />
-                                      {#if image.caption}
-                                        <figcaption>{image.caption}</figcaption>
-                                      {/if}
-                                    </figure>
-                                  {/each}
+                                <div class="mt-3">
+                                  <ImageCarousel
+                                    images={stay.images}
+                                    className="h-64 w-full object-cover"
+                                  />
                                 </div>
                               {/if}
                             </li>
@@ -1988,18 +1970,11 @@
                                 </ul>
                               {/if}
                               {#if spot.images?.length}
-                                <div class="travel__image-grid">
-                                  {#each spot.images as image}
-                                    <figure>
-                                      <ImageCarousel
-                                        images={[image]}
-                                        className="mb-3 h-40 w-full object-cover"
-                                      />
-                                      {#if image.caption}
-                                        <figcaption>{image.caption}</figcaption>
-                                      {/if}
-                                    </figure>
-                                  {/each}
+                                <div class="mt-3">
+                                  <ImageCarousel
+                                    images={spot.images}
+                                    className="h-64 w-full object-cover"
+                                  />
                                 </div>
                               {/if}
                             </li>
@@ -2042,17 +2017,12 @@
                               {/if}
                               {#if activity.images?.length}
                                 <div class="travel__image-grid">
-                                  {#each activity.images as image}
-                                    <figure>
-                                      <ImageCarousel
-                                        images={[image]}
-                                        className="mb-3 h-32 w-full object-cover"
-                                      />
-                                      {#if image.caption}
-                                        <figcaption>{image.caption}</figcaption>
-                                      {/if}
-                                    </figure>
-                                  {/each}
+                                  <figure class="col-span-full">
+                                    <ImageCarousel
+                                      images={activity.images}
+                                      className="mb-3 h-64 w-full object-cover"
+                                    />
+                                  </figure>
                                 </div>
                               {/if}
                             </li>
