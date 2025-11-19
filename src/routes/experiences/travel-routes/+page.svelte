@@ -1599,9 +1599,6 @@
                     />
                     <figcaption>
                       <strong>{highlightImage.title}</strong>
-                      {#if highlightImage.caption}
-                        <span>{highlightImage.caption}</span>
-                      {/if}
                       {#if highlightImage.source}
                         <small>{highlightImage.source}</small>
                       {/if}
