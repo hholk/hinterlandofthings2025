@@ -20,25 +20,25 @@
     ],
     "highlightImages": [
       {
-        "title": "Kayak auf dem Lago Villarrica",
-        "image": "https://images.unsplash.com/photo-1500534314211-0a24cd38fcff?w=800&auto=format&fit=crop",
-        "caption": "Morgendliche Kayaktour mit Blick auf den Vulkan Villarrica.",
-        "source": "Unsplash",
-        "license": "Unsplash License"
+        "title": "Villarrica Vulkan & See",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/1/16/Volc%C3%A1n_Villarrica_-_view_from_Pucon.jpg",
+        "caption": "Blick auf den rauchenden Vulkan Villarrica vom Seeufer in Pucón.",
+        "source": "Wikimedia Commons / Thomas Fuhrmann",
+        "license": "CC BY-SA 4.0"
       },
       {
         "title": "Termas Geométricas",
-        "image": "https://images.unsplash.com/photo-1612157777902-5382bc6e864b?w=900&auto=format&fit=crop",
-        "caption": "Rote Stege und dampfende Pools mitten im Nebelwald.",
-        "source": "Unsplash",
-        "license": "Unsplash License"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/45/Termas_Geometricas_de_Pucon.JPG",
+        "caption": "Rote Stege führen durch die dampfende Schlucht der Termas Geométricas.",
+        "source": "Wikimedia Commons / Mariangeles",
+        "license": "CC BY-SA 3.0"
       },
       {
-        "title": "Sonnenuntergang über dem Lago Llanquihue",
-        "image": "https://images.unsplash.com/photo-1534234828563-023c91ad4775?w=900&auto=format&fit=crop",
-        "caption": "Goldene Stunde am Llanquihue-See mit Osorno-Silhouette.",
-        "source": "Unsplash",
-        "license": "Unsplash License"
+        "title": "Llanquihue & Osorno",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Volc%C3%A1n_Osorno%2C_Puerto_Varas%2C_Chile.jpg",
+        "caption": "Der perfekte Kegel des Vulkans Osorno über dem Lago Llanquihue.",
+        "source": "Wikimedia Commons / Gabriela Arriagada Bruneau",
+        "license": "CC BY-SA 4.0"
       }
     ],
     "scores": {
@@ -101,22 +101,10 @@
       "reviewCount": 42876,
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1502920514313-52581002a659?w=800&auto=format&fit=crop",
-          "caption": "Boardingbereich am Flughafen Santiago",
-          "credit": "Agustín Lautaro",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=900&auto=format&fit=crop",
-          "caption": "Abflughalle mit Blick auf die Startbahnen in Santiago",
-          "credit": "Ahsan S.",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1504198453319-5ce911bafcde?w=900&auto=format&fit=crop",
-          "caption": "Andenpanorama beim Start über Santiago",
-          "credit": "Flávio Amiel",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/2/20/Terminal_Aeropuerto_Pudahuel.jpg",
+          "caption": "Terminal des Flughafen Santiago",
+          "credit": "Wikimedia Commons",
+          "license": "CC BY-SA"
         }
       ],
       "notes": [
@@ -146,22 +134,10 @@
       "reviewCount": 5120,
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1518544889280-90b38f8521e9?w=800&auto=format&fit=crop",
-          "caption": "Früher Morgen auf dem Rollfeld von Temuco",
-          "credit": "Constanza Vidal",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=900&auto=format&fit=crop",
-          "caption": "Wolken über dem Landeanflug nach Temuco",
-          "credit": "Matthew Smith",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900&auto=format&fit=crop",
-          "caption": "Landebahn zwischen Araukarien-Wäldern",
-          "credit": "Johannes Plenio",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Hall_principal_del_Aeropuerto_Internacional_de_La_Araucan%C3%ADa.jpg",
+          "caption": "Halle des Flughafens La Araucanía",
+          "credit": "Wikimedia Commons",
+          "license": "CC BY-SA"
         }
       ],
       "notes": [
@@ -190,22 +166,10 @@
       "reviewCount": 22310,
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1542044801-287cbc0d41d4?w=800&auto=format&fit=crop",
-          "caption": "Sonnenuntergang über dem Lago Villarrica",
-          "credit": "Matías Silva",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900&auto=format&fit=crop",
-          "caption": "Vulkan Villarrica über der Seepromenade",
-          "credit": "Johannes Plenio",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1476610182048-b716b8518aae?w=900&auto=format&fit=crop",
-          "caption": "Thermalquellen und Wälder rund um Pucón",
-          "credit": "Grant Durr",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Volc%C3%A1n_Villarrica_-_view_from_Pucon.jpg",
+          "caption": "Blick auf den Vulkan Villarrica von Pucón",
+          "credit": "Thomas Fuhrmann",
+          "license": "CC BY-SA 4.0"
         }
       ],
       "notes": [
@@ -234,22 +198,10 @@
       "reviewCount": 17845,
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1519682577862-22b62b24e493?w=800&auto=format&fit=crop",
-          "caption": "Holzbrücke über den Río Fuy",
-          "credit": "Felipe Muñoz",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=900&auto=format&fit=crop",
-          "caption": "Regenwaldpfade im Biosphärenreservat Huilo Huilo",
-          "credit": "Andrés Peña",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=900&auto=format&fit=crop",
-          "caption": "Wasserfälle und dichtes Grün im Reservat",
-          "credit": "Nicolas Prieto",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Huilo_Huilo.jpg",
+          "caption": "Wasserfall im Huilo Huilo Reservat",
+          "credit": "Wikimedia Commons",
+          "license": "CC BY-SA"
         }
       ],
       "notes": [
@@ -278,22 +230,10 @@
       "reviewCount": 31560,
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1526392060635-9d6019884377?w=800&auto=format&fit=crop",
-          "caption": "Blick auf die Iglesia del Sagrado Corazón",
-          "credit": "Carolina Bravo",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900&auto=format&fit=crop",
-          "caption": "Blick auf den Llanquihue-See und Vulkan Osorno",
-          "credit": "Johannes Plenio",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=900&auto=format&fit=crop",
-          "caption": "Abendlicht an der Costanera von Puerto Varas",
-          "credit": "Jonatan Pie",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/Volc%C3%A1n_Osorno%2C_Puerto_Varas%2C_Chile.jpg",
+          "caption": "Blick auf den Vulkan Osorno von Puerto Varas",
+          "credit": "Gabriela Arriagada Bruneau",
+          "license": "CC BY-SA 4.0"
         }
       ],
       "notes": [
@@ -322,22 +262,10 @@
       "reviewCount": 18650,
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1526401485004-46910ecc8e51?w=800&auto=format&fit=crop",
-          "caption": "Farbenfrohe Palafitos am Fjord",
-          "credit": "Marcelo Díaz",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=900&auto=format&fit=crop",
-          "caption": "Bunte Palafitos von Castro am Wasser",
-          "credit": "Jason Blackeye",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900&auto=format&fit=crop",
-          "caption": "Holzkirche und Marktstände in Castro",
-          "credit": "Johannes Plenio",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/Palafitos.JPG",
+          "caption": "Bunte Palafitos (Pfahlbauten) in Castro",
+          "credit": "Javivi moaxaja",
+          "license": "CC BY-SA 3.0"
         }
       ],
       "notes": [
@@ -366,22 +294,10 @@
       "reviewCount": 9570,
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&auto=format&fit=crop",
-          "caption": "Terminal von Puerto Montt am frühen Abend",
-          "credit": "Isidora Salazar",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1530988405631-f7aa0834e4c4?w=900&auto=format&fit=crop",
-          "caption": "Anflug auf den Flughafen El Tepual mit Fjordsicht",
-          "credit": "Ignacio Pardo",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=900&auto=format&fit=crop",
-          "caption": "Rollfeld vor schneebedeckten Vulkanen",
-          "credit": "Matthew Smith",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/Volc%C3%A1n_Osorno%2C_Puerto_Varas%2C_Chile.jpg",
+          "caption": "Landschaft der Seenregion beim Anflug",
+          "credit": "Gabriela Arriagada Bruneau",
+          "license": "CC BY-SA 4.0"
         }
       ],
       "notes": [
@@ -410,22 +326,10 @@
       "reviewCount": 40211,
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1543877087-ebf71f017192?w=800&auto=format&fit=crop",
-          "caption": "Straßenszene im Barrio Lastarria",
-          "credit": "Rodrigo Ruiz",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1505764706515-aa95265c5abc?w=900&auto=format&fit=crop",
-          "caption": "Kreative Boutiquen und Cafés im Barrio Italia",
-          "credit": "Cam Adams",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1526401485004-46910ecc8e51?w=900&auto=format&fit=crop",
-          "caption": "Straßenkunst und Bäume entlang der Galería Italia",
-          "credit": "Rodrigo Souza",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Barrio_Lastarria_Santiago.jpg",
+          "caption": "Das historische Barrio Lastarria",
+          "credit": "Wikimedia Commons",
+          "license": "CC BY-SA"
         }
       ],
       "notes": [
@@ -571,16 +475,10 @@
       "url": "https://www.antumalal.com",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1505691723518-36a5ac3be353?w=800&auto=format&fit=crop",
-          "caption": "Designsuite mit Blick auf den Lago Villarrica",
-          "credit": "Paula Ortiz",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-          "caption": "Stimmungsbild aus Chile für die Travel Experience",
-          "credit": "Unsplash",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Volc%C3%A1n_Villarrica_-_view_from_Pucon.jpg",
+          "caption": "Blick auf den See und Vulkan vom Hotelgarten",
+          "credit": "Thomas Fuhrmann",
+          "license": "CC BY-SA 4.0"
         }
       ]
     },
@@ -598,16 +496,10 @@
       "url": "https://www.huilohuilo.com/nothofagus",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-          "caption": "Lobby unter einer Holzkuppel",
-          "credit": "Ignacia Rojas",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-          "caption": "Stimmungsbild aus Chile für die Travel Experience",
-          "credit": "Unsplash",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Huilo_Huilo.jpg",
+          "caption": "Architektur inmitten des Regenwaldes",
+          "credit": "Wikimedia Commons",
+          "license": "CC BY-SA"
         }
       ]
     },
@@ -625,16 +517,10 @@
       "url": "https://www.hotelawa.cl",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1505691723549-5b9d7d0fba51?w=800&auto=format&fit=crop",
-          "caption": "Minimalistische Suite mit Vulkanblick",
-          "credit": "Francisca León",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-          "caption": "Stimmungsbild aus Chile für die Travel Experience",
-          "credit": "Unsplash",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/Volc%C3%A1n_Osorno%2C_Puerto_Varas%2C_Chile.jpg",
+          "caption": "Moderne Architektur mit Vulkanblick",
+          "credit": "Gabriela Arriagada Bruneau",
+          "license": "CC BY-SA 4.0"
         }
       ]
     },
@@ -652,16 +538,10 @@
       "url": "https://www.palafito1326.cl",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1464146072230-91cabc968266?w=800&auto=format&fit=crop",
-          "caption": "Palafito-Zimmer bei Flut",
-          "credit": "Rocío Fernández",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-          "caption": "Stimmungsbild aus Chile für die Travel Experience",
-          "credit": "Unsplash",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/Palafitos.JPG",
+          "caption": "Wohnen über dem Wasser in Castro",
+          "credit": "Javivi moaxaja",
+          "license": "CC BY-SA 3.0"
         }
       ]
     }
@@ -685,16 +565,10 @@
       "reservation": "Empfohlen",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop",
-          "caption": "Regionaler Lunch in Pucón",
-          "credit": "Camila Sánchez",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-          "caption": "Stimmungsbild aus Chile für die Travel Experience",
-          "credit": "Unsplash",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Volc%C3%A1n_Villarrica_-_view_from_Pucon.jpg",
+          "caption": "Regionale Küche in Pucón",
+          "credit": "Thomas Fuhrmann",
+          "license": "CC BY-SA 4.0"
         }
       ]
     },
@@ -716,16 +590,10 @@
       "reservation": "Telefonisch",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1498654896293-37aacf113fd9?w=800&auto=format&fit=crop",
-          "caption": "Holzofen-Küche im Fogón",
-          "credit": "Sebastián Pino",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-          "caption": "Stimmungsbild aus Chile für die Travel Experience",
-          "credit": "Unsplash",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/Volc%C3%A1n_Osorno%2C_Puerto_Varas%2C_Chile.jpg",
+          "caption": "Essen mit Aussicht in Puerto Varas",
+          "credit": "Gabriela Arriagada Bruneau",
+          "license": "CC BY-SA 4.0"
         }
       ]
     },
@@ -747,16 +615,10 @@
       "reservation": "Walk-in",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1555992336-cbf3d0c0f27c?w=800&auto=format&fit=crop",
-          "caption": "Fischstände im Mercado de Castro",
-          "credit": "Juan Ruz",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-          "caption": "Stimmungsbild aus Chile für die Travel Experience",
-          "credit": "Unsplash",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/Palafitos.JPG",
+          "caption": "Frischer Fisch direkt am Markt",
+          "credit": "Javivi moaxaja",
+          "license": "CC BY-SA 3.0"
         }
       ]
     }

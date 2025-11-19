@@ -22,24 +22,24 @@
     "highlightImages": [
       {
         "title": "Bootstour zu den Capillas de Mármol",
-        "image": "https://images.unsplash.com/photo-1569429690425-39210aaee874?w=900&auto=format&fit=crop",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Capillas_de_Marmol.JPG",
         "caption": "Türkises Wasser um die Marmorhöhlen am Lago General Carrera.",
-        "source": "Unsplash",
-        "license": "Unsplash License"
+        "source": "Wikimedia Commons / Anne Sophie",
+        "license": "CC BY-SA 3.0"
       },
       {
         "title": "Trekking im Parque Patagonia",
-        "image": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=900&auto=format&fit=crop",
-        "caption": "Weite Steppe, Lagunen und Berge entlang des Sendero Lago Chico.",
-        "source": "Unsplash",
-        "license": "Unsplash License"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/22/Valle_de_Chacabuco%2C_Parque_Patagonia.jpg",
+        "caption": "Weite Steppe, Lagunen und Berge im Valle Chacabuco.",
+        "source": "Wikimedia Commons / The.joker.j",
+        "license": "CC BY-SA 4.0"
       },
       {
         "title": "Sonnenuntergang in Caleta Tortel",
-        "image": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=900&auto=format&fit=crop",
-        "caption": "Holzstege und Fjordpanorama im Abendlicht von Caleta Tortel.",
-        "source": "Unsplash",
-        "license": "Unsplash License"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/80/Caleta_Tortel_02.jpg",
+        "caption": "Holzstege und Fjordpanorama in Caleta Tortel.",
+        "source": "Wikimedia Commons / Pato Novoa",
+        "license": "CC BY 2.0"
       }
     ],
     "scores": {
@@ -145,22 +145,10 @@
       "reviewCount": 6120,
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1530988405631-f7aa0834e4c4?w=800&auto=format&fit=crop",
-          "caption": "Andenketten rund um Balmaceda",
-          "credit": "Ignacio Pardo",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900&auto=format&fit=crop",
-          "caption": "Propellerflugzeug vor patagonischen Gipfeln",
-          "credit": "Johannes Plenio",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1526402462921-6c4f77e8b39b?w=900&auto=format&fit=crop",
-          "caption": "Weite Steppe entlang der Zufahrtsstraße nach Balmaceda",
-          "credit": "Sergio Rojas",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/31/Aeropuerto_Balmaceda.jpg",
+          "caption": "Flughafen Balmaceda",
+          "credit": "Wikimedia Commons / Alejandro Lopez",
+          "license": "CC BY-SA 2.0"
         }
       ],
       "notes": [
@@ -189,22 +177,10 @@
       "reviewCount": 9720,
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&auto=format&fit=crop",
-          "caption": "Coyhaique umgeben von Bergen",
-          "credit": "Andrés Peña",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1546443046-ed1ce6ffd1b7?w=900&auto=format&fit=crop",
-          "caption": "Bergkulisse rund um Coyhaique am Nachmittag",
-          "credit": "Félix Lam",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=900&auto=format&fit=crop",
-          "caption": "Nadelwald und Täler vor den Andenketten",
-          "credit": "Matt Howard",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Coyhaique10.jpg",
+          "caption": "Blick auf Coyhaique",
+          "credit": "Wikimedia Commons",
+          "license": "CC BY-SA 3.0"
         }
       ],
       "notes": [
@@ -233,22 +209,10 @@
       "reviewCount": 8450,
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&auto=format&fit=crop",
-          "caption": "Sonnenuntergang am Lago General Carrera",
-          "credit": "Andrés Peña",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1543957766-0fa3a4f12fd1?w=900&auto=format&fit=crop",
-          "caption": "Boote im stillen Wasser des Lago General Carrera",
-          "credit": "Joel Vodell",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=900&auto=format&fit=crop",
-          "caption": "Gletscherblaues Wasser auf dem Weg zu den Marble Caves",
-          "credit": "Jonatan Pie",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Catedral_de_M%C3%A1rmol_en_Lago_General_Carrera.jpg",
+          "caption": "Lago General Carrera bei Puerto Río Tranquilo",
+          "credit": "Wikimedia Commons / Nicolás Lara",
+          "license": "CC BY-SA 3.0"
         }
       ],
       "notes": [
@@ -277,21 +241,9 @@
       "reviewCount": 12650,
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1542044801-287cbc0d41d4?w=800&auto=format&fit=crop",
-          "caption": "Lichtspiele in den Capillas de Mármol",
-          "credit": "Matías Silva",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Catedral_de_M%C3%A1rmol%2C_Chile_2019.jpg",
-          "caption": "Bootsausflug direkt in die Capillas de Mármol",
-          "credit": "Wikimedia Commons",
-          "license": "CC BY-SA 4.0"
-        },
-        {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Capillas_de_M%C3%A1rmol.JPG",
-          "caption": "Türkises Wasser spiegelt die Marmorformationen",
-          "credit": "Wikimedia Commons",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Capillas_de_Marmol.JPG",
+          "caption": "Capillas de Mármol",
+          "credit": "Wikimedia Commons / Anne Sophie",
           "license": "CC BY-SA 3.0"
         }
       ],
@@ -321,22 +273,10 @@
       "reviewCount": 5240,
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&auto=format&fit=crop",
-          "caption": "Trail im Parque Patagonia",
-          "credit": "Felipe Santander",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=900&auto=format&fit=crop",
-          "caption": "Guanacos grasen vor den Bergen im Parque Patagonia",
-          "credit": "Nathan Anderson",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=900&auto=format&fit=crop",
-          "caption": "Weite Täler und Flüsse auf den Wandertrails",
-          "credit": "Nicolas Prieto",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/2/22/Valle_de_Chacabuco%2C_Parque_Patagonia.jpg",
+          "caption": "Valle Chacabuco im Parque Patagonia",
+          "credit": "Wikimedia Commons / The.joker.j",
+          "license": "CC BY-SA 4.0"
         }
       ],
       "notes": [
@@ -365,22 +305,10 @@
       "reviewCount": 6230,
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-          "caption": "Holzstege von Caleta Tortel",
-          "credit": "Ignacia Rojas",
-          "license": "Unsplash License"
-        },
-        {
           "url": "https://upload.wikimedia.org/wikipedia/commons/8/80/Caleta_Tortel_02.jpg",
-          "caption": "Holzstege zwischen den Stelzhäusern von Caleta Tortel",
-          "credit": "Wikimedia Commons",
-          "license": "CC BY 2.5"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=900&auto=format&fit=crop",
-          "caption": "Stege durch dichten Südbuchenwald am Fjord",
-          "credit": "Jason Blackeye",
-          "license": "Unsplash License"
+          "caption": "Holzstege von Caleta Tortel",
+          "credit": "Wikimedia Commons / Pato Novoa",
+          "license": "CC BY 2.0"
         }
       ],
       "notes": [
@@ -526,16 +454,10 @@
       "url": "https://www.pampaslodge.cl",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1505691723518-36a5ac3be353?w=800&auto=format&fit=crop",
-          "caption": "Gemütliche Suite mit Talblick",
-          "credit": "Paula Ortiz",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-          "caption": "Stimmungsbild aus Chile für die Travel Experience",
-          "credit": "Unsplash",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Coyhaique10.jpg",
+          "caption": "Blick auf Coyhaique",
+          "credit": "Wikimedia Commons",
+          "license": "CC BY-SA 3.0"
         }
       ]
     },
@@ -553,16 +475,10 @@
       "url": "https://www.mallincolorado.com",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1505691723549-5b9d7d0fba51?w=800&auto=format&fit=crop",
-          "caption": "Blockhütte mit Seeblick",
-          "credit": "Francisca León",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-          "caption": "Stimmungsbild aus Chile für die Travel Experience",
-          "credit": "Unsplash",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Catedral_de_M%C3%A1rmol_en_Lago_General_Carrera.jpg",
+          "caption": "Lodge am Lago General Carrera",
+          "credit": "Wikimedia Commons / Nicolás Lara",
+          "license": "CC BY-SA 3.0"
         }
       ]
     },
@@ -580,16 +496,10 @@
       "url": "https://www.explora.com",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1519824145371-296894a0daa9?w=800&auto=format&fit=crop",
-          "caption": "Explora Lodge im Tal Chacabuco",
-          "credit": "Valentina Vergara",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-          "caption": "Stimmungsbild aus Chile für die Travel Experience",
-          "credit": "Unsplash",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/2/22/Valle_de_Chacabuco%2C_Parque_Patagonia.jpg",
+          "caption": "Lodge im Parque Patagonia",
+          "credit": "Wikimedia Commons / The.joker.j",
+          "license": "CC BY-SA 4.0"
         }
       ]
     },
@@ -607,16 +517,10 @@
       "url": "https://www.entrehielos.cl",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&auto=format&fit=crop",
-          "caption": "Zimmer mit Blick auf die Fjorde",
-          "credit": "Andrés Peña",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-          "caption": "Stimmungsbild aus Chile für die Travel Experience",
-          "credit": "Unsplash",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/80/Caleta_Tortel_02.jpg",
+          "caption": "Lodge in Caleta Tortel",
+          "credit": "Wikimedia Commons / Pato Novoa",
+          "license": "CC BY 2.0"
         }
       ]
     }
@@ -640,16 +544,10 @@
       "reservation": "Empfohlen",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=800&auto=format&fit=crop",
-          "caption": "Holzofenpizza in Coyhaique",
-          "credit": "Sofía Bravo",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-          "caption": "Stimmungsbild aus Chile für die Travel Experience",
-          "credit": "Unsplash",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Coyhaique10.jpg",
+          "caption": "Pizza in Coyhaique",
+          "credit": "Wikimedia Commons",
+          "license": "CC BY-SA 3.0"
         }
       ]
     },
@@ -671,16 +569,10 @@
       "reservation": "Walk-in",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&auto=format&fit=crop",
-          "caption": "Burger & Beer nach einem langen Fahrtag",
-          "credit": "Camila Gutiérrez",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-          "caption": "Stimmungsbild aus Chile für die Travel Experience",
-          "credit": "Unsplash",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Catedral_de_M%C3%A1rmol_en_Lago_General_Carrera.jpg",
+          "caption": "Brauerei am See",
+          "credit": "Wikimedia Commons / Nicolás Lara",
+          "license": "CC BY-SA 3.0"
         }
       ]
     },
@@ -702,16 +594,10 @@
       "reservation": "Walk-in",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1504753793650-d4a2b783c15e?w=800&auto=format&fit=crop",
-          "caption": "Nachmittagskaffee auf der Holzterrasse",
-          "credit": "María Antonia",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-          "caption": "Stimmungsbild aus Chile für die Travel Experience",
-          "credit": "Unsplash",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/80/Caleta_Tortel_02.jpg",
+          "caption": "Café auf den Stegen",
+          "credit": "Wikimedia Commons / Pato Novoa",
+          "license": "CC BY 2.0"
         }
       ]
     }

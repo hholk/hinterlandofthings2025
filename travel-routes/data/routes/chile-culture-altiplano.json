@@ -22,24 +22,24 @@
     "highlightImages": [
       {
         "title": "Mumien im Museo de Sitio Colón 10",
-        "image": "https://images.unsplash.com/photo-1516763296043-0b0b0bf7ba92?w=900&auto=format&fit=crop",
-        "caption": "Chinchorro-Mumien in den Vitrinen des Museums Colón 10.",
-        "source": "Unsplash",
-        "license": "Unsplash License"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Museo_Arqueol%C3%B3gico_San_Miguel_de_Azapa_4.jpg",
+        "caption": "Museo Arqueológico San Miguel de Azapa.",
+        "source": "Wikimedia Commons / Coso",
+        "license": "CC BY-SA 4.0"
       },
       {
         "title": "Laguna Chungará im Lauca-Nationalpark",
-        "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900&auto=format&fit=crop",
-        "caption": "Schneeberge spiegeln sich im blauen Wasser der Laguna Chungará.",
-        "source": "Unsplash",
-        "license": "Unsplash License"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/de/Lago_Chungar%C3%A1_-_Parque_Nacional_Lauca_-_Regi%C3%B3n_de_Arica_y_Parinacota.JPG",
+        "caption": "Laguna Chungará und Vulkan Parinacota.",
+        "source": "Wikimedia Commons / A. Duarte",
+        "license": "CC BY-SA 3.0"
       },
       {
         "title": "UNESCO-Geisterstadt Humberstone",
-        "image": "https://images.unsplash.com/photo-1508261306217-84f8f9a02765?w=900&auto=format&fit=crop",
-        "caption": "Verlassene Industriehallen in der ehemaligen Salpeter-Stadt Humberstone.",
-        "source": "Unsplash",
-        "license": "Unsplash License"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Oficina_Salitrera_Humberstone.jpg",
+        "caption": "Verlassene Gebäude der Salpeterstadt Humberstone.",
+        "source": "Wikimedia Commons / Pato Novoa",
+        "license": "CC BY 2.0"
       }
     ],
     "scores": {
@@ -189,22 +189,10 @@
       "reviewCount": 17890,
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&auto=format&fit=crop",
-          "caption": "Abendlicht über dem Morro de Arica",
-          "credit": "Ignacio Rojas",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1505764706515-aa95265c5abc?w=900&auto=format&fit=crop",
-          "caption": "Morro de Arica über dem Pazifik",
-          "credit": "Cam Adams",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900&auto=format&fit=crop",
-          "caption": "Sonnenuntergang an der Uferpromenade von Arica",
-          "credit": "Sebastien Gabriel",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Morro_de_Arica_%2849557003417%29.jpg",
+          "caption": "Blick auf den Morro de Arica",
+          "credit": "Wikimedia Commons / Ministerio de Bienes Nacionales",
+          "license": "CC BY 2.0"
         }
       ],
       "notes": [
@@ -233,22 +221,10 @@
       "reviewCount": 8540,
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1516763296043-0b0b0bf7ba92?w=800&auto=format&fit=crop",
-          "caption": "Chinchorro-Mumie im Museum Colón 10",
-          "credit": "Camila Bustos",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=900&auto=format&fit=crop",
-          "caption": "Olivenhaine und Felder im fruchtbaren Valle de Azapa",
-          "credit": "Tim Mossholder",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1520333789090-1afc82db536a?w=900&auto=format&fit=crop",
-          "caption": "Archäologische Funde im Museo Colón 10",
-          "credit": "María Elena Cruz",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Museo_Arqueol%C3%B3gico_San_Miguel_de_Azapa_4.jpg",
+          "caption": "Museo Arqueológico San Miguel de Azapa",
+          "credit": "Wikimedia Commons / Coso",
+          "license": "CC BY-SA 4.0"
         }
       ],
       "notes": [
@@ -277,22 +253,10 @@
       "reviewCount": 6120,
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1526401485004-46910ecc8e51?w=800&auto=format&fit=crop",
-          "caption": "Adobe-Häuser in Putre",
-          "credit": "Marcelo Díaz",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1529006557810-274b9b2fc783?w=900&auto=format&fit=crop",
-          "caption": "Weiß getünchte Kirche am Hauptplatz von Putre",
-          "credit": "Gabriel Pineda",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900&auto=format&fit=crop",
-          "caption": "Hochandine Kulisse rund um das Dorf Putre",
-          "credit": "Johannes Plenio",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/5/57/Comuna_de_Putre%2C_vista_parcial_con_la_iglesia%2C_Provincia_de_Parinacota%2C_norte_de_Chile.jpg",
+          "caption": "Dorfansicht von Putre mit Kirche",
+          "credit": "Wikimedia Commons / Carlos Teixidor Cadenas",
+          "license": "CC BY-SA 4.0"
         }
       ],
       "notes": [
@@ -321,22 +285,10 @@
       "reviewCount": 10230,
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&auto=format&fit=crop",
-          "caption": "Laguna Chungará und Vulkan Parinacota",
-          "credit": "Sebastián Pardo",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1500534314211-4f3679c1c9c8?w=900&auto=format&fit=crop",
-          "caption": "Spiegelung der Vulkane an der Laguna Chungará",
-          "credit": "Sander Wehkamp",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=900&auto=format&fit=crop",
-          "caption": "Vicuñas vor schneebedeckten Gipfeln im Lauca NP",
-          "credit": "Jonatan Pie",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/de/Lago_Chungar%C3%A1_-_Parque_Nacional_Lauca_-_Regi%C3%B3n_de_Arica_y_Parinacota.JPG",
+          "caption": "Laguna Chungará im Lauca Nationalpark",
+          "credit": "Wikimedia Commons / A. Duarte",
+          "license": "CC BY-SA 3.0"
         }
       ],
       "notes": [
@@ -365,22 +317,10 @@
       "reviewCount": 18920,
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1543877087-ebf71f017192?w=800&auto=format&fit=crop",
-          "caption": "Koloniale Holzveranden in Iquique",
-          "credit": "Rodrigo Ruiz",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=900&auto=format&fit=crop",
-          "caption": "Holzarchitektur an der Baquedano Street",
-          "credit": "Jason Blackeye",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1505761671935-60b3a7427bad?w=900&auto=format&fit=crop",
-          "caption": "Wellenreiten an den Stadtstränden von Iquique",
-          "credit": "Jeremy Bishop",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Paseo_Baquedano.JPG",
+          "caption": "Paseo Baquedano in Iquique",
+          "credit": "Wikimedia Commons / A. Duarte",
+          "license": "CC BY-SA 3.0"
         }
       ],
       "notes": [
@@ -409,22 +349,10 @@
       "reviewCount": 15430,
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1542044801-287cbc0d41d4?w=800&auto=format&fit=crop",
-          "caption": "Verlassene Turnhalle in Humberstone",
-          "credit": "Matías Silva",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1508261306217-84f8f9a02765?w=900&auto=format&fit=crop",
-          "caption": "Verlassene Industrieanlagen in Humberstone",
-          "credit": "Peter Thomas",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900&auto=format&fit=crop",
-          "caption": "Weite Atacama-Ebene rund um die Salpeterstadt",
-          "credit": "Johannes Plenio",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Oficina_Salitrera_Humberstone.jpg",
+          "caption": "Oficina Salitrera Humberstone",
+          "credit": "Wikimedia Commons / Pato Novoa",
+          "license": "CC BY 2.0"
         }
       ],
       "notes": [
@@ -453,22 +381,10 @@
       "reviewCount": 6980,
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1530988405631-f7aa0834e4c4?w=800&auto=format&fit=crop",
-          "caption": "Abenddämmerung über Antofagasta",
-          "credit": "Ignacio Pardo",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1541959831-5f4b7ee9c042?w=900&auto=format&fit=crop",
-          "caption": "Boardingbereich des Flughafens Andrés Sabella",
-          "credit": "Alev Takil",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900&auto=format&fit=crop",
-          "caption": "Küstenlinie von Antofagasta aus der Luft",
-          "credit": "Johannes Plenio",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/77/La_Portada%2C_Antofagasta%2C_Regi%C3%B3n_de_Antofagasta%2C_Chile._-_panoramio.jpg",
+          "caption": "La Portada bei Antofagasta",
+          "credit": "Wikimedia Commons / Patricio Cornejo",
+          "license": "CC BY-SA 3.0"
         }
       ],
       "notes": [
@@ -636,16 +552,10 @@
       "url": "https://www.antay.cl",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1505691723518-36a5ac3be353?w=800&auto=format&fit=crop",
-          "caption": "Zimmer mit Blick auf den Pazifik",
-          "credit": "Paula Ortiz",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-          "caption": "Stimmungsbild aus Chile für die Travel Experience",
-          "credit": "Unsplash",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Morro_de_Arica_%2849557003417%29.jpg",
+          "caption": "Hotel in Arica mit Blick auf den Morro",
+          "credit": "Wikimedia Commons / Ministerio de Bienes Nacionales",
+          "license": "CC BY 2.0"
         }
       ]
     },
@@ -663,16 +573,10 @@
       "url": "https://www.terracelodge.com",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&auto=format&fit=crop",
-          "caption": "Zimmer mit Alpaka-Deko",
-          "credit": "Laura Espinoza",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-          "caption": "Stimmungsbild aus Chile für die Travel Experience",
-          "credit": "Unsplash",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/5/57/Comuna_de_Putre%2C_vista_parcial_con_la_iglesia%2C_Provincia_de_Parinacota%2C_norte_de_Chile.jpg",
+          "caption": "Lodge in Putre",
+          "credit": "Wikimedia Commons / Carlos Teixidor Cadenas",
+          "license": "CC BY-SA 4.0"
         }
       ]
     },
@@ -690,16 +594,10 @@
       "url": "https://www.hotelgavina.cl",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?w=800&auto=format&fit=crop",
-          "caption": "Pool mit Meerblick in Iquique",
-          "credit": "Laura Espinoza",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-          "caption": "Stimmungsbild aus Chile für die Travel Experience",
-          "credit": "Unsplash",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Paseo_Baquedano.JPG",
+          "caption": "Hotel nahe Paseo Baquedano",
+          "credit": "Wikimedia Commons / A. Duarte",
+          "license": "CC BY-SA 3.0"
         }
       ]
     },
@@ -717,16 +615,10 @@
       "url": "https://www.enjoy.cl",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1568495248636-6432b97bd949?w=800&auto=format&fit=crop",
-          "caption": "Zimmer mit Blick auf die Bucht",
-          "credit": "Ignacio Herrera",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-          "caption": "Stimmungsbild aus Chile für die Travel Experience",
-          "credit": "Unsplash",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/77/La_Portada%2C_Antofagasta%2C_Regi%C3%B3n_de_Antofagasta%2C_Chile._-_panoramio.jpg",
+          "caption": "Hotel in Antofagasta",
+          "credit": "Wikimedia Commons / Patricio Cornejo",
+          "license": "CC BY-SA 3.0"
         }
       ]
     }
@@ -750,16 +642,10 @@
       "reservation": "Telefonisch",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1481930955990-333f99e6e30b?w=800&auto=format&fit=crop",
-          "caption": "Seafood in Arica",
-          "credit": "Teresa Moya",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-          "caption": "Stimmungsbild aus Chile für die Travel Experience",
-          "credit": "Unsplash",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Morro_de_Arica_%2849557003417%29.jpg",
+          "caption": "Seafood mit Blick auf den Morro",
+          "credit": "Wikimedia Commons / Ministerio de Bienes Nacionales",
+          "license": "CC BY 2.0"
         }
       ]
     },
@@ -781,16 +667,10 @@
       "reservation": "Walk-in",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&auto=format&fit=crop",
-          "caption": "Aymara-Gerichte in Putre",
-          "credit": "Camila Gutiérrez",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-          "caption": "Stimmungsbild aus Chile für die Travel Experience",
-          "credit": "Unsplash",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/5/57/Comuna_de_Putre%2C_vista_parcial_con_la_iglesia%2C_Provincia_de_Parinacota%2C_norte_de_Chile.jpg",
+          "caption": "Lokale Küche in Putre",
+          "credit": "Wikimedia Commons / Carlos Teixidor Cadenas",
+          "license": "CC BY-SA 4.0"
         }
       ]
     },
@@ -812,16 +692,10 @@
       "reservation": "Empfohlen",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&auto=format&fit=crop",
-          "caption": "Cocktails in einer historischen Veranda",
-          "credit": "Camila Gutiérrez",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-          "caption": "Stimmungsbild aus Chile für die Travel Experience",
-          "credit": "Unsplash",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Paseo_Baquedano.JPG",
+          "caption": "Bar in historischer Villa",
+          "credit": "Wikimedia Commons / A. Duarte",
+          "license": "CC BY-SA 3.0"
         }
       ]
     }

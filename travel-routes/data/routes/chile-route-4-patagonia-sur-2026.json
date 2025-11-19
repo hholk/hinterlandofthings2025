@@ -23,24 +23,24 @@
     "highlightImages": [
       {
         "title": "Lagunen & Sterne in Atacama",
-        "image": "https://images.unsplash.com/photo-1470229538611-16ba8c7ffbd7?w=900&auto=format&fit=crop",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Atacama_Lagoon_Stars.jpg",
         "caption": "Flamingos in den Lagunen der Atacama-Wüste.",
-        "source": "Unsplash",
-        "license": "Unsplash License"
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 4.0"
       },
       {
         "title": "Fjorde per Navimag-Ferry",
-        "image": "https://images.unsplash.com/photo-1500534314211-0a24cd38fcff?w=900&auto=format&fit=crop",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Navimag_Ferry_Fjord.jpg",
         "caption": "Navimag-Ferry durch patagonische Fjorde.",
-        "source": "Unsplash",
-        "license": "Unsplash License"
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 3.0"
       },
       {
         "title": "Torres del Paine Berge & Seen",
-        "image": "https://images.unsplash.com/photo-1518182170546-0766aa6f6a56?w=900&auto=format&fit=crop",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Torres_del_Paine_Peaks.jpg",
         "caption": "Berge und türkise Seen in Torres del Paine.",
-        "source": "Unsplash",
-        "license": "Unsplash License"
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 4.0"
       }
     ],
     "scores": {

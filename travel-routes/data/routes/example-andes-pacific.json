@@ -15,24 +15,24 @@
     "highlightImages": [
       {
         "title": "Santiago de Chile",
-        "image": "https://images.unsplash.com/photo-1505761671935-60b3a7427bad?w=900&auto=format&fit=crop",
-        "caption": "Skyline mit Andenblick kurz nach Sonnenaufgang.",
-        "source": "Unsplash",
-        "license": "Unsplash License"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Plaza_de_Armas_Santiago_Chile.jpg",
+        "caption": "Die Plaza de Armas im historischen Zentrum von Santiago.",
+        "source": "Wikimedia Commons / Deensel",
+        "license": "CC BY 2.0"
       },
       {
-        "title": "Valparaíso Streetart",
-        "image": "https://images.pexels.com/photos/3278210/pexels-photo-3278210.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-        "caption": "Bunte Treppenmurals im Cerro Alegre.",
-        "source": "Pexels",
-        "license": "Pexels License"
+        "title": "Valparaíso",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/87/Cerro_Alegre%2C_Valpara%C3%ADso%2C_Chile2.jpg",
+        "caption": "Bunte Häuser und steile Gassen am Cerro Alegre.",
+        "source": "Wikimedia Commons / Deensel",
+        "license": "CC BY 3.0"
       },
       {
         "title": "Cajón del Maipo",
-        "image": "https://images.unsplash.com/photo-1592436236067-7a356692507e?w=900&auto=format&fit=crop",
-        "caption": "Türkises Wasser des Embalse El Yeso vor schneebedeckten Andengipfeln.",
-        "source": "Unsplash",
-        "license": "Unsplash License"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/6/67/Laguna_Negra_y_Embalse_El_Yeso.jpg",
+        "caption": "Der Embalse El Yeso in den Anden.",
+        "source": "Wikimedia Commons / Deensel",
+        "license": "CC BY 2.0"
       }
     ],
     "scores": {

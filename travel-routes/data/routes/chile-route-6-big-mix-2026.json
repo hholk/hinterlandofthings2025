@@ -23,24 +23,24 @@
     "highlightImages": [
       {
         "title": "Lagunen & Sterne in San Pedro",
-        "image": "https://images.unsplash.com/photo-1526481280695-3c4692349813?w=900&auto=format&fit=crop",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Atacama_night_sky_revealed_%28uhd_img_2563pv1-cc%29.jpg",
         "caption": "Sternklare Nacht über den Salaren und Lagunen der Atacama.",
-        "source": "Unsplash",
-        "license": "Unsplash License"
+        "source": "Wikimedia Commons",
+        "license": "CC BY 4.0"
       },
       {
         "title": "Vulkanblick am Llanquihue",
-        "image": "https://images.unsplash.com/photo-1526401485004-46910ecc8e51?w=900&auto=format&fit=crop",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Osorno_Volcano.jpg",
         "caption": "Osorno-Spitze über dem ruhigen Llanquihue-See bei Puerto Varas.",
-        "source": "Unsplash",
-        "license": "Unsplash License"
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 3.0"
       },
       {
         "title": "Streetart & Wein an der Küste",
-        "image": "https://images.unsplash.com/photo-1529346528741-5e65d6d5bbff?w=900&auto=format&fit=crop",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Street_art%2C_Valpara%C3%ADso_05.jpg",
         "caption": "Küstenflair mit Murals in Valparaíso und nahegelegenen Weingärten.",
-        "source": "Unsplash",
-        "license": "Unsplash License"
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 4.0"
       }
     ],
     "scores": {

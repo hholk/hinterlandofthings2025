@@ -20,25 +20,25 @@
     ],
     "highlightImages": [
       {
-        "title": "Streetart & Aufzüge in Valparaíso",
-        "image": "https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-        "caption": "Farbige Fassaden und historische Aufzüge im Cerro Alegre.",
-        "source": "Pexels",
-        "license": "Pexels License"
+        "title": "Valparaíso Cerro Alegre",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/87/Cerro_Alegre%2C_Valpara%C3%ADso%2C_Chile2.jpg",
+        "caption": "Bunte Häuser und steile Gassen am Cerro Alegre.",
+        "source": "Wikimedia Commons / Diego Delso",
+        "license": "CC BY-SA"
       },
       {
-        "title": "Sternegucken im Valle del Elqui",
-        "image": "https://images.unsplash.com/photo-1518066000714-58c45f1a2c0a?w=900&auto=format&fit=crop",
-        "caption": "Kuppeln des Observatorio Del Pangue unter dem klaren Wüstenhimmel.",
-        "source": "Unsplash",
-        "license": "Unsplash License"
+        "title": "Sterne im Valle del Elqui",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/01/Nocturna_mamalluca_obs.jpg",
+        "caption": "Sternenhimmel über dem Observatorium Mamalluca.",
+        "source": "Wikimedia Commons / A. Tudor",
+        "license": "CC BY-SA 3.0"
       },
       {
-        "title": "Türkises Wasser von Bahía Inglesa",
-        "image": "https://images.unsplash.com/photo-1595387631603-71af72de1e21?w=900&auto=format&fit=crop",
-        "caption": "Heller Sandstrand und ruhige Bucht in Bahía Inglesa.",
-        "source": "Unsplash",
-        "license": "Unsplash License"
+        "title": "Bahía Inglesa",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Playa%2C_Bahia_Inglesa.JPG",
+        "caption": "Türkises Wasser und weißer Sand in Bahía Inglesa.",
+        "source": "Wikimedia Commons / Mariangeles",
+        "license": "CC BY-SA 3.0"
       }
     ],
     "scores": {
@@ -144,22 +144,10 @@
       "reviewCount": 26740,
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1526402462922-1e1d481d87fd?w=800&auto=format&fit=crop",
-          "caption": "Streetart im Cerro Alegre",
-          "credit": "Fabiola Peñailillo",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1542219349-1f2c1a174b90?w=900&auto=format&fit=crop",
-          "caption": "Bunte Häuser und Street-Art am Cerro Alegre",
-          "credit": "Fionn Große",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1505761671935-60b3a7427bad?w=900&auto=format&fit=crop",
-          "caption": "Aufzug und Treppen mit Blick auf den Hafen",
-          "credit": "Jeremy Bishop",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/87/Cerro_Alegre%2C_Valpara%C3%ADso%2C_Chile2.jpg",
+          "caption": "Blick auf den Cerro Alegre",
+          "credit": "Diego Delso",
+          "license": "CC BY-SA"
         }
       ],
       "notes": [
@@ -188,22 +176,10 @@
       "reviewCount": 18320,
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&auto=format&fit=crop",
-          "caption": "Sonnenuntergang an der Küste von La Serena",
-          "credit": "Cristóbal Maturana",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900&auto=format&fit=crop",
-          "caption": "Sanfte Wellen an der Avenida del Mar",
-          "credit": "Sebastien Gabriel",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900&auto=format&fit=crop",
-          "caption": "Leuchtturm El Faro im goldenen Licht",
-          "credit": "Johannes Plenio",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Faro_Monumental_de_La_Serena._09.12.2022.jpg",
+          "caption": "Faro Monumental de La Serena",
+          "credit": "Wikimedia Commons",
+          "license": "CC BY-SA 4.0"
         }
       ],
       "notes": [
@@ -232,22 +208,10 @@
       "reviewCount": 8210,
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1473177104440-ffee2f376098?w=800&auto=format&fit=crop",
-          "caption": "Sternklare Nächte über dem Valle del Elqui",
-          "credit": "Ignacio Contreras",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1520333789090-1afc82db536a?w=900&auto=format&fit=crop",
-          "caption": "Plaza Gabriela Mistral mit Palmen",
-          "credit": "María Elena Cruz",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1476611338391-6f395a0ebc71?w=900&auto=format&fit=crop",
-          "caption": "Sternenklare Nächte über dem Elqui-Tal",
-          "credit": "Vincent Ledvina",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Pisco_Elqui01.jpg",
+          "caption": "Weinberge im Valle del Elqui",
+          "credit": "Andrés Otárola",
+          "license": "CC BY 2.0"
         }
       ],
       "notes": [
@@ -276,22 +240,10 @@
       "reviewCount": 15400,
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&auto=format&fit=crop",
-          "caption": "Karibikgefühl in der Atacama",
-          "credit": "Cristóbal Maturana",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900&auto=format&fit=crop",
-          "caption": "Türkises Wasser an der Playa La Piscina",
-          "credit": "Sebastien Gabriel",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900&auto=format&fit=crop&sat=-20",
-          "caption": "Weiße Sandbucht mit ruhiger Brandung",
-          "credit": "Sebastien Gabriel",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Playa%2C_Bahia_Inglesa.JPG",
+          "caption": "Strand von Bahía Inglesa",
+          "credit": "Mariangeles",
+          "license": "CC BY-SA 3.0"
         }
       ],
       "notes": [
@@ -320,22 +272,10 @@
       "reviewCount": 9120,
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&auto=format&fit=crop",
-          "caption": "Kaktuspfade mit Meerblick",
-          "credit": "Sebastián Pardo",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900&auto=format&fit=crop",
-          "caption": "Wüstenküste im Parque Nacional Pan de Azúcar",
-          "credit": "Johannes Plenio",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=900&auto=format&fit=crop",
-          "caption": "Kakteenhügel mit Sicht auf die Isla Pan de Azúcar",
-          "credit": "Nathan Anderson",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Pan_de_Azucar_National_Park.jpg",
+          "caption": "Küste im Nationalpark Pan de Azúcar",
+          "credit": "Wikimedia Commons",
+          "license": "CC BY 2.0"
         }
       ],
       "notes": [
@@ -364,22 +304,10 @@
       "reviewCount": 4680,
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1500043207442-dc87aeac9cc6?w=800&auto=format&fit=crop",
-          "caption": "Terminalgebäude des Flughafens Copiapó",
-          "credit": "Andrés Molina",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=900&auto=format&fit=crop",
-          "caption": "Anflug über die Atacamawüste nach Copiapó",
-          "credit": "Matthew Smith",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1518552781800-1fb841be351d?w=900&auto=format&fit=crop",
-          "caption": "Flughafengebäude Desierto de Atacama in der Abendsonne",
-          "credit": "Rocío Vega",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Aeropuerto_Desierto_de_Atacama.jpg",
+          "caption": "Flughafen Desierto de Atacama",
+          "credit": "Franzamorano.s",
+          "license": "CC BY-SA 3.0"
         }
       ],
       "notes": [
@@ -543,16 +471,10 @@
       "url": "https://www.casahigueras.cl",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=800&auto=format&fit=crop",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/87/Cerro_Alegre%2C_Valpara%C3%ADso%2C_Chile2.jpg",
           "caption": "Boutique-Hotel mit Blick auf den Pazifik",
-          "credit": "Daniela Muñoz",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-          "caption": "Stimmungsbild aus Chile für die Travel Experience",
-          "credit": "Unsplash",
-          "license": "Unsplash License"
+          "credit": "Diego Delso",
+          "license": "CC BY-SA"
         }
       ]
     },
@@ -570,16 +492,10 @@
       "url": "https://www.elquidomos.cl",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1505691723518-36a5ac3be353?w=800&auto=format&fit=crop",
-          "caption": "Glasdom mit Sternenhimmel",
-          "credit": "Paula Ortiz",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-          "caption": "Stimmungsbild aus Chile für die Travel Experience",
-          "credit": "Unsplash",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Nocturna_mamalluca_obs.jpg",
+          "caption": "Übernachten unter dem Sternenhimmel",
+          "credit": "A. Tudor",
+          "license": "CC BY-SA 3.0"
         }
       ]
     },
@@ -597,16 +513,10 @@
       "url": "https://www.hotelbahiacesar.cl",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?w=800&auto=format&fit=crop",
-          "caption": "Poolbereich am Strand",
-          "credit": "Laura Espinoza",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-          "caption": "Stimmungsbild aus Chile für die Travel Experience",
-          "credit": "Unsplash",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Playa%2C_Bahia_Inglesa.JPG",
+          "caption": "Hotel direkt am Strand",
+          "credit": "Mariangeles",
+          "license": "CC BY-SA 3.0"
         }
       ]
     },
@@ -624,16 +534,10 @@
       "url": "https://www.pandeazucar.eco",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1469799840673-741650e534a4?w=800&auto=format&fit=crop",
-          "caption": "Glamping-Zelte am Pazifik",
-          "credit": "Héctor Márquez",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-          "caption": "Stimmungsbild aus Chile für die Travel Experience",
-          "credit": "Unsplash",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Pan_de_Azucar_National_Park.jpg",
+          "caption": "Eco-Lodge im Nationalpark",
+          "credit": "Wikimedia Commons",
+          "license": "CC BY 2.0"
         }
       ]
     }
@@ -657,16 +561,10 @@
       "reservation": "Walk-in",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1529257414771-1960ab1f3d30?w=800&auto=format&fit=crop",
-          "caption": "Fischstände im Mercado Cardonal",
-          "credit": "Nicolás Pérez",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-          "caption": "Stimmungsbild aus Chile für die Travel Experience",
-          "credit": "Unsplash",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/87/Cerro_Alegre%2C_Valpara%C3%ADso%2C_Chile2.jpg",
+          "caption": "Frischer Fisch am Markt",
+          "credit": "Diego Delso",
+          "license": "CC BY-SA"
         }
       ]
     },
@@ -688,16 +586,10 @@
       "reservation": "Online",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?w=800&auto=format&fit=crop",
-          "caption": "Degustation im Valle del Elqui",
-          "credit": "Ignacio Rodríguez",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-          "caption": "Stimmungsbild aus Chile für die Travel Experience",
-          "credit": "Unsplash",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Pisco_Elqui01.jpg",
+          "caption": "Pisco Verkostung",
+          "credit": "Andrés Otárola",
+          "license": "CC BY 2.0"
         }
       ]
     },
@@ -719,16 +611,10 @@
       "reservation": "Telefonisch",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1481930955990-333f99e6e30b?w=800&auto=format&fit=crop",
-          "caption": "Meeresfrüchte direkt am Strand",
-          "credit": "Teresa Moya",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-          "caption": "Stimmungsbild aus Chile für die Travel Experience",
-          "credit": "Unsplash",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Playa%2C_Bahia_Inglesa.JPG",
+          "caption": "Meeresfrüchte mit Meerblick",
+          "credit": "Mariangeles",
+          "license": "CC BY-SA 3.0"
         }
       ]
     }

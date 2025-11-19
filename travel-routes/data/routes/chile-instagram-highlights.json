@@ -21,24 +21,24 @@
     "highlightImages": [
       {
         "title": "Milchstraße über San Pedro de Atacama",
-        "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900&auto=format&fit=crop",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/9/9c/The_Milky_Way_above_the_Atacama_Desert.jpg",
         "caption": "Klarer Nachthimmel mit sichtbarer Milchstraße in der Atacama.",
-        "source": "Unsplash",
-        "license": "Unsplash License"
+        "source": "Wikimedia Commons / ESO/Y. Beletsky",
+        "license": "CC BY 4.0"
       },
       {
         "title": "El Tatio Geysire bei Sonnenaufgang",
-        "image": "https://images.unsplash.com/photo-1518182170546-0766aa6f1f75?w=900&auto=format&fit=crop",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/5/5a/G%C3%A9iseres_del_Tatio%2C_Atacama%2C_Chile%2C_2016-02-01%2C_DD_36-38_HDR.JPG",
         "caption": "Sonnendampf über den Geysiren im Morgengrauen.",
-        "source": "Unsplash",
-        "license": "Unsplash License"
+        "source": "Wikimedia Commons / Diego Delso",
+        "license": "CC BY-SA 3.0"
       },
       {
         "title": "Laguna Amarga mit Torres-Spiegelung",
-        "image": "https://images.unsplash.com/photo-1544989164-31dc3c645987?w=900&auto=format&fit=crop",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Torres_del_Paine_and_lake_reflection.jpg",
         "caption": "Torres del Paine spiegeln sich in der Laguna Amarga.",
-        "source": "Unsplash",
-        "license": "Unsplash License"
+        "source": "Wikimedia Commons / ThartmannWiki",
+        "license": "CC BY-SA 4.0"
       }
     ],
     "scores": {
@@ -100,22 +100,10 @@
       "reviewCount": 50320,
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1543472750-169a8f02c545?w=800&auto=format&fit=crop",
-          "caption": "Blick vom Sky Costanera kurz nach Sonnenuntergang",
-          "credit": "Carolina Lagos",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1505761671935-60b3a7427bad?w=900&auto=format&fit=crop",
-          "caption": "Skyline Santiagos mit dem Costanera-Tower",
-          "credit": "Jeremy Bishop",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1526401485004-46910ecc8e51?w=900&auto=format&fit=crop",
-          "caption": "Aussichtsplattform über der Stadt bei klarem Licht",
-          "credit": "Rodrigo Souza",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Santiago_from_sky_costanera_2018.jpg",
+          "caption": "Blick vom Sky Costanera über Santiago",
+          "credit": "Wikimedia Commons",
+          "license": "CC BY-SA 4.0"
         }
       ],
       "notes": [
@@ -144,22 +132,10 @@
       "reviewCount": 42876,
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1502920514313-52581002a659?w=800&auto=format&fit=crop",
-          "caption": "Boardingbereich am frühen Morgen",
-          "credit": "Agustín Lautaro",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=900&auto=format&fit=crop",
-          "caption": "Abflughalle mit Blick auf die Startbahnen in Santiago",
-          "credit": "Ahsan S.",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1504198453319-5ce911bafcde?w=900&auto=format&fit=crop",
-          "caption": "Andenpanorama beim Start über Santiago",
-          "credit": "Flávio Amiel",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Santiago_from_sky_costanera_2018.jpg",
+          "caption": "Abflug über Santiago",
+          "credit": "Wikimedia Commons",
+          "license": "CC BY-SA 4.0"
         }
       ],
       "notes": [
@@ -188,22 +164,10 @@
       "reviewCount": 7210,
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1530988405631-f7aa0834e4c4?w=800&auto=format&fit=crop",
-          "caption": "Anflug auf die Kupferstadt Calama",
-          "credit": "Ignacio Pardo",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1518552781800-1fb841be351d?w=900&auto=format&fit=crop",
-          "caption": "LATAM Jets auf dem Vorfeld von Calama",
-          "credit": "Rocío Vega",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=900&auto=format&fit=crop",
-          "caption": "Check-in Bereich vor der Weiterfahrt nach San Pedro",
-          "credit": "Andrés Vera",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Calama_%28Antofagasta%29.-_El_Loa_Airport.jpg",
+          "caption": "Flughafen El Loa, Calama",
+          "credit": "Wikimedia Commons",
+          "license": "CC BY-SA 3.0"
         }
       ],
       "notes": [
@@ -232,22 +196,10 @@
       "reviewCount": 35840,
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1526401485004-46910ecc8e51?w=800&auto=format&fit=crop",
-          "caption": "Staubige Gasse in San Pedro beim Sunset",
-          "credit": "Marcelo Díaz",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1505764706515-aa95265c5abc?w=900&auto=format&fit=crop",
-          "caption": "Adobe-Gassen und Plaza in San Pedro de Atacama",
-          "credit": "Cam Adams",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900&auto=format&fit=crop",
-          "caption": "Vulkan Licancabur im Abendlicht hinter dem Dorf",
-          "credit": "Johannes Plenio",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/San_Pedro_de_Atacama_%28street_view%29.jpg",
+          "caption": "Straßen von San Pedro de Atacama",
+          "credit": "Wikimedia Commons",
+          "license": "CC BY-SA 3.0"
         }
       ],
       "notes": [
@@ -276,22 +228,10 @@
       "reviewCount": 22110,
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1548696319-48ee7535e8b5?w=800&auto=format&fit=crop",
-          "caption": "El Tatio kurz nach Sonnenaufgang",
-          "credit": "Sofía Arancibia",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900&auto=format&fit=crop",
-          "caption": "Dampfende Geysire in der Morgendämmerung",
-          "credit": "Johannes Plenio",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=900&auto=format&fit=crop",
-          "caption": "Thermische Quellen umgeben von Vulkanlandschaft",
-          "credit": "Jonatan Pie",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/G%C3%A9iseres_del_Tatio%2C_Atacama%2C_Chile%2C_2016-02-01%2C_DD_36-38_HDR.JPG",
+          "caption": "El Tatio Geysire",
+          "credit": "Diego Delso",
+          "license": "CC BY-SA 3.0"
         }
       ],
       "notes": [
@@ -320,22 +260,10 @@
       "reviewCount": 9120,
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-          "caption": "Farbschichten im Valle del Arcoíris",
-          "credit": "Ignacia Rojas",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900&auto=format&fit=crop",
-          "caption": "Farbige Felsformationen im Valle del Arcoíris",
-          "credit": "Johannes Plenio",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=900&auto=format&fit=crop",
-          "caption": "Rote, grüne und gelbe Schichten in der Schlucht",
-          "credit": "Nathan Anderson",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Valle_Arcoiris%2C_R%C3%ADo_Grande%2C_Chile%2C_2016-02-05%2C_DD_16-18_PAN.JPG",
+          "caption": "Farbenprächtiges Valle del Arcoíris",
+          "credit": "Diego Delso",
+          "license": "CC BY-SA 3.0"
         }
       ],
       "notes": [
@@ -364,22 +292,10 @@
       "reviewCount": 8030,
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-          "caption": "Runway mit Blick über die Magellanstraße",
-          "credit": "Ignacia Rojas",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900&auto=format&fit=crop",
-          "caption": "Patagonische Ebene rund um den Flughafen Presidente Ibáñez",
-          "credit": "Johannes Plenio",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1530988405631-f7aa0834e4c4?w=900&auto=format&fit=crop",
-          "caption": "Schneebedeckte Gipfel bei Anflug auf Punta Arenas",
-          "credit": "Ignacio Pardo",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Aeropuerto_Punta_Arenas%2C_2019_%2801%29.jpg",
+          "caption": "Flughafen Punta Arenas",
+          "credit": "Wikimedia Commons",
+          "license": "CC BY-SA 4.0"
         }
       ],
       "notes": [
@@ -408,22 +324,10 @@
       "reviewCount": 15480,
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800&auto=format&fit=crop",
-          "caption": "Stillgelegte Pier – Klassiker für Langzeitbelichtungen",
-          "credit": "María Fernanda Rojas",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900&auto=format&fit=crop",
-          "caption": "Stege und Fjordblick in Puerto Natales",
-          "credit": "Johannes Plenio",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=900&auto=format&fit=crop",
-          "caption": "Windgepeitschte Wolken über dem Última-Esperanza-Fjord",
-          "credit": "Jonatan Pie",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Puerto_Natales%2C_old_dock..jpg",
+          "caption": "Historischer Pier in Puerto Natales",
+          "credit": "Felipe.alarcon",
+          "license": "CC BY-SA 3.0"
         }
       ],
       "notes": [
@@ -452,22 +356,10 @@
       "reviewCount": 28760,
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&auto=format&fit=crop",
-          "caption": "Sonnenaufgang an der Laguna Torre",
-          "credit": "Hernán Calderón",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1505678261036-a3fcc5e884ee?w=900&auto=format&fit=crop",
-          "caption": "Türkise Lagune am Fuß der Torres",
-          "credit": "Mads Schmidt Rasmussen",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=900&auto=format&fit=crop",
-          "caption": "Guanacos im Nationalpark vor Granitnadeln",
-          "credit": "Nathan Anderson",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Mirador_Base_de_Las_Torres.jpg",
+          "caption": "Mirador Base de Las Torres",
+          "credit": "RobertTarantino",
+          "license": "CC BY-SA 4.0"
         }
       ],
       "notes": [
@@ -496,22 +388,10 @@
       "reviewCount": 11230,
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&auto=format&fit=crop",
-          "caption": "Laguna Amarga kurz nach Sonnenaufgang",
-          "credit": "Felipe Santander",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=900&auto=format&fit=crop",
-          "caption": "Spiegelung der Torres del Paine in der Laguna Amarga",
-          "credit": "Nathan Anderson",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900&auto=format&fit=crop",
-          "caption": "Kondore über der Steppe am Aussichtspunkt",
-          "credit": "Johannes Plenio",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Torres_del_Paine_and_lake_reflection.jpg",
+          "caption": "Spiegelung der Torres del Paine",
+          "credit": "ThartmannWiki",
+          "license": "CC BY-SA 4.0"
         }
       ],
       "notes": [
@@ -731,16 +611,10 @@
       "url": "https://www.noihotels.com",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1505691723518-36a5ac3be353?w=800&auto=format&fit=crop",
-          "caption": "Design-Suite in San Pedro",
-          "credit": "Paula Ortiz",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-          "caption": "Stimmungsbild aus Chile für die Travel Experience",
-          "credit": "Unsplash",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/San_Pedro_de_Atacama_%28street_view%29.jpg",
+          "caption": "Zentral gelegen in San Pedro de Atacama",
+          "credit": "Wikimedia Commons",
+          "license": "CC BY-SA 3.0"
         }
       ]
     },
@@ -758,16 +632,10 @@
       "url": "https://www.atacamastardomes.cl",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1470246973918-29a93221c455?w=800&auto=format&fit=crop",
-          "caption": "Glamping-Kuppel unter Sternen",
-          "credit": "Gonzalo Vera",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-          "caption": "Stimmungsbild aus Chile für die Travel Experience",
-          "credit": "Unsplash",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/The_Milky_Way_above_the_Atacama_Desert.jpg",
+          "caption": "Glamping unter dem Sternenhimmel",
+          "credit": "ESO/Y. Beletsky",
+          "license": "CC BY 4.0"
         }
       ]
     },
@@ -785,16 +653,10 @@
       "url": "https://www.thesingular.com",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1519824145371-296894a0daa9?w=800&auto=format&fit=crop",
-          "caption": "The Singular mit Fjordblick",
-          "credit": "Valentina Vergara",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-          "caption": "Stimmungsbild aus Chile für die Travel Experience",
-          "credit": "Unsplash",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/35/The_Singular_Patagonia_demo.jpg",
+          "caption": "The Singular Patagonia",
+          "credit": "Thesingularhotels",
+          "license": "CC BY-SA 3.0"
         }
       ]
     },
@@ -845,16 +707,10 @@
       "reservation": "Online Pflicht",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&auto=format&fit=crop",
-          "caption": "Feines Degustationsmenü",
-          "credit": "Camila Gutiérrez",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-          "caption": "Stimmungsbild aus Chile für die Travel Experience",
-          "credit": "Unsplash",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/San_Pedro_de_Atacama_%28street_view%29.jpg",
+          "caption": "Restaurant Adobe im Zentrum",
+          "credit": "Wikimedia Commons",
+          "license": "CC BY-SA 3.0"
         }
       ]
     },
@@ -876,16 +732,10 @@
       "reservation": "Walk-in",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1550547660-d9450f859349?w=800&auto=format&fit=crop",
-          "caption": "Streetfood in San Pedro",
-          "credit": "Tomás Castro",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-          "caption": "Stimmungsbild aus Chile für die Travel Experience",
-          "credit": "Unsplash",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Mirador_Base_de_Las_Torres.jpg",
+          "caption": "EcoCamp im Nationalpark",
+          "credit": "RobertTarantino",
+          "license": "CC BY-SA 4.0"
         }
       ]
     },
@@ -907,16 +757,10 @@
       "reservation": "Telefonisch",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=800&auto=format&fit=crop",
-          "caption": "Fine Dining in Puerto Natales",
-          "credit": "Natalia Prado",
-          "license": "Unsplash License"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=800&auto=format&fit=crop",
-          "caption": "Stimmungsbild aus Chile für die Travel Experience",
-          "credit": "Unsplash",
-          "license": "Unsplash License"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Puerto_Natales%2C_old_dock..jpg",
+          "caption": "Fusion-Küche in Puerto Natales",
+          "credit": "Felipe.alarcon",
+          "license": "CC BY-SA 3.0"
         }
       ]
     }

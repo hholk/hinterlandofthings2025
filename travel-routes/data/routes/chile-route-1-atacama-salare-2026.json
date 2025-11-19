@@ -23,24 +23,24 @@
     "highlightImages": [
       {
         "title": "Valle de la Luna Sunset",
-        "image": "https://images.unsplash.com/photo-1582719478151-2f6e0c0c8f0a?w=900&auto=format&fit=crop",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Atardecer_en_la_valle_de_la_Luna.JPG",
         "caption": "Goldenes Licht über den Dünen und Felsformationen des Valle de la Luna.",
-        "source": "Unsplash",
-        "license": "Unsplash License"
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 4.0"
       },
       {
         "title": "Lagunas Miscanti & Miñiques",
-        "image": "https://images.unsplash.com/photo-1500534314211-4f3679c1c9c8?w=900&auto=format&fit=crop",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Laguna_Miscanti_%2826465051611%29.jpg",
         "caption": "Türkisfarbene Hochlandlagunen mit Vicuñas vor den Andengipfeln.",
-        "source": "Unsplash",
-        "license": "Unsplash License"
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 2.0"
       },
       {
         "title": "Astro-Tour unter dem dunkelsten Himmel",
-        "image": "https://images.unsplash.com/photo-1470229538611-16ba8c7ffbd7?w=900&auto=format&fit=crop",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/9/93/Laguna_Mi%C3%B1iques%2C_atacama%2C_chile.jpg",
         "caption": "Sternenbeobachtung bei absolut klarer Atacama-Luft.",
-        "source": "Unsplash",
-        "license": "Unsplash License"
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 3.0"
       }
     ],
     "scores": {

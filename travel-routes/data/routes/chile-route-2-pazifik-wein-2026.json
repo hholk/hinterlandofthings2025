@@ -23,24 +23,24 @@
     "highlightImages": [
       {
         "title": "Streetart im Cerro Alegre",
-        "image": "https://images.unsplash.com/photo-1549049931-107c59ed2b37?w=900&auto=format&fit=crop",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Cerro_Alegre_Streetart.jpg",
         "caption": "Bunte Murals und Treppen in Valparaísos Cerro Alegre.",
-        "source": "Unsplash",
-        "license": "Unsplash License"
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 4.0"
       },
       {
         "title": "Wein & Food Pairing in Casablanca",
-        "image": "https://images.unsplash.com/photo-1503249023995-51b0f3778ccf?w=900&auto=format&fit=crop",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Casablanca_Valley_Wine.jpg",
         "caption": "Weingüter zwischen Nebelbänken und Pazifikbrise im Casablanca Valley.",
-        "source": "Unsplash",
-        "license": "Unsplash License"
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 3.0"
       },
       {
         "title": "Rotwein-Blend im Colchagua-Tal",
-        "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=900&auto=format&fit=crop",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/86/Colchagua_Wine_Cellars.jpg",
         "caption": "Fässerkeller für Cabernet- und Carmenère-Blends im Colchagua Valley.",
-        "source": "Unsplash",
-        "license": "Unsplash License"
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 4.0"
       }
     ],
     "scores": {
