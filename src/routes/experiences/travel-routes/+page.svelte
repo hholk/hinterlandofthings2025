@@ -904,7 +904,7 @@
         : "";
       media = `
         <figure class="travel-map-popup__media">
-          <img src="${escapeAttribute(properties.photoUrl)}" alt="${escapeAttribute(altText)}" loading="lazy" decoding="async" />
+          <img src="${escapeAttribute(properties.photoUrl)}" alt="${escapeAttribute(altText)}" referrerpolicy="no-referrer" />
           ${caption}
         </figure>
       `;
@@ -1589,7 +1589,7 @@
                     <img
                       src={highlightImage.image}
                       alt={highlightImage.caption ?? highlightImage.title}
-                      loading="lazy"
+                      referrerpolicy="no-referrer"
                     />
                     <figcaption>
                       <strong>{highlightImage.title}</strong>
