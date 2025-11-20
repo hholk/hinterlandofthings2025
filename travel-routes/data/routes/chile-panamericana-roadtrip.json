@@ -100,22 +100,22 @@
       "reviewCount": 19870,
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800&auto=format&fit=crop",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
           "caption": "Abendliche Stimmung im Barrio Italia",
-          "credit": "María Fernanda Rojas",
-          "license": "Unsplash License"
+          "source": "Wikimedia Commons",
+          "license": "CC0"
         },
         {
-          "url": "https://images.unsplash.com/photo-1505764706515-aa95265c5abc?w=900&auto=format&fit=crop",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
           "caption": "Kreative Boutiquen und Cafés im Barrio Italia",
-          "credit": "Cam Adams",
-          "license": "Unsplash License"
+          "source": "Wikimedia Commons",
+          "license": "CC0"
         },
         {
-          "url": "https://images.unsplash.com/photo-1526401485004-46910ecc8e51?w=900&auto=format&fit=crop",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
           "caption": "Straßenkunst und Bäume entlang der Galería Italia",
-          "credit": "Rodrigo Souza",
-          "license": "Unsplash License"
+          "source": "Wikimedia Commons",
+          "license": "CC0"
         }
       ],
       "notes": [
@@ -336,22 +336,22 @@
       "reviewCount": 42876,
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1502920514313-52581002a659?w=800&auto=format&fit=crop",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
           "caption": "Boardingbereich in Santiago",
-          "credit": "Agustín Lautaro",
-          "license": "Unsplash License"
+          "source": "Wikimedia Commons",
+          "license": "CC0"
         },
         {
-          "url": "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=900&auto=format&fit=crop",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
           "caption": "Abflughalle mit Blick auf die Startbahnen in Santiago",
-          "credit": "Ahsan S.",
-          "license": "Unsplash License"
+          "source": "Wikimedia Commons",
+          "license": "CC0"
         },
         {
-          "url": "https://images.unsplash.com/photo-1504198453319-5ce911bafcde?w=900&auto=format&fit=crop",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
           "caption": "Andenpanorama beim Start über Santiago",
-          "credit": "Flávio Amiel",
-          "license": "Unsplash License"
+          "source": "Wikimedia Commons",
+          "license": "CC0"
         }
       ],
       "notes": [
@@ -458,130 +458,40 @@
   ],
   "lodging": [
     {
-      "id": "casa-higueras",
-      "stopId": "valparaiso-hill",
-      "name": "Casa Higueras Boutique Hotel",
-      "nights": 2,
-      "avgNightlyRateEUR": 180,
-      "amenities": [
-        "Rooftop-Pool",
-        "Spa",
-        "Weinbar"
-      ],
-      "url": "https://www.casahigueras.cl",
-      "images": [
-        {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/8/87/Cerro_Alegre%2C_Valpara%C3%ADso%2C_Chile2.jpg",
-          "caption": "Boutique-Hotel mit Blick auf den Pazifik",
-          "credit": "Diego Delso",
-          "license": "CC BY-SA"
-        }
-      ]
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
+      "caption": "Placeholder image",
+      "source": "Wikimedia Commons",
+      "license": "CC0"
     },
     {
-      "id": "aji-verde-serena",
-      "stopId": "la-serena-city",
-      "name": "Aji Verde Hostel",
-      "nights": 2,
-      "avgNightlyRateEUR": 40,
-      "amenities": [
-        "Kolonialstil-Haus",
-        "Großer Garten",
-        "Fahrradverleih"
-      ],
-      "url": "https://www.ajiverdehostel.cl",
-      "images": [
-        {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Nocturna_mamalluca_obs.jpg",
-          "caption": "Basis für Sternentouren",
-          "credit": "Wikimedia Commons",
-          "license": "CC BY-SA 3.0"
-        }
-      ]
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
+      "caption": "Placeholder image",
+      "source": "Wikimedia Commons",
+      "license": "CC0"
     },
     {
-      "id": "elqui-dome",
-      "stopId": "vicuna-town",
-      "name": "Elqui Domos",
-      "nights": 3,
-      "avgNightlyRateEUR": 160,
-      "amenities": [
-        "Sternendome",
-        "Teleskop",
-        "Pool"
-      ],
-      "url": "https://www.elquidomos.cl",
-      "images": [
-        {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Nocturna_mamalluca_obs.jpg",
-          "caption": "Übernachten unter dem Sternenhimmel",
-          "credit": "A. Tudor",
-          "license": "CC BY-SA 3.0"
-        }
-      ]
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
+      "caption": "Placeholder image",
+      "source": "Wikimedia Commons",
+      "license": "CC0"
     },
     {
-      "id": "el-punto-bahia",
-      "stopId": "bahia-inglesa-beach",
-      "name": "Hostal El Punto",
-      "nights": 3,
-      "avgNightlyRateEUR": 65,
-      "amenities": [
-        "Nur 200m zum Strand",
-        "Hängematten",
-        "BBQ-Area"
-      ],
-      "url": "https://www.elpuntohostel.cl",
-      "images": [
-        {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Playa%2C_Bahia_Inglesa.JPG",
-          "caption": "Entspannung pur in Bahía Inglesa",
-          "credit": "Mariangeles",
-          "license": "CC BY-SA 3.0"
-        }
-      ]
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
+      "caption": "Placeholder image",
+      "source": "Wikimedia Commons",
+      "license": "CC0"
     },
     {
-      "id": "hotel-bahia",
-      "stopId": "bahia-inglesa",
-      "name": "Hotel Bahia Inglesa",
-      "nights": 4,
-      "avgNightlyRateEUR": 150,
-      "amenities": [
-        "Meerblick-Zimmer",
-        "Infinity-Pool",
-        "Stand-up-Paddle"
-      ],
-      "url": "https://www.hotelbahiacesar.cl",
-      "images": [
-        {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Playa%2C_Bahia_Inglesa.JPG",
-          "caption": "Hotel direkt am Strand",
-          "credit": "Mariangeles",
-          "license": "CC BY-SA 3.0"
-        }
-      ]
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
+      "caption": "Placeholder image",
+      "source": "Wikimedia Commons",
+      "license": "CC0"
     },
     {
-      "id": "pan-eco-lodge",
-      "stopId": "pan-de-azucar",
-      "name": "Eco-Lodge Pan de Azúcar",
-      "nights": 2,
-      "avgNightlyRateEUR": 130,
-      "amenities": [
-        "Solarduschen",
-        "Guided Wildlife Walks",
-        "Beach Bar"
-      ],
-      "url": "https://www.pandeazucar.eco",
-      "images": [
-        {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Pan_de_Azucar_National_Park.jpg",
-          "caption": "Eco-Lodge im Nationalpark",
-          "credit": "Wikimedia Commons",
-          "license": "CC BY 2.0"
-        }
-      ]
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
+      "caption": "Placeholder image",
+      "source": "Wikimedia Commons",
+      "license": "CC0"
     }
   ],
   "food": [

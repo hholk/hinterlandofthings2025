@@ -79,10 +79,10 @@
       "reviewCount": 30100,
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1544984243-ec57ea16fe25?w=600&auto=format&fit=crop",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
           "caption": "Abendstimmung im Barrio Lastarria",
-          "credit": "Sebastian Sarria",
-          "license": "Unsplash License"
+          "source": "Wikimedia Commons",
+          "license": "CC0"
         }
       ],
       "contact": {
@@ -129,10 +129,10 @@
       "reviewCount": 25678,
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1526402462922-1e1d481d87fd?w=600&auto=format&fit=crop",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
           "caption": "Bunte Häuser im Cerro Alegre",
-          "credit": "Fabiola Peñailillo",
-          "license": "Unsplash License"
+          "source": "Wikimedia Commons",
+          "license": "CC0"
         }
       ],
       "contact": {
@@ -177,10 +177,10 @@
       },
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&auto=format&fit=crop",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
           "caption": "Weinberge in Colchagua",
-          "credit": "Thomas Schaefer",
-          "license": "Unsplash License"
+          "source": "Wikimedia Commons",
+          "license": "CC0"
         }
       ]
     },
@@ -207,10 +207,10 @@
       },
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1458224755287-281747167c72?w=600&auto=format&fit=crop",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
           "caption": "Wälder Altos de Lircay",
-          "credit": "Constanza Hevia",
-          "license": "Unsplash License"
+          "source": "Wikimedia Commons",
+          "license": "CC0"
         }
       ]
     },
@@ -237,10 +237,10 @@
       },
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1512058564366-c9e1d31714af?w=600&auto=format&fit=crop",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
           "caption": "Mercado in Concepción",
-          "credit": "Eduardo Casajús",
-          "license": "Unsplash License"
+          "source": "Wikimedia Commons",
+          "license": "CC0"
         }
       ]
     },
@@ -266,10 +266,10 @@
       "reviewCount": 30100,
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1544984243-ec57ea16fe25?w=600&auto=format&fit=crop",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
           "caption": "Abendstimmung im Barrio Lastarria",
-          "credit": "Sebastian Sarria",
-          "license": "Unsplash License"
+          "source": "Wikimedia Commons",
+          "license": "CC0"
         }
       ],
       "contact": {
@@ -383,10 +383,10 @@
       ],
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1542318428-29f26af1ff86?w=600&auto=format&fit=crop",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
           "caption": "Herrenhaus La Casona",
-          "credit": "William Moreland",
-          "license": "Unsplash License"
+          "source": "Wikimedia Commons",
+          "license": "CC0"
         }
       ],
       "rating": 4.8,
@@ -419,10 +419,10 @@
       ],
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&auto=format&fit=crop",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
           "caption": "Villa in den Weinbergen",
-          "credit": "Tanya Pro",
-          "license": "Unsplash License"
+          "source": "Wikimedia Commons",
+          "license": "CC0"
         }
       ],
       "rating": 4.9,
@@ -460,10 +460,10 @@
       "googlePlaceId": "ChIJ8Qj4b2VZYpYR7mxzXIv2qx4",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&auto=format&fit=crop",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
           "caption": "Wine Pairing bei Bocanáriz",
-          "credit": "Thomas Schaefer",
-          "license": "Unsplash License"
+          "source": "Wikimedia Commons",
+          "license": "CC0"
         }
       ]
     },
@@ -485,10 +485,10 @@
       "googlePlaceId": "ChIJyUR2uM7CYpYR7bHimoMuquI",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1484981184820-2e84ea0b2700?w=600&auto=format&fit=crop",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
           "caption": "Delikatessenladen",
-          "credit": "Jakub Kapusnak",
-          "license": "Unsplash License"
+          "source": "Wikimedia Commons",
+          "license": "CC0"
         }
       ]
     }

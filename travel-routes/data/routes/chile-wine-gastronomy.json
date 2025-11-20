@@ -342,88 +342,28 @@
   ],
   "lodging": [
     {
-      "id": "bcw-casablanca",
-      "stopId": "casablanca-valley",
-      "name": "Hotel Boutique BCW",
-      "nights": 3,
-      "avgNightlyRateEUR": 120,
-      "amenities": [
-        "Weinbar",
-        "Pool",
-        "Design-Zimmer"
-      ],
-      "url": "https://www.bcw.cl",
-      "images": [
-        {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/7/75/Vi%C3%B1aSantaCruz.jpg",
-          "caption": "Boutique Hotel im Weintal",
-          "credit": "Wikimedia Commons / Elemaki",
-          "license": "CC BY 3.0"
-        }
-      ]
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
+      "caption": "Placeholder image",
+      "source": "Wikimedia Commons",
+      "license": "CC0"
     },
     {
-      "id": "vino-bello-santacruz",
-      "stopId": "santa-cruz",
-      "name": "Hostal Vino Bello",
-      "nights": 4,
-      "avgNightlyRateEUR": 60,
-      "amenities": [
-        "Familiär",
-        "Garten",
-        "Frühstück"
-      ],
-      "url": "https://www.vinobello.cl",
-      "images": [
-        {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Vi%C3%B1edo_Colchagua%2C_Chile.jpg",
-          "caption": "Gemütliches Hostal in Santa Cruz",
-          "credit": "Wikimedia Commons / Rojavnegon",
-          "license": "CC BY-SA 3.0"
-        }
-      ]
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
+      "caption": "Placeholder image",
+      "source": "Wikimedia Commons",
+      "license": "CC0"
     },
     {
-      "id": "ecohostal-talca",
-      "stopId": "talca-city",
-      "name": "EcoHostal Talca",
-      "nights": 3,
-      "avgNightlyRateEUR": 40,
-      "amenities": [
-        "Nachhaltig",
-        "Zentral",
-        "Kunstvoll"
-      ],
-      "url": "https://www.ecohostaltalca.cl",
-      "images": [
-        {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/5/54/Interior_Mercado_Central_de_Talca.jpg",
-          "caption": "Eco-Hostal in Talca",
-          "credit": "Wikimedia Commons / Penquista",
-          "license": "CC BY-SA 3.0"
-        }
-      ]
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
+      "caption": "Placeholder image",
+      "source": "Wikimedia Commons",
+      "license": "CC0"
     },
     {
-      "id": "hostal-bb-concepcion",
-      "stopId": "concepcion-coast",
-      "name": "Hostal B&B Concepción",
-      "nights": 3,
-      "avgNightlyRateEUR": 45,
-      "amenities": [
-        "Frühstück",
-        "WLAN",
-        "Parkplatz"
-      ],
-      "url": "https://www.hostalbbconcepcion.cl",
-      "images": [
-        {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/1/13/Pescados_Mercado_Central.JPG",
-          "caption": "B&B im Zentrum",
-          "credit": "Wikimedia Commons / Nd0806",
-          "license": "CC BY-SA 3.0"
-        }
-      ]
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
+      "caption": "Placeholder image",
+      "source": "Wikimedia Commons",
+      "license": "CC0"
     }
   ],
   "food": [

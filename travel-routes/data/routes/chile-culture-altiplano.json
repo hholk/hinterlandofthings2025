@@ -101,22 +101,22 @@
       "reviewCount": 42876,
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1502920514313-52581002a659?w=800&auto=format&fit=crop",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
           "caption": "Boarding im Terminal Internacional",
-          "credit": "Agustín Lautaro",
-          "license": "Unsplash License"
+          "source": "Wikimedia Commons",
+          "license": "CC0"
         },
         {
-          "url": "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=900&auto=format&fit=crop",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
           "caption": "Abflughalle mit Blick auf die Startbahnen in Santiago",
-          "credit": "Ahsan S.",
-          "license": "Unsplash License"
+          "source": "Wikimedia Commons",
+          "license": "CC0"
         },
         {
-          "url": "https://images.unsplash.com/photo-1504198453319-5ce911bafcde?w=900&auto=format&fit=crop",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
           "caption": "Andenpanorama beim Start über Santiago",
-          "credit": "Flávio Amiel",
-          "license": "Unsplash License"
+          "source": "Wikimedia Commons",
+          "license": "CC0"
         }
       ],
       "notes": [
@@ -145,22 +145,22 @@
       "reviewCount": 5860,
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1530988405631-f7aa0834e4c4?w=800&auto=format&fit=crop",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
           "caption": "Anflug auf Arica mit Blick auf den Pazifik",
-          "credit": "Ignacio Pardo",
-          "license": "Unsplash License"
+          "source": "Wikimedia Commons",
+          "license": "CC0"
         },
         {
-          "url": "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=900&auto=format&fit=crop",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
           "caption": "Ankunftshalle im warmen Licht des Nordens",
-          "credit": "Fahrul Azmi",
-          "license": "Unsplash License"
+          "source": "Wikimedia Commons",
+          "license": "CC0"
         },
         {
-          "url": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=900&auto=format&fit=crop",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
           "caption": "Blick auf die Küstenlinie bei Arica aus dem Flugzeug",
-          "credit": "Matthew Smith",
-          "license": "Unsplash License"
+          "source": "Wikimedia Commons",
+          "license": "CC0"
         }
       ],
       "notes": [
@@ -539,88 +539,28 @@
   ],
   "lodging": [
     {
-      "id": "sunny-days-arica",
-      "stopId": "arica-town",
-      "name": "Hostal Sunny Days",
-      "nights": 3,
-      "avgNightlyRateEUR": 45,
-      "amenities": [
-        "Familiäre Atmosphäre",
-        "Legendäres Frühstück",
-        "Nahe am Strand"
-      ],
-      "url": "https://www.sunny-days-arica.cl",
-      "images": [
-        {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Morro_de_Arica_%2849557003417%29.jpg",
-          "caption": "Gemütliches Hostel nahe dem Morro",
-          "credit": "Wikimedia Commons / Ministerio de Bienes Nacionales",
-          "license": "CC BY 2.0"
-        }
-      ]
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
+      "caption": "Placeholder image",
+      "source": "Wikimedia Commons",
+      "license": "CC0"
     },
     {
-      "id": "putre-lodge",
-      "stopId": "putre-town",
-      "name": "Terrace Lodge Putre",
-      "nights": 4,
-      "avgNightlyRateEUR": 110,
-      "amenities": [
-        "Oxygen Bar",
-        "Gemeinschaftsküche",
-        "Andean Tea"
-      ],
-      "url": "https://www.terracelodge.com",
-      "images": [
-        {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/5/57/Comuna_de_Putre%2C_vista_parcial_con_la_iglesia%2C_Provincia_de_Parinacota%2C_norte_de_Chile.jpg",
-          "caption": "Lodge in Putre",
-          "credit": "Wikimedia Commons / Carlos Teixidor Cadenas",
-          "license": "CC BY-SA 4.0"
-        }
-      ]
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
+      "caption": "Placeholder image",
+      "source": "Wikimedia Commons",
+      "license": "CC0"
     },
     {
-      "id": "backpacker-iquique",
-      "stopId": "iquique-town",
-      "name": "Backpacker's Hostel Iquique",
-      "nights": 4,
-      "avgNightlyRateEUR": 35,
-      "amenities": [
-        "Surf-Vibe",
-        "Dachterrasse",
-        "BBQ-Abende"
-      ],
-      "url": "https://www.backpackersiquique.cl",
-      "images": [
-        {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Paseo_Baquedano.JPG",
-          "caption": "Treffpunkt für Surfer und Traveller",
-          "credit": "Wikimedia Commons / A. Duarte",
-          "license": "CC BY-SA 3.0"
-        }
-      ]
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
+      "caption": "Placeholder image",
+      "source": "Wikimedia Commons",
+      "license": "CC0"
     },
     {
-      "id": "antofagasta-hotel",
-      "stopId": "antofagasta-airport",
-      "name": "Enjoy Antofagasta Hotel",
-      "nights": 2,
-      "avgNightlyRateEUR": 140,
-      "amenities": [
-        "Casino",
-        "Pool",
-        "Spa"
-      ],
-      "url": "https://www.enjoy.cl",
-      "images": [
-        {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/7/77/La_Portada%2C_Antofagasta%2C_Regi%C3%B3n_de_Antofagasta%2C_Chile._-_panoramio.jpg",
-          "caption": "Hotel in Antofagasta",
-          "credit": "Wikimedia Commons / Patricio Cornejo",
-          "license": "CC BY-SA 3.0"
-        }
-      ]
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
+      "caption": "Placeholder image",
+      "source": "Wikimedia Commons",
+      "license": "CC0"
     }
   ],
   "food": [

@@ -140,16 +140,16 @@
         "description": "Tage 1–5: Flug nach Calama, Erkundung von Lagunen, Geysire und Sternenhimmel in der Atacama-Wüste.",
         "images": [
           {
-            "url": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&auto=format&fit=crop",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
             "caption": "Sternenhimmel in Atacama",
-            "credit": "Lina Morales",
-            "license": "Unsplash License"
+            "source": "Wikimedia Commons",
+            "license": "CC0"
           },
           {
-            "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&auto=format&fit=crop",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
             "caption": "Lagunen in Atacama",
-            "credit": "Unsplash",
-            "license": "Unsplash License"
+            "source": "Wikimedia Commons",
+            "license": "CC0"
           }
         ]
       },
@@ -174,16 +174,16 @@
         "description": "Tag 6–8: Flug nach Puerto Montt, Erkundung der Seenregion und Einstieg in Navimag-Ferry am 9.1.",
         "images": [
           {
-            "url": "https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?w=800&auto=format&fit=crop",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
             "caption": "Hafen von Puerto Montt",
-            "credit": "María Paz",
-            "license": "Unsplash License"
+            "source": "Wikimedia Commons",
+            "license": "CC0"
           },
           {
-            "url": "https://images.unsplash.com/photo-1472252369995-6d9b2177ed73?w=800&auto=format&fit=crop",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
             "caption": "Ferry in Patagonien",
-            "credit": "Isidora León",
-            "license": "Unsplash License"
+            "source": "Wikimedia Commons",
+            "license": "CC0"
           }
         ]
       },
@@ -247,16 +247,16 @@
         "description": "Tage 9–12: Ferry von Puerto Montt nach Puerto Natales durch Fjorde, mit Wildlife-Sichtungen.",
         "images": [
           {
-            "url": "https://images.unsplash.com/photo-1500534314211-0a24cd38fcff?w=800&auto=format&fit=crop",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
             "caption": "Fjorde auf der Ferry",
-            "credit": "Pablo Alvarado",
-            "license": "Unsplash License"
+            "source": "Wikimedia Commons",
+            "license": "CC0"
           },
           {
-            "url": "https://images.unsplash.com/photo-1470115636492-6d2b56f9146e?w=800&auto=format&fit=crop",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
             "caption": "Navimag-Schiff",
-            "credit": "Patricio Lagos",
-            "license": "Unsplash License"
+            "source": "Wikimedia Commons",
+            "license": "CC0"
           }
         ]
       },
@@ -281,16 +281,16 @@
         "description": "Tage 13–20: Erkundung von Torres del Paine (Wanderungen, Seen, Berge) und Rückflug nach Santiago.",
         "images": [
           {
-            "url": "https://images.unsplash.com/photo-1518182170546-0766aa6f6a56?w=800&auto=format&fit=crop",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
             "caption": "Torres del Paine",
-            "credit": "Unsplash",
-            "license": "Unsplash License"
+            "source": "Wikimedia Commons",
+            "license": "CC0"
           },
           {
-            "url": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&auto=format&fit=crop",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
             "caption": "Seen in Patagonien",
-            "credit": "Unsplash",
-            "license": "Unsplash License"
+            "source": "Wikimedia Commons",
+            "license": "CC0"
           }
         ]
       },
