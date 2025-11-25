@@ -1,0 +1,634 @@
+[
+    {
+        "id": "gen-route-1-desert-sea",
+        "title": "Route 11 – Wüste & Meer (Budget)",
+        "summary": "Kontrastreiches Abenteuer: Von der trockenen Atacama-Wüste an die entspannte Pazifikküste. Perfekt für Budget-Reisende.",
+        "meta": {
+            "theme": "Nature & Relax",
+            "pace": "moderate",
+            "durationDays": 10,
+            "costEstimate": 2280,
+            "highlights": [
+                "Besuch in San Pedro de Atacama",
+                "Besuch in Calama",
+                "Besuch in La Serena"
+            ],
+            "highlightImages": [
+                {
+                    "title": "Route 11 – Wüste & Meer (Budget)",
+                    "image": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1200&auto=format&fit=crop",
+                    "caption": "Kontrastreiches Abenteuer: Von der trockenen Atacama-Wüste an die entspannte Pazifikküste. Perfekt für Budget-Reisende.",
+                    "source": "Unsplash",
+                    "license": "Unsplash License"
+                }
+            ],
+            "scores": {
+                "budget": 4,
+                "adventure": 2,
+                "relax": 4,
+                "culture": 3
+            }
+        },
+        "days": [
+            {
+                "id": "day-1",
+                "date": "2025-11-01",
+                "station": {
+                    "name": "San Pedro de Atacama",
+                    "description": "Aufenthalt in San Pedro de Atacama. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "San Pedro de Atacama"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": []
+                }
+            },
+            {
+                "id": "day-2",
+                "date": "2025-11-03",
+                "station": {
+                    "name": "Calama",
+                    "description": "Aufenthalt in Calama. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Calama"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": [
+                        {
+                            "mode": "bus",
+                            "from": {
+                                "name": "San Pedro de Atacama"
+                            },
+                            "to": {
+                                "name": "Calama"
+                            },
+                            "durationMinutes": 400,
+                            "variants": [
+                                {
+                                    "id": "var-bus-2125",
+                                    "mode": "bus",
+                                    "description": "Linienbus von San Pedro de Atacama nach Calama. Günstig und zuverlässig.",
+                                    "durationMinutes": 400,
+                                    "cost": 24,
+                                    "co2": 16.7
+                                },
+                                {
+                                    "id": "var-car-2839",
+                                    "mode": "drive",
+                                    "description": "Mietwagen-Etappe. Freiheit für Fotostopps entlang der Route.",
+                                    "durationMinutes": 334,
+                                    "cost": 48,
+                                    "co2": 63.46
+                                },
+                                {
+                                    "id": "var-transfer-5665",
+                                    "mode": "drive",
+                                    "description": "Privater Transfer mit lokalem Driver-Guide. Entspannt zurücklehnen.",
+                                    "durationMinutes": 334,
+                                    "cost": 197,
+                                    "co2": 83.5
+                                },
+                                {
+                                    "id": "var-hitch-4559",
+                                    "mode": "drive",
+                                    "description": "Mitfahrgelegenheit oder Colectivo. Die lokale Art zu reisen.",
+                                    "durationMinutes": 501,
+                                    "cost": 10,
+                                    "co2": 33.4
+                                },
+                                {
+                                    "id": "var-flight-1782",
+                                    "mode": "flight",
+                                    "description": "Inlandsflug für maximale Zeitersparnis.",
+                                    "durationMinutes": 108,
+                                    "cost": 118,
+                                    "co2": 93.52000000000001
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "day-3",
+                "date": "2025-11-05",
+                "station": {
+                    "name": "La Serena",
+                    "description": "Aufenthalt in La Serena. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "La Serena"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": [
+                        {
+                            "mode": "bus",
+                            "from": {
+                                "name": "Calama"
+                            },
+                            "to": {
+                                "name": "La Serena"
+                            },
+                            "durationMinutes": 246,
+                            "variants": [
+                                {
+                                    "id": "var-bus-8667",
+                                    "mode": "bus",
+                                    "description": "Linienbus von Calama nach La Serena. Günstig und zuverlässig.",
+                                    "durationMinutes": 246,
+                                    "cost": 39,
+                                    "co2": 10.25
+                                },
+                                {
+                                    "id": "var-car-9274",
+                                    "mode": "drive",
+                                    "description": "Mietwagen-Etappe. Freiheit für Fotostopps entlang der Route.",
+                                    "durationMinutes": 205,
+                                    "cost": 45,
+                                    "co2": 38.95
+                                },
+                                {
+                                    "id": "var-transfer-5921",
+                                    "mode": "drive",
+                                    "description": "Privater Transfer mit lokalem Driver-Guide. Entspannt zurücklehnen.",
+                                    "durationMinutes": 205,
+                                    "cost": 205,
+                                    "co2": 51.25
+                                },
+                                {
+                                    "id": "var-hitch-3702",
+                                    "mode": "drive",
+                                    "description": "Mitfahrgelegenheit oder Colectivo. Die lokale Art zu reisen.",
+                                    "durationMinutes": 307,
+                                    "cost": 18,
+                                    "co2": 20.5
+                                },
+                                {
+                                    "id": "var-bus-prem-3122",
+                                    "mode": "bus",
+                                    "description": "Premium 'Salon Cama' Bus. Fast wie Business Class.",
+                                    "durationMinutes": 246,
+                                    "cost": 53,
+                                    "co2": 10.25
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "day-4",
+                "date": "2025-11-07",
+                "station": {
+                    "name": "Coquimbo",
+                    "description": "Aufenthalt in Coquimbo. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Coquimbo"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": [
+                        {
+                            "mode": "bus",
+                            "from": {
+                                "name": "La Serena"
+                            },
+                            "to": {
+                                "name": "Coquimbo"
+                            },
+                            "durationMinutes": 415,
+                            "variants": [
+                                {
+                                    "id": "var-bus-4553",
+                                    "mode": "bus",
+                                    "description": "Linienbus von La Serena nach Coquimbo. Günstig und zuverlässig.",
+                                    "durationMinutes": 415,
+                                    "cost": 24,
+                                    "co2": 17.3
+                                },
+                                {
+                                    "id": "var-car-7347",
+                                    "mode": "drive",
+                                    "description": "Mietwagen-Etappe. Freiheit für Fotostopps entlang der Route.",
+                                    "durationMinutes": 346,
+                                    "cost": 62,
+                                    "co2": 65.74
+                                },
+                                {
+                                    "id": "var-transfer-7996",
+                                    "mode": "drive",
+                                    "description": "Privater Transfer mit lokalem Driver-Guide. Entspannt zurücklehnen.",
+                                    "durationMinutes": 346,
+                                    "cost": 224,
+                                    "co2": 86.5
+                                },
+                                {
+                                    "id": "var-hitch-4020",
+                                    "mode": "drive",
+                                    "description": "Mitfahrgelegenheit oder Colectivo. Die lokale Art zu reisen.",
+                                    "durationMinutes": 519,
+                                    "cost": 17,
+                                    "co2": 34.6
+                                },
+                                {
+                                    "id": "var-flight-9534",
+                                    "mode": "flight",
+                                    "description": "Inlandsflug für maximale Zeitersparnis.",
+                                    "durationMinutes": 69,
+                                    "cost": 144,
+                                    "co2": 96.88000000000001
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "day-5",
+                "date": "2025-11-09",
+                "station": {
+                    "name": "Punta de Choros",
+                    "description": "Aufenthalt in Punta de Choros. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Punta de Choros"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": [
+                        {
+                            "mode": "bus",
+                            "from": {
+                                "name": "Coquimbo"
+                            },
+                            "to": {
+                                "name": "Punta de Choros"
+                            },
+                            "durationMinutes": 495,
+                            "variants": [
+                                {
+                                    "id": "var-bus-3997",
+                                    "mode": "bus",
+                                    "description": "Linienbus von Coquimbo nach Punta de Choros. Günstig und zuverlässig.",
+                                    "durationMinutes": 495,
+                                    "cost": 20,
+                                    "co2": 20.650000000000002
+                                },
+                                {
+                                    "id": "var-car-9952",
+                                    "mode": "drive",
+                                    "description": "Mietwagen-Etappe. Freiheit für Fotostopps entlang der Route.",
+                                    "durationMinutes": 413,
+                                    "cost": 61,
+                                    "co2": 78.47
+                                },
+                                {
+                                    "id": "var-transfer-8752",
+                                    "mode": "drive",
+                                    "description": "Privater Transfer mit lokalem Driver-Guide. Entspannt zurücklehnen.",
+                                    "durationMinutes": 413,
+                                    "cost": 107,
+                                    "co2": 103.25
+                                },
+                                {
+                                    "id": "var-hitch-3571",
+                                    "mode": "drive",
+                                    "description": "Mitfahrgelegenheit oder Colectivo. Die lokale Art zu reisen.",
+                                    "durationMinutes": 619,
+                                    "cost": 16,
+                                    "co2": 41.300000000000004
+                                },
+                                {
+                                    "id": "var-flight-8664",
+                                    "mode": "flight",
+                                    "description": "Inlandsflug für maximale Zeitersparnis.",
+                                    "durationMinutes": 96,
+                                    "cost": 55,
+                                    "co2": 115.64000000000001
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ],
+        "lodging": [
+            {
+                "id": "lodging-57296",
+                "stopId": "san-pedro-de-atacama",
+                "name": "Hostel San Pedro de Atacama Backpacker",
+                "nights": 1,
+                "avgNightlyRateEUR": 18,
+                "amenities": [
+                    "Küche",
+                    "Garten",
+                    "Bar"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=813",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hostel San Pedro de Atacama Backpacker",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-82365",
+                "stopId": "san-pedro-de-atacama",
+                "name": "Hotel San Pedro de Atacama View",
+                "nights": 2,
+                "avgNightlyRateEUR": 54,
+                "amenities": [
+                    "Touren",
+                    "WLAN",
+                    "Garten"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=207",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hotel San Pedro de Atacama View",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-66081",
+                "stopId": "san-pedro-de-atacama",
+                "name": "Camping San Pedro de Atacama Backpacker",
+                "nights": 3,
+                "avgNightlyRateEUR": 12,
+                "amenities": [
+                    "WLAN",
+                    "Touren",
+                    "Bar"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=976",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Camping San Pedro de Atacama Backpacker",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-22639",
+                "stopId": "calama",
+                "name": "Hotel Calama Oasis",
+                "nights": 2,
+                "avgNightlyRateEUR": 61,
+                "amenities": [
+                    "Bar",
+                    "WLAN",
+                    "Frühstück"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=904",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hotel Calama Oasis",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-52472",
+                "stopId": "calama",
+                "name": "Airbnb Calama Oasis",
+                "nights": 2,
+                "avgNightlyRateEUR": 39,
+                "amenities": [
+                    "Küche",
+                    "Bar",
+                    "Frühstück"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=440",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Airbnb Calama Oasis",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-46735",
+                "stopId": "calama",
+                "name": "Hotel Calama View",
+                "nights": 1,
+                "avgNightlyRateEUR": 60,
+                "amenities": [
+                    "WLAN",
+                    "Küche",
+                    "Bar"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=329",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hotel Calama View",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-86412",
+                "stopId": "la-serena",
+                "name": "Hotel La Serena Central",
+                "nights": 1,
+                "avgNightlyRateEUR": 79,
+                "amenities": [
+                    "Küche",
+                    "Frühstück",
+                    "Touren"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=433",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hotel La Serena Central",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-14066",
+                "stopId": "la-serena",
+                "name": "Airbnb La Serena View",
+                "nights": 2,
+                "avgNightlyRateEUR": 57,
+                "amenities": [
+                    "Frühstück",
+                    "Küche",
+                    "Touren"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=704",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Airbnb La Serena View",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-46937",
+                "stopId": "la-serena",
+                "name": "Hostel La Serena Backpacker",
+                "nights": 3,
+                "avgNightlyRateEUR": 34,
+                "amenities": [
+                    "Touren",
+                    "Küche",
+                    "Garten"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=640",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hostel La Serena Backpacker",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-98222",
+                "stopId": "coquimbo",
+                "name": "Guesthouse Coquimbo Garden",
+                "nights": 3,
+                "avgNightlyRateEUR": 49,
+                "amenities": [
+                    "Garten",
+                    "Touren",
+                    "Küche"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=835",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Guesthouse Coquimbo Garden",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-27248",
+                "stopId": "coquimbo",
+                "name": "Airbnb Coquimbo Garden",
+                "nights": 2,
+                "avgNightlyRateEUR": 48,
+                "amenities": [
+                    "Garten",
+                    "Touren",
+                    "Küche"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=602",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Airbnb Coquimbo Garden",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-59714",
+                "stopId": "coquimbo",
+                "name": "Hotel Coquimbo View",
+                "nights": 1,
+                "avgNightlyRateEUR": 49,
+                "amenities": [
+                    "Frühstück",
+                    "Touren",
+                    "Küche"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=404",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hotel Coquimbo View",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-38928",
+                "stopId": "punta-de-choros",
+                "name": "Camping Punta de Choros View",
+                "nights": 2,
+                "avgNightlyRateEUR": 25,
+                "amenities": [
+                    "Küche",
+                    "Bar",
+                    "Touren"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=709",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Camping Punta de Choros View",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-87652",
+                "stopId": "punta-de-choros",
+                "name": "Airbnb Punta de Choros View",
+                "nights": 2,
+                "avgNightlyRateEUR": 43,
+                "amenities": [
+                    "Küche",
+                    "WLAN",
+                    "Garten"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=669",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Airbnb Punta de Choros View",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-72842",
+                "stopId": "punta-de-choros",
+                "name": "Guesthouse Punta de Choros View",
+                "nights": 2,
+                "avgNightlyRateEUR": 26,
+                "amenities": [
+                    "WLAN",
+                    "Garten",
+                    "Touren"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=177",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Guesthouse Punta de Choros View",
+                        "license": "Unsplash License"
+                    }
+                ]
+            }
+        ]
+    }
+]

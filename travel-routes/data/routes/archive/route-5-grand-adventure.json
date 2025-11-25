@@ -1,0 +1,508 @@
+{
+  "id": "route-5-grand-adventure",
+  "name": "Route 5 – The Grand Adventure",
+  "title": "Route 5 – The Grand Adventure",
+  "summary": "Für Aktivurlauber: Erst Trekking in den Araukarienwäldern, dann die Seereise und als Krönung der W-Trek im Torres del Paine.",
+  "color": "#16a34a",
+  "tags": [
+    "trekking",
+    "adventure",
+    "nature",
+    "camping"
+  ],
+  "meta": {
+    "theme": "Wandern & Wildnis",
+    "pace": "active",
+    "durationDays": 16,
+    "costEstimate": 2600,
+    "highlights": [
+      "Huerquehue Nationalpark",
+      "Navimag Fährfahrt",
+      "W-Trek Torres del Paine"
+    ],
+    "highlightImages": [
+      {
+        "title": "Araukarien im Huerquehue",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/9/97/Araucaria_araucana_Huerquehue.jpg",
+        "caption": "Uralte Araukarien im Huerquehue Nationalpark.",
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 3.0"
+      },
+      {
+        "title": "Base Las Torres",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Torres_del_Paine_National_Park_-_Patagonia_-_Chile.jpg",
+        "caption": "Das Ziel des W-Treks: Die Türme.",
+        "source": "Wikimedia Commons",
+        "license": "CC BY 2.0"
+      },
+      {
+        "title": "Grey Gletscher",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/81/Glaciar_Grey_2012.jpg",
+        "caption": "Eiswand am Ende des Treks.",
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 3.0"
+      }
+    ],
+    "scores": {
+      "adventure": 5,
+      "relax": 1,
+      "culture": 2,
+      "photography": 5
+    }
+  },
+  "slider": {
+    "enabled": true,
+    "label": "Reiseverlauf"
+  },
+  "bookingLinks": {
+    "tripCom": "https://www.trip.com/hotels/list?city=30&checkin=2026-01-04&checkout=2026-01-20",
+    "airbnb": "https://www.airbnb.com/s/Chile/homes?checkin=2026-01-04&checkout=2026-01-20"
+  },
+  "transportVariants": {
+    "rentalCar": {
+      "description": "Mietwagen für den Norden (Pucón), in Patagonien Busse (Auto steht beim Trekking nur rum).",
+      "costEstimateEUR": 600,
+      "pros": [
+        "Flexibel im Seengebiet",
+        "Günstiger da kein Auto im Süden"
+      ],
+      "cons": [
+        "Busfahrten nötig"
+      ]
+    },
+    "publicTransport": {
+      "description": "Komplett mit Bus. Pucón ist gut angebunden, Puerto Natales sowieso.",
+      "costEstimateEUR": 300,
+      "pros": [
+        "Günstigste Option",
+        "Umweltfreundlich"
+      ],
+      "cons": [
+        "Gepäcktransport beim Umsteigen"
+      ]
+    },
+    "mixed": {
+      "description": "Mietwagen Pucón, Bus Patagonien.",
+      "costEstimateEUR": 600,
+      "pros": [
+        "Beste Kombi für Trekker"
+      ],
+      "cons": [
+        "-"
+      ]
+    }
+  },
+  "days": [
+    {
+      "id": "r5-day-1",
+      "date": "2026-01-04",
+      "station": {
+        "name": "Pucón & Huerquehue",
+        "description": "Ankunft im Outdoor-Paradies. Vorbereitung auf die Wanderungen.",
+        "coordinates": {
+          "lat": -39.2822,
+          "lng": -71.9775
+        },
+        "images": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Araucaria_araucana_Huerquehue.jpg",
+            "caption": "Huerquehue",
+            "source": "Wikimedia Commons",
+            "license": "CC BY-SA 3.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Aditrochus_coihuensis%2C_Huerquehue_National_Park%2C_Pucon%2C_Puc%C3%B3n%2C_Araucan%C3%ADa%2C_Chile_imported_from_iNaturalist_photo_361895209.jpg",
+            "caption": "Aditrochus coihuensis, Huerquehue National Park, Pucon, Pucón, Araucanía, Chile imported from iNatur",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Berberis_serrato-dentata%2C_Huerquehue_National_Park_-_Pucon%2C_Puc%C3%B3n%2C_Araucan%C3%ADa%2C_Chile_imported_from_iNaturalist_photo_361895483.jpg/960px-Berberis_serrato-dentata%2C_Huerquehue_National_Park_-_Pucon%2C_Puc%C3%B3n%2C_Araucan%C3%ADa%2C_Chile_imported_from_iNaturalist_photo_361895483.jpg",
+            "caption": "Berberis serrato-dentata, Huerquehue National Park - Pucon, Pucón, Araucanía, Chile imported from iN",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Blechnum_mochaenum%2C_Huerquehue_National_Park_-_Parque_Nacional_Huerquehue_sn%2C_Pucon%2C_Puc%C3%B3n%2C_Araucan%C3%ADa%2C_Chile_imported_from_iNaturalist_photo_361894158.jpg/960px-Blechnum_mochaenum%2C_Huerquehue_National_Park_-_Parque_Nacional_Huerquehue_sn%2C_Pucon%2C_Puc%C3%B3n%2C_Araucan%C3%ADa%2C_Chile_imported_from_iNaturalist_photo_361894158.jpg",
+            "caption": "Blechnum mochaenum, Huerquehue National Park - Parque Nacional Huerquehue sn, Pucon, Pucón, Araucaní",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Chilean_Holly%2C_Huerquehue_National_Park_-_Parque_Nacional_Huerquehue_sn%2C_Pucon%2C_Puc%C3%B3n%2C_Araucan%C3%ADa%2C_Chile_imported_from_iNaturalist_photo_361895173.jpg/960px-Chilean_Holly%2C_Huerquehue_National_Park_-_Parque_Nacional_Huerquehue_sn%2C_Pucon%2C_Puc%C3%B3n%2C_Araucan%C3%ADa%2C_Chile_imported_from_iNaturalist_photo_361895173.jpg",
+            "caption": "Chilean Holly, Huerquehue National Park - Parque Nacional Huerquehue sn, Pucon, Pucón, Araucanía, Ch",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Dioscorea_brachybotrya%2C_Huerquehue_National_Park_-_Parque_Nacional_Huerquehue_sn%2C_Pucon%2C_Puc%C3%B3n%2C_Araucan%C3%ADa%2C_Chile_imported_from_iNaturalist_photo_361894349.jpg/960px-Dioscorea_brachybotrya%2C_Huerquehue_National_Park_-_Parque_Nacional_Huerquehue_sn%2C_Pucon%2C_Puc%C3%B3n%2C_Araucan%C3%ADa%2C_Chile_imported_from_iNaturalist_photo_361894349.jpg",
+            "caption": "Dioscorea brachybotrya, Huerquehue National Park - Parque Nacional Huerquehue sn, Pucon, Pucón, Arau",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Giant_moss%2C_Huerquehue_National_Park_-_Parque_Nacional_Huerquehue_sn%2C_Pucon%2C_Puc%C3%B3n%2C_Araucan%C3%ADa%2C_Chile_imported_from_iNaturalist_photo_361893755.jpg/960px-Giant_moss%2C_Huerquehue_National_Park_-_Parque_Nacional_Huerquehue_sn%2C_Pucon%2C_Puc%C3%B3n%2C_Araucan%C3%ADa%2C_Chile_imported_from_iNaturalist_photo_361893755.jpg",
+            "caption": "Giant moss, Huerquehue National Park - Parque Nacional Huerquehue sn, Pucon, Pucón, Araucanía, Chile",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Maytenus_disticha%2C_Huerquehue_National_Park_-_Parque_Nacional_Huerquehue_sn%2C_Pucon%2C_Puc%C3%B3n%2C_Araucan%C3%ADa%2C_Chile_imported_from_iNaturalist_photo_361895231.jpg/960px-Maytenus_disticha%2C_Huerquehue_National_Park_-_Parque_Nacional_Huerquehue_sn%2C_Pucon%2C_Puc%C3%B3n%2C_Araucan%C3%ADa%2C_Chile_imported_from_iNaturalist_photo_361895231.jpg",
+            "caption": "Maytenus disticha, Huerquehue National Park - Parque Nacional Huerquehue sn, Pucon, Pucón, Araucanía",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Parque_Nacional_Huerquehue_01.jpg/960px-Parque_Nacional_Huerquehue_01.jpg",
+            "caption": "Parque Nacional Huerquehue 01",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 3.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Parque_Nacional_Huerquehue_2.jpg/960px-Parque_Nacional_Huerquehue_2.jpg",
+            "caption": "Parque Nacional Huerquehue 2",
+            "source": "Wikimedia Commons",
+            "license": "Public domain"
+          }
+        ],
+        "reason": "Einer der schönsten Nationalparks Chiles."
+      },
+      "activities": [
+        {
+          "name": "Wanderung Los Lagos",
+          "description": "Tagestour zu den Bergseen und Araukarien.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Araucaria_araucana_Huerquehue.jpg",
+              "caption": "Wanderung",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 3.0"
+            }
+          ]
+        },
+        {
+          "name": "Picknick am See",
+          "description": "Mittagspause in der Natur.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Araucaria_araucana_Huerquehue.jpg",
+              "caption": "See",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 3.0"
+            }
+          ]
+        },
+        {
+          "name": "Rafting auf dem Trancura",
+          "description": "Wildwasser-Action (optional).",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/5/58/Villarrica_Volcano_Chile.jpg",
+              "caption": "Rafting",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 2.0"
+            }
+          ]
+        },
+        {
+          "name": "Ausrüstungs-Check",
+          "description": "Letzte Besorgungen für den W-Trek.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/5/58/Villarrica_Volcano_Chile.jpg",
+              "caption": "Gear",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 2.0"
+            }
+          ]
+        },
+        {
+          "name": "Burger & Bier",
+          "description": "Kraft tanken.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/5/58/Villarrica_Volcano_Chile.jpg",
+              "caption": "Burger",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 2.0"
+            }
+          ]
+        }
+      ],
+      "highlights": [
+        {
+          "title": "Araukarien",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/9/97/Araucaria_araucana_Huerquehue.jpg"
+        },
+        {
+          "title": "Bergseen",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/9/97/Araucaria_araucana_Huerquehue.jpg"
+        },
+        {
+          "title": "Aktiv sein",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/5/58/Villarrica_Volcano_Chile.jpg"
+        }
+      ]
+    },
+    {
+      "id": "r5-day-2",
+      "date": "2026-01-09",
+      "station": {
+        "name": "Puerto Montt & Navimag Boarding",
+        "description": "Die Beine ausruhen auf der Fähre.",
+        "coordinates": {
+          "lat": -41.4689,
+          "lng": -72.9411
+        },
+        "images": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Puerto_Montt_-_Navimag_ferry_at_Angelmo.jpg",
+            "caption": "Navimag",
+            "source": "Wikimedia Commons",
+            "license": "CC BY 2.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/2007-12-20-MV-Evangelistas-Puerto-Natales.JPG/960px-2007-12-20-MV-Evangelistas-Puerto-Natales.JPG",
+            "caption": "2007-12-20-MV-Evangelistas-Puerto-Natales",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 3.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/2019-03-13_Office_of_NAVIMAG_Ferries_Patagonia%2C_Puerto_Natales%2C_Chile.jpg/960px-2019-03-13_Office_of_NAVIMAG_Ferries_Patagonia%2C_Puerto_Natales%2C_Chile.jpg",
+            "caption": "2019-03-13 Office of NAVIMAG Ferries Patagonia, Puerto Natales, Chile",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 4.0"
+          }
+        ],
+        "reason": "Erholung vor dem großen Trek."
+      },
+      "activities": [
+        {
+          "name": "Boarding",
+          "description": "Bezug der Kabine.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Puerto_Montt_-_Navimag_ferry_at_Angelmo.jpg",
+              "caption": "Boarding",
+              "source": "Wikimedia Commons",
+              "license": "CC BY 2.0"
+            }
+          ]
+        },
+        {
+          "name": "Schlafen & Lesen",
+          "description": "Kräfte sammeln.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Puerto_Montt_-_Navimag_ferry_at_Angelmo.jpg",
+              "caption": "Ruhe",
+              "source": "Wikimedia Commons",
+              "license": "CC BY 2.0"
+            }
+          ]
+        },
+        {
+          "name": "Landschaft genießen",
+          "description": "Vom Deck aus.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/8/89/Seno_de_Reloncav%C3%AD.jpg",
+              "caption": "Aussicht",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 3.0"
+            }
+          ]
+        },
+        {
+          "name": "Yoga an Deck",
+          "description": "Dehnen (wenn Wetter erlaubt).",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Puerto_Montt_-_Navimag_ferry_at_Angelmo.jpg",
+              "caption": "Yoga",
+              "source": "Wikimedia Commons",
+              "license": "CC BY 2.0"
+            }
+          ]
+        },
+        {
+          "name": "Briefing W-Trek",
+          "description": "Kartenstudium.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Torres_del_Paine_National_Park_-_Patagonia_-_Chile.jpg",
+              "caption": "Karte",
+              "source": "Wikimedia Commons",
+              "license": "CC BY 2.0"
+            }
+          ]
+        }
+      ],
+      "highlights": [
+        {
+          "title": "Erholung",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Puerto_Montt_-_Navimag_ferry_at_Angelmo.jpg"
+        },
+        {
+          "title": "Fjorde",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/8/89/Seno_de_Reloncav%C3%AD.jpg"
+        },
+        {
+          "title": "Vorfreude",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Torres_del_Paine_National_Park_-_Patagonia_-_Chile.jpg"
+        }
+      ]
+    },
+    {
+      "id": "r5-day-3",
+      "date": "2026-01-13",
+      "station": {
+        "name": "Start W-Trek",
+        "description": "Beginn der 5-tägigen Wanderung. Rucksack auf und los.",
+        "coordinates": {
+          "lat": -50.9423,
+          "lng": -73.4068
+        },
+        "images": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Torres_del_Paine_National_Park_-_Patagonia_-_Chile.jpg",
+            "caption": "W-Trek",
+            "source": "Wikimedia Commons",
+            "license": "CC BY 2.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Greg_Daniel_of_Trek_-_Segafredo_at_the_start_of_Stage_1_in_Sacramento_%2834865817031%29.jpg/960px-Greg_Daniel_of_Trek_-_Segafredo_at_the_start_of_Stage_1_in_Sacramento_%2834865817031%29.jpg",
+            "caption": "Greg Daniel of Trek - Segafredo at the start of Stage 1 in Sacramento (34865817031)",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 2.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/John_Degenkolb_of_Trek_Segafredo_before_the_start_of_Stage_1_in_Modesto_%2835039032875%29.jpg/960px-John_Degenkolb_of_Trek_Segafredo_before_the_start_of_Stage_1_in_Modesto_%2835039032875%29.jpg",
+            "caption": "John Degenkolb of Trek Segafredo before the start of Stage 1 in Modesto (35039032875)",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 2.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Kiel_Reijnen_of_Trek_-_Segafredo_before_the_start_of_Stage_2_in_Modesto_%2835039033755%29.jpg/960px-Kiel_Reijnen_of_Trek_-_Segafredo_before_the_start_of_Stage_2_in_Modesto_%2835039033755%29.jpg",
+            "caption": "Kiel Reijnen of Trek - Segafredo before the start of Stage 2 in Modesto (35039033755)",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 2.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Kiel_Reijnen_of_Trek_Segafredo_at_the_start_of_Stage_2_in_Modesto_%2834194970184%29.jpg/960px-Kiel_Reijnen_of_Trek_Segafredo_at_the_start_of_Stage_2_in_Modesto_%2834194970184%29.jpg",
+            "caption": "Kiel Reijnen of Trek Segafredo at the start of Stage 2 in Modesto (34194970184)",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 2.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Kiel_Reijnen_of_Trek_Segafredo_before_the_start_of_Stage_1_in_Sacramento_%2834154719784%29.jpg/960px-Kiel_Reijnen_of_Trek_Segafredo_before_the_start_of_Stage_1_in_Sacramento_%2834154719784%29.jpg",
+            "caption": "Kiel Reijnen of Trek Segafredo before the start of Stage 1 in Sacramento (34154719784)",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 2.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Nana_Visitor_2007_London.jpg/960px-Nana_Visitor_2007_London.jpg",
+            "caption": "Nana Visitor 2007 London",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution 2.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Peru_-_Lares_Trek_001_-_trekking_up_the_valley_from_Huaran_%287584193720%29.jpg/960px-Peru_-_Lares_Trek_001_-_trekking_up_the_valley_from_Huaran_%287584193720%29.jpg",
+            "caption": "Peru - Lares Trek 001 - trekking up the valley from Huaran (7584193720)",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution 2.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/7/79/Star_Trek_III_The_Search_for_Spock_logo.png",
+            "caption": "Star Trek III The Search for Spock logo",
+            "source": "Wikimedia Commons",
+            "license": "Public domain"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Start_of_the_wreck_trek_-_geograph.org.uk_-_2974138.jpg/960px-Start_of_the_wreck_trek_-_geograph.org.uk_-_2974138.jpg",
+            "caption": "Start of the wreck trek - geograph",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 2.0"
+          }
+        ],
+        "reason": "Der berühmteste Trek Patagoniens."
+      },
+      "activities": [
+        {
+          "name": "Bus in den Park",
+          "description": "Früher Start ab Puerto Natales.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Torres_del_Paine_National_Park_-_Patagonia_-_Chile.jpg",
+              "caption": "Bus",
+              "source": "Wikimedia Commons",
+              "license": "CC BY 2.0"
+            }
+          ]
+        },
+        {
+          "name": "Wanderung zur Base Las Torres",
+          "description": "Der anstrengendste Teil gleich zu Beginn (8h).",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Torres_del_Paine_National_Park_-_Patagonia_-_Chile.jpg",
+              "caption": "Aufstieg",
+              "source": "Wikimedia Commons",
+              "license": "CC BY 2.0"
+            }
+          ]
+        },
+        {
+          "name": "Ankunft am Aussichtspunkt",
+          "description": "Der Blick auf die drei Türme.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Torres_del_Paine_National_Park_-_Patagonia_-_Chile.jpg",
+              "caption": "Torres",
+              "source": "Wikimedia Commons",
+              "license": "CC BY 2.0"
+            }
+          ]
+        },
+        {
+          "name": "Abstieg zum Refugio",
+          "description": "Müde Beine, glückliches Herz.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Torres_del_Paine_National_Park_-_Patagonia_-_Chile.jpg",
+              "caption": "Refugio",
+              "source": "Wikimedia Commons",
+              "license": "CC BY 2.0"
+            }
+          ]
+        },
+        {
+          "name": "Abendessen im Camp",
+          "description": "Kalorien nachfüllen.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Torres_del_Paine_National_Park_-_Patagonia_-_Chile.jpg",
+              "caption": "Essen",
+              "source": "Wikimedia Commons",
+              "license": "CC BY 2.0"
+            }
+          ]
+        }
+      ],
+      "highlights": [
+        {
+          "title": "Die Türme",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Torres_del_Paine_National_Park_-_Patagonia_-_Chile.jpg"
+        },
+        {
+          "title": "Körperliche Herausforderung",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Torres_del_Paine_National_Park_-_Patagonia_-_Chile.jpg"
+        },
+        {
+          "title": "Natur pur",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Torres_del_Paine_National_Park_-_Patagonia_-_Chile.jpg"
+        }
+      ]
+    }
+  ]
+}

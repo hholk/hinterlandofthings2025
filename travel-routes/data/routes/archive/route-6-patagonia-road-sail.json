@@ -1,0 +1,467 @@
+{
+  "id": "route-6-patagonia-road-sail",
+  "name": "Route 6 – Patagonia Road & Sail",
+  "title": "Route 6 – Patagonia Road & Sail",
+  "summary": "Erst die Fjorde per Schiff, dann die Weite Patagoniens per Auto. Ein Roadtrip am Ende der Welt.",
+  "color": "#db2777",
+  "tags": [
+    "roadtrip",
+    "driving",
+    "fjords",
+    "freedom"
+  ],
+  "meta": {
+    "theme": "Straße & See",
+    "pace": "balanced",
+    "durationDays": 12,
+    "costEstimate": 2400,
+    "highlights": [
+      "Navimag Fährfahrt",
+      "Fahrt zur Estancia Olga Teresa",
+      "Königspinguine auf Feuerland (optional)"
+    ],
+    "highlightImages": [
+      {
+        "title": "Endlose Straße",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Guanaco_Torres_del_Paine.jpg",
+        "caption": "Die Straßen Patagoniens.",
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 2.0"
+      },
+      {
+        "title": "Navimag",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Puerto_Montt_-_Navimag_ferry_at_Angelmo.jpg",
+        "caption": "Unterwegs in den Fjorden.",
+        "source": "Wikimedia Commons",
+        "license": "CC BY 2.0"
+      },
+      {
+        "title": "Punta Arenas",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Puerto_Natales_Costanera.jpg",
+        "caption": "Ankunft im tiefen Süden.",
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 3.0"
+      }
+    ],
+    "scores": {
+      "adventure": 3,
+      "relax": 3,
+      "culture": 3,
+      "photography": 4
+    }
+  },
+  "slider": {
+    "enabled": true,
+    "label": "Reiseverlauf"
+  },
+  "bookingLinks": {
+    "tripCom": "https://www.trip.com/hotels/list?city=30&checkin=2026-01-09&checkout=2026-01-21",
+    "airbnb": "https://www.airbnb.com/s/Chile/homes?checkin=2026-01-09&checkout=2026-01-21"
+  },
+  "transportVariants": {
+    "rentalCar": {
+      "description": "Mietwagen ab Puerto Natales, Rückgabe Punta Arenas (Einwegmiete!).",
+      "costEstimateEUR": 900,
+      "pros": [
+        "Der Weg ist das Ziel",
+        "Stopps wo man will"
+      ],
+      "cons": [
+        "Einweggebühr",
+        "Wind beim Fahren"
+      ]
+    },
+    "publicTransport": {
+      "description": "Bus Puerto Natales -> Punta Arenas (3h). Sehr einfach.",
+      "costEstimateEUR": 200,
+      "pros": [
+        "Günstig",
+        "Entspannt"
+      ],
+      "cons": [
+        "Kein Roadtrip-Feeling"
+      ]
+    },
+    "mixed": {
+      "description": "Mietwagen für Ausflüge um Natales, Bus nach Punta Arenas.",
+      "costEstimateEUR": 500,
+      "pros": [
+        "Günstiger als Einwegmiete"
+      ],
+      "cons": [
+        "Weniger Freiheit auf der Strecke"
+      ]
+    }
+  },
+  "days": [
+    {
+      "id": "r6-day-1",
+      "date": "2026-01-09",
+      "station": {
+        "name": "Puerto Montt & Navimag Boarding",
+        "description": "Start der Reise im Hafen von Puerto Montt.",
+        "coordinates": {
+          "lat": -41.4689,
+          "lng": -72.9411
+        },
+        "images": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Puerto_Montt_-_Navimag_ferry_at_Angelmo.jpg",
+            "caption": "Navimag",
+            "source": "Wikimedia Commons",
+            "license": "CC BY 2.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/2007-12-20-MV-Evangelistas-Puerto-Natales.JPG/960px-2007-12-20-MV-Evangelistas-Puerto-Natales.JPG",
+            "caption": "2007-12-20-MV-Evangelistas-Puerto-Natales",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 3.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/2019-03-13_Office_of_NAVIMAG_Ferries_Patagonia%2C_Puerto_Natales%2C_Chile.jpg/960px-2019-03-13_Office_of_NAVIMAG_Ferries_Patagonia%2C_Puerto_Natales%2C_Chile.jpg",
+            "caption": "2019-03-13 Office of NAVIMAG Ferries Patagonia, Puerto Natales, Chile",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 4.0"
+          }
+        ],
+        "reason": "Der klassische Einstieg in den Süden."
+      },
+      "activities": [
+        {
+          "name": "Anreise Puerto Montt",
+          "description": "Flug oder Bus.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Puerto_Montt_-_Navimag_ferry_at_Angelmo.jpg",
+              "caption": "Anreise",
+              "source": "Wikimedia Commons",
+              "license": "CC BY 2.0"
+            }
+          ]
+        },
+        {
+          "name": "Boarding",
+          "description": "Bezug der Kabine.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Puerto_Montt_-_Navimag_ferry_at_Angelmo.jpg",
+              "caption": "Boarding",
+              "source": "Wikimedia Commons",
+              "license": "CC BY 2.0"
+            }
+          ]
+        },
+        {
+          "name": "Ablegen",
+          "description": "Leinen los.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Puerto_Montt_-_Navimag_ferry_at_Angelmo.jpg",
+              "caption": "Ablegen",
+              "source": "Wikimedia Commons",
+              "license": "CC BY 2.0"
+            }
+          ]
+        },
+        {
+          "name": "Abendessen",
+          "description": "Buffet.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Puerto_Montt_-_Navimag_ferry_at_Angelmo.jpg",
+              "caption": "Essen",
+              "source": "Wikimedia Commons",
+              "license": "CC BY 2.0"
+            }
+          ]
+        },
+        {
+          "name": "Sonnenuntergang",
+          "description": "Auf Deck.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/8/89/Seno_de_Reloncav%C3%AD.jpg",
+              "caption": "Sunset",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 3.0"
+            }
+          ]
+        }
+      ],
+      "highlights": [
+        {
+          "title": "Hafen",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Puerto_Montt_-_Navimag_ferry_at_Angelmo.jpg"
+        },
+        {
+          "title": "Schiff",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Puerto_Montt_-_Navimag_ferry_at_Angelmo.jpg"
+        },
+        {
+          "title": "Meer",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/8/89/Seno_de_Reloncav%C3%AD.jpg"
+        }
+      ]
+    },
+    {
+      "id": "r6-day-2",
+      "date": "2026-01-12",
+      "station": {
+        "name": "Ankunft Puerto Natales",
+        "description": "Übernahme des Mietwagens. Der Roadtrip beginnt.",
+        "coordinates": {
+          "lat": -51.7269,
+          "lng": -72.5068
+        },
+        "images": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Puerto_Natales_Costanera.jpg",
+            "caption": "Puerto Natales",
+            "source": "Wikimedia Commons",
+            "license": "CC BY-SA 3.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/2019-03-12_01_CNS_PUERTO_NATALES_LSG-1617_%E2%80%93_Puerto_Natales%2C_Chile.jpg/960px-2019-03-12_01_CNS_PUERTO_NATALES_LSG-1617_%E2%80%93_Puerto_Natales%2C_Chile.jpg",
+            "caption": "2019-03-12 01 CNS PUERTO NATALES LSG-1617 – Puerto Natales, Chile",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/2019-03-12_01_CRUX_AUSTRALIS_-_IMO_9471161_-_Puerto_Natales%2C_Chile.jpg/960px-2019-03-12_01_CRUX_AUSTRALIS_-_IMO_9471161_-_Puerto_Natales%2C_Chile.jpg",
+            "caption": "2019-03-12 01 CRUX AUSTRALIS - IMO 9471161 - Puerto Natales, Chile",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/2019-03-12_02_CNS_PUERTO_NATALES_LSG-1617_%E2%80%93_Puerto_Natales%2C_Chile.jpg/960px-2019-03-12_02_CNS_PUERTO_NATALES_LSG-1617_%E2%80%93_Puerto_Natales%2C_Chile.jpg",
+            "caption": "2019-03-12 02 CNS PUERTO NATALES LSG-1617 – Puerto Natales, Chile",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Cerro_Dorotea%2C_Puerto_Natales%2C_2019.jpg/960px-Cerro_Dorotea%2C_Puerto_Natales%2C_2019.jpg",
+            "caption": "Cerro Dorotea, Puerto Natales, 2019",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/IMG_1884Puerto_Natales.jpg/960px-IMG_1884Puerto_Natales.jpg",
+            "caption": "IMG 1884Puerto Natales",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 2.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Llegada_a_Puerto_Natales_%2840685046340%29.jpg/960px-Llegada_a_Puerto_Natales_%2840685046340%29.jpg",
+            "caption": "Llegada a Puerto Natales (40685046340)",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution 2.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Natales_rc_012.JPG",
+            "caption": "Natales rc 012",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution 3.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Puerto_Natales%2C_Chile1.jpg/960px-Puerto_Natales%2C_Chile1.jpg",
+            "caption": "Puerto Natales, Chile1",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 3.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Puerto_Natales%2C_amanece....jpg/960px-Puerto_Natales%2C_amanece....jpg",
+            "caption": "Puerto Natales, amanece",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 3.0"
+          }
+        ],
+        "reason": "Startpunkt der Fahrt."
+      },
+      "activities": [
+        {
+          "name": "Ausschiffung",
+          "description": "Ankunft.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Puerto_Natales_Costanera.jpg",
+              "caption": "Hafen",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 3.0"
+            }
+          ]
+        },
+        {
+          "name": "Mietwagenübernahme",
+          "description": "Check des Fahrzeugs.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Puerto_Natales_Costanera.jpg",
+              "caption": "Auto",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 3.0"
+            }
+          ]
+        },
+        {
+          "name": "Fahrt zur Milodon Höhle",
+          "description": "Kurzer Ausflug in die Umgebung.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Cueva_del_Milodon.jpg",
+              "caption": "Höhle",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 3.0"
+            }
+          ]
+        },
+        {
+          "name": "Einkaufen",
+          "description": "Proviant für die Fahrt.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Puerto_Natales_Costanera.jpg",
+              "caption": "Markt",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 3.0"
+            }
+          ]
+        },
+        {
+          "name": "Abendessen",
+          "description": "Lokal essen.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Puerto_Natales_Costanera.jpg",
+              "caption": "Essen",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 3.0"
+            }
+          ]
+        }
+      ],
+      "highlights": [
+        {
+          "title": "Freiheit",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Puerto_Natales_Costanera.jpg"
+        },
+        {
+          "title": "Höhle",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Cueva_del_Milodon.jpg"
+        },
+        {
+          "title": "Auto",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Puerto_Natales_Costanera.jpg"
+        }
+      ]
+    },
+    {
+      "id": "r6-day-3",
+      "date": "2026-01-13",
+      "station": {
+        "name": "Fahrt nach Punta Arenas",
+        "description": "Durch die endlose Pampa Richtung Süden.",
+        "coordinates": {
+          "lat": -53.1638,
+          "lng": -70.9171
+        },
+        "images": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Guanaco_Torres_del_Paine.jpg",
+            "caption": "Pampa",
+            "source": "Wikimedia Commons",
+            "license": "CC BY-SA 2.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Fanck_arnold_ernst_1939_ss_bremen.png",
+            "caption": "Fanck arnold ernst 1939 ss bremen",
+            "source": "Wikimedia Commons",
+            "license": "Public domain"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Meyer_rolf_fanck_arnold_ernst_1939_ts_bremen.png/960px-Meyer_rolf_fanck_arnold_ernst_1939_ts_bremen.png",
+            "caption": "Meyer rolf fanck arnold ernst 1939 ts bremen",
+            "source": "Wikimedia Commons",
+            "license": "Public domain"
+          }
+        ],
+        "reason": "Die südlichste Großstadt der Welt."
+      },
+      "activities": [
+        {
+          "name": "Fahrt auf der Ruta 9",
+          "description": "Ca. 3 Stunden durch die Steppe.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Guanaco_Torres_del_Paine.jpg",
+              "caption": "Straße",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 2.0"
+            }
+          ]
+        },
+        {
+          "name": "Stopp an der Estancia Olga Teresa",
+          "description": "Kondor-Beobachtung.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Guanaco_Torres_del_Paine.jpg",
+              "caption": "Kondor",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 2.0"
+            }
+          ]
+        },
+        {
+          "name": "Ankunft Punta Arenas",
+          "description": "Check-in.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Puerto_Natales_Costanera.jpg",
+              "caption": "Punta Arenas",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 3.0"
+            }
+          ]
+        },
+        {
+          "name": "Friedhof besuchen",
+          "description": "Einer der schönsten Friedhöfe Südamerikas.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Puerto_Natales_Costanera.jpg",
+              "caption": "Friedhof",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 3.0"
+            }
+          ]
+        },
+        {
+          "name": "Kiosko Roca",
+          "description": "Choripan essen (Kult!).",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Puerto_Natales_Costanera.jpg",
+              "caption": "Choripan",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 3.0"
+            }
+          ]
+        }
+      ],
+      "highlights": [
+        {
+          "title": "Weite",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Guanaco_Torres_del_Paine.jpg"
+        },
+        {
+          "title": "Kondore",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Guanaco_Torres_del_Paine.jpg"
+        },
+        {
+          "title": "Geschichte",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Puerto_Natales_Costanera.jpg"
+        }
+      ]
+    }
+  ]
+}

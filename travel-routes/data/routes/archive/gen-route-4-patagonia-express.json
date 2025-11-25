@@ -1,0 +1,634 @@
+[
+    {
+        "id": "gen-route-4-patagonia-express",
+        "title": "Route 14 – Patagonien Express",
+        "summary": "Für Eilige: Die Highlights des tiefen Südens kompakt. Pinguine, Steppe und die Torres del Paine.",
+        "meta": {
+            "theme": "Adventure",
+            "pace": "moderate",
+            "durationDays": 7,
+            "costEstimate": 1407,
+            "highlights": [
+                "Besuch in Punta Arenas",
+                "Besuch in Puerto Natales",
+                "Besuch in Torres del Paine"
+            ],
+            "highlightImages": [
+                {
+                    "title": "Route 14 – Patagonien Express",
+                    "image": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1200&auto=format&fit=crop",
+                    "caption": "Für Eilige: Die Highlights des tiefen Südens kompakt. Pinguine, Steppe und die Torres del Paine.",
+                    "source": "Unsplash",
+                    "license": "Unsplash License"
+                }
+            ],
+            "scores": {
+                "budget": 3,
+                "adventure": 4,
+                "relax": 2,
+                "culture": 3
+            }
+        },
+        "days": [
+            {
+                "id": "day-1",
+                "date": "2025-11-01",
+                "station": {
+                    "name": "Punta Arenas",
+                    "description": "Aufenthalt in Punta Arenas. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Punta Arenas"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": []
+                }
+            },
+            {
+                "id": "day-2",
+                "date": "2025-11-03",
+                "station": {
+                    "name": "Puerto Natales",
+                    "description": "Aufenthalt in Puerto Natales. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Puerto Natales"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": [
+                        {
+                            "mode": "bus",
+                            "from": {
+                                "name": "Punta Arenas"
+                            },
+                            "to": {
+                                "name": "Puerto Natales"
+                            },
+                            "durationMinutes": 278,
+                            "variants": [
+                                {
+                                    "id": "var-bus-7881",
+                                    "mode": "bus",
+                                    "description": "Linienbus von Punta Arenas nach Puerto Natales. Günstig und zuverlässig.",
+                                    "durationMinutes": 278,
+                                    "cost": 39,
+                                    "co2": 11.600000000000001
+                                },
+                                {
+                                    "id": "var-car-2479",
+                                    "mode": "drive",
+                                    "description": "Mietwagen-Etappe. Freiheit für Fotostopps entlang der Route.",
+                                    "durationMinutes": 232,
+                                    "cost": 95,
+                                    "co2": 44.08
+                                },
+                                {
+                                    "id": "var-transfer-9854",
+                                    "mode": "drive",
+                                    "description": "Privater Transfer mit lokalem Driver-Guide. Entspannt zurücklehnen.",
+                                    "durationMinutes": 232,
+                                    "cost": 225,
+                                    "co2": 58.0
+                                },
+                                {
+                                    "id": "var-hitch-2550",
+                                    "mode": "drive",
+                                    "description": "Mitfahrgelegenheit oder Colectivo. Die lokale Art zu reisen.",
+                                    "durationMinutes": 348,
+                                    "cost": 12,
+                                    "co2": 23.200000000000003
+                                },
+                                {
+                                    "id": "var-bus-prem-4139",
+                                    "mode": "bus",
+                                    "description": "Premium 'Salon Cama' Bus. Fast wie Business Class.",
+                                    "durationMinutes": 278,
+                                    "cost": 44,
+                                    "co2": 11.600000000000001
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "day-3",
+                "date": "2025-11-05",
+                "station": {
+                    "name": "Torres del Paine",
+                    "description": "Aufenthalt in Torres del Paine. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Torres del Paine"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": [
+                        {
+                            "mode": "bus",
+                            "from": {
+                                "name": "Puerto Natales"
+                            },
+                            "to": {
+                                "name": "Torres del Paine"
+                            },
+                            "durationMinutes": 500,
+                            "variants": [
+                                {
+                                    "id": "var-bus-4951",
+                                    "mode": "bus",
+                                    "description": "Linienbus von Puerto Natales nach Torres del Paine. Günstig und zuverlässig.",
+                                    "durationMinutes": 500,
+                                    "cost": 31,
+                                    "co2": 20.85
+                                },
+                                {
+                                    "id": "var-car-3999",
+                                    "mode": "drive",
+                                    "description": "Mietwagen-Etappe. Freiheit für Fotostopps entlang der Route.",
+                                    "durationMinutes": 417,
+                                    "cost": 93,
+                                    "co2": 79.23
+                                },
+                                {
+                                    "id": "var-transfer-8710",
+                                    "mode": "drive",
+                                    "description": "Privater Transfer mit lokalem Driver-Guide. Entspannt zurücklehnen.",
+                                    "durationMinutes": 417,
+                                    "cost": 111,
+                                    "co2": 104.25
+                                },
+                                {
+                                    "id": "var-hitch-6619",
+                                    "mode": "drive",
+                                    "description": "Mitfahrgelegenheit oder Colectivo. Die lokale Art zu reisen.",
+                                    "durationMinutes": 625,
+                                    "cost": 8,
+                                    "co2": 41.7
+                                },
+                                {
+                                    "id": "var-flight-3781",
+                                    "mode": "flight",
+                                    "description": "Inlandsflug für maximale Zeitersparnis.",
+                                    "durationMinutes": 69,
+                                    "cost": 59,
+                                    "co2": 116.76
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "day-4",
+                "date": "2025-11-07",
+                "station": {
+                    "name": "Grey Glacier",
+                    "description": "Aufenthalt in Grey Glacier. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Grey Glacier"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": [
+                        {
+                            "mode": "bus",
+                            "from": {
+                                "name": "Torres del Paine"
+                            },
+                            "to": {
+                                "name": "Grey Glacier"
+                            },
+                            "durationMinutes": 483,
+                            "variants": [
+                                {
+                                    "id": "var-bus-9974",
+                                    "mode": "bus",
+                                    "description": "Linienbus von Torres del Paine nach Grey Glacier. Günstig und zuverlässig.",
+                                    "durationMinutes": 483,
+                                    "cost": 19,
+                                    "co2": 20.150000000000002
+                                },
+                                {
+                                    "id": "var-car-3738",
+                                    "mode": "drive",
+                                    "description": "Mietwagen-Etappe. Freiheit für Fotostopps entlang der Route.",
+                                    "durationMinutes": 403,
+                                    "cost": 46,
+                                    "co2": 76.57000000000001
+                                },
+                                {
+                                    "id": "var-transfer-1659",
+                                    "mode": "drive",
+                                    "description": "Privater Transfer mit lokalem Driver-Guide. Entspannt zurücklehnen.",
+                                    "durationMinutes": 403,
+                                    "cost": 166,
+                                    "co2": 100.75
+                                },
+                                {
+                                    "id": "var-hitch-3429",
+                                    "mode": "drive",
+                                    "description": "Mitfahrgelegenheit oder Colectivo. Die lokale Art zu reisen.",
+                                    "durationMinutes": 604,
+                                    "cost": 20,
+                                    "co2": 40.300000000000004
+                                },
+                                {
+                                    "id": "var-flight-4889",
+                                    "mode": "flight",
+                                    "description": "Inlandsflug für maximale Zeitersparnis.",
+                                    "durationMinutes": 78,
+                                    "cost": 138,
+                                    "co2": 112.84000000000002
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "day-5",
+                "date": "2025-11-09",
+                "station": {
+                    "name": "Puerto Natales",
+                    "description": "Aufenthalt in Puerto Natales. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Puerto Natales"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": [
+                        {
+                            "mode": "bus",
+                            "from": {
+                                "name": "Grey Glacier"
+                            },
+                            "to": {
+                                "name": "Puerto Natales"
+                            },
+                            "durationMinutes": 368,
+                            "variants": [
+                                {
+                                    "id": "var-bus-8565",
+                                    "mode": "bus",
+                                    "description": "Linienbus von Grey Glacier nach Puerto Natales. Günstig und zuverlässig.",
+                                    "durationMinutes": 368,
+                                    "cost": 33,
+                                    "co2": 15.350000000000001
+                                },
+                                {
+                                    "id": "var-car-5993",
+                                    "mode": "drive",
+                                    "description": "Mietwagen-Etappe. Freiheit für Fotostopps entlang der Route.",
+                                    "durationMinutes": 307,
+                                    "cost": 73,
+                                    "co2": 58.33
+                                },
+                                {
+                                    "id": "var-transfer-4610",
+                                    "mode": "drive",
+                                    "description": "Privater Transfer mit lokalem Driver-Guide. Entspannt zurücklehnen.",
+                                    "durationMinutes": 307,
+                                    "cost": 181,
+                                    "co2": 76.75
+                                },
+                                {
+                                    "id": "var-hitch-5098",
+                                    "mode": "drive",
+                                    "description": "Mitfahrgelegenheit oder Colectivo. Die lokale Art zu reisen.",
+                                    "durationMinutes": 460,
+                                    "cost": 8,
+                                    "co2": 30.700000000000003
+                                },
+                                {
+                                    "id": "var-flight-6170",
+                                    "mode": "flight",
+                                    "description": "Inlandsflug für maximale Zeitersparnis.",
+                                    "durationMinutes": 119,
+                                    "cost": 68,
+                                    "co2": 85.96000000000001
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ],
+        "lodging": [
+            {
+                "id": "lodging-85996",
+                "stopId": "punta-arenas",
+                "name": "Camping Punta Arenas Central",
+                "nights": 3,
+                "avgNightlyRateEUR": 24,
+                "amenities": [
+                    "Küche",
+                    "Garten",
+                    "Touren"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=958",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Camping Punta Arenas Central",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-70285",
+                "stopId": "punta-arenas",
+                "name": "Camping Punta Arenas Backpacker",
+                "nights": 1,
+                "avgNightlyRateEUR": 21,
+                "amenities": [
+                    "Frühstück",
+                    "Garten",
+                    "Küche"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=794",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Camping Punta Arenas Backpacker",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-28269",
+                "stopId": "punta-arenas",
+                "name": "Hostel Punta Arenas View",
+                "nights": 3,
+                "avgNightlyRateEUR": 35,
+                "amenities": [
+                    "Frühstück",
+                    "Touren",
+                    "WLAN"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=998",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hostel Punta Arenas View",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-75861",
+                "stopId": "puerto-natales",
+                "name": "Airbnb Puerto Natales Central",
+                "nights": 1,
+                "avgNightlyRateEUR": 56,
+                "amenities": [
+                    "Bar",
+                    "Garten",
+                    "Küche"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=424",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Airbnb Puerto Natales Central",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-80069",
+                "stopId": "puerto-natales",
+                "name": "Guesthouse Puerto Natales View",
+                "nights": 3,
+                "avgNightlyRateEUR": 26,
+                "amenities": [
+                    "Touren",
+                    "Bar",
+                    "Frühstück"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=824",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Guesthouse Puerto Natales View",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-49638",
+                "stopId": "puerto-natales",
+                "name": "Airbnb Puerto Natales Backpacker",
+                "nights": 1,
+                "avgNightlyRateEUR": 39,
+                "amenities": [
+                    "Küche",
+                    "WLAN",
+                    "Touren"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=129",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Airbnb Puerto Natales Backpacker",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-39662",
+                "stopId": "torres-del-paine",
+                "name": "Airbnb Torres del Paine View",
+                "nights": 3,
+                "avgNightlyRateEUR": 50,
+                "amenities": [
+                    "Garten",
+                    "Küche",
+                    "WLAN"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=229",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Airbnb Torres del Paine View",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-14218",
+                "stopId": "torres-del-paine",
+                "name": "Guesthouse Torres del Paine Central",
+                "nights": 3,
+                "avgNightlyRateEUR": 58,
+                "amenities": [
+                    "WLAN",
+                    "Touren",
+                    "Küche"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=433",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Guesthouse Torres del Paine Central",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-34703",
+                "stopId": "torres-del-paine",
+                "name": "Hotel Torres del Paine Central",
+                "nights": 3,
+                "avgNightlyRateEUR": 63,
+                "amenities": [
+                    "Küche",
+                    "Touren",
+                    "Bar"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=174",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hotel Torres del Paine Central",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-95281",
+                "stopId": "grey-glacier",
+                "name": "Guesthouse Grey Glacier Central",
+                "nights": 1,
+                "avgNightlyRateEUR": 53,
+                "amenities": [
+                    "WLAN",
+                    "Frühstück",
+                    "Bar"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=359",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Guesthouse Grey Glacier Central",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-29365",
+                "stopId": "grey-glacier",
+                "name": "Airbnb Grey Glacier Central",
+                "nights": 1,
+                "avgNightlyRateEUR": 31,
+                "amenities": [
+                    "Garten",
+                    "WLAN",
+                    "Touren"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=521",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Airbnb Grey Glacier Central",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-79041",
+                "stopId": "grey-glacier",
+                "name": "Airbnb Grey Glacier Backpacker",
+                "nights": 2,
+                "avgNightlyRateEUR": 55,
+                "amenities": [
+                    "Bar",
+                    "Garten",
+                    "Touren"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=746",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Airbnb Grey Glacier Backpacker",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-82184",
+                "stopId": "puerto-natales",
+                "name": "Airbnb Puerto Natales Oasis",
+                "nights": 3,
+                "avgNightlyRateEUR": 48,
+                "amenities": [
+                    "Touren",
+                    "Frühstück",
+                    "Bar"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=741",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Airbnb Puerto Natales Oasis",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-54655",
+                "stopId": "puerto-natales",
+                "name": "Hostel Puerto Natales Oasis",
+                "nights": 1,
+                "avgNightlyRateEUR": 36,
+                "amenities": [
+                    "Küche",
+                    "WLAN",
+                    "Touren"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=656",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hostel Puerto Natales Oasis",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-82104",
+                "stopId": "puerto-natales",
+                "name": "Hostel Puerto Natales Backpacker",
+                "nights": 3,
+                "avgNightlyRateEUR": 39,
+                "amenities": [
+                    "WLAN",
+                    "Garten",
+                    "Bar"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=626",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hostel Puerto Natales Backpacker",
+                        "license": "Unsplash License"
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -119,63 +119,63 @@ const HIGHLIGHT_TIMEOUT_MS = 1600;
 
 const dom = hasDocument
   ? {
-      app: document.querySelector('.travel-app'),
-      routeList: document.getElementById('travel-route-list'),
-      detail: document.getElementById('travel-detail'),
-      search: document.getElementById('travel-search'),
-      gallery: document.getElementById('travel-gallery'),
-      events: document.getElementById('travel-events'),
-      tagList: document.getElementById('travel-tag-list'),
-      markdownInput: document.getElementById('travel-md'),
-      markdownPreview: document.getElementById('travel-md-preview'),
-      markdownRender: document.getElementById('travel-md-render'),
-      markdownClear: document.getElementById('travel-md-clear'),
-      panel: document.querySelector('.travel-panel'),
-      panelToggle: document.querySelector('.travel-panel-toggle'),
-      chipButtons: document.querySelectorAll('.travel-chip'),
-      poiList: document.getElementById('travel-poi-list'),
-      suggestionOpen: document.getElementById('travel-suggestions-open'),
-      suggestionClose: document.getElementById('travel-suggestions-close'),
-      suggestionDialog: document.getElementById('travel-suggestions'),
-      suggestionList: document.getElementById('travel-suggestion-list'),
-      suggestionBackdrop: document.getElementById('travel-suggestions-backdrop'),
-    }
+    app: document.querySelector('.travel-app'),
+    routeList: document.getElementById('travel-route-list'),
+    detail: document.getElementById('travel-detail'),
+    search: document.getElementById('travel-search'),
+    gallery: document.getElementById('travel-gallery'),
+    events: document.getElementById('travel-events'),
+    tagList: document.getElementById('travel-tag-list'),
+    markdownInput: document.getElementById('travel-md'),
+    markdownPreview: document.getElementById('travel-md-preview'),
+    markdownRender: document.getElementById('travel-md-render'),
+    markdownClear: document.getElementById('travel-md-clear'),
+    panel: document.querySelector('.travel-panel'),
+    panelToggle: document.querySelector('.travel-panel-toggle'),
+    chipButtons: document.querySelectorAll('.travel-chip'),
+    poiList: document.getElementById('travel-poi-list'),
+    suggestionOpen: document.getElementById('travel-suggestions-open'),
+    suggestionClose: document.getElementById('travel-suggestions-close'),
+    suggestionDialog: document.getElementById('travel-suggestions'),
+    suggestionList: document.getElementById('travel-suggestion-list'),
+    suggestionBackdrop: document.getElementById('travel-suggestions-backdrop'),
+  }
   : {
-      app: null,
-      routeList: null,
-      detail: { innerHTML: '' },
-      search: { value: '', addEventListener() {} },
-      gallery: { innerHTML: '' },
-      events: { innerHTML: '' },
-      tagList: { innerHTML: '', appendChild() {} },
-      markdownInput: { value: '' },
-      markdownPreview: { innerHTML: '' },
-      markdownRender: { addEventListener() {} },
-      markdownClear: { addEventListener() {} },
-      panel: null,
-      panelToggle: null,
-      chipButtons: [],
-      poiList: null,
-      suggestionOpen: null,
-      suggestionClose: null,
-      suggestionDialog: null,
-      suggestionList: null,
-      suggestionBackdrop: null,
-    };
+    app: null,
+    routeList: null,
+    detail: { innerHTML: '' },
+    search: { value: '', addEventListener() { } },
+    gallery: { innerHTML: '' },
+    events: { innerHTML: '' },
+    tagList: { innerHTML: '', appendChild() { } },
+    markdownInput: { value: '' },
+    markdownPreview: { innerHTML: '' },
+    markdownRender: { addEventListener() { } },
+    markdownClear: { addEventListener() { } },
+    panel: null,
+    panelToggle: null,
+    chipButtons: [],
+    poiList: null,
+    suggestionOpen: null,
+    suggestionClose: null,
+    suggestionDialog: null,
+    suggestionList: null,
+    suggestionBackdrop: null,
+  };
 
 const templates = hasDocument
   ? {
-      routeCard: document.getElementById('tpl-route-card'),
-      flightRow: document.getElementById('tpl-flight-row'),
-      stopItem: document.getElementById('tpl-stop-item'),
-      costRow: document.getElementById('tpl-cost-row'),
-    }
+    routeCard: document.getElementById('tpl-route-card'),
+    flightRow: document.getElementById('tpl-flight-row'),
+    stopItem: document.getElementById('tpl-stop-item'),
+    costRow: document.getElementById('tpl-cost-row'),
+  }
   : {
-      routeCard: { content: { firstElementChild: null } },
-      flightRow: { content: { firstElementChild: null } },
-      stopItem: { content: { firstElementChild: null } },
-      costRow: { content: { firstElementChild: null } },
-    };
+    routeCard: { content: { firstElementChild: null } },
+    flightRow: { content: { firstElementChild: null } },
+    stopItem: { content: { firstElementChild: null } },
+    costRow: { content: { firstElementChild: null } },
+  };
 
 const LOCAL_STORAGE_KEY = 'travel-routes.custom';
 const NOTES_KEY = 'travel-routes.notes';
@@ -469,8 +469,8 @@ function renderRouteDetail(route) {
         <div class="travel-detail__metrics">${renderMetrics(metrics)}</div>
       </div>
       ${route.source === 'curated'
-        ? '<span class="travel-status">Kuratierte Vorlage</span>'
-        : '<span class="travel-status">Eigene Route</span>'}
+      ? '<span class="travel-status">Kuratierte Vorlage</span>'
+      : '<span class="travel-status">Eigene Route</span>'}
     </header>
     <nav id="travel-view-toggle" class="travel-view-toggle" role="tablist" aria-label="Darstellung wählen">
       <button class="travel-chip" type="button" data-view="planning" aria-pressed="false">Planung</button>
@@ -642,29 +642,29 @@ function renderChronologyGroup(route, group) {
   const inbound = group.inbound ? renderChronologyTransfer(route, group.inbound) : '';
   const nearby = group.stops.length > 1
     ? `<div class="travel-timeline__nearby"><h4>Vor Ort erkunden</h4><ul>${group.stops
-        .slice(1)
-        .map((stop) => `<li>${stop.name}</li>`)
-        .join('')}</ul></div>`
+      .slice(1)
+      .map((stop) => `<li>${stop.name}</li>`)
+      .join('')}</ul></div>`
     : '';
   const localMoves = group.localMoves.length
     ? `<div class="travel-timeline__locals"><h4>Kurze Wege (&lt; 2 h)</h4><ul>${group.localMoves
-        .map((segment) => `<li>${summarizeSegment(route, segment)}</li>`)
-        .join('')}</ul></div>`
+      .map((segment) => `<li>${summarizeSegment(route, segment)}</li>`)
+      .join('')}</ul></div>`
     : '';
   const activities = group.activities.length
     ? `<div class="travel-timeline__activities"><h4>Aktivitäten</h4><ul>${group.activities
-        .map((activity) => renderActivitySummary(activity))
-        .join('')}</ul></div>`
+      .map((activity) => renderActivitySummary(activity))
+      .join('')}</ul></div>`
     : '';
   const lodging = group.lodging.length
     ? `<div class="travel-timeline__lodging"><h4>Übernachten</h4><ul>${group.lodging
-        .map((stay) => `<li><strong>${stay.name}</strong>${stay.checkIn ? ` · ${stay.checkIn}` : ''}${stay.checkOut ? ` → ${stay.checkOut}` : ''}</li>`)
-        .join('')}</ul></div>`
+      .map((stay) => `<li><strong>${stay.name}</strong>${stay.checkIn ? ` · ${stay.checkIn}` : ''}${stay.checkOut ? ` → ${stay.checkOut}` : ''}</li>`)
+      .join('')}</ul></div>`
     : '';
   const food = group.food.length
     ? `<div class="travel-timeline__food"><h4>Food & Drinks</h4><ul>${group.food
-        .map((item) => `<li>${item.name}${item.openingHours ? ` · ${item.openingHours}` : ''}</li>`)
-        .join('')}</ul></div>`
+      .map((item) => `<li>${item.name}${item.openingHours ? ` · ${item.openingHours}` : ''}</li>`)
+      .join('')}</ul></div>`
     : '';
 
   return `<article class="travel-timeline__group">
@@ -840,9 +840,9 @@ function renderStopList(route, stops) {
     const servicesHtml = services.length ? `<div class="travel-stop__services">${services.join('<br/>')}</div>` : '';
     const knowledge = stop.knowledge
       ? Object.values(stop.knowledge)
-          .filter(Boolean)
-          .map((entry) => `<li>${entry}</li>`)
-          .join('')
+        .filter(Boolean)
+        .map((entry) => `<li>${entry}</li>`)
+        .join('')
       : '';
     const knowledgeHtml = knowledge ? `<ul class="travel-stop__knowledge">${knowledge}</ul>` : '';
     const photo = stop.photos?.[0]?.url

@@ -212,402 +212,65 @@
   },
   "routeIndex": [
     {
-      "id": "var1",
-      "file": "data/routes/var1.json",
-      "name": "Variante 1 – Flugreise Zentral + Osterinsel + Atacama",
-      "summary": "Flug zu Chiles Top-Spots: Santiago, Rapa Nui und Atacama mit Surf-Finale in Pichilemu.",
-      "color": "#5bd1ff",
+      "id": "chile-route-1-atacama-salare-2026",
+      "file": "data/routes/chile-route-1-atacama-salare-2026.json",
+      "name": "Route 1 – Atacama, Salare & Sterne",
+      "summary": "Fokus Norden vom 04. bis 20.01.2026: Santiago Warm-up, Weiterflug nach Calama und Basecamp San Pedro de Atacama für Lagunen, Salare, Astro-Events und Puffertage zurück in der Hauptstadt.",
+      "color": "#f97316",
       "tags": [
-        "culture",
         "nature",
         "adventure",
-        "flight"
+        "flight",
+        "photography"
       ],
       "meta": {
-        "theme": "Flugreise • Inseln • Wüste",
-        "pace": "ausgewogen",
-        "durationDays": 19,
-        "costEstimate": 3200,
+        "theme": "Atacama, Salare & Sterne",
+        "pace": "intensiv",
+        "durationDays": 17,
+        "costEstimate": 2350,
         "highlights": [
-          "Rapa Nui",
-          "Valle de la Luna",
-          "Streetart Valparaíso"
+          "Valle de la Luna Sunset",
+          "Lagunas Miscanti & Miñiques",
+          "Astro-Tour unter dem dunkelsten Himmel"
+        ],
+        "highlightImages": [
+          {
+            "title": "Valle de la Luna Sunset",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Atardecer_en_la_valle_de_la_Luna.JPG",
+            "caption": "Goldenes Licht über den Dünen und Felsformationen des Valle de la Luna.",
+            "source": "Wikimedia Commons",
+            "license": "CC BY-SA 4.0"
+          },
+          {
+            "title": "Lagunas Miscanti & Miñiques",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Laguna_Miscanti_%2826465051611%29.jpg",
+            "caption": "Türkisfarbene Hochlandlagunen mit Vicuñas vor den Andengipfeln.",
+            "source": "Wikimedia Commons",
+            "license": "CC BY-SA 2.0"
+          },
+          {
+            "title": "Astro-Tour unter dem dunkelsten Himmel",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/e/e1/ESO_Paranal_Observatory_at_night.jpg",
+            "caption": "Sternenhimmel über der Atacama-Wüste.",
+            "source": "Wikimedia Commons",
+            "license": "CC BY 4.0"
+          }
         ],
         "scores": {
           "budget": 3,
-          "adventure": 3,
-          "relax": 3,
-          "culture": 4
-        }
-      },
-      "metrics": {
-        "totalDistanceKm": 9982.0,
-        "estimatedCarbonKg": 2733.3,
-        "segmentCount": 10,
-        "flightCount": 3,
-        "stopCount": 13,
-        "flightCarbonKg": 2615.6,
-        "groundTransportCarbonKg": 117.7,
-        "totalNights": 9,
-        "avgNightlyRate": 196.67,
-        "lodgingCount": 3,
-        "foodCount": 2,
-        "activityCount": 3,
-        "averageDailyBudget": 168.42
-      },
-      "searchTokens": [
-        "Atacama Stargazing",
-        "Calama Airport (CJC)",
-        "Empanadas Hanga Roa",
-        "Flug zu Chiles Top-Spots: Santiago, Rapa Nui und Atacama mit Surf-Finale in Pichilemu.",
-        "H2193",
-        "Hanga Roa Eco Lodge",
-        "LA329",
-        "LA841",
-        "Mataveri International Airport (IPC)",
-        "Mercado Central",
-        "Pichilemu Zentrum",
-        "Punta de Lobos",
-        "Rano Raraku Vulkan",
-        "Rapa Nui Sunrise",
-        "San Pedro de Atacama",
-        "Santiago International Airport (SCL)",
-        "Santiago – Barrio Lastarria",
-        "Streetart Walk Valparaíso",
-        "Terminal Alameda",
-        "Valle de la Luna",
-        "Valparaíso – Cerro Alegre",
-        "Variante 1 – Flugreise Zentral + Osterinsel + Atacama",
-        "Viña del Mar – Playa Acapulco",
-        "adventure",
-        "culture",
-        "flight",
-        "nature"
-      ]
-    },
-    {
-      "id": "var2",
-      "file": "data/routes/var2.json",
-      "name": "Variante 2 – Flug zu Patagonien & Atacama",
-      "summary": "Flüge verbinden Patagonien, Atacama und Santiago für die ultimative Chile-Highlight-Tour.",
-      "color": "#8affc1",
-      "tags": [
-        "nature",
-        "adventure",
-        "photography",
-        "flight"
-      ],
-      "meta": {
-        "theme": "Flugreise Patagonien • Atacama",
-        "pace": "zügig",
-        "durationDays": 19,
-        "costEstimate": 3400,
-        "highlights": [
-          "Base Torres",
-          "El Tatio",
-          "Lago Grey"
-        ],
-        "scores": {
-          "budget": 2,
-          "adventure": 4,
+          "adventure": 5,
           "relax": 2,
           "culture": 3
         }
       },
-      "metrics": {
-        "totalDistanceKm": 7654.0,
-        "estimatedCarbonKg": 2034.2,
-        "segmentCount": 8,
-        "flightCount": 3,
-        "stopCount": 9,
-        "flightCarbonKg": 2002.2,
-        "groundTransportCarbonKg": 32.0,
-        "totalNights": 8,
-        "avgNightlyRate": 230.0,
-        "lodgingCount": 3,
-        "foodCount": 2,
-        "activityCount": 2,
-        "averageDailyBudget": 178.95
-      },
+      "metrics": {},
       "searchTokens": [
-        "Base Torres Trek",
-        "Calama Airport (CJC)",
-        "Damiana Elena",
-        "El Huerto",
-        "Flüge verbinden Patagonien, Atacama und Santiago für die ultimative Chile-Highlight-Tour.",
-        "Geysire del Tatio",
-        "H520",
-        "LA285",
-        "LA329",
-        "Puerto Natales",
-        "Punta Arenas Airport (PUQ)",
-        "San Pedro de Atacama",
-        "Santiago International Airport (SCL)",
-        "Santiago – Barrio Lastarria",
-        "Torres del Paine – Base Torres",
-        "Valle de la Luna",
-        "Valparaíso – Cerro Alegre",
-        "Variante 2 – Flug zu Patagonien & Atacama",
+        "Route 1 – Atacama, Salare & Sterne",
+        "Fokus Norden vom 04. bis 20.01.2026: Santiago Warm-up, Weiterflug nach Calama und Basecamp San Pedro de Atacama für Lagunen, Salare, Astro-Events und Puffertage zurück in der Hauptstadt.",
         "adventure",
         "flight",
         "nature",
         "photography"
-      ]
-    },
-    {
-      "id": "var3",
-      "file": "data/routes/var3.json",
-      "name": "Variante 3 – Roadtrip Küste • Seen • Chiloé",
-      "summary": "Gemächlicher Roadtrip auf eigener Achse von Santiago über Seenland bis Chiloé.",
-      "color": "#ffb86b",
-      "tags": [
-        "nature",
-        "food",
-        "culture",
-        "roadtrip"
-      ],
-      "meta": {
-        "theme": "Roadtrip Küste & Seen",
-        "pace": "gemütlich",
-        "durationDays": 19,
-        "costEstimate": 2600,
-        "highlights": [
-          "Valparaíso",
-          "Pucón",
-          "Chiloé"
-        ],
-        "scores": {
-          "budget": 4,
-          "adventure": 3,
-          "relax": 4,
-          "culture": 3
-        }
-      },
-      "metrics": {
-        "totalDistanceKm": 2428.0,
-        "estimatedCarbonKg": 550.5,
-        "segmentCount": 7,
-        "flightCount": 1,
-        "stopCount": 9,
-        "flightCarbonKg": 261.5,
-        "groundTransportCarbonKg": 289.0,
-        "totalNights": 8,
-        "avgNightlyRate": 160.0,
-        "lodgingCount": 3,
-        "foodCount": 2,
-        "activityCount": 2,
-        "averageDailyBudget": 136.84
-      },
-      "searchTokens": [
-        "Apice Cocina",
-        "Castro – Palafitos",
-        "Feria Costumbrista de Chonchi",
-        "Gemächlicher Roadtrip auf eigener Achse von Santiago über Seenland bis Chiloé.",
-        "H012",
-        "Kayak Llanquihue",
-        "Pichilemu Zentrum",
-        "Pucón – Huerquehue Trailhead",
-        "Puerto Montt Airport (PMC)",
-        "Puerto Varas",
-        "Santiago International Airport (SCL)",
-        "Santiago – Barrio Lastarria",
-        "Surfkurs Punta de Lobos",
-        "Valparaíso – Cerro Alegre",
-        "Variante 3 – Roadtrip Küste • Seen • Chiloé",
-        "Viña del Mar – Playa Acapulco",
-        "culture",
-        "food",
-        "nature",
-        "roadtrip"
-      ]
-    },
-    {
-      "id": "var4",
-      "file": "data/routes/var4.json",
-      "name": "Variante 4 – Flugreise Instagram-Hotspots",
-      "summary": "Flüge verbinden die fotogensten Orte Chiles für Sunrise-Shoots von Rapa Nui bis Patagonien.",
-      "color": "#c792ea",
-      "tags": [
-        "photography",
-        "adventure",
-        "culture",
-        "flight"
-      ],
-      "meta": {
-        "theme": "Flugreise IG-Hotspots",
-        "pace": "zügig",
-        "durationDays": 19,
-        "costEstimate": 3600,
-        "highlights": [
-          "Ahu Tongariki",
-          "Base Torres",
-          "Valle de la Luna"
-        ],
-        "scores": {
-          "budget": 2,
-          "adventure": 3,
-          "relax": 2,
-          "culture": 3
-        }
-      },
-      "metrics": {
-        "totalDistanceKm": 7506.0,
-        "estimatedCarbonKg": 2057.8,
-        "segmentCount": 7,
-        "flightCount": 3,
-        "stopCount": 8,
-        "flightCarbonKg": 1974.5,
-        "groundTransportCarbonKg": 83.3,
-        "totalNights": 5,
-        "avgNightlyRate": 376.0,
-        "lodgingCount": 2,
-        "foodCount": 1,
-        "activityCount": 1,
-        "averageDailyBudget": 189.47
-      },
-      "searchTokens": [
-        "Café Matilde",
-        "Flüge verbinden die fotogensten Orte Chiles für Sunrise-Shoots von Rapa Nui bis Patagonien.",
-        "JA117",
-        "LA330",
-        "LA841",
-        "Mataveri International Airport (IPC)",
-        "Pichilemu Zentrum",
-        "Punta de Lobos",
-        "Rano Raraku Vulkan",
-        "Santiago – Barrio Lastarria",
-        "Sunrise Moai Shooting",
-        "Torres del Paine – Base Torres",
-        "Valle de la Luna",
-        "Valparaíso – Cerro Alegre",
-        "Variante 4 – Flugreise Instagram-Hotspots",
-        "adventure",
-        "culture",
-        "flight",
-        "photography"
-      ]
-    },
-    {
-      "id": "var5",
-      "file": "data/routes/var5.json",
-      "name": "Variante 5 – Budget & Bus",
-      "summary": "Roadtrip mit Langstreckenbussen, Hostales und lokalen Märkten quer durch Chile.",
-      "color": "#f7768e",
-      "tags": [
-        "budget",
-        "culture",
-        "nature",
-        "roadtrip"
-      ],
-      "meta": {
-        "theme": "Roadtrip Budget & Bus",
-        "pace": "ausgewogen",
-        "durationDays": 19,
-        "costEstimate": 2200,
-        "highlights": [
-          "Elqui-Tal",
-          "San Pedro",
-          "Chiloé"
-        ],
-        "scores": {
-          "budget": 5,
-          "adventure": 3,
-          "relax": 3,
-          "culture": 3
-        }
-      },
-      "metrics": {
-        "totalDistanceKm": 4974.0,
-        "estimatedCarbonKg": 248.7,
-        "segmentCount": 8,
-        "flightCount": 0,
-        "stopCount": 9,
-        "totalNights": 5,
-        "avgNightlyRate": 49.0,
-        "lodgingCount": 2,
-        "foodCount": 2,
-        "activityCount": 1,
-        "averageDailyBudget": 115.79
-      },
-      "searchTokens": [
-        "Antofagasta – Hand des Desierto",
-        "Cafe El Kiosco",
-        "Castro – Palafitos",
-        "La Recova Market",
-        "La Serena",
-        "Observatorium Mamalluca",
-        "Pucón – Huerquehue Trailhead",
-        "Puerto Varas",
-        "Roadtrip mit Langstreckenbussen, Hostales und lokalen Märkten quer durch Chile.",
-        "San Pedro de Atacama",
-        "Santiago – Barrio Lastarria",
-        "Terminal Alameda",
-        "Variante 5 – Budget & Bus",
-        "Vicuña",
-        "budget",
-        "culture",
-        "nature",
-        "roadtrip"
-      ]
-    },
-    {
-      "id": "var6",
-      "file": "data/routes/var6.json",
-      "name": "Variante 6 – Kulinarik & Weintäler",
-      "summary": "Genussvoller Roadtrip im Mietwagen zwischen Santiago, den Weintälern und Concepción.",
-      "color": "#52fa7c",
-      "tags": [
-        "food",
-        "wine",
-        "culture",
-        "roadtrip"
-      ],
-      "meta": {
-        "theme": "Roadtrip Wein & Küche",
-        "pace": "gemütlich",
-        "durationDays": 19,
-        "costEstimate": 2500,
-        "highlights": [
-          "Casablanca",
-          "Colchagua",
-          "Concepción"
-        ],
-        "scores": {
-          "budget": 4,
-          "adventure": 2,
-          "relax": 4,
-          "culture": 4
-        }
-      },
-      "metrics": {
-        "totalDistanceKm": 1140.0,
-        "estimatedCarbonKg": 147.9,
-        "segmentCount": 5,
-        "flightCount": 0,
-        "stopCount": 6,
-        "totalNights": 5,
-        "avgNightlyRate": 240.0,
-        "lodgingCount": 2,
-        "foodCount": 2,
-        "activityCount": 2,
-        "averageDailyBudget": 131.58
-      },
-      "searchTokens": [
-        "Bocanáriz Wine Bar",
-        "Chilenischer Kochkurs",
-        "Concepción – Mercado Central",
-        "Fabrica de Cecinas Fischer",
-        "Genussvoller Roadtrip im Mietwagen zwischen Santiago, den Weintälern und Concepción.",
-        "Santa Cruz – Colchagua",
-        "Santiago – Barrio Lastarria",
-        "Talca – Altos de Lircay",
-        "Valparaíso – Cerro Alegre",
-        "Variante 6 – Kulinarik & Weintäler",
-        "Weinverkostung Casa del Bosque",
-        "culture",
-        "food",
-        "roadtrip",
-        "wine"
       ]
     },
     {
@@ -670,6 +333,254 @@
         "food",
         "roadtrip",
         "wine"
+      ]
+    },
+    {
+      "id": "chile-route-3-lakes-volcanoes-2026",
+      "file": "data/routes/chile-route-3-lakes-volcanoes-2026.json",
+      "name": "Route 3 – Lakes & Volcanoes (Pucón, Puerto Varas, Chiloé)",
+      "summary": "Das grüne Herz Chiles: Vulkane besteigen in Pucón, deutsche Spuren in Puerto Varas und Mythen auf der Insel Chiloé.",
+      "color": "#16a34a",
+      "tags": [
+        "nature",
+        "active",
+        "culture",
+        "roadtrip"
+      ],
+      "meta": {
+        "theme": "Seen & Vulkane",
+        "pace": "aktiv",
+        "durationDays": 17,
+        "costEstimate": 2100,
+        "highlights": [
+          "Vulkan Villarrica",
+          "Osorno Vulkan",
+          "Palafitos in Castro"
+        ],
+        "highlightImages": [
+          {
+            "title": "Vulkan Villarrica",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Villarrica_Volcano_Puc%C3%B3n.jpg",
+            "caption": "Der rauchende Vulkan Villarrica über dem See.",
+            "source": "Wikimedia Commons",
+            "license": "CC BY-SA 2.0"
+          },
+          {
+            "title": "Osorno Vulkan",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Volcan_Osorno_Puerto_Varas.jpg",
+            "caption": "Der perfekte Kegel des Osorno Vulkans am Llanquihue-See.",
+            "source": "Wikimedia Commons",
+            "license": "CC BY-SA 3.0"
+          },
+          {
+            "title": "Palafitos in Castro",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Palafitos_de_Castro.jpg",
+            "caption": "Bunte Pfahlbauten (Palafitos) in Castro, Chiloé.",
+            "source": "Wikimedia Commons",
+            "license": "CC BY-SA 2.0"
+          }
+        ],
+        "scores": {
+          "budget": 4,
+          "adventure": 4,
+          "relax": 3,
+          "culture": 4
+        }
+      },
+      "metrics": {},
+      "searchTokens": [
+        "Route 3 – Lakes & Volcanoes (Pucón, Puerto Varas, Chiloé)",
+        "Das grüne Herz Chiles: Vulkane besteigen in Pucón, deutsche Spuren in Puerto Varas und Mythen auf der Insel Chiloé.",
+        "active",
+        "culture",
+        "nature",
+        "roadtrip"
+      ]
+    },
+    {
+      "id": "chile-route-4-patagonia-sur-2026",
+      "file": "data/routes/chile-route-4-patagonia-sur-2026.json",
+      "name": "Route 4 – Patagonia Sur (Punta Arenas, Puerto Natales, Torres del Paine)",
+      "summary": "Das klassische Patagonien-Abenteuer: Pinguine in Punta Arenas, Fjord-Feeling in Puerto Natales und das weltberühmte Torres del Paine Massiv.",
+      "color": "#3b82f6",
+      "tags": [
+        "nature",
+        "trekking",
+        "wildlife",
+        "flight"
+      ],
+      "meta": {
+        "theme": "Patagonien Klassik",
+        "pace": "sportlich",
+        "durationDays": 17,
+        "costEstimate": 2800,
+        "highlights": [
+          "Pinguine auf der Isla Magdalena",
+          "Base Torres Trek",
+          "Grey Gletscher"
+        ],
+        "highlightImages": [
+          {
+            "title": "Pinguine auf der Isla Magdalena",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/0/07/Magellanic_Penguins_Isla_Magdalena.jpg",
+            "caption": "Magellan-Pinguine auf der Isla Magdalena.",
+            "source": "Wikimedia Commons",
+            "license": "CC BY-SA 3.0"
+          },
+          {
+            "title": "Base Torres Trek",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Torres_del_Paine_Three_Towers.jpg",
+            "caption": "Die drei Türme des Paine-Massivs im Morgenlicht.",
+            "source": "Wikimedia Commons",
+            "license": "CC BY-SA 2.0"
+          },
+          {
+            "title": "Grey Gletscher",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/9/98/Grey_Glacier_Patagonia.jpg",
+            "caption": "Die blaue Eiswand des Grey Gletschers.",
+            "source": "Wikimedia Commons",
+            "license": "CC BY-SA 4.0"
+          }
+        ],
+        "scores": {
+          "budget": 2,
+          "adventure": 5,
+          "relax": 2,
+          "culture": 2
+        }
+      },
+      "metrics": {},
+      "searchTokens": [
+        "Route 4 – Patagonia Sur (Punta Arenas, Puerto Natales, Torres del Paine)",
+        "Das klassische Patagonien-Abenteuer: Pinguine in Punta Arenas, Fjord-Feeling in Puerto Natales und das weltberühmte Torres del Paine Massiv.",
+        "flight",
+        "nature",
+        "trekking",
+        "wildlife"
+      ]
+    },
+    {
+      "id": "chile-route-5-carretera-austral-light-2026",
+      "file": "data/routes/chile-route-5-carretera-austral-light-2026.json",
+      "name": "Route 5 – Carretera Austral Light (Balmaceda, Coyhaique, Puerto Río Tranquilo)",
+      "summary": "Der wilde Norden Patagoniens: Roadtrip auf der legendären Carretera Austral zu den Marmorhöhlen und Gletschern.",
+      "color": "#059669",
+      "tags": [
+        "adventure",
+        "nature",
+        "roadtrip",
+        "offroad"
+      ],
+      "meta": {
+        "theme": "Carretera Austral",
+        "pace": "abenteuerlich",
+        "durationDays": 17,
+        "costEstimate": 2600,
+        "highlights": [
+          "Marmorhöhlen",
+          "Cerro Castillo",
+          "Laguna San Rafael"
+        ],
+        "highlightImages": [
+          {
+            "title": "Marmorhöhlen",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Capillas_de_Marmol.JPG",
+            "caption": "Die Marmorhöhlen im Lago General Carrera.",
+            "source": "Wikimedia Commons",
+            "license": "CC BY-SA 3.0"
+          },
+          {
+            "title": "Cerro Castillo",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Cerro_Castillo_Aysen.jpg",
+            "caption": "Der markante Gipfel des Cerro Castillo.",
+            "source": "Wikimedia Commons",
+            "license": "CC BY-SA 4.0"
+          },
+          {
+            "title": "Laguna San Rafael",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Laguna_San_Rafael_Glacier.jpg",
+            "caption": "Gletscherfront in der Laguna San Rafael.",
+            "source": "Wikimedia Commons",
+            "license": "CC BY-SA 2.0"
+          }
+        ],
+        "scores": {
+          "budget": 3,
+          "adventure": 5,
+          "relax": 2,
+          "culture": 2
+        }
+      },
+      "metrics": {},
+      "searchTokens": [
+        "Route 5 – Carretera Austral Light (Balmaceda, Coyhaique, Puerto Río Tranquilo)",
+        "Der wilde Norden Patagoniens: Roadtrip auf der legendären Carretera Austral zu den Marmorhöhlen und Gletschern.",
+        "adventure",
+        "nature",
+        "offroad",
+        "roadtrip"
+      ]
+    },
+    {
+      "id": "chile-route-6-big-mix-2026",
+      "file": "data/routes/chile-route-6-big-mix-2026.json",
+      "name": "Route 6 – The Big Mix (Atacama & Patagonien)",
+      "summary": "Das Beste aus zwei Welten: Die Wüste im Norden und das Eis im Süden in einer epischen Reise kombiniert.",
+      "color": "#db2777",
+      "tags": [
+        "nature",
+        "contrast",
+        "flight",
+        "bucketlist"
+      ],
+      "meta": {
+        "theme": "Best of Chile",
+        "pace": "intensiv",
+        "durationDays": 20,
+        "costEstimate": 3500,
+        "highlights": [
+          "Valle de la Luna",
+          "Torres del Paine",
+          "Santiago City"
+        ],
+        "highlightImages": [
+          {
+            "title": "Valle de la Luna",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Atardecer_en_la_valle_de_la_Luna.JPG",
+            "caption": "Sonnenuntergang in der Atacama-Wüste.",
+            "source": "Wikimedia Commons",
+            "license": "CC BY-SA 4.0"
+          },
+          {
+            "title": "Torres del Paine",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Torres_del_Paine_Three_Towers.jpg",
+            "caption": "Die Granittürme in Patagonien.",
+            "source": "Wikimedia Commons",
+            "license": "CC BY-SA 2.0"
+          },
+          {
+            "title": "Santiago City",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Santiago_de_Chile_Costanera_Center.jpg",
+            "caption": "Moderne Skyline von Santiago mit den Anden.",
+            "source": "Wikimedia Commons",
+            "license": "CC BY-SA 3.0"
+          }
+        ],
+        "scores": {
+          "budget": 2,
+          "adventure": 5,
+          "relax": 2,
+          "culture": 3
+        }
+      },
+      "metrics": {},
+      "searchTokens": [
+        "Route 6 – The Big Mix (Atacama & Patagonien)",
+        "Das Beste aus zwei Welten: Die Wüste im Norden und das Eis im Süden in einer epischen Reise kombiniert.",
+        "bucketlist",
+        "contrast",
+        "flight",
+        "nature"
       ]
     },
     {
@@ -760,68 +671,6 @@
         "flight",
         "nature",
         "roadtrip"
-      ]
-    },
-    {
-      "id": "chile-route-1-atacama-salare-2026",
-      "file": "data/routes/chile-route-1-atacama-salare-2026.json",
-      "name": "Route 1 – Atacama, Salare & Sterne",
-      "summary": "Fokus Norden vom 04. bis 20.01.2026: Santiago Warm-up, Weiterflug nach Calama und Basecamp San Pedro de Atacama für Lagunen, Salare, Astro-Events und Puffertage zurück in der Hauptstadt.",
-      "color": "#f97316",
-      "tags": [
-        "nature",
-        "adventure",
-        "flight",
-        "photography"
-      ],
-      "meta": {
-        "theme": "Atacama, Salare & Sterne",
-        "pace": "intensiv",
-        "durationDays": 17,
-        "costEstimate": 2350,
-        "highlights": [
-          "Valle de la Luna Sunset",
-          "Lagunas Miscanti & Miñiques",
-          "Astro-Tour unter dem dunkelsten Himmel"
-        ],
-        "highlightImages": [
-          {
-            "title": "Valle de la Luna Sunset",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Atardecer_en_la_valle_de_la_Luna.JPG",
-            "caption": "Goldenes Licht über den Dünen und Felsformationen des Valle de la Luna.",
-            "source": "Wikimedia Commons",
-            "license": "CC BY-SA 4.0"
-          },
-          {
-            "title": "Lagunas Miscanti & Miñiques",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Laguna_Miscanti_%2826465051611%29.jpg",
-            "caption": "Türkisfarbene Hochlandlagunen mit Vicuñas vor den Andengipfeln.",
-            "source": "Wikimedia Commons",
-            "license": "CC BY-SA 2.0"
-          },
-          {
-            "title": "Astro-Tour unter dem dunkelsten Himmel",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/4/49/The_Milky_Way_above_the_Atacama_Desert.jpg",
-            "caption": "Sternenbeobachtung bei absolut klarer Atacama-Luft.",
-            "source": "Wikimedia Commons",
-            "license": "CC BY-SA 4.0"
-          }
-        ],
-        "scores": {
-          "adventure": 5,
-          "relax": 3,
-          "culture": 3,
-          "photography": 5
-        }
-      },
-      "metrics": {},
-      "searchTokens": [
-        "Fokus Norden vom 04. bis 20.01.2026: Santiago Warm-up, Weiterflug nach Calama und Basecamp San Pedro de Atacama für Lagunen, Salare, Astro-Events und Puffertage zurück in der Hauptstadt.",
-        "Route 1 – Atacama, Salare & Sterne",
-        "adventure",
-        "flight",
-        "nature",
-        "photography"
       ]
     },
     {
@@ -1855,6 +1704,133 @@
         "flight",
         "nature"
       ]
+    },
+    {
+      "id": "gen-route-1-desert-sea",
+      "file": "data/routes/gen-route-1-desert-sea.json",
+      "name": "Route 11 – Wüste & Meer (Budget)",
+      "summary": "Kontrastreiches Abenteuer: Von der trockenen Atacama-Wüste an die entspannte Pazifikküste. Perfekt für Budget-Reisende.",
+      "tags": [
+        "nature",
+        "relax",
+        "generated"
+      ],
+      "durationDays": 10,
+      "costEstimate": 2280
+    },
+    {
+      "id": "gen-route-2-volcanoes-fjords",
+      "file": "data/routes/gen-route-2-volcanoes-fjords.json",
+      "name": "Route 12 – Vulkane & Fjorde (Navimag Intro)",
+      "summary": "Der perfekte Einstieg: Seenregion um Puerto Varas und eine kurze Fjord-Erfahrung. Ideal für Naturliebhaber.",
+      "tags": [
+        "adventure",
+        "nature",
+        "generated"
+      ],
+      "durationDays": 8,
+      "costEstimate": 2202
+    },
+    {
+      "id": "gen-route-3-mystic-island",
+      "file": "data/routes/gen-route-3-mystic-island.json",
+      "name": "Route 13 – Mythen von Chiloé",
+      "summary": "Entdecke die magische Insel Chiloé mit ihren Holzkirchen und Palafitos. Kultur pur und raue Natur.",
+      "tags": [
+        "culture",
+        "nature",
+        "generated"
+      ],
+      "durationDays": 9,
+      "costEstimate": 1733
+    },
+    {
+      "id": "gen-route-4-patagonia-express",
+      "file": "data/routes/gen-route-4-patagonia-express.json",
+      "name": "Route 14 – Patagonien Express",
+      "summary": "Für Eilige: Die Highlights des tiefen Südens kompakt. Pinguine, Steppe und die Torres del Paine.",
+      "tags": [
+        "adventure",
+        "generated"
+      ],
+      "durationDays": 7,
+      "costEstimate": 1407
+    },
+    {
+      "id": "gen-route-5-wine-waves",
+      "file": "data/routes/gen-route-5-wine-waves.json",
+      "name": "Route 15 – Wein & Wellen",
+      "summary": "Genussreise durch das Zentraltal zu den besten Surfspots. Weinverkostung trifft auf Strandleben.",
+      "tags": [
+        "relax",
+        "culture",
+        "generated"
+      ],
+      "durationDays": 8,
+      "costEstimate": 1980
+    },
+    {
+      "id": "gen-route-6-starry-nights",
+      "file": "data/routes/gen-route-6-starry-nights.json",
+      "name": "Route 16 – Sternennächte",
+      "summary": "Die klarsten Himmel der Welt: Vom Elqui-Tal in die Atacama. Astronomie und Entspannung.",
+      "tags": [
+        "nature",
+        "relax",
+        "generated"
+      ],
+      "durationDays": 6,
+      "costEstimate": 925
+    },
+    {
+      "id": "gen-route-7-glacier-explorer",
+      "file": "data/routes/gen-route-7-glacier-explorer.json",
+      "name": "Route 17 – Gletscher Entdecker",
+      "summary": "Abseits der Massen: Die wilde Carretera Austral und die Eisfelder der Laguna San Rafael.",
+      "tags": [
+        "adventure",
+        "generated"
+      ],
+      "durationDays": 12,
+      "costEstimate": 2273
+    },
+    {
+      "id": "gen-route-8-urban-wild",
+      "file": "data/routes/gen-route-8-urban-wild.json",
+      "name": "Route 18 – Stadt & Wildnis",
+      "summary": "Metropole Santiago trifft auf die wilden Anden im Cajón del Maipo. Kultur und Trekking kombiniert.",
+      "tags": [
+        "culture",
+        "nature",
+        "generated"
+      ],
+      "durationDays": 7,
+      "costEstimate": 2072
+    },
+    {
+      "id": "gen-route-9-deep-south",
+      "file": "data/routes/gen-route-9-deep-south.json",
+      "name": "Route 19 – Das Ende der Welt (Navimag)",
+      "summary": "Expedition nach Feuerland und durch die Magellanstraße. Mit Navimag-Optionen für echte Abenteurer.",
+      "tags": [
+        "adventure",
+        "generated"
+      ],
+      "durationDays": 10,
+      "costEstimate": 1501
+    },
+    {
+      "id": "gen-route-10-andes-crossing",
+      "file": "data/routes/gen-route-10-andes-crossing.json",
+      "name": "Route 20 – Andenüberquerung",
+      "summary": "Über Vulkane und Seen: Von Pucón über die Grenze nach Argentinien und zurück. Ein Roadtrip-Traum.",
+      "tags": [
+        "nature",
+        "adventure",
+        "generated"
+      ],
+      "durationDays": 8,
+      "costEstimate": 1670
     }
   ],
   "poiOverview": {

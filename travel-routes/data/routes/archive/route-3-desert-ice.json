@@ -1,0 +1,809 @@
+{
+  "id": "route-3-desert-ice",
+  "name": "Route 3 – Desert & Ice",
+  "title": "Route 3 – Desert & Ice",
+  "summary": "Von der trockensten Wüste der Welt in die regenreichen Fjorde Patagoniens. Ein Reise der Extreme.",
+  "color": "#eab308",
+  "tags": [
+    "desert",
+    "fjords",
+    "contrast",
+    "photography"
+  ],
+  "meta": {
+    "theme": "Wüste & Wasser",
+    "pace": "intensiv",
+    "durationDays": 16,
+    "costEstimate": 3200,
+    "highlights": [
+      "Mondtal in der Atacama",
+      "Navimag Fährfahrt",
+      "Gletscher Grey"
+    ],
+    "highlightImages": [
+      {
+        "title": "Valle de la Luna",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Atardecer_en_la_valle_de_la_Luna.JPG",
+        "caption": "Sonnenuntergang im Valle de la Luna, Atacama.",
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "title": "Navimag in den Fjorden",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Puerto_Montt_-_Navimag_ferry_at_Angelmo.jpg",
+        "caption": "Unterwegs in den Patagonischen Kanälen.",
+        "source": "Wikimedia Commons",
+        "license": "CC BY 2.0"
+      },
+      {
+        "title": "Gletscher Grey",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/81/Glaciar_Grey_2012.jpg",
+        "caption": "Der Grey Gletscher im Torres del Paine Nationalpark.",
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 3.0"
+      }
+    ],
+    "scores": {
+      "adventure": 5,
+      "relax": 2,
+      "culture": 3,
+      "photography": 5
+    }
+  },
+  "slider": {
+    "enabled": true,
+    "label": "Reiseverlauf"
+  },
+  "bookingLinks": {
+    "tripCom": "https://www.trip.com/hotels/list?city=30&checkin=2026-01-01&checkout=2026-01-16",
+    "airbnb": "https://www.airbnb.com/s/Chile/homes?checkin=2026-01-01&checkout=2026-01-16"
+  },
+  "transportVariants": {
+    "rentalCar": {
+      "description": "Mietwagen in Calama (Atacama) und später in Puerto Natales. Dazwischen Flüge und Fähre.",
+      "costEstimateEUR": 1100,
+      "pros": [
+        "Flexibilität in beiden Regionen",
+        "Unabhängigkeit"
+      ],
+      "cons": [
+        "Zwei separate Anmietungen",
+        "Flugbuchungen nötig"
+      ]
+    },
+    "publicTransport": {
+      "description": "Transfers in Atacama (Touren) und Busse in Patagonien.",
+      "costEstimateEUR": 600,
+      "pros": [
+        "Entspannt, da man nicht selbst fahren muss",
+        "Günstiger"
+      ],
+      "cons": [
+        "Weniger flexibel bei Fotostopps",
+        "Abhängig von Touranbietern"
+      ]
+    },
+    "mixed": {
+      "description": "Touren in Atacama, Mietwagen in Patagonien.",
+      "costEstimateEUR": 900,
+      "pros": [
+        "Auto dort wo es am wichtigsten ist (Patagonien)",
+        "Kein Stress in der Wüste"
+      ],
+      "cons": [
+        "Mietwagenbuchung"
+      ]
+    }
+  },
+  "days": [
+    {
+      "id": "r3-day-1",
+      "date": "2026-01-01",
+      "station": {
+        "name": "Ankunft Calama & San Pedro",
+        "description": "Landung in der Wüste. Transfer nach San Pedro de Atacama.",
+        "coordinates": {
+          "lat": -22.9111,
+          "lng": -68.2011
+        },
+        "images": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Atardecer_en_la_valle_de_la_Luna.JPG",
+            "caption": "Atacama Wüste",
+            "source": "Wikimedia Commons",
+            "license": "CC BY-SA 4.0"
+          }
+        ],
+        "reason": "Der Beginn im Norden."
+      },
+      "activities": [
+        {
+          "name": "Transfer nach San Pedro",
+          "description": "Fahrt durch die Wüstenlandschaft mit Blick auf Vulkane.",
+          "images": []
+        },
+        {
+          "name": "Check-in im Adobe-Hotel",
+          "description": "Gemütliche Unterkunft im lokalen Stil.",
+          "images": []
+        },
+        {
+          "name": "Valle de la Luna Sunset",
+          "description": "Klassiker zum Einstieg: Sonnenuntergang im Mondtal.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Sunset_at_Valle_de_la_Luna.jpg/960px-Sunset_at_Valle_de_la_Luna.jpg",
+              "caption": "Sunset at Valle de la Luna",
+              "source": "Wikimedia Commons",
+              "license": "Creative Commons Attribution 4.0"
+            },
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Sunset_at_Valle_de_la_Luna_%28rai-alma-4900%29.tiff/lossy-page1-800px-Sunset_at_Valle_de_la_Luna_%28rai-alma-4900%29.tiff.jpg",
+              "caption": "Sunset at Valle de la Luna (rai-alma-4900)",
+              "source": "Wikimedia Commons",
+              "license": "Creative Commons Attribution 4.0"
+            },
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Sunset_at_Valle_de_la_Luna_%28rai-alma-4901%29.jpg/960px-Sunset_at_Valle_de_la_Luna_%28rai-alma-4901%29.jpg",
+              "caption": "Sunset at Valle de la Luna (rai-alma-4901)",
+              "source": "Wikimedia Commons",
+              "license": "Creative Commons Attribution 4.0"
+            },
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Valle_de_La_Luna_-_Deserto_Atacama_-_Chile_-_panoramio_%2812%29.jpg/960px-Valle_de_La_Luna_-_Deserto_Atacama_-_Chile_-_panoramio_%2812%29.jpg",
+              "caption": "Valle de La Luna - Deserto Atacama - Chile - panoramio (12)",
+              "source": "Wikimedia Commons",
+              "license": "Creative Commons Attribution-Share Alike 3.0"
+            },
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Valle_de_La_Luna_-_Deserto_Atacama_-_Chile_-_panoramio_%286%29.jpg/960px-Valle_de_La_Luna_-_Deserto_Atacama_-_Chile_-_panoramio_%286%29.jpg",
+              "caption": "Valle de La Luna - Deserto Atacama - Chile - panoramio (6)",
+              "source": "Wikimedia Commons",
+              "license": "Creative Commons Attribution-Share Alike 3.0"
+            }
+          ]
+        },
+        {
+          "name": "Sternenbeobachtung",
+          "description": "Der klarste Himmel der Welt.",
+          "images": []
+        },
+        {
+          "name": "Abendessen: Quinoa & Lama",
+          "description": "Lokale Spezialitäten probieren.",
+          "images": []
+        }
+      ],
+      "highlights": [
+        {
+          "title": "Mondlandschaft",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Atardecer_en_la_valle_de_la_Luna.JPG"
+        },
+        {
+          "title": "Sternenhimmel",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/4/49/The_Milky_Way_above_the_Atacama_Desert.jpg"
+        },
+        {
+          "title": "Vulkane",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Atardecer_en_la_valle_de_la_Luna.JPG"
+        }
+      ]
+    },
+    {
+      "id": "r3-day-2",
+      "date": "2026-01-03",
+      "station": {
+        "name": "Geysire & Lagunen",
+        "description": "Früher Start zu den El Tatio Geysiren und Besuch der Hochlandlagunen.",
+        "coordinates": {
+          "lat": -22.3333,
+          "lng": -68.0167
+        },
+        "images": [],
+        "reason": "Spektakuläre Geothermie und Natur."
+      },
+      "activities": [
+        {
+          "name": "El Tatio Geysire",
+          "description": "Sonnenaufgang bei den Geysiren auf 4300m.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/B-245.JPG/960px-B-245.JPG",
+              "caption": "B-245",
+              "source": "Wikimedia Commons",
+              "license": "Creative Commons Attribution-Share Alike 3.0"
+            }
+          ]
+        },
+        {
+          "name": "Bad im Thermalpool",
+          "description": "Aufwärmen im heißen Wasser.",
+          "images": []
+        },
+        {
+          "name": "Vicuña Beobachtung",
+          "description": "Die wilden Verwandten der Lamas.",
+          "images": []
+        },
+        {
+          "name": "Lagunas Miscanti & Miñiques",
+          "description": "Tiefblaue Seen vor Vulkan-Kulisse.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Laguna_Miscanti%2C_Chile%2C_2016-02-08%2C_DD_15-21_PAN.JPG/960px-Laguna_Miscanti%2C_Chile%2C_2016-02-08%2C_DD_15-21_PAN.JPG",
+              "caption": "Laguna Miscanti, Chile, 2016-02-08, DD 15-21 PAN",
+              "source": "Wikimedia Commons",
+              "license": "Creative Commons Attribution-Share Alike 4.0"
+            },
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Laguna_Miscanti%2C_Chile%2C_2016-02-08%2C_DD_25-30_PAN.JPG/960px-Laguna_Miscanti%2C_Chile%2C_2016-02-08%2C_DD_25-30_PAN.JPG",
+              "caption": "Laguna Miscanti, Chile, 2016-02-08, DD 25-30 PAN",
+              "source": "Wikimedia Commons",
+              "license": "Creative Commons Attribution-Share Alike 4.0"
+            },
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Laguna_Miscanti%2C_Chile%2C_2016-02-08%2C_DD_32.JPG/960px-Laguna_Miscanti%2C_Chile%2C_2016-02-08%2C_DD_32.JPG",
+              "caption": "Laguna Miscanti, Chile, 2016-02-08, DD 32",
+              "source": "Wikimedia Commons",
+              "license": "Creative Commons Attribution-Share Alike 4.0"
+            },
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Laguna_Miscanti%2C_Chile%2C_2016-02-08%2C_DD_45.JPG/960px-Laguna_Miscanti%2C_Chile%2C_2016-02-08%2C_DD_45.JPG",
+              "caption": "Laguna Miscanti, Chile, 2016-02-08, DD 45",
+              "source": "Wikimedia Commons",
+              "license": "Creative Commons Attribution-Share Alike 4.0"
+            },
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Laguna_Mi%C3%B1iques%2C_atacama%2C_chile_%282%29.jpg/960px-Laguna_Mi%C3%B1iques%2C_atacama%2C_chile_%282%29.jpg",
+              "caption": "Laguna Miñiques, atacama, chile (2)",
+              "source": "Wikimedia Commons",
+              "license": "Creative Commons Attribution-Share Alike 3.0"
+            }
+          ]
+        },
+        {
+          "name": "Dorf Toconao",
+          "description": "Besuch der alten Kirche und des Handwerksmarktes.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Ru%C3%AFnes_van_Talabre_Viejo%2C_verwoestte_stad_na_uitbarsting_Lascar_in_2006_%285523401163%29.jpg/960px-Ru%C3%AFnes_van_Talabre_Viejo%2C_verwoestte_stad_na_uitbarsting_Lascar_in_2006_%285523401163%29.jpg",
+              "caption": "Ruïnes van Talabre Viejo, verwoestte stad na uitbarsting Lascar in 2006 (5523401163)",
+              "source": "Wikimedia Commons",
+              "license": "Creative Commons Attribution 2.0"
+            }
+          ]
+        }
+      ],
+      "highlights": [
+        {
+          "title": "Dampfende Geysire",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/6/66/El_Tatio_Geysers.jpg"
+        },
+        {
+          "title": "Hochlandseen",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Laguna_Miscanti_%2826465051611%29.jpg"
+        },
+        {
+          "title": "Anden-Fauna",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Laguna_Miscanti_%2826465051611%29.jpg"
+        }
+      ]
+    },
+    {
+      "id": "r3-day-3",
+      "date": "2026-01-05",
+      "station": {
+        "name": "Bahía Inglesa (Strand)",
+        "description": "Flug nach Copiapó und kurze Fahrt zum 'türkisenen Juwel' der Atacama-Küste.",
+        "coordinates": {
+          "lat": -27.1126,
+          "lng": -70.8613
+        },
+        "images": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/A_Kelp_Gull_in_Bahia_Inglesa_Chile_Sep_2009.jpg/960px-A_Kelp_Gull_in_Bahia_Inglesa_Chile_Sep_2009.jpg",
+            "caption": "A Kelp Gull in Bahia Inglesa Chile Sep 2009",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 3.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/A_pair_of_Blackish_oystercatchers_Bahia_Inglesa_Chile.jpg/960px-A_pair_of_Blackish_oystercatchers_Bahia_Inglesa_Chile.jpg",
+            "caption": "A pair of Blackish oystercatchers Bahia Inglesa Chile",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 3.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Aequornithes_indet._from_Bah%C3%ADa_Inglesa_Fm.png",
+            "caption": "Aequornithes indet",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Aetomylaeus_sp._from_Bah%C3%ADa_Inglesa_Formation_%281%29.jpg/960px-Aetomylaeus_sp._from_Bah%C3%ADa_Inglesa_Formation_%281%29.jpg",
+            "caption": "Aetomylaeus sp",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Aetomylaeus_sp._from_Bah%C3%ADa_Inglesa_Formation_%285%29.jpg/960px-Aetomylaeus_sp._from_Bah%C3%ADa_Inglesa_Formation_%285%29.jpg",
+            "caption": "Aetomylaeus sp",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Bahia_Inglesa%2CChile.jpg",
+            "caption": "Bahia Inglesa,Chile",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 3.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Bahia_Inglesa.JPG/960px-Bahia_Inglesa.JPG",
+            "caption": "Bahia Inglesa",
+            "source": "Wikimedia Commons",
+            "license": "Public domain"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Bahia_Inglesa_Chile.JPG/960px-Bahia_Inglesa_Chile.JPG",
+            "caption": "Bahia Inglesa Chile",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 3.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Bahia_inglesa.jpg",
+            "caption": "Bahia inglesa",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 3.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Bah%C3%ADa_Inglesa.jpg/960px-Bah%C3%ADa_Inglesa.jpg",
+            "caption": "Bahía Inglesa",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution 2.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Bah%C3%ADa_Inglesa_%2815295092841%29.jpg/960px-Bah%C3%ADa_Inglesa_%2815295092841%29.jpg",
+            "caption": "Bahía Inglesa (15295092841)",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution 2.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Bah%C3%ADa_Inglesa_Formation_map_outcrops.png",
+            "caption": "Bahía Inglesa Formation map outcrops",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution 3.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Bah%C3%ADa_Inglesa_from_Las_Machas_beach_%2820892756734%29.jpg/960px-Bah%C3%ADa_Inglesa_from_Las_Machas_beach_%2820892756734%29.jpg",
+            "caption": "Bahía Inglesa from Las Machas beach (20892756734)",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution 2.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Blackish_oystercatcher_Bahia_Inglesa_Chile.jpg/960px-Blackish_oystercatcher_Bahia_Inglesa_Chile.jpg",
+            "caption": "Blackish oystercatcher Bahia Inglesa Chile",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 3.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Brachaelurus_sp._from_Bah%C3%ADa_Inglesa_Fm.png",
+            "caption": "Brachaelurus sp",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Camping_on_Playa_Bahia_Inglesa_%2847046627412%29.jpg/960px-Camping_on_Playa_Bahia_Inglesa_%2847046627412%29.jpg",
+            "caption": "Camping on Playa Bahia Inglesa (47046627412)",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 2.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Carcharhinus_brachyurus_from_Bah%C3%ADa_Inglesa_Fm.png",
+            "caption": "Carcharhinus brachyurus from Bahía Inglesa Fm",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Cetorhinus_sp._from_Bah%C3%ADa_Inglesa_Fm.png",
+            "caption": "Cetorhinus sp",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/6/66/Echinorhinus_sp._from_Bah%C3%ADa_Inglesa_Fm.png",
+            "caption": "Echinorhinus sp",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Eostegostoma_sp._from_Bah%C3%ADa_Inglesa_Fm.png",
+            "caption": "Eostegostoma sp",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 4.0"
+          }
+        ],
+        "reason": "Entspannung am schönsten Strand Chiles."
+      },
+      "activities": [
+        {
+          "name": "Strandtag an der Playa La Piscina",
+          "description": "Weißer Sand und kristallklares Wasser.",
+          "images": []
+        },
+        {
+          "name": "Meeresfrüchte essen",
+          "description": "Frische Ostiones (Jakobsmuscheln) direkt vom Fischer.",
+          "images": []
+        },
+        {
+          "name": "Fahrradtour an der Küste",
+          "description": "Entlang der Küstenstraße nach Caldera.",
+          "images": []
+        },
+        {
+          "name": "Besuch im Paläontologischen Museum",
+          "description": "Fossilienfunde aus der Region.",
+          "images": []
+        },
+        {
+          "name": "Sonnenuntergang am Strand",
+          "description": "Cocktails mit Blick aufs Meer.",
+          "images": []
+        }
+      ],
+      "highlights": [
+        {
+          "title": "Türkises Wasser",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Bahia_Inglesa.jpg/800px-Bahia_Inglesa.jpg"
+        },
+        {
+          "title": "Jakobsmuscheln",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Ostiones_a_la_parmesana.jpg/800px-Ostiones_a_la_parmesana.jpg"
+        },
+        {
+          "title": "Entspannung",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Bahia_Inglesa.jpg/800px-Bahia_Inglesa.jpg"
+        }
+      ]
+    },
+    {
+      "id": "r3-day-4",
+      "date": "2026-01-08",
+      "station": {
+        "name": "Santiago Stopover",
+        "description": "Flug von Copiapó nach Santiago. Ein Abend in der Stadt vor der Weiterreise.",
+        "coordinates": {
+          "lat": -33.4489,
+          "lng": -70.6693
+        },
+        "images": [],
+        "reason": "Logistischer Zwischenstopp."
+      },
+      "activities": [
+        {
+          "name": "Flug Copiapó-Santiago",
+          "description": "1h Flug zurück in die Hauptstadt.",
+          "images": []
+        },
+        {
+          "name": "Abendessen im Barrio Italia",
+          "description": "Design-Shops und tolle Restaurants.",
+          "images": []
+        },
+        {
+          "name": "Hotel Check-in",
+          "description": "Erholung vor der Fähre.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/4/48/Hotel_Lutecia.jpg",
+              "caption": "Hotel Lutecia",
+              "source": "Wikimedia Commons",
+              "license": "Public domain"
+            },
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Hotel_lobby_-_panoramio.jpg/960px-Hotel_lobby_-_panoramio.jpg",
+              "caption": "Hotel lobby - panoramio",
+              "source": "Wikimedia Commons",
+              "license": "Creative Commons Attribution-Share Alike 3.0"
+            },
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Hotel_restaurant_-_panoramio.jpg/960px-Hotel_restaurant_-_panoramio.jpg",
+              "caption": "Hotel restaurant - panoramio",
+              "source": "Wikimedia Commons",
+              "license": "Creative Commons Attribution-Share Alike 3.0"
+            },
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Pudahuel_-_2011_-_Hotel_Diego_de_Almagro_Aeropuerto.jpg/960px-Pudahuel_-_2011_-_Hotel_Diego_de_Almagro_Aeropuerto.jpg",
+              "caption": "Pudahuel - 2011 - Hotel Diego de Almagro Aeropuerto",
+              "source": "Wikimedia Commons",
+              "license": "Creative Commons Attribution-Share Alike 3.0"
+            },
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Remota_hotel_wing_-_panoramio.jpg/960px-Remota_hotel_wing_-_panoramio.jpg",
+              "caption": "Remota hotel wing - panoramio",
+              "source": "Wikimedia Commons",
+              "license": "Creative Commons Attribution-Share Alike 3.0"
+            }
+          ]
+        },
+        {
+          "name": "Letzte Besorgungen",
+          "description": "Snacks für das Schiff.",
+          "images": []
+        },
+        {
+          "name": "Pisco Sour",
+          "description": "Abschied vom Festland.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Chile_pisco_sour.jpg/960px-Chile_pisco_sour.jpg",
+              "caption": "Chile pisco sour",
+              "source": "Wikimedia Commons",
+              "license": "Creative Commons Attribution-Share Alike 2.0"
+            },
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/7/75/Morris-Bar-Pisco-Sour-South-Pacific-Mail-1924.JPG",
+              "caption": "Morris-Bar-Pisco-Sour-South-Pacific-Mail-1924",
+              "source": "Wikimedia Commons",
+              "license": "Public domain"
+            },
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Pisco_Sour_in_Lima.jpg/960px-Pisco_Sour_in_Lima.jpg",
+              "caption": "Pisco Sour in Lima",
+              "source": "Wikimedia Commons",
+              "license": "Creative Commons Attribution 2.0"
+            },
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Pisco_sour.jpg/960px-Pisco_sour.jpg",
+              "caption": "Pisco sour",
+              "source": "Wikimedia Commons",
+              "license": "Creative Commons Attribution-Share Alike 2.0"
+            },
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Pisco_sour_de_lim%C3%B3n.jpg",
+              "caption": "Pisco sour de limón",
+              "source": "Wikimedia Commons",
+              "license": "Creative Commons Attribution-Share Alike 4.0"
+            }
+          ]
+        }
+      ],
+      "highlights": [
+        {
+          "title": "Barrio Italia",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Barrio_Lastarria.jpg/800px-Barrio_Lastarria.jpg"
+        },
+        {
+          "title": "Kulinarik",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Mercado_Central_de_Santiago.jpg/800px-Mercado_Central_de_Santiago.jpg"
+        },
+        {
+          "title": "Stadtflair",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Santiago_de_Chile_desde_el_cerro_San_Cristobal.jpg/800px-Santiago_de_Chile_desde_el_cerro_San_Cristobal.jpg"
+        }
+      ]
+    },
+    {
+      "id": "r3-day-5",
+      "date": "2026-01-09",
+      "station": {
+        "name": "Puerto Montt & Navimag Boarding",
+        "description": "Weiterflug nach Puerto Montt und Boarding der Navimag Fähre.",
+        "coordinates": {
+          "lat": -41.4689,
+          "lng": -72.9411
+        },
+        "images": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/2007-12-20-MV-Evangelistas-Puerto-Natales.JPG/960px-2007-12-20-MV-Evangelistas-Puerto-Natales.JPG",
+            "caption": "2007-12-20-MV-Evangelistas-Puerto-Natales",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 3.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/2019-03-13_Office_of_NAVIMAG_Ferries_Patagonia%2C_Puerto_Natales%2C_Chile.jpg/960px-2019-03-13_Office_of_NAVIMAG_Ferries_Patagonia%2C_Puerto_Natales%2C_Chile.jpg",
+            "caption": "2019-03-13 Office of NAVIMAG Ferries Patagonia, Puerto Natales, Chile",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 4.0"
+          }
+        ],
+        "reason": "Start der Seereise."
+      },
+      "activities": [
+        {
+          "name": "Flug Santiago-Puerto Montt",
+          "description": "Anreise in das Tor zu Patagonien.",
+          "images": []
+        },
+        {
+          "name": "Transfer zum Hafen",
+          "description": "Fahrt nach Angelmó.",
+          "images": []
+        },
+        {
+          "name": "Boarding",
+          "description": "Bezug der Kabine.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Concepci%C3%B3n_College%2C_Chile_%28two-story_building_on_the_right%29_%28The_Chautauquan%2C_1908%29.png",
+              "caption": "Concepción College, Chile (two-story building on the right) (The Chautauquan, 1908)",
+              "source": "Wikimedia Commons",
+              "license": "Public domain"
+            },
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Cooking_class%2C_Concepci%C3%B3n_College%2C_Chile_%28Board_of_Foreign_Missions_of_the_Methodist_Episcopal_Church%2C_1908%29.png",
+              "caption": "Cooking class, Concepción College, Chile (Board of Foreign Missions of the Methodist Episcopal Churc",
+              "source": "Wikimedia Commons",
+              "license": "Public domain"
+            },
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Front_view_of_the_first_building_erected_for_Concepci%C3%B3n_College%2C_Chile_%28History_of_the_William_Taylor_Self-supporting_Missions_in_South_America%2C_1921%29_03.png",
+              "caption": "Front view of the first building erected for Concepción College, Chile (History of the William Taylo",
+              "source": "Wikimedia Commons",
+              "license": "Public domain"
+            },
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Gymnasium%2C_Concepci%C3%B3n_College%2C_Chile_%28The_Chautauquan%2C_1908%29.png/960px-Gymnasium%2C_Concepci%C3%B3n_College%2C_Chile_%28The_Chautauquan%2C_1908%29.png",
+              "caption": "Gymnasium, Concepción College, Chile (The Chautauquan, 1908)",
+              "source": "Wikimedia Commons",
+              "license": "Public domain"
+            },
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Interior_courtyard_patio%2C_Concepci%C3%B3n_College%2C_Chile_%28History_of_the_William_Taylor_Self-supporting_Missions_in_South_America%2C_1921%29_02.png",
+              "caption": "Interior courtyard patio, Concepción College, Chile (History of the William Taylor Self-supporting M",
+              "source": "Wikimedia Commons",
+              "license": "Public domain"
+            }
+          ]
+        },
+        {
+          "name": "Ablegen",
+          "description": "Die Reise beginnt.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/J28_042_Puerto_Fuy%2C_F%C3%A4hranleger.jpg/960px-J28_042_Puerto_Fuy%2C_F%C3%A4hranleger.jpg",
+              "caption": "J28 042 Puerto Fuy, Fähranleger",
+              "source": "Wikimedia Commons",
+              "license": "Creative Commons Attribution-Share Alike 4.0"
+            }
+          ]
+        },
+        {
+          "name": "Abendessen an Bord",
+          "description": "Erstes Essen auf See.",
+          "images": []
+        }
+      ],
+      "highlights": [
+        {
+          "title": "Hafen Angelmó",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Angelmo_Puerto_Montt.jpg"
+        },
+        {
+          "title": "Fähre",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Puerto_Montt_-_Navimag_ferry_at_Angelmo.jpg"
+        },
+        {
+          "title": "Vulkane",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/8/89/Seno_de_Reloncav%C3%AD.jpg"
+        }
+      ]
+    },
+    {
+      "id": "r3-day-6",
+      "date": "2026-01-12",
+      "station": {
+        "name": "Ankunft Puerto Natales",
+        "description": "Ankunft im tiefen Süden nach der Fjordfahrt.",
+        "coordinates": {
+          "lat": -51.7269,
+          "lng": -72.5068
+        },
+        "images": [],
+        "reason": "Zielhafen."
+      },
+      "activities": [
+        {
+          "name": "Ausschiffung",
+          "description": "Ankunft in Puerto Natales.",
+          "images": []
+        },
+        {
+          "name": "Check-in Hotel",
+          "description": "Unterkunft mit Fjordblick.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/4/48/Hotel_Lutecia.jpg",
+              "caption": "Hotel Lutecia",
+              "source": "Wikimedia Commons",
+              "license": "Public domain"
+            },
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Hotel_lobby_-_panoramio.jpg/960px-Hotel_lobby_-_panoramio.jpg",
+              "caption": "Hotel lobby - panoramio",
+              "source": "Wikimedia Commons",
+              "license": "Creative Commons Attribution-Share Alike 3.0"
+            },
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Hotel_restaurant_-_panoramio.jpg/960px-Hotel_restaurant_-_panoramio.jpg",
+              "caption": "Hotel restaurant - panoramio",
+              "source": "Wikimedia Commons",
+              "license": "Creative Commons Attribution-Share Alike 3.0"
+            },
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Pudahuel_-_2011_-_Hotel_Diego_de_Almagro_Aeropuerto.jpg/960px-Pudahuel_-_2011_-_Hotel_Diego_de_Almagro_Aeropuerto.jpg",
+              "caption": "Pudahuel - 2011 - Hotel Diego de Almagro Aeropuerto",
+              "source": "Wikimedia Commons",
+              "license": "Creative Commons Attribution-Share Alike 3.0"
+            },
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Remota_hotel_wing_-_panoramio.jpg/960px-Remota_hotel_wing_-_panoramio.jpg",
+              "caption": "Remota hotel wing - panoramio",
+              "source": "Wikimedia Commons",
+              "license": "Creative Commons Attribution-Share Alike 3.0"
+            }
+          ]
+        },
+        {
+          "name": "Stadtbummel",
+          "description": "Erkundung der kleinen Stadt.",
+          "images": []
+        },
+        {
+          "name": "Lamm essen",
+          "description": "Patagonisches Lamm am Spieß.",
+          "images": []
+        },
+        {
+          "name": "Sonnenuntergang",
+          "description": "Blick auf die Berge.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Cerro_Grande_Sonnenuntergang.jpg/960px-Cerro_Grande_Sonnenuntergang.jpg",
+              "caption": "Cerro Grande Sonnenuntergang",
+              "source": "Wikimedia Commons",
+              "license": "Creative Commons Attribution-Share Alike 4.0"
+            },
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Paranal_opendome.jpg/960px-Paranal_opendome.jpg",
+              "caption": "Paranal opendome",
+              "source": "Wikimedia Commons",
+              "license": "Creative Commons Attribution-Share Alike 3.0"
+            },
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Puerto_Montt_bei_Sonnenuntergang_3.JPG/960px-Puerto_Montt_bei_Sonnenuntergang_3.JPG",
+              "caption": "Puerto Montt bei Sonnenuntergang 3",
+              "source": "Wikimedia Commons",
+              "license": "Creative Commons Attribution-Share Alike 3.0"
+            },
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Sonnenuntergang_im_Salar_de_Atacama.JPG/960px-Sonnenuntergang_im_Salar_de_Atacama.JPG",
+              "caption": "Sonnenuntergang im Salar de Atacama",
+              "source": "Wikimedia Commons",
+              "license": "Public domain"
+            },
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Sunset_El_Salvador%2C_Chile.jpg/960px-Sunset_El_Salvador%2C_Chile.jpg",
+              "caption": "Sunset El Salvador, Chile",
+              "source": "Wikimedia Commons",
+              "license": "Creative Commons Attribution-Share Alike 4.0"
+            }
+          ]
+        }
+      ],
+      "highlights": [
+        {
+          "title": "Fjord der letzten Hoffnung",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Puerto_Natales_Costanera.jpg"
+        },
+        {
+          "title": "Patagonisches Lamm",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Puerto_Natales_Costanera.jpg"
+        },
+        {
+          "title": "Ende der Welt Gefühl",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Puerto_Natales_Costanera.jpg"
+        }
+      ]
+    }
+  ]
+}

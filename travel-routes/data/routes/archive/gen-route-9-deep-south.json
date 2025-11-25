@@ -1,0 +1,634 @@
+[
+    {
+        "id": "gen-route-9-deep-south",
+        "title": "Route 19 – Das Ende der Welt (Navimag)",
+        "summary": "Expedition nach Feuerland und durch die Magellanstraße. Mit Navimag-Optionen für echte Abenteurer.",
+        "meta": {
+            "theme": "Adventure",
+            "pace": "moderate",
+            "durationDays": 10,
+            "costEstimate": 1501,
+            "highlights": [
+                "Besuch in Punta Arenas",
+                "Besuch in Porvenir",
+                "Besuch in King Penguin Park"
+            ],
+            "highlightImages": [
+                {
+                    "title": "Route 19 – Das Ende der Welt (Navimag)",
+                    "image": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1200&auto=format&fit=crop",
+                    "caption": "Expedition nach Feuerland und durch die Magellanstraße. Mit Navimag-Optionen für echte Abenteurer.",
+                    "source": "Unsplash",
+                    "license": "Unsplash License"
+                }
+            ],
+            "scores": {
+                "budget": 3,
+                "adventure": 4,
+                "relax": 2,
+                "culture": 3
+            }
+        },
+        "days": [
+            {
+                "id": "day-1",
+                "date": "2025-11-01",
+                "station": {
+                    "name": "Punta Arenas",
+                    "description": "Aufenthalt in Punta Arenas. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Punta Arenas"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": []
+                }
+            },
+            {
+                "id": "day-2",
+                "date": "2025-11-03",
+                "station": {
+                    "name": "Porvenir",
+                    "description": "Aufenthalt in Porvenir. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Porvenir"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": [
+                        {
+                            "mode": "bus",
+                            "from": {
+                                "name": "Punta Arenas"
+                            },
+                            "to": {
+                                "name": "Porvenir"
+                            },
+                            "durationMinutes": 486,
+                            "variants": [
+                                {
+                                    "id": "var-bus-7435",
+                                    "mode": "bus",
+                                    "description": "Linienbus von Punta Arenas nach Porvenir. Günstig und zuverlässig.",
+                                    "durationMinutes": 486,
+                                    "cost": 39,
+                                    "co2": 20.25
+                                },
+                                {
+                                    "id": "var-car-2254",
+                                    "mode": "drive",
+                                    "description": "Mietwagen-Etappe. Freiheit für Fotostopps entlang der Route.",
+                                    "durationMinutes": 405,
+                                    "cost": 78,
+                                    "co2": 76.95
+                                },
+                                {
+                                    "id": "var-transfer-8698",
+                                    "mode": "drive",
+                                    "description": "Privater Transfer mit lokalem Driver-Guide. Entspannt zurücklehnen.",
+                                    "durationMinutes": 405,
+                                    "cost": 184,
+                                    "co2": 101.25
+                                },
+                                {
+                                    "id": "var-hitch-4414",
+                                    "mode": "drive",
+                                    "description": "Mitfahrgelegenheit oder Colectivo. Die lokale Art zu reisen.",
+                                    "durationMinutes": 607,
+                                    "cost": 17,
+                                    "co2": 40.5
+                                },
+                                {
+                                    "id": "var-flight-6206",
+                                    "mode": "flight",
+                                    "description": "Inlandsflug für maximale Zeitersparnis.",
+                                    "durationMinutes": 70,
+                                    "cost": 66,
+                                    "co2": 113.4
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "day-3",
+                "date": "2025-11-05",
+                "station": {
+                    "name": "King Penguin Park",
+                    "description": "Aufenthalt in King Penguin Park. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "King Penguin Park"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": [
+                        {
+                            "mode": "bus",
+                            "from": {
+                                "name": "Porvenir"
+                            },
+                            "to": {
+                                "name": "King Penguin Park"
+                            },
+                            "durationMinutes": 302,
+                            "variants": [
+                                {
+                                    "id": "var-bus-4622",
+                                    "mode": "bus",
+                                    "description": "Linienbus von Porvenir nach King Penguin Park. Günstig und zuverlässig.",
+                                    "durationMinutes": 302,
+                                    "cost": 33,
+                                    "co2": 12.600000000000001
+                                },
+                                {
+                                    "id": "var-car-5712",
+                                    "mode": "drive",
+                                    "description": "Mietwagen-Etappe. Freiheit für Fotostopps entlang der Route.",
+                                    "durationMinutes": 252,
+                                    "cost": 51,
+                                    "co2": 47.88
+                                },
+                                {
+                                    "id": "var-transfer-1371",
+                                    "mode": "drive",
+                                    "description": "Privater Transfer mit lokalem Driver-Guide. Entspannt zurücklehnen.",
+                                    "durationMinutes": 252,
+                                    "cost": 186,
+                                    "co2": 63.0
+                                },
+                                {
+                                    "id": "var-hitch-7438",
+                                    "mode": "drive",
+                                    "description": "Mitfahrgelegenheit oder Colectivo. Die lokale Art zu reisen.",
+                                    "durationMinutes": 378,
+                                    "cost": 9,
+                                    "co2": 25.200000000000003
+                                },
+                                {
+                                    "id": "var-bus-prem-3357",
+                                    "mode": "bus",
+                                    "description": "Premium 'Salon Cama' Bus. Fast wie Business Class.",
+                                    "durationMinutes": 302,
+                                    "cost": 34,
+                                    "co2": 12.600000000000001
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "day-4",
+                "date": "2025-11-07",
+                "station": {
+                    "name": "Puerto Williams",
+                    "description": "Aufenthalt in Puerto Williams. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Puerto Williams"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": [
+                        {
+                            "mode": "bus",
+                            "from": {
+                                "name": "King Penguin Park"
+                            },
+                            "to": {
+                                "name": "Puerto Williams"
+                            },
+                            "durationMinutes": 354,
+                            "variants": [
+                                {
+                                    "id": "var-bus-6340",
+                                    "mode": "bus",
+                                    "description": "Linienbus von King Penguin Park nach Puerto Williams. Günstig und zuverlässig.",
+                                    "durationMinutes": 354,
+                                    "cost": 32,
+                                    "co2": 14.75
+                                },
+                                {
+                                    "id": "var-car-9498",
+                                    "mode": "drive",
+                                    "description": "Mietwagen-Etappe. Freiheit für Fotostopps entlang der Route.",
+                                    "durationMinutes": 295,
+                                    "cost": 84,
+                                    "co2": 56.05
+                                },
+                                {
+                                    "id": "var-transfer-1067",
+                                    "mode": "drive",
+                                    "description": "Privater Transfer mit lokalem Driver-Guide. Entspannt zurücklehnen.",
+                                    "durationMinutes": 295,
+                                    "cost": 234,
+                                    "co2": 73.75
+                                },
+                                {
+                                    "id": "var-hitch-6304",
+                                    "mode": "drive",
+                                    "description": "Mitfahrgelegenheit oder Colectivo. Die lokale Art zu reisen.",
+                                    "durationMinutes": 442,
+                                    "cost": 14,
+                                    "co2": 29.5
+                                },
+                                {
+                                    "id": "var-bus-prem-9614",
+                                    "mode": "bus",
+                                    "description": "Premium 'Salon Cama' Bus. Fast wie Business Class.",
+                                    "durationMinutes": 354,
+                                    "cost": 54,
+                                    "co2": 14.75
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "day-5",
+                "date": "2025-11-09",
+                "station": {
+                    "name": "Punta Arenas",
+                    "description": "Aufenthalt in Punta Arenas. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Punta Arenas"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": [
+                        {
+                            "mode": "bus",
+                            "from": {
+                                "name": "Puerto Williams"
+                            },
+                            "to": {
+                                "name": "Punta Arenas"
+                            },
+                            "durationMinutes": 150,
+                            "variants": [
+                                {
+                                    "id": "var-bus-2233",
+                                    "mode": "bus",
+                                    "description": "Linienbus von Puerto Williams nach Punta Arenas. Günstig und zuverlässig.",
+                                    "durationMinutes": 150,
+                                    "cost": 17,
+                                    "co2": 6.250000000000001
+                                },
+                                {
+                                    "id": "var-car-4295",
+                                    "mode": "drive",
+                                    "description": "Mietwagen-Etappe. Freiheit für Fotostopps entlang der Route.",
+                                    "durationMinutes": 125,
+                                    "cost": 61,
+                                    "co2": 23.750000000000004
+                                },
+                                {
+                                    "id": "var-transfer-6433",
+                                    "mode": "drive",
+                                    "description": "Privater Transfer mit lokalem Driver-Guide. Entspannt zurücklehnen.",
+                                    "durationMinutes": 125,
+                                    "cost": 166,
+                                    "co2": 31.250000000000004
+                                },
+                                {
+                                    "id": "var-hitch-3980",
+                                    "mode": "drive",
+                                    "description": "Mitfahrgelegenheit oder Colectivo. Die lokale Art zu reisen.",
+                                    "durationMinutes": 187,
+                                    "cost": 17,
+                                    "co2": 12.500000000000002
+                                },
+                                {
+                                    "id": "var-bus-prem-8647",
+                                    "mode": "bus",
+                                    "description": "Premium 'Salon Cama' Bus. Fast wie Business Class.",
+                                    "durationMinutes": 150,
+                                    "cost": 53,
+                                    "co2": 6.250000000000001
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ],
+        "lodging": [
+            {
+                "id": "lodging-38598",
+                "stopId": "punta-arenas",
+                "name": "Guesthouse Punta Arenas Oasis",
+                "nights": 2,
+                "avgNightlyRateEUR": 47,
+                "amenities": [
+                    "Bar",
+                    "WLAN",
+                    "Touren"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=923",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Guesthouse Punta Arenas Oasis",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-44705",
+                "stopId": "punta-arenas",
+                "name": "Camping Punta Arenas Backpacker",
+                "nights": 2,
+                "avgNightlyRateEUR": 21,
+                "amenities": [
+                    "Bar",
+                    "Küche",
+                    "WLAN"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=279",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Camping Punta Arenas Backpacker",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-97327",
+                "stopId": "punta-arenas",
+                "name": "Airbnb Punta Arenas Garden",
+                "nights": 2,
+                "avgNightlyRateEUR": 66,
+                "amenities": [
+                    "Bar",
+                    "WLAN",
+                    "Frühstück"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=158",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Airbnb Punta Arenas Garden",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-76728",
+                "stopId": "porvenir",
+                "name": "Guesthouse Porvenir Central",
+                "nights": 3,
+                "avgNightlyRateEUR": 33,
+                "amenities": [
+                    "Touren",
+                    "WLAN",
+                    "Garten"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=869",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Guesthouse Porvenir Central",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-10923",
+                "stopId": "porvenir",
+                "name": "Camping Porvenir View",
+                "nights": 3,
+                "avgNightlyRateEUR": 15,
+                "amenities": [
+                    "WLAN",
+                    "Touren",
+                    "Garten"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=822",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Camping Porvenir View",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-89798",
+                "stopId": "porvenir",
+                "name": "Hotel Porvenir View",
+                "nights": 2,
+                "avgNightlyRateEUR": 47,
+                "amenities": [
+                    "Garten",
+                    "Bar",
+                    "Touren"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=105",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hotel Porvenir View",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-15130",
+                "stopId": "king-penguin-park",
+                "name": "Guesthouse King Penguin Park View",
+                "nights": 2,
+                "avgNightlyRateEUR": 57,
+                "amenities": [
+                    "Garten",
+                    "WLAN",
+                    "Touren"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=727",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Guesthouse King Penguin Park View",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-39986",
+                "stopId": "king-penguin-park",
+                "name": "Hostel King Penguin Park Oasis",
+                "nights": 3,
+                "avgNightlyRateEUR": 15,
+                "amenities": [
+                    "WLAN",
+                    "Touren",
+                    "Frühstück"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=967",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hostel King Penguin Park Oasis",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-94074",
+                "stopId": "king-penguin-park",
+                "name": "Airbnb King Penguin Park Oasis",
+                "nights": 3,
+                "avgNightlyRateEUR": 40,
+                "amenities": [
+                    "Frühstück",
+                    "Touren",
+                    "Garten"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=193",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Airbnb King Penguin Park Oasis",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-48246",
+                "stopId": "puerto-williams",
+                "name": "Camping Puerto Williams View",
+                "nights": 3,
+                "avgNightlyRateEUR": 15,
+                "amenities": [
+                    "WLAN",
+                    "Küche",
+                    "Bar"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=805",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Camping Puerto Williams View",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-45098",
+                "stopId": "puerto-williams",
+                "name": "Guesthouse Puerto Williams View",
+                "nights": 2,
+                "avgNightlyRateEUR": 59,
+                "amenities": [
+                    "Küche",
+                    "Garten",
+                    "Touren"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=183",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Guesthouse Puerto Williams View",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-29270",
+                "stopId": "puerto-williams",
+                "name": "Airbnb Puerto Williams View",
+                "nights": 1,
+                "avgNightlyRateEUR": 62,
+                "amenities": [
+                    "Bar",
+                    "Küche",
+                    "Frühstück"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=940",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Airbnb Puerto Williams View",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-73301",
+                "stopId": "punta-arenas",
+                "name": "Hotel Punta Arenas Central",
+                "nights": 3,
+                "avgNightlyRateEUR": 81,
+                "amenities": [
+                    "Touren",
+                    "Garten",
+                    "Bar"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=614",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hotel Punta Arenas Central",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-49633",
+                "stopId": "punta-arenas",
+                "name": "Hostel Punta Arenas Oasis",
+                "nights": 2,
+                "avgNightlyRateEUR": 16,
+                "amenities": [
+                    "Touren",
+                    "Frühstück",
+                    "Garten"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=572",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hostel Punta Arenas Oasis",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-51882",
+                "stopId": "punta-arenas",
+                "name": "Hostel Punta Arenas Oasis",
+                "nights": 2,
+                "avgNightlyRateEUR": 33,
+                "amenities": [
+                    "Bar",
+                    "Küche",
+                    "Frühstück"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=563",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hostel Punta Arenas Oasis",
+                        "license": "Unsplash License"
+                    }
+                ]
+            }
+        ]
+    }
+]

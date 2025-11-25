@@ -1,0 +1,634 @@
+[
+    {
+        "id": "gen-route-5-wine-waves",
+        "title": "Route 15 – Wein & Wellen",
+        "summary": "Genussreise durch das Zentraltal zu den besten Surfspots. Weinverkostung trifft auf Strandleben.",
+        "meta": {
+            "theme": "Relax & Culture",
+            "pace": "moderate",
+            "durationDays": 8,
+            "costEstimate": 1980,
+            "highlights": [
+                "Besuch in Santiago",
+                "Besuch in Santa Cruz",
+                "Besuch in Pichilemu"
+            ],
+            "highlightImages": [
+                {
+                    "title": "Route 15 – Wein & Wellen",
+                    "image": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1200&auto=format&fit=crop",
+                    "caption": "Genussreise durch das Zentraltal zu den besten Surfspots. Weinverkostung trifft auf Strandleben.",
+                    "source": "Unsplash",
+                    "license": "Unsplash License"
+                }
+            ],
+            "scores": {
+                "budget": 3,
+                "adventure": 2,
+                "relax": 4,
+                "culture": 3
+            }
+        },
+        "days": [
+            {
+                "id": "day-1",
+                "date": "2025-11-01",
+                "station": {
+                    "name": "Santiago",
+                    "description": "Aufenthalt in Santiago. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Santiago"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": []
+                }
+            },
+            {
+                "id": "day-2",
+                "date": "2025-11-03",
+                "station": {
+                    "name": "Santa Cruz",
+                    "description": "Aufenthalt in Santa Cruz. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Santa Cruz"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": [
+                        {
+                            "mode": "bus",
+                            "from": {
+                                "name": "Santiago"
+                            },
+                            "to": {
+                                "name": "Santa Cruz"
+                            },
+                            "durationMinutes": 516,
+                            "variants": [
+                                {
+                                    "id": "var-bus-1677",
+                                    "mode": "bus",
+                                    "description": "Linienbus von Santiago nach Santa Cruz. Günstig und zuverlässig.",
+                                    "durationMinutes": 516,
+                                    "cost": 14,
+                                    "co2": 21.5
+                                },
+                                {
+                                    "id": "var-car-7765",
+                                    "mode": "drive",
+                                    "description": "Mietwagen-Etappe. Freiheit für Fotostopps entlang der Route.",
+                                    "durationMinutes": 430,
+                                    "cost": 55,
+                                    "co2": 81.7
+                                },
+                                {
+                                    "id": "var-transfer-7510",
+                                    "mode": "drive",
+                                    "description": "Privater Transfer mit lokalem Driver-Guide. Entspannt zurücklehnen.",
+                                    "durationMinutes": 430,
+                                    "cost": 226,
+                                    "co2": 107.5
+                                },
+                                {
+                                    "id": "var-hitch-8986",
+                                    "mode": "drive",
+                                    "description": "Mitfahrgelegenheit oder Colectivo. Die lokale Art zu reisen.",
+                                    "durationMinutes": 645,
+                                    "cost": 10,
+                                    "co2": 43.0
+                                },
+                                {
+                                    "id": "var-flight-7488",
+                                    "mode": "flight",
+                                    "description": "Inlandsflug für maximale Zeitersparnis.",
+                                    "durationMinutes": 79,
+                                    "cost": 140,
+                                    "co2": 120.4
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "day-3",
+                "date": "2025-11-05",
+                "station": {
+                    "name": "Pichilemu",
+                    "description": "Aufenthalt in Pichilemu. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Pichilemu"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": [
+                        {
+                            "mode": "bus",
+                            "from": {
+                                "name": "Santa Cruz"
+                            },
+                            "to": {
+                                "name": "Pichilemu"
+                            },
+                            "durationMinutes": 432,
+                            "variants": [
+                                {
+                                    "id": "var-bus-3381",
+                                    "mode": "bus",
+                                    "description": "Linienbus von Santa Cruz nach Pichilemu. Günstig und zuverlässig.",
+                                    "durationMinutes": 432,
+                                    "cost": 32,
+                                    "co2": 18.0
+                                },
+                                {
+                                    "id": "var-car-6060",
+                                    "mode": "drive",
+                                    "description": "Mietwagen-Etappe. Freiheit für Fotostopps entlang der Route.",
+                                    "durationMinutes": 360,
+                                    "cost": 49,
+                                    "co2": 68.4
+                                },
+                                {
+                                    "id": "var-transfer-9663",
+                                    "mode": "drive",
+                                    "description": "Privater Transfer mit lokalem Driver-Guide. Entspannt zurücklehnen.",
+                                    "durationMinutes": 360,
+                                    "cost": 198,
+                                    "co2": 90.0
+                                },
+                                {
+                                    "id": "var-hitch-7837",
+                                    "mode": "drive",
+                                    "description": "Mitfahrgelegenheit oder Colectivo. Die lokale Art zu reisen.",
+                                    "durationMinutes": 540,
+                                    "cost": 7,
+                                    "co2": 36.0
+                                },
+                                {
+                                    "id": "var-flight-5451",
+                                    "mode": "flight",
+                                    "description": "Inlandsflug für maximale Zeitersparnis.",
+                                    "durationMinutes": 69,
+                                    "cost": 100,
+                                    "co2": 100.80000000000001
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "day-4",
+                "date": "2025-11-07",
+                "station": {
+                    "name": "Matanzas",
+                    "description": "Aufenthalt in Matanzas. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Matanzas"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": [
+                        {
+                            "mode": "bus",
+                            "from": {
+                                "name": "Pichilemu"
+                            },
+                            "to": {
+                                "name": "Matanzas"
+                            },
+                            "durationMinutes": 430,
+                            "variants": [
+                                {
+                                    "id": "var-bus-3281",
+                                    "mode": "bus",
+                                    "description": "Linienbus von Pichilemu nach Matanzas. Günstig und zuverlässig.",
+                                    "durationMinutes": 430,
+                                    "cost": 16,
+                                    "co2": 17.95
+                                },
+                                {
+                                    "id": "var-car-8071",
+                                    "mode": "drive",
+                                    "description": "Mietwagen-Etappe. Freiheit für Fotostopps entlang der Route.",
+                                    "durationMinutes": 359,
+                                    "cost": 74,
+                                    "co2": 68.21
+                                },
+                                {
+                                    "id": "var-transfer-6344",
+                                    "mode": "drive",
+                                    "description": "Privater Transfer mit lokalem Driver-Guide. Entspannt zurücklehnen.",
+                                    "durationMinutes": 359,
+                                    "cost": 205,
+                                    "co2": 89.75
+                                },
+                                {
+                                    "id": "var-hitch-4486",
+                                    "mode": "drive",
+                                    "description": "Mitfahrgelegenheit oder Colectivo. Die lokale Art zu reisen.",
+                                    "durationMinutes": 538,
+                                    "cost": 19,
+                                    "co2": 35.9
+                                },
+                                {
+                                    "id": "var-flight-6677",
+                                    "mode": "flight",
+                                    "description": "Inlandsflug für maximale Zeitersparnis.",
+                                    "durationMinutes": 98,
+                                    "cost": 102,
+                                    "co2": 100.52000000000001
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "day-5",
+                "date": "2025-11-09",
+                "station": {
+                    "name": "Valparaíso",
+                    "description": "Aufenthalt in Valparaíso. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Valparaíso"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": [
+                        {
+                            "mode": "bus",
+                            "from": {
+                                "name": "Matanzas"
+                            },
+                            "to": {
+                                "name": "Valparaíso"
+                            },
+                            "durationMinutes": 181,
+                            "variants": [
+                                {
+                                    "id": "var-bus-4192",
+                                    "mode": "bus",
+                                    "description": "Linienbus von Matanzas nach Valparaíso. Günstig und zuverlässig.",
+                                    "durationMinutes": 181,
+                                    "cost": 27,
+                                    "co2": 7.550000000000001
+                                },
+                                {
+                                    "id": "var-car-4057",
+                                    "mode": "drive",
+                                    "description": "Mietwagen-Etappe. Freiheit für Fotostopps entlang der Route.",
+                                    "durationMinutes": 151,
+                                    "cost": 98,
+                                    "co2": 28.69
+                                },
+                                {
+                                    "id": "var-transfer-5807",
+                                    "mode": "drive",
+                                    "description": "Privater Transfer mit lokalem Driver-Guide. Entspannt zurücklehnen.",
+                                    "durationMinutes": 151,
+                                    "cost": 154,
+                                    "co2": 37.75
+                                },
+                                {
+                                    "id": "var-hitch-8104",
+                                    "mode": "drive",
+                                    "description": "Mitfahrgelegenheit oder Colectivo. Die lokale Art zu reisen.",
+                                    "durationMinutes": 226,
+                                    "cost": 15,
+                                    "co2": 15.100000000000001
+                                },
+                                {
+                                    "id": "var-bus-prem-9542",
+                                    "mode": "bus",
+                                    "description": "Premium 'Salon Cama' Bus. Fast wie Business Class.",
+                                    "durationMinutes": 181,
+                                    "cost": 50,
+                                    "co2": 7.550000000000001
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ],
+        "lodging": [
+            {
+                "id": "lodging-99851",
+                "stopId": "santiago",
+                "name": "Hotel Santiago View",
+                "nights": 3,
+                "avgNightlyRateEUR": 58,
+                "amenities": [
+                    "Küche",
+                    "Frühstück",
+                    "WLAN"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=359",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hotel Santiago View",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-74838",
+                "stopId": "santiago",
+                "name": "Airbnb Santiago Central",
+                "nights": 2,
+                "avgNightlyRateEUR": 63,
+                "amenities": [
+                    "WLAN",
+                    "Küche",
+                    "Touren"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=271",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Airbnb Santiago Central",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-95654",
+                "stopId": "santiago",
+                "name": "Airbnb Santiago Oasis",
+                "nights": 3,
+                "avgNightlyRateEUR": 35,
+                "amenities": [
+                    "Bar",
+                    "Küche",
+                    "Touren"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=796",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Airbnb Santiago Oasis",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-92045",
+                "stopId": "santa-cruz",
+                "name": "Camping Santa Cruz Oasis",
+                "nights": 3,
+                "avgNightlyRateEUR": 12,
+                "amenities": [
+                    "Küche",
+                    "Touren",
+                    "WLAN"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=300",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Camping Santa Cruz Oasis",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-85339",
+                "stopId": "santa-cruz",
+                "name": "Hostel Santa Cruz Garden",
+                "nights": 3,
+                "avgNightlyRateEUR": 15,
+                "amenities": [
+                    "Küche",
+                    "Frühstück",
+                    "WLAN"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=161",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hostel Santa Cruz Garden",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-15537",
+                "stopId": "santa-cruz",
+                "name": "Camping Santa Cruz Backpacker",
+                "nights": 2,
+                "avgNightlyRateEUR": 13,
+                "amenities": [
+                    "Bar",
+                    "Küche",
+                    "Frühstück"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=830",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Camping Santa Cruz Backpacker",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-13447",
+                "stopId": "pichilemu",
+                "name": "Guesthouse Pichilemu Garden",
+                "nights": 3,
+                "avgNightlyRateEUR": 56,
+                "amenities": [
+                    "WLAN",
+                    "Küche",
+                    "Frühstück"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=479",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Guesthouse Pichilemu Garden",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-60885",
+                "stopId": "pichilemu",
+                "name": "Airbnb Pichilemu Garden",
+                "nights": 2,
+                "avgNightlyRateEUR": 46,
+                "amenities": [
+                    "WLAN",
+                    "Touren",
+                    "Bar"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=200",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Airbnb Pichilemu Garden",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-97079",
+                "stopId": "pichilemu",
+                "name": "Airbnb Pichilemu View",
+                "nights": 2,
+                "avgNightlyRateEUR": 30,
+                "amenities": [
+                    "Garten",
+                    "WLAN",
+                    "Küche"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=614",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Airbnb Pichilemu View",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-73259",
+                "stopId": "matanzas",
+                "name": "Guesthouse Matanzas Oasis",
+                "nights": 2,
+                "avgNightlyRateEUR": 46,
+                "amenities": [
+                    "Bar",
+                    "Küche",
+                    "Frühstück"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=846",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Guesthouse Matanzas Oasis",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-86448",
+                "stopId": "matanzas",
+                "name": "Hostel Matanzas Oasis",
+                "nights": 3,
+                "avgNightlyRateEUR": 23,
+                "amenities": [
+                    "Touren",
+                    "WLAN",
+                    "Frühstück"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=552",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hostel Matanzas Oasis",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-45344",
+                "stopId": "matanzas",
+                "name": "Hotel Matanzas Garden",
+                "nights": 2,
+                "avgNightlyRateEUR": 82,
+                "amenities": [
+                    "WLAN",
+                    "Bar",
+                    "Frühstück"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=414",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hotel Matanzas Garden",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-55654",
+                "stopId": "valparaíso",
+                "name": "Camping Valparaíso View",
+                "nights": 3,
+                "avgNightlyRateEUR": 10,
+                "amenities": [
+                    "Bar",
+                    "Touren",
+                    "WLAN"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=920",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Camping Valparaíso View",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-90433",
+                "stopId": "valparaíso",
+                "name": "Airbnb Valparaíso Oasis",
+                "nights": 3,
+                "avgNightlyRateEUR": 62,
+                "amenities": [
+                    "Touren",
+                    "Bar",
+                    "Frühstück"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=812",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Airbnb Valparaíso Oasis",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-86007",
+                "stopId": "valparaíso",
+                "name": "Hostel Valparaíso Oasis",
+                "nights": 2,
+                "avgNightlyRateEUR": 28,
+                "amenities": [
+                    "Bar",
+                    "Garten",
+                    "WLAN"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=992",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hostel Valparaíso Oasis",
+                        "license": "Unsplash License"
+                    }
+                ]
+            }
+        ]
+    }
+]

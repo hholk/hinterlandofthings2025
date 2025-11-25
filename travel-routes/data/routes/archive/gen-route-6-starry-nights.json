@@ -1,0 +1,634 @@
+[
+    {
+        "id": "gen-route-6-starry-nights",
+        "title": "Route 16 – Sternennächte",
+        "summary": "Die klarsten Himmel der Welt: Vom Elqui-Tal in die Atacama. Astronomie und Entspannung.",
+        "meta": {
+            "theme": "Nature & Relax",
+            "pace": "moderate",
+            "durationDays": 6,
+            "costEstimate": 925,
+            "highlights": [
+                "Besuch in La Serena",
+                "Besuch in Vicuña",
+                "Besuch in Pisco Elqui"
+            ],
+            "highlightImages": [
+                {
+                    "title": "Route 16 – Sternennächte",
+                    "image": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1200&auto=format&fit=crop",
+                    "caption": "Die klarsten Himmel der Welt: Vom Elqui-Tal in die Atacama. Astronomie und Entspannung.",
+                    "source": "Unsplash",
+                    "license": "Unsplash License"
+                }
+            ],
+            "scores": {
+                "budget": 3,
+                "adventure": 2,
+                "relax": 4,
+                "culture": 3
+            }
+        },
+        "days": [
+            {
+                "id": "day-1",
+                "date": "2025-11-01",
+                "station": {
+                    "name": "La Serena",
+                    "description": "Aufenthalt in La Serena. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "La Serena"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": []
+                }
+            },
+            {
+                "id": "day-2",
+                "date": "2025-11-03",
+                "station": {
+                    "name": "Vicuña",
+                    "description": "Aufenthalt in Vicuña. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Vicuña"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": [
+                        {
+                            "mode": "bus",
+                            "from": {
+                                "name": "La Serena"
+                            },
+                            "to": {
+                                "name": "Vicuña"
+                            },
+                            "durationMinutes": 146,
+                            "variants": [
+                                {
+                                    "id": "var-bus-2006",
+                                    "mode": "bus",
+                                    "description": "Linienbus von La Serena nach Vicuña. Günstig und zuverlässig.",
+                                    "durationMinutes": 146,
+                                    "cost": 16,
+                                    "co2": 6.1000000000000005
+                                },
+                                {
+                                    "id": "var-car-6069",
+                                    "mode": "drive",
+                                    "description": "Mietwagen-Etappe. Freiheit für Fotostopps entlang der Route.",
+                                    "durationMinutes": 122,
+                                    "cost": 57,
+                                    "co2": 23.18
+                                },
+                                {
+                                    "id": "var-transfer-7042",
+                                    "mode": "drive",
+                                    "description": "Privater Transfer mit lokalem Driver-Guide. Entspannt zurücklehnen.",
+                                    "durationMinutes": 122,
+                                    "cost": 109,
+                                    "co2": 30.5
+                                },
+                                {
+                                    "id": "var-hitch-2722",
+                                    "mode": "drive",
+                                    "description": "Mitfahrgelegenheit oder Colectivo. Die lokale Art zu reisen.",
+                                    "durationMinutes": 183,
+                                    "cost": 14,
+                                    "co2": 12.200000000000001
+                                },
+                                {
+                                    "id": "var-bus-prem-3783",
+                                    "mode": "bus",
+                                    "description": "Premium 'Salon Cama' Bus. Fast wie Business Class.",
+                                    "durationMinutes": 146,
+                                    "cost": 37,
+                                    "co2": 6.1000000000000005
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "day-3",
+                "date": "2025-11-05",
+                "station": {
+                    "name": "Pisco Elqui",
+                    "description": "Aufenthalt in Pisco Elqui. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Pisco Elqui"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": [
+                        {
+                            "mode": "bus",
+                            "from": {
+                                "name": "Vicuña"
+                            },
+                            "to": {
+                                "name": "Pisco Elqui"
+                            },
+                            "durationMinutes": 436,
+                            "variants": [
+                                {
+                                    "id": "var-bus-9992",
+                                    "mode": "bus",
+                                    "description": "Linienbus von Vicuña nach Pisco Elqui. Günstig und zuverlässig.",
+                                    "durationMinutes": 436,
+                                    "cost": 36,
+                                    "co2": 18.2
+                                },
+                                {
+                                    "id": "var-car-2793",
+                                    "mode": "drive",
+                                    "description": "Mietwagen-Etappe. Freiheit für Fotostopps entlang der Route.",
+                                    "durationMinutes": 364,
+                                    "cost": 70,
+                                    "co2": 69.16
+                                },
+                                {
+                                    "id": "var-transfer-2603",
+                                    "mode": "drive",
+                                    "description": "Privater Transfer mit lokalem Driver-Guide. Entspannt zurücklehnen.",
+                                    "durationMinutes": 364,
+                                    "cost": 209,
+                                    "co2": 91.0
+                                },
+                                {
+                                    "id": "var-hitch-4477",
+                                    "mode": "drive",
+                                    "description": "Mitfahrgelegenheit oder Colectivo. Die lokale Art zu reisen.",
+                                    "durationMinutes": 546,
+                                    "cost": 10,
+                                    "co2": 36.4
+                                },
+                                {
+                                    "id": "var-flight-9930",
+                                    "mode": "flight",
+                                    "description": "Inlandsflug für maximale Zeitersparnis.",
+                                    "durationMinutes": 120,
+                                    "cost": 89,
+                                    "co2": 101.92000000000002
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "day-4",
+                "date": "2025-11-07",
+                "station": {
+                    "name": "Observatorium Mamalluca",
+                    "description": "Aufenthalt in Observatorium Mamalluca. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Observatorium Mamalluca"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": [
+                        {
+                            "mode": "bus",
+                            "from": {
+                                "name": "Pisco Elqui"
+                            },
+                            "to": {
+                                "name": "Observatorium Mamalluca"
+                            },
+                            "durationMinutes": 568,
+                            "variants": [
+                                {
+                                    "id": "var-bus-2451",
+                                    "mode": "bus",
+                                    "description": "Linienbus von Pisco Elqui nach Observatorium Mamalluca. Günstig und zuverlässig.",
+                                    "durationMinutes": 568,
+                                    "cost": 19,
+                                    "co2": 23.700000000000003
+                                },
+                                {
+                                    "id": "var-car-9762",
+                                    "mode": "drive",
+                                    "description": "Mietwagen-Etappe. Freiheit für Fotostopps entlang der Route.",
+                                    "durationMinutes": 474,
+                                    "cost": 90,
+                                    "co2": 90.06
+                                },
+                                {
+                                    "id": "var-transfer-6495",
+                                    "mode": "drive",
+                                    "description": "Privater Transfer mit lokalem Driver-Guide. Entspannt zurücklehnen.",
+                                    "durationMinutes": 474,
+                                    "cost": 240,
+                                    "co2": 118.5
+                                },
+                                {
+                                    "id": "var-hitch-8179",
+                                    "mode": "drive",
+                                    "description": "Mitfahrgelegenheit oder Colectivo. Die lokale Art zu reisen.",
+                                    "durationMinutes": 711,
+                                    "cost": 15,
+                                    "co2": 47.400000000000006
+                                },
+                                {
+                                    "id": "var-flight-6567",
+                                    "mode": "flight",
+                                    "description": "Inlandsflug für maximale Zeitersparnis.",
+                                    "durationMinutes": 70,
+                                    "cost": 115,
+                                    "co2": 132.72
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "day-5",
+                "date": "2025-11-09",
+                "station": {
+                    "name": "La Serena",
+                    "description": "Aufenthalt in La Serena. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "La Serena"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": [
+                        {
+                            "mode": "bus",
+                            "from": {
+                                "name": "Observatorium Mamalluca"
+                            },
+                            "to": {
+                                "name": "La Serena"
+                            },
+                            "durationMinutes": 574,
+                            "variants": [
+                                {
+                                    "id": "var-bus-2527",
+                                    "mode": "bus",
+                                    "description": "Linienbus von Observatorium Mamalluca nach La Serena. Günstig und zuverlässig.",
+                                    "durationMinutes": 574,
+                                    "cost": 34,
+                                    "co2": 23.950000000000003
+                                },
+                                {
+                                    "id": "var-car-7197",
+                                    "mode": "drive",
+                                    "description": "Mietwagen-Etappe. Freiheit für Fotostopps entlang der Route.",
+                                    "durationMinutes": 479,
+                                    "cost": 55,
+                                    "co2": 91.01
+                                },
+                                {
+                                    "id": "var-transfer-3754",
+                                    "mode": "drive",
+                                    "description": "Privater Transfer mit lokalem Driver-Guide. Entspannt zurücklehnen.",
+                                    "durationMinutes": 479,
+                                    "cost": 115,
+                                    "co2": 119.75
+                                },
+                                {
+                                    "id": "var-hitch-7272",
+                                    "mode": "drive",
+                                    "description": "Mitfahrgelegenheit oder Colectivo. Die lokale Art zu reisen.",
+                                    "durationMinutes": 718,
+                                    "cost": 15,
+                                    "co2": 47.900000000000006
+                                },
+                                {
+                                    "id": "var-flight-3311",
+                                    "mode": "flight",
+                                    "description": "Inlandsflug für maximale Zeitersparnis.",
+                                    "durationMinutes": 91,
+                                    "cost": 129,
+                                    "co2": 134.12
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ],
+        "lodging": [
+            {
+                "id": "lodging-53069",
+                "stopId": "la-serena",
+                "name": "Hotel La Serena Garden",
+                "nights": 3,
+                "avgNightlyRateEUR": 78,
+                "amenities": [
+                    "WLAN",
+                    "Frühstück",
+                    "Garten"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=484",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hotel La Serena Garden",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-27556",
+                "stopId": "la-serena",
+                "name": "Guesthouse La Serena View",
+                "nights": 3,
+                "avgNightlyRateEUR": 43,
+                "amenities": [
+                    "WLAN",
+                    "Bar",
+                    "Küche"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=231",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Guesthouse La Serena View",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-28178",
+                "stopId": "la-serena",
+                "name": "Hostel La Serena View",
+                "nights": 1,
+                "avgNightlyRateEUR": 23,
+                "amenities": [
+                    "Küche",
+                    "Bar",
+                    "Touren"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=707",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hostel La Serena View",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-86350",
+                "stopId": "vicuña",
+                "name": "Hostel Vicuña Central",
+                "nights": 3,
+                "avgNightlyRateEUR": 25,
+                "amenities": [
+                    "Bar",
+                    "Touren",
+                    "Garten"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=841",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hostel Vicuña Central",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-24490",
+                "stopId": "vicuña",
+                "name": "Airbnb Vicuña View",
+                "nights": 3,
+                "avgNightlyRateEUR": 33,
+                "amenities": [
+                    "Touren",
+                    "Bar",
+                    "WLAN"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=545",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Airbnb Vicuña View",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-14039",
+                "stopId": "vicuña",
+                "name": "Hotel Vicuña Garden",
+                "nights": 1,
+                "avgNightlyRateEUR": 40,
+                "amenities": [
+                    "Frühstück",
+                    "Garten",
+                    "Küche"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=843",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hotel Vicuña Garden",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-53857",
+                "stopId": "pisco-elqui",
+                "name": "Guesthouse Pisco Elqui Central",
+                "nights": 3,
+                "avgNightlyRateEUR": 42,
+                "amenities": [
+                    "Küche",
+                    "Frühstück",
+                    "Touren"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=196",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Guesthouse Pisco Elqui Central",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-50938",
+                "stopId": "pisco-elqui",
+                "name": "Camping Pisco Elqui Garden",
+                "nights": 1,
+                "avgNightlyRateEUR": 22,
+                "amenities": [
+                    "Küche",
+                    "WLAN",
+                    "Frühstück"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=882",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Camping Pisco Elqui Garden",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-47491",
+                "stopId": "pisco-elqui",
+                "name": "Hostel Pisco Elqui Garden",
+                "nights": 1,
+                "avgNightlyRateEUR": 15,
+                "amenities": [
+                    "Bar",
+                    "Touren",
+                    "Küche"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=768",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hostel Pisco Elqui Garden",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-92300",
+                "stopId": "observatorium-mamalluca",
+                "name": "Hostel Observatorium Mamalluca Oasis",
+                "nights": 3,
+                "avgNightlyRateEUR": 15,
+                "amenities": [
+                    "Küche",
+                    "Garten",
+                    "Bar"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=344",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hostel Observatorium Mamalluca Oasis",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-55466",
+                "stopId": "observatorium-mamalluca",
+                "name": "Hostel Observatorium Mamalluca Garden",
+                "nights": 3,
+                "avgNightlyRateEUR": 17,
+                "amenities": [
+                    "WLAN",
+                    "Garten",
+                    "Küche"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=758",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hostel Observatorium Mamalluca Garden",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-53011",
+                "stopId": "observatorium-mamalluca",
+                "name": "Hotel Observatorium Mamalluca Backpacker",
+                "nights": 3,
+                "avgNightlyRateEUR": 51,
+                "amenities": [
+                    "Bar",
+                    "Garten",
+                    "Küche"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=324",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hotel Observatorium Mamalluca Backpacker",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-39961",
+                "stopId": "la-serena",
+                "name": "Camping La Serena View",
+                "nights": 2,
+                "avgNightlyRateEUR": 25,
+                "amenities": [
+                    "Bar",
+                    "Frühstück",
+                    "WLAN"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=838",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Camping La Serena View",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-18541",
+                "stopId": "la-serena",
+                "name": "Hotel La Serena Oasis",
+                "nights": 3,
+                "avgNightlyRateEUR": 45,
+                "amenities": [
+                    "WLAN",
+                    "Bar",
+                    "Küche"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=124",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hotel La Serena Oasis",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-81960",
+                "stopId": "la-serena",
+                "name": "Camping La Serena View",
+                "nights": 2,
+                "avgNightlyRateEUR": 11,
+                "amenities": [
+                    "Bar",
+                    "Touren",
+                    "WLAN"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=225",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Camping La Serena View",
+                        "license": "Unsplash License"
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,634 @@
+[
+    {
+        "id": "gen-route-7-glacier-explorer",
+        "title": "Route 17 – Gletscher Entdecker",
+        "summary": "Abseits der Massen: Die wilde Carretera Austral und die Eisfelder der Laguna San Rafael.",
+        "meta": {
+            "theme": "Adventure",
+            "pace": "moderate",
+            "durationDays": 12,
+            "costEstimate": 2273,
+            "highlights": [
+                "Besuch in Puerto Montt",
+                "Besuch in Chaitén",
+                "Besuch in Puyuhuapi"
+            ],
+            "highlightImages": [
+                {
+                    "title": "Route 17 – Gletscher Entdecker",
+                    "image": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1200&auto=format&fit=crop",
+                    "caption": "Abseits der Massen: Die wilde Carretera Austral und die Eisfelder der Laguna San Rafael.",
+                    "source": "Unsplash",
+                    "license": "Unsplash License"
+                }
+            ],
+            "scores": {
+                "budget": 3,
+                "adventure": 4,
+                "relax": 2,
+                "culture": 3
+            }
+        },
+        "days": [
+            {
+                "id": "day-1",
+                "date": "2025-11-01",
+                "station": {
+                    "name": "Puerto Montt",
+                    "description": "Aufenthalt in Puerto Montt. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Puerto Montt"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": []
+                }
+            },
+            {
+                "id": "day-2",
+                "date": "2025-11-03",
+                "station": {
+                    "name": "Chaitén",
+                    "description": "Aufenthalt in Chaitén. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Chaitén"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": [
+                        {
+                            "mode": "bus",
+                            "from": {
+                                "name": "Puerto Montt"
+                            },
+                            "to": {
+                                "name": "Chaitén"
+                            },
+                            "durationMinutes": 242,
+                            "variants": [
+                                {
+                                    "id": "var-bus-6434",
+                                    "mode": "bus",
+                                    "description": "Linienbus von Puerto Montt nach Chaitén. Günstig und zuverlässig.",
+                                    "durationMinutes": 242,
+                                    "cost": 26,
+                                    "co2": 10.100000000000001
+                                },
+                                {
+                                    "id": "var-car-5837",
+                                    "mode": "drive",
+                                    "description": "Mietwagen-Etappe. Freiheit für Fotostopps entlang der Route.",
+                                    "durationMinutes": 202,
+                                    "cost": 59,
+                                    "co2": 38.38
+                                },
+                                {
+                                    "id": "var-transfer-9802",
+                                    "mode": "drive",
+                                    "description": "Privater Transfer mit lokalem Driver-Guide. Entspannt zurücklehnen.",
+                                    "durationMinutes": 202,
+                                    "cost": 128,
+                                    "co2": 50.5
+                                },
+                                {
+                                    "id": "var-hitch-3654",
+                                    "mode": "drive",
+                                    "description": "Mitfahrgelegenheit oder Colectivo. Die lokale Art zu reisen.",
+                                    "durationMinutes": 303,
+                                    "cost": 5,
+                                    "co2": 20.200000000000003
+                                },
+                                {
+                                    "id": "var-bus-prem-1621",
+                                    "mode": "bus",
+                                    "description": "Premium 'Salon Cama' Bus. Fast wie Business Class.",
+                                    "durationMinutes": 242,
+                                    "cost": 26,
+                                    "co2": 10.100000000000001
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "day-3",
+                "date": "2025-11-05",
+                "station": {
+                    "name": "Puyuhuapi",
+                    "description": "Aufenthalt in Puyuhuapi. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Puyuhuapi"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": [
+                        {
+                            "mode": "bus",
+                            "from": {
+                                "name": "Chaitén"
+                            },
+                            "to": {
+                                "name": "Puyuhuapi"
+                            },
+                            "durationMinutes": 372,
+                            "variants": [
+                                {
+                                    "id": "var-bus-8432",
+                                    "mode": "bus",
+                                    "description": "Linienbus von Chaitén nach Puyuhuapi. Günstig und zuverlässig.",
+                                    "durationMinutes": 372,
+                                    "cost": 15,
+                                    "co2": 15.5
+                                },
+                                {
+                                    "id": "var-car-7869",
+                                    "mode": "drive",
+                                    "description": "Mietwagen-Etappe. Freiheit für Fotostopps entlang der Route.",
+                                    "durationMinutes": 310,
+                                    "cost": 76,
+                                    "co2": 58.9
+                                },
+                                {
+                                    "id": "var-transfer-6410",
+                                    "mode": "drive",
+                                    "description": "Privater Transfer mit lokalem Driver-Guide. Entspannt zurücklehnen.",
+                                    "durationMinutes": 310,
+                                    "cost": 118,
+                                    "co2": 77.5
+                                },
+                                {
+                                    "id": "var-hitch-6874",
+                                    "mode": "drive",
+                                    "description": "Mitfahrgelegenheit oder Colectivo. Die lokale Art zu reisen.",
+                                    "durationMinutes": 465,
+                                    "cost": 19,
+                                    "co2": 31.0
+                                },
+                                {
+                                    "id": "var-flight-1154",
+                                    "mode": "flight",
+                                    "description": "Inlandsflug für maximale Zeitersparnis.",
+                                    "durationMinutes": 63,
+                                    "cost": 81,
+                                    "co2": 86.80000000000001
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "day-4",
+                "date": "2025-11-07",
+                "station": {
+                    "name": "Coyhaique",
+                    "description": "Aufenthalt in Coyhaique. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Coyhaique"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": [
+                        {
+                            "mode": "bus",
+                            "from": {
+                                "name": "Puyuhuapi"
+                            },
+                            "to": {
+                                "name": "Coyhaique"
+                            },
+                            "durationMinutes": 259,
+                            "variants": [
+                                {
+                                    "id": "var-bus-9049",
+                                    "mode": "bus",
+                                    "description": "Linienbus von Puyuhuapi nach Coyhaique. Günstig und zuverlässig.",
+                                    "durationMinutes": 259,
+                                    "cost": 22,
+                                    "co2": 10.8
+                                },
+                                {
+                                    "id": "var-car-2744",
+                                    "mode": "drive",
+                                    "description": "Mietwagen-Etappe. Freiheit für Fotostopps entlang der Route.",
+                                    "durationMinutes": 216,
+                                    "cost": 67,
+                                    "co2": 41.04
+                                },
+                                {
+                                    "id": "var-transfer-9998",
+                                    "mode": "drive",
+                                    "description": "Privater Transfer mit lokalem Driver-Guide. Entspannt zurücklehnen.",
+                                    "durationMinutes": 216,
+                                    "cost": 246,
+                                    "co2": 54.0
+                                },
+                                {
+                                    "id": "var-hitch-2474",
+                                    "mode": "drive",
+                                    "description": "Mitfahrgelegenheit oder Colectivo. Die lokale Art zu reisen.",
+                                    "durationMinutes": 324,
+                                    "cost": 8,
+                                    "co2": 21.6
+                                },
+                                {
+                                    "id": "var-bus-prem-8892",
+                                    "mode": "bus",
+                                    "description": "Premium 'Salon Cama' Bus. Fast wie Business Class.",
+                                    "durationMinutes": 259,
+                                    "cost": 47,
+                                    "co2": 10.8
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "day-5",
+                "date": "2025-11-09",
+                "station": {
+                    "name": "Puerto Río Tranquilo",
+                    "description": "Aufenthalt in Puerto Río Tranquilo. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Puerto Río Tranquilo"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": [
+                        {
+                            "mode": "bus",
+                            "from": {
+                                "name": "Coyhaique"
+                            },
+                            "to": {
+                                "name": "Puerto Río Tranquilo"
+                            },
+                            "durationMinutes": 441,
+                            "variants": [
+                                {
+                                    "id": "var-bus-6105",
+                                    "mode": "bus",
+                                    "description": "Linienbus von Coyhaique nach Puerto Río Tranquilo. Günstig und zuverlässig.",
+                                    "durationMinutes": 441,
+                                    "cost": 34,
+                                    "co2": 18.400000000000002
+                                },
+                                {
+                                    "id": "var-car-2774",
+                                    "mode": "drive",
+                                    "description": "Mietwagen-Etappe. Freiheit für Fotostopps entlang der Route.",
+                                    "durationMinutes": 368,
+                                    "cost": 84,
+                                    "co2": 69.92
+                                },
+                                {
+                                    "id": "var-transfer-2868",
+                                    "mode": "drive",
+                                    "description": "Privater Transfer mit lokalem Driver-Guide. Entspannt zurücklehnen.",
+                                    "durationMinutes": 368,
+                                    "cost": 244,
+                                    "co2": 92.0
+                                },
+                                {
+                                    "id": "var-hitch-9906",
+                                    "mode": "drive",
+                                    "description": "Mitfahrgelegenheit oder Colectivo. Die lokale Art zu reisen.",
+                                    "durationMinutes": 552,
+                                    "cost": 5,
+                                    "co2": 36.800000000000004
+                                },
+                                {
+                                    "id": "var-flight-4883",
+                                    "mode": "flight",
+                                    "description": "Inlandsflug für maximale Zeitersparnis.",
+                                    "durationMinutes": 109,
+                                    "cost": 104,
+                                    "co2": 103.04
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ],
+        "lodging": [
+            {
+                "id": "lodging-84935",
+                "stopId": "puerto-montt",
+                "name": "Hotel Puerto Montt Garden",
+                "nights": 2,
+                "avgNightlyRateEUR": 43,
+                "amenities": [
+                    "Küche",
+                    "Touren",
+                    "Bar"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=561",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hotel Puerto Montt Garden",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-70026",
+                "stopId": "puerto-montt",
+                "name": "Hostel Puerto Montt Central",
+                "nights": 2,
+                "avgNightlyRateEUR": 40,
+                "amenities": [
+                    "Bar",
+                    "Küche",
+                    "Frühstück"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=358",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hostel Puerto Montt Central",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-87471",
+                "stopId": "puerto-montt",
+                "name": "Guesthouse Puerto Montt Backpacker",
+                "nights": 2,
+                "avgNightlyRateEUR": 32,
+                "amenities": [
+                    "Frühstück",
+                    "Garten",
+                    "WLAN"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=228",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Guesthouse Puerto Montt Backpacker",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-30966",
+                "stopId": "chaitén",
+                "name": "Hostel Chaitén Central",
+                "nights": 2,
+                "avgNightlyRateEUR": 16,
+                "amenities": [
+                    "Touren",
+                    "Bar",
+                    "Küche"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=913",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hostel Chaitén Central",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-44070",
+                "stopId": "chaitén",
+                "name": "Camping Chaitén Backpacker",
+                "nights": 1,
+                "avgNightlyRateEUR": 10,
+                "amenities": [
+                    "Bar",
+                    "Touren",
+                    "Garten"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=337",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Camping Chaitén Backpacker",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-49976",
+                "stopId": "chaitén",
+                "name": "Airbnb Chaitén Garden",
+                "nights": 2,
+                "avgNightlyRateEUR": 72,
+                "amenities": [
+                    "Garten",
+                    "Küche",
+                    "Frühstück"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=543",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Airbnb Chaitén Garden",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-32915",
+                "stopId": "puyuhuapi",
+                "name": "Hostel Puyuhuapi Backpacker",
+                "nights": 2,
+                "avgNightlyRateEUR": 32,
+                "amenities": [
+                    "Küche",
+                    "Bar",
+                    "WLAN"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=818",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hostel Puyuhuapi Backpacker",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-29476",
+                "stopId": "puyuhuapi",
+                "name": "Hostel Puyuhuapi Central",
+                "nights": 2,
+                "avgNightlyRateEUR": 25,
+                "amenities": [
+                    "Küche",
+                    "Bar",
+                    "Frühstück"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=208",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hostel Puyuhuapi Central",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-61361",
+                "stopId": "puyuhuapi",
+                "name": "Camping Puyuhuapi Backpacker",
+                "nights": 3,
+                "avgNightlyRateEUR": 11,
+                "amenities": [
+                    "Garten",
+                    "Küche",
+                    "Bar"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=127",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Camping Puyuhuapi Backpacker",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-26694",
+                "stopId": "coyhaique",
+                "name": "Guesthouse Coyhaique View",
+                "nights": 1,
+                "avgNightlyRateEUR": 35,
+                "amenities": [
+                    "Küche",
+                    "Bar",
+                    "WLAN"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=902",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Guesthouse Coyhaique View",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-32966",
+                "stopId": "coyhaique",
+                "name": "Hotel Coyhaique Central",
+                "nights": 1,
+                "avgNightlyRateEUR": 58,
+                "amenities": [
+                    "WLAN",
+                    "Frühstück",
+                    "Touren"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=683",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hotel Coyhaique Central",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-20395",
+                "stopId": "coyhaique",
+                "name": "Guesthouse Coyhaique Oasis",
+                "nights": 3,
+                "avgNightlyRateEUR": 34,
+                "amenities": [
+                    "Touren",
+                    "Bar",
+                    "Garten"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=385",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Guesthouse Coyhaique Oasis",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-16167",
+                "stopId": "puerto-río-tranquilo",
+                "name": "Hostel Puerto Río Tranquilo Oasis",
+                "nights": 2,
+                "avgNightlyRateEUR": 39,
+                "amenities": [
+                    "Küche",
+                    "Frühstück",
+                    "Touren"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=532",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hostel Puerto Río Tranquilo Oasis",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-63959",
+                "stopId": "puerto-río-tranquilo",
+                "name": "Airbnb Puerto Río Tranquilo Garden",
+                "nights": 3,
+                "avgNightlyRateEUR": 63,
+                "amenities": [
+                    "WLAN",
+                    "Garten",
+                    "Bar"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=192",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Airbnb Puerto Río Tranquilo Garden",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-20693",
+                "stopId": "puerto-río-tranquilo",
+                "name": "Airbnb Puerto Río Tranquilo Oasis",
+                "nights": 1,
+                "avgNightlyRateEUR": 80,
+                "amenities": [
+                    "Touren",
+                    "Garten",
+                    "WLAN"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=484",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Airbnb Puerto Río Tranquilo Oasis",
+                        "license": "Unsplash License"
+                    }
+                ]
+            }
+        ]
+    }
+]

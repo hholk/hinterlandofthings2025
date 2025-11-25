@@ -1,0 +1,634 @@
+[
+    {
+        "id": "gen-route-2-volcanoes-fjords",
+        "title": "Route 12 – Vulkane & Fjorde (Navimag Intro)",
+        "summary": "Der perfekte Einstieg: Seenregion um Puerto Varas und eine kurze Fjord-Erfahrung. Ideal für Naturliebhaber.",
+        "meta": {
+            "theme": "Adventure & Nature",
+            "pace": "moderate",
+            "durationDays": 8,
+            "costEstimate": 2202,
+            "highlights": [
+                "Besuch in Puerto Montt",
+                "Besuch in Puerto Varas",
+                "Besuch in Frutillar"
+            ],
+            "highlightImages": [
+                {
+                    "title": "Route 12 – Vulkane & Fjorde (Navimag Intro)",
+                    "image": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1200&auto=format&fit=crop",
+                    "caption": "Der perfekte Einstieg: Seenregion um Puerto Varas und eine kurze Fjord-Erfahrung. Ideal für Naturliebhaber.",
+                    "source": "Unsplash",
+                    "license": "Unsplash License"
+                }
+            ],
+            "scores": {
+                "budget": 3,
+                "adventure": 4,
+                "relax": 2,
+                "culture": 3
+            }
+        },
+        "days": [
+            {
+                "id": "day-1",
+                "date": "2025-11-01",
+                "station": {
+                    "name": "Puerto Montt",
+                    "description": "Aufenthalt in Puerto Montt. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Puerto Montt"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": []
+                }
+            },
+            {
+                "id": "day-2",
+                "date": "2025-11-03",
+                "station": {
+                    "name": "Puerto Varas",
+                    "description": "Aufenthalt in Puerto Varas. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Puerto Varas"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": [
+                        {
+                            "mode": "bus",
+                            "from": {
+                                "name": "Puerto Montt"
+                            },
+                            "to": {
+                                "name": "Puerto Varas"
+                            },
+                            "durationMinutes": 222,
+                            "variants": [
+                                {
+                                    "id": "var-bus-6009",
+                                    "mode": "bus",
+                                    "description": "Linienbus von Puerto Montt nach Puerto Varas. Günstig und zuverlässig.",
+                                    "durationMinutes": 222,
+                                    "cost": 38,
+                                    "co2": 9.25
+                                },
+                                {
+                                    "id": "var-car-6897",
+                                    "mode": "drive",
+                                    "description": "Mietwagen-Etappe. Freiheit für Fotostopps entlang der Route.",
+                                    "durationMinutes": 185,
+                                    "cost": 67,
+                                    "co2": 35.15
+                                },
+                                {
+                                    "id": "var-transfer-9320",
+                                    "mode": "drive",
+                                    "description": "Privater Transfer mit lokalem Driver-Guide. Entspannt zurücklehnen.",
+                                    "durationMinutes": 185,
+                                    "cost": 152,
+                                    "co2": 46.25
+                                },
+                                {
+                                    "id": "var-hitch-1789",
+                                    "mode": "drive",
+                                    "description": "Mitfahrgelegenheit oder Colectivo. Die lokale Art zu reisen.",
+                                    "durationMinutes": 277,
+                                    "cost": 7,
+                                    "co2": 18.5
+                                },
+                                {
+                                    "id": "var-bus-prem-4305",
+                                    "mode": "bus",
+                                    "description": "Premium 'Salon Cama' Bus. Fast wie Business Class.",
+                                    "durationMinutes": 222,
+                                    "cost": 38,
+                                    "co2": 9.25
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "day-3",
+                "date": "2025-11-05",
+                "station": {
+                    "name": "Frutillar",
+                    "description": "Aufenthalt in Frutillar. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Frutillar"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": [
+                        {
+                            "mode": "bus",
+                            "from": {
+                                "name": "Puerto Varas"
+                            },
+                            "to": {
+                                "name": "Frutillar"
+                            },
+                            "durationMinutes": 529,
+                            "variants": [
+                                {
+                                    "id": "var-bus-1234",
+                                    "mode": "bus",
+                                    "description": "Linienbus von Puerto Varas nach Frutillar. Günstig und zuverlässig.",
+                                    "durationMinutes": 529,
+                                    "cost": 31,
+                                    "co2": 22.05
+                                },
+                                {
+                                    "id": "var-car-7997",
+                                    "mode": "drive",
+                                    "description": "Mietwagen-Etappe. Freiheit für Fotostopps entlang der Route.",
+                                    "durationMinutes": 441,
+                                    "cost": 92,
+                                    "co2": 83.79
+                                },
+                                {
+                                    "id": "var-transfer-2086",
+                                    "mode": "drive",
+                                    "description": "Privater Transfer mit lokalem Driver-Guide. Entspannt zurücklehnen.",
+                                    "durationMinutes": 441,
+                                    "cost": 158,
+                                    "co2": 110.25
+                                },
+                                {
+                                    "id": "var-hitch-4401",
+                                    "mode": "drive",
+                                    "description": "Mitfahrgelegenheit oder Colectivo. Die lokale Art zu reisen.",
+                                    "durationMinutes": 661,
+                                    "cost": 13,
+                                    "co2": 44.1
+                                },
+                                {
+                                    "id": "var-flight-4622",
+                                    "mode": "flight",
+                                    "description": "Inlandsflug für maximale Zeitersparnis.",
+                                    "durationMinutes": 114,
+                                    "cost": 97,
+                                    "co2": 123.48000000000002
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "day-4",
+                "date": "2025-11-07",
+                "station": {
+                    "name": "Petrohué",
+                    "description": "Aufenthalt in Petrohué. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Petrohué"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": [
+                        {
+                            "mode": "bus",
+                            "from": {
+                                "name": "Frutillar"
+                            },
+                            "to": {
+                                "name": "Petrohué"
+                            },
+                            "durationMinutes": 258,
+                            "variants": [
+                                {
+                                    "id": "var-bus-3346",
+                                    "mode": "bus",
+                                    "description": "Linienbus von Frutillar nach Petrohué. Günstig und zuverlässig.",
+                                    "durationMinutes": 258,
+                                    "cost": 13,
+                                    "co2": 10.75
+                                },
+                                {
+                                    "id": "var-car-3789",
+                                    "mode": "drive",
+                                    "description": "Mietwagen-Etappe. Freiheit für Fotostopps entlang der Route.",
+                                    "durationMinutes": 215,
+                                    "cost": 82,
+                                    "co2": 40.85
+                                },
+                                {
+                                    "id": "var-transfer-9656",
+                                    "mode": "drive",
+                                    "description": "Privater Transfer mit lokalem Driver-Guide. Entspannt zurücklehnen.",
+                                    "durationMinutes": 215,
+                                    "cost": 225,
+                                    "co2": 53.75
+                                },
+                                {
+                                    "id": "var-hitch-6064",
+                                    "mode": "drive",
+                                    "description": "Mitfahrgelegenheit oder Colectivo. Die lokale Art zu reisen.",
+                                    "durationMinutes": 322,
+                                    "cost": 16,
+                                    "co2": 21.5
+                                },
+                                {
+                                    "id": "var-bus-prem-4712",
+                                    "mode": "bus",
+                                    "description": "Premium 'Salon Cama' Bus. Fast wie Business Class.",
+                                    "durationMinutes": 258,
+                                    "cost": 33,
+                                    "co2": 10.75
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "day-5",
+                "date": "2025-11-09",
+                "station": {
+                    "name": "Navimag Terminal",
+                    "description": "Aufenthalt in Navimag Terminal. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Navimag Terminal"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": [
+                        {
+                            "mode": "bus",
+                            "from": {
+                                "name": "Petrohué"
+                            },
+                            "to": {
+                                "name": "Navimag Terminal"
+                            },
+                            "durationMinutes": 375,
+                            "variants": [
+                                {
+                                    "id": "var-bus-2434",
+                                    "mode": "bus",
+                                    "description": "Linienbus von Petrohué nach Navimag Terminal. Günstig und zuverlässig.",
+                                    "durationMinutes": 375,
+                                    "cost": 31,
+                                    "co2": 15.65
+                                },
+                                {
+                                    "id": "var-car-1535",
+                                    "mode": "drive",
+                                    "description": "Mietwagen-Etappe. Freiheit für Fotostopps entlang der Route.",
+                                    "durationMinutes": 313,
+                                    "cost": 45,
+                                    "co2": 59.47
+                                },
+                                {
+                                    "id": "var-transfer-6947",
+                                    "mode": "drive",
+                                    "description": "Privater Transfer mit lokalem Driver-Guide. Entspannt zurücklehnen.",
+                                    "durationMinutes": 313,
+                                    "cost": 178,
+                                    "co2": 78.25
+                                },
+                                {
+                                    "id": "var-hitch-2434",
+                                    "mode": "drive",
+                                    "description": "Mitfahrgelegenheit oder Colectivo. Die lokale Art zu reisen.",
+                                    "durationMinutes": 469,
+                                    "cost": 9,
+                                    "co2": 31.3
+                                },
+                                {
+                                    "id": "var-flight-2689",
+                                    "mode": "flight",
+                                    "description": "Inlandsflug für maximale Zeitersparnis.",
+                                    "durationMinutes": 117,
+                                    "cost": 116,
+                                    "co2": 87.64000000000001
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ],
+        "lodging": [
+            {
+                "id": "lodging-89729",
+                "stopId": "puerto-montt",
+                "name": "Hostel Puerto Montt Backpacker",
+                "nights": 3,
+                "avgNightlyRateEUR": 22,
+                "amenities": [
+                    "WLAN",
+                    "Küche",
+                    "Frühstück"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=434",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hostel Puerto Montt Backpacker",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-88751",
+                "stopId": "puerto-montt",
+                "name": "Hotel Puerto Montt Garden",
+                "nights": 1,
+                "avgNightlyRateEUR": 43,
+                "amenities": [
+                    "Touren",
+                    "WLAN",
+                    "Frühstück"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=983",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hotel Puerto Montt Garden",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-78147",
+                "stopId": "puerto-montt",
+                "name": "Airbnb Puerto Montt Central",
+                "nights": 1,
+                "avgNightlyRateEUR": 57,
+                "amenities": [
+                    "Frühstück",
+                    "Küche",
+                    "Garten"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=282",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Airbnb Puerto Montt Central",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-46652",
+                "stopId": "puerto-varas",
+                "name": "Guesthouse Puerto Varas View",
+                "nights": 3,
+                "avgNightlyRateEUR": 58,
+                "amenities": [
+                    "WLAN",
+                    "Bar",
+                    "Touren"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=582",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Guesthouse Puerto Varas View",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-44115",
+                "stopId": "puerto-varas",
+                "name": "Camping Puerto Varas Garden",
+                "nights": 3,
+                "avgNightlyRateEUR": 11,
+                "amenities": [
+                    "Bar",
+                    "Frühstück",
+                    "Touren"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=885",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Camping Puerto Varas Garden",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-24749",
+                "stopId": "puerto-varas",
+                "name": "Hostel Puerto Varas Backpacker",
+                "nights": 3,
+                "avgNightlyRateEUR": 29,
+                "amenities": [
+                    "Frühstück",
+                    "WLAN",
+                    "Garten"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=484",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hostel Puerto Varas Backpacker",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-74563",
+                "stopId": "frutillar",
+                "name": "Hotel Frutillar Central",
+                "nights": 2,
+                "avgNightlyRateEUR": 61,
+                "amenities": [
+                    "Touren",
+                    "Frühstück",
+                    "WLAN"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=812",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hotel Frutillar Central",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-60471",
+                "stopId": "frutillar",
+                "name": "Camping Frutillar View",
+                "nights": 3,
+                "avgNightlyRateEUR": 20,
+                "amenities": [
+                    "Garten",
+                    "Touren",
+                    "WLAN"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=309",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Camping Frutillar View",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-85034",
+                "stopId": "frutillar",
+                "name": "Camping Frutillar Garden",
+                "nights": 2,
+                "avgNightlyRateEUR": 13,
+                "amenities": [
+                    "WLAN",
+                    "Frühstück",
+                    "Garten"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=648",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Camping Frutillar Garden",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-41361",
+                "stopId": "petrohué",
+                "name": "Airbnb Petrohué Backpacker",
+                "nights": 2,
+                "avgNightlyRateEUR": 80,
+                "amenities": [
+                    "Garten",
+                    "Touren",
+                    "Frühstück"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=815",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Airbnb Petrohué Backpacker",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-23712",
+                "stopId": "petrohué",
+                "name": "Hotel Petrohué Backpacker",
+                "nights": 3,
+                "avgNightlyRateEUR": 80,
+                "amenities": [
+                    "Frühstück",
+                    "Bar",
+                    "Küche"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=169",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hotel Petrohué Backpacker",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-58077",
+                "stopId": "petrohué",
+                "name": "Hotel Petrohué View",
+                "nights": 3,
+                "avgNightlyRateEUR": 75,
+                "amenities": [
+                    "WLAN",
+                    "Küche",
+                    "Garten"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=546",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hotel Petrohué View",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-92935",
+                "stopId": "navimag-terminal",
+                "name": "Airbnb Navimag Terminal Oasis",
+                "nights": 1,
+                "avgNightlyRateEUR": 71,
+                "amenities": [
+                    "Küche",
+                    "Touren",
+                    "Frühstück"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=426",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Airbnb Navimag Terminal Oasis",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-46746",
+                "stopId": "navimag-terminal",
+                "name": "Hotel Navimag Terminal Oasis",
+                "nights": 2,
+                "avgNightlyRateEUR": 73,
+                "amenities": [
+                    "WLAN",
+                    "Frühstück",
+                    "Garten"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=816",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hotel Navimag Terminal Oasis",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-76766",
+                "stopId": "navimag-terminal",
+                "name": "Hotel Navimag Terminal Oasis",
+                "nights": 1,
+                "avgNightlyRateEUR": 82,
+                "amenities": [
+                    "Touren",
+                    "Garten",
+                    "Frühstück"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=660",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hotel Navimag Terminal Oasis",
+                        "license": "Unsplash License"
+                    }
+                ]
+            }
+        ]
+    }
+]

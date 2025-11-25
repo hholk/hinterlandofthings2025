@@ -736,33 +736,33 @@ class ChileRouteExplorer {
     this.activeBasemap = 'standard';
     this.dom = typeof document === 'undefined'
       ? {
-          select: null,
-          status: null,
-          legend: null,
-          legendToggle: null,
-          fullscreenToggle: null,
-          basemapToggle: null,
-          routeTitle: null,
-          routeSummary: null,
-          routeMeta: null,
-          modeList: null,
-          poiList: null,
-          mapContainer: null
-        }
+        select: null,
+        status: null,
+        legend: null,
+        legendToggle: null,
+        fullscreenToggle: null,
+        basemapToggle: null,
+        routeTitle: null,
+        routeSummary: null,
+        routeMeta: null,
+        modeList: null,
+        poiList: null,
+        mapContainer: null
+      }
       : {
-          select: document.getElementById('route-select'),
-          status: document.getElementById('map-status'),
-          legend: document.getElementById('map-legend'),
-          legendToggle: document.getElementById('legend-toggle'),
-          fullscreenToggle: document.getElementById('fullscreen-toggle'),
-          basemapToggle: document.getElementById('basemap-toggle'),
-          routeTitle: document.getElementById('route-title'),
-          routeSummary: document.getElementById('route-summary'),
-          routeMeta: document.getElementById('route-meta'),
-          modeList: document.getElementById('mode-list'),
-          poiList: document.getElementById('poi-list'),
-          mapContainer: document.querySelector('.map-canvas')
-        };
+        select: document.getElementById('route-select'),
+        status: document.getElementById('map-status'),
+        legend: document.getElementById('map-legend'),
+        legendToggle: document.getElementById('legend-toggle'),
+        fullscreenToggle: document.getElementById('fullscreen-toggle'),
+        basemapToggle: document.getElementById('basemap-toggle'),
+        routeTitle: document.getElementById('route-title'),
+        routeSummary: document.getElementById('route-summary'),
+        routeMeta: document.getElementById('route-meta'),
+        modeList: document.getElementById('mode-list'),
+        poiList: document.getElementById('poi-list'),
+        mapContainer: document.querySelector('.map-canvas')
+      };
   }
 
   setStatus(message) {

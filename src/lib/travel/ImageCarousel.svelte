@@ -31,6 +31,7 @@
                 src={images[0].url}
                 alt={images[0].caption || "Reisebild"}
                 class="h-full w-full object-cover"
+                referrerpolicy="no-referrer"
             />
             {#if showCaptions && (images[0].caption || images[0].credit)}
                 <div
@@ -60,6 +61,7 @@
                         src={image.url}
                         alt={image.caption || "Reisebild"}
                         class="h-full w-full object-cover"
+                        referrerpolicy="no-referrer"
                     />
                     {#if showCaptions && (image.caption || image.credit)}
                         <div

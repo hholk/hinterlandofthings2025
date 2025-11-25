@@ -1,0 +1,634 @@
+[
+    {
+        "id": "gen-route-10-andes-crossing",
+        "title": "Route 20 – Andenüberquerung",
+        "summary": "Über Vulkane und Seen: Von Pucón über die Grenze nach Argentinien und zurück. Ein Roadtrip-Traum.",
+        "meta": {
+            "theme": "Nature & Adventure",
+            "pace": "moderate",
+            "durationDays": 8,
+            "costEstimate": 1670,
+            "highlights": [
+                "Besuch in Temuco",
+                "Besuch in Pucón",
+                "Besuch in Villarrica"
+            ],
+            "highlightImages": [
+                {
+                    "title": "Route 20 – Andenüberquerung",
+                    "image": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1200&auto=format&fit=crop",
+                    "caption": "Über Vulkane und Seen: Von Pucón über die Grenze nach Argentinien und zurück. Ein Roadtrip-Traum.",
+                    "source": "Unsplash",
+                    "license": "Unsplash License"
+                }
+            ],
+            "scores": {
+                "budget": 3,
+                "adventure": 4,
+                "relax": 2,
+                "culture": 3
+            }
+        },
+        "days": [
+            {
+                "id": "day-1",
+                "date": "2025-11-01",
+                "station": {
+                    "name": "Temuco",
+                    "description": "Aufenthalt in Temuco. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Temuco"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": []
+                }
+            },
+            {
+                "id": "day-2",
+                "date": "2025-11-03",
+                "station": {
+                    "name": "Pucón",
+                    "description": "Aufenthalt in Pucón. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Pucón"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": [
+                        {
+                            "mode": "bus",
+                            "from": {
+                                "name": "Temuco"
+                            },
+                            "to": {
+                                "name": "Pucón"
+                            },
+                            "durationMinutes": 496,
+                            "variants": [
+                                {
+                                    "id": "var-bus-7380",
+                                    "mode": "bus",
+                                    "description": "Linienbus von Temuco nach Pucón. Günstig und zuverlässig.",
+                                    "durationMinutes": 496,
+                                    "cost": 11,
+                                    "co2": 20.700000000000003
+                                },
+                                {
+                                    "id": "var-car-9962",
+                                    "mode": "drive",
+                                    "description": "Mietwagen-Etappe. Freiheit für Fotostopps entlang der Route.",
+                                    "durationMinutes": 414,
+                                    "cost": 91,
+                                    "co2": 78.66
+                                },
+                                {
+                                    "id": "var-transfer-7348",
+                                    "mode": "drive",
+                                    "description": "Privater Transfer mit lokalem Driver-Guide. Entspannt zurücklehnen.",
+                                    "durationMinutes": 414,
+                                    "cost": 180,
+                                    "co2": 103.5
+                                },
+                                {
+                                    "id": "var-hitch-3697",
+                                    "mode": "drive",
+                                    "description": "Mitfahrgelegenheit oder Colectivo. Die lokale Art zu reisen.",
+                                    "durationMinutes": 621,
+                                    "cost": 10,
+                                    "co2": 41.400000000000006
+                                },
+                                {
+                                    "id": "var-flight-5322",
+                                    "mode": "flight",
+                                    "description": "Inlandsflug für maximale Zeitersparnis.",
+                                    "durationMinutes": 75,
+                                    "cost": 94,
+                                    "co2": 115.92000000000002
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "day-3",
+                "date": "2025-11-05",
+                "station": {
+                    "name": "Villarrica",
+                    "description": "Aufenthalt in Villarrica. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Villarrica"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": [
+                        {
+                            "mode": "bus",
+                            "from": {
+                                "name": "Pucón"
+                            },
+                            "to": {
+                                "name": "Villarrica"
+                            },
+                            "durationMinutes": 429,
+                            "variants": [
+                                {
+                                    "id": "var-bus-5908",
+                                    "mode": "bus",
+                                    "description": "Linienbus von Pucón nach Villarrica. Günstig und zuverlässig.",
+                                    "durationMinutes": 429,
+                                    "cost": 40,
+                                    "co2": 17.900000000000002
+                                },
+                                {
+                                    "id": "var-car-4553",
+                                    "mode": "drive",
+                                    "description": "Mietwagen-Etappe. Freiheit für Fotostopps entlang der Route.",
+                                    "durationMinutes": 358,
+                                    "cost": 60,
+                                    "co2": 68.02
+                                },
+                                {
+                                    "id": "var-transfer-9861",
+                                    "mode": "drive",
+                                    "description": "Privater Transfer mit lokalem Driver-Guide. Entspannt zurücklehnen.",
+                                    "durationMinutes": 358,
+                                    "cost": 139,
+                                    "co2": 89.5
+                                },
+                                {
+                                    "id": "var-hitch-5606",
+                                    "mode": "drive",
+                                    "description": "Mitfahrgelegenheit oder Colectivo. Die lokale Art zu reisen.",
+                                    "durationMinutes": 537,
+                                    "cost": 9,
+                                    "co2": 35.800000000000004
+                                },
+                                {
+                                    "id": "var-flight-5191",
+                                    "mode": "flight",
+                                    "description": "Inlandsflug für maximale Zeitersparnis.",
+                                    "durationMinutes": 115,
+                                    "cost": 80,
+                                    "co2": 100.24000000000001
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "day-4",
+                "date": "2025-11-07",
+                "station": {
+                    "name": "Curarrehue",
+                    "description": "Aufenthalt in Curarrehue. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Curarrehue"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": [
+                        {
+                            "mode": "bus",
+                            "from": {
+                                "name": "Villarrica"
+                            },
+                            "to": {
+                                "name": "Curarrehue"
+                            },
+                            "durationMinutes": 322,
+                            "variants": [
+                                {
+                                    "id": "var-bus-4019",
+                                    "mode": "bus",
+                                    "description": "Linienbus von Villarrica nach Curarrehue. Günstig und zuverlässig.",
+                                    "durationMinutes": 322,
+                                    "cost": 24,
+                                    "co2": 13.450000000000001
+                                },
+                                {
+                                    "id": "var-car-5617",
+                                    "mode": "drive",
+                                    "description": "Mietwagen-Etappe. Freiheit für Fotostopps entlang der Route.",
+                                    "durationMinutes": 269,
+                                    "cost": 86,
+                                    "co2": 51.11
+                                },
+                                {
+                                    "id": "var-transfer-8854",
+                                    "mode": "drive",
+                                    "description": "Privater Transfer mit lokalem Driver-Guide. Entspannt zurücklehnen.",
+                                    "durationMinutes": 269,
+                                    "cost": 239,
+                                    "co2": 67.25
+                                },
+                                {
+                                    "id": "var-hitch-9880",
+                                    "mode": "drive",
+                                    "description": "Mitfahrgelegenheit oder Colectivo. Die lokale Art zu reisen.",
+                                    "durationMinutes": 403,
+                                    "cost": 18,
+                                    "co2": 26.900000000000002
+                                },
+                                {
+                                    "id": "var-bus-prem-9352",
+                                    "mode": "bus",
+                                    "description": "Premium 'Salon Cama' Bus. Fast wie Business Class.",
+                                    "durationMinutes": 322,
+                                    "cost": 43,
+                                    "co2": 13.450000000000001
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "day-5",
+                "date": "2025-11-09",
+                "station": {
+                    "name": "Caburgua",
+                    "description": "Aufenthalt in Caburgua. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Caburgua"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": [
+                        {
+                            "mode": "bus",
+                            "from": {
+                                "name": "Curarrehue"
+                            },
+                            "to": {
+                                "name": "Caburgua"
+                            },
+                            "durationMinutes": 534,
+                            "variants": [
+                                {
+                                    "id": "var-bus-7732",
+                                    "mode": "bus",
+                                    "description": "Linienbus von Curarrehue nach Caburgua. Günstig und zuverlässig.",
+                                    "durationMinutes": 534,
+                                    "cost": 14,
+                                    "co2": 22.25
+                                },
+                                {
+                                    "id": "var-car-3478",
+                                    "mode": "drive",
+                                    "description": "Mietwagen-Etappe. Freiheit für Fotostopps entlang der Route.",
+                                    "durationMinutes": 445,
+                                    "cost": 47,
+                                    "co2": 84.55
+                                },
+                                {
+                                    "id": "var-transfer-3959",
+                                    "mode": "drive",
+                                    "description": "Privater Transfer mit lokalem Driver-Guide. Entspannt zurücklehnen.",
+                                    "durationMinutes": 445,
+                                    "cost": 249,
+                                    "co2": 111.25
+                                },
+                                {
+                                    "id": "var-hitch-7687",
+                                    "mode": "drive",
+                                    "description": "Mitfahrgelegenheit oder Colectivo. Die lokale Art zu reisen.",
+                                    "durationMinutes": 667,
+                                    "cost": 20,
+                                    "co2": 44.5
+                                },
+                                {
+                                    "id": "var-flight-4335",
+                                    "mode": "flight",
+                                    "description": "Inlandsflug für maximale Zeitersparnis.",
+                                    "durationMinutes": 94,
+                                    "cost": 110,
+                                    "co2": 124.60000000000001
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ],
+        "lodging": [
+            {
+                "id": "lodging-30402",
+                "stopId": "temuco",
+                "name": "Hostel Temuco View",
+                "nights": 1,
+                "avgNightlyRateEUR": 28,
+                "amenities": [
+                    "Garten",
+                    "WLAN",
+                    "Küche"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=138",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hostel Temuco View",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-37274",
+                "stopId": "temuco",
+                "name": "Hotel Temuco View",
+                "nights": 1,
+                "avgNightlyRateEUR": 54,
+                "amenities": [
+                    "Touren",
+                    "WLAN",
+                    "Küche"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=752",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hotel Temuco View",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-12351",
+                "stopId": "temuco",
+                "name": "Hostel Temuco Oasis",
+                "nights": 1,
+                "avgNightlyRateEUR": 34,
+                "amenities": [
+                    "Touren",
+                    "Küche",
+                    "Frühstück"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=330",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hostel Temuco Oasis",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-48502",
+                "stopId": "pucón",
+                "name": "Camping Pucón View",
+                "nights": 1,
+                "avgNightlyRateEUR": 23,
+                "amenities": [
+                    "Bar",
+                    "Touren",
+                    "Küche"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=268",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Camping Pucón View",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-99057",
+                "stopId": "pucón",
+                "name": "Hotel Pucón Central",
+                "nights": 3,
+                "avgNightlyRateEUR": 46,
+                "amenities": [
+                    "Bar",
+                    "Touren",
+                    "WLAN"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=140",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hotel Pucón Central",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-87936",
+                "stopId": "pucón",
+                "name": "Camping Pucón Backpacker",
+                "nights": 1,
+                "avgNightlyRateEUR": 18,
+                "amenities": [
+                    "Bar",
+                    "Küche",
+                    "Frühstück"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=912",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Camping Pucón Backpacker",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-77737",
+                "stopId": "villarrica",
+                "name": "Camping Villarrica Garden",
+                "nights": 1,
+                "avgNightlyRateEUR": 14,
+                "amenities": [
+                    "Touren",
+                    "Bar",
+                    "Frühstück"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=588",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Camping Villarrica Garden",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-54286",
+                "stopId": "villarrica",
+                "name": "Airbnb Villarrica Backpacker",
+                "nights": 1,
+                "avgNightlyRateEUR": 63,
+                "amenities": [
+                    "Garten",
+                    "Touren",
+                    "Bar"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=915",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Airbnb Villarrica Backpacker",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-89320",
+                "stopId": "villarrica",
+                "name": "Hotel Villarrica Garden",
+                "nights": 1,
+                "avgNightlyRateEUR": 53,
+                "amenities": [
+                    "Garten",
+                    "WLAN",
+                    "Bar"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=420",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hotel Villarrica Garden",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-35481",
+                "stopId": "curarrehue",
+                "name": "Hotel Curarrehue Oasis",
+                "nights": 3,
+                "avgNightlyRateEUR": 81,
+                "amenities": [
+                    "WLAN",
+                    "Bar",
+                    "Frühstück"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=754",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hotel Curarrehue Oasis",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-31032",
+                "stopId": "curarrehue",
+                "name": "Airbnb Curarrehue Oasis",
+                "nights": 2,
+                "avgNightlyRateEUR": 43,
+                "amenities": [
+                    "Bar",
+                    "Garten",
+                    "Küche"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=397",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Airbnb Curarrehue Oasis",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-69294",
+                "stopId": "curarrehue",
+                "name": "Hostel Curarrehue Oasis",
+                "nights": 3,
+                "avgNightlyRateEUR": 26,
+                "amenities": [
+                    "Frühstück",
+                    "Bar",
+                    "Touren"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=707",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hostel Curarrehue Oasis",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-77138",
+                "stopId": "caburgua",
+                "name": "Guesthouse Caburgua View",
+                "nights": 1,
+                "avgNightlyRateEUR": 39,
+                "amenities": [
+                    "Küche",
+                    "Garten",
+                    "WLAN"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=162",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Guesthouse Caburgua View",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-89102",
+                "stopId": "caburgua",
+                "name": "Airbnb Caburgua Central",
+                "nights": 2,
+                "avgNightlyRateEUR": 80,
+                "amenities": [
+                    "Bar",
+                    "Frühstück",
+                    "Touren"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=317",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Airbnb Caburgua Central",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-51575",
+                "stopId": "caburgua",
+                "name": "Guesthouse Caburgua Oasis",
+                "nights": 1,
+                "avgNightlyRateEUR": 30,
+                "amenities": [
+                    "Bar",
+                    "Frühstück",
+                    "Garten"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=324",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Guesthouse Caburgua Oasis",
+                        "license": "Unsplash License"
+                    }
+                ]
+            }
+        ]
+    }
+]

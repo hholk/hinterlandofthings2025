@@ -101,22 +101,22 @@
       "reviewCount": 42876,
       "photos": [
         {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Santiago_de_Chile_Costanera_Center.jpg/800px-Santiago_de_Chile_Costanera_Center.jpg",
           "caption": "Boarding im Terminal Internacional",
           "source": "Wikimedia Commons",
-          "license": "CC0"
+          "license": "CC BY-SA 3.0"
         },
         {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Santiago_de_Chile_Costanera_Center.jpg/800px-Santiago_de_Chile_Costanera_Center.jpg",
           "caption": "Abflughalle mit Blick auf die Startbahnen in Santiago",
           "source": "Wikimedia Commons",
-          "license": "CC0"
+          "license": "CC BY-SA 3.0"
         },
         {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Santiago_de_Chile_Costanera_Center.jpg/800px-Santiago_de_Chile_Costanera_Center.jpg",
           "caption": "Andenpanorama beim Start über Santiago",
           "source": "Wikimedia Commons",
-          "license": "CC0"
+          "license": "CC BY-SA 3.0"
         }
       ],
       "notes": [
@@ -145,22 +145,22 @@
       "reviewCount": 5860,
       "photos": [
         {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Carretera_Austral_near_Villa_Cerro_Castillo.jpg/800px-Carretera_Austral_near_Villa_Cerro_Castillo.jpg",
           "caption": "Anflug auf Arica mit Blick auf den Pazifik",
           "source": "Wikimedia Commons",
-          "license": "CC0"
+          "license": "CC BY-SA 2.0"
         },
         {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Carretera_Austral_near_Villa_Cerro_Castillo.jpg/800px-Carretera_Austral_near_Villa_Cerro_Castillo.jpg",
           "caption": "Ankunftshalle im warmen Licht des Nordens",
           "source": "Wikimedia Commons",
-          "license": "CC0"
+          "license": "CC BY-SA 2.0"
         },
         {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Carretera_Austral_near_Villa_Cerro_Castillo.jpg/800px-Carretera_Austral_near_Villa_Cerro_Castillo.jpg",
           "caption": "Blick auf die Küstenlinie bei Arica aus dem Flugzeug",
           "source": "Wikimedia Commons",
-          "license": "CC0"
+          "license": "CC BY-SA 2.0"
         }
       ],
       "notes": [
@@ -539,28 +539,28 @@
   ],
   "lodging": [
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
-      "caption": "Placeholder image",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Carretera_Austral_near_Villa_Cerro_Castillo.jpg/800px-Carretera_Austral_near_Villa_Cerro_Castillo.jpg",
+      "caption": "Landschaft in Chile",
       "source": "Wikimedia Commons",
-      "license": "CC0"
+      "license": "CC BY-SA 2.0"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
-      "caption": "Placeholder image",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Carretera_Austral_near_Villa_Cerro_Castillo.jpg/800px-Carretera_Austral_near_Villa_Cerro_Castillo.jpg",
+      "caption": "Landschaft in Chile",
       "source": "Wikimedia Commons",
-      "license": "CC0"
+      "license": "CC BY-SA 2.0"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
-      "caption": "Placeholder image",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Carretera_Austral_near_Villa_Cerro_Castillo.jpg/800px-Carretera_Austral_near_Villa_Cerro_Castillo.jpg",
+      "caption": "Landschaft in Chile",
       "source": "Wikimedia Commons",
-      "license": "CC0"
+      "license": "CC BY-SA 2.0"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
-      "caption": "Placeholder image",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Carretera_Austral_near_Villa_Cerro_Castillo.jpg/800px-Carretera_Austral_near_Villa_Cerro_Castillo.jpg",
+      "caption": "Landschaft in Chile",
       "source": "Wikimedia Commons",
-      "license": "CC0"
+      "license": "CC BY-SA 2.0"
     }
   ],
   "food": [

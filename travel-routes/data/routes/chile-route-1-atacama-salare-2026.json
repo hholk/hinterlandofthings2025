@@ -123,16 +123,16 @@
         "description": "Ankunft in Santiago, Weiterflug in den Norden nach Calama – Tor zur Atacama-Wüste.",
         "images": [
           {
-            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Santiago_de_Chile_Costanera_Center.jpg/800px-Santiago_de_Chile_Costanera_Center.jpg",
             "caption": "Skyline von Santiago vor den Anden",
             "source": "Wikimedia Commons",
-            "license": "CC0"
+            "license": "CC BY-SA 3.0"
           },
           {
-            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Santiago_de_Chile_Costanera_Center.jpg/800px-Santiago_de_Chile_Costanera_Center.jpg",
             "caption": "Flug über die Anden nach Norden",
             "source": "Wikimedia Commons",
-            "license": "CC0"
+            "license": "CC BY-SA 3.0"
           }
         ]
       },
@@ -165,16 +165,16 @@
             },
             "images": [
               {
-                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
+                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Santiago_de_Chile_Costanera_Center.jpg/800px-Santiago_de_Chile_Costanera_Center.jpg",
                 "caption": "LATAM-Maschine am Gate in Santiago",
                 "source": "Wikimedia Commons",
-                "license": "CC0"
+                "license": "CC BY-SA 3.0"
               },
               {
-                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
+                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/The_Milky_Way_above_the_Atacama_Desert.jpg/800px-The_Milky_Way_above_the_Atacama_Desert.jpg",
                 "caption": "Rollfeld in der Mittagshitze",
                 "source": "Wikimedia Commons",
-                "license": "CC0"
+                "license": "CC BY-SA 4.0"
               }
             ]
           },
@@ -198,16 +198,16 @@
             "durationMinutes": 20,
             "images": [
               {
-                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
+                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/The_Milky_Way_above_the_Atacama_Desert.jpg/800px-The_Milky_Way_above_the_Atacama_Desert.jpg",
                 "caption": "Straße vom Flughafen nach Calama",
                 "source": "Wikimedia Commons",
-                "license": "CC0"
+                "license": "CC BY-SA 4.0"
               },
               {
-                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
-                "caption": "Stimmungsbild aus Chile für die Travel Experience",
+                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/The_Milky_Way_above_the_Atacama_Desert.jpg/800px-The_Milky_Way_above_the_Atacama_Desert.jpg",
+                "caption": "Atacama Wüste",
                 "source": "Wikimedia Commons",
-                "license": "CC0"
+                "license": "CC BY-SA 4.0"
               }
             ]
           }
@@ -224,16 +224,16 @@
             "address": "Pudahuel, Región Metropolitana, Chile",
             "images": [
               {
-                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
+                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Santiago_de_Chile_Costanera_Center.jpg/800px-Santiago_de_Chile_Costanera_Center.jpg",
                 "caption": "Terminal in Santiago",
                 "source": "Wikimedia Commons",
-                "license": "CC0"
+                "license": "CC BY-SA 3.0"
               },
               {
-                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
-                "caption": "Stimmungsbild aus Chile für die Travel Experience",
+                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/The_Milky_Way_above_the_Atacama_Desert.jpg/800px-The_Milky_Way_above_the_Atacama_Desert.jpg",
+                "caption": "Atacama Wüste",
                 "source": "Wikimedia Commons",
-                "license": "CC0"
+                "license": "CC BY-SA 4.0"
               }
             ]
           },
@@ -248,16 +248,16 @@
             "address": "Calama, Región de Antofagasta, Chile",
             "images": [
               {
-                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
+                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/The_Milky_Way_above_the_Atacama_Desert.jpg/800px-The_Milky_Way_above_the_Atacama_Desert.jpg",
                 "caption": "Regionalflughafen in der Atacama",
                 "source": "Wikimedia Commons",
-                "license": "CC0"
+                "license": "CC BY-SA 4.0"
               },
               {
-                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
-                "caption": "Stimmungsbild aus Chile für die Travel Experience",
+                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/The_Milky_Way_above_the_Atacama_Desert.jpg/800px-The_Milky_Way_above_the_Atacama_Desert.jpg",
+                "caption": "Atacama Wüste",
                 "source": "Wikimedia Commons",
-                "license": "CC0"
+                "license": "CC BY-SA 4.0"
               }
             ]
           }
@@ -461,16 +461,16 @@
         "description": "Lehmhäuser, staubige Gassen, Vulkansilhouetten – idealer Ausgangspunkt für Lagunen, Geysire und Sterne.",
         "images": [
           {
-            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Atardecer_en_la_valle_de_la_Luna.JPG/800px-Atardecer_en_la_valle_de_la_Luna.JPG",
             "caption": "Plaza von San Pedro de Atacama",
             "source": "Wikimedia Commons",
-            "license": "CC0"
+            "license": "CC BY-SA 4.0"
           },
           {
-            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Atardecer_en_la_valle_de_la_Luna.JPG/800px-Atardecer_en_la_valle_de_la_Luna.JPG",
             "caption": "Adobe-Architektur und Vulkan im Hintergrund",
             "source": "Wikimedia Commons",
-            "license": "CC0"
+            "license": "CC BY-SA 4.0"
           }
         ]
       },
@@ -502,16 +502,16 @@
             "durationMinutes": 80,
             "images": [
               {
-                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
+                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/The_Milky_Way_above_the_Atacama_Desert.jpg/800px-The_Milky_Way_above_the_Atacama_Desert.jpg",
                 "caption": "Route 23 durch die Wüste",
                 "source": "Wikimedia Commons",
-                "license": "CC0"
+                "license": "CC BY-SA 4.0"
               },
               {
-                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
+                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/The_Milky_Way_above_the_Atacama_Desert.jpg/800px-The_Milky_Way_above_the_Atacama_Desert.jpg",
                 "caption": "Vulkan-Landschaft unterwegs",
                 "source": "Wikimedia Commons",
-                "license": "CC0"
+                "license": "CC BY-SA 4.0"
               }
             ]
           }
@@ -528,16 +528,16 @@
             "address": "San Pedro de Atacama, Región de Antofagasta",
             "images": [
               {
-                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
+                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Atardecer_en_la_valle_de_la_Luna.JPG/800px-Atardecer_en_la_valle_de_la_Luna.JPG",
                 "caption": "Platanen und Kirche an der Plaza",
                 "source": "Wikimedia Commons",
-                "license": "CC0"
+                "license": "CC BY-SA 4.0"
               },
               {
-                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
-                "caption": "Stimmungsbild aus Chile für die Travel Experience",
+                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Atardecer_en_la_valle_de_la_Luna.JPG/800px-Atardecer_en_la_valle_de_la_Luna.JPG",
+                "caption": "San Pedro de Atacama / Valle de la Luna",
                 "source": "Wikimedia Commons",
-                "license": "CC0"
+                "license": "CC BY-SA 4.0"
               }
             ]
           }
@@ -867,16 +867,16 @@
         "description": "Hochgelegene Lagunen, Flamingos und weite Salare – klassischer Altiplano-Tag.",
         "images": [
           {
-            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/The_Milky_Way_above_the_Atacama_Desert.jpg/800px-The_Milky_Way_above_the_Atacama_Desert.jpg",
             "caption": "Flamingos in der Morgensonne",
             "source": "Wikimedia Commons",
-            "license": "CC0"
+            "license": "CC BY-SA 4.0"
           },
           {
-            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/The_Milky_Way_above_the_Atacama_Desert.jpg/800px-The_Milky_Way_above_the_Atacama_Desert.jpg",
             "caption": "Lagune mit Vulkankegel",
             "source": "Wikimedia Commons",
-            "license": "CC0"
+            "license": "CC BY-SA 4.0"
           }
         ]
       },
@@ -902,16 +902,16 @@
             "durationMinutes": 540,
             "images": [
               {
-                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
+                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/The_Milky_Way_above_the_Atacama_Desert.jpg/800px-The_Milky_Way_above_the_Atacama_Desert.jpg",
                 "caption": "Minibus vor Andenkulisse",
                 "source": "Wikimedia Commons",
-                "license": "CC0"
+                "license": "CC BY-SA 4.0"
               },
               {
-                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
-                "caption": "Stimmungsbild aus Chile für die Travel Experience",
+                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/The_Milky_Way_above_the_Atacama_Desert.jpg/800px-The_Milky_Way_above_the_Atacama_Desert.jpg",
+                "caption": "Atacama Wüste",
                 "source": "Wikimedia Commons",
-                "license": "CC0"
+                "license": "CC BY-SA 4.0"
               }
             ]
           }
@@ -928,16 +928,16 @@
             "address": "Altiplano, Región de Antofagasta",
             "images": [
               {
-                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
+                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/The_Milky_Way_above_the_Atacama_Desert.jpg/800px-The_Milky_Way_above_the_Atacama_Desert.jpg",
                 "caption": "Blaue Lagune mit Bergen",
                 "source": "Wikimedia Commons",
-                "license": "CC0"
+                "license": "CC BY-SA 4.0"
               },
               {
-                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
-                "caption": "Stimmungsbild aus Chile für die Travel Experience",
+                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/The_Milky_Way_above_the_Atacama_Desert.jpg/800px-The_Milky_Way_above_the_Atacama_Desert.jpg",
+                "caption": "Atacama Wüste",
                 "source": "Wikimedia Commons",
-                "license": "CC0"
+                "license": "CC BY-SA 4.0"
               }
             ]
           }

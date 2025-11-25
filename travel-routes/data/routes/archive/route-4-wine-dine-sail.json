@@ -1,0 +1,396 @@
+{
+  "id": "route-4-wine-dine-sail",
+  "name": "Route 4 – Wine, Dine & Sail",
+  "title": "Route 4 – Wine, Dine & Sail",
+  "summary": "Genuss pur: Erst die besten Weine im Colchagua Tal, dann die entspannte Seereise und schließlich Patagonien 'light' auf einer Estancia.",
+  "color": "#8b5cf6",
+  "tags": [
+    "wine",
+    "culinary",
+    "relax",
+    "luxury"
+  ],
+  "meta": {
+    "theme": "Genuss & Natur",
+    "pace": "relaxed",
+    "durationDays": 14,
+    "costEstimate": 3500,
+    "highlights": [
+      "Weinverkostung im Colchagua Tal",
+      "Navimag Fährfahrt (Premium Kabine)",
+      "Estancia-Aufenthalt in Patagonien"
+    ],
+    "highlightImages": [
+      {
+        "title": "Weinberge Colchagua",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Vinedos_Santa_Cruz_Colchagua.jpg",
+        "caption": "Weinberge im Colchagua Tal.",
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 3.0"
+      },
+      {
+        "title": "Patagonische Estancia",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Guanaco_Torres_del_Paine.jpg",
+        "caption": "Traditionelle Estancia in der Pampa.",
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 2.0"
+      },
+      {
+        "title": "Fjordlandschaft",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/89/Seno_de_Reloncav%C3%AD.jpg",
+        "caption": "Entspannte Fahrt durch die Fjorde.",
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 3.0"
+      }
+    ],
+    "scores": {
+      "adventure": 2,
+      "relax": 5,
+      "culture": 4,
+      "photography": 4
+    }
+  },
+  "slider": {
+    "enabled": true,
+    "label": "Reiseverlauf"
+  },
+  "bookingLinks": {
+    "tripCom": "https://www.trip.com/hotels/list?city=30&checkin=2026-01-04&checkout=2026-01-18",
+    "airbnb": "https://www.airbnb.com/s/Chile/homes?checkin=2026-01-04&checkout=2026-01-18"
+  },
+  "transportVariants": {
+    "rentalCar": {
+      "description": "Mietwagen ab Santiago für die Weintour (Rückgabe Santiago oder Puerto Montt). In Patagonien Transfer zur Estancia.",
+      "costEstimateEUR": 800,
+      "pros": [
+        "Flexibel bei Weingütern",
+        "Kein Stress in Patagonien"
+      ],
+      "cons": [
+        "Einwegmiete wenn Rückgabe in Puerto Montt",
+        "Fahren nach Weinprobe schwierig"
+      ]
+    },
+    "publicTransport": {
+      "description": "Zug/Bus ins Weintal, geführte Touren zu Weingütern. Transfers in Patagonien.",
+      "costEstimateEUR": 500,
+      "pros": [
+        "Sicher nach Weinproben",
+        "Entspannt"
+      ],
+      "cons": [
+        "Weniger spontan",
+        "Abhängig von Tourzeiten"
+      ]
+    },
+    "mixed": {
+      "description": "Privater Fahrer für Weintour, Transfers in Patagonien.",
+      "costEstimateEUR": 1500,
+      "pros": [
+        "Maximaler Komfort",
+        "Exklusiv"
+      ],
+      "cons": [
+        "Teuerste Option"
+      ]
+    }
+  },
+  "days": [
+    {
+      "id": "r4-day-1",
+      "date": "2026-01-04",
+      "station": {
+        "name": "Colchagua Tal",
+        "description": "Ankunft im Herzen des chilenischen Weinbaus. Übernachtung auf einem Weingut.",
+        "coordinates": {
+          "lat": -34.5833,
+          "lng": -71.3667
+        },
+        "images": [],
+        "reason": "Weltklasse Weine und Entspannung."
+      },
+      "activities": [
+        {
+          "name": "Weintour & Verkostung",
+          "description": "Besuch eines Premium-Weinguts (z.B. Montes oder Lapostolle).",
+          "images": []
+        },
+        {
+          "name": "Fahrradtour durch die Reben",
+          "description": "Entspanntes Radeln von Weingut zu Weingut.",
+          "images": []
+        },
+        {
+          "name": "Museum von Colchagua",
+          "description": "Private Sammlung von Oldtimern und Artefakten.",
+          "images": []
+        },
+        {
+          "name": "Gourmet-Lunch",
+          "description": "Mittagessen mit Weinbegleitung.",
+          "images": []
+        },
+        {
+          "name": "Poolzeit",
+          "description": "Entspannung im Hotelgarten.",
+          "images": []
+        }
+      ],
+      "highlights": [
+        {
+          "title": "Weinberge",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Vinedos_en_el_Valle_de_Colchagua.jpg/800px-Vinedos_en_el_Valle_de_Colchagua.jpg"
+        },
+        {
+          "title": "Architektur",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Vinedos_en_el_Valle_de_Colchagua.jpg/800px-Vinedos_en_el_Valle_de_Colchagua.jpg"
+        },
+        {
+          "title": "Genuss",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Vinedos_en_el_Valle_de_Colchagua.jpg/800px-Vinedos_en_el_Valle_de_Colchagua.jpg"
+        }
+      ]
+    },
+    {
+      "id": "r4-day-2",
+      "date": "2026-01-06",
+      "station": {
+        "name": "Pichilemu & Punta de Lobos",
+        "description": "Fahrt an die Pazifikküste. Surfer-Vibe und raue Klippen.",
+        "coordinates": {
+          "lat": -34.3872,
+          "lng": -72.0056
+        },
+        "images": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Julio_Ibarra_practicando_surf.jpg/960px-Julio_Ibarra_practicando_surf.jpg",
+            "caption": "Julio Ibarra practicando surf",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution 3.0 cl"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Playa_Hermosa%2C_Pichilemu.jpg/960px-Playa_Hermosa%2C_Pichilemu.jpg",
+            "caption": "Playa Hermosa, Pichilemu",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution 2.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Surfer_at_Punta_de_Lobos_beach%2C_Pichilemu.jpg/960px-Surfer_at_Punta_de_Lobos_beach%2C_Pichilemu.jpg",
+            "caption": "Surfer at Punta de Lobos beach, Pichilemu",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 2.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Waves_at_Pichilemu_beach.jpg/960px-Waves_at_Pichilemu_beach.jpg",
+            "caption": "Waves at Pichilemu beach",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution 2.0"
+          }
+        ],
+        "reason": "Surfhauptstadt Chiles und spektakuläre Küste."
+      },
+      "activities": [
+        {
+          "name": "Punta de Lobos",
+          "description": "Spaziergang zu den berühmten Felsformationen.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Pichilemu_-_Cruz_en_Punta_de_Lobos_-_1.jpg/960px-Pichilemu_-_Cruz_en_Punta_de_Lobos_-_1.jpg",
+              "caption": "Pichilemu - Cruz en Punta de Lobos - 1",
+              "source": "Wikimedia Commons",
+              "license": "Creative Commons Attribution-Share Alike 4.0"
+            },
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Pichilemu_-_Cruz_en_Punta_de_Lobos_-_2.jpg/960px-Pichilemu_-_Cruz_en_Punta_de_Lobos_-_2.jpg",
+              "caption": "Pichilemu - Cruz en Punta de Lobos - 2",
+              "source": "Wikimedia Commons",
+              "license": "Creative Commons Attribution-Share Alike 4.0"
+            },
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Pichilemu_-_Cruz_en_Punta_de_Lobos_-_3.jpg/960px-Pichilemu_-_Cruz_en_Punta_de_Lobos_-_3.jpg",
+              "caption": "Pichilemu - Cruz en Punta de Lobos - 3",
+              "source": "Wikimedia Commons",
+              "license": "Creative Commons Attribution-Share Alike 4.0"
+            },
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Pichilemu_-_Cruz_en_Punta_de_Lobos_-_4.jpg/960px-Pichilemu_-_Cruz_en_Punta_de_Lobos_-_4.jpg",
+              "caption": "Pichilemu - Cruz en Punta de Lobos - 4",
+              "source": "Wikimedia Commons",
+              "license": "Creative Commons Attribution-Share Alike 4.0"
+            },
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Pichilemu_-_Cruz_en_Punta_de_Lobos_-_5.jpg/960px-Pichilemu_-_Cruz_en_Punta_de_Lobos_-_5.jpg",
+              "caption": "Pichilemu - Cruz en Punta de Lobos - 5",
+              "source": "Wikimedia Commons",
+              "license": "Creative Commons Attribution-Share Alike 4.0"
+            }
+          ]
+        },
+        {
+          "name": "Surfstunde (optional)",
+          "description": "Sich in die Wellen wagen oder den Profis zuschauen.",
+          "images": []
+        },
+        {
+          "name": "Cahuil Salinen",
+          "description": "Besuch der traditionellen Salzgewinnung.",
+          "images": []
+        },
+        {
+          "name": "Fisch essen am Strand",
+          "description": "Frischer Reineta direkt am Meer.",
+          "images": []
+        },
+        {
+          "name": "Sonnenuntergang über dem Pazifik",
+          "description": "Ein Muss in Pichilemu.",
+          "images": []
+        }
+      ],
+      "highlights": [
+        {
+          "title": "Punta de Lobos",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Punta_de_Lobos.jpg/800px-Punta_de_Lobos.jpg"
+        },
+        {
+          "title": "Surfer",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Punta_de_Lobos.jpg/800px-Punta_de_Lobos.jpg"
+        },
+        {
+          "title": "Salinen",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Punta_de_Lobos.jpg/800px-Punta_de_Lobos.jpg"
+        }
+      ]
+    },
+    {
+      "id": "r4-day-3",
+      "date": "2026-01-09",
+      "station": {
+        "name": "Puerto Montt & Navimag Boarding",
+        "description": "Fahrt/Bus nach Santiago, Flug nach Puerto Montt und Boarding.",
+        "coordinates": {
+          "lat": -41.4689,
+          "lng": -72.9411
+        },
+        "images": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/2007-12-20-MV-Evangelistas-Puerto-Natales.JPG/960px-2007-12-20-MV-Evangelistas-Puerto-Natales.JPG",
+            "caption": "2007-12-20-MV-Evangelistas-Puerto-Natales",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 3.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/2019-03-13_Office_of_NAVIMAG_Ferries_Patagonia%2C_Puerto_Natales%2C_Chile.jpg/960px-2019-03-13_Office_of_NAVIMAG_Ferries_Patagonia%2C_Puerto_Natales%2C_Chile.jpg",
+            "caption": "2019-03-13 Office of NAVIMAG Ferries Patagonia, Puerto Natales, Chile",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 4.0"
+          }
+        ],
+        "reason": "Start der Seereise."
+      },
+      "activities": [
+        {
+          "name": "Anreise Puerto Montt",
+          "description": "Via Santiago in den Süden.",
+          "images": []
+        },
+        {
+          "name": "Boarding Navimag",
+          "description": "Bezug der Kabine.",
+          "images": []
+        },
+        {
+          "name": "Ablegen",
+          "description": "Leinen los Richtung Patagonien.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/J28_042_Puerto_Fuy%2C_F%C3%A4hranleger.jpg/960px-J28_042_Puerto_Fuy%2C_F%C3%A4hranleger.jpg",
+              "caption": "J28 042 Puerto Fuy, Fähranleger",
+              "source": "Wikimedia Commons",
+              "license": "Creative Commons Attribution-Share Alike 4.0"
+            }
+          ]
+        },
+        {
+          "name": "Abendessen",
+          "description": "Buffet an Bord.",
+          "images": []
+        },
+        {
+          "name": "Erste Nacht auf See",
+          "description": "Sanftes Schaukeln in den Schlaf.",
+          "images": []
+        }
+      ],
+      "highlights": [
+        {
+          "title": "Fähre",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Puerto_Montt_-_Navimag_ferry_at_Angelmo.jpg"
+        },
+        {
+          "title": "Meer",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/8/89/Seno_de_Reloncav%C3%AD.jpg"
+        },
+        {
+          "title": "Abenteuer",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Puerto_Montt_-_Navimag_ferry_at_Angelmo.jpg"
+        }
+      ]
+    },
+    {
+      "id": "r4-day-4",
+      "date": "2026-01-12",
+      "station": {
+        "name": "Ankunft Puerto Natales",
+        "description": "Ankunft und Transfer zur Estancia.",
+        "coordinates": {
+          "lat": -51.7269,
+          "lng": -72.5068
+        },
+        "images": [],
+        "reason": "Das echte Patagonien erleben."
+      },
+      "activities": [
+        {
+          "name": "Ausschiffung",
+          "description": "Ankunft im Hafen.",
+          "images": []
+        },
+        {
+          "name": "Transfer zur Estancia",
+          "description": "Fahrt auf eine typische Schafsfarm.",
+          "images": []
+        },
+        {
+          "name": "Asado zum Abendessen",
+          "description": "Traditionelles Grillfest.",
+          "images": []
+        },
+        {
+          "name": "Reiten (optional)",
+          "description": "Ausreiten in die Pampa.",
+          "images": []
+        },
+        {
+          "name": "Kaminfeuer",
+          "description": "Gemütlicher Ausklang.",
+          "images": []
+        }
+      ],
+      "highlights": [
+        {
+          "title": "Estancia Leben",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Puerto_Natales_Costanera.jpg"
+        },
+        {
+          "title": "Asado",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Puerto_Natales_Costanera.jpg"
+        },
+        {
+          "title": "Weite",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Puerto_Natales_Costanera.jpg"
+        }
+      ]
+    }
+  ]
+}

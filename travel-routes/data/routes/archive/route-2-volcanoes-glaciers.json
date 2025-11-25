@@ -1,0 +1,759 @@
+{
+  "id": "route-2-volcanoes-glaciers",
+  "name": "Route 2 – Volcanoes to Glaciers",
+  "title": "Route 2 – Volcanoes to Glaciers",
+  "summary": "Vom rauchenden Vulkan Villarrica im grünen Seengebiet über die Fjorde bis zum mächtigen Perito Moreno Gletscher in Argentinien.",
+  "color": "#ef4444",
+  "tags": [
+    "volcanoes",
+    "glaciers",
+    "border-crossing",
+    "nature"
+  ],
+  "meta": {
+    "theme": "Feuer & Eis",
+    "pace": "active",
+    "durationDays": 15,
+    "costEstimate": 3100,
+    "highlights": [
+      "Vulkanbesteigung Villarrica (optional)",
+      "Navimag Fährfahrt",
+      "Gletscherwandern am Perito Moreno"
+    ],
+    "highlightImages": [
+      {
+        "title": "Vulkan Villarrica",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/5/58/Villarrica_Volcano_Chile.jpg",
+        "caption": "Der aktive Vulkan Villarrica überragt Pucón.",
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 2.0"
+      },
+      {
+        "title": "Perito Moreno Gletscher",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Perito_Moreno_Glacier_Patagonia_Argentina_Luca_Galuzzi_2005.JPG",
+        "caption": "Die gewaltige Eisfront des Perito Moreno Gletschers.",
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 2.5"
+      },
+      {
+        "title": "Osorno Vulkan & See",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/89/Seno_de_Reloncav%C3%AD.jpg",
+        "caption": "Blick auf den Osorno Vulkan vom Wasser aus.",
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 3.0"
+      }
+    ],
+    "scores": {
+      "adventure": 5,
+      "relax": 2,
+      "culture": 3,
+      "photography": 5
+    }
+  },
+  "slider": {
+    "enabled": true,
+    "label": "Reiseverlauf"
+  },
+  "bookingLinks": {
+    "tripCom": "https://www.trip.com/hotels/list?city=30&checkin=2026-01-04&checkout=2026-01-19",
+    "airbnb": "https://www.airbnb.com/s/Chile/homes?checkin=2026-01-04&checkout=2026-01-19"
+  },
+  "transportVariants": {
+    "rentalCar": {
+      "description": "Mietwagen in Pucón (Rückgabe Puerto Montt) und neuer Mietwagen in Puerto Natales für Argentinien-Trip (Grenzübertrittspapiere nötig!).",
+      "costEstimateEUR": 1300,
+      "pros": [
+        "Maximale Freiheit",
+        "Stopps an der Grenze möglich"
+      ],
+      "cons": [
+        "Grenzübertritt mit Mietwagen teuer/kompliziert",
+        "Zwei separate Mieten"
+      ]
+    },
+    "publicTransport": {
+      "description": "Busse verbinden Pucón-Puerto Montt und Puerto Natales-El Calafate sehr gut.",
+      "costEstimateEUR": 500,
+      "pros": [
+        "Einfacher Grenzübertritt (Busunternehmen regelt das)",
+        "Günstig"
+      ],
+      "cons": [
+        "Längere Wartezeiten an der Grenze",
+        "Gebunden an Fahrpläne"
+      ]
+    },
+    "mixed": {
+      "description": "Mietwagen im Seengebiet, Bus nach El Calafate.",
+      "costEstimateEUR": 900,
+      "pros": [
+        "Auto wo es sich lohnt (Seen)",
+        "Stressfrei über die Grenze"
+      ],
+      "cons": [
+        "Gepäcktransport im Bus"
+      ]
+    }
+  },
+  "days": [
+    {
+      "id": "r2-day-1",
+      "date": "2026-01-04",
+      "station": {
+        "name": "Ankunft in Pucón",
+        "description": "Das Outdoor-Mekka Chiles am Fuße des Vulkans Villarrica.",
+        "coordinates": {
+          "lat": -39.2822,
+          "lng": -71.9775
+        },
+        "images": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/5/58/Villarrica_Volcano_Chile.jpg",
+            "caption": "Pucón und der Vulkan",
+            "source": "Wikimedia Commons",
+            "license": "CC BY-SA 2.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Comercio_en_Puc%C3%B3n_de_noche.jpg/960px-Comercio_en_Puc%C3%B3n_de_noche.jpg",
+            "caption": "Comercio en Pucón de noche",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 3.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Gruta_pucon_general.jpg/960px-Gruta_pucon_general.jpg",
+            "caption": "Gruta pucon general",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Gruta_pucon_ii.jpg/960px-Gruta_pucon_ii.jpg",
+            "caption": "Gruta pucon ii",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Gruta_pucon_iii.jpg/960px-Gruta_pucon_iii.jpg",
+            "caption": "Gruta pucon iii",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/J25_048_Lago_Villarrica%2C_Hafenbucht_Puc%C3%B3n.jpg/960px-J25_048_Lago_Villarrica%2C_Hafenbucht_Puc%C3%B3n.jpg",
+            "caption": "J25 048 Lago Villarrica, Hafenbucht Pucón",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/J25_211_Puc%C3%B3n%2C_Volc%C3%A1n_Villarrica.jpg/960px-J25_211_Puc%C3%B3n%2C_Volc%C3%A1n_Villarrica.jpg",
+            "caption": "J25 211 Pucón, Volcán Villarrica",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/J25_212_Puc%C3%B3n%2C_Playa_Grande.jpg/960px-J25_212_Puc%C3%B3n%2C_Playa_Grande.jpg",
+            "caption": "J25 212 Pucón, Playa Grande",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/8/85/Pucon_Panarama.jpg",
+            "caption": "Pucon Panarama",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 3.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Pucon_Panorama.jpg/960px-Pucon_Panorama.jpg",
+            "caption": "Pucon Panorama",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 4.0"
+          }
+        ],
+        "reason": "Start im schönsten Teil des chilenischen Seengebiets."
+      },
+      "activities": [
+        {
+          "name": "Spaziergang am Seeufer",
+          "description": "Der schwarze Vulkansandstrand am Lago Villarrica.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/5/58/Villarrica_Volcano_Chile.jpg",
+              "caption": "Lago Villarrica",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 2.0"
+            }
+          ]
+        },
+        {
+          "name": "Ojos del Caburgua",
+          "description": "Türkisfarbene Wasserfälle im Wald.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Ojos_del_Caburgua.jpg",
+              "caption": "Ojos del Caburgua",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 3.0"
+            }
+          ]
+        },
+        {
+          "name": "Termas Geométricas",
+          "description": "Heiße Quellen in einer engen Schlucht - architektonisches Highlight.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Termas_Geometricas.jpg",
+              "caption": "Termas Geométricas",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 2.0"
+            }
+          ]
+        },
+        {
+          "name": "Vulkan-Trekking (Info)",
+          "description": "Informationen einholen für die mögliche Besteigung.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/5/58/Villarrica_Volcano_Chile.jpg",
+              "caption": "Vulkanaufstieg",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 2.0"
+            }
+          ]
+        },
+        {
+          "name": "Abendessen: Steak & Wein",
+          "description": "Pucón hat exzellente Restaurants.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/5/58/Villarrica_Volcano_Chile.jpg",
+              "caption": "Restaurant",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 2.0"
+            }
+          ]
+        }
+      ],
+      "highlights": [
+        {
+          "title": "Vulkan Villarrica",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/5/58/Villarrica_Volcano_Chile.jpg"
+        },
+        {
+          "title": "Heiße Quellen",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Termas_Geometricas.jpg"
+        },
+        {
+          "title": "Schwarze Strände",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/5/58/Villarrica_Volcano_Chile.jpg"
+        }
+      ]
+    },
+    {
+      "id": "r2-day-2",
+      "date": "2026-01-09",
+      "station": {
+        "name": "Puerto Montt & Navimag Boarding",
+        "description": "Transfer von Pucón nach Puerto Montt und Einschiffung.",
+        "coordinates": {
+          "lat": -41.4689,
+          "lng": -72.9411
+        },
+        "images": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Puerto_Montt_-_Navimag_ferry_at_Angelmo.jpg",
+            "caption": "Navimag Fähre",
+            "source": "Wikimedia Commons",
+            "license": "CC BY 2.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/2007-12-20-MV-Evangelistas-Puerto-Natales.JPG/960px-2007-12-20-MV-Evangelistas-Puerto-Natales.JPG",
+            "caption": "2007-12-20-MV-Evangelistas-Puerto-Natales",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 3.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/2019-03-13_Office_of_NAVIMAG_Ferries_Patagonia%2C_Puerto_Natales%2C_Chile.jpg/960px-2019-03-13_Office_of_NAVIMAG_Ferries_Patagonia%2C_Puerto_Natales%2C_Chile.jpg",
+            "caption": "2019-03-13 Office of NAVIMAG Ferries Patagonia, Puerto Natales, Chile",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 4.0"
+          }
+        ],
+        "reason": "Verbindungsetappe in den tiefen Süden."
+      },
+      "activities": [
+        {
+          "name": "Busfahrt Pucón-Puerto Montt",
+          "description": "Ca. 4 Stunden Fahrt durch grüne Wiesen und Wälder.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/8/89/Seno_de_Reloncav%C3%AD.jpg",
+              "caption": "Landschaft",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 3.0"
+            }
+          ]
+        },
+        {
+          "name": "Angelmo Markt Besuch",
+          "description": "Letzte Souvenirs und Wolle kaufen.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Angelmo_Puerto_Montt.jpg",
+              "caption": "Wollmarkt",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 3.0"
+            }
+          ]
+        },
+        {
+          "name": "Check-in Navimag",
+          "description": "Kabinenbezug.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Puerto_Montt_-_Navimag_ferry_at_Angelmo.jpg",
+              "caption": "Check-in",
+              "source": "Wikimedia Commons",
+              "license": "CC BY 2.0"
+            }
+          ]
+        },
+        {
+          "name": "Ablegen",
+          "description": "Abschied vom Festland.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Puerto_Montt_-_Navimag_ferry_at_Angelmo.jpg",
+              "caption": "Ablegen",
+              "source": "Wikimedia Commons",
+              "license": "CC BY 2.0"
+            }
+          ]
+        },
+        {
+          "name": "Abendessen an Bord",
+          "description": "Buffet in der Cafeteria.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Puerto_Montt_-_Navimag_ferry_at_Angelmo.jpg",
+              "caption": "Cafeteria",
+              "source": "Wikimedia Commons",
+              "license": "CC BY 2.0"
+            }
+          ]
+        }
+      ],
+      "highlights": [
+        {
+          "title": "Fahrt durchs Seengebiet",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/8/89/Seno_de_Reloncav%C3%AD.jpg"
+        },
+        {
+          "title": "Angelmo Markt",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Angelmo_Puerto_Montt.jpg"
+        },
+        {
+          "title": "Start der Seereise",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Puerto_Montt_-_Navimag_ferry_at_Angelmo.jpg"
+        }
+      ]
+    },
+    {
+      "id": "r2-day-3",
+      "date": "2026-01-12",
+      "station": {
+        "name": "Ankunft Puerto Natales",
+        "description": "Ankunft nach der Fährfahrt. Vorbereitung auf Argentinien.",
+        "coordinates": {
+          "lat": -51.7269,
+          "lng": -72.5068
+        },
+        "images": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Puerto_Natales_Costanera.jpg",
+            "caption": "Puerto Natales",
+            "source": "Wikimedia Commons",
+            "license": "CC BY-SA 3.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/2019-03-12_01_CNS_PUERTO_NATALES_LSG-1617_%E2%80%93_Puerto_Natales%2C_Chile.jpg/960px-2019-03-12_01_CNS_PUERTO_NATALES_LSG-1617_%E2%80%93_Puerto_Natales%2C_Chile.jpg",
+            "caption": "2019-03-12 01 CNS PUERTO NATALES LSG-1617 – Puerto Natales, Chile",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/2019-03-12_01_CRUX_AUSTRALIS_-_IMO_9471161_-_Puerto_Natales%2C_Chile.jpg/960px-2019-03-12_01_CRUX_AUSTRALIS_-_IMO_9471161_-_Puerto_Natales%2C_Chile.jpg",
+            "caption": "2019-03-12 01 CRUX AUSTRALIS - IMO 9471161 - Puerto Natales, Chile",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/2019-03-12_02_CNS_PUERTO_NATALES_LSG-1617_%E2%80%93_Puerto_Natales%2C_Chile.jpg/960px-2019-03-12_02_CNS_PUERTO_NATALES_LSG-1617_%E2%80%93_Puerto_Natales%2C_Chile.jpg",
+            "caption": "2019-03-12 02 CNS PUERTO NATALES LSG-1617 – Puerto Natales, Chile",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Cerro_Dorotea%2C_Puerto_Natales%2C_2019.jpg/960px-Cerro_Dorotea%2C_Puerto_Natales%2C_2019.jpg",
+            "caption": "Cerro Dorotea, Puerto Natales, 2019",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/IMG_1884Puerto_Natales.jpg/960px-IMG_1884Puerto_Natales.jpg",
+            "caption": "IMG 1884Puerto Natales",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 2.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Llegada_a_Puerto_Natales_%2840685046340%29.jpg/960px-Llegada_a_Puerto_Natales_%2840685046340%29.jpg",
+            "caption": "Llegada a Puerto Natales (40685046340)",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution 2.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Natales_rc_012.JPG",
+            "caption": "Natales rc 012",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution 3.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Puerto_Natales%2C_Chile1.jpg/960px-Puerto_Natales%2C_Chile1.jpg",
+            "caption": "Puerto Natales, Chile1",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 3.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Puerto_Natales%2C_amanece....jpg/960px-Puerto_Natales%2C_amanece....jpg",
+            "caption": "Puerto Natales, amanece",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 3.0"
+          }
+        ],
+        "reason": "Zwischenstopp vor dem Grenzübertritt."
+      },
+      "activities": [
+        {
+          "name": "Ausschiffung",
+          "description": "Ankunft und Transfer.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Puerto_Natales_Costanera.jpg",
+              "caption": "Hafen",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 3.0"
+            }
+          ]
+        },
+        {
+          "name": "Bus-Ticket Kauf",
+          "description": "Tickets nach El Calafate besorgen (falls nicht online gebucht).",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Puerto_Natales_Costanera.jpg",
+              "caption": "Busbahnhof",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 3.0"
+            }
+          ]
+        },
+        {
+          "name": "Geldwechsel",
+          "description": "Chilenische Pesos in Argentinische Pesos tauschen (oder USD mitnehmen).",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Puerto_Natales_Costanera.jpg",
+              "caption": "Wechselstube",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 3.0"
+            }
+          ]
+        },
+        {
+          "name": "Entspannung im Spa",
+          "description": "Viele Hotels bieten Wellness nach der Fährfahrt.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Puerto_Natales_Costanera.jpg",
+              "caption": "Spa",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 3.0"
+            }
+          ]
+        },
+        {
+          "name": "Pizza essen",
+          "description": "Die 'Mesita Grande' ist berühmt für Pizza.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Puerto_Natales_Costanera.jpg",
+              "caption": "Pizza",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 3.0"
+            }
+          ]
+        }
+      ],
+      "highlights": [
+        {
+          "title": "Fjordblick",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Puerto_Natales_Costanera.jpg"
+        },
+        {
+          "title": "Gemütliche Stadt",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Puerto_Natales_Costanera.jpg"
+        },
+        {
+          "title": "Vorbereitung Argentinien",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Puerto_Natales_Costanera.jpg"
+        }
+      ]
+    },
+    {
+      "id": "r2-day-4",
+      "date": "2026-01-13",
+      "station": {
+        "name": "Fahrt nach El Calafate (ARG)",
+        "description": "Grenzübertritt in die argentinische Pampa. Ziel: Die Gletscherstadt El Calafate.",
+        "coordinates": {
+          "lat": -50.3379,
+          "lng": -72.2648
+        },
+        "images": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Perito_Moreno_Glacier_Patagonia_Argentina_Luca_Galuzzi_2005.JPG",
+            "caption": "Richtung Gletscher",
+            "source": "Wikimedia Commons",
+            "license": "CC BY-SA 2.5"
+          }
+        ],
+        "reason": "Der Weg zum berühmtesten Gletscher Südamerikas."
+      },
+      "activities": [
+        {
+          "name": "Busfahrt durch die Pampa",
+          "description": "Ca. 5-6 Stunden Fahrt mit Grenzformalitäten.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Guanaco_Torres_del_Paine.jpg",
+              "caption": "Pampa",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 2.0"
+            }
+          ]
+        },
+        {
+          "name": "Grenzübertritt",
+          "description": "Ausreise Chile, Einreise Argentinien.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Guanaco_Torres_del_Paine.jpg",
+              "caption": "Grenze",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 2.0"
+            }
+          ]
+        },
+        {
+          "name": "Ankunft El Calafate",
+          "description": "Check-in im Hotel.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Perito_Moreno_Glacier_Patagonia_Argentina_Luca_Galuzzi_2005.JPG",
+              "caption": "El Calafate",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 2.5"
+            }
+          ]
+        },
+        {
+          "name": "Laguna Nimez",
+          "description": "Vogelreservat direkt am Lago Argentino (Flamingos!).",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Perito_Moreno_Glacier_Patagonia_Argentina_Luca_Galuzzi_2005.JPG",
+              "caption": "Laguna Nimez",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 2.5"
+            }
+          ]
+        },
+        {
+          "name": "Argentinisches Steak",
+          "description": "Pflichtprogramm in Argentinien: Ein gutes Asado.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Perito_Moreno_Glacier_Patagonia_Argentina_Luca_Galuzzi_2005.JPG",
+              "caption": "Asado",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 2.5"
+            }
+          ]
+        }
+      ],
+      "highlights": [
+        {
+          "title": "Endlose Pampa",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Guanaco_Torres_del_Paine.jpg"
+        },
+        {
+          "title": "Flamingos",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Perito_Moreno_Glacier_Patagonia_Argentina_Luca_Galuzzi_2005.JPG"
+        },
+        {
+          "title": "Steak Dinner",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Perito_Moreno_Glacier_Patagonia_Argentina_Luca_Galuzzi_2005.JPG"
+        }
+      ]
+    },
+    {
+      "id": "r2-day-5",
+      "date": "2026-01-14",
+      "station": {
+        "name": "Perito Moreno Gletscher",
+        "description": "Tagesausflug zum Gletscher. Beobachtung des kalbenden Eises von den Stegen aus.",
+        "coordinates": {
+          "lat": -50.4705,
+          "lng": -73.0431
+        },
+        "images": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Perito_Moreno_Glacier_Patagonia_Argentina_Luca_Galuzzi_2005.JPG",
+            "caption": "Perito Moreno",
+            "source": "Wikimedia Commons",
+            "license": "CC BY-SA 2.5"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Glaciar_Perito_Moreno14_-_Argentina.JPG/960px-Glaciar_Perito_Moreno14_-_Argentina.JPG",
+            "caption": "Glaciar Perito Moreno14 - Argentina",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 3.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Glaciar_Perito_Moreno15_-_Argentina.JPG/960px-Glaciar_Perito_Moreno15_-_Argentina.JPG",
+            "caption": "Glaciar Perito Moreno15 - Argentina",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 3.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Glaciar_Perito_Moreno16_-_Argentina.JPG/960px-Glaciar_Perito_Moreno16_-_Argentina.JPG",
+            "caption": "Glaciar Perito Moreno16 - Argentina",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 3.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Glaciar_Perito_Moreno17_-_Argentina.JPG/960px-Glaciar_Perito_Moreno17_-_Argentina.JPG",
+            "caption": "Glaciar Perito Moreno17 - Argentina",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 3.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Glaciar_Perito_Moreno1_-_Argentina.JPG/960px-Glaciar_Perito_Moreno1_-_Argentina.JPG",
+            "caption": "Glaciar Perito Moreno1 - Argentina",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 3.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Glaciar_Perito_Moreno22_-_Argentina.JPG/960px-Glaciar_Perito_Moreno22_-_Argentina.JPG",
+            "caption": "Glaciar Perito Moreno22 - Argentina",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 3.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Glaciar_Perito_Moreno26_-_Argentina.JPG/960px-Glaciar_Perito_Moreno26_-_Argentina.JPG",
+            "caption": "Glaciar Perito Moreno26 - Argentina",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 3.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Glaciar_Perito_Moreno4_-_Argentina.JPG/960px-Glaciar_Perito_Moreno4_-_Argentina.JPG",
+            "caption": "Glaciar Perito Moreno4 - Argentina",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 3.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Glaciar_Perito_Moreno5_-_Argentina.JPG/960px-Glaciar_Perito_Moreno5_-_Argentina.JPG",
+            "caption": "Glaciar Perito Moreno5 - Argentina",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 3.0"
+          }
+        ],
+        "reason": "Ein Weltnaturwunder, das man gesehen haben muss."
+      },
+      "activities": [
+        {
+          "name": "Fahrt zum Nationalpark",
+          "description": "Ca. 80km Fahrt entlang des Lago Argentino.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Perito_Moreno_Glacier_Patagonia_Argentina_Luca_Galuzzi_2005.JPG",
+              "caption": "Anfahrt",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 2.5"
+            }
+          ]
+        },
+        {
+          "name": "Die Stege (Pasarelas)",
+          "description": "Wanderung auf den Stegen direkt vor der Gletscherfront.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Perito_Moreno_Glacier_Patagonia_Argentina_Luca_Galuzzi_2005.JPG",
+              "caption": "Stege",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 2.5"
+            }
+          ]
+        },
+        {
+          "name": "Bootsfahrt (Safari Náutico)",
+          "description": "Mit dem Boot nah an die Eiswand heranfahren.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Perito_Moreno_Glacier_Patagonia_Argentina_Luca_Galuzzi_2005.JPG",
+              "caption": "Boot",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 2.5"
+            }
+          ]
+        },
+        {
+          "name": "Eis-Trekking (Optional)",
+          "description": "Geführte Wanderung auf dem Gletscher (Mini-Trekking).",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Perito_Moreno_Glacier_Patagonia_Argentina_Luca_Galuzzi_2005.JPG",
+              "caption": "Eistrekking",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 2.5"
+            }
+          ]
+        },
+        {
+          "name": "Rückfahrt & Entspannung",
+          "description": "Rückkehr nach El Calafate.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Perito_Moreno_Glacier_Patagonia_Argentina_Luca_Galuzzi_2005.JPG",
+              "caption": "Rückfahrt",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 2.5"
+            }
+          ]
+        }
+      ],
+      "highlights": [
+        {
+          "title": "Kalbendes Eis",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Perito_Moreno_Glacier_Patagonia_Argentina_Luca_Galuzzi_2005.JPG"
+        },
+        {
+          "title": "Blaue Eiswände",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Perito_Moreno_Glacier_Patagonia_Argentina_Luca_Galuzzi_2005.JPG"
+        },
+        {
+          "title": "Bootsfahrt",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Perito_Moreno_Glacier_Patagonia_Argentina_Luca_Galuzzi_2005.JPG"
+        }
+      ]
+    }
+  ]
+}

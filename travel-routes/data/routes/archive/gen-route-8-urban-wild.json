@@ -1,0 +1,634 @@
+[
+    {
+        "id": "gen-route-8-urban-wild",
+        "title": "Route 18 – Stadt & Wildnis",
+        "summary": "Metropole Santiago trifft auf die wilden Anden im Cajón del Maipo. Kultur und Trekking kombiniert.",
+        "meta": {
+            "theme": "Culture & Nature",
+            "pace": "moderate",
+            "durationDays": 7,
+            "costEstimate": 2072,
+            "highlights": [
+                "Besuch in Santiago",
+                "Besuch in Cajón del Maipo",
+                "Besuch in Embalse El Yeso"
+            ],
+            "highlightImages": [
+                {
+                    "title": "Route 18 – Stadt & Wildnis",
+                    "image": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1200&auto=format&fit=crop",
+                    "caption": "Metropole Santiago trifft auf die wilden Anden im Cajón del Maipo. Kultur und Trekking kombiniert.",
+                    "source": "Unsplash",
+                    "license": "Unsplash License"
+                }
+            ],
+            "scores": {
+                "budget": 3,
+                "adventure": 2,
+                "relax": 2,
+                "culture": 3
+            }
+        },
+        "days": [
+            {
+                "id": "day-1",
+                "date": "2025-11-01",
+                "station": {
+                    "name": "Santiago",
+                    "description": "Aufenthalt in Santiago. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Santiago"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": []
+                }
+            },
+            {
+                "id": "day-2",
+                "date": "2025-11-03",
+                "station": {
+                    "name": "Cajón del Maipo",
+                    "description": "Aufenthalt in Cajón del Maipo. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Cajón del Maipo"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": [
+                        {
+                            "mode": "bus",
+                            "from": {
+                                "name": "Santiago"
+                            },
+                            "to": {
+                                "name": "Cajón del Maipo"
+                            },
+                            "durationMinutes": 399,
+                            "variants": [
+                                {
+                                    "id": "var-bus-5227",
+                                    "mode": "bus",
+                                    "description": "Linienbus von Santiago nach Cajón del Maipo. Günstig und zuverlässig.",
+                                    "durationMinutes": 399,
+                                    "cost": 15,
+                                    "co2": 16.650000000000002
+                                },
+                                {
+                                    "id": "var-car-5173",
+                                    "mode": "drive",
+                                    "description": "Mietwagen-Etappe. Freiheit für Fotostopps entlang der Route.",
+                                    "durationMinutes": 333,
+                                    "cost": 96,
+                                    "co2": 63.27
+                                },
+                                {
+                                    "id": "var-transfer-6934",
+                                    "mode": "drive",
+                                    "description": "Privater Transfer mit lokalem Driver-Guide. Entspannt zurücklehnen.",
+                                    "durationMinutes": 333,
+                                    "cost": 175,
+                                    "co2": 83.25
+                                },
+                                {
+                                    "id": "var-hitch-5589",
+                                    "mode": "drive",
+                                    "description": "Mitfahrgelegenheit oder Colectivo. Die lokale Art zu reisen.",
+                                    "durationMinutes": 499,
+                                    "cost": 5,
+                                    "co2": 33.300000000000004
+                                },
+                                {
+                                    "id": "var-flight-8358",
+                                    "mode": "flight",
+                                    "description": "Inlandsflug für maximale Zeitersparnis.",
+                                    "durationMinutes": 107,
+                                    "cost": 99,
+                                    "co2": 93.24000000000001
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "day-3",
+                "date": "2025-11-05",
+                "station": {
+                    "name": "Embalse El Yeso",
+                    "description": "Aufenthalt in Embalse El Yeso. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Embalse El Yeso"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": [
+                        {
+                            "mode": "bus",
+                            "from": {
+                                "name": "Cajón del Maipo"
+                            },
+                            "to": {
+                                "name": "Embalse El Yeso"
+                            },
+                            "durationMinutes": 201,
+                            "variants": [
+                                {
+                                    "id": "var-bus-2669",
+                                    "mode": "bus",
+                                    "description": "Linienbus von Cajón del Maipo nach Embalse El Yeso. Günstig und zuverlässig.",
+                                    "durationMinutes": 201,
+                                    "cost": 23,
+                                    "co2": 8.4
+                                },
+                                {
+                                    "id": "var-car-9459",
+                                    "mode": "drive",
+                                    "description": "Mietwagen-Etappe. Freiheit für Fotostopps entlang der Route.",
+                                    "durationMinutes": 168,
+                                    "cost": 80,
+                                    "co2": 31.92
+                                },
+                                {
+                                    "id": "var-transfer-9685",
+                                    "mode": "drive",
+                                    "description": "Privater Transfer mit lokalem Driver-Guide. Entspannt zurücklehnen.",
+                                    "durationMinutes": 168,
+                                    "cost": 243,
+                                    "co2": 42.0
+                                },
+                                {
+                                    "id": "var-hitch-4106",
+                                    "mode": "drive",
+                                    "description": "Mitfahrgelegenheit oder Colectivo. Die lokale Art zu reisen.",
+                                    "durationMinutes": 252,
+                                    "cost": 5,
+                                    "co2": 16.8
+                                },
+                                {
+                                    "id": "var-bus-prem-6391",
+                                    "mode": "bus",
+                                    "description": "Premium 'Salon Cama' Bus. Fast wie Business Class.",
+                                    "durationMinutes": 201,
+                                    "cost": 51,
+                                    "co2": 8.4
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "day-4",
+                "date": "2025-11-07",
+                "station": {
+                    "name": "Valparaíso",
+                    "description": "Aufenthalt in Valparaíso. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Valparaíso"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": [
+                        {
+                            "mode": "bus",
+                            "from": {
+                                "name": "Embalse El Yeso"
+                            },
+                            "to": {
+                                "name": "Valparaíso"
+                            },
+                            "durationMinutes": 255,
+                            "variants": [
+                                {
+                                    "id": "var-bus-7899",
+                                    "mode": "bus",
+                                    "description": "Linienbus von Embalse El Yeso nach Valparaíso. Günstig und zuverlässig.",
+                                    "durationMinutes": 255,
+                                    "cost": 28,
+                                    "co2": 10.65
+                                },
+                                {
+                                    "id": "var-car-4344",
+                                    "mode": "drive",
+                                    "description": "Mietwagen-Etappe. Freiheit für Fotostopps entlang der Route.",
+                                    "durationMinutes": 213,
+                                    "cost": 69,
+                                    "co2": 40.47
+                                },
+                                {
+                                    "id": "var-transfer-5960",
+                                    "mode": "drive",
+                                    "description": "Privater Transfer mit lokalem Driver-Guide. Entspannt zurücklehnen.",
+                                    "durationMinutes": 213,
+                                    "cost": 120,
+                                    "co2": 53.25
+                                },
+                                {
+                                    "id": "var-hitch-6232",
+                                    "mode": "drive",
+                                    "description": "Mitfahrgelegenheit oder Colectivo. Die lokale Art zu reisen.",
+                                    "durationMinutes": 319,
+                                    "cost": 11,
+                                    "co2": 21.3
+                                },
+                                {
+                                    "id": "var-bus-prem-8026",
+                                    "mode": "bus",
+                                    "description": "Premium 'Salon Cama' Bus. Fast wie Business Class.",
+                                    "durationMinutes": 255,
+                                    "cost": 48,
+                                    "co2": 10.65
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "day-5",
+                "date": "2025-11-09",
+                "station": {
+                    "name": "Viña del Mar",
+                    "description": "Aufenthalt in Viña del Mar. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Viña del Mar"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": [
+                        {
+                            "mode": "bus",
+                            "from": {
+                                "name": "Valparaíso"
+                            },
+                            "to": {
+                                "name": "Viña del Mar"
+                            },
+                            "durationMinutes": 208,
+                            "variants": [
+                                {
+                                    "id": "var-bus-3460",
+                                    "mode": "bus",
+                                    "description": "Linienbus von Valparaíso nach Viña del Mar. Günstig und zuverlässig.",
+                                    "durationMinutes": 208,
+                                    "cost": 30,
+                                    "co2": 8.700000000000001
+                                },
+                                {
+                                    "id": "var-car-5286",
+                                    "mode": "drive",
+                                    "description": "Mietwagen-Etappe. Freiheit für Fotostopps entlang der Route.",
+                                    "durationMinutes": 174,
+                                    "cost": 88,
+                                    "co2": 33.06
+                                },
+                                {
+                                    "id": "var-transfer-9309",
+                                    "mode": "drive",
+                                    "description": "Privater Transfer mit lokalem Driver-Guide. Entspannt zurücklehnen.",
+                                    "durationMinutes": 174,
+                                    "cost": 213,
+                                    "co2": 43.5
+                                },
+                                {
+                                    "id": "var-hitch-9456",
+                                    "mode": "drive",
+                                    "description": "Mitfahrgelegenheit oder Colectivo. Die lokale Art zu reisen.",
+                                    "durationMinutes": 261,
+                                    "cost": 20,
+                                    "co2": 17.400000000000002
+                                },
+                                {
+                                    "id": "var-bus-prem-2491",
+                                    "mode": "bus",
+                                    "description": "Premium 'Salon Cama' Bus. Fast wie Business Class.",
+                                    "durationMinutes": 208,
+                                    "cost": 28,
+                                    "co2": 8.700000000000001
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ],
+        "lodging": [
+            {
+                "id": "lodging-67473",
+                "stopId": "santiago",
+                "name": "Hotel Santiago Backpacker",
+                "nights": 2,
+                "avgNightlyRateEUR": 59,
+                "amenities": [
+                    "Küche",
+                    "WLAN",
+                    "Touren"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=439",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hotel Santiago Backpacker",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-45485",
+                "stopId": "santiago",
+                "name": "Airbnb Santiago View",
+                "nights": 3,
+                "avgNightlyRateEUR": 80,
+                "amenities": [
+                    "Garten",
+                    "WLAN",
+                    "Küche"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=886",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Airbnb Santiago View",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-82562",
+                "stopId": "santiago",
+                "name": "Camping Santiago Central",
+                "nights": 3,
+                "avgNightlyRateEUR": 14,
+                "amenities": [
+                    "Touren",
+                    "WLAN",
+                    "Bar"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=413",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Camping Santiago Central",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-77306",
+                "stopId": "cajón-del-maipo",
+                "name": "Hotel Cajón del Maipo View",
+                "nights": 2,
+                "avgNightlyRateEUR": 89,
+                "amenities": [
+                    "Küche",
+                    "Garten",
+                    "WLAN"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=396",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hotel Cajón del Maipo View",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-71328",
+                "stopId": "cajón-del-maipo",
+                "name": "Hotel Cajón del Maipo Central",
+                "nights": 1,
+                "avgNightlyRateEUR": 76,
+                "amenities": [
+                    "Garten",
+                    "Touren",
+                    "Frühstück"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=504",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hotel Cajón del Maipo Central",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-41163",
+                "stopId": "cajón-del-maipo",
+                "name": "Hotel Cajón del Maipo Oasis",
+                "nights": 3,
+                "avgNightlyRateEUR": 87,
+                "amenities": [
+                    "WLAN",
+                    "Touren",
+                    "Frühstück"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=495",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hotel Cajón del Maipo Oasis",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-14287",
+                "stopId": "embalse-el-yeso",
+                "name": "Hotel Embalse El Yeso Garden",
+                "nights": 3,
+                "avgNightlyRateEUR": 58,
+                "amenities": [
+                    "Garten",
+                    "Frühstück",
+                    "Touren"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=896",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hotel Embalse El Yeso Garden",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-57666",
+                "stopId": "embalse-el-yeso",
+                "name": "Hostel Embalse El Yeso Garden",
+                "nights": 2,
+                "avgNightlyRateEUR": 23,
+                "amenities": [
+                    "Bar",
+                    "Touren",
+                    "Garten"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=129",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hostel Embalse El Yeso Garden",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-37459",
+                "stopId": "embalse-el-yeso",
+                "name": "Airbnb Embalse El Yeso Backpacker",
+                "nights": 2,
+                "avgNightlyRateEUR": 56,
+                "amenities": [
+                    "Frühstück",
+                    "Garten",
+                    "WLAN"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=540",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Airbnb Embalse El Yeso Backpacker",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-97561",
+                "stopId": "valparaíso",
+                "name": "Hostel Valparaíso Oasis",
+                "nights": 3,
+                "avgNightlyRateEUR": 23,
+                "amenities": [
+                    "Frühstück",
+                    "Garten",
+                    "Küche"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=943",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hostel Valparaíso Oasis",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-50233",
+                "stopId": "valparaíso",
+                "name": "Camping Valparaíso Backpacker",
+                "nights": 1,
+                "avgNightlyRateEUR": 16,
+                "amenities": [
+                    "WLAN",
+                    "Garten",
+                    "Touren"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=927",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Camping Valparaíso Backpacker",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-68100",
+                "stopId": "valparaíso",
+                "name": "Hotel Valparaíso Garden",
+                "nights": 2,
+                "avgNightlyRateEUR": 87,
+                "amenities": [
+                    "Garten",
+                    "WLAN",
+                    "Frühstück"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=281",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hotel Valparaíso Garden",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-20509",
+                "stopId": "viña-del-mar",
+                "name": "Camping Viña del Mar Oasis",
+                "nights": 2,
+                "avgNightlyRateEUR": 15,
+                "amenities": [
+                    "WLAN",
+                    "Küche",
+                    "Frühstück"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=560",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Camping Viña del Mar Oasis",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-24597",
+                "stopId": "viña-del-mar",
+                "name": "Guesthouse Viña del Mar Backpacker",
+                "nights": 1,
+                "avgNightlyRateEUR": 54,
+                "amenities": [
+                    "Garten",
+                    "Frühstück",
+                    "Bar"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=225",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Guesthouse Viña del Mar Backpacker",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-72598",
+                "stopId": "viña-del-mar",
+                "name": "Hotel Viña del Mar Garden",
+                "nights": 2,
+                "avgNightlyRateEUR": 46,
+                "amenities": [
+                    "WLAN",
+                    "Frühstück",
+                    "Küche"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=436",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hotel Viña del Mar Garden",
+                        "license": "Unsplash License"
+                    }
+                ]
+            }
+        ]
+    }
+]

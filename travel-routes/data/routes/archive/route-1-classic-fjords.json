@@ -1,0 +1,820 @@
+{
+  "id": "route-1-classic-fjords",
+  "name": "Route 1 – The Classic Fjord Explorer",
+  "title": "Route 1 – The Classic Fjord Explorer",
+  "summary": "Vom urbanen Santiago über die wilde Fjordlandschaft Patagoniens bis zu den Türmen des Paine-Massivs. Das Herzstück: Die Fährfahrt mit der Navimag.",
+  "color": "#3b82f6",
+  "tags": [
+    "nature",
+    "ferry",
+    "hiking",
+    "photography"
+  ],
+  "meta": {
+    "theme": "Fjorde, Gletscher & Pampa",
+    "pace": "balanced",
+    "durationDays": 14,
+    "costEstimate": 2800,
+    "highlights": [
+      "Navimag Fährfahrt durch die Patagonischen Kanäle",
+      "Sonnenaufgang an den Torres del Paine",
+      "Pinguinkolonie auf der Isla Magdalena"
+    ],
+    "highlightImages": [
+      {
+        "title": "Navimag Fähre in den Fjorden",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Puerto_Montt_-_Navimag_ferry_at_Angelmo.jpg",
+        "caption": "Die Navimag Fähre im Hafen von Puerto Montt, bereit für die Reise in den Süden.",
+        "source": "Wikimedia Commons",
+        "license": "CC BY 2.0"
+      },
+      {
+        "title": "Torres del Paine",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Torres_del_Paine_National_Park_-_Patagonia_-_Chile.jpg",
+        "caption": "Die ikonischen Granittürme des Torres del Paine Nationalparks.",
+        "source": "Wikimedia Commons",
+        "license": "CC BY 2.0"
+      },
+      {
+        "title": "Magellan-Pinguine",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/07/Magellanic_Penguin_at_Magdalena_Island%2C_Chile.jpg",
+        "caption": "Magellan-Pinguine auf der Isla Magdalena.",
+        "source": "Wikimedia Commons",
+        "license": "CC BY-SA 3.0"
+      }
+    ],
+    "scores": {
+      "adventure": 4,
+      "relax": 3,
+      "culture": 3,
+      "photography": 5
+    }
+  },
+  "slider": {
+    "enabled": true,
+    "label": "Reiseverlauf"
+  },
+  "bookingLinks": {
+    "tripCom": "https://www.trip.com/hotels/list?city=30&checkin=2026-01-05&checkout=2026-01-19",
+    "airbnb": "https://www.airbnb.com/s/Chile/homes?checkin=2026-01-05&checkout=2026-01-19"
+  },
+  "transportVariants": {
+    "rentalCar": {
+      "description": "Mietwagen ab/bis Punta Arenas für den Patagonien-Teil. In Santiago und auf der Fähre kein Auto nötig.",
+      "costEstimateEUR": 900,
+      "pros": [
+        "Flexibilität im Nationalpark",
+        "Unabhängigkeit von Busfahrplänen"
+      ],
+      "cons": [
+        "Hohe Einwegmietgebühr wenn Abgabe woanders",
+        "Parkplatzsuche in Städten"
+      ]
+    },
+    "publicTransport": {
+      "description": "Busse in Patagonien sind sehr zuverlässig und komfortabel. Ideal für Solo-Reisende.",
+      "costEstimateEUR": 400,
+      "pros": [
+        "Günstig",
+        "Entspanntes Reisen",
+        "Kein Stress mit Navigation"
+      ],
+      "cons": [
+        "Weniger flexibel bei Fotostopps",
+        "Feste Fahrpläne"
+      ]
+    },
+    "mixed": {
+      "description": "Uber/Taxi in Santiago, Fähre, dann Mietwagen für 3 Tage Torres del Paine, Bus nach Punta Arenas.",
+      "costEstimateEUR": 750,
+      "pros": [
+        "Bester Kompromiss",
+        "Auto nur wenn wirklich nötig"
+      ],
+      "cons": [
+        "Mehrere Buchungen nötig"
+      ]
+    }
+  },
+  "days": [
+    {
+      "id": "r1-day-1",
+      "date": "2026-01-05",
+      "station": {
+        "name": "Santiago de Chile",
+        "description": "Ankunft in der Hauptstadt. Akklimatisieren, erste Pisco Sours und den Blick auf die Anden genießen.",
+        "coordinates": {
+          "lat": -33.4489,
+          "lng": -70.6693
+        },
+        "images": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Santiago_de_Chile_desde_el_cerro_San_Cristobal.jpg",
+            "caption": "Blick vom San Cristóbal auf Santiago",
+            "source": "Wikimedia Commons",
+            "license": "CC BY-SA 3.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Edificios_en_Santiago_de_Chile_II.jpg/960px-Edificios_en_Santiago_de_Chile_II.jpg",
+            "caption": "Edificios en Santiago de Chile II",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Konstruktionsdetail_der_Markthalle_von_Santiago_de_Chile.jpg/960px-Konstruktionsdetail_der_Markthalle_von_Santiago_de_Chile.jpg",
+            "caption": "Konstruktionsdetail der Markthalle von Santiago de Chile",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution 3.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Mural_en_Santiago%2C_Chile_A74003020250517.jpg/960px-Mural_en_Santiago%2C_Chile_A74003020250517.jpg",
+            "caption": "Mural en Santiago, Chile A74003020250517",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Mural_en_Santiago%2C_Chile_A74003220250517.jpg/960px-Mural_en_Santiago%2C_Chile_A74003220250517.jpg",
+            "caption": "Mural en Santiago, Chile A74003220250517",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Mural_en_Santiago%2C_Chile_A74003520250517.jpg/960px-Mural_en_Santiago%2C_Chile_A74003520250517.jpg",
+            "caption": "Mural en Santiago, Chile A74003520250517",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mural_en_Santiago%2C_Chile_A74005720250525.jpg/960px-Mural_en_Santiago%2C_Chile_A74005720250525.jpg",
+            "caption": "Mural en Santiago, Chile A74005720250525",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Mural_en_Santiago%2C_Chile_A74005820250525.jpg/960px-Mural_en_Santiago%2C_Chile_A74005820250525.jpg",
+            "caption": "Mural en Santiago, Chile A74005820250525",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Mural_en_Santiago_de_Chile_-_A74025520231223.jpg/960px-Mural_en_Santiago_de_Chile_-_A74025520231223.jpg",
+            "caption": "Mural en Santiago de Chile - A74025520231223",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Mural_en_Santiago_de_Chile_-_A74025720231223.jpg/960px-Mural_en_Santiago_de_Chile_-_A74025720231223.jpg",
+            "caption": "Mural en Santiago de Chile - A74025720231223",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Biblioteca_de_la_Facultad_de_Medicina%2C_Universidad_de_Chile%2C_Independencia%2C_Santiago_20220529.jpg/960px-Biblioteca_de_la_Facultad_de_Medicina%2C_Universidad_de_Chile%2C_Independencia%2C_Santiago_20220529.jpg",
+            "caption": "Biblioteca de la Facultad de Medicina, Universidad de Chile, Independencia, Santiago 20220529",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Bike_Santiago-Plaza_de_Armas_%28cropped%29.tif/lossless-page1-800px-Bike_Santiago-Plaza_de_Armas_%28cropped%29.tif.png",
+            "caption": "Bike Santiago-Plaza de Armas (cropped)",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Facultad_de_Gobierno_Universidad_de_Chile%2C_Santiago_20230417.jpg/960px-Facultad_de_Gobierno_Universidad_de_Chile%2C_Santiago_20230417.jpg",
+            "caption": "Facultad de Gobierno Universidad de Chile, Santiago 20230417",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Manifestaciones_y_Disturbios_I%2C_Santiago._Chile.jpg/960px-Manifestaciones_y_Disturbios_I%2C_Santiago._Chile.jpg",
+            "caption": "Manifestaciones y Disturbios I, Santiago",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Mural_en_Santiago%2CChile_A74190920240728.jpg/960px-Mural_en_Santiago%2CChile_A74190920240728.jpg",
+            "caption": "Mural en Santiago,Chile A74190920240728",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Mural_en_Santiago%2CChile_A74191120240728.jpg/960px-Mural_en_Santiago%2CChile_A74191120240728.jpg",
+            "caption": "Mural en Santiago,Chile A74191120240728",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Mural_en_Santiago%2CChile_A74191520240728.jpg/960px-Mural_en_Santiago%2CChile_A74191520240728.jpg",
+            "caption": "Mural en Santiago,Chile A74191520240728",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Mural_en_Santiago%2C_Chile_-_A7400613.jpg/960px-Mural_en_Santiago%2C_Chile_-_A7400613.jpg",
+            "caption": "Mural en Santiago, Chile - A7400613",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Mural_en_Santiago%2C_Chile_-_A740533.jpg/960px-Mural_en_Santiago%2C_Chile_-_A740533.jpg",
+            "caption": "Mural en Santiago, Chile - A740533",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Mural_en_Santiago%2C_Chile_-_A740551.jpg/960px-Mural_en_Santiago%2C_Chile_-_A740551.jpg",
+            "caption": "Mural en Santiago, Chile - A740551",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 4.0"
+          }
+        ],
+        "reason": "Startpunkt der Reise und kulturelles Zentrum Chiles."
+      },
+      "activities": [
+        {
+          "name": "Plaza de Armas",
+          "description": "Das historische Herz der Stadt mit Kathedrale und Postamt.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Plaza_de_Armas_de_Santiago_de_Chile.jpg",
+              "caption": "Plaza de Armas",
+              "source": "Wikimedia Commons",
+              "license": "CC BY 2.0"
+            }
+          ]
+        },
+        {
+          "name": "Cerro Santa Lucía",
+          "description": "Ein wunderschöner Parkhügel mitten in der Stadt mit toller Aussicht.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Cerro_Santa_Lucia_Santiago.jpg",
+              "caption": "Cerro Santa Lucía",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 3.0"
+            }
+          ]
+        },
+        {
+          "name": "Mercado Central",
+          "description": "Berühmter Fischmarkt – perfekt für ein Mittagessen.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/5/54/Mercado_Central_de_Santiago.jpg",
+              "caption": "Mercado Central",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 2.0"
+            }
+          ]
+        },
+        {
+          "name": "Lastarria Viertel",
+          "description": "Bohemien-Viertel mit Cafés, Weinbars und Straßenkunst.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Barrio_Lastarria.jpg",
+              "caption": "Barrio Lastarria",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 3.0"
+            }
+          ]
+        },
+        {
+          "name": "Sky Costanera",
+          "description": "Aussichtsplattform im höchsten Gebäude Südamerikas.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/5/53/Costanera_Center_Santiago_Chile.jpg",
+              "caption": "Costanera Center",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 4.0"
+            }
+          ]
+        }
+      ],
+      "highlights": [
+        {
+          "title": "Sonnenuntergang am Sky Costanera",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/5/53/Costanera_Center_Santiago_Chile.jpg"
+        },
+        {
+          "title": "Ceviche im Mercado Central",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/5/54/Mercado_Central_de_Santiago.jpg"
+        },
+        {
+          "title": "Spaziergang durch Lastarria",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Barrio_Lastarria.jpg"
+        }
+      ]
+    },
+    {
+      "id": "r1-day-2",
+      "date": "2026-01-09",
+      "station": {
+        "name": "Puerto Montt & Navimag Boarding",
+        "description": "Einschiffung auf die Navimag Fähre 'Esperanza'. Die Reise durch die Fjorde beginnt.",
+        "coordinates": {
+          "lat": -41.4689,
+          "lng": -72.9411
+        },
+        "images": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Puerto_Montt_-_Navimag_ferry_at_Angelmo.jpg",
+            "caption": "Navimag Fähre am Hafen",
+            "source": "Wikimedia Commons",
+            "license": "CC BY 2.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/2007-12-20-MV-Evangelistas-Puerto-Natales.JPG/960px-2007-12-20-MV-Evangelistas-Puerto-Natales.JPG",
+            "caption": "2007-12-20-MV-Evangelistas-Puerto-Natales",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 3.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/2019-03-13_Office_of_NAVIMAG_Ferries_Patagonia%2C_Puerto_Natales%2C_Chile.jpg/960px-2019-03-13_Office_of_NAVIMAG_Ferries_Patagonia%2C_Puerto_Natales%2C_Chile.jpg",
+            "caption": "2019-03-13 Office of NAVIMAG Ferries Patagonia, Puerto Natales, Chile",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 4.0"
+          }
+        ],
+        "reason": "Der Beginn des großen Seeabenteuers Richtung Süden."
+      },
+      "activities": [
+        {
+          "name": "Angelmo Markt",
+          "description": "Fisch- und Handwerksmarkt direkt am Hafen vor der Abfahrt.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Angelmo_Puerto_Montt.jpg",
+              "caption": "Angelmo Markt",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 3.0"
+            }
+          ]
+        },
+        {
+          "name": "Boarding Navimag",
+          "description": "Check-in und Bezug der Kabine auf der Fähre.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Puerto_Montt_-_Navimag_ferry_at_Angelmo.jpg",
+              "caption": "Boarding",
+              "source": "Wikimedia Commons",
+              "license": "CC BY 2.0"
+            }
+          ]
+        },
+        {
+          "name": "Abfahrt durch den Reloncaví Sound",
+          "description": "Die ersten Meilen auf See mit Blick auf Vulkane.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/8/89/Seno_de_Reloncav%C3%AD.jpg",
+              "caption": "Reloncaví Sound",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 3.0"
+            }
+          ]
+        },
+        {
+          "name": "Sicherheitsbriefing",
+          "description": "Wichtige Infos an Bord und Kennenlernen der Mitreisenden.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Puerto_Montt_-_Navimag_ferry_at_Angelmo.jpg",
+              "caption": "An Deck",
+              "source": "Wikimedia Commons",
+              "license": "CC BY 2.0"
+            }
+          ]
+        },
+        {
+          "name": "Erstes Abendessen an Bord",
+          "description": "Gemeinsames Essen in der Cafeteria mit Blick auf die vorbeiziehende Landschaft.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Puerto_Montt_-_Navimag_ferry_at_Angelmo.jpg",
+              "caption": "Blick aus dem Fenster",
+              "source": "Wikimedia Commons",
+              "license": "CC BY 2.0"
+            }
+          ]
+        }
+      ],
+      "highlights": [
+        {
+          "title": "Abfahrt in Puerto Montt",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Puerto_Montt_-_Navimag_ferry_at_Angelmo.jpg"
+        },
+        {
+          "title": "Blick auf Vulkan Osorno",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/8/89/Seno_de_Reloncav%C3%AD.jpg"
+        },
+        {
+          "title": "Sonnenuntergang auf See",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/8/89/Seno_de_Reloncav%C3%AD.jpg"
+        }
+      ]
+    },
+    {
+      "id": "r1-day-3",
+      "date": "2026-01-10",
+      "station": {
+        "name": "Auf See - Patagonische Kanäle",
+        "description": "Ein ganzer Tag auf See. Wir passieren den Moraleda-Kanal und steuern auf den Golfo de Penas zu.",
+        "coordinates": {
+          "lat": -44.5,
+          "lng": -73.5
+        },
+        "images": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Canal_Moraleda.jpg",
+            "caption": "Unterwegs in den Kanälen",
+            "source": "Wikimedia Commons",
+            "license": "CC BY-SA 3.0"
+          }
+        ],
+        "reason": "Entschleunigung und Naturbeobachtung vom Wasser aus."
+      },
+      "activities": [
+        {
+          "name": "Walbeobachtung",
+          "description": "Mit Glück sieht man Blauwale oder Orcas im Golfo de Corcovado.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Blue_Whale_001_body_bw.jpg",
+              "caption": "Blauwal",
+              "source": "Wikimedia Commons",
+              "license": "CC BY 2.0"
+            }
+          ]
+        },
+        {
+          "name": "Vortrag an Bord",
+          "description": "Die Crew erzählt über Flora, Fauna und die Route.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Puerto_Montt_-_Navimag_ferry_at_Angelmo.jpg",
+              "caption": "Vortragsraum",
+              "source": "Wikimedia Commons",
+              "license": "CC BY 2.0"
+            }
+          ]
+        },
+        {
+          "name": "Fotografie an Deck",
+          "description": "Die nebligen Fjorde bieten mystische Motive.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Canal_Moraleda.jpg",
+              "caption": "Nebelstimmung",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 3.0"
+            }
+          ]
+        },
+        {
+          "name": "Lesen & Entspannen",
+          "description": "Zeit für ein gutes Buch ohne Internetempfang.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Puerto_Montt_-_Navimag_ferry_at_Angelmo.jpg",
+              "caption": "Entspannung",
+              "source": "Wikimedia Commons",
+              "license": "CC BY 2.0"
+            }
+          ]
+        },
+        {
+          "name": "Brückenbesuch",
+          "description": "Wenn möglich, ein Besuch beim Kapitän (nach Absprache).",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Puerto_Montt_-_Navimag_ferry_at_Angelmo.jpg",
+              "caption": "Brücke",
+              "source": "Wikimedia Commons",
+              "license": "CC BY 2.0"
+            }
+          ]
+        }
+      ],
+      "highlights": [
+        {
+          "title": "Mögliche Wal-Sichtungen",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Blue_Whale_001_body_bw.jpg"
+        },
+        {
+          "title": "Die Weite des Ozeans",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Canal_Moraleda.jpg"
+        },
+        {
+          "title": "Ruhe an Bord",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Puerto_Montt_-_Navimag_ferry_at_Angelmo.jpg"
+        }
+      ]
+    },
+    {
+      "id": "r1-day-4",
+      "date": "2026-01-12",
+      "station": {
+        "name": "Ankunft Puerto Natales",
+        "description": "Nach der Passage der 'Angostura White' erreichen wir Puerto Natales, das Tor zum Torres del Paine.",
+        "coordinates": {
+          "lat": -51.7269,
+          "lng": -72.5068
+        },
+        "images": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Puerto_Natales_Costanera.jpg",
+            "caption": "Blick auf den Fjord der letzten Hoffnung",
+            "source": "Wikimedia Commons",
+            "license": "CC BY-SA 3.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/2019-03-12_01_CNS_PUERTO_NATALES_LSG-1617_%E2%80%93_Puerto_Natales%2C_Chile.jpg/960px-2019-03-12_01_CNS_PUERTO_NATALES_LSG-1617_%E2%80%93_Puerto_Natales%2C_Chile.jpg",
+            "caption": "2019-03-12 01 CNS PUERTO NATALES LSG-1617 – Puerto Natales, Chile",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/2019-03-12_01_CRUX_AUSTRALIS_-_IMO_9471161_-_Puerto_Natales%2C_Chile.jpg/960px-2019-03-12_01_CRUX_AUSTRALIS_-_IMO_9471161_-_Puerto_Natales%2C_Chile.jpg",
+            "caption": "2019-03-12 01 CRUX AUSTRALIS - IMO 9471161 - Puerto Natales, Chile",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/2019-03-12_02_CNS_PUERTO_NATALES_LSG-1617_%E2%80%93_Puerto_Natales%2C_Chile.jpg/960px-2019-03-12_02_CNS_PUERTO_NATALES_LSG-1617_%E2%80%93_Puerto_Natales%2C_Chile.jpg",
+            "caption": "2019-03-12 02 CNS PUERTO NATALES LSG-1617 – Puerto Natales, Chile",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Cerro_Dorotea%2C_Puerto_Natales%2C_2019.jpg/960px-Cerro_Dorotea%2C_Puerto_Natales%2C_2019.jpg",
+            "caption": "Cerro Dorotea, Puerto Natales, 2019",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/IMG_1884Puerto_Natales.jpg/960px-IMG_1884Puerto_Natales.jpg",
+            "caption": "IMG 1884Puerto Natales",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 2.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Llegada_a_Puerto_Natales_%2840685046340%29.jpg/960px-Llegada_a_Puerto_Natales_%2840685046340%29.jpg",
+            "caption": "Llegada a Puerto Natales (40685046340)",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution 2.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Natales_rc_012.JPG",
+            "caption": "Natales rc 012",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution 3.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Puerto_Natales%2C_Chile1.jpg/960px-Puerto_Natales%2C_Chile1.jpg",
+            "caption": "Puerto Natales, Chile1",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 3.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Puerto_Natales%2C_amanece....jpg/960px-Puerto_Natales%2C_amanece....jpg",
+            "caption": "Puerto Natales, amanece",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 3.0"
+          }
+        ],
+        "reason": "Ausgangspunkt für alle Abenteuer im Torres del Paine Nationalpark."
+      },
+      "activities": [
+        {
+          "name": "Ausschiffung",
+          "description": "Ankunft im Hafen und Transfer zur Unterkunft.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Puerto_Natales_Costanera.jpg",
+              "caption": "Hafen Puerto Natales",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 3.0"
+            }
+          ]
+        },
+        {
+          "name": "Mietwagenübernahme",
+          "description": "Abholung des Mietwagens für die nächsten Tage.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Puerto_Natales_Costanera.jpg",
+              "caption": "Mietwagen",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 3.0"
+            }
+          ]
+        },
+        {
+          "name": "Einkaufen für den Park",
+          "description": "Vorräte im Supermarkt aufstocken (Wasser, Snacks).",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Puerto_Natales_Costanera.jpg",
+              "caption": "Einkaufen",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 3.0"
+            }
+          ]
+        },
+        {
+          "name": "Spaziergang an der Costanera",
+          "description": "Die Uferpromenade mit Blick auf die schneebedeckten Berge.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Puerto_Natales_Costanera.jpg",
+              "caption": "Costanera",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 3.0"
+            }
+          ]
+        },
+        {
+          "name": "Abendessen im 'Afrigonia'",
+          "description": "Fusionsküche (afrikanisch-patagonisch) - sehr empfehlenswert.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Puerto_Natales_Costanera.jpg",
+              "caption": "Restaurant",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 3.0"
+            }
+          ]
+        }
+      ],
+      "highlights": [
+        {
+          "title": "Ankunft im Fjord",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Puerto_Natales_Costanera.jpg"
+        },
+        {
+          "title": "Mylodon Höhle (optional)",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Cueva_del_Milodon.jpg"
+        },
+        {
+          "title": "Erster Blick auf die Anden",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Puerto_Natales_Costanera.jpg"
+        }
+      ]
+    },
+    {
+      "id": "r1-day-5",
+      "date": "2026-01-13",
+      "station": {
+        "name": "Torres del Paine Nationalpark",
+        "description": "Fahrt in den Park. Guanacos, Nandus und die gewaltigen Granittürme erwarten uns.",
+        "coordinates": {
+          "lat": -50.9423,
+          "lng": -73.4068
+        },
+        "images": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Torres_del_Paine_National_Park_-_Patagonia_-_Chile.jpg",
+            "caption": "Die Torres",
+            "source": "Wikimedia Commons",
+            "license": "CC BY 2.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Cuernos_del_Paine_in_Torres_del_Paine_National_Park.jpg/960px-Cuernos_del_Paine_in_Torres_del_Paine_National_Park.jpg",
+            "caption": "Cuernos del Paine in Torres del Paine National Park",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 2.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Scheinbuchenwald_%28Nothofagus%29_Torres_del_Paine_Nationalpark.jpg/960px-Scheinbuchenwald_%28Nothofagus%29_Torres_del_Paine_Nationalpark.jpg",
+            "caption": "Scheinbuchenwald (Nothofagus) Torres del Paine Nationalpark",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution-Share Alike 4.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Torres_del_Paine_nationalpark-CTJ-IMG_7011.jpg/960px-Torres_del_Paine_nationalpark-CTJ-IMG_7011.jpg",
+            "caption": "Torres del Paine nationalpark-CTJ-IMG 7011",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution 3.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Torres_del_Paine_nationalpark-CTJ-IMG_7012.jpg/960px-Torres_del_Paine_nationalpark-CTJ-IMG_7012.jpg",
+            "caption": "Torres del Paine nationalpark-CTJ-IMG 7012",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution 3.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Torres_del_Paine_nationalpark-CTJ-IMG_7022.jpg/960px-Torres_del_Paine_nationalpark-CTJ-IMG_7022.jpg",
+            "caption": "Torres del Paine nationalpark-CTJ-IMG 7022",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution 3.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Torres_del_Paine_nationalpark-CTJ-IMG_7023.jpg/960px-Torres_del_Paine_nationalpark-CTJ-IMG_7023.jpg",
+            "caption": "Torres del Paine nationalpark-CTJ-IMG 7023",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution 3.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Torres_del_Paine_nationalpark-CTJ-IMG_7024.jpg/960px-Torres_del_Paine_nationalpark-CTJ-IMG_7024.jpg",
+            "caption": "Torres del Paine nationalpark-CTJ-IMG 7024",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution 3.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Torres_del_Paine_nationalpark-CTJ-IMG_7120.jpg/960px-Torres_del_Paine_nationalpark-CTJ-IMG_7120.jpg",
+            "caption": "Torres del Paine nationalpark-CTJ-IMG 7120",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution 3.0"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Torres_del_Paine_nationalpark-CTJ-IMG_7121.jpg/960px-Torres_del_Paine_nationalpark-CTJ-IMG_7121.jpg",
+            "caption": "Torres del Paine nationalpark-CTJ-IMG 7121",
+            "source": "Wikimedia Commons",
+            "license": "Creative Commons Attribution 3.0"
+          }
+        ],
+        "reason": "Einer der spektakulärsten Nationalparks der Welt."
+      },
+      "activities": [
+        {
+          "name": "Fahrt zum Parkeingang",
+          "description": "Ca. 2 Stunden Fahrt durch die Pampa.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Torres_del_Paine_National_Park_-_Patagonia_-_Chile.jpg",
+              "caption": "Anfahrt",
+              "source": "Wikimedia Commons",
+              "license": "CC BY 2.0"
+            }
+          ]
+        },
+        {
+          "name": "Mirador Nordenskjöld",
+          "description": "Aussichtspunkt auf den türkisfarbenen See und die 'Hörner'.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Torres_del_Paine_National_Park_-_Patagonia_-_Chile.jpg",
+              "caption": "Lago Nordenskjöld",
+              "source": "Wikimedia Commons",
+              "license": "CC BY 2.0"
+            }
+          ]
+        },
+        {
+          "name": "Salto Grande Wasserfall",
+          "description": "Kurze Wanderung zum tosenden Wasserfall.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Torres_del_Paine_National_Park_-_Patagonia_-_Chile.jpg",
+              "caption": "Salto Grande",
+              "source": "Wikimedia Commons",
+              "license": "CC BY 2.0"
+            }
+          ]
+        },
+        {
+          "name": "Guanaco Beobachtung",
+          "description": "Die wilden Lamas sind überall im Park zu sehen.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Guanaco_Torres_del_Paine.jpg",
+              "caption": "Guanaco",
+              "source": "Wikimedia Commons",
+              "license": "CC BY-SA 2.0"
+            }
+          ]
+        },
+        {
+          "name": "Wanderung zum Mirador Cuernos",
+          "description": "Leichte Wanderung (2h) mit spektakulärem Panorama.",
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Torres_del_Paine_National_Park_-_Patagonia_-_Chile.jpg",
+              "caption": "Cuernos",
+              "source": "Wikimedia Commons",
+              "license": "CC BY 2.0"
+            }
+          ]
+        }
+      ],
+      "highlights": [
+        {
+          "title": "Die Cuernos del Paine",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Torres_del_Paine_National_Park_-_Patagonia_-_Chile.jpg"
+        },
+        {
+          "title": "Guanaco Herden",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Guanaco_Torres_del_Paine.jpg"
+        },
+        {
+          "title": "Türkise Seen",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Torres_del_Paine_National_Park_-_Patagonia_-_Chile.jpg"
+        }
+      ]
+    }
+  ]
+}

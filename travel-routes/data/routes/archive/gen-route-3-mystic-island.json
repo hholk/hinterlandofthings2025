@@ -1,0 +1,634 @@
+[
+    {
+        "id": "gen-route-3-mystic-island",
+        "title": "Route 13 – Mythen von Chiloé",
+        "summary": "Entdecke die magische Insel Chiloé mit ihren Holzkirchen und Palafitos. Kultur pur und raue Natur.",
+        "meta": {
+            "theme": "Culture & Nature",
+            "pace": "moderate",
+            "durationDays": 9,
+            "costEstimate": 1733,
+            "highlights": [
+                "Besuch in Puerto Montt",
+                "Besuch in Ancud",
+                "Besuch in Castro"
+            ],
+            "highlightImages": [
+                {
+                    "title": "Route 13 – Mythen von Chiloé",
+                    "image": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1200&auto=format&fit=crop",
+                    "caption": "Entdecke die magische Insel Chiloé mit ihren Holzkirchen und Palafitos. Kultur pur und raue Natur.",
+                    "source": "Unsplash",
+                    "license": "Unsplash License"
+                }
+            ],
+            "scores": {
+                "budget": 3,
+                "adventure": 2,
+                "relax": 2,
+                "culture": 3
+            }
+        },
+        "days": [
+            {
+                "id": "day-1",
+                "date": "2025-11-01",
+                "station": {
+                    "name": "Puerto Montt",
+                    "description": "Aufenthalt in Puerto Montt. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Puerto Montt"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": []
+                }
+            },
+            {
+                "id": "day-2",
+                "date": "2025-11-03",
+                "station": {
+                    "name": "Ancud",
+                    "description": "Aufenthalt in Ancud. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Ancud"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": [
+                        {
+                            "mode": "bus",
+                            "from": {
+                                "name": "Puerto Montt"
+                            },
+                            "to": {
+                                "name": "Ancud"
+                            },
+                            "durationMinutes": 174,
+                            "variants": [
+                                {
+                                    "id": "var-bus-7838",
+                                    "mode": "bus",
+                                    "description": "Linienbus von Puerto Montt nach Ancud. Günstig und zuverlässig.",
+                                    "durationMinutes": 174,
+                                    "cost": 25,
+                                    "co2": 7.25
+                                },
+                                {
+                                    "id": "var-car-6766",
+                                    "mode": "drive",
+                                    "description": "Mietwagen-Etappe. Freiheit für Fotostopps entlang der Route.",
+                                    "durationMinutes": 145,
+                                    "cost": 54,
+                                    "co2": 27.55
+                                },
+                                {
+                                    "id": "var-transfer-3073",
+                                    "mode": "drive",
+                                    "description": "Privater Transfer mit lokalem Driver-Guide. Entspannt zurücklehnen.",
+                                    "durationMinutes": 145,
+                                    "cost": 157,
+                                    "co2": 36.25
+                                },
+                                {
+                                    "id": "var-hitch-1330",
+                                    "mode": "drive",
+                                    "description": "Mitfahrgelegenheit oder Colectivo. Die lokale Art zu reisen.",
+                                    "durationMinutes": 217,
+                                    "cost": 19,
+                                    "co2": 14.5
+                                },
+                                {
+                                    "id": "var-bus-prem-1414",
+                                    "mode": "bus",
+                                    "description": "Premium 'Salon Cama' Bus. Fast wie Business Class.",
+                                    "durationMinutes": 174,
+                                    "cost": 49,
+                                    "co2": 7.25
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "day-3",
+                "date": "2025-11-05",
+                "station": {
+                    "name": "Castro",
+                    "description": "Aufenthalt in Castro. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Castro"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": [
+                        {
+                            "mode": "bus",
+                            "from": {
+                                "name": "Ancud"
+                            },
+                            "to": {
+                                "name": "Castro"
+                            },
+                            "durationMinutes": 224,
+                            "variants": [
+                                {
+                                    "id": "var-bus-8240",
+                                    "mode": "bus",
+                                    "description": "Linienbus von Ancud nach Castro. Günstig und zuverlässig.",
+                                    "durationMinutes": 224,
+                                    "cost": 22,
+                                    "co2": 9.35
+                                },
+                                {
+                                    "id": "var-car-2228",
+                                    "mode": "drive",
+                                    "description": "Mietwagen-Etappe. Freiheit für Fotostopps entlang der Route.",
+                                    "durationMinutes": 187,
+                                    "cost": 85,
+                                    "co2": 35.53
+                                },
+                                {
+                                    "id": "var-transfer-7089",
+                                    "mode": "drive",
+                                    "description": "Privater Transfer mit lokalem Driver-Guide. Entspannt zurücklehnen.",
+                                    "durationMinutes": 187,
+                                    "cost": 187,
+                                    "co2": 46.75
+                                },
+                                {
+                                    "id": "var-hitch-4163",
+                                    "mode": "drive",
+                                    "description": "Mitfahrgelegenheit oder Colectivo. Die lokale Art zu reisen.",
+                                    "durationMinutes": 280,
+                                    "cost": 17,
+                                    "co2": 18.7
+                                },
+                                {
+                                    "id": "var-bus-prem-8711",
+                                    "mode": "bus",
+                                    "description": "Premium 'Salon Cama' Bus. Fast wie Business Class.",
+                                    "durationMinutes": 224,
+                                    "cost": 37,
+                                    "co2": 9.35
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "day-4",
+                "date": "2025-11-07",
+                "station": {
+                    "name": "Dalcahue",
+                    "description": "Aufenthalt in Dalcahue. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Dalcahue"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": [
+                        {
+                            "mode": "bus",
+                            "from": {
+                                "name": "Castro"
+                            },
+                            "to": {
+                                "name": "Dalcahue"
+                            },
+                            "durationMinutes": 480,
+                            "variants": [
+                                {
+                                    "id": "var-bus-6021",
+                                    "mode": "bus",
+                                    "description": "Linienbus von Castro nach Dalcahue. Günstig und zuverlässig.",
+                                    "durationMinutes": 480,
+                                    "cost": 17,
+                                    "co2": 20.0
+                                },
+                                {
+                                    "id": "var-car-4660",
+                                    "mode": "drive",
+                                    "description": "Mietwagen-Etappe. Freiheit für Fotostopps entlang der Route.",
+                                    "durationMinutes": 400,
+                                    "cost": 87,
+                                    "co2": 76.0
+                                },
+                                {
+                                    "id": "var-transfer-9583",
+                                    "mode": "drive",
+                                    "description": "Privater Transfer mit lokalem Driver-Guide. Entspannt zurücklehnen.",
+                                    "durationMinutes": 400,
+                                    "cost": 134,
+                                    "co2": 100.0
+                                },
+                                {
+                                    "id": "var-hitch-2122",
+                                    "mode": "drive",
+                                    "description": "Mitfahrgelegenheit oder Colectivo. Die lokale Art zu reisen.",
+                                    "durationMinutes": 600,
+                                    "cost": 19,
+                                    "co2": 40.0
+                                },
+                                {
+                                    "id": "var-flight-2690",
+                                    "mode": "flight",
+                                    "description": "Inlandsflug für maximale Zeitersparnis.",
+                                    "durationMinutes": 115,
+                                    "cost": 143,
+                                    "co2": 112.00000000000001
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "day-5",
+                "date": "2025-11-09",
+                "station": {
+                    "name": "Quellón",
+                    "description": "Aufenthalt in Quellón. Erkunde die lokale Kultur und Natur.",
+                    "images": [
+                        {
+                            "url": "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop",
+                            "caption": "Quellón"
+                        }
+                    ]
+                },
+                "arrival": {
+                    "segments": [
+                        {
+                            "mode": "bus",
+                            "from": {
+                                "name": "Dalcahue"
+                            },
+                            "to": {
+                                "name": "Quellón"
+                            },
+                            "durationMinutes": 300,
+                            "variants": [
+                                {
+                                    "id": "var-bus-9146",
+                                    "mode": "bus",
+                                    "description": "Linienbus von Dalcahue nach Quellón. Günstig und zuverlässig.",
+                                    "durationMinutes": 300,
+                                    "cost": 19,
+                                    "co2": 12.500000000000002
+                                },
+                                {
+                                    "id": "var-car-7328",
+                                    "mode": "drive",
+                                    "description": "Mietwagen-Etappe. Freiheit für Fotostopps entlang der Route.",
+                                    "durationMinutes": 250,
+                                    "cost": 44,
+                                    "co2": 47.50000000000001
+                                },
+                                {
+                                    "id": "var-transfer-4351",
+                                    "mode": "drive",
+                                    "description": "Privater Transfer mit lokalem Driver-Guide. Entspannt zurücklehnen.",
+                                    "durationMinutes": 250,
+                                    "cost": 193,
+                                    "co2": 62.50000000000001
+                                },
+                                {
+                                    "id": "var-hitch-3676",
+                                    "mode": "drive",
+                                    "description": "Mitfahrgelegenheit oder Colectivo. Die lokale Art zu reisen.",
+                                    "durationMinutes": 375,
+                                    "cost": 10,
+                                    "co2": 25.000000000000004
+                                },
+                                {
+                                    "id": "var-bus-prem-1230",
+                                    "mode": "bus",
+                                    "description": "Premium 'Salon Cama' Bus. Fast wie Business Class.",
+                                    "durationMinutes": 300,
+                                    "cost": 53,
+                                    "co2": 12.500000000000002
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ],
+        "lodging": [
+            {
+                "id": "lodging-65950",
+                "stopId": "puerto-montt",
+                "name": "Camping Puerto Montt Garden",
+                "nights": 2,
+                "avgNightlyRateEUR": 20,
+                "amenities": [
+                    "Garten",
+                    "Touren",
+                    "Küche"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=554",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Camping Puerto Montt Garden",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-12301",
+                "stopId": "puerto-montt",
+                "name": "Guesthouse Puerto Montt Central",
+                "nights": 2,
+                "avgNightlyRateEUR": 57,
+                "amenities": [
+                    "WLAN",
+                    "Frühstück",
+                    "Touren"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=882",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Guesthouse Puerto Montt Central",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-82968",
+                "stopId": "puerto-montt",
+                "name": "Hotel Puerto Montt Oasis",
+                "nights": 2,
+                "avgNightlyRateEUR": 71,
+                "amenities": [
+                    "Bar",
+                    "Frühstück",
+                    "WLAN"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=941",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hotel Puerto Montt Oasis",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-28958",
+                "stopId": "ancud",
+                "name": "Hotel Ancud Central",
+                "nights": 2,
+                "avgNightlyRateEUR": 58,
+                "amenities": [
+                    "Frühstück",
+                    "Touren",
+                    "WLAN"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=930",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hotel Ancud Central",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-23690",
+                "stopId": "ancud",
+                "name": "Hotel Ancud Garden",
+                "nights": 3,
+                "avgNightlyRateEUR": 62,
+                "amenities": [
+                    "Bar",
+                    "Frühstück",
+                    "Touren"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=326",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hotel Ancud Garden",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-10825",
+                "stopId": "ancud",
+                "name": "Hotel Ancud Oasis",
+                "nights": 3,
+                "avgNightlyRateEUR": 89,
+                "amenities": [
+                    "Frühstück",
+                    "WLAN",
+                    "Touren"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=228",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hotel Ancud Oasis",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-89302",
+                "stopId": "castro",
+                "name": "Guesthouse Castro Backpacker",
+                "nights": 2,
+                "avgNightlyRateEUR": 42,
+                "amenities": [
+                    "Bar",
+                    "Garten",
+                    "Küche"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=886",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Guesthouse Castro Backpacker",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-21309",
+                "stopId": "castro",
+                "name": "Guesthouse Castro Backpacker",
+                "nights": 2,
+                "avgNightlyRateEUR": 56,
+                "amenities": [
+                    "WLAN",
+                    "Küche",
+                    "Touren"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=600",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Guesthouse Castro Backpacker",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-30854",
+                "stopId": "castro",
+                "name": "Hotel Castro Oasis",
+                "nights": 1,
+                "avgNightlyRateEUR": 84,
+                "amenities": [
+                    "Küche",
+                    "Bar",
+                    "Frühstück"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=954",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hotel Castro Oasis",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-23774",
+                "stopId": "dalcahue",
+                "name": "Hostel Dalcahue Central",
+                "nights": 3,
+                "avgNightlyRateEUR": 16,
+                "amenities": [
+                    "Touren",
+                    "Küche",
+                    "WLAN"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=316",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hostel Dalcahue Central",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-27574",
+                "stopId": "dalcahue",
+                "name": "Camping Dalcahue Backpacker",
+                "nights": 3,
+                "avgNightlyRateEUR": 19,
+                "amenities": [
+                    "Küche",
+                    "Bar",
+                    "WLAN"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=448",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Camping Dalcahue Backpacker",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-79988",
+                "stopId": "dalcahue",
+                "name": "Camping Dalcahue Garden",
+                "nights": 1,
+                "avgNightlyRateEUR": 14,
+                "amenities": [
+                    "WLAN",
+                    "Frühstück",
+                    "Garten"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=676",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Camping Dalcahue Garden",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-79582",
+                "stopId": "quellón",
+                "name": "Airbnb Quellón Central",
+                "nights": 2,
+                "avgNightlyRateEUR": 77,
+                "amenities": [
+                    "Garten",
+                    "Touren",
+                    "Bar"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=409",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Airbnb Quellón Central",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-23303",
+                "stopId": "quellón",
+                "name": "Airbnb Quellón View",
+                "nights": 2,
+                "avgNightlyRateEUR": 34,
+                "amenities": [
+                    "Touren",
+                    "WLAN",
+                    "Bar"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=650",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Airbnb Quellón View",
+                        "license": "Unsplash License"
+                    }
+                ]
+            },
+            {
+                "id": "lodging-31506",
+                "stopId": "quellón",
+                "name": "Hotel Quellón Backpacker",
+                "nights": 1,
+                "avgNightlyRateEUR": 77,
+                "amenities": [
+                    "Küche",
+                    "Bar",
+                    "WLAN"
+                ],
+                "url": "https://www.trip.com/hotels/list?city=916",
+                "images": [
+                    {
+                        "url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&auto=format&fit=crop",
+                        "caption": "Zimmer im Hotel Quellón Backpacker",
+                        "license": "Unsplash License"
+                    }
+                ]
+            }
+        ]
+    }
+]
