@@ -2063,6 +2063,16 @@
                       {/if}
                     </div>
                   </header>
+                  {#if day.station?.images?.length}
+                    <div
+                      class="mb-4 mt-2 h-64 w-full overflow-hidden rounded-lg"
+                    >
+                      <ImageCarousel
+                        images={day.station.images}
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+                  {/if}
                   <div class="travel__stop-extras travel__stop-extras--stack">
                     {#if getDaySegments(day).length}
                       <details class="travel__stack-subsection travel__spoiler">
