@@ -1,0 +1,109 @@
+{
+  "id": "gen-route-1-desert-sea",
+  "name": "Route 11 – Wüste & Meer (Budget)",
+  "title": "Route 11 – Wüste & Meer (Budget)",
+  "summary": "Kontrastreiches Abenteuer: Von der trockenen Atacama-Wüste an die entspannte Pazifikküste. Perfekt für Budget-Reisende.",
+  "color": "#0ea5e9",
+  "tags": [
+    "nature",
+    "relax",
+    "generated"
+  ],
+  "meta": {
+    "theme": "Route 11 – Wüste & Meer (Budget)",
+    "pace": "gemütlich",
+    "durationDays": 3,
+    "costEstimate": 0,
+    "highlights": [
+      "Roadtrip Highlights"
+    ]
+  },
+  "mapFocus": {
+    "center": {
+      "lng": -70.67,
+      "lat": -33.45
+    },
+    "zoom": 5
+  },
+  "stops": [
+    {
+      "id": "gen-route-1-desert-sea-s1",
+      "name": "Santiago",
+      "coordinates": {
+        "lng": -70.6693,
+        "lat": -33.4489
+      }
+    },
+    {
+      "id": "gen-route-1-desert-sea-s2",
+      "name": "Valparaíso",
+      "coordinates": {
+        "lng": -71.6127,
+        "lat": -33.0472
+      }
+    },
+    {
+      "id": "gen-route-1-desert-sea-s3",
+      "name": "Andespass",
+      "coordinates": {
+        "lng": -70.5,
+        "lat": -32.9
+      }
+    }
+  ],
+  "segments": [
+    {
+      "id": "gen-route-1-desert-sea-seg-1",
+      "mode": "drive",
+      "from": "gen-route-1-desert-sea-s1",
+      "to": "gen-route-1-desert-sea-s2",
+      "distanceKm": 120,
+      "durationHours": 2.5
+    }
+  ],
+  "days": [
+    {
+      "id": "gen-route-1-desert-sea-d1",
+      "title": "Anreise",
+      "station": {
+        "name": "Santiago",
+        "coordinates": {
+          "lng": -70.6693,
+          "lat": -33.4489
+        }
+      }
+    },
+    {
+      "id": "gen-route-1-desert-sea-d2",
+      "title": "Ausflug",
+      "station": {
+        "name": "Valparaíso",
+        "coordinates": {
+          "lng": -71.6127,
+          "lat": -33.0472
+        }
+      }
+    }
+  ],
+  "mapLayers": {
+    "dailySegments": [
+      {
+        "dayId": "gen-route-1-desert-sea-d1",
+        "mode": "drive",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -70.67,
+              -33.45
+            ],
+            [
+              -71.61,
+              -33.05
+            ]
+          ]
+        }
+      }
+    ]
+  }
+}

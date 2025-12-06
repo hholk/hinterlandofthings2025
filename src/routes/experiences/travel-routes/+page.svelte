@@ -1438,7 +1438,7 @@
         {#if showStopDetailPanel && stopDetailPanel}
           <!-- Für Einsteiger:innen: Im Vollbild und auf Touch-Geräten verzichten wir auf MapLibre-Popups
                und zeigen die Infos als Panel, damit Taps zuverlässig Details öffnen. -->
-          <article
+          <div
             class="travel__map-fullscreen-panel"
             role="dialog"
             aria-live="polite"
@@ -1496,7 +1496,7 @@
                 bewegen, um weitere Highlights aufzudecken.
               </p>
             {/if}
-          </article>
+          </div>
         {/if}
         {#if isLegendVisible}
           <ul class="travel__legend" aria-label="Legende">
@@ -2532,12 +2532,6 @@
     background: rgba(15, 23, 42, 0.35);
   }
 
-  .travel__map-fullscreen-panel__media figcaption {
-    font-size: 0.75rem;
-    color: rgba(226, 232, 240, 0.9);
-    padding: 0.5rem 0.75rem;
-  }
-
   .travel__map-slider input[type="range"] {
     width: 100%;
     accent-color: #6366f1;
@@ -3199,12 +3193,6 @@
     grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
     gap: 0.75rem;
     margin-top: 0.5rem;
-  }
-
-  .travel__image-grid figcaption {
-    font-size: 0.75rem;
-    color: #475569;
-    margin-top: 0.2rem;
   }
 
   .travel__stop-extras {

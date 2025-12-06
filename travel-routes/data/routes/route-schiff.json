@@ -1,0 +1,108 @@
+{
+  "id": "atacama-navimag-torres-2025",
+  "name": "Unbenannte Route",
+  "title": "Unbenannte Route",
+  "summary": "14 Tage Chile-Highlights: Start in Santiago, dann San Pedro de Atacama, Navimag-Fjordpassage Puerto Montt → Puerto Natales (Südroute) und Torres del Paine. Abfahrt Navimag ca. 7. November 2025.",
+  "color": "#cccccc",
+  "tags": [],
+  "meta": {
+    "theme": "Chile-Klassiker Nord + Süd mit Navimag",
+    "pace": "aktiv",
+    "durationDays": 14,
+    "costEstimate": 3800,
+    "highlights": [
+      "Santiago de Chile",
+      "San Pedro de Atacama",
+      "Navimag-Fähre: Puerto Montt → Puerto Natales",
+      "Torres del Paine Nationalpark"
+    ]
+  },
+  "mapFocus": {
+    "center": {
+      "lng": -70.67,
+      "lat": -33.45
+    },
+    "zoom": 5
+  },
+  "stops": [
+    {
+      "id": "atacama-navimag-torres-2025-s1",
+      "name": "Santiago",
+      "coordinates": {
+        "lng": -70.6693,
+        "lat": -33.4489
+      }
+    },
+    {
+      "id": "atacama-navimag-torres-2025-s2",
+      "name": "Valparaíso",
+      "coordinates": {
+        "lng": -71.6127,
+        "lat": -33.0472
+      }
+    },
+    {
+      "id": "atacama-navimag-torres-2025-s3",
+      "name": "Andespass",
+      "coordinates": {
+        "lng": -70.5,
+        "lat": -32.9
+      }
+    }
+  ],
+  "segments": [
+    {
+      "id": "atacama-navimag-torres-2025-seg-1",
+      "mode": "drive",
+      "from": "atacama-navimag-torres-2025-s1",
+      "to": "atacama-navimag-torres-2025-s2",
+      "distanceKm": 120,
+      "durationHours": 2.5
+    }
+  ],
+  "days": [
+    {
+      "id": "atacama-navimag-torres-2025-d1",
+      "title": "Anreise",
+      "station": {
+        "name": "Santiago",
+        "coordinates": {
+          "lng": -70.6693,
+          "lat": -33.4489
+        }
+      }
+    },
+    {
+      "id": "atacama-navimag-torres-2025-d2",
+      "title": "Ausflug",
+      "station": {
+        "name": "Valparaíso",
+        "coordinates": {
+          "lng": -71.6127,
+          "lat": -33.0472
+        }
+      }
+    }
+  ],
+  "mapLayers": {
+    "dailySegments": [
+      {
+        "dayId": "atacama-navimag-torres-2025-d1",
+        "mode": "drive",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -70.67,
+              -33.45
+            ],
+            [
+              -71.61,
+              -33.05
+            ]
+          ]
+        }
+      }
+    ]
+  }
+}

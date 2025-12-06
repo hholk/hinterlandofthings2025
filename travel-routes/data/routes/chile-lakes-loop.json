@@ -1,0 +1,111 @@
+{
+  "id": "chile-lakes-loop",
+  "name": "Seen & Vulkane – Lakes District Circuit (4.–20. Januar)",
+  "title": "Seen & Vulkane – Lakes District Circuit (4.–20. Januar)",
+  "summary": "Vom 4. bis 20. Januar geht es von Santiago in den chilenischen Süden: Temuco, Pucón, Huilo Huilo, Puerto Varas und Chiloé liefern eine Parade an Seen, Thermalquellen und Vulkanblicken, bevor es entspannt nach Santiago zurückgeht.",
+  "color": "#4cb5ab",
+  "tags": [
+    "nature",
+    "roadtrip",
+    "flight"
+  ],
+  "meta": {
+    "theme": "Seen, Thermen & Andenblicke",
+    "pace": "ausgewogen",
+    "durationDays": 17,
+    "costEstimate": 2850,
+    "highlights": [
+      "Kayak auf dem Lago Villarrica",
+      "Thermalbad in den Termas Geométricas",
+      "Sonnenuntergang über dem Lago Llanquihue"
+    ]
+  },
+  "mapFocus": {
+    "center": {
+      "lng": -70.67,
+      "lat": -33.45
+    },
+    "zoom": 5
+  },
+  "stops": [
+    {
+      "id": "chile-lakes-loop-s1",
+      "name": "Santiago",
+      "coordinates": {
+        "lng": -70.6693,
+        "lat": -33.4489
+      }
+    },
+    {
+      "id": "chile-lakes-loop-s2",
+      "name": "Valparaíso",
+      "coordinates": {
+        "lng": -71.6127,
+        "lat": -33.0472
+      }
+    },
+    {
+      "id": "chile-lakes-loop-s3",
+      "name": "Andespass",
+      "coordinates": {
+        "lng": -70.5,
+        "lat": -32.9
+      }
+    }
+  ],
+  "segments": [
+    {
+      "id": "chile-lakes-loop-seg-1",
+      "mode": "flight",
+      "from": "chile-lakes-loop-s1",
+      "to": "chile-lakes-loop-s2",
+      "distanceKm": 120,
+      "durationHours": 2.5
+    }
+  ],
+  "days": [
+    {
+      "id": "chile-lakes-loop-d1",
+      "title": "Anreise",
+      "station": {
+        "name": "Santiago",
+        "coordinates": {
+          "lng": -70.6693,
+          "lat": -33.4489
+        }
+      }
+    },
+    {
+      "id": "chile-lakes-loop-d2",
+      "title": "Ausflug",
+      "station": {
+        "name": "Valparaíso",
+        "coordinates": {
+          "lng": -71.6127,
+          "lat": -33.0472
+        }
+      }
+    }
+  ],
+  "mapLayers": {
+    "dailySegments": [
+      {
+        "dayId": "chile-lakes-loop-d1",
+        "mode": "flight",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -70.67,
+              -33.45
+            ],
+            [
+              -71.61,
+              -33.05
+            ]
+          ]
+        }
+      }
+    ]
+  }
+}

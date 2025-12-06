@@ -1,0 +1,108 @@
+{
+  "id": "north-atacama-classics",
+  "name": "Unbenannte Route",
+  "title": "Unbenannte Route",
+  "summary": "4 Tage in der trockensten Wüste der Welt: Mondtal, Geysire, Salzseen und Sternenhimmel. Der perfekte Kurztrip in den Norden.",
+  "color": "#cccccc",
+  "tags": [],
+  "meta": {
+    "theme": "Wüste & Sterne",
+    "pace": "aktiv",
+    "durationDays": 4,
+    "costEstimate": 800,
+    "highlights": [
+      "Valle de la Luna (Mondtal)",
+      "El Tatio Geysire",
+      "Lagunas Altiplanicas",
+      "Sternenbeobachtung"
+    ]
+  },
+  "mapFocus": {
+    "center": {
+      "lng": -70.67,
+      "lat": -33.45
+    },
+    "zoom": 5
+  },
+  "stops": [
+    {
+      "id": "north-atacama-classics-s1",
+      "name": "Santiago",
+      "coordinates": {
+        "lng": -70.6693,
+        "lat": -33.4489
+      }
+    },
+    {
+      "id": "north-atacama-classics-s2",
+      "name": "Valparaíso",
+      "coordinates": {
+        "lng": -71.6127,
+        "lat": -33.0472
+      }
+    },
+    {
+      "id": "north-atacama-classics-s3",
+      "name": "Andespass",
+      "coordinates": {
+        "lng": -70.5,
+        "lat": -32.9
+      }
+    }
+  ],
+  "segments": [
+    {
+      "id": "north-atacama-classics-seg-1",
+      "mode": "drive",
+      "from": "north-atacama-classics-s1",
+      "to": "north-atacama-classics-s2",
+      "distanceKm": 120,
+      "durationHours": 2.5
+    }
+  ],
+  "days": [
+    {
+      "id": "north-atacama-classics-d1",
+      "title": "Anreise",
+      "station": {
+        "name": "Santiago",
+        "coordinates": {
+          "lng": -70.6693,
+          "lat": -33.4489
+        }
+      }
+    },
+    {
+      "id": "north-atacama-classics-d2",
+      "title": "Ausflug",
+      "station": {
+        "name": "Valparaíso",
+        "coordinates": {
+          "lng": -71.6127,
+          "lat": -33.0472
+        }
+      }
+    }
+  ],
+  "mapLayers": {
+    "dailySegments": [
+      {
+        "dayId": "north-atacama-classics-d1",
+        "mode": "drive",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -70.67,
+              -33.45
+            ],
+            [
+              -71.61,
+              -33.05
+            ]
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -6,6 +6,14 @@
   import { isAuthenticated } from '$stores/auth';
 
   // Für Einsteiger:innen: Der Auth-Store reagiert sofort, wenn sich das Cookie ändert.
+  // Wir sortieren die Experiences so, dass die Wim-Hof-Kachel garantiert oben erscheint
+  // und nicht in längeren Listen untergeht.
+  const visibleExperiencePages = (() => {
+    const breathing = experiencePages.find((item) => item.id === 'wim-hof-breathing');
+    const others = experiencePages.filter((item) => item.id !== 'wim-hof-breathing');
+
+    return breathing ? [breathing, ...others] : others;
+  })();
 </script>
 
 <section class="hero" data-animate="fade-in">
@@ -34,7 +42,7 @@
     <p>Die vertrauten Unterseiten erscheinen hier als Karten mit Glas-Effekt.</p>
   </header>
   <div class="grid">
-    {#each experiencePages as exp (exp.id)}
+    {#each visibleExperiencePages as exp (exp.id)}
       <ExperienceCard page={exp} />
     {/each}
   </div>

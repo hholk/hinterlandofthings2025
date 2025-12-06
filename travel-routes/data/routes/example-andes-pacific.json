@@ -1,0 +1,208 @@
+{
+  "id": "example-andes-pacific",
+  "name": "Unbenannte Route",
+  "title": "Unbenannte Route",
+  "summary": "Drei Tage durch Zentralchile: Start in Santiago, Küstenflair in Valparaíso und Andenpanorama in Cajón del Maipo.",
+  "color": "#cccccc",
+  "tags": [],
+  "meta": {
+    "theme": "Demo – Multi-Modaler Chile-Trip",
+    "pace": "kompakt",
+    "durationDays": 3,
+    "costEstimate": 780,
+    "highlights": [
+      "Santiago de Chile",
+      "Valparaíso Streetart",
+      "Cajón del Maipo"
+    ]
+  },
+  "mapFocus": {
+    "center": {
+      "lng": -70.67,
+      "lat": -33.45
+    },
+    "zoom": 5
+  },
+  "stops": [
+    {
+      "id": "example-andes-pacific-s1",
+      "name": "Santiago",
+      "coordinates": {
+        "lng": -70.6693,
+        "lat": -33.4489
+      }
+    },
+    {
+      "id": "example-andes-pacific-s2",
+      "name": "Valparaíso",
+      "coordinates": {
+        "lng": -71.6127,
+        "lat": -33.0472
+      }
+    },
+    {
+      "id": "example-andes-pacific-s3",
+      "name": "Andespass",
+      "coordinates": {
+        "lng": -70.5,
+        "lat": -32.9
+      }
+    }
+  ],
+  "segments": [
+    {
+      "id": "example-andes-pacific-seg-1",
+      "mode": "drive",
+      "from": "example-andes-pacific-s1",
+      "to": "example-andes-pacific-s2",
+      "distanceKm": 120,
+      "durationHours": 2.5
+    }
+  ],
+  "days": [
+    {
+      "id": "example-andes-pacific-d1",
+      "title": "Andenpass",
+      "station": {
+        "name": "Santiago",
+        "coordinates": {
+          "lng": -70.67,
+          "lat": -33.45
+        }
+      },
+      "arrival": {
+        "segments": [
+          {
+            "mode": "drive",
+            "distanceKm": 120,
+            "from": {
+              "coordinates": {
+                "lng": -70.67,
+                "lat": -33.45
+              }
+            },
+            "to": {
+              "coordinates": {
+                "lng": -71.61,
+                "lat": -33.05
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "example-andes-pacific-d2",
+      "title": "Pazifik",
+      "station": {
+        "name": "Valparaíso",
+        "coordinates": {
+          "lng": -71.61,
+          "lat": -33.05
+        }
+      },
+      "arrival": {
+        "segments": [
+          {
+            "mode": "drive",
+            "distanceKm": 90,
+            "from": {
+              "coordinates": {
+                "lng": -71.61,
+                "lat": -33.05
+              }
+            },
+            "to": {
+              "coordinates": {
+                "lng": -70.5,
+                "lat": -32.9
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "example-andes-pacific-d3",
+      "title": "Rückfahrt",
+      "station": {
+        "name": "Anden",
+        "coordinates": {
+          "lng": -70.5,
+          "lat": -32.9
+        }
+      },
+      "arrival": {
+        "segments": [
+          {
+            "mode": "drive",
+            "distanceKm": 90,
+            "from": {
+              "coordinates": {
+                "lng": -70.5,
+                "lat": -32.9
+              }
+            },
+            "to": {
+              "coordinates": {
+                "lng": -70.67,
+                "lat": -33.45
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "mapLayers": {
+    "dailySegments": [
+      {
+        "dayId": "example-andes-pacific-d1",
+        "mode": "drive",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -70.67,
+              -33.45
+            ],
+            [
+              -71.61,
+              -33.05
+            ]
+          ]
+        }
+      },
+      {
+        "dayId": "example-andes-pacific-d2",
+        "mode": "drive",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -71.61,
+              -33.05
+            ],
+            [
+              -70.5,
+              -32.9
+            ]
+          ]
+        }
+      },
+      {
+        "dayId": "example-andes-pacific-d3",
+        "mode": "drive",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -70.5,
+              -32.9
+            ]
+          ]
+        }
+      }
+    ]
+  }
+}

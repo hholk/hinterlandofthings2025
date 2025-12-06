@@ -1,0 +1,111 @@
+{
+  "id": "chile-wine-gastronomy",
+  "name": "Wein & Gastronomie – Valleys & Küste (4.–20. Januar)",
+  "title": "Wein & Gastronomie – Valleys & Küste (4.–20. Januar)",
+  "summary": "Kulinarischer Genuss vom 4. bis 20. Januar: Wir starten in Santiago, entdecken die Weintäler Casablanca und Colchagua, kochen in Talca mit lokalen Chefs und genießen frische Meeresküche in Concepción, bevor wir für das Abschlussdinner nach Santiago zurückkehren.",
+  "color": "#c16b4f",
+  "tags": [
+    "food",
+    "wine",
+    "roadtrip"
+  ],
+  "meta": {
+    "theme": "Food & Wine Slow Travel",
+    "pace": "gemütlich",
+    "durationDays": 17,
+    "costEstimate": 1980,
+    "highlights": [
+      "Wine Tasting im Valle de Casablanca",
+      "Bike & Wine Tour in Santa Cruz",
+      "Seafood Markt in Concepción"
+    ]
+  },
+  "mapFocus": {
+    "center": {
+      "lng": -70.67,
+      "lat": -33.45
+    },
+    "zoom": 5
+  },
+  "stops": [
+    {
+      "id": "chile-wine-gastronomy-s1",
+      "name": "Santiago",
+      "coordinates": {
+        "lng": -70.6693,
+        "lat": -33.4489
+      }
+    },
+    {
+      "id": "chile-wine-gastronomy-s2",
+      "name": "Valparaíso",
+      "coordinates": {
+        "lng": -71.6127,
+        "lat": -33.0472
+      }
+    },
+    {
+      "id": "chile-wine-gastronomy-s3",
+      "name": "Andespass",
+      "coordinates": {
+        "lng": -70.5,
+        "lat": -32.9
+      }
+    }
+  ],
+  "segments": [
+    {
+      "id": "chile-wine-gastronomy-seg-1",
+      "mode": "drive",
+      "from": "chile-wine-gastronomy-s1",
+      "to": "chile-wine-gastronomy-s2",
+      "distanceKm": 120,
+      "durationHours": 2.5
+    }
+  ],
+  "days": [
+    {
+      "id": "chile-wine-gastronomy-d1",
+      "title": "Anreise",
+      "station": {
+        "name": "Santiago",
+        "coordinates": {
+          "lng": -70.6693,
+          "lat": -33.4489
+        }
+      }
+    },
+    {
+      "id": "chile-wine-gastronomy-d2",
+      "title": "Ausflug",
+      "station": {
+        "name": "Valparaíso",
+        "coordinates": {
+          "lng": -71.6127,
+          "lat": -33.0472
+        }
+      }
+    }
+  ],
+  "mapLayers": {
+    "dailySegments": [
+      {
+        "dayId": "chile-wine-gastronomy-d1",
+        "mode": "drive",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -70.67,
+              -33.45
+            ],
+            [
+              -71.61,
+              -33.05
+            ]
+          ]
+        }
+      }
+    ]
+  }
+}
