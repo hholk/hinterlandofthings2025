@@ -9,7 +9,8 @@ export default defineConfig({
   resolve: {
     alias: {
       '$app/environment': path.resolve(projectRoot, 'src/test/mocks/app-environment.ts'),
-      '$utils/auth': path.resolve(projectRoot, 'src/lib/utils/auth.ts')
+      '$utils/auth': path.resolve(projectRoot, 'src/lib/utils/auth.ts'),
+      '$data': path.resolve(projectRoot, 'src/lib/data')
     }
   },
   test: {
