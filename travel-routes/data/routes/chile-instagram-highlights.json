@@ -1,0 +1,111 @@
+{
+  "id": "chile-instagram-highlights",
+  "name": "Instagram Highlights – Atacama & Patagonia Shots (4.–20. Januar)",
+  "title": "Instagram Highlights – Atacama & Patagonia Shots (4.–20. Januar)",
+  "summary": "Von Santiago aus geht es am 4. Januar zu den fotogensten Kulissen Chiles: Salzseen und Geysire in der Atacama-Wüste, danach weiter nach Patagonien für Gletscher, Guanako-Herden und Sonnenaufgänge im Torres-del-Paine-Nationalpark. Viel Zeit für Instagram-taugliche Motive und genug Pausen zum Bearbeiten der Shots.",
+  "color": "#d66bff",
+  "tags": [
+    "photography",
+    "adventure",
+    "flight"
+  ],
+  "meta": {
+    "theme": "Fototour Wüste & Eis",
+    "pace": "anspruchsvoll",
+    "durationDays": 17,
+    "costEstimate": 3650,
+    "highlights": [
+      "Milchstraße über San Pedro de Atacama",
+      "El Tatio Geysire bei Sonnenaufgang",
+      "Laguna Amarga mit Torres-Spiegelung"
+    ]
+  },
+  "mapFocus": {
+    "center": {
+      "lng": -70.67,
+      "lat": -33.45
+    },
+    "zoom": 5
+  },
+  "stops": [
+    {
+      "id": "chile-instagram-highlights-s1",
+      "name": "Santiago",
+      "coordinates": {
+        "lng": -70.6693,
+        "lat": -33.4489
+      }
+    },
+    {
+      "id": "chile-instagram-highlights-s2",
+      "name": "Valparaíso",
+      "coordinates": {
+        "lng": -71.6127,
+        "lat": -33.0472
+      }
+    },
+    {
+      "id": "chile-instagram-highlights-s3",
+      "name": "Andespass",
+      "coordinates": {
+        "lng": -70.5,
+        "lat": -32.9
+      }
+    }
+  ],
+  "segments": [
+    {
+      "id": "chile-instagram-highlights-seg-1",
+      "mode": "flight",
+      "from": "chile-instagram-highlights-s1",
+      "to": "chile-instagram-highlights-s2",
+      "distanceKm": 120,
+      "durationHours": 2.5
+    }
+  ],
+  "days": [
+    {
+      "id": "chile-instagram-highlights-d1",
+      "title": "Anreise",
+      "station": {
+        "name": "Santiago",
+        "coordinates": {
+          "lng": -70.6693,
+          "lat": -33.4489
+        }
+      }
+    },
+    {
+      "id": "chile-instagram-highlights-d2",
+      "title": "Ausflug",
+      "station": {
+        "name": "Valparaíso",
+        "coordinates": {
+          "lng": -71.6127,
+          "lat": -33.0472
+        }
+      }
+    }
+  ],
+  "mapLayers": {
+    "dailySegments": [
+      {
+        "dayId": "chile-instagram-highlights-d1",
+        "mode": "flight",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -70.67,
+              -33.45
+            ],
+            [
+              -71.61,
+              -33.05
+            ]
+          ]
+        }
+      }
+    ]
+  }
+}

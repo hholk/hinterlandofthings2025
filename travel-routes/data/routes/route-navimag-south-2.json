@@ -1,0 +1,108 @@
+{
+  "id": "navimag-south-extended-2025",
+  "name": "Unbenannte Route",
+  "title": "Unbenannte Route",
+  "summary": "Die große Entdecker-Route: Navimag-Fähre ab Puerto Montt, gefolgt von intensivem Trekking im Torres del Paine (W-Trek Option) und Besuch der Pinguine in Punta Arenas. Abfahrt 10. Januar 2025.",
+  "color": "#cccccc",
+  "tags": [],
+  "meta": {
+    "theme": "Abenteuer & Trekking",
+    "pace": "aktiv",
+    "durationDays": 14,
+    "costEstimate": 2500,
+    "highlights": [
+      "Navimag-Fähre: Puerto Montt → Puerto Natales",
+      "Torres del Paine W-Trek (Teilstücke)",
+      "Punta Arenas",
+      "Isla Magdalena Pinguine"
+    ]
+  },
+  "mapFocus": {
+    "center": {
+      "lng": -70.67,
+      "lat": -33.45
+    },
+    "zoom": 5
+  },
+  "stops": [
+    {
+      "id": "navimag-south-extended-2025-s1",
+      "name": "Santiago",
+      "coordinates": {
+        "lng": -70.6693,
+        "lat": -33.4489
+      }
+    },
+    {
+      "id": "navimag-south-extended-2025-s2",
+      "name": "Valparaíso",
+      "coordinates": {
+        "lng": -71.6127,
+        "lat": -33.0472
+      }
+    },
+    {
+      "id": "navimag-south-extended-2025-s3",
+      "name": "Andespass",
+      "coordinates": {
+        "lng": -70.5,
+        "lat": -32.9
+      }
+    }
+  ],
+  "segments": [
+    {
+      "id": "navimag-south-extended-2025-seg-1",
+      "mode": "drive",
+      "from": "navimag-south-extended-2025-s1",
+      "to": "navimag-south-extended-2025-s2",
+      "distanceKm": 120,
+      "durationHours": 2.5
+    }
+  ],
+  "days": [
+    {
+      "id": "navimag-south-extended-2025-d1",
+      "title": "Anreise",
+      "station": {
+        "name": "Santiago",
+        "coordinates": {
+          "lng": -70.6693,
+          "lat": -33.4489
+        }
+      }
+    },
+    {
+      "id": "navimag-south-extended-2025-d2",
+      "title": "Ausflug",
+      "station": {
+        "name": "Valparaíso",
+        "coordinates": {
+          "lng": -71.6127,
+          "lat": -33.0472
+        }
+      }
+    }
+  ],
+  "mapLayers": {
+    "dailySegments": [
+      {
+        "dayId": "navimag-south-extended-2025-d1",
+        "mode": "drive",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -70.67,
+              -33.45
+            ],
+            [
+              -71.61,
+              -33.05
+            ]
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "id": "chile-culture-altiplano",
+  "name": "Kultur & Altiplano – Von Arica bis Humberstone (4.–20. Januar)",
+  "title": "Kultur & Altiplano – Von Arica bis Humberstone (4.–20. Januar)",
+  "summary": "Der 4.–20. Januar gehört dem Norden: Koloniales Arica, archäologische Funde im Valle de Azapa, Aymara-Dörfer rund um Putre und die Salpeter-Geschichte bei Humberstone. Wir bewegen uns mit Mietwagen und Fernbus, schließen mit einem Flug ab Antofagasta nach Santiago ab.",
+  "color": "#ff8566",
+  "tags": [
+    "culture",
+    "history",
+    "flight",
+    "roadtrip"
+  ],
+  "meta": {
+    "theme": "Nordchile – Geschichte & Hochland",
+    "pace": "ausgewogen",
+    "durationDays": 17,
+    "costEstimate": 2380,
+    "highlights": [
+      "Mumien im Museo de Sitio Colón 10",
+      "Laguna Chungará im Lauca-Nationalpark",
+      "UNESCO-Geisterstadt Humberstone"
+    ]
+  },
+  "mapFocus": {
+    "center": {
+      "lng": -70.67,
+      "lat": -33.45
+    },
+    "zoom": 5
+  },
+  "stops": [
+    {
+      "id": "chile-culture-altiplano-s1",
+      "name": "Santiago",
+      "coordinates": {
+        "lng": -70.6693,
+        "lat": -33.4489
+      }
+    },
+    {
+      "id": "chile-culture-altiplano-s2",
+      "name": "Valparaíso",
+      "coordinates": {
+        "lng": -71.6127,
+        "lat": -33.0472
+      }
+    },
+    {
+      "id": "chile-culture-altiplano-s3",
+      "name": "Andespass",
+      "coordinates": {
+        "lng": -70.5,
+        "lat": -32.9
+      }
+    }
+  ],
+  "segments": [
+    {
+      "id": "chile-culture-altiplano-seg-1",
+      "mode": "flight",
+      "from": "chile-culture-altiplano-s1",
+      "to": "chile-culture-altiplano-s2",
+      "distanceKm": 120,
+      "durationHours": 2.5
+    }
+  ],
+  "days": [
+    {
+      "id": "chile-culture-altiplano-d1",
+      "title": "Anreise",
+      "station": {
+        "name": "Santiago",
+        "coordinates": {
+          "lng": -70.6693,
+          "lat": -33.4489
+        }
+      }
+    },
+    {
+      "id": "chile-culture-altiplano-d2",
+      "title": "Ausflug",
+      "station": {
+        "name": "Valparaíso",
+        "coordinates": {
+          "lng": -71.6127,
+          "lat": -33.0472
+        }
+      }
+    }
+  ],
+  "mapLayers": {
+    "dailySegments": [
+      {
+        "dayId": "chile-culture-altiplano-d1",
+        "mode": "flight",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -70.67,
+              -33.45
+            ],
+            [
+              -71.61,
+              -33.05
+            ]
+          ]
+        }
+      }
+    ]
+  }
+}

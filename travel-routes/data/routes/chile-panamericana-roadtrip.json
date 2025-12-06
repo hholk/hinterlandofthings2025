@@ -1,0 +1,111 @@
+{
+  "id": "chile-panamericana-roadtrip",
+  "name": "Panamericana Roadtrip & Küstenwüste (4.–20. Januar)",
+  "title": "Panamericana Roadtrip & Küstenwüste (4.–20. Januar)",
+  "summary": "Ab 4. Januar geht es im Mietwagen von Santiago über Valparaíso und La Serena bis zur Mondlandschaft von Bahía Inglesa und dem Parque Pan de Azúcar. Ein entspannter Loop mit viel Sonne, Meer und Sternenhimmel, bevor es am 19. Januar per Kurzflug zurück nach Santiago geht.",
+  "color": "#f4a259",
+  "tags": [
+    "roadtrip",
+    "nature",
+    "culture"
+  ],
+  "meta": {
+    "theme": "Küste, Observatorien & Atacama-Vorstufe",
+    "pace": "gemütlich",
+    "durationDays": 17,
+    "costEstimate": 2450,
+    "highlights": [
+      "Streetart & Aufzüge in Valparaíso",
+      "Sternegucken im Valle del Elqui",
+      "Türkises Wasser von Bahía Inglesa"
+    ]
+  },
+  "mapFocus": {
+    "center": {
+      "lng": -70.67,
+      "lat": -33.45
+    },
+    "zoom": 5
+  },
+  "stops": [
+    {
+      "id": "chile-panamericana-roadtrip-s1",
+      "name": "Santiago",
+      "coordinates": {
+        "lng": -70.6693,
+        "lat": -33.4489
+      }
+    },
+    {
+      "id": "chile-panamericana-roadtrip-s2",
+      "name": "Valparaíso",
+      "coordinates": {
+        "lng": -71.6127,
+        "lat": -33.0472
+      }
+    },
+    {
+      "id": "chile-panamericana-roadtrip-s3",
+      "name": "Andespass",
+      "coordinates": {
+        "lng": -70.5,
+        "lat": -32.9
+      }
+    }
+  ],
+  "segments": [
+    {
+      "id": "chile-panamericana-roadtrip-seg-1",
+      "mode": "drive",
+      "from": "chile-panamericana-roadtrip-s1",
+      "to": "chile-panamericana-roadtrip-s2",
+      "distanceKm": 120,
+      "durationHours": 2.5
+    }
+  ],
+  "days": [
+    {
+      "id": "chile-panamericana-roadtrip-d1",
+      "title": "Anreise",
+      "station": {
+        "name": "Santiago",
+        "coordinates": {
+          "lng": -70.6693,
+          "lat": -33.4489
+        }
+      }
+    },
+    {
+      "id": "chile-panamericana-roadtrip-d2",
+      "title": "Ausflug",
+      "station": {
+        "name": "Valparaíso",
+        "coordinates": {
+          "lng": -71.6127,
+          "lat": -33.0472
+        }
+      }
+    }
+  ],
+  "mapLayers": {
+    "dailySegments": [
+      {
+        "dayId": "chile-panamericana-roadtrip-d1",
+        "mode": "drive",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -70.67,
+              -33.45
+            ],
+            [
+              -71.61,
+              -33.05
+            ]
+          ]
+        }
+      }
+    ]
+  }
+}

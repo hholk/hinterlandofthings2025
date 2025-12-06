@@ -1,0 +1,109 @@
+{
+  "id": "gen-route-10-andes-crossing",
+  "name": "Route 20 – Andenüberquerung",
+  "title": "Route 20 – Andenüberquerung",
+  "summary": "Über Vulkane und Seen: Von Pucón über die Grenze nach Argentinien und zurück. Ein Roadtrip-Traum.",
+  "color": "#0ea5e9",
+  "tags": [
+    "nature",
+    "adventure",
+    "generated"
+  ],
+  "meta": {
+    "theme": "Route 20 – Andenüberquerung",
+    "pace": "gemütlich",
+    "durationDays": 3,
+    "costEstimate": 0,
+    "highlights": [
+      "Roadtrip Highlights"
+    ]
+  },
+  "mapFocus": {
+    "center": {
+      "lng": -70.67,
+      "lat": -33.45
+    },
+    "zoom": 5
+  },
+  "stops": [
+    {
+      "id": "gen-route-10-andes-crossing-s1",
+      "name": "Santiago",
+      "coordinates": {
+        "lng": -70.6693,
+        "lat": -33.4489
+      }
+    },
+    {
+      "id": "gen-route-10-andes-crossing-s2",
+      "name": "Valparaíso",
+      "coordinates": {
+        "lng": -71.6127,
+        "lat": -33.0472
+      }
+    },
+    {
+      "id": "gen-route-10-andes-crossing-s3",
+      "name": "Andespass",
+      "coordinates": {
+        "lng": -70.5,
+        "lat": -32.9
+      }
+    }
+  ],
+  "segments": [
+    {
+      "id": "gen-route-10-andes-crossing-seg-1",
+      "mode": "drive",
+      "from": "gen-route-10-andes-crossing-s1",
+      "to": "gen-route-10-andes-crossing-s2",
+      "distanceKm": 120,
+      "durationHours": 2.5
+    }
+  ],
+  "days": [
+    {
+      "id": "gen-route-10-andes-crossing-d1",
+      "title": "Anreise",
+      "station": {
+        "name": "Santiago",
+        "coordinates": {
+          "lng": -70.6693,
+          "lat": -33.4489
+        }
+      }
+    },
+    {
+      "id": "gen-route-10-andes-crossing-d2",
+      "title": "Ausflug",
+      "station": {
+        "name": "Valparaíso",
+        "coordinates": {
+          "lng": -71.6127,
+          "lat": -33.0472
+        }
+      }
+    }
+  ],
+  "mapLayers": {
+    "dailySegments": [
+      {
+        "dayId": "gen-route-10-andes-crossing-d1",
+        "mode": "drive",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -70.67,
+              -33.45
+            ],
+            [
+              -71.61,
+              -33.05
+            ]
+          ]
+        }
+      }
+    ]
+  }
+}

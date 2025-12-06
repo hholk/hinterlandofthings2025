@@ -1,0 +1,108 @@
+{
+  "id": "gen-route-4-patagonia-express",
+  "name": "Route 14 – Patagonien Express",
+  "title": "Route 14 – Patagonien Express",
+  "summary": "Für Eilige: Die Highlights des tiefen Südens kompakt. Pinguine, Steppe und die Torres del Paine.",
+  "color": "#0ea5e9",
+  "tags": [
+    "adventure",
+    "generated"
+  ],
+  "meta": {
+    "theme": "Route 14 – Patagonien Express",
+    "pace": "gemütlich",
+    "durationDays": 3,
+    "costEstimate": 0,
+    "highlights": [
+      "Roadtrip Highlights"
+    ]
+  },
+  "mapFocus": {
+    "center": {
+      "lng": -70.67,
+      "lat": -33.45
+    },
+    "zoom": 5
+  },
+  "stops": [
+    {
+      "id": "gen-route-4-patagonia-express-s1",
+      "name": "Santiago",
+      "coordinates": {
+        "lng": -70.6693,
+        "lat": -33.4489
+      }
+    },
+    {
+      "id": "gen-route-4-patagonia-express-s2",
+      "name": "Valparaíso",
+      "coordinates": {
+        "lng": -71.6127,
+        "lat": -33.0472
+      }
+    },
+    {
+      "id": "gen-route-4-patagonia-express-s3",
+      "name": "Andespass",
+      "coordinates": {
+        "lng": -70.5,
+        "lat": -32.9
+      }
+    }
+  ],
+  "segments": [
+    {
+      "id": "gen-route-4-patagonia-express-seg-1",
+      "mode": "drive",
+      "from": "gen-route-4-patagonia-express-s1",
+      "to": "gen-route-4-patagonia-express-s2",
+      "distanceKm": 120,
+      "durationHours": 2.5
+    }
+  ],
+  "days": [
+    {
+      "id": "gen-route-4-patagonia-express-d1",
+      "title": "Anreise",
+      "station": {
+        "name": "Santiago",
+        "coordinates": {
+          "lng": -70.6693,
+          "lat": -33.4489
+        }
+      }
+    },
+    {
+      "id": "gen-route-4-patagonia-express-d2",
+      "title": "Ausflug",
+      "station": {
+        "name": "Valparaíso",
+        "coordinates": {
+          "lng": -71.6127,
+          "lat": -33.0472
+        }
+      }
+    }
+  ],
+  "mapLayers": {
+    "dailySegments": [
+      {
+        "dayId": "gen-route-4-patagonia-express-d1",
+        "mode": "drive",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -70.67,
+              -33.45
+            ],
+            [
+              -71.61,
+              -33.05
+            ]
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "id": "north-coast-altiplano",
+  "name": "Unbenannte Route",
+  "title": "Unbenannte Route",
+  "summary": "Roadtrip entlang der Pazifikküste von Iquique nach Arica, mit Abstechern zu Geoglyphen, Geisterstädten und dem spektakulären Lauca Nationalpark.",
+  "color": "#cccccc",
+  "tags": [],
+  "meta": {
+    "theme": "Kultur & Landschaft",
+    "pace": "ausgewogen",
+    "durationDays": 6,
+    "costEstimate": 1200,
+    "highlights": [
+      "Iquique Strände & Geschichte",
+      "Humberstone Salpeterwerke",
+      "Riesen von Atacama (Geoglyphen)",
+      "Arica & Chinchorro Mumien",
+      "Lauca Nationalpark & Chungará See"
+    ]
+  },
+  "mapFocus": {
+    "center": {
+      "lng": -70.67,
+      "lat": -33.45
+    },
+    "zoom": 5
+  },
+  "stops": [
+    {
+      "id": "north-coast-altiplano-s1",
+      "name": "Santiago",
+      "coordinates": {
+        "lng": -70.6693,
+        "lat": -33.4489
+      }
+    },
+    {
+      "id": "north-coast-altiplano-s2",
+      "name": "Valparaíso",
+      "coordinates": {
+        "lng": -71.6127,
+        "lat": -33.0472
+      }
+    },
+    {
+      "id": "north-coast-altiplano-s3",
+      "name": "Andespass",
+      "coordinates": {
+        "lng": -70.5,
+        "lat": -32.9
+      }
+    }
+  ],
+  "segments": [
+    {
+      "id": "north-coast-altiplano-seg-1",
+      "mode": "drive",
+      "from": "north-coast-altiplano-s1",
+      "to": "north-coast-altiplano-s2",
+      "distanceKm": 120,
+      "durationHours": 2.5
+    }
+  ],
+  "days": [
+    {
+      "id": "north-coast-altiplano-d1",
+      "title": "Anreise",
+      "station": {
+        "name": "Santiago",
+        "coordinates": {
+          "lng": -70.6693,
+          "lat": -33.4489
+        }
+      }
+    },
+    {
+      "id": "north-coast-altiplano-d2",
+      "title": "Ausflug",
+      "station": {
+        "name": "Valparaíso",
+        "coordinates": {
+          "lng": -71.6127,
+          "lat": -33.0472
+        }
+      }
+    }
+  ],
+  "mapLayers": {
+    "dailySegments": [
+      {
+        "dayId": "north-coast-altiplano-d1",
+        "mode": "drive",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -70.67,
+              -33.45
+            ],
+            [
+              -71.61,
+              -33.05
+            ]
+          ]
+        }
+      }
+    ]
+  }
+}
