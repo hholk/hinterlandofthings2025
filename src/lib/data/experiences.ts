@@ -72,5 +72,13 @@ export const experiencePages: ExperiencePage[] = [
     description: 'Gutscheinseite für einen gemeinsamen Besuch im Planetarium Osnabrück.',
     icon:
       '<svg width="32" height="32" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><circle cx="32" cy="32" r="20" stroke="currentColor" stroke-width="4" fill="none" /><path d="M8 28c8 8 24 16 48 0" stroke="currentColor" stroke-width="4" stroke-linecap="round" /><circle cx="46" cy="24" r="4" /></svg>'
+  },
+  {
+    id: 'wim-hof-breathing',
+    href: '/experiences/wim-hof-breathing',
+    title: 'Wim-Hof-Breathing',
+    description: 'Geführte Atem-Session mit Wake-Lock-Bestätigung und Kapitelübersicht.',
+    icon:
+      '<svg width="32" height="32" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="4" fill="none" /><path d="M20 36c4-8 8-12 12-12s8 4 12 12" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round" /><path d="M24 44h16" stroke="currentColor" stroke-width="4" stroke-linecap="round" /></svg>'
   }
 ];
