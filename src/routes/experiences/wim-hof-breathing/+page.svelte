@@ -1,8 +1,13 @@
 <script lang="ts">
   import { browser } from '$app/environment';
   import { onMount } from 'svelte';
+  import type { PageData } from './$types';
   import NoSleep from 'nosleep.js';
   import { buildChapters, clampRounds, type ChapterStatus, type Phase } from '$lib/wimhof/chapters';
+
+  // Für Einsteiger:innen: data bringt die Metadaten aus der zentralen Experience-Liste
+  // auf diese Unterseite. So bleibt der Modul-Header immer synchron mit der Übersicht.
+  export let data: PageData;
 
   // Für Einsteiger:innen: Diese Daten stammen aus der ursprünglichen HTML-Version.
   // Sie definieren, wann jede Phase innerhalb des Videos beginnt oder endet.
@@ -324,9 +329,16 @@
 
 <section class="page" data-animate="fade-in">
   <header class="hero">
-    <div>
-      <p class="eyebrow">Atemtraining</p>
-      <h1>Wim-Hof-Breathing</h1>
+    <div class="intro">
+      <div class="module-meta">
+        <div class="module-icon" aria-hidden="true">{@html data.experience.icon}</div>
+        <div>
+          <p class="eyebrow">Modul</p>
+          <h1>{data.experience.title}</h1>
+          <p class="muted">{data.experience.description}</p>
+        </div>
+      </div>
+
       <p class="lead">
         Dieselben Phasen wie in der Original-App, jetzt als Svelte-Unterseite mit Bestätigung für den
         Wachhalte-Modus und einer klaren Rundenübersicht.
@@ -532,6 +544,29 @@
     grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
     gap: 1.25rem;
     align-items: start;
+  }
+
+  .intro {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  .module-meta {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.85rem;
+    align-items: center;
+    padding: 0.9rem 1rem;
+    border-radius: 16px;
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    background: rgba(15, 23, 42, 0.7);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.2);
+  }
+
+  .module-icon :global(svg) {
+    width: 2.5rem;
+    height: 2.5rem;
   }
 
   .eyebrow {
