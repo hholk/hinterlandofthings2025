@@ -36,6 +36,8 @@
 - Prüfe bei neuen oder angepassten Funktionalitäten stets die Original-Dokumentation der verwendeten Libraries (z. B. MapLibre, Flowbite, Tailwind), bevor du Code übernimmst oder APIs nutzt.
 - Wenn du Aufrufe oder Parameter veränderst, lies die jeweils aktuelle Referenz (MapLibre, Flowbite, Tailwind, Vite etc.), um sicherzustellen, dass Methodennamen, Optionen und Defaults exakt dem veröffentlichten Stand entsprechen.
 - Wird ausdrücklich um Bugfixing oder eine Korrektur gebeten, führe Builds und relevante Testläufe mit maximaler Verbosität aus (z. B. `npm run build -- --debug --verbose`), damit Logs für das Debugging vollständig vorliegen.
+- Nach Möglichkeit ist jede abgeschlossene Aufgabe durch einen Screenshot (z. B. mittels Browser-Preview) zu verifizieren; bei Abweichungen sind Nacharbeiten sofort einzuplanen.
+- Bei Aufforderungen zu Korrekturen, Fixes oder Bugfixes muss zunächst klar kommentierter Zusatzcode für das Debugging erstellt werden, der den vermuteten Fehler reproduziert oder verifiziert; erst nach dieser Verifikation darf die eigentliche Änderung erfolgen.
 - Diese Selbstverpflichtung ist Teil dieser Datei und dokumentiert die Pflicht zur eigenen Aktualisierung (rekursive Dokumentation).
 
 ## Do & Don't für GitHub Pages
